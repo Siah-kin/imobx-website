@@ -13,11 +13,11 @@
   --imobx-strategic: #D4AF37;
   --imobx-strategic-bg: rgba(212, 175, 55, 0.08);
 
-  /* Base colors */
-  --imobx-bg: #0A0A0A;
-  --imobx-text: #FFFFFF;
-  --imobx-surface: #1A1A1A;
-  --imobx-border: #333333;
+  /* Base colors - Light mode */
+  --imobx-bg: #FFFFFF;
+  --imobx-text: #1A1A1A;
+  --imobx-surface: #F8F9FA;
+  --imobx-border: #E0E0E0;
   --imobx-success: #27AE60;
   --imobx-error: #E74C3C;
 
@@ -101,6 +101,14 @@ a:hover {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--imobx-strategic);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo img {
+  height: 32px;
+  width: auto;
 }
 
 .nav-links {
@@ -141,7 +149,7 @@ a:hover {
 
 .hero p {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(26, 26, 26, 0.7);
   max-width: 700px;
   margin: 0 auto var(--spacing-lg);
 }
@@ -149,7 +157,7 @@ a:hover {
 .hero-cta {
   display: inline-block;
   background: var(--imobx-strategic);
-  color: var(--imobx-bg);
+  color: #FFFFFF;
   padding: var(--spacing-sm) var(--spacing-lg);
   font-weight: 600;
   border-radius: 0;
@@ -198,17 +206,17 @@ a:hover {
 
 .box-technical .box-label {
   background: var(--imobx-technical);
-  color: var(--imobx-bg);
+  color: #FFFFFF;
 }
 
 .box-framework .box-label {
   background: var(--imobx-framework);
-  color: var(--imobx-bg);
+  color: #FFFFFF;
 }
 
 .box-strategic .box-label {
   background: var(--imobx-strategic);
-  color: var(--imobx-bg);
+  color: #FFFFFF;
 }
 
 .box-content h3 {
@@ -280,7 +288,7 @@ footer {
   border-top: 1px solid var(--imobx-border);
   padding: var(--spacing-lg) 0;
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(26, 26, 26, 0.6);
   font-size: 0.875rem;
 }
 
