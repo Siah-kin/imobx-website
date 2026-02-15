@@ -108,7 +108,7 @@ a:hover {
 }
 
 .nav-logo img {
-  height: 32px;
+  height: 100px;
   width: auto;
 }
 
@@ -331,7 +331,7 @@ footer {
   }
 
   .nav-logo img {
-    height: 44px;
+    height: 80px;
   }
 
   .grid,
