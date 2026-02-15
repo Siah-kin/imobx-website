@@ -80,12 +80,13 @@ a:hover {
 
 /* Navigation */
 .main-nav {
-  background: var(--imobx-surface);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--imobx-border);
   padding: var(--spacing-sm) 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(8px);
 }
 
 .nav-container {
@@ -107,8 +108,11 @@ a:hover {
 }
 
 .nav-logo img {
-  height: 32px;
+  height: 56px;
   width: auto;
+  background: #FFFFFF;
+  border: 1px solid var(--imobx-border);
+  padding: 6px 10px;
 }
 
 .nav-links {
@@ -142,6 +146,24 @@ a:hover {
   border-bottom: 1px solid var(--imobx-border);
 }
 
+.hero-home {
+  background:
+    linear-gradient(120deg, rgba(9, 18, 25, 0.72) 0%, rgba(19, 39, 49, 0.58) 50%, rgba(31, 59, 66, 0.44) 100%),
+    url('/imobx-website/assets/homepage.jpg') center/cover no-repeat;
+  border: 1px solid var(--imobx-border);
+  padding: 88px var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.hero-home h1 {
+  color: #FFFFFF;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.hero-home p {
+  color: rgba(255, 255, 255, 0.93);
+}
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: var(--spacing-sm);
@@ -156,12 +178,13 @@ a:hover {
 
 .hero-cta {
   display: inline-block;
-  background: var(--imobx-strategic);
+  background: linear-gradient(135deg, #D4AF37, #C69A28);
   color: #FFFFFF;
   padding: var(--spacing-sm) var(--spacing-lg);
   font-weight: 600;
   border-radius: 0;
   transition: opacity 0.2s;
+  letter-spacing: 0.02em;
 }
 
 .hero-cta:hover {
@@ -251,6 +274,10 @@ a:hover {
 
 .partner {
   text-align: center;
+  background: #FFFFFF;
+  border: 1px solid var(--imobx-border);
+  min-width: 210px;
+  padding: 14px 16px;
 }
 
 .partner-role {
@@ -300,6 +327,14 @@ footer {
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .hero-home {
+    padding: 64px var(--spacing-md);
+  }
+
+  .nav-logo img {
+    height: 44px;
   }
 
   .grid,
