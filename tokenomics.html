@@ -246,16 +246,92 @@
       </div>
     </section>
 
+    <section class="value-props mb-xl">
+      <h2 class="text-center mb-lg">Buy IMOBX</h2>
+
+      <div class="box box-technical" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+        <div class="box-label">DIRECT PURCHASE</div>
+        <div class="box-content">
+          <h3>Email-Only Purchase Widget</h3>
+          <p>Enter your email to receive purchase instructions. Fair launch via Ethervista Euler distribution.</p>
+
+          <form id="buyWidget" style="margin-top: var(--spacing-md);">
+            <div style="margin-bottom: var(--spacing-md);">
+              <label for="email" style="display: block; font-weight: 600; margin-bottom: var(--spacing-xs);">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                style="width: 100%; padding: 12px; border: 1px solid var(--imobx-border); font-size: 1rem; font-family: 'Inter', sans-serif;"
+              >
+            </div>
+
+            <div style="margin-bottom: var(--spacing-md);">
+              <label for="amount" style="display: block; font-weight: 600; margin-bottom: var(--spacing-xs);">Amount (ETH)</label>
+              <select
+                id="amount"
+                name="amount"
+                style="width: 100%; padding: 12px; border: 1px solid var(--imobx-border); font-size: 1rem; font-family: 'Inter', sans-serif; background: var(--imobx-bg);"
+              >
+                <option value="0.1">0.1 ETH (~$300)</option>
+                <option value="0.5">0.5 ETH (~$1,500)</option>
+                <option value="1.0">1.0 ETH (~$3,000)</option>
+                <option value="2.0">2.0 ETH (~$6,000)</option>
+                <option value="5.0">5.0 ETH (~$15,000)</option>
+                <option value="custom">Custom amount</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: var(--spacing-md); padding: var(--spacing-sm); background: var(--imobx-surface); border-left: 4px solid var(--imobx-technical);">
+              <p style="margin: 0; font-size: 0.875rem; color: rgba(26, 26, 26, 0.8);"><strong>Flat fee:</strong> $10 per transaction (not percentage-based)</p>
+            </div>
+
+            <button
+              type="submit"
+              style="width: 100%; padding: var(--spacing-sm) var(--spacing-lg); background: var(--imobx-technical); color: #FFFFFF; border: none; font-size: 1rem; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; transition: opacity 0.2s;"
+              onmouseover="this.style.opacity='0.9'"
+              onmouseout="this.style.opacity='1'"
+            >
+              Request Purchase Instructions
+            </button>
+          </form>
+
+          <p style="margin-top: var(--spacing-md); font-size: 0.875rem; color: rgba(26, 26, 26, 0.7);">
+            <em>You'll receive an email with Ethervista purchase link and wallet setup instructions. No account required.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section text-center">
       <h2 class="mb-md">Transparent. Verifiable. Deflationary.</h2>
       <p class="mb-lg" style="max-width: 700px; margin-left: auto; margin-right: auto;">
         All numbers on-chain. No hidden allocations. Dual yield from trade fees and rental income. Burns reduce supply over time.
       </p>
       <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
-        <a href="/buy.html" class="hero-cta">How to Buy</a>
+        <a href="/buy.html" class="hero-cta">Full Purchase Guide</a>
         <a href="/research/" class="hero-cta" style="background: var(--imobx-technical);">Explore Research</a>
       </div>
     </section>
+
+    <script>
+      document.getElementById('buyWidget').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const amount = document.getElementById('amount').value;
+
+        // Send to backend (placeholder - implement actual endpoint)
+        console.log('Purchase request:', { email, amount });
+
+        // Show confirmation
+        alert('Check your email for purchase instructions. Contract address and Ethervista link will be sent within 5 minutes.');
+
+        // Reset form
+        this.reset();
+      });
+    </script>
   </main>
 
   <footer>
