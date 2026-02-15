@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokenomics - IMOBX</title>
+  <meta name="description" content="IMOBX tokenomics: 1M supply, 0% team allocation, dual-yield model with trade fees and rental income. Transparent fee distribution and burn mechanics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="/assets/logo.png" alt="IMOBX Logo">
+        <span>IMOBX</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tokenomics.html">Tokenomics</a></li>
+        <li><a href="/properties.html">Properties</a></li>
+        <li><a href="/rent-to-own.html">Rent-to-Own</a></li>
+        <li><a href="/buy.html">Buy</a></li>
+        <li><a href="/research/">Research</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <h1>IMOBX Tokenomics</h1>
+      <p>1M supply, 0% team allocation, dual-yield model. Every number verifiable on-chain.</p>
+    </section>
+
+    <section class="value-props">
+      <h2 class="text-center mb-lg">Supply & Distribution</h2>
+
+      <div class="grid grid-2">
+        <div class="box box-technical">
+          <div class="box-label">FIXED SUPPLY</div>
+          <div class="box-content">
+            <h3>1,000,000 $IMOBX</h3>
+            <p><strong>No inflation, no team unlock.</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Allocation</th>
+                  <th>Amount</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LP Locked</td>
+                  <td>750,000</td>
+                  <td>Liquidity provision (75%)</td>
+                </tr>
+                <tr>
+                  <td>Operations</td>
+                  <td>250,000</td>
+                  <td>Development, ecosystem (25%)</td>
+                </tr>
+                <tr>
+                  <td>Team</td>
+                  <td>0</td>
+                  <td>No team allocation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="box box-framework">
+          <div class="box-label">DISTRIBUTION MODEL</div>
+          <div class="box-content">
+            <h3>Ethervista Euler</h3>
+            <p>Bonding curve distribution via Ethervista protocol. Fair launch, no presale.</p>
+            <p style="margin-top: var(--spacing-md);"><strong>Launch mechanics:</strong></p>
+            <ul style="padding-left: var(--spacing-md);">
+              <li>Gradual price discovery via Euler curve</li>
+              <li>LP locked automatically on-chain</li>
+              <li>No team tokens to dump</li>
+              <li>Transparent initial supply allocation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-props">
+      <h2 class="text-center mb-lg">Dual-Yield Model</h2>
+
+      <div class="box box-technical">
+        <div class="box-label">YIELD A: TRADE FEES</div>
+        <div class="box-content">
+          <h3>$10 buy / $15 sell per transaction</h3>
+          <p><strong>Flat fees, not percentage.</strong> Revenue scales with transaction count, not trade size.</p>
+
+          <table style="margin-top: var(--spacing-md);">
+            <thead>
+              <tr>
+                <th>Recipient</th>
+                <th>Share</th>
+                <th>Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Operations</td>
+                <td>45%</td>
+                <td>Development, DevOps, infrastructure</td>
+              </tr>
+              <tr>
+                <td>LP Holders</td>
+                <td>35%</td>
+                <td>Passive yield for liquidity providers</td>
+              </tr>
+              <tr>
+                <td>Hardstakers</td>
+                <td>20%</td>
+                <td>14-day lock bonus rewards</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="margin-top: var(--spacing-md);"><strong>Auto-burn:</strong> Protocol buys back + burns IMOBX via Euler mechanics, reducing supply over time.</p>
+        </div>
+      </div>
+
+      <div class="box box-framework">
+        <div class="box-label">YIELD B: RENTAL INCOME</div>
+        <div class="box-content">
+          <h3>$250/month per unit</h3>
+          <p>Rental revenue from tokenized properties distributed to token holders.</p>
+
+          <p style="margin-top: var(--spacing-md);"><strong>Example (36 units operational):</strong></p>
+          <ul style="padding-left: var(--spacing-md);">
+            <li>Monthly rental income: 36 × $250 = $9,000</li>
+            <li>Annual rental income: $108,000</li>
+            <li>Distributed proportionally to token holders</li>
+          </ul>
+
+          <p style="margin-top: var(--spacing-md);"><strong>Verification:</strong> Rental contracts published on-chain, SINAPI-verified construction costs ensure transparency.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-props">
+      <h2 class="text-center mb-lg">Burn Mechanics & Deflationary Pressure</h2>
+
+      <div class="grid grid-2">
+        <div class="box box-technical">
+          <div class="box-label">EULER AUTO-BURN</div>
+          <div class="box-content">
+            <h3>Protocol Buyback + Burn</h3>
+            <p>Ethervista Euler automatically uses a portion of trade fees to buy IMOBX from the market and burn it.</p>
+
+            <p style="margin-top: var(--spacing-md);"><strong>Mechanism:</strong></p>
+            <ul style="padding-left: var(--spacing-md);">
+              <li>Trade fees accumulate in protocol</li>
+              <li>Protocol market-buys IMOBX</li>
+              <li>Bought tokens sent to burn address (0x000...dead)</li>
+              <li>Circulating supply decreases over time</li>
+            </ul>
+
+            <p style="margin-top: var(--spacing-md);"><strong>Verifiable:</strong> Burn address balance visible on-chain in real-time.</p>
+          </div>
+        </div>
+
+        <div class="box box-strategic">
+          <div class="box-label">DEFLATIONARY EFFECT</div>
+          <div class="box-content">
+            <h3>Supply Shrinks, Value Accrues</h3>
+            <p>Dual yield + burn = strong holder incentive.</p>
+
+            <table style="margin-top: var(--spacing-md);">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Estimated Burn</th>
+                  <th>Remaining Supply</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Year 0</td>
+                  <td>0</td>
+                  <td>1,000,000</td>
+                </tr>
+                <tr>
+                  <td>Year 1</td>
+                  <td>~5%</td>
+                  <td>~950,000</td>
+                </tr>
+                <tr>
+                  <td>Year 3</td>
+                  <td>~15%</td>
+                  <td>~850,000</td>
+                </tr>
+                <tr>
+                  <td>Year 5</td>
+                  <td>~25%</td>
+                  <td>~750,000</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p style="margin-top: var(--spacing-sm); color: rgba(26, 26, 26, 0.7); font-size: 0.875rem;"><em>Estimates based on transaction volume projections. Actual burn rate varies with trading activity.</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-props mb-xl">
+      <h2 class="text-center mb-lg">Hardstaking: Lock for Bigger Share</h2>
+
+      <div class="box box-framework">
+        <div class="box-label">14-DAY HARDSTAKE</div>
+        <div class="box-content">
+          <h3>20% of Trade Fees → Hardstakers</h3>
+          <p>Lock IMOBX for 14 days minimum to earn a bigger share of trade fee revenue.</p>
+
+          <div class="grid grid-2" style="margin-top: var(--spacing-md);">
+            <div>
+              <p><strong>LP Holders (passive):</strong></p>
+              <ul style="padding-left: var(--spacing-md);">
+                <li>Provide liquidity</li>
+                <li>Earn 35% of trade fees</li>
+                <li>No lock required</li>
+              </ul>
+            </div>
+            <div>
+              <p><strong>Hardstakers (active):</strong></p>
+              <ul style="padding-left: var(--spacing-md);">
+                <li>Lock tokens for 14+ days</li>
+                <li>Earn 20% of trade fees</li>
+                <li>Higher APY vs LP</li>
+              </ul>
+            </div>
+          </div>
+
+          <p style="margin-top: var(--spacing-md);"><strong>Why hardstaking?</strong> Rewards long-term holders, reduces sell pressure, aligns incentives with project growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section text-center">
+      <h2 class="mb-md">Transparent. Verifiable. Deflationary.</h2>
+      <p class="mb-lg" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+        All numbers on-chain. No hidden allocations. Dual yield from trade fees and rental income. Burns reduce supply over time.
+      </p>
+      <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+        <a href="/buy.html" class="hero-cta">How to Buy</a>
+        <a href="/research/" class="hero-cta" style="background: var(--imobx-technical);">Explore Research</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 IMOBX - Closed Alpha Development</p>
+      <p style="margin-top: var(--spacing-xs);">
+        <a href="https://github.com/Siah-kin/community-bot">GitHub</a> •
+        <a href="/research/treasury.html">Treasury</a> •
+        <a href="/research/risks.html">Risks</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
