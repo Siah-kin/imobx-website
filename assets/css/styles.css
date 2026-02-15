@@ -108,11 +108,8 @@ a:hover {
 }
 
 .nav-logo img {
-  height: 56px;
+  height: 32px;
   width: auto;
-  background: #FFFFFF;
-  border: 1px solid var(--imobx-border);
-  padding: 6px 10px;
 }
 
 .nav-links {
