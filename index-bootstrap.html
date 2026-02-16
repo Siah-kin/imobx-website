@@ -17,21 +17,29 @@
       --tblr-secondary: #D4AF37;
       --tblr-success: #27AE60;
       --tblr-danger: #E74C3C;
-      --tblr-dark: #0A0A0A;
+      --tblr-body-bg: #FFFFFF;
+      --tblr-body-color: #0A0A0A;
+      --tblr-card-bg: #F8F9FA;
+      --tblr-border-color: rgba(10, 10, 10, 0.1);
     }
 
     body {
-      background: #0A0A0A;
-      color: #FFFFFF;
+      background: #FFFFFF;
+      color: #0A0A0A;
     }
 
     .navbar {
-      background: #0A0A0A;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: #FFFFFF;
+      border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand img {
+      filter: brightness(0);
     }
 
     .hero-section {
-      background: linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 100%);
+      background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
       padding: 6rem 0 4rem 0;
       border-bottom: 1px solid rgba(124, 58, 237, 0.2);
     }
@@ -41,21 +49,19 @@
       font-weight: 700;
       line-height: 1.2;
       margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, #FFFFFF 0%, #7C3AED 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #0A0A0A;
     }
 
     .hero-subtitle {
       font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(10, 10, 10, 0.7);
       margin-bottom: 2rem;
+      max-width: 700px;
     }
 
     .card {
-      background: #1a1a1a;
-      border: 1px solid rgba(124, 58, 237, 0.2);
+      background: #F8F9FA;
+      border: 1px solid rgba(124, 58, 237, 0.15);
       border-radius: 8px;
     }
 
@@ -63,29 +69,45 @@
       border-color: #7C3AED;
       transform: translateY(-2px);
       transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.1);
     }
 
     .badge-technical {
-      background: rgba(124, 58, 237, 0.2);
+      background: rgba(124, 58, 237, 0.1);
       color: #7C3AED;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
     }
 
     .badge-framework {
-      background: rgba(212, 175, 55, 0.2);
+      background: rgba(212, 175, 55, 0.1);
       color: #D4AF37;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
     }
 
     .badge-strategic {
-      background: rgba(39, 174, 96, 0.2);
+      background: rgba(39, 174, 96, 0.1);
       color: #27AE60;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
     }
 
     .partner-card {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a3e 100%);
+      background: #F8F9FA;
       padding: 2rem;
       border-radius: 8px;
-      border: 1px solid rgba(124, 58, 237, 0.2);
+      border: 1px solid rgba(124, 58, 237, 0.15);
       text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .partner-card:hover {
+      border-color: #7C3AED;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.1);
     }
 
     .partner-role {
@@ -99,7 +121,7 @@
     .partner-name {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #FFFFFF;
+      color: #0A0A0A;
     }
 
     .btn-primary {
@@ -108,10 +130,26 @@
       color: #FFFFFF;
       font-weight: 600;
       padding: 0.75rem 2rem;
+      border-radius: 4px;
     }
 
     .btn-primary:hover {
       opacity: 0.9;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    }
+
+    .btn-outline-primary {
+      border: 2px solid #7C3AED;
+      color: #7C3AED;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 4px;
+    }
+
+    .btn-outline-primary:hover {
+      background: #7C3AED;
+      color: #FFFFFF;
       transform: translateY(-1px);
     }
 
@@ -124,11 +162,12 @@
       font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      color: #0A0A0A;
     }
 
     .section-subtitle {
       font-size: 1.1rem;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(10, 10, 10, 0.6);
     }
 
     .metric-card {
@@ -152,17 +191,97 @@
       letter-spacing: 0.05em;
     }
 
+    .table {
+      color: #0A0A0A;
+    }
+
+    .table thead th {
+      border-bottom: 2px solid rgba(10, 10, 10, 0.1);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+    }
+
+    .table tbody tr {
+      border-bottom: 1px solid rgba(10, 10, 10, 0.05);
+    }
+
+    .table-hover tbody tr:hover {
+      background: rgba(124, 58, 237, 0.05);
+    }
+
+    .alert-info {
+      background: rgba(124, 58, 237, 0.05);
+      border: 1px solid rgba(124, 58, 237, 0.15);
+      color: #0A0A0A;
+    }
+
+    .card-primary {
+      background: linear-gradient(135deg, #7C3AED 0%, #D4AF37 100%);
+      color: #FFFFFF;
+    }
+
+    .card-primary .card-title {
+      color: #FFFFFF;
+    }
+
     footer {
-      background: #0A0A0A;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: #F8F9FA;
+      border-top: 1px solid rgba(10, 10, 10, 0.1);
       padding: 3rem 0;
       margin-top: 4rem;
+    }
+
+    footer h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #0A0A0A;
+    }
+
+    footer a {
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: #7C3AED;
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, #7C3AED 0%, #D4AF37 100%);
+      color: #FFFFFF;
+      border: none;
+    }
+
+    .cta-card h2,
+    .cta-card p {
+      color: #FFFFFF;
+    }
+
+    .divide-y > * {
+      border-bottom: 1px solid rgba(10, 10, 10, 0.05);
+    }
+
+    .divide-y > *:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <header class="navbar navbar-expand-md navbar-dark sticky-top">
+  <header class="navbar navbar-expand-md navbar-light sticky-top">
     <div class="container-xl">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
         <span class="navbar-toggler-icon"></span>
@@ -171,8 +290,8 @@
         <img src="/imobx-website/assets/logo.png" height="32" alt="IMOBX">
       </a>
       <div class="navbar-nav flex-row order-md-last">
-        <a href="/imobx-website/dao-demo.html" class="btn btn-primary">
-          DAO Dashboard
+        <a href="/imobx-website/whitepaper.html" class="btn btn-primary">
+          Read Our Plan
         </a>
       </div>
       <div class="collapse navbar-collapse" id="navbar-menu">
@@ -181,19 +300,19 @@
             <a class="nav-link" href="/imobx-website/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/imobx-website/tokenomics.html">Tokenomics</a>
+            <a class="nav-link" href="/imobx-website/whitepaper.html">Whitepaper</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/imobx-website/properties.html">Properties</a>
+            <a class="nav-link" href="#start-here">Where to Start</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/imobx-website/rent-to-own.html">Rent-to-Own</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/imobx-website/buy.html">Buy</a>
+            <a class="nav-link" href="/imobx-website/bonzi-journey.html">Bonzi Connection</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/imobx-website/research/">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://t.me/bonzivista">Join Discussion</a>
           </li>
         </ul>
       </div>
@@ -204,287 +323,248 @@
   <div class="hero-section">
     <div class="container-xl">
       <div class="row align-items-center">
-        <div class="col-lg-8">
-          <h1 class="hero-title">
-            A primitive to tokenise and make RWA more liquid
-          </h1>
-          <p class="hero-subtitle">
-            Jurisdiction-agnostic infrastructure for RWA DAOs. Oracle + SINAPI + dual-yield model adaptable across jurisdictions.
-          </p>
-          <div class="btn-list">
-            <a href="/imobx-website/research/" class="btn btn-primary btn-lg">
-              <i class="ti ti-book-2 me-2"></i>
-              Explore Research
-            </a>
-            <a href="/imobx-website/dao-demo.html" class="btn btn-outline-light btn-lg">
-              <i class="ti ti-dashboard me-2"></i>
-              DAO Dashboard
-            </a>
+        <div class="col-lg-10 mx-auto text-center">
+          <div class="mb-3">
+            <span class="badge badge-framework" style="font-size: 0.875rem;">RESEARCH PHASE — DESIGNING IN PUBLIC</span>
           </div>
-        </div>
-        <div class="col-lg-4 d-none d-lg-block">
-          <div class="metric-card">
-            <div class="metric-value">$27,777</div>
-            <div class="metric-label">Cost per unit (SINAPI-verified)</div>
+          <h1 class="hero-title">
+            Rent-to-Own for Families Without Bank Access
+          </h1>
+          <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+            We're building a DAO to solve SDG 11 housing gaps. Transparent costs, flat fees, no middleman rent extraction. Help us design this right.
+          </p>
+          <div class="btn-list justify-content-center mt-4">
+            <a href="/imobx-website/whitepaper.html" class="btn btn-primary btn-lg">
+              <i class="ti ti-file-text me-2"></i>
+              Read Our Draft Plan
+            </a>
+            <a href="#start-here" class="btn btn-outline-primary btn-lg">
+              <i class="ti ti-compass me-2"></i>
+              Where Do I Start?
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Partners Section -->
+  <!-- Start Here Section -->
   <div class="page-body">
-    <div class="container-xl py-5">
+    <div class="container-xl py-5" id="start-here">
       <div class="section-header">
-        <h2 class="section-title">Ecosystem Partners</h2>
-        <p class="section-subtitle">Protocol + Oracle + Operations</p>
+        <h2 class="section-title">Where Do I Start?</h2>
+        <p class="section-subtitle">Three ways to participate in this research phase</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="partner-card">
-            <div class="partner-role">PROTOCOL</div>
-            <div class="partner-name">Ethervista</div>
-            <p class="mt-3 text-muted">Flat-fee swap model: $10 buy / $15 sell per tx</p>
+          <div class="partner-card" style="text-align: left;">
+            <div class="partner-role">1. READ</div>
+            <div class="partner-name mb-3">Understand the Model</div>
+            <p class="text-muted mb-3">How flat fees + rent-to-own + SINAPI verification creates sustainable housing access.</p>
+            <a href="/imobx-website/whitepaper.html" class="btn btn-sm btn-primary">
+              Read Draft Plan
+            </a>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="partner-card">
-            <div class="partner-role">ORACLE LAYER</div>
-            <div class="partner-name">Bonzi</div>
-            <p class="mt-3 text-muted">Trust scoring + DAO governance toolkit</p>
+          <div class="partner-card" style="text-align: left;">
+            <div class="partner-role">2. DISCUSS</div>
+            <div class="partner-name mb-3">Join the Conversation</div>
+            <p class="text-muted mb-3">We're designing this in public. Share questions, spot gaps, suggest improvements.</p>
+            <a href="https://t.me/bonzivista" class="btn btn-sm btn-outline-primary">
+              Join Telegram
+            </a>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="partner-card">
-            <div class="partner-role">BRAZIL OPS</div>
-            <div class="partner-name">Rafael</div>
-            <p class="mt-3 text-muted">SINAPI verification + construction oversight</p>
+          <div class="partner-card" style="text-align: left;">
+            <div class="partner-role">3. CONTRIBUTE</div>
+            <div class="partner-name mb-3">Help Build This</div>
+            <p class="text-muted mb-3">Test early features via Bonzi app. Earn participation credits toward future governance.</p>
+            <a href="/imobx-website/bonzi-journey.html" class="btn btn-sm btn-outline-primary">
+              How Bonzi Connects
+            </a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Value Props Section -->
+    <!-- The Problem Section -->
     <div class="container-xl py-5">
       <div class="section-header">
-        <h2 class="section-title">Why IMOBX Works Globally</h2>
-        <p class="section-subtitle">Three-pillar moat: Economics + Governance + Impact</p>
+        <h2 class="section-title">The Problem We're Solving</h2>
+        <p class="section-subtitle">1.6 billion people lack adequate housing — SDG 11</p>
       </div>
 
       <div class="row g-4">
-        <!-- Dual Yield -->
-        <div class="col-lg-4">
-          <div class="card h-100">
-            <div class="card-status-top bg-primary"></div>
-            <div class="card-body">
-              <div class="mb-3">
-                <span class="badge badge-technical">DUAL YIELD</span>
-              </div>
-              <h3 class="card-title">Trade Fees + Rental Income</h3>
-              <div class="divide-y">
-                <div class="py-2">
-                  <div class="d-flex align-items-center">
-                    <i class="ti ti-chart-line text-primary me-2"></i>
-                    <div>
-                      <strong>$10 buy / $15 sell</strong> per transaction
-                      <div class="text-muted small">Flat fees, not percentage</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="py-2">
-                  <div class="d-flex align-items-center">
-                    <i class="ti ti-home-dollar text-success me-2"></i>
-                    <div>
-                      <strong>$250/month</strong> per unit rental
-                      <div class="text-muted small">Verifiable on-chain + contracts</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DAO Toolkit -->
-        <div class="col-lg-4">
-          <div class="card h-100">
-            <div class="card-status-top" style="background: #D4AF37;"></div>
-            <div class="card-body">
-              <div class="mb-3">
-                <span class="badge badge-framework">DAO TOOLKIT</span>
-              </div>
-              <h3 class="card-title">Oracle + SINAPI + Transparency</h3>
-              <div class="divide-y">
-                <div class="py-2">
-                  <div class="d-flex align-items-center">
-                    <i class="ti ti-checkup-list me-2" style="color: #D4AF37;"></i>
-                    <div>
-                      <strong>RACI decision flow</strong>
-                      <div class="text-muted small">Governance framework</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="py-2">
-                  <div class="d-flex align-items-center">
-                    <i class="ti ti-certificate me-2" style="color: #D4AF37;"></i>
-                    <div>
-                      <strong>Government cost index</strong>
-                      <div class="text-muted small">Brazil: SINAPI, US: RSMeans, UK: BCIS</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Grant Eligible -->
-        <div class="col-lg-4">
-          <div class="card h-100">
-            <div class="card-status-top bg-success"></div>
-            <div class="card-body">
-              <div class="mb-3">
-                <span class="badge badge-strategic">GRANT ELIGIBLE</span>
-              </div>
-              <h3 class="card-title">IDB $250M Pool + SDG 11</h3>
-              <div class="divide-y">
-                <div class="py-2">
-                  <div class="d-flex align-items-center">
-                    <i class="ti ti-urgent text-success me-2"></i>
-                    <div>
-                      <strong>Closed-loop impact</strong>
-                      <div class="text-muted small">Negotiation advantage</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="py-2">
-                  <div class="d-flex align-items-center">
-                    <i class="ti ti-shield-check text-success me-2"></i>
-                    <div>
-                      <strong>Rent-to-own model</strong>
-                      <div class="text-muted small">Self-sustaining ESG compliance</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Case Study Section -->
-    <div class="container-xl py-5">
-      <div class="section-header">
-        <h2 class="section-title">Proof-of-Concept: Jardim Guadalupe</h2>
-        <p class="section-subtitle">SINAPI-verified construction costs in São Paulo, Brazil</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-8">
+        <div class="col-lg-8 mx-auto">
           <div class="card">
-            <div class="card-body">
-              <h3 class="card-title mb-4">
-                <span class="badge badge-technical me-2">SINAPI-VERIFIED</span>
-                Construction: $27,777 per unit
-              </h3>
+            <div class="card-body p-5">
+              <h3 class="mb-4">Traditional rent is broken:</h3>
+              <ul class="list-unstyled" style="font-size: 1.1rem; line-height: 2;">
+                <li class="mb-3">
+                  <i class="ti ti-x text-danger me-2"></i>
+                  <strong>Middleman extraction:</strong> Landlords capture 100% of rent, families build zero equity
+                </li>
+                <li class="mb-3">
+                  <i class="ti ti-x text-danger me-2"></i>
+                  <strong>Bank gatekeeping:</strong> 82% excluded from mortgages (no credit history, informal income)
+                </li>
+                <li class="mb-3">
+                  <i class="ti ti-x text-danger me-2"></i>
+                  <strong>Circular fees:</strong> RWA platforms charge percentage-based fees that compound endlessly
+                </li>
+              </ul>
 
-              <div class="table-responsive">
-                <table class="table table-vcenter">
-                  <thead>
-                    <tr>
-                      <th>Milestone</th>
-                      <th>Cost/Unit</th>
-                      <th>Verification</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <i class="ti ti-excavator me-2 text-primary"></i>
-                          Foundation
-                        </div>
-                      </td>
-                      <td>$6,944</td>
-                      <td><span class="badge bg-success">SINAPI</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <i class="ti ti-building me-2 text-primary"></i>
-                          Structure
-                        </div>
-                      </td>
-                      <td>$13,889</td>
-                      <td><span class="badge bg-success">SINAPI</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <i class="ti ti-paint me-2 text-primary"></i>
-                          Finishings
-                        </div>
-                      </td>
-                      <td>$6,944</td>
-                      <td><span class="badge bg-success">SINAPI</span></td>
-                    </tr>
-                    <tr class="table-active">
-                      <td><strong>Total</strong></td>
-                      <td><strong>$27,777</strong></td>
-                      <td><span class="badge bg-primary">Verified</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="alert alert-info mt-4">
+                <div class="d-flex">
+                  <i class="ti ti-bulb me-2"></i>
+                  <div>
+                    <strong>Our approach:</strong> Flat fees per transaction (not percentages), rent payments build equity toward ownership, government-verified construction costs (SINAPI), no bank required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="container-xl py-5">
+      <div class="section-header">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Test case: Jardim Guadalupe, São Paulo</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8 mx-auto">
+          <div class="card">
+            <div class="card-body p-5">
+              <div class="mb-4">
+                <span class="badge badge-technical">SINAPI-VERIFIED</span>
+                <span class="badge badge-framework ms-2">TRANSPARENT COSTS</span>
+              </div>
+
+              <h3 class="mb-4">Construction: $27,777 per unit</h3>
+              <p class="text-muted mb-4">Verified against SINAPI (Brazilian government cost index). Materials, labor, overhead — all public.</p>
+
+              <div class="divide-y">
+                <div class="py-3">
+                  <strong>1. DAO buys land</strong>
+                  <p class="text-muted mb-0">Transparent treasury, multisig approval for large purchases</p>
+                </div>
+                <div class="py-3">
+                  <strong>2. Build with SINAPI verification</strong>
+                  <p class="text-muted mb-0">Government cost index ensures no middleman markup. >10% variance triggers multisig review.</p>
+                </div>
+                <div class="py-3">
+                  <strong>3. Families rent-to-own</strong>
+                  <p class="text-muted mb-0">Monthly rent builds equity. After 10-15 years, ownership transfers on-chain. No bank approval needed.</p>
+                </div>
+                <div class="py-3">
+                  <strong>4. Flat fees sustain DAO</strong>
+                  <p class="text-muted mb-0">$10 buy / $15 sell per swap (not percentage). DAO treasury grows without extracting from families.</p>
+                </div>
               </div>
 
               <div class="alert alert-info mt-4">
                 <div class="d-flex">
                   <i class="ti ti-info-circle me-2"></i>
                   <div>
-                    <strong>SINAPI Index:</strong> Brazilian government construction cost reference used for public works. Updated monthly, region-specific, auditable.
+                    <strong>Status:</strong> Research phase. We're testing this model in Brazil first, then adapting for other jurisdictions (US: RSMeans, UK: BCIS).
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-lg-4">
-          <div class="card bg-primary text-white">
-            <div class="card-body">
-              <h3 class="card-title text-white">Economics at Scale</h3>
-              <div class="divide-y divide-white-10">
+      <!-- Current Status -->
+      <div class="row g-4 mt-2">
+        <div class="col-lg-8 mx-auto">
+          <div class="card">
+            <div class="card-status-top bg-success"></div>
+            <div class="card-body p-5">
+              <div class="mb-3">
+                <span class="badge badge-strategic">RESEARCH PHASE</span>
+              </div>
+              <h3 class="card-title mb-4">Where We Are Now</h3>
+
+              <div class="divide-y">
                 <div class="py-3">
-                  <div class="h1 mb-1">18 units</div>
-                  <div>Total project size</div>
+                  <strong>✓ Draft whitepaper complete</strong>
+                  <p class="text-muted mb-0">Economics model, governance structure, SINAPI verification process documented</p>
                 </div>
                 <div class="py-3">
-                  <div class="h1 mb-1">$500k</div>
-                  <div>Total construction cost</div>
+                  <strong>✓ Bonzi app live (testing cooperation scoring)</strong>
+                  <p class="text-muted mb-0">Early participants can earn reputation credits toward future DAO governance</p>
                 </div>
                 <div class="py-3">
-                  <div class="h1 mb-1">$4,500</div>
-                  <div>Monthly rental yield (18 × $250)</div>
+                  <strong>→ Grant applications in progress</strong>
+                  <p class="text-muted mb-0">IDB $250M housing pool, Polygon climate grants, Celo social impact fund</p>
+                </div>
+                <div class="py-3">
+                  <strong>→ Jardim Guadalupe test case</strong>
+                  <p class="text-muted mb-0">São Paulo pilot pending regulatory clarity + community formation</p>
+                </div>
+              </div>
+
+              <div class="alert alert-info mt-4">
+                <div class="d-flex">
+                  <i class="ti ti-bulb me-2"></i>
+                  <div>
+                    <strong>What's missing:</strong> We're stress-testing the economics model, finalizing legal wrapper for Brazil, and building the community. Join the discussion to help shape this.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="card mt-4">
-            <div class="card-body">
-              <h4 class="card-title">Dual-Yield Breakdown</h4>
-              <div class="progress-stacked mt-3">
-                <div class="progress" style="width: 60%">
-                  <div class="progress-bar bg-primary">Trade Fees (60%)</div>
+    <!-- Bonzi Connection Section -->
+    <div class="container-xl py-5">
+      <div class="section-header">
+        <h2 class="section-title">How Bonzi Connects to IMOBX</h2>
+        <p class="section-subtitle">Test cooperation tools first, then apply them to housing</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8 mx-auto">
+          <div class="card">
+            <div class="card-body p-5">
+              <p class="h5 text-muted mb-4">Bonzi is our testing ground for the DAO toolkit that will power IMOBX.</p>
+
+              <div class="divide-y">
+                <div class="py-3">
+                  <strong>Cooperation scoring (CPI)</strong>
+                  <p class="text-muted mb-0">Track participation signals (help, education, respect, ownership). Test whether this creates healthier communities than token-voting alone.</p>
                 </div>
-                <div class="progress" style="width: 40%">
-                  <div class="progress-bar bg-success">Rental (40%)</div>
+                <div class="py-3">
+                  <strong>Trust oracle</strong>
+                  <p class="text-muted mb-0">B2B API for querying wallet reputation. IMOBX will use this to verify DAO member contributions before governance decisions.</p>
+                </div>
+                <div class="py-3">
+                  <strong>Flat fee economics</strong>
+                  <p class="text-muted mb-0">$10 buy / $15 sell per transaction (not percentage). Proving this model works before applying to rent-to-own.</p>
+                </div>
+                <div class="py-3">
+                  <strong>RACI governance</strong>
+                  <p class="text-muted mb-0">Clear decision roles (Responsible, Accountable, Consulted, Informed). Prevents centralization + chaos.</p>
                 </div>
               </div>
-              <div class="mt-3 text-muted small">
-                Mix adjusts based on trading volume vs. occupancy rate
+
+              <div class="alert alert-info mt-4">
+                <div class="d-flex">
+                  <i class="ti ti-bulb me-2"></i>
+                  <div>
+                    <strong>Join Bonzi now:</strong> Early participants build reputation that transfers to IMOBX governance when we launch. <a href="https://t.me/bonzivista_bot">t.me/bonzivista_bot</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -494,22 +574,25 @@
 
     <!-- CTA Section -->
     <div class="container-xl py-5">
-      <div class="card bg-primary text-white">
+      <div class="card cta-card">
         <div class="card-body py-5 text-center">
-          <h2 class="text-white mb-3">Fork the Primitive, Adapt to Your Jurisdiction</h2>
-          <p class="h4 font-weight-normal mb-4">
-            SINAPI (Brazil), RSMeans (US), BCIS (UK) — Same model, different cost index
+          <h2 class="mb-3">Help Us Design This Right</h2>
+          <p class="h5 font-weight-normal mb-4" style="max-width: 700px; margin: 0 auto;">
+            We're researching in public. Read our draft plan, spot gaps, test early features, shape the future of housing access.
           </p>
-          <div class="btn-list justify-content-center">
-            <a href="/imobx-website/research/" class="btn btn-light btn-lg">
-              <i class="ti ti-book-2 me-2"></i>
-              Read Research
+          <div class="btn-list justify-content-center mt-4">
+            <a href="/imobx-website/whitepaper.html" class="btn btn-light btn-lg">
+              <i class="ti ti-file-text me-2"></i>
+              Read Draft Plan
             </a>
-            <a href="/imobx-website/dao-demo.html" class="btn btn-outline-light btn-lg">
-              <i class="ti ti-dashboard me-2"></i>
-              Try DAO Dashboard
+            <a href="https://t.me/bonzivista" class="btn btn-outline-light btn-lg">
+              <i class="ti ti-message-circle me-2"></i>
+              Join Discussion
             </a>
           </div>
+          <p class="text-white-50 mt-4 mb-0" style="font-size: 0.875rem;">
+            No token sale. No promises. Just transparent research toward SDG 11.
+          </p>
         </div>
       </div>
     </div>
@@ -520,42 +603,42 @@
     <div class="container-xl">
       <div class="row">
         <div class="col-lg-4 mb-4">
-          <img src="/imobx-website/assets/logo.png" height="32" alt="IMOBX" class="mb-3">
+          <img src="/imobx-website/assets/logo.png" height="32" alt="IMOBX" class="mb-3" style="filter: brightness(0);">
           <p class="text-muted">
-            Jurisdiction-agnostic RWA DAO primitive. Oracle + SINAPI + dual-yield model.
+            Research-phase DAO for rent-to-own housing. Solving SDG 11 with flat fees, transparent costs, no bank gatekeeping.
           </p>
         </div>
         <div class="col-lg-2 col-6 mb-4">
-          <h4>Product</h4>
+          <h4>Start Here</h4>
           <ul class="list-unstyled">
-            <li><a href="/imobx-website/tokenomics.html" class="text-muted">Tokenomics</a></li>
-            <li><a href="/imobx-website/properties.html" class="text-muted">Properties</a></li>
-            <li><a href="/imobx-website/buy.html" class="text-muted">Buy</a></li>
+            <li class="mb-2"><a href="/imobx-website/whitepaper.html" class="text-muted">Read Our Plan</a></li>
+            <li class="mb-2"><a href="#start-here" class="text-muted">Where to Start</a></li>
+            <li class="mb-2"><a href="https://t.me/bonzivista" class="text-muted">Join Discussion</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-6 mb-4">
           <h4>Learn</h4>
           <ul class="list-unstyled">
-            <li><a href="/imobx-website/research/" class="text-muted">Research</a></li>
-            <li><a href="/imobx-website/rent-to-own.html" class="text-muted">Rent-to-Own</a></li>
-            <li><a href="/imobx-website/dao-demo.html" class="text-muted">DAO Demo</a></li>
+            <li class="mb-2"><a href="/imobx-website/bonzi-journey.html" class="text-muted">Bonzi Connection</a></li>
+            <li class="mb-2"><a href="/imobx-website/research/" class="text-muted">Research</a></li>
+            <li class="mb-2"><a href="/imobx-website/research/risks.html" class="text-muted">Risks</a></li>
           </ul>
         </div>
         <div class="col-lg-4 mb-4">
-          <h4>Contact</h4>
-          <p class="text-muted">
-            Building open-source RWA infrastructure.<br>
-            Powered by Bonzi + Ethervista.
+          <h4>Community</h4>
+          <p class="text-muted mb-2">
+            <a href="https://t.me/bonzivista_bot" class="text-muted">Bonzi Bot</a> •
+            <a href="https://github.com/Siah-kin/community-bot" class="text-muted">GitHub</a> •
+            <a href="https://t.me/bonzivista" class="text-muted">Telegram</a>
           </p>
         </div>
       </div>
-      <div class="border-top border-white-10 pt-4 text-center text-muted">
-        <p class="mb-0">© 2026 IMOBX. Open source RWA primitive.</p>
+      <div class="border-top pt-4 text-center text-muted">
+        <p class="mb-0">&copy; 2026 IMOBX - Research Phase • No Token Sale • Designing in Public</p>
       </div>
     </div>
   </footer>
 
   <!-- Tabler JS -->
   <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
-</body>
-</html>
+</invoke>
