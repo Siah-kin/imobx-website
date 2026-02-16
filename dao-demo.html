@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMOBX DAO - Bootstrap 5.3 Widget Demo</title>
+
+  <!-- Tabler CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet">
+
+  <!-- Custom DAO Widget Styles -->
+  <style>
+    .dao-widget {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .stake-amount-input {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    .reward-preview {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .wallet-connect-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      color: white;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .wallet-connect-btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-md navbar-light d-print-none">
+      <div class="container-xl">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+          <a href=".">
+            <img src="/imobx-website/assets/logo.png" height="32" alt="IMOBX">
+          </a>
+        </h1>
+        <div class="navbar-nav flex-row order-md-last">
+          <button class="wallet-connect-btn" onclick="connectWallet()">
+            <i class="ti ti-wallet"></i> Connect Wallet
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-wrapper">
+      <!-- Page header -->
+      <div class="page-header d-print-none">
+        <div class="container-xl">
+          <div class="row g-2 align-items-center">
+            <div class="col">
+              <h2 class="page-title">
+                DAO Widget Showcase
+              </h2>
+              <div class="text-muted mt-1">Bootstrap 5.3 + Web3 Integration</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="row row-deck row-cards">
+
+            <!-- Stake Widget -->
+            <div class="col-md-6">
+              <div class="card dao-widget">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    <i class="ti ti-coin"></i> Stake ETH
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <!-- Wallet Status -->
+                  <div class="mb-3 text-center">
+                    <span class="badge badge-outline text-orange" id="wallet-status">
+                      <i class="ti ti-alert-circle"></i> Wallet Not Connected
+                    </span>
+                  </div>
+
+                  <!-- Stake Amount Input -->
+                  <div class="mb-3">
+                    <label class="form-label">Amount to Stake</label>
+                    <input
+                      type="number"
+                      class="form-control stake-amount-input"
+                      id="stake-amount"
+                      placeholder="0.00"
+                      min="0"
+                      step="0.01"
+                      oninput="updateRewardPreview()"
+                    >
+                    <small class="form-hint">Minimum: 0.01 ETH</small>
+                  </div>
+
+                  <!-- Lock Duration -->
+                  <div class="mb-3">
+                    <label class="form-label">Lock Duration: <span id="duration-label">14 days</span></label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      min="14"
+                      max="90"
+                      value="14"
+                      id="lock-duration"
+                      oninput="updateDurationLabel(this.value); updateRewardPreview()"
+                    >
+                    <div class="d-flex justify-content-between">
+                      <small class="text-muted">14 days</small>
+                      <small class="text-muted">90 days</small>
+                    </div>
+                  </div>
+
+                  <!-- Reward Preview -->
+                  <div class="reward-preview">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <div class="text-white-50 small">Estimated Rewards</div>
+                        <div class="h2 mb-0" id="reward-estimate">0.00 ETH</div>
+                      </div>
+                      <div class="text-end">
+                        <div class="text-white-50 small">APY</div>
+                        <div class="h2 mb-0" id="apy-display">12%</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-lg" onclick="stakeETH()" disabled id="stake-btn">
+                      <i class="ti ti-lock"></i> Stake ETH
+                    </button>
+                    <button class="btn btn-outline-secondary" onclick="showStakeHistory()">
+                      <i class="ti ti-history"></i> View Your Stakes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Treasury Widget -->
+            <div class="col-md-6">
+              <div class="card dao-widget">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    <i class="ti ti-building-bank"></i> Treasury Overview
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <!-- Balance Cards -->
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <div class="card bg-azure-lt">
+                        <div class="card-body">
+                          <div class="small text-muted">Total Staked</div>
+                          <div class="h2">1,234.5 ETH</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card bg-green-lt">
+                        <div class="card-body">
+                          <div class="small text-muted">Total Rewards</div>
+                          <div class="h2">89.2 ETH</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Recent Transactions -->
+                  <div class="table-responsive">
+                    <table class="table table-vcenter card-table">
+                      <thead>
+                        <tr>
+                          <th>Type</th>
+                          <th>Amount</th>
+                          <th>Time</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <span class="badge bg-green">Stake</span>
+                          </td>
+                          <td>5.0 ETH</td>
+                          <td class="text-muted">2 hours ago</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="badge bg-orange">Claim</span>
+                          </td>
+                          <td>0.15 ETH</td>
+                          <td class="text-muted">5 hours ago</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="badge bg-blue">Unstake</span>
+                          </td>
+                          <td>2.5 ETH</td>
+                          <td class="text-muted">1 day ago</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="d-grid">
+                    <button class="btn btn-outline-primary" onclick="viewFullTreasury()">
+                      <i class="ti ti-external-link"></i> View Full Treasury
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Voting Widget -->
+            <div class="col-12">
+              <div class="card dao-widget">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    <i class="ti ti-checkup-list"></i> Active Proposals
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <div class="list-group list-group-flush">
+                    <!-- Proposal 1 -->
+                    <div class="list-group-item">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <h4 class="mb-1">Increase Staking Rewards by 2%</h4>
+                          <div class="text-muted small">Proposed by 0x7a9f...3d2c • Ends in 3 days</div>
+                          <div class="mt-2">
+                            <div class="progress">
+                              <div class="progress-bar bg-green" style="width: 68%" role="progressbar">
+                                68% For
+                              </div>
+                              <div class="progress-bar bg-red" style="width: 32%" role="progressbar">
+                                32% Against
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="btn-group" role="group">
+                            <button class="btn btn-success" onclick="vote('for', 1)">
+                              <i class="ti ti-thumb-up"></i> For
+                            </button>
+                            <button class="btn btn-danger" onclick="vote('against', 1)">
+                              <i class="ti ti-thumb-down"></i> Against
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Proposal 2 -->
+                    <div class="list-group-item">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <h4 class="mb-1">Add USDC as Staking Currency</h4>
+                          <div class="text-muted small">Proposed by 0x4b2a...8f1e • Ends in 5 days</div>
+                          <div class="mt-2">
+                            <div class="progress">
+                              <div class="progress-bar bg-green" style="width: 45%" role="progressbar">
+                                45% For
+                              </div>
+                              <div class="progress-bar bg-red" style="width: 55%" role="progressbar">
+                                55% Against
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="btn-group" role="group">
+                            <button class="btn btn-success" onclick="vote('for', 2)">
+                              <i class="ti ti-thumb-up"></i> For
+                            </button>
+                            <button class="btn btn-danger" onclick="vote('against', 2)">
+                              <i class="ti ti-thumb-down"></i> Against
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabler JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+
+  <!-- Web3 Integration (Placeholder) -->
+  <script>
+    let walletConnected = false;
+    let walletAddress = null;
+
+    function connectWallet() {
+      if (typeof window.ethereum !== 'undefined') {
+        window.ethereum.request({ method: 'eth_requestAccounts' })
+          .then(accounts => {
+            walletAddress = accounts[0];
+            walletConnected = true;
+            updateWalletStatus();
+            document.getElementById('stake-btn').disabled = false;
+          })
+          .catch(err => {
+            alert('Wallet connection rejected');
+          });
+      } else {
+        alert('MetaMask not detected. Please install MetaMask to continue.');
+      }
+    }
+
+    function updateWalletStatus() {
+      const statusBadge = document.getElementById('wallet-status');
+      if (walletConnected) {
+        statusBadge.className = 'badge badge-outline text-green';
+        statusBadge.innerHTML = `<i class="ti ti-circle-check"></i> Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}`;
+      }
+    }
+
+    function updateDurationLabel(days) {
+      document.getElementById('duration-label').textContent = `${days} days`;
+    }
+
+    function updateRewardPreview() {
+      const amount = parseFloat(document.getElementById('stake-amount').value) || 0;
+      const duration = parseInt(document.getElementById('lock-duration').value);
+
+      // Simple APY calculation (example)
+      const baseAPY = 12;
+      const bonusAPY = (duration - 14) / 76 * 8; // Up to 8% bonus for 90 days
+      const totalAPY = baseAPY + bonusAPY;
+
+      const reward = amount * (totalAPY / 100) * (duration / 365);
+
+      document.getElementById('reward-estimate').textContent = `${reward.toFixed(4)} ETH`;
+      document.getElementById('apy-display').textContent = `${totalAPY.toFixed(1)}%`;
+    }
+
+    function stakeETH() {
+      if (!walletConnected) {
+        alert('Please connect your wallet first');
+        return;
+      }
+
+      const amount = document.getElementById('stake-amount').value;
+      const duration = document.getElementById('lock-duration').value;
+
+      alert(`Staking ${amount} ETH for ${duration} days...\n\nThis would call your staking contract here.`);
+
+      // Here you would call your actual contract:
+      // await stakingContract.stake(amount, duration);
+    }
+
+    function showStakeHistory() {
+      alert('This would show your staking history from the blockchain');
+    }
+
+    function vote(direction, proposalId) {
+      if (!walletConnected) {
+        alert('Please connect your wallet first');
+        return;
+      }
+
+      alert(`Voting ${direction} on proposal #${proposalId}\n\nThis would call your governance contract here.`);
+
+      // Here you would call your actual contract:
+      // await governanceContract.vote(proposalId, direction);
+    }
+
+    function viewFullTreasury() {
+      alert('This would open the full treasury dashboard');
+    }
+  </script>
+</body>
+</html>
