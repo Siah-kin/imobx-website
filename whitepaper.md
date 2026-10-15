@@ -41,6 +41,8 @@ The background discussion includes the following per-home planning proposal. It 
 
 The later proposal assumed at least 36 homes and a 12-month delivery program, totaling $999,972. Shared purchasing and infrastructure are part of the premise. An existing-home pilot and a small new-build pilot may have different costs. Rafael and the accountant should reconcile the selected scope, current BRL prices, land/control terms, builder margin, contingency, taxes, utilities, permissions and ongoing expenses. This updates existing work rather than starting from an unexplained construction figure.
 
+A separate account dated 20 January 2026 reports a signed contract for two lofts, awaiting a first deposit, on a steeply sloping site. Rafael mentioned $27,777, but the supplied wording does not establish whether this is a combined or per-loft figure, or the included scope. Keep this construction case separate from the 36-home proposal. The supplied drawings and site photograph are available in the [project archive](properties.html#estudo-lofts). Current funding, execution and any rent-to-own use remain to be updated.
+
 The historical $250 monthly payment and 15-year term are also planning assumptions. The selected agreement needs a current affordability assessment and a clear BRL payment/indexation policy. Neither USD conversion nor a nominal payment figure proves affordability.
 
 ## 4. How the money would work
@@ -143,6 +145,7 @@ Material questions remain: property contribution/control, legal form, enforceabl
 |---|---|
 | Rio rent-to-own aim and ground/digital roles | Founder direction recorded in the existing project research. |
 | $27,777 per-home / 36-home proposal | Founder-supplied historical planning figure; not a current pilot quote. |
+| 20 January 2026 two-loft account | Founder-reported contract awaiting first deposit at that time; drawings/site photo supplied. Cost unit, scope and current status need confirmation. |
 | Donated/controlled properties and available capital | Unverified here; no number of received homes or donated value is asserted. |
 | IMOBX entity, executed agreements and permits | Needs documentary confirmation for the selected pilot. |
 | Arctide fee components | Provider documentation checked 15 October 2026; IMOBX integration not demonstrated. |

@@ -48,6 +48,10 @@ The background proposal assumed at least 36 homes and a 12-month program: 36 × 
 
 State the date, location, quantities and treatment of overhead/profit in the chosen price basis before applying the old 15% deduction. [CAIXA: SINAPI reference documentation](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx).
 
+### Separate two-loft development account
+
+On 20 January 2026 Rafael reported a two-loft contract awaiting its first deposit and described a steeply sloping site. His $27,777 reference needs confirmation of cost unit and scope; it is a separate case from the 36-home proposal. The [supplied drawings and site photograph](properties.html#estudo-lofts) give the pilot a concrete reporting example. Update the contract scope, funding, work stages and actual costs before treating it as delivered housing or a rent-to-own asset.
+
 ### Before including a property
 
 Record its owner or legal controller, encumbrances, condition, delivery responsibilities, contribution instrument, costs and required registration steps. A promised donation, sale, lease or operating mandate must be identified separately. Do not count offered homes as assets received. Check the builder catalogue against completed-work evidence and permission to publish it.
