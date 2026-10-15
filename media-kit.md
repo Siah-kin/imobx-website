@@ -1,74 +1,75 @@
 # IMOBX media kit
 
-**Version 0.2 · 15 October 2026 · review draft**
+**Version 0.2 · 15 October 2026 · working draft**
 
-This kit contains the existing IMOBX logo, brand colours and short project descriptions for preparing project materials. The project is preparing a rent-to-own housing pilot in Rio. Use the current whitepaper and developer specification for the design status of the model.
+Use this kit for IMOBX logos, colours and short project descriptions. IMOBX is preparing a rent-to-own housing project in Rio. The paper and pilot guide explain the plan and the decisions still needed.
 
 ## 1. Logo files
 
-Use the supplied artwork without redrawing, stretching, recolouring or adding effects. Keep its proportions and a clear margin around it. Use the white-background version on the website and in documents. A dark-background variant remains available as an alternate download.
+Use the existing logo without redrawing, stretching or changing its colours. Leave clear space around it. Use the white-background version on the website and documents.
 
 - [Light logo, PNG](assets/imobx-logo-light.png).
 - [Dark logo, JPG](assets/imobx-logo-dark.jpg).
 - [Original light artwork, WebP](assets/imobx-logo-light-source.webp).
 
-The light file in the original repository has a PNG extension but WebP content. The supplied PNG preserves its decoded pixels for presentation and PDF use. These are the available raster assets; no vector master is included.
+The PNG is ready for websites and PDFs. The original WebP is included too. No editable vector logo is supplied.
 
 ## 2. Colours and type
 
-The current [website design guidelines](https://siah-kin.github.io/imobx-website/design.html) explain the white layout, gradual disclosure and photographic circles. [Editable design reference](https://github.com/Siah-kin/imobx-website/blob/main/DESIGN.md).
+The [design guide](design.html) explains the white layout, expandable sections and circles on photos. [Editable guide](https://github.com/Siah-kin/imobx-website/blob/main/DESIGN.md).
 
 | Use | Colour |
 |---|---|
-| Web background | #FFFFFF |
-| Elevated web surface | #F7FAFB |
-| Web borders | #D9E3E8 |
-| Primary web text | #193D4E |
-| Secondary web text | #526571 |
-| Technical accent | #4A90A4 |
-| Strategic accent, used sparingly | #FF8C00 |
-| Light technical panel for print | #E8F4F8 |
+| Page background | #FFFFFF |
+| Pale background | #F7FAFB |
+| Borders | #D9E3E8 |
+| Main text | #193D4E |
+| Secondary text | #526571 |
+| Teal accent | #4A90A4 |
+| Occasional orange accent | #FF8C00 |
+| Pale print panel | #E8F4F8 |
 
-Use readable sans-serif type; the current drafts use Arial and system fallbacks. Use white backgrounds on the website and in print documents, following the owner’s updated direction of 15 October 2026. Keep corners square. Explain the subject in prose before diagrams or tables; give technical explanations more visual space than strategic claims. Orange should remain rare. Check contrast for each text/background combination rather than assuming every brand colour is suitable for small text.
+Use readable type such as Arial. Keep backgrounds white and corners square. Explain an idea before a diagram. Leave room around text and use orange sparingly. Check that text is easy to read against its background.
 
-[Download colour definitions, JSON](brand-colors.json).
+[Download colours, JSON](brand-colors.json).
 
 ## 3. Short description in English
 
-IMOBX is preparing a rent-to-own housing pilot in Rio de Janeiro. Its proposed model connects local construction knowledge, written resident agreements, reinvestment in housing and residents’ participation in decisions. IMOBX aims to develop a DAO with shared rules and useful digital records as the operating model is tested. The pilot is intended to test housing delivery, maintenance, payment arrangements and progress toward ownership. Its legal structure, property arrangements and any token rights remain under design.
+IMOBX is preparing a first housing project in Rio de Janeiro. Families would rent a home under a clear agreement explaining how they can become its owner. Local builders, residents and supporters would help make the project work. We aim to build a DAO: an organization with shared decisions and digital tools for following work and money. The legal form, property arrangements and any token rights are still being decided.
 
 ## 4. Descrição curta em português
 
-A IMOBX está preparando um piloto de moradia com opção de compra no Rio de Janeiro. A proposta reúne experiência local de construção, contratos por escrito, reinvestimento em moradia e participação dos moradores nas decisões. A IMOBX pretende desenvolver uma DAO com regras compartilhadas e registros digitais úteis à medida que testa o modelo de operação. O piloto pretende testar a entrega, a manutenção, os pagamentos e o caminho até a propriedade. A estrutura jurídica, os acordos sobre os imóveis e os direitos de um eventual token ainda estão em definição.
+A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As famílias alugariam uma casa com um contrato claro explicando como podem se tornar donas dela. Construtores locais, moradores e apoiadores ajudariam a fazer o projeto funcionar. Queremos construir uma DAO: uma organização com decisões compartilhadas e ferramentas digitais para acompanhar trabalho e dinheiro. A forma jurídica, os acordos sobre os imóveis e os direitos de um eventual token ainda estão em definição.
 
 ### Rafael's neighbourhood vision
 
-In his 30 November 2025 proposal, Rafael described duplex homes around a shared courtyard, rooftop solar, an orchard, play space and two study rooms. The intention is to connect housing access with everyday household costs, neighbourly life and learning. The [concept illustration and explanation](properties.html#visao-rafael) represent that vision, while the separate January two-loft account supplies an early construction case. Describe the purpose of each feature and the work needed to deliver and maintain it. Use measured results when available for cost, energy, safety and education claims.
+On 30 November 2025, Rafael described two-level homes around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. These features aim to support lower household costs, neighbourly life and learning. The [illustration](properties.html#visao-rafael) shows a plan, not a completed village. The January two-loft contract is a separate case. Explain what each feature is for, what it costs and who would maintain it. Use measured results when claiming savings.
 
 ## 5. Writing and claims
 
-Use a documentary approach: explain housing conditions, their sources and the community context before presenting IMOBX's response. Favelas have local histories and identities; international housing categories and displacement describe different things. Residents are participants with preferences, work and social ties. Use the dated sources and editorial rules in the [design guide](design.html#documentary-editorial-approach). Context photographs link to the supplied originals; displayed circles use generative annotation edits. The image archive records provenance limits. Engineering claims should point to responsible professionals, scoped designs, budgets and delivery evidence as these become available.
+Write for a reader who knows nothing about housing finance or crypto. Start with people, homes and everyday tasks. Prefer “money left after the bills” to “distributable surplus,” and “check the bank record against the payment” to “reconcile.” Explain a necessary technical term when first used.
 
+Keep the documentary approach: describe what a photo shows, where the information comes from and its date. Favelas have their own histories and identities. Do not describe every resident as displaced. Listen to families about work, schools, travel and what they want. [Editorial guide](design.html#documentary-editorial-approach).
 
-Describe what is planned, agreed, paid and delivered using those specific terms. Lead with the resident arrangement and the use of project money. Link numbers to evidence and include their dates and assumptions. Explain any technical term when it first appears.
+Label photos and drawings clearly. The displayed photo circles were edited with AI; link the unchanged originals. Confirm the photographer, place, date and publication rights before calling a photo a verified site report.
 
-The historical $27,777 per-home proposal assumes a larger cohort with shared costs. It is not a current one-home quote. The development sheet states the assumptions and what needs updating. Do not present that figure as a guaranteed cost or turn property values into a token price guarantee.
+Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 homes. It is not a current one-home quote. The separate two-loft contract is US$27,777 for both together. Keep these different cases clear and preserve the cost breakdown and dates.
 
-Keep token supply, tenant allocation, returns, partner relationships and received funding tied to accepted documents. The current drafts do not establish a token offer, guaranteed yield, a grant award or regulatory approval. A logo appearing alongside a service provider must not imply an agreed partnership or endorsement without evidence.
+Say what is planned, agreed, signed, paid and completed. Use exact dates and sources for numbers. No token sale, guaranteed return, funding award or regulatory approval is established by these drafts. Do not imply a partnership because a logo is displayed.
 
 ## 6. Project resources
 
-- [Whitepaper](whitepaper.html): operating model, money flows, participation and evidence.
-- [Pitch deck](pitchdeck.html): twelve slides for a partner discussion.
-- [Developer and pilot specification](devsheet.html): worked economics, requirements and proposed preparation targets.
-- [Roadmap](devsheet.html#7-pilot-roadmap-and-success-measures): preparation milestones and pilot evidence.
-- [All resources](resources.html): reading views and downloads.
+- [Whitepaper](whitepaper.html): homes, money, shared decisions and sources.
+- [Pitch deck](pitchdeck.html): twelve slides for partners.
+- [Pilot and building guide](devsheet.html): worked examples, requirements and targets.
+- [Roadmap](roadmap.html): steps and what must be ready before moving on.
+- [Questions](faq.html): plain explanations of the model and digital tools.
+- [All documents](resources.html): online reading and downloads.
 
 ## 7. Brand provenance
 
-The existing logo assets come from [Siah-kin/imobx-website](https://github.com/Siah-kin/imobx-website). The repository's [session handoff](https://github.com/Siah-kin/imobx-website/blob/main/SESSION_HANDOFF.md) and [design audit brief](https://github.com/Siah-kin/imobx-website/blob/main/AUDIT_PROMPT_WEBDESIGN.md) record the visual direction. The owner’s current white-background direction supersedes the earlier dark-web guidance. This kit uses the existing identity with the current project wording; older financial examples in those source documents are not adopted by this kit.
-
+The logo files come from [Siah-kin/imobx-website](https://github.com/Siah-kin/imobx-website). The current direction uses white backgrounds. Older dark designs and financial examples in the repository are not the current model.
 
 ## Model explanation and roadmap
 
-The [roadmap](roadmap.html) connects the housing pilot, decision rules and staged digital work. The [FAQ](faq.html) explains the ICO comparison, proposed token rights, nonprofit/yield choice, resident authority and platform alternatives. These are development proposals, not adopted financial entitlements. Preserve Rafael’s explicit CUB/SINAPI cost-engineering basis when describing the village budget; distinguish it from the two-loft contract.
+Keep the paper, slides, guide and website consistent as decisions change. SIAH Protocol is the brand. Hive DAO names the rules and tools for shared responsibility; The Flock is the Telegram bot. IMOBX is the housing application we are developing. Using these names does not mean the complete system is already working in IMOBX.

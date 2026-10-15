@@ -6,219 +6,219 @@ A documented rent-to-own housing model for Rio
 
 
 
-## 1. A home. An agreement. A record of the money.
+## 1. Rent a home. Work toward owning it.
 
-IMOBX is preparing a Rio housing pilot with a written rent-to-own pathway and project reporting.
+IMOBX is preparing a first rent-to-own housing project in Rio.
 
 
 
-- Ground work: construction, property access and resident operations.
+- Local construction and clear family agreements.
 
-- Digital work: clear information, questions and approved reports.
+- Residents help shape shared spaces and decisions.
 
-- Current stage: design and evidence review.
+- Current stage: planning, documents and design.
 
 
 
-**Presenter notes:** Introduce Rafael's proposed construction/local role and John's proposed community/digital role. Their agreements, the legal entity and pilot property control still need documentary confirmation. This deck is for partners, not an investment solicitation.
+**Presenter notes:** Rafael brings construction and local experience; John handles community and digital work. Their roles, the legal organization and the right to use each property need written agreements. This draft explains the plan and asks for partners; it does not offer an investment.
 
 
 
-## 2. Start with households and the home.
+## 2. Start with what a family needs.
 
-The intended pilot serves households displaced or excluded from ordinary housing finance.
+The first project would help displaced families and people unable to use ordinary housing finance.
 
 
 
-- Define eligibility and affordability with local participants.
+- Agree who can join and what payments are affordable.
 
-- Explain payments, maintenance and the ownership path in ordinary Portuguese.
+- Explain repairs, payments and the path to buying the home.
 
-- Provide a support and dispute route residents can actually use.
+- Make help and complaints easy to access.
 
 
 
-**Presenter notes:** Brazil’s 2022 Census recorded around 16.4 million residents in favelas and urban communities, 8.1% of the population. IBGE describes community formation and identities, while UN-Habitat provides the wider inadequate-housing context. These are national/global references, not evidence of the selected pilot site. Do not describe all informal-settlement residents as displaced. Listen to households about location, work, services and their preferences. The founders’ target group requires local definition and consultation. No pilot residents are claimed as enrolled.
+**Presenter notes:** Brazil’s 2022 Census counted about 16.4 million residents in favelas and urban communities, 8.1% of the population. That is national context, not a description of a selected family or site. Living in a favela does not itself mean being displaced. Listen to families about work, schools, transport, support networks and whether a move suits them. No pilot families are claimed as enrolled.
 
 
 
-## 3. A reference-based budget. A delivery plan to track.
+## 3. Rafael has supplied a building budget.
 
-Rafael’s $27,777 per-home budget uses CUB/SINAPI references and cost engineering.
+His US$27,777 per-home plan uses CUB and SINAPI, Brazilian building-cost references.
 
 
 
-- Land $5,550 · construction $18,600 · solar $1,500.
+- Land US$5,550 · construction US$18,600 · solar US$1,500.
 
-- Shared infrastructure $1,500 · legal/design $627.
+- Shared works US$1,500 · design and legal work US$627.
 
-- Track the reference period, BRL scope and actual spending; the village assumes 36 homes.
+- The village plan assumes at least 36 homes built together.
 
 
 
-**Presenter notes:** Rafael explicitly cited SindusCon/CUB and SINAPI in November 2025. On 30 November he provided a $21,883.86 construction calculation plus land, then an optimized $27,777 budget with direct procurement and shared costs. The five lines total $27,777. He specified 36 homes, $999,972 and a 12-month program. Present this engineering basis rather than an unexplained number. Preserve scope and current execution records. A blanket 15% CUB deduction is not an independently proved saving: the reference scope matters. The January two-loft contract is $27,777 combined and is a separate case.
+**Presenter notes:** On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six homes total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together.
 
 
 
-## 4. One accountable organization coordinates the home.
+## 4. Put the home and responsibilities in writing.
 
-Property control, resident agreements and builder responsibilities must connect in writing.
+IMOBX would arrange property access, family agreements and building work.
 
 
 
-- Document ownership or operating authority for the selected property.
+- Check who owns the property and how IMOBX may use it.
 
-- Contract the builder and disclose related-party terms.
+- Agree the builder’s work, price, deadline and who checks it.
 
-- Specify what the resident pays, earns toward ownership and receives at completion.
+- Explain payments, purchase progress and the final transfer.
 
 
 
-**Presenter notes:** A proposed donation or memorandum is not a completed property transfer. A token is not the title record. The legal form and transfer arrangement need Brazilian professional review.
+**Presenter notes:** A promise to donate is different from a completed property transfer. A founder linked to the builder should not approve its own bill. Brazilian advisers need to review the property and legal arrangement. A token does not replace title registration.
 
 
 
-## 5. Keep each source and use visible.
+## 5. Show where each payment goes.
 
-Rent, grants, service receipts and trading fees enter the books separately.
+Keep rent, donations, grants, service income and trading fees separately identified.
 
 
 
-- Pay taxes, collection and agreed property/organization costs.
+- Pay taxes, repairs and agreed running costs.
 
-- Fund repairs, resident commitments, vacancies and reserves.
+- Keep money for empty homes and commitments to families.
 
-- Commit growth capital under an agreed rule; assess any lawful surplus afterward.
+- Fund more homes; consider any permitted investor payments afterward.
 
 
 
-**Presenter notes:** Historical 98% rental distributions are not adopted here. Resident purchase credits are obligations or entitlements, not extra cash. A resale payment belongs to the seller except for separately collected fees. Locked trading liquidity is not available construction cash.
+**Presenter notes:** No old percentage split is agreed. Money credited toward a family’s purchase is not a second receipt of cash. Money paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Money locked in a trading market is not also available to build homes.
 
 
 
-## 6. Self-sufficiency has two tests.
+## 6. Pay today’s bills. Plan the next homes.
 
-Cover the homes already operating. Then finance the next cohort.
+Running the existing homes and building more need separate budgets.
 
 
 
-- Test full operating costs through low or zero trading activity.
+- Check the budget with little or no trading income.
 
-- Account for rent ending when a home transfers to its resident.
+- Rent ends when the family becomes the home’s owner.
 
-- Identify retained assets or recurring services; model expansion capital separately.
+- Show how continuing income and new building funds will be found.
 
 
 
-**Presenter notes:** One thousand homes is a hypothesis, not a break-even result. Grants may help eligible costs but one-off awards are not recurring income. Three- or six-year reviews do not guarantee a distribution.
+**Presenter notes:** Having a thousand homes does not itself show that the accounts balance. One-off grants can help construction but do not become continuing income. Any ongoing charge needs a real, affordable service under agreed terms. Reviews after three or six years are not promises of payouts.
 
 
 
-## 7. A voice comes from a role, not just a balance.
+## 7. Give residents a real say.
 
-Consult on resident authority, delegated work and separately defined financial rights.
+Discuss which decisions belong to residents, workers and possible investors.
 
 
 
-- Resident voice on shared use and maintenance within agreed limits.
+- Residents help decide how shared spaces and repairs work.
 
-- Time-limited delivery roles, conflict checks and replaceable representatives.
+- People chosen for work have time limits and can be replaced.
 
-- Occupancy and purchase rights stay protected by agreements and law.
+- Housing and purchase rights stay protected by agreements and law.
 
 
 
-**Presenter notes:** One token, one vote on everything risks purchased control. The consultation example uses equal voice per verified member in resident matters, relevant experience for elected/appointed work roles, and financial-holder rights defined by their instrument. It is not an adopted charter. Ostrom informs boundaries, local fit, collective choice, accountable monitoring, proportionate responses, conflicts, recognized authority and nested levels. See roadmap.html#governance. Online activity or a score does not decide housing rights.
+**Presenter notes:** One option is equal member voice in resident matters, elected people responsible for work, and investor rights limited to the written investment agreement. Buying tokens would not buy membership or control over every housing decision. Ostrom’s ideas help us ask who participates, who checks and how disputes are resolved. These are proposed rules to agree. Online activity and scores do not decide housing rights.
 
 
 
-## 8. Make fair cooperation the simplest path.
+## 8. Make fair cooperation easier.
 
-SIAH Protocol is the brand. Hive DAO names the decentralized operating rails.
+SIAH Protocol is the brand. Hive DAO is how we aim to share responsibility.
 
 
 
-- Shared context, voluntary roles and succession help work continue.
+- See what needs doing, choose work and leave useful records.
 
-- Ostrom-informed rules; Python agents; Arc settlement; possible Arctide fees.
+- Software agents help track people, wallets, tasks and approvals.
 
-- The Flock supplies Telegram access; IMOBX would test the complete loop.
+- The Flock is the Telegram bot; Arc and Arctide are possible payment tools.
 
 
 
-**Presenter notes:** Hive DAO describes the operating model, not a separate evidence service. Participants should be able to identify a need, take responsibility within agreed roles and budgets, obtain required authorization, check delivery and payment, and pass context to a successor. SIAH Protocol is the brand. Agents help maintain context and permissions around treasuries, identities and wallets. Resident rights and financial-holder rights stay distinct. Demonstrate coordination, challenges and handover without constant founder instructions. Complete IMOBX operation remains to be verified; the engineering follows separate authorized work. The Flock remains neutral and reusable across projects. Arc is the settlement network; Arctide is a candidate fee source, with Argus and Uniswap alternatives requiring their own integration proof.
+**Presenter notes:** Hive DAO is the operating model. The aim is for work to continue without constant founder instructions, with room to disagree and ask for review. For example: report a leak, assess it, approve a repair, check delivery and payment, then leave the record ready for the next person. The plan combines Ostrom’s ideas, agents written in Python, Arc payments and possible Arctide project fees. The complete process still needs to be built and demonstrated in IMOBX. The Flock can serve other projects too; other trading apps need their own integration checks.
 
 
 
-## 9. Separate participation from financial entitlement.
+## 9. Decide what a token would actually give.
 
-A mission-led nonprofit operator and an investor dividend need distinct legal consideration.
+A community membership record and an investment do different jobs.
 
 
 
-- Choose the legal form and protect restricted donations and resident commitments.
+- Choose the legal form and keep donations for their agreed purpose.
 
-- Define any financial claim, issuer, cash source and permitted offer/transfer route.
+- Explain who owes what, where payment money comes from and how to leave.
 
-- Reinvestment may grow operations; it is not automatic token yield or appreciation.
+- Using money to build more homes does not automatically raise a token’s price.
 
 
 
-**Presenter notes:** Under Law 13.019's nonprofit definition for public-sector partnerships, results support the social purpose rather than distributions. Do not promise the nonprofit's profits as investor dividends. Consider participation without profit rights or a separately permitted financial arrangement with Brazilian advisers; no structure is adopted. A DAO/governance label does not settle securities treatment. No supply, APY, sale date or tenant allocation is agreed.
+**Presenter notes:** The nonprofit idea keeps resources serving housing. Under Law 13.019’s definition for public-sector partnerships, nonprofits use results for their social purpose. A nonprofit cannot simply promise those results as investor dividends. Brazilian advisers need to review any other permitted investment arrangement. No supply, return rate, sale date or resident token plan is agreed. The token’s name does not decide its legal treatment.
 
 
 
-## 10. Evidence gates, with parallel work streams.
+## 10. Prepare, test, then decide the next step.
 
-The distinct roadmap links housing delivery, governance and useful digital services.
+The roadmap links homes, money, shared decisions and digital tools.
 
 
 
-- Days 1–30: roles, entity/property evidence, scoped budget and consultation.
+- Days 1–30: roles, property, budget and family discussions.
 
-- Days 31–60: cash rules and decision exercises; day 90: readiness decision.
+- Days 31–60: money rules and worked examples; day 90: readiness decision.
 
-- Funded pilot → operating evidence → token decision and repeatable delivery.
+- Fund the pilot, follow results and test with another local team.
 
 
 
-**Presenter notes:** Proposed preparation targets start only from an agreed date; construction needs funding, property and permits. Observe at least three operating months before the first replication review. Website v1 is published; operational v2 reports real delivery/cash and does not require a token. Optional v3 token access follows rights, legal/provider and technical verification. See roadmap.html and faq.html. A second local team must repeat the process; one thousand homes does not prove self-sufficiency.
+**Presenter notes:** These are preparation targets from an agreed start, not promised building dates. Construction needs property, funding and permissions. Follow at least three operating months before the first expansion review. Website v1 explains the plan; v2 reports real building and accounts without needing a token. Any later token access follows agreed rights and checked legal and payment arrangements.
 
 
 
-## 11. Count homes and fulfilled commitments.
+## 11. Measure homes and promises kept.
 
-The first scorecard measures delivery, cash discipline and resident experience.
+Follow actual costs, accounts and families’ experience.
 
 
 
-- Budget and schedule variance; property rights and resident agreement.
+- Check completed work, final cost and delays.
 
-- Monthly source/use/reserve reconciliation; maintenance and unresolved issues.
+- Match every receipt and payment; report repairs and unresolved issues.
 
-- Resident participation and progress under the ownership agreement.
+- Show participation and progress toward owning the home.
 
 
 
-**Presenter notes:** Set numeric service targets after the pilot baseline. No invented beneficiaries, capital commitments or completed transfers are shown. Trading volume and holder count are financial market observations, not housing impact.
+**Presenter notes:** Agree response times and affordability targets with local participants. Report homes as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. No completed transfers or committed capital are invented here.
 
 
 
-## 12. Help define and verify the first pilot.
+## 12. Help prepare the first project.
 
-The next ask is practical expertise and a bounded delivery arrangement.
+We need people who can check the homes, agreements and budget.
 
 
 
-- Property and building partners: confirm scope, access, costs and delivery.
+- Building partners: confirm the work, property access, costs and timing.
 
-- Housing, accounting and legal partners: review rights, reserves and funding route.
+- Housing, accounting and legal advisers: review agreements and money rules.
 
-- Resident/community partners: test the agreement, information and support process.
+- Families and community partners: test the information and help process.
 
 
 
-**Presenter notes:** Agree the specific scope, responsible people, deliverables and decision dates with each partner. No funding amount or token purchase is requested by this draft. Read the companion whitepaper for assumptions, sources and unresolved decisions.
+**Presenter notes:** Agree the specific work, responsible people and dates with each partner. This draft does not ask readers to buy a token or promise a funding award. The paper and pilot guide give the calculations, sources and decisions still needed.
 
 
 

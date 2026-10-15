@@ -124,3 +124,10 @@ Lead with proposal, provider-acceptance and operation-evidence status. Do not in
 ## SIAH Protocol and Hive DAO terminology
 
 SIAH Protocol is the brand. Hive DAO is the founder-defined operating model and rails for decentralized business coordination: shared context, voluntary role-taking, accepted authority and succession let work continue without constant founder instructions. IMOBX is the proposed housing use case. Describe the assembly of Ostrom-informed rules, Python agents, Arc settlement, possible Arctide fee integration and The Flock as the Telegram interface. Preserve the distinction between the intended operating model and verified implementation. Avoid reducing the brand and the operating model to a combined “SIAH/HiveDAO service.” This is an explanation of the owner’s vision, not a claim that all participants inevitably agree or an instruction to implement backend governance here.
+
+
+## Plain language for every reader
+
+Reviewed across the public site on 15 October 2026. Write for someone who has never used a crypto app or read a housing-finance paper. Lead with the person, action and result: who pays, who checks, who decides, who owns the home. Prefer short sentences and familiar verbs. Explain necessary names such as DAO, USDC, CNPJ and CCTP at first use on a reading page. Keep source names and specialist detail available through the existing links and expandable sections.
+
+Use “money left after bills and agreed savings” for surplus, “money set aside for repairs” for reserves, and “check the bank statement against the payment” for reconciliation. Explain a future token through what its agreement would let someone do or receive. Distinguish a right to live in a home, a membership voice and an investment. Plain wording must preserve conditions, uncertainty, source dates and protected commitments. Never turn a target into a promise or suggest an example calculation is a current price or return. Apply the same standard to Portuguese and English, navigation, photo captions, papers, slides and downloadable files. Keep the SIAH Protocol brand and Hive DAO operating model distinct.

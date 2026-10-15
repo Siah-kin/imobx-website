@@ -16,3 +16,5 @@ Read [DESIGN.md](DESIGN.md) first for the current visual and interaction guideli
 - `properties.html`: existing image archive with concept/photo captions.
 
 Older public page URLs lead to the corresponding current documents. GitHub Pages publishes the root of `main`. Historical working notes already present in the repository are not current financial or token terms.
+
+Reader-facing copy uses everyday Portuguese and English. Explain technical names on first use, keep actual project figures and sources, and rebuild the downloadable documents after text edits. The plain-language section in DESIGN.md is the writing reference.

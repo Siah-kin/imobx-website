@@ -65,16 +65,16 @@ RESOURCE_CATALOG = [
      'links': [('pitchdeck.html','Ver slides','View slides'), ('pitchdeck.pdf','PDF','PDF'),
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes'),
                ('pitchdeck.json','Dados dos slides (JSON)','Slide content (JSON)')]},
-    {'id': 'devsheet', 'pt': 'Ficha do piloto e desenvolvimento', 'en': 'Developer and pilot specification', 'version': '0.3',
-     'description_pt': 'Cálculos, requisitos, responsabilidades e metas propostas para os primeiros 90 dias.',
-     'description_en': 'Calculations, requirements, responsibilities and proposed first-90-day targets.',
+    {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': '0.3',
+     'description_pt': 'Exemplos de contas, responsáveis e metas propostas para os primeiros 90 dias.',
+     'description_en': 'Worked examples, responsibilities and proposed targets for the first 90 days.',
      'meta_pt': '8 páginas · inglês · rascunho', 'meta_en': '8 pages · English · draft',
      'links': [('devsheet.html','Ler','Read'), ('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
     {'id': 'transparency', 'pt': 'Dinheiro e transparência', 'en': 'Money and transparency', 'version': '0.1',
-     'description_pt': 'Fluxos BRL/USDC, prestadores pesquisados, fontes, decisões e próximos passos.',
-     'description_en': 'BRL/USDC flows, researched providers, sources, decisions and next steps.',
-     'meta_pt': 'Português e inglês · proposta e pesquisa documentadas',
-     'meta_en': 'Portuguese and English · documented proposal and research',
+     'description_pt': 'Como o dinheiro passaria de reais para USDC e voltaria, com pesquisa de prestadores e próximos passos.',
+     'description_en': 'How money would move between reais and USDC, with provider research and next steps.',
+     'meta_pt': 'Português e inglês · planos e fontes',
+     'meta_en': 'Portuguese and English · plans and sources',
      'links': [('transparency.html','Ver a página','View page')]},
 ]
 
@@ -98,10 +98,10 @@ def resource_section(standalone=False):
                        'English project documents, in development. The media kit includes Portuguese and English descriptions.','p') + \
             '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">' + \
             translated('Todos os documentos e downloads','All documents and downloads','a','href="resources.html"') + \
-            translated('Roteiro e governança','Roadmap and governance','a','href="roadmap.html"') + \
+            translated('Roteiro e decisões compartilhadas','Roadmap and shared decisions','a','href="roadmap.html"') + \
             translated('Dinheiro e transparência','Money and transparency','a','href="transparency.html"') + \
             translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
-            translated('Ficha do piloto e metas','Pilot specification and targets','a','id="resource-devsheet" href="devsheet.html"') + '</div>'
+            translated('Guia do piloto e metas','Pilot guide and targets','a','id="resource-devsheet" href="devsheet.html"') + '</div>'
     cards = []
     for item in RESOURCE_CATALOG:
         links = []
@@ -114,16 +114,16 @@ def resource_section(standalone=False):
 <p class="resource-meta">v{esc(item['version'])} · {translated(item['meta_pt'],item['meta_en'])}</p>
 <div class="resource-actions">{''.join(links)}</div></article>''')
     return '''<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>''' + \
-        translated('05 / Recursos do projeto','05 / Project resources','span','class="eyebrow"') + \
+        translated('05 / Documentos do projeto','05 / Project documents','span','class="eyebrow"') + \
         translated('Documentos e identidade IMOBX.','IMOBX documents and brand assets.','h1' if standalone else 'h2') + \
-        translated('Leia no navegador ou baixe os arquivos. Roteiro, FAQ e transparência estão em português e inglês; whitepaper, apresentação e ficha do piloto são rascunhos em inglês.',
-                    'Read in your browser or download the files. The roadmap, FAQ and transparency page are bilingual; the whitepaper, deck and pilot specification are English drafts.','p') + \
+        translated('Leia online ou baixe os arquivos. O roteiro, as perguntas e a página do dinheiro estão em português e inglês. O whitepaper, os slides e o guia do piloto são rascunhos em inglês.',
+                    'Read online or download the files. The roadmap, questions and money page are in Portuguese and English. The paper, slides and pilot guide are English drafts.','p') + \
         '<div class="resource-grid">' + ''.join(cards) + '</div>' + \
         '<div class="resource-more">' + \
-        translated('Ver roteiro e governança','View roadmap and governance','a','href="roadmap.html"') + \
+        translated('Ver roteiro e decisões compartilhadas','View roadmap and shared decisions','a','href="roadmap.html"') + \
         translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
-        translated('Fonte editável: roteiro, FAQ e transparência (JSON)','Editable source: roadmap, FAQ and transparency (JSON)','a','href="model-guide.json" download') + \
-        translated('Ver fontes e premissas','View sources and assumptions','a','href="whitepaper.html#12-risks-decisions-and-evidence-register"') + \
+        translated('Para desenvolvedores: conteúdo das páginas (JSON)','For developers: page content (JSON)','a','href="model-guide.json" download') + \
+        translated('Ver fontes e números do planejamento','Read the sources and planning figures','a','href="whitepaper.html#12-risks-decisions-and-evidence-register"') + \
         translated('Baixar documentos e logos (ZIP)','Download documents and logos (ZIP)','a','href="imobx-documents.zip" download') + \
         '</div>'
 
@@ -164,8 +164,8 @@ paper_html = markdown.markdown(paper_source, extensions=['tables', 'toc'])
     '<main class="paper"><p><a href="whitepaper.pdf" download>Download PDF</a> · '
     '<a href="whitepaper.md" download>Editable text</a></p>' + paper_html + '</main>', version='0.2'))
 devsheet_html = markdown.markdown((ROOT / 'devsheet.md').read_text(), extensions=['tables', 'toc'])
-(ROOT / 'devsheet.html').write_text(page('IMOBX | Developer and pilot specification v0.3',
-    '<main class="paper"><p><strong>Developer and pilot specification · revision 0.3</strong><br>'
+(ROOT / 'devsheet.html').write_text(page('IMOBX | Pilot and building guide v0.3',
+    '<main class="paper"><p><strong>Pilot and building guide · revision 0.3</strong><br>'
     '<a href="devsheet.pdf" download>Download revised PDF</a> · '
     '<a href="devsheet.md" download>Editable text</a></p>' + devsheet_html + '</main>', version='0.3'))
 

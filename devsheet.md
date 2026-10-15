@@ -1,33 +1,35 @@
 # IMOBX
 
-## Developer & pilot specification
+## Pilot and building guide
 
-**Revision 0.3 · 15 October 2026 · founder review draft**
+**Revision 0.3 · 15 October 2026 · draft for founder review**
 
 ### 1. What we are preparing
 
-IMOBX is a proposed Rio rent-to-own housing enterprise. It would coordinate property access, construction or refurbishment, resident agreements, maintenance and financial reporting. The first pilot should test whether a documented route toward ownership can operate within an affordable payment plan and a funded maintenance and administration budget.
+IMOBX is preparing a first rent-to-own housing project in Rio. A family would rent a home under a written agreement that explains how it can become the owner. IMOBX would arrange property access, building work, repairs and accounts.
 
-Rafael supplies construction and local delivery knowledge. John supplies community and digital coordination. The chosen Brazilian entity, founder agreement, property control and resident contract must specify their accountable roles. No property contribution, token offer or IMOBX settlement integration is confirmed by this sheet.
+Rafael brings construction and local experience. John handles community communication and digital work. The legal organization, their responsibilities and the right to use each property need written agreements. This sheet confirms no property donation, token sale or working payment service.
 
 ### The four parts to connect
 
-| Part | Required outcome |
+| Part | What needs to be ready |
 |---|---|
-| Housing | A specific home, documented control, delivery scope and a comprehensible resident agreement. |
-| Business | Each receipt allocated once; operating costs, resident commitments and reserves covered. |
-| Participation | Defined resident voice and, if selected, separate legally recognized token rights. |
-| Digital service | Approved information, support, financial summaries and verified payment references. |
+| Homes | A chosen home, the right to use it, a building plan and a clear family agreement. |
+| Money | Record each payment once; cover bills, repairs and promises to residents. |
+| Decisions | Agree what residents, workers and any investors may decide. |
+| Digital tools | Show approved information, answer questions and let people check payments. |
 
 ### The proposed advantage
 
-Combine Rafael's delivery experience and supplied cost model with repeatable resident terms, a reinvestment policy, resident participation and accounts partners can check. SIAH Protocol is the brand; Hive DAO names the decentralized operating rails. Shared context, voluntary roles and succession should keep work moving. The proposed assembly combines Ostrom-informed rules, Python agents, Arc settlement, possible Arctide fees and The Flock’s Telegram interface. IMOBX still needs to demonstrate the complete loop. [Operating model](faq.html#faq-flock-siah).
+Reuse good building plans, agreements, purchasing and accounts so another local team can deliver more homes. Each family should be able to own its whole home; a separate group of investors would not run each house.
+
+SIAH Protocol is the brand. Hive DAO names the rules and tools for shared responsibility. People should see what needs doing, choose work and leave information for whoever continues. The plan combines Ostrom’s ideas about shared resources, software agents, Arc payments, possible Arctide fees and The Flock’s Telegram bot. IMOBX still needs to demonstrate the complete process. [Explanation](faq.html#faq-flock-siah).
 
 ### Design basis for this revision
 
-The working direction is to fund housing costs and continuity before considering any surplus distribution. Trading fees may supplement pilot capital and operating reserves. Rent, trading receipts, grants and contributions remain distinct. Earlier fixed token supply and allocation percentages are retained as historical options, not configuration instructions. A future token follows the chosen rights and permitted transfer process.
+Cover homes and ongoing commitments before considering money for investors. Keep rent, donations, grants and fees separately identified. Old token supply and payout percentages are options from earlier discussions, not chosen rules.
 
-This sheet replaces the original devsheet as a **review draft**. The whitepaper explains the full model; the partner deck and website use its verified public claims. None of these drafts is an investment offer. [Companion paper](whitepaper.html).
+This is a working plan, not an investment offer. The [whitepaper](whitepaper.html) explains the project for a wider audience.
 
 <div class="pagebreak"></div>
 
@@ -44,26 +46,26 @@ This sheet replaces the original devsheet as a **review draft**. The whitepaper 
 | Legal and design | 627 |
 | **Total** | **27,777** |
 
-Rafael explicitly identified SindusCon's CUB and SINAPI in November 2025. On 30 November he supplied the construction calculation, land allowance and the optimized budget above, followed by the minimum 36-home scale and a 12-month program: 36 × $27,777 = $999,972. Preserve that engineering/reference basis. Record the selected reference period, project quantities, BRL costs and actual invoices, alongside land/control, permissions, utility connections, contingency and lifecycle expenses.
+Rafael used CUB and SINAPI, Brazilian building-cost references. On 30 November 2025, he supplied the calculation, land allowance and revised budget above. He specified at least 36 homes built together over 12 months: **36 × US$27,777 = US$999,972**.
 
-State the date, location, quantities, exclusions and treatment of overhead/profit in the selected price basis. Check the [CUB scope](https://sinduscon-caxias.net.br/servicos/cub) before any proposed margin deduction; builder remuneration is among its exclusions. [CAIXA: SINAPI reference documentation](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx).
+For the chosen site, record the price date, quantities, included work, prices in reais and actual bills. Check land, permissions, utility connections, unexpected costs and later maintenance. CUB leaves out some items, including builder payments; deducting a presumed profit percentage does not itself show a saving. [CUB scope](https://sinduscon-caxias.net.br/servicos/cub); [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx).
 
 ### Separate two-loft development account
 
-On 20 January 2026 Rafael reported a two-loft contract awaiting its first deposit and described a steeply sloping site. The owner clarified that $27,777 covers both lofts together ($13,888.50 each by simple division). Included scope and final actual cost still need documentation; this is separate from the 36-home proposal. The [supplied drawings and site photograph](properties.html#estudo-lofts) give the pilot a concrete reporting example. Update the contract scope, funding, work stages and actual costs before treating it as delivered housing or a rent-to-own asset.
+On 20 January 2026, Rafael reported a two-loft contract on a steep site, waiting for the first deposit. **US$27,777 covers both lofts**, or US$13,888.50 each by division. This is separate from the village plan. Record the included work, funding, current progress and final cost before calling it delivered housing. [Drawings and photos](properties.html#estudo-lofts).
 
 ### Before including a property
 
-Record its owner or legal controller, encumbrances, condition, delivery responsibilities, contribution instrument, costs and required registration steps. A promised donation, sale, lease or operating mandate must be identified separately. Do not count offered homes as assets received. Check the builder catalogue against completed-work evidence and permission to publish it.
+Check its owner, debts or restrictions, condition, building responsibilities and permissions. Record whether it is being donated, leased, sold or made available another way. A promise is not a received property. Check the builder’s catalogue against completed work and permission to publish it.
 
 ### Resident agreement to design locally
 
-1. Define eligibility, affordability, the home and responsible organization.
-2. Specify the BRL payment, indexation, maintenance and any purchase-credit rules.
-3. State hardship, default, exit, dispute and operator-failure provisions.
-4. Define the final price, transfer conditions, registration and who pays transfer costs.
+1. Say who may join, what they can afford and which home is included.
+2. Explain payments in reais, price changes, repairs and amounts credited toward purchase.
+3. Explain late payments, hardship, leaving, disputes and what happens if IMOBX fails.
+4. State the final price, transfer conditions, registration and who pays those costs.
 
-The original $250 monthly payment over 180 months remains an illustration. Fifteen years of payments does not itself establish the contractual purchase right or an unconditional deed-transfer promise. No-down-payment and eligibility terms must be affordable and operationally funded before they are offered. Residents should be able to participate and obtain support without buying a token or managing a crypto wallet.
+The earlier US$250 payment over 180 months is an example, not a current offer. Paying for 15 years does not by itself transfer title. Families need a clear purchase agreement and help that does not require buying a token or using a crypto wallet.
 
 <div class="pagebreak"></div>
 
@@ -71,11 +73,13 @@ The original $250 monthly payment over 180 months remains an illustration. Fifte
 
 ### Proposed housing-first cash order
 
-**Receipts → taxes/restrictions → property and operating costs → resident obligations/reserves → approved housing growth → any lawful distributable surplus.** Exact budgets and policies remain to be agreed. Keep enough BRL for Brazilian obligations; record rates and costs for any permitted USDC conversion.
+**Money received → taxes and money with a required use → property and running costs → resident commitments and savings for future needs → approved new homes → any legally permitted investor payments.**
+
+Agree the actual budget before using this order. Keep enough money in reais for Brazilian bills. Record the exchange rate and all costs when converting to USDC.
 
 ### Correct the original rental arithmetic
 
-The original illustration used $250 rent, an assumed 15% tax and distribution of 98% of the after-tax amount. Its cash allocation is:
+The old example used US$250 rent, an assumed 15% tax and payment of 98% of the after-tax amount to participants. It works out as follows:
 
 | Destination | Per month | 180 months |
 |---|---:|---:|
@@ -84,15 +88,15 @@ The original illustration used $250 rent, an assumed 15% tax and distribution of
 | Distributed under the old 98% rule | $208.25 | $37,485 |
 | Retained under the old 2% rule | $4.25 | $765 |
 
-The $45,000 is received over time and already allocated. There is no additional $17,223 cash receipt at handover. Replacement homes require retained cash or another actual funding source. A sale margin from an external customer is a separate transaction and can contribute only the agreed net amount after its obligations.
+The US$45,000 arrives over time and is already divided above. There is no extra US$17,223 cash payment when the family becomes the owner. Another home needs money saved or another funding source. Any profit from selling to an outside customer is a separate transaction, after its own costs.
 
 ### A retained-rent illustration, not a forecast
 
-Using $250 received, $37.50 assumed tax, $20 property costs and $1.70 conversion costs leaves **$190.80 per month before central operations, larger repairs and other commitments**. These costs and tax are unverified modelling inputs. Actual tax depends on the selected arrangement; update with the accountant. This amount alone does not prove three- or six-year payback.
+In another example, US$250 received minus US$37.50 assumed tax, US$20 property costs and US$1.70 conversion costs leaves **US$190.80 a month before central administration, major repairs and other bills**. These are unverified assumptions, not actual tax or price quotes. The accountant needs to replace them with the chosen project’s figures. This calculation does not prove a three- or six-year payback.
 
 ### Keep claims and cash distinct
 
-A resident's purchase credit is a contractual entitlement or obligation, not new cash income. Reusing receipts must not leave the home-transfer commitment unfunded. A transferred home leaves the operator's assets and its rent ends. Model cohorts through that event. Identify the retained portfolio, services or other recurring income that will support continuing operations. Report operating self-sufficiency and capital for additional homes as separate tests.
+Money counted toward a family’s purchase is a promise to honor, not a second receipt. Spending it elsewhere must not prevent the home transfer. Once the family owns the home, IMOBX loses that rent. Follow the accounts through that point: how are existing bills paid, and what funds the next homes?
 
 <div class="pagebreak"></div>
 
@@ -100,25 +104,25 @@ A resident's purchase credit is a contractual entitlement or obligation, not new
 
 ### What the documented Arctide market provides
 
-Arctide documents USDC pool fees with separate liquidity-provider, project and platform components, including a fixed 0.25% platform component and a 15% total cap. Pre-graduation curve trades have no swap fee. The original flat $10 buy/$15 sell assumptions are not its documented default. Check actual pair settings and recipients for the chosen deployment. [Provider documentation](https://github.com/0xRustyDev/arctide-docs/blob/main/README.md).
+Arctide lets people create and trade tokens. Its markets divide USDC fees between those supplying trading funds, the project and the platform. The fixed platform part is 0.25%; the total fee cap is 15%. These are not the old assumed flat US$10 buy and US$15 sell fees. Check the actual market settings and recipients. Its early bonding-curve sale has no trading fee. [Documentation](https://github.com/0xRustyDev/arctide-docs/blob/main/README.md).
 
 ### Measure what IMOBX actually receives
 
-**Treasury fee income = confirmed project-recipient receipts + assigned, realized liquidity-fee claims, reconciled without duplicates.** Fees paid elsewhere, total market turnover and unclaimed estimates are not IMOBX cash. A token's trade on another venue may not pay the same project charge. Any supported additional market needs its own capital and recipient arrangement.
+Count **project fees received plus any trading-provider fees that IMOBX has the right to claim and has received**. Check the records without counting a payment twice. Fees paid to others, trading volume and estimated unpaid fees are not IMOBX cash. Another exchange needs its own setup and may not pay the same fees.
 
-| Illustrative monthly paid turnover | At an effective 1% treasury receipt rate |
+| Example of monthly trading | If IMOBX actually receives 1% |
 |---|---:|
 | $0 | $0 |
 | $100,000 | $1,000 |
 | $1,000,000 | $10,000 |
 
-The 1% is an assumed effective receipt rate, not a quote or selected fee. At that rate, collecting a $100,000 gross treasury target requires $10 million of paid turnover, before operating uses. A higher rate can discourage trading. Include trade sizes, payer demand, venue capture and retained cash across busy and quiet periods; trade count alone does not establish sustainability.
+The 1% is an example, not a quote or chosen fee. At that rate, US$10 million of trading produces US$100,000 before spending. Higher fees may discourage trading. Trade sizes, demand, fees reaching IMOBX and quiet periods all matter; counting transactions alone is not enough.
 
 ### Capital and fees have different destinations
 
-Prior verified-source inspection on 12 October found that the standard Arctide curve directs roughly 98% of raised USDC into initial liquidity. Its default locked position's harvested fee destination also needs checking. Treat this as a dated finding to recheck with the provider; it is not a current IMOBX funding agreement. A construction raise and a pool-liquidity budget need explicit, separately accepted destinations.
+A contract review on 12 October found that the standard Arctide sale sends roughly 98% of raised USDC into the first trading market. That money helps people buy and sell tokens; it is not also a building budget. The destination of fees from that locked position needs checking. Recheck this dated finding for the chosen setup; it is not an IMOBX funding agreement.
 
-Fees received in USDC can fund agreed work without issuing more IMOBX tokens for that payment. They still depend on market activity. The continuity model must include low/zero trading, changing liquidity-fee ownership and fees that bypass the treasury. No profitable-bear-market or launch-day-income claim is made.
+USDC fees can pay for agreed work without creating more IMOBX tokens for that payment. They still depend on trading. Test the budget with little or no trading, and check whether fees go elsewhere. Money raised for construction and money placed in a trading market need separate, agreed destinations.
 
 <div class="pagebreak"></div>
 
@@ -126,30 +130,30 @@ Fees received in USDC can fund agreed work without issuing more IMOBX tokens for
 
 ### Rights map before token settings
 
-| Participant | Terms that must be explicit |
+| Participant | What the agreement must explain |
 |---|---|
-| Resident | Occupancy, payments, purchase credits, maintenance, hardship/exit and transfer. |
-| Organization/board | Property control, contracting, reserves, conflicts, reporting and continuity. |
-| Builder | Scope, price/margin, progress evidence, changes and completion obligations. |
-| Donor or grant funder | Permitted use, restrictions, reporting and any recovery conditions. |
-| Financial participant, if offered | Issuer, legal claim, votes, eligibility, costs, transfer and distribution rules. |
-| Community contributor | Defined work, review responsibility, funded service/payment terms and data choices. |
+| Resident | Housing, payments, purchase progress, repairs, hardship, leaving and ownership transfer. |
+| Organization or board | Property authority, contracts, money set aside, personal interests, reporting and continuity. |
+| Builder | Work, price and profit, progress checks, changes and completion. |
+| Donor or grant funder | What the money may pay for, reports and any repayment conditions. |
+| Investor, if offered | Who owes what, voting, who may join, costs, selling and possible payments. |
+| Community contributor | Work, who checks it, agreed payment if funded and choices about personal data. |
 
-The Ostrom-inspired direction is to define membership and boundaries, involve affected residents in suitable decisions, monitor commitments and provide accessible conflict resolution. Local maintenance and shared-facility decisions can have resident representation within budget and safety duties. These are proposals to consult on. Rafael's interest in governance tokens has not established a tenant allocation or voting-weight plan. For the [village concept](properties.html#visao-rafael), cost and agree access, upkeep and replacement of shared solar, orchard, play and study facilities; track actual running costs and use.
+Ostrom’s work asks how people manage shared resources. We want to define who participates, involve residents in appropriate decisions, check commitments and make disputes easy to raise. For the [village](properties.html#visao-rafael), this means agreeing who uses, maintains and replaces the solar equipment, orchard, play area and study rooms.
 
-Token votes should not rewrite a resident's signed housing bargain. Longer residence may inform eligibility for an elected role; any rule must be explicit and preserve newer residents' basic rights. Investor and resident authority require clear boundaries in the legal documents and operating rules.
+Rafael’s interest in governance tokens does not mean a resident token plan is chosen. We can discuss equal voice in resident matters and time-limited work roles. A token vote should not rewrite a family’s housing agreement. Longer experience may help someone stand for a role, while newer residents keep their basic voice.
 
 ### Token decision table
 
-| Parameter | Current status |
+| Question | Current answer |
 |---|---|
-| Instrument and legal register | To choose with Brazilian advisers and responsible provider. |
-| Supply and reserves | Old 1,000,000-token plan is an option; no final allocation adopted. |
-| Tenant token access | Not designed; housing/support does not require purchase of an investment token. |
-| Staking and distribution eligibility | Must fit the actual rights; holder, staker and liquidity owner are distinct. |
-| Offer, transfer and resale venue | To establish for the selected instrument; no unrestricted-market assumption. |
+| What does it give, and how is ownership recorded? | To agree with Brazilian advisers and the chosen provider. |
+| How many tokens and who receives them? | The old 1,000,000-token plan is an option, not a final choice. |
+| Do residents get tokens? | No plan yet; housing and support do not require buying an investment token. |
+| Who could receive income? | To define; owning a token, locking it in a staking service and funding a trading market are different roles. |
+| How could people buy or sell? | To establish for the chosen rights and applicable rules. |
 
-Review the instrument's substance and actual offer under Brazilian guidance. A nonprofit form or a utility/governance label is not a classification by itself. This is a requirements exercise for the chosen lawful route. [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html).
+The actual rights matter more than labels such as “utility,” “governance” or “nonprofit.” Have advisers review the proposed arrangement before an offer. [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html).
 
 <div class="pagebreak"></div>
 
@@ -157,78 +161,80 @@ Review the instrument's substance and actual offer under Brazilian guidance. A n
 
 ### What people send and see
 
-| Component | Required visible behavior |
+| Component | What people need from it |
 |---|---|
-| Website | State current pilot status; show approved cost/milestone evidence, documents, accountable roles and support path. |
-| Telegram / The Flock | Explain the project in Portuguese; route housing and project questions; show approved progress/cash summaries. |
-| Legal/property process | Hold authoritative agreements, property control and any investor register with the responsible party. |
-| Accounting/settlement | Reconcile payer, purpose, BRL receipt, conversion, USDC transaction and final use; preserve restrictions. |
-| Community-service backend | Supply any authorized contribution/reward results for display; no member scoring design in this front-end repository. |
+| Website | Current progress, checked building costs, documents, responsible people and help. |
+| Telegram / The Flock | Portuguese explanations, questions, updates and approved account summaries. |
+| Legal records | Signed agreements, property authority and any investor records held by the responsible party. |
+| Accounting and payments | Match the payer, purpose, bank receipt, conversion, USDC payment and final use. |
+| Community software | Show approved contribution or reward results; the responsible backend team defines those systems separately. |
 
-The current [BRL/USDC flow](transparency.html#settlement) uses native USDC on Arc, directly or through a verified CCTP route. Keep local reserves in BRL and reconcile gross rent, commission, conversion, fees, wallet and final use in both directions. The [provider comparison](transparency.html#ramp-options) distinguishes technical support from entity/activity acceptance: none is confirmed for IMOBX. CNPJ is not account approval. Keep private agreements offchain and show pending, confirmed, failed and unresolved states.
+Families would pay in reais. IMOBX would keep local money and convert only approved amounts into USDC on Arc. CCTP may help move USDC between networks; it does not convert it to reais. No provider is confirmed for IMOBX. A CNPJ does not guarantee an account. Private family agreements stay off the public blockchain. Show payments as waiting, confirmed, failed or needing investigation. [Money path](transparency.html#settlement); [providers](transparency.html#ramp-options).
 
 ### Distribution accounting and the legacy Euler approach
 
-The earlier contract review found accumulator accounting: contributions update a running entitlement record rather than paying every participant in a single loop. Participants claim individually. This can reduce per-contribution work; total costs still include claim transactions, storage and integration. The old $109/year and 99.9% savings claims are removed pending an equivalent measured workload. No universal gas-cost claim is retained.
+The earlier contract review found a running calculation: when money arrives, update what people can receive instead of sending a payment to every person at once. People claim later. This may save work per deposit, but claims, storage and setup still cost. Argus also documents this pattern; it is not an exclusive Arctide feature. The old US$109 yearly cost and 99.9% saving are not supported by a comparable measurement.
 
 ### Technical demonstration required before a live financial integration
 
-1. Identify the selected chain, token/pool contracts, fee settings, actual recipients, controller powers and liquidity ownership/lock terms.
-2. Reconcile an authorized sample receipt from BRL bookkeeping through any conversion and USDC allocation to the intended destination. Keep construction capital and liquidity cash distinct.
-3. Demonstrate fee capture and, if applicable, entitlement, zero-eligible-participant handling, claim/position-change behavior, rounding and failed-recipient handling.
-4. Verify approvals, custody, transfer restrictions, authorization limits, duplicate/retry handling and failure reconciliation against the selected provider's terms.
+The responsible technical team needs to:
 
-These are acceptance requirements, not a designed API or an audit result. Use an isolated test or simulation first; live deployment or transfers require separate authorization. The standard token and staking path are not assumed to supply every needed investor control or payout rule.
+1. Identify the network, token, market, fees, recipients, control powers and any money locked for trading.
+2. Follow an approved payment from the bank record, through conversion, to the correct wallet and use.
+3. Check fee receipts, who may claim, rounding, failed payments and what happens when someone’s position changes or nobody qualifies.
+4. Test permissions, limits, repeated requests, retries and failures. Confirm who controls funds and who can recover access.
+
+These are requirements, not a completed system or audit. Begin with a simulation. Any real deployment or money transfer needs specific approval. The usual token and staking setup is not assumed to provide every needed rule.
 
 <div class="pagebreak"></div>
 
 ## 7. Pilot roadmap and success measures
 
-The [public roadmap](roadmap.html) consolidates owners, website versions and evidence gates; its [governance example](roadmap.html#governance) and [FAQ](faq.html) explain open rights, nonprofit/yield and platform choices. These are consultation and front-end requirements, not backend interfaces.
+The [roadmap](roadmap.html), [decision examples](roadmap.html#governance) and [FAQ](faq.html) explain the plan. These are proposals for people to agree, not instructions to a working payment system.
 
-Targets below start from an agreed date. The responsible people must accept them; construction additionally needs property, funding and permissions.
+Targets start from an agreed date. Building also needs property, money and permissions.
 
-| Target | Completion evidence and proposed lead |
+| Target | What should be ready, and who would lead |
 |---|---|
-| Day 14 | Founder roles/control agreement and inventory of offered properties. Rafael + John. |
-| Day 30 | Selected scope, current BRL budget, resident terms and property/control route for review. Rafael + local advisers. |
-| Day 45 | Cash rules covering reserves, low/zero trading, transfers and expansion. Founders + accountant. |
-| Day 60 | Reviewed v1 documents, resident consultation and decision charter; four decision exercises and priced provider options. Founders + advisers. |
-| Day 90 | Proceed/revise decision with rights, available funds, responsibilities, reporting and support. Accountable organization. |
+| Day 14 | Written founder roles and a list of offered properties. Rafael and John. |
+| Day 30 | Chosen work, current budget in reais, draft family terms and property documents for review. Rafael and local advisers. |
+| Day 45 | Money rules covering repairs, quiet trading, home transfers and new building. Founders and accountant. |
+| Day 60 | Reviewed documents, resident discussion, decision rules, four worked examples and provider quotes. Founders and advisers. |
+| Day 90 | Decision to proceed or revise, with rights, money, responsibilities, reports and support ready. Responsible organization. |
 
 ### Once the pilot operates
 
-- **Rights:** documented property control and an executed resident agreement for every included home before occupancy.
-- **Money:** reconcile 100% of receipts/payments monthly; identify restrictions, reserves and unresolved differences.
-- **Delivery:** record completion, actual cost and schedule variance for each included home.
-- **Residents:** record issues, participation and ownership progress; agree affordability and response-time targets locally.
-- **Replication:** observe at least three operating months before the first review; fund the next scope and preserve existing obligations.
+- **Homes:** confirm property authority and sign the family agreement before moving in.
+- **Money:** check 100% of receipts and payments every month. Explain differences and amounts with a required use.
+- **Building:** record what was completed, actual costs and any delays.
+- **Families:** record questions, repairs, participation and purchase progress. Agree affordability and response targets locally.
+- **Next homes:** observe at least three operating months before the first review, and fund the next work without breaking existing commitments.
 
-Website v2 reports verified operations without requiring a token. Any v3 token access follows accepted rights, a reviewed legal/provider route and checked controls. No fixed token launch date is set.
+Website v1 explains the plan. Website v2 shows real progress and accounts without needing a token. Any v3 token access follows agreed rights, legal review and checked payment arrangements. No token launch date is set.
 
 ### Pilot-funded growth, not assumed grant awards
 
-Grants, donations and assigned service/construction receipts are candidate funding sources. Record eligibility, restrictions, awards and actual receipts separately. SDG 11 is not a grant award. One thousand homes remains a cohort-model hypothesis, not demonstrated self-sufficiency.
+Grants, donations and agreed service or building income may help. Record applications, awards and money received as different things. A UN development goal is not a grant. A thousand homes is a growth idea, not proof that income covers costs.
 
 <div class="pagebreak"></div>
 
 ## 8. What changes from the original devsheet
 
-| Original PDF topic | Revision for the pilot |
+| Earlier idea | What this plan requires |
 |---|---|
-| Guaranteed floor and downside protection | No token price floor; asset values, liabilities, resident commitments and legal claims require separate assessment. |
-| Yield rises when holders sell | Selling ordinarily changes ownership. Any staking-denominator change is conditional and not automatic new income. |
-| 98% of rent paid out, then rent funds replacements | Retain a reviewable cash order; show amounts already spent/distributed and capital actually available. |
-| Flat fees and profitable-bear scenarios | Use documented fee mechanics and actual treasury receipts; test volume, size, venue capture and seasonal costs. |
-| $109/year at any holder count | Describe accumulator work and individual claims; measure a comparable deployment before making a cost claim. |
-| Locked liquidity prevents all loss | Document the position and its restrictions; price, control, integration and delivery risks still need handling. |
-| Two founder properties and grant amounts | Count only documented control/received funding; offered resources and prospective awards stay separately labelled. |
-| Institutional RWA figures and competitor failures | Remove unsupported market/return comparisons from public copy. Explain IMOBX's own rights, operations and verified outcomes. |
+| Guaranteed token price floor | No price guarantee. Check property values, debts and actual investor rights separately. |
+| Income rises when holders sell | A sale normally changes the owner. It does not create new income. |
+| Pay out 98% of rent, then fund replacement homes | Show what has already been paid out and what money is still available. |
+| Flat fees and profit in quiet markets | Use actual fees received and test quiet periods and full costs. |
+| US$109 a year at any member count | Measure the full cost of running calculations and individual claims. |
+| Locked trading funds prevent all losses | Check what is locked and its limits; price and building risks remain. |
+| Offered founder properties and possible grants | Count only documented property rights and money actually received. |
+| Comparisons with large financial products | Explain IMOBX’s own homes, agreements, accounts and results. |
 
 ### Source and decision status
 
-**Read for this revision:** text and visual layout of all eight pages of the original IMOBX_Devsheet (3).pdf; current publication drafts and existing cost/platform research. Arctide integration documentation and CVM Guidance Opinion 40 were revisited on 15 October. Original chat cost detail comes from the earlier research; this pass did not reread the full chat or verify title, permits, grants, tax or company documents.
+This revision uses the original eight-page IMOBX development sheet, founder discussions already recorded in the research, and the linked cost and platform sources. Earlier work checked the original PDF’s text and layout; this wording update does not establish a fresh property or company audit.
 
-**Evidence status:** Historical planning figures are founder-supplied. Platform references describe the reviewed design and are not a certification of a current IMOBX deployment. Public sources are linked in the relevant sections.
+Rafael supplied the historical budget and two-loft account. Arctide’s documentation describes its service, not a completed IMOBX connection. Exact tax, title, permits, legal registration, grants and current building progress still need the appropriate documents and responsible review.
 
-**Use:** founder, accountant, housing adviser, legal/provider and developer consultation. Settle the actual rights and pilot scope, then update this sheet, whitepaper, deck and website from the same accepted decisions. Use specific mechanisms, evidence and ordinary language. This remains a development proposal; the document does not establish a token sale or an approved housing or payment service.
+Use this sheet with founders, families, builders, accountants, housing advisers, lawyers and developers. When decisions are accepted, update the paper, deck and website together. State what is planned, signed, paid, completed and checked. This is still a development proposal, not a token offer or approval to run financial services.
