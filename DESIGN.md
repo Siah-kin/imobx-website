@@ -138,3 +138,8 @@ Use “money left after bills and agreed savings” for surplus, “money set as
 Use the same main menu on every reading page: The project, Costs, Roadmap, Photos and drawings, Money, Documents. Each label has the same destination throughout the site. Keep all links available on phones by wrapping them into rows. Use the common site_header renderer in build_publication.py, including for the handwritten homepage and image archive. Show the current page where applicable. Keep a single PT/EN control in the header; remember the choice when following a link, without making storage necessary for navigation.
 
 The image archive supports the housing proposal with drawings, supplied photos, captions and original-image links. It is not a property sale catalogue. Its separate local links are labelled On this page and stay within the archive. Main navigation and page-section navigation must be visibly distinct.
+
+
+## Construction photo gallery
+
+Keep the fuller construction selection on the existing Photos and drawings page, separate from architectural drawings and neighbourhood context. Use a quiet two-column grid on desktop and one column on phones, with lazy-loaded originals and the existing accessible image viewer. The eight-photo selection shows access, exposed rock, excavation, timber/block work, formwork, concrete and roofing. Keep captions about visible features and retain source files unchanged. Do not infer capture dates, construction chronology, ownership, project identity, technical approval or completion from the photos. Keep the source limitations visible before the gallery. Avoid near-duplicate views or identifiable people when a clear alternative exists.
