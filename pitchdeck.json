@@ -82,14 +82,14 @@
     },
     {
       "eyebrow": "08 / DIGITAL TOOLS",
-      "title": "Make fair cooperation easier.",
-      "lead": "SIAH Protocol is the brand. Hive DAO is how we aim to share responsibility.",
+      "title": "From a request to checked work.",
+      "lead": "Agreed roles, spending limits and shared records keep everyday work moving.",
       "bullets": [
-        "See what needs doing, choose work and leave useful records.",
-        "Software agents help track people, wallets, tasks and approvals.",
-        "The Flock is the Telegram bot; Arc and Arctide are possible payment tools."
+        "A resident raises an issue; a responsible person takes it forward.",
+        "Someone else checks the work, payment and receipt.",
+        "Open tasks and approvals are ready for whoever takes over."
       ],
-      "notes": "Hive DAO is the operating model. The aim is for work to continue without constant founder instructions, with room to disagree and ask for review. For example: report a leak, assess it, approve a repair, check delivery and payment, then leave the record ready for the next person. The plan combines Ostrom’s ideas, agents written in Python, Arc payments and possible Arctide project fees. The complete process still needs to be built and demonstrated in IMOBX. The Flock can serve other projects too; other trading apps need their own integration checks."
+      "notes": "Before the pilot, residents and the organization need to agree which matters each group decides, spending limits and how a decision can be reviewed. For example: a resident reports a leak, the maintenance role assesses it and obtains a quote, spending follows the agreed rule, and another person checks the repair and payment. Routine work should proceed within those limits without constant founder instructions. Residents need ways to choose and replace responsible people. The Telegram bot would show requests, decisions and progress; software assistants could organize documents and reminders. Blockchain could show payment amounts and destinations. These tools follow the rules agreed by participants. The complete process still needs to be demonstrated in IMOBX."
     },
     {
       "eyebrow": "09 / TOKEN DECISION",

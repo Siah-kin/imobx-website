@@ -98,8 +98,8 @@
         "John and authorized providers, with another person checking"
       ],
       "work": [
-        "Acompanhar uma entrada de USDC, conferir sua origem e os valores em reais, aprovar um gasto e conferir o pagamento. Testar um processo de Hive DAO, sob a marca SIAH Protocol, com The Flock no Telegram. A equipe responsável precisa construir e verificar essa ligação.",
-        "Follow a USDC deposit, check its source and value in reais, approve spending and check the payment. Test a Hive DAO process under the SIAH Protocol brand, with The Flock on Telegram. The responsible team needs to build and check this connection."
+        "Acompanhar uma entrada de USDC, conferir a origem, aprovar um gasto e conferir o pagamento. Testar um pedido de reparo pelo Telegram: responsável, orçamento, entrega, comprovante e passagem para outra pessoa.",
+        "Follow a USDC deposit, check its source, approve spending and check the payment. Test a repair request through Telegram: responsible person, budget, delivery, receipt and handover to someone else."
       ],
       "gate": [
         "Conseguir seguir o dinheiro da origem ao destino. Testar repetição de pedidos, limites, falhas e troca de responsável. Oferecer ajuda a quem não usa carteira. Identificar claramente quando o teste usa dinheiro simulado.",
@@ -468,33 +468,38 @@
       "id": "flock-siah",
       "home": false,
       "q": [
-        "O que são SIAH Protocol e Hive DAO? Como The Flock participa?",
-        "What are SIAH Protocol and Hive DAO? How does The Flock fit?"
+        "Como as decisões e tarefas funcionariam no dia a dia?",
+        "How would decisions and tasks work day to day?"
       ],
       "a": [
         [
-          "SIAH Protocol é a marca. Hive DAO é o nome que damos às regras e ferramentas para uma organização funcionar com responsabilidades compartilhadas.",
-          "SIAH Protocol is the brand. Hive DAO is our name for the rules and tools that let an organization run through shared responsibilities."
+          "Antes do piloto, moradores e organização precisam combinar quais assuntos cada grupo decide, quanto pode gastar e como pedir revisão. Reparos e espaços comuns devem ter regras que os moradores possam ajudar a mudar. O contrato de cada família continua protegendo sua moradia e compra.",
+          "Before the pilot, residents and the organization need to agree which matters each group decides, how much it may spend and how to ask for review. Residents should help shape and change the rules for repairs and shared spaces. Each family’s agreement continues to protect its housing and purchase rights."
         ],
         [
-          "Queremos tornar a cooperação justa o caminho mais fácil. Cada pessoa deve conseguir ver o que precisa ser feito, assumir uma tarefa por vontade própria e deixar as informações prontas para quem continuar. O trabalho deve seguir sem esperar ordens constantes do fundador. Também é preciso poder discordar e resolver problemas.",
-          "We want to make fair cooperation the easiest path. People should be able to see what needs doing, choose to take on a task and leave useful information for the next person. Work should continue without constant instructions from the founder. People also need room to disagree and resolve problems."
+          "As tarefas ficam registradas com um responsável, prazo e orçamento. Dentro dos limites combinados, o trabalho do dia a dia pode seguir sem esperar ordens do fundador. A comunidade precisa poder escolher e substituir responsáveis, e outra pessoa confere o serviço e os gastos.",
+          "Tasks are recorded with a responsible person, deadline and budget. Within agreed limits, everyday work can proceed without waiting for the founder’s instructions. The community needs to be able to choose and replace responsible people, and another person checks the work and spending."
         ],
         [
-          "Na IMOBX, juntamos ideias de Ostrom sobre decisões em grupo, agentes de software escritos em Python, pagamentos em USDC na Arc e possíveis taxas da Arctide. The Flock é o bot de Telegram. A ideia é manter claro quem participa, qual carteira recebe o dinheiro e quem pode autorizar cada uso.",
-          "For IMOBX, we bring together Ostrom’s ideas about group decisions, software agents written in Python, USDC payments on Arc and possible Arctide fees. The Flock is the Telegram bot. The aim is to keep clear who is involved, which wallet receives money and who may approve each use."
+          "Por exemplo: um morador relata uma infiltração. Quem cuida da manutenção avalia, obtém um orçamento e segue a regra de aprovação do gasto. Depois do conserto, outra pessoa confere o serviço. O pagamento e o comprovante entram nas contas. Se houver problema, o morador pode pedir revisão.",
+          "For example, a resident reports a leak. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. After the repair, someone else checks the work. The payment and receipt go into the accounts. If something is wrong, the resident can ask for review."
         ],
         [
-          "Exemplo: um morador avisa que há uma infiltração. Uma pessoa habilitada avalia o problema, o conserto recebe aprovação e outra pessoa confere o serviço e o pagamento. Se alguém sair, quem entrar deve encontrar as informações para continuar.",
-          "For example, a resident reports a leak. Someone qualified assesses it, the repair is approved, and someone else checks the work and payment. If a person leaves, their replacement should find the information needed to continue."
+          "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas. O projeto precisa conseguir seguir sem depender de uma pessoa específica.",
+          "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
         ],
         [
-          "Queremos testar esse jeito de trabalhar na IMOBX. As pessoas devem conseguir cuidar das tarefas, pedir revisão e trocar responsáveis sem depender do fundador. O processo completo ainda precisa ser construído e demonstrado na IMOBX.",
-          "We want to test this way of working in IMOBX. People should be able to handle tasks, ask for a review and replace responsible people without depending on the founder. The complete process still needs to be built and demonstrated in IMOBX."
+          "O bot de Telegram serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
+          "The Telegram bot would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
+        ],
+        [
+          "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
+          "This is the proposed method for the pilot. We still need to agree it with participants and demonstrate it, including when an invoice is disputed or a responsible person is replaced."
         ]
       ],
       "sources": [
         "charter",
+        "ostrom",
         "digital"
       ]
     },
@@ -1417,50 +1422,6 @@
           "Registradas as restrições de Arc Onramp, BlindPay e Mercado Bitcoin. Avenia, Bridge e acesso institucional continuam sem aceite específico para IMOBX.",
           "Recorded Arc Onramp, BlindPay and Mercado Bitcoin restrictions. Avenia, Bridge and institutional access remain without specific IMOBX acceptance."
         ]
-      },
-      {
-        "date": "2026-10-15",
-        "title": [
-          "Página própria de transparência",
-          "Dedicated transparency page"
-        ],
-        "body": [
-          "Reunidos fluxos, comparação, decisões, fontes e próximos passos em uma página ligada ao roteiro, FAQ e documentos. Nenhuma conta financeira foi aberta por esta publicação.",
-          "Brought flows, comparison, decisions, sources and next steps into one page linked to the roadmap, FAQ and documents. No financial account was opened through this publication."
-        ]
-      },
-      {
-        "date": "2026-10-15",
-        "title": [
-          "Economia comunitária e funções das ferramentas",
-          "Community economy and tool roles"
-        ],
-        "body": [
-          "Explicamos separadamente a voz dos moradores, os possíveis direitos de investidores, Thanks, Zeal e o dinheiro em USDC. Planejamos usar Arc para pagamentos; o teste ainda não foi demonstrado.",
-          "Explained resident voice, possible investor rights, Thanks, Zeal and USDC funds separately. We plan to use Arc for payments; the test has not yet been demonstrated."
-        ]
-      },
-      {
-        "date": "2026-10-15",
-        "title": [
-          "SIAH Protocol e Hive DAO: definição dos fundadores",
-          "SIAH Protocol and Hive DAO: founder definitions"
-        ],
-        "body": [
-          "SIAH Protocol é a marca; Hive DAO é o nome das regras e ferramentas para compartilhar responsabilidades. Queremos testar na IMOBX como as pessoas cooperam e deixam informações para quem continua.",
-          "SIAH Protocol is the brand; Hive DAO names the rules and tools for shared responsibilities. We want to test in IMOBX how people cooperate and leave information for whoever continues."
-        ]
-      },
-      {
-        "date": "2026-10-15",
-        "title": [
-          "Explicações em linguagem simples",
-          "Plain-language explanations"
-        ],
-        "body": [
-          "Reescrevemos as explicações para mostrar quem faz o quê, como o dinheiro seria usado e o que ainda falta decidir. Os valores, as fontes e as regras ainda em estudo foram preservados.",
-          "Rewrote the explanations to show who does what, how money would be used and what remains undecided. Kept the figures, sources and rules still under review."
-        ]
       }
     ],
     "maintenance": [
@@ -1506,34 +1467,38 @@
       {
         "id": "community-tools",
         "title": [
-          "SIAH Protocol e Hive DAO: como as partes trabalham juntas",
-          "SIAH Protocol and Hive DAO: how the parts work together"
+          "Como um pedido vira trabalho feito e conferido",
+          "How a request becomes completed, checked work"
         ],
         "body": [
           [
-            "SIAH Protocol é a marca. Hive DAO é o nome que damos às regras e ferramentas para uma organização funcionar com responsabilidades compartilhadas.",
-            "SIAH Protocol is the brand. Hive DAO is our name for the rules and tools that let an organization run through shared responsibilities."
+            "Antes do piloto, moradores e organização precisam combinar quais assuntos cada grupo decide, quanto pode gastar e como pedir revisão. Reparos e espaços comuns devem ter regras que os moradores possam ajudar a mudar. O contrato de cada família continua protegendo sua moradia e compra.",
+            "Before the pilot, residents and the organization need to agree which matters each group decides, how much it may spend and how to ask for review. Residents should help shape and change the rules for repairs and shared spaces. Each family’s agreement continues to protect its housing and purchase rights."
           ],
           [
-            "Queremos tornar a cooperação justa o caminho mais fácil. Cada pessoa deve conseguir ver o que precisa ser feito, assumir uma tarefa por vontade própria e deixar as informações prontas para quem continuar. O trabalho deve seguir sem esperar ordens constantes do fundador. Também é preciso poder discordar e resolver problemas.",
-            "We want to make fair cooperation the easiest path. People should be able to see what needs doing, choose to take on a task and leave useful information for the next person. Work should continue without constant instructions from the founder. People also need room to disagree and resolve problems."
+            "As tarefas ficam registradas com um responsável, prazo e orçamento. Dentro dos limites combinados, o trabalho do dia a dia pode seguir sem esperar ordens do fundador. A comunidade precisa poder escolher e substituir responsáveis, e outra pessoa confere o serviço e os gastos.",
+            "Tasks are recorded with a responsible person, deadline and budget. Within agreed limits, everyday work can proceed without waiting for the founder’s instructions. The community needs to be able to choose and replace responsible people, and another person checks the work and spending."
           ],
           [
-            "Na IMOBX, juntamos ideias de Ostrom sobre decisões em grupo, agentes de software escritos em Python, pagamentos em USDC na Arc e possíveis taxas da Arctide. The Flock é o bot de Telegram. A ideia é manter claro quem participa, qual carteira recebe o dinheiro e quem pode autorizar cada uso.",
-            "For IMOBX, we bring together Ostrom’s ideas about group decisions, software agents written in Python, USDC payments on Arc and possible Arctide fees. The Flock is the Telegram bot. The aim is to keep clear who is involved, which wallet receives money and who may approve each use."
+            "Por exemplo: um morador relata uma infiltração. Quem cuida da manutenção avalia, obtém um orçamento e segue a regra de aprovação do gasto. Depois do conserto, outra pessoa confere o serviço. O pagamento e o comprovante entram nas contas. Se houver problema, o morador pode pedir revisão.",
+            "For example, a resident reports a leak. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. After the repair, someone else checks the work. The payment and receipt go into the accounts. If something is wrong, the resident can ask for review."
           ],
           [
-            "Exemplo: um morador avisa que há uma infiltração. Uma pessoa habilitada avalia o problema, o conserto recebe aprovação e outra pessoa confere o serviço e o pagamento. Se alguém sair, quem entrar deve encontrar as informações para continuar.",
-            "For example, a resident reports a leak. Someone qualified assesses it, the repair is approved, and someone else checks the work and payment. If a person leaves, their replacement should find the information needed to continue."
+            "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas. O projeto precisa conseguir seguir sem depender de uma pessoa específica.",
+            "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
           ],
           [
-            "Queremos testar esse jeito de trabalhar na IMOBX. As pessoas devem conseguir cuidar das tarefas, pedir revisão e trocar responsáveis sem depender do fundador. O processo completo ainda precisa ser construído e demonstrado na IMOBX.",
-            "We want to test this way of working in IMOBX. People should be able to handle tasks, ask for a review and replace responsible people without depending on the founder. The complete process still needs to be built and demonstrated in IMOBX."
+            "O bot de Telegram serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
+            "The Telegram bot would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
+          ],
+          [
+            "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
+            "This is the proposed method for the pilot. We still need to agree it with participants and demonstrate it, including when an invoice is disputed or a responsible person is replaced."
           ]
         ],
         "sources": [
-          "arc",
-          "arctide",
+          "charter",
+          "ostrom",
           "digital"
         ]
       },
@@ -1582,36 +1547,32 @@
           "arc-studio"
         ]
       }
-    ],
-    "branding": [
-      "Vamos identificar a ligação com Arc conforme ela for construída. “Live on Arc” significa um aplicativo funcionando nessa rede. O logo oficial segue o guia da Arc; seu uso não deve sugerir patrocínio ou aprovação da IMOBX.",
-      "We will describe the Arc connection as it is built. “Live on Arc” means an app actually working on that network. The official logo follows Arc’s guide; its use should not suggest sponsorship or endorsement of IMOBX."
     ]
   },
-  "hive_dao": {
-    "identity": [
-      "SIAH Protocol é a marca. Hive DAO é o nome que damos às regras e ferramentas para uma organização funcionar com responsabilidades compartilhadas.",
-      "SIAH Protocol is the brand. Hive DAO is our name for the rules and tools that let an organization run through shared responsibilities."
+  "dao_operations": {
+    "agreement": [
+      "Antes do piloto, moradores e organização precisam combinar quais assuntos cada grupo decide, quanto pode gastar e como pedir revisão. Reparos e espaços comuns devem ter regras que os moradores possam ajudar a mudar. O contrato de cada família continua protegendo sua moradia e compra.",
+      "Before the pilot, residents and the organization need to agree which matters each group decides, how much it may spend and how to ask for review. Residents should help shape and change the rules for repairs and shared spaces. Each family’s agreement continues to protect its housing and purchase rights."
     ],
-    "intent": [
-      "Queremos tornar a cooperação justa o caminho mais fácil. Cada pessoa deve conseguir ver o que precisa ser feito, assumir uma tarefa por vontade própria e deixar as informações prontas para quem continuar. O trabalho deve seguir sem esperar ordens constantes do fundador. Também é preciso poder discordar e resolver problemas.",
-      "We want to make fair cooperation the easiest path. People should be able to see what needs doing, choose to take on a task and leave useful information for the next person. Work should continue without constant instructions from the founder. People also need room to disagree and resolve problems."
-    ],
-    "assembly": [
-      "Na IMOBX, juntamos ideias de Ostrom sobre decisões em grupo, agentes de software escritos em Python, pagamentos em USDC na Arc e possíveis taxas da Arctide. The Flock é o bot de Telegram. A ideia é manter claro quem participa, qual carteira recebe o dinheiro e quem pode autorizar cada uso.",
-      "For IMOBX, we bring together Ostrom’s ideas about group decisions, software agents written in Python, USDC payments on Arc and possible Arctide fees. The Flock is the Telegram bot. The aim is to keep clear who is involved, which wallet receives money and who may approve each use."
-    ],
-    "loop": [
-      "O caminho proposto: alguém registra uma necessidade → fica claro quem pode cuidar dela e quanto pode gastar → uma pessoa assume → o gasto é aprovado → a entrega e o pagamento são conferidos → os registros ficam prontos para a próxima tarefa ou pessoa.",
-      "The proposed steps: someone records a need → the responsible role and spending limit become clear → a person takes it on → spending is approved → delivery and payment are checked → the record is ready for the next task or person."
+    "work": [
+      "As tarefas ficam registradas com um responsável, prazo e orçamento. Dentro dos limites combinados, o trabalho do dia a dia pode seguir sem esperar ordens do fundador. A comunidade precisa poder escolher e substituir responsáveis, e outra pessoa confere o serviço e os gastos.",
+      "Tasks are recorded with a responsible person, deadline and budget. Within agreed limits, everyday work can proceed without waiting for the founder’s instructions. The community needs to be able to choose and replace responsible people, and another person checks the work and spending."
     ],
     "example": [
-      "Exemplo: um morador avisa que há uma infiltração. Uma pessoa habilitada avalia o problema, o conserto recebe aprovação e outra pessoa confere o serviço e o pagamento. Se alguém sair, quem entrar deve encontrar as informações para continuar.",
-      "For example, a resident reports a leak. Someone qualified assesses it, the repair is approved, and someone else checks the work and payment. If a person leaves, their replacement should find the information needed to continue."
+      "Por exemplo: um morador relata uma infiltração. Quem cuida da manutenção avalia, obtém um orçamento e segue a regra de aprovação do gasto. Depois do conserto, outra pessoa confere o serviço. O pagamento e o comprovante entram nas contas. Se houver problema, o morador pode pedir revisão.",
+      "For example, a resident reports a leak. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. After the repair, someone else checks the work. The payment and receipt go into the accounts. If something is wrong, the resident can ask for review."
     ],
-    "test": [
-      "Queremos testar esse jeito de trabalhar na IMOBX. As pessoas devem conseguir cuidar das tarefas, pedir revisão e trocar responsáveis sem depender do fundador. O processo completo ainda precisa ser construído e demonstrado na IMOBX.",
-      "We want to test this way of working in IMOBX. People should be able to handle tasks, ask for a review and replace responsible people without depending on the founder. The complete process still needs to be built and demonstrated in IMOBX."
+    "continuity": [
+      "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas. O projeto precisa conseguir seguir sem depender de uma pessoa específica.",
+      "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
+    ],
+    "tools": [
+      "O bot de Telegram serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
+      "The Telegram bot would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
+    ],
+    "status": [
+      "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
+      "This is the proposed method for the pilot. We still need to agree it with participants and demonstrate it, including when an invoice is disputed or a responsible person is replaced."
     ]
   }
 }

@@ -99,7 +99,7 @@ Use case: precise-object-edit. Edit target: this exact supplied real neighbourho
 
 Keep a distinct roadmap linked from navigation and resources. Show stage, proposed owner, work, advancement evidence and the corresponding website version. Preparation windows are relative to an agreed start; construction needs funding and permissions. Website v2 can report operations without a token; any later token access follows accepted rights and the reviewed legal/provider route. Use model-guide.json as the bilingual source for roadmap and FAQ, rendered by model_guide.py through build_publication.py.
 
-Use native details for model questions, with direct section links and primary sources near claims. Separate Arc the settlement network from Arctide the exchange application; acknowledge Argus/Uniswap alternatives. Describe cooperative decision options as consultation proposals, not adopted token-weight rules or a demonstrated Hive DAO implementation. Nonprofit mission protection and any financial distribution require distinct, compatible rights.
+Use native details for model questions, with direct section links and primary sources near claims. Separate Arc the settlement network from Arctide the exchange application; acknowledge Argus/Uniswap alternatives. Describe cooperative decision options as consultation proposals, not adopted token-weight rules or a demonstrated digital governance process. Nonprofit mission protection and any financial distribution require distinct, compatible rights.
 
 Explain Rafael’s $27,777 village budget through his explicit CUB/SINAPI reference basis and cost-engineering breakdown, rather than merely calling it a historical estimate. Date and distinguish this per-home/36-home plan from January’s combined two-loft contract. Preserve the reference period, scope and actual-spending trail; do not imply the index publisher certifies an individual complete-home price.
 
@@ -121,16 +121,15 @@ transparency.html is the canonical reading page for BRL/USDC routes, provider re
 Lead with proposal, provider-acceptance and operation-evidence status. Do not invent balances or show missing figures as zero. Distinguish documented provider capabilities from customer approval and actual tests. Show dates, sources, proposed follow-up responsibilities, a future reporting outline and a manual update record. Keep source groups expandable, the main money flow readable and the PT/EN experience usable without JavaScript. No live financial integration, automatic provider monitoring or member information is introduced.
 
 
-## SIAH Protocol and Hive DAO terminology
+## Explain the work
 
-SIAH Protocol is the brand. Hive DAO is the founder-defined operating model and rails for decentralized business coordination: shared context, voluntary role-taking, accepted authority and succession let work continue without constant founder instructions. IMOBX is the proposed housing use case. Describe the assembly of Ostrom-informed rules, Python agents, Arc settlement, possible Arctide fee integration and The Flock as the Telegram interface. Preserve the distinction between the intended operating model and verified implementation. Avoid reducing the brand and the operating model to a combined “SIAH/HiveDAO service.” This is an explanation of the owner’s vision, not a claim that all participants inevitably agree or an instruction to implement backend governance here.
-
+Start with what the reader needs to do or understand. Explain who raises a request, who decides, who carries out work, who checks spending, how to challenge a decision and how a replacement takes over. Name a software product only when it helps someone perform a task. Internal naming decisions, development-team responsibilities and editing history belong in working notes. Each public page must make sense to someone arriving for the first time.
 
 ## Plain language for every reader
 
 Reviewed across the public site on 15 October 2026. Write for someone who has never used a crypto app or read a housing-finance paper. Lead with the person, action and result: who pays, who checks, who decides, who owns the home. Prefer short sentences and familiar verbs. Explain necessary names such as DAO, USDC, CNPJ and CCTP at first use on a reading page. Keep source names and specialist detail available through the existing links and expandable sections.
 
-Use “money left after bills and agreed savings” for surplus, “money set aside for repairs” for reserves, and “check the bank statement against the payment” for reconciliation. Explain a future token through what its agreement would let someone do or receive. Distinguish a right to live in a home, a membership voice and an investment. Plain wording must preserve conditions, uncertainty, source dates and protected commitments. Never turn a target into a promise or suggest an example calculation is a current price or return. Apply the same standard to Portuguese and English, navigation, photo captions, papers, slides and downloadable files. Keep the SIAH Protocol brand and Hive DAO operating model distinct.
+Use “money left after bills and agreed savings” for surplus, “money set aside for repairs” for reserves, and “check the bank statement against the payment” for reconciliation. Explain a future token through what its agreement would let someone do or receive. Distinguish a right to live in a home, a membership voice and an investment. Plain wording must preserve conditions, uncertainty, source dates and protected commitments. Never turn a target into a promise or suggest an example calculation is a current price or return. Apply the same standard to Portuguese and English, navigation, photo captions, papers, slides and downloadable files.
 
 
 ## Main menu and page sections

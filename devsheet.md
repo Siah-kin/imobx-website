@@ -23,7 +23,7 @@ Rafael brings construction and local experience. John handles community communic
 
 Reuse good building plans, agreements, purchasing and accounts so another local team can deliver more homes. Each family should be able to own its whole home; a separate group of investors would not run each house.
 
-SIAH Protocol is the brand. Hive DAO names the rules and tools for shared responsibility. People should see what needs doing, choose work and leave information for whoever continues. The plan combines Ostrom’s ideas about shared resources, software agents, Arc payments, possible Arctide fees and The Flock’s Telegram bot. IMOBX still needs to demonstrate the complete process. [Explanation](faq.html#faq-flock-siah).
+The proposed process gives each task a responsible person, deadline and budget. Within agreed limits, work proceeds without daily instructions from the founders. Someone else checks delivery and spending. Open tasks and approvals remain available when a person changes roles. Residents need a way to question decisions and replace responsible people. [Daily decisions and tasks](faq.html#faq-flock-siah).
 
 ### Design basis for this revision
 
@@ -167,7 +167,7 @@ The actual rights matter more than labels such as “utility,” “governance�
 | Telegram / The Flock | Portuguese explanations, questions, updates and approved account summaries. |
 | Legal records | Signed agreements, property authority and any investor records held by the responsible party. |
 | Accounting and payments | Match the payer, purpose, bank receipt, conversion, USDC payment and final use. |
-| Community software | Show approved contribution or reward results; the responsible backend team defines those systems separately. |
+| Community software | Show requests, responsible people, decisions and work confirmed by others. |
 
 Families would pay in reais. IMOBX would keep local money and convert only approved amounts into USDC on Arc. CCTP may help move USDC between networks; it does not convert it to reais. No provider is confirmed for IMOBX. A CNPJ does not guarantee an account. Private family agreements stay off the public blockchain. Show payments as waiting, confirmed, failed or needing investigation. [Money path](transparency.html#settlement); [providers](transparency.html#ramp-options).
 

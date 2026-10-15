@@ -138,11 +138,13 @@ We want people to follow money in and out, see agreed decisions and check paymen
 
 **Arc Network** is the proposed payment network. Its fees use USDC. **Arctide** is a possible token-creation and trading app, with project fees that might help fund work. **Argus and Uniswap** are alternatives. Compare the cost, permissions and support needed for the same job. No universal cheapest option is established. [Arc](https://www.arc.io/litepaper); [Argus](https://github.com/arguspad/argus-world); [Uniswap](https://developers.uniswap.org/docs/protocols/v4/overview).
 
-**SIAH Protocol is the brand. Hive DAO** names the rules and tools for shared responsibility. People should see what needs doing, choose to take on work and leave useful information for the next person. We want work to continue without constant founder instructions, with room to disagree and ask for review.
+Residents and the organization would agree who decides each matter, spending limits and how a decision can be reviewed. Everyday work should follow these rules without waiting for instructions from the founder.
 
-For IMOBX, the plan combines Ostrom’s ideas, software agents written in Python, Arc payments and possible Arctide fees. Agents would help keep track of people, wallets, tasks and approvals. **The Flock** is the Telegram bot through which people could ask questions and follow progress. It can serve other projects too.
+For example, a resident reports a leak through the Telegram bot. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. Someone else checks the repair. The payment and receipt go into the accounts. Residents can raise a problem and ask for review.
 
-For example, a resident reports a leak. Someone qualified assesses it, the repair is approved, and someone else checks the work and payment. A replacement should find the information needed to continue. This complete process still needs to be built and demonstrated in IMOBX. [Hive DAO explanation](faq.html#faq-flock-siah).
+Tasks need a responsible person, deadline and budget. If someone leaves a role, their replacement should find the open work, approvals and documents needed to continue. Residents need ways to choose and replace responsible people. Personal information stays private.
+
+Software assistants could organize documents and remind people about unfinished work. Blockchain records could show payment amounts and destinations. The agreed rules still determine who may decide or spend. This method needs agreement with participants and a working pilot. [Daily decisions and tasks](faq.html#faq-flock-siah).
 
 Families would pay in reais. IMOBX would keep money for Brazilian bills, convert only approved amounts to USDC and convert back to pay builders. CCTP is a possible tool for moving USDC between networks. No conversion provider is confirmed for IMOBX. Residents would not need crypto wallets. [Money path](transparency.html#settlement); [providers researched](transparency.html#ramp-options).
 

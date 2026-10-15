@@ -23,7 +23,7 @@ def build_guide(root, page, tr, esc, language_controls):
             body += f'<details id="faq-{esc(item["id"])}">' + text(item['q'], 'summary')
             body += ''.join(text(pair) for pair in item['a']) + links(item['sources']) + '</details>'
         if home:
-            body += text(('Mais perguntas: decisões, The Flock, SIAH Protocol e aplicativos ↗', 'More questions: decisions, The Flock, SIAH Protocol and apps ↗'),
+            body += text(('Mais perguntas sobre moradia, dinheiro e decisões ↗', 'More questions about homes, money and decisions ↗'),
                          'a', 'class="guide-more" href="faq.html"')
         return body + '</div>'
 
@@ -138,7 +138,7 @@ def build_guide(root, page, tr, esc, language_controls):
     for topic in economy['topics']:
         transparency += f'<details class="community-topic" id="{esc(topic["id"])}">' + text(topic['title'], 'summary')
         transparency += ''.join(text(pair) for pair in topic['body']) + links(topic['sources']) + '</details>'
-    transparency += text(economy['branding'], 'p', 'class="fine"') + links(['arc-brand']) + '</section>'
+    transparency += '</section>'
     transparency += settlement_html
     transparency += '<section id="next-steps">' + text(public['followup_title'], 'h2')
     transparency += text(public['followup_intro']) + '<dl class="transparency-followups">'
@@ -212,9 +212,9 @@ def build_guide(root, page, tr, esc, language_controls):
     ]
     roadmap += '<ol class="ostrom-application">' + ''.join(text(p, 'li') for p in principles) + '</ol>'
     roadmap += text(('Estas perguntas adaptam as ideias de Ostrom à IMOBX. Ostrom estudou como pessoas cuidam de recursos comuns; não criou um modelo de token. Vamos ensaiar um reparo, uma urgência, uma cobrança contestada e uma nova obra. Em cada caso: quem pede, aprova, faz, confere e pode questionar?', 'These questions apply Ostrom’s ideas to IMOBX. Ostrom studied how people manage shared resources; she did not create a token model. We will walk through a repair, an emergency, a disputed invoice and a new build. In each case: who asks, approves, acts, checks and may challenge?'))
-    roadmap += text(('SIAH Protocol e Hive DAO', 'SIAH Protocol and Hive DAO'), 'h3')
-    for key in ['identity', 'assembly', 'loop', 'test']:
-        roadmap += text(guide['hive_dao'][key])
+    roadmap += text(('Como o trabalho segue no dia a dia', 'How everyday work moves forward'), 'h3')
+    for key in ['work', 'example', 'continuity', 'status']:
+        roadmap += text(guide['dao_operations'][key])
     roadmap += links(['digital']) + '</section>'
 
     roadmap += '<section id="ico-comparison">' + text(('O que muda em relação à venda de tokens?', 'What changes compared with a token sale?'), 'h2')

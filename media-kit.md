@@ -72,4 +72,4 @@ The logo files come from [Siah-kin/imobx-website](https://github.com/Siah-kin/im
 
 ## Model explanation and roadmap
 
-Keep the paper, slides, guide and website consistent as decisions change. SIAH Protocol is the brand. Hive DAO names the rules and tools for shared responsibility; The Flock is the Telegram bot. IMOBX is the housing application we are developing. Using these names does not mean the complete system is already working in IMOBX.
+Describe the proposed method through the work: residents raise issues and help set rules; agreed roles and budgets let people act; someone else checks delivery and payment; records let another person take over. Explain a tool only where it helps a reader understand an action or make a decision. Describe the pilot at its actual stage.
