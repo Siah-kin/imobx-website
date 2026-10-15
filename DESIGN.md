@@ -23,11 +23,27 @@ Essential status, resident protections and the distinction between proposals and
 - Use a few clear heading sizes and weights. Prefer editorial rows and whitespace to repeated bordered cards. Keep corners square, with circles reserved for photographic annotations.
 - One prominent next action per section. Secondary links should explain their destination. Avoid competing bright buttons and a wall of download formats on the homepage.
 
+## Documentary editorial approach
+
+Explain the place and the people before presenting IMOBX's proposed response. Use original, factual reporting: an observable detail, its dated source, what remains to be checked locally, then the relevant engineering or operating action. National Geographic's photo essays are an editorial reference for attention to place and caption specificity; no affiliation, borrowed reporting or reproduced prose is implied.
+
+Use “favelas and urban communities” in the Brazilian context. Explain the worldwide challenge of inadequate housing through the relevant UN-Habitat categories, rather than treating “favela,” “slum,” “displacement” and “homelessness” as synonyms. Describe residents' work, relationships and decisions as well as housing and service needs. A photograph or a national statistic cannot establish an individual household's condition. Discuss resident choice and access to work, transport and services when describing the proposed pilot.
+
+State the ambition plainly: IMOBX wants to combine rent-to-own housing with shared decision rules and, where useful, a DAO. Describe the pilot, agreed roles and digital tools at their actual stage. Show engineering expertise through scoped designs, cost evidence, responsible professionals, maintenance planning and checked delivery. Identify professional credentials and company/property documents only when verified; distinguish founder-supplied estimates from current scoped quotes. Present local voices only from consented, attributable reporting. Never invent an interview, beneficiary, site visit or completed result.
+
+Put sources near factual claims, date statistics, distinguish national context from pilot evidence and keep contextual facts separate from project ambitions. Core references checked 15 October 2026:
+
+- [IBGE: Favelas e Comunidades Urbanas](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15788-favelas-ecomunidades-urbanas.html?edicao=38944&t=o-que-e): terminology and community context.
+- [IBGE: 2022 Census housing-community results](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas): approximately 16.4 million residents, 8.1% of Brazil's population in 2022; a dated national measure, not a pilot count.
+- [UN-Habitat: adequate housing](https://unhabitat.org/11-1-adequate-housing): global housing context and adequacy, including affordability.
+
 ## Photographs and annotation
 
 Use the supplied local photographs to explain the mission. Distinguish local context, construction archive material and architectural concepts in captions. Photograph markers indicate visual focus, not surveyed boundaries, confirmed pilot ownership or beneficiary eligibility.
 
 Replace hand-drawn blue arrows with restrained, unfilled teal circular outlines around the same communities. Preserve composition, lighting, houses, landscape and people as closely as the edit permits. Keep original source files and save edited versions separately. Record that annotation removal used generative image editing; do not describe the edited photographs as pixel-identical originals. Avoid retouching that makes the area look richer, poorer or more developed.
+
+Link each displayed context photograph to the unchanged supplied original. State generative annotation editing in the caption and explain provenance in the image archive. Retain the distinction between a labelled presentation image and original field evidence. Confirm photographer, date, exact location and publication permissions before claiming a documented site report; source filenames are not proof of capture date.
 
 ## Interaction and gradual disclosure
 

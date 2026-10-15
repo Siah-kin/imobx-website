@@ -35,13 +35,16 @@ Use readable sans-serif type; the current drafts use Arial and system fallbacks.
 
 ## 3. Short description in English
 
-IMOBX is preparing a rent-to-own housing pilot in Rio de Janeiro. The proposed model brings together local construction knowledge, written resident agreements and project financial reporting. The pilot is intended to test housing delivery, maintenance, payment arrangements and progress toward ownership. Its legal structure, property arrangements and any token rights remain under design.
+IMOBX is preparing a rent-to-own housing pilot in Rio de Janeiro. Its proposed model connects local construction knowledge, written resident agreements, reinvestment in housing and residents’ participation in decisions. IMOBX aims to develop a DAO with shared rules and useful digital records as the operating model is tested. The pilot is intended to test housing delivery, maintenance, payment arrangements and progress toward ownership. Its legal structure, property arrangements and any token rights remain under design.
 
 ## 4. Descrição curta em português
 
-A IMOBX está preparando um piloto de moradia com opção de compra no Rio de Janeiro. A proposta reúne experiência local de construção, contratos por escrito com os moradores e prestação de contas do projeto. O piloto pretende testar a entrega, a manutenção, os pagamentos e o caminho até a propriedade. A estrutura jurídica, os acordos sobre os imóveis e os direitos de um eventual token ainda estão em definição.
+A IMOBX está preparando um piloto de moradia com opção de compra no Rio de Janeiro. A proposta reúne experiência local de construção, contratos por escrito, reinvestimento em moradia e participação dos moradores nas decisões. A IMOBX pretende desenvolver uma DAO com regras compartilhadas e registros digitais úteis à medida que testa o modelo de operação. O piloto pretende testar a entrega, a manutenção, os pagamentos e o caminho até a propriedade. A estrutura jurídica, os acordos sobre os imóveis e os direitos de um eventual token ainda estão em definição.
 
 ## 5. Writing and claims
+
+Use a documentary approach: explain housing conditions, their sources and the community context before presenting IMOBX's response. Favelas have local histories and identities; international housing categories and displacement describe different things. Residents are participants with preferences, work and social ties. Use the dated sources and editorial rules in the [design guide](design.html#documentary-editorial-approach). Context photographs link to the supplied originals; displayed circles use generative annotation edits. The image archive records provenance limits. Engineering claims should point to responsible professionals, scoped designs, budgets and delivery evidence as these become available.
+
 
 Describe what is planned, agreed, paid and delivered using those specific terms. Lead with the resident arrangement and the use of project money. Link numbers to evidence and include their dates and assumptions. Explain any technical term when it first appears.
 

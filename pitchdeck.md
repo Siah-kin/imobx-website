@@ -38,7 +38,7 @@ The intended pilot serves households displaced or excluded from ordinary housing
 
 
 
-**Presenter notes:** Do not describe all informal-settlement residents as displaced. The founders' target group still requires local definition and consultation. Do not state a number of pilot residents as already enrolled.
+**Presenter notes:** Brazil’s 2022 Census recorded around 16.4 million residents in favelas and urban communities, 8.1% of the population. IBGE describes community formation and identities, while UN-Habitat provides the wider inadequate-housing context. These are national/global references, not evidence of the selected pilot site. Do not describe all informal-settlement residents as displaced. Listen to households about location, work, services and their preferences. The founders’ target group requires local definition and consultation. No pilot residents are claimed as enrolled.
 
 
 
@@ -128,7 +128,7 @@ Residents help shape suitable local decisions; their contracts define their righ
 
 
 
-**Presenter notes:** Ostrom informs the design direction: boundaries, affected users' participation, monitoring and accessible dispute resolution. There is no tenant-token allocation or adopted voting-weight plan. Compare household/member participation options with advisers and residents.
+**Presenter notes:** Ostrom informs the design direction: boundaries, affected users' participation, monitoring and accessible dispute resolution. There is no tenant-token allocation or adopted voting-weight plan. Compare household/member participation options with advisers and residents. IMOBX’s ambition is a DAO supported by tested shared rules and useful digital records; the current paper sets out the proposed decision boundaries.
 
 
 
@@ -231,3 +231,9 @@ The next ask is practical expertise and a bounded delivery arrangement.
 - [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html)
 
 - [Ostrom Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/)
+
+- [IBGE: favelas and urban communities](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15788-favelas-ecomunidades-urbanas.html?edicao=38944&t=o-que-e)
+
+- [IBGE: 2022 Census context](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas)
+
+- [UN-Habitat: adequate housing](https://unhabitat.org/11-1-adequate-housing)

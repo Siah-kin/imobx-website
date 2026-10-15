@@ -14,6 +14,8 @@ The first task is a bounded housing pilot. Digital records and USDC payments are
 
 The founders want to serve households displaced or excluded from ordinary housing finance who can sustain an affordable payment arrangement. Eligibility, affordability, location, accessibility and residents' preferences need to be defined with local participants. The program should not describe all people in informal settlements as displaced or assume that a move meets every household's needs.
 
+Housing access is a worldwide challenge. UN-Habitat tracks slums, informal settlements and inadequate housing as related categories; local conditions and terminology matter. In Brazil, IBGE describes favelas and urban communities as territories shaped by residents meeting housing and associated needs, with their own community identities. Brazil's 2022 Census recorded approximately 16.4 million residents in these areas, 8.1% of the national population. This national context does not establish conditions or eligibility at a proposed pilot site. [IBGE terminology](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15788-favelas-ecomunidades-urbanas.html?edicao=38944&t=o-que-e); [IBGE 2022 Census](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas); [UN-Habitat housing context](https://unhabitat.org/11-1-adequate-housing).
+
 The practical offer to test is a home, a comprehensible agreement, clear maintenance responsibilities and a defined route toward ownership. Residents should understand the payment schedule, what counts toward purchase, how the final price is determined, and what happens after hardship, default, early exit or the operator's failure. Those terms are design decisions for the accountable organization and its Brazilian advisers.
 
 ## 2. The housing and delivery arrangement
@@ -77,6 +79,8 @@ A home transferred to its resident stops being a rental-income asset for the ope
 Grants and donations can support an eligible pilot or expansion. Their restrictions must remain visible; a one-time award is not recurring operating income. Claiming self-sufficiency at 1,000 homes is premature until a cohort model includes build timing, costs, tenancy terms, transfers and asset runoff. Three- and six-year reviews are possible checkpoints, not dates at which distributions automatically begin.
 
 ## 7. Resident voice and accountable governance
+
+The long-term ambition is a DAO with shared participation rules and useful digital records, built around an accountable housing organization. Its practical rules should emerge from the pilot and resident consultation.
 
 The founders want to apply Ostrom's work where it fits: define the participating group, involve affected users in suitable decisions, make monitoring and dispute resolution accessible, and connect local decisions with wider organization responsibilities. This is a design direction, not a claim that token voting implements those principles. [Ostrom's Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/).
 
