@@ -102,3 +102,8 @@ Keep a distinct roadmap linked from navigation and resources. Show stage, propos
 Use native details for model questions, with direct section links and primary sources near claims. Separate Arc the settlement network from Arctide the exchange application; acknowledge Argus/Uniswap alternatives. Describe cooperative decision options as consultation proposals, not adopted token-weight rules or deployed SIAH/HiveDAO governance. Nonprofit mission protection and any financial distribution require distinct, compatible rights.
 
 Explain Rafael’s $27,777 village budget through his explicit CUB/SINAPI reference basis and cost-engineering breakdown, rather than merely calling it a historical estimate. Date and distinguish this per-home/36-home plan from January’s combined two-loft contract. Preserve the reference period, scope and actual-spending trail; do not imply the index publisher certifies an individual complete-home price.
+
+
+## On/off-ramp explanation
+
+The existing roadmap includes a bilingual settlement section with ordered, readable flow diagrams, July’s ETH route and the proposed USDC route distinguished. Show rent collection and spending back in BRL, preserve costs/reserves/restrictions before allocation, and distinguish CNPJ, title and provider approval. Mercado Bitcoin is a historical candidate, not an integrated or confirmed eligible provider. Keep contractor/client relations separate from banking and any token rights. Flow diagrams describe requirements, not an executable payment service.

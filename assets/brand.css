@@ -13,6 +13,11 @@
 .roadmap-stage dt{font-weight:700;font-size:14px}.roadmap-stage dd{margin:0;line-height:1.65}
 .guide-table{overflow-x:auto}.guide-table table{min-width:600px}.guide-table th{font-size:14px}.guide-table td{font-size:15px;line-height:1.6}
 .guide-sources{font-size:12px!important;line-height:1.8;overflow-wrap:anywhere}.ostrom-application li{margin-bottom:12px}
+.settlement-history,.settlement-review{background:var(--pale);border-left:3px solid var(--imobx-turquoise);padding:4px 22px;margin:28px 0}.settlement-chain{font-weight:600;line-height:1.9;overflow-wrap:anywhere}
+.settlement-route{margin:36px 0}.settlement-steps{list-style:none;counter-reset:cash-step;padding:0;margin:24px 0}.settlement-steps li{display:grid;grid-template-columns:38px 1fr;gap:16px;counter-increment:cash-step;padding:0 0 25px;margin:0;position:relative}
+.settlement-steps li::before{content:counter(cash-step);display:flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--imobx-turquoise);border-radius:50%!important;background:#fff;color:var(--orange);z-index:1;font-size:14px}
+.settlement-steps li:not(:last-child)::after{content:"";position:absolute;left:16px;top:32px;bottom:0;border-left:1px solid var(--line)}.settlement-steps strong{display:block;padding-top:2px}.settlement-steps p{margin:6px 0 0}
+.settlement-relationships{border-top:1px solid var(--line)}.settlement-relationships article{border-bottom:1px solid var(--line);padding:8px 0}
 .guide-paper section{scroll-margin-top:25px}.faq summary{padding:8px 0;min-height:44px;line-height:1.5}.faq details:target{border-left:3px solid var(--imobx-turquoise);padding-left:16px}
 @media(max-width:600px){.roadmap-overview{grid-template-columns:1fr}.roadmap-stage dl{grid-template-columns:1fr;gap:5px}.roadmap-stage dd{margin-bottom:16px}.guide-paper .guide-table table{display:table;overflow:visible}.guide-paper .guide-table{margin-right:0}.guide-status{padding:4px 16px}.guide-paper .faq h2{font-size:26px}}
 *{border-radius:0!important}

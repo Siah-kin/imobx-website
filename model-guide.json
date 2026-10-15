@@ -533,6 +533,33 @@
         "argus",
         "technical"
       ]
+    },
+    {
+      "id": "on-off-ramp",
+      "home": false,
+      "q": [
+        "Como o aluguel vira cripto e como o dinheiro volta para a obra?",
+        "How does rent become crypto, and how does money return to construction?"
+      ],
+      "a": [
+        [
+          "A proposta de julho era morador → administradora → conta IMOBX em reais → Mercado Bitcoin → ETH → carteira e contrato de distribuição. O diagrama mostra essa referência e o desenho atual em estudo: preservar os valores necessários no Brasil e converter somente o montante autorizado, com registros que liguem origem e destino.",
+          "July’s proposal was resident → property manager → IMOBX BRL account → Mercado Bitcoin → ETH → wallet and distribution contract. The diagram shows that reference and the current design under study: retain cash needed in Brazil and convert only the authorized amount, with records linking source and destination."
+        ],
+        [
+          "No sentido inverso, a tesouraria envia um ativo pela rede aceita por um prestador aprovado; ele converte para reais; a entidade recebe no banco e paga a obra autorizada. Acesso ao prestador depende da entidade e da rede. A FAQ do Mercado Bitcoin informa restrições para associações e cooperativas, e não verificamos suporte direto a saques de USDC para Arc.",
+          "In reverse, the treasury sends an asset over a network accepted by an approved provider; it converts to BRL; the entity receives bank funds and pays the authorized construction work. Provider access depends on the entity and network. Mercado Bitcoin’s FAQ states restrictions for associations and cooperatives, and we have not verified direct USDC withdrawals to Arc."
+        ],
+        [
+          "CNPJ é registro fiscal, não aprovação automática de conta ou prova de propriedade. Um recebimento em ETH ainda é cripto; o off-ramp em moeda comum termina no recebimento bancário. A rota completa ainda será testada; o site não executa pagamentos.",
+          "CNPJ is tax registration, not automatic account approval or proof of ownership. An ETH receipt remains crypto; a fiat off-ramp ends with bank receipt. The full route remains to be tested; the website executes no payments."
+        ]
+      ],
+      "sources": [
+        "settlement",
+        "cnpj",
+        "mb"
+      ]
     }
   ],
   "sources": {
@@ -607,6 +634,272 @@
     "cub": {
       "label": "Sinduscon · CUB scope",
       "url": "https://sinduscon-caxias.net.br/servicos/cub"
+    },
+    "cnpj": {
+      "label": "Receita Federal · Foreign entities and CNPJ",
+      "url": "https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/solicitacao-de-atos-perante-o-cnpj-por-meio-da-internet/orientacoes-para-pessoa-juridica-domiciliada-no-exterior"
+    },
+    "title": {
+      "label": "Código Civil · art. 1.245",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+    },
+    "mb": {
+      "label": "Mercado Bitcoin · Account eligibility",
+      "url": "https://www.mercadobitcoin.com.br/taxas-contas-limites"
+    },
+    "bcb": {
+      "label": "Banco Central · Resolução 521",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=521&tipo=Resolu%C3%A7%C3%A3o+BCB"
+    },
+    "settlement": {
+      "label": "IMOBX · BRL ↔ crypto flow",
+      "url": "roadmap.html#settlement"
     }
+  },
+  "settlement": {
+    "title": [
+      "Como o dinheiro entra e sai da blockchain",
+      "How money moves onto and off the blockchain"
+    ],
+    "intro": [
+      "O desenho separa aluguel em reais, conversão autorizada e pagamentos. É uma proposta de operação a testar, não um serviço financeiro já conectado. Moradores podem pagar e receber suporte sem carteira de cripto.",
+      "The diagram separates rent in reais, authorized conversion and payments. It is a proposed operating route to test, not an already connected financial service. Residents can pay and obtain support without a crypto wallet."
+    ],
+    "historical_title": [
+      "A rota discutida em 25–28 julho 2026",
+      "The route discussed on 25–28 July 2026"
+    ],
+    "historical_route": [
+      "Morador (BRL) → imobiliária/administradora (menos comissão) → conta IMOBX (BRL) → Mercado Bitcoin (compra de ETH) → carteira → contrato de distribuição → retirada por participante elegível (ETH).",
+      "Resident (BRL) → property manager (less commission) → IMOBX account (BRL) → Mercado Bitcoin (ETH purchase) → wallet → distribution contract → eligible participant claim (ETH)."
+    ],
+    "historical_note": [
+      "Rafael também descreveu a relação IMOBX–construtora como cliente e prestador de obra. O desenho de julho usava ETH; a alternativa atual em estudo usa USDC e Arc. Um pagamento em ETH para uma carteira ainda é cripto: só se torna saída para moeda comum quando houver conversão e recebimento bancário.",
+      "Rafael also described IMOBX and the construction business as client and building contractor. The July design used ETH; the current alternative under study uses USDC and Arc. An ETH payment to a wallet remains crypto: it becomes a fiat off-ramp only upon conversion and bank receipt."
+    ],
+    "routes": [
+      {
+        "id": "rent-onramp",
+        "title": [
+          "1 / Do aluguel em reais à tesouraria digital",
+          "1 / From BRL rent to the digital treasury"
+        ],
+        "intro": [
+          "Converter apenas o valor autorizado, preservando o dinheiro necessário no Brasil.",
+          "Convert only the authorized amount, retaining cash needed in Brazil."
+        ],
+        "steps": [
+          {
+            "title": [
+              "Morador paga em reais",
+              "Resident pays in BRL"
+            ],
+            "body": [
+              "Pagamento conforme o contrato. Identificar aluguel, encargos e qualquer parcela ou crédito de compra.",
+              "Payment follows the agreement. Identify rent, charges and any purchase installment or credit."
+            ]
+          },
+          {
+            "title": [
+              "Administradora presta contas",
+              "Property manager accounts for collection"
+            ],
+            "body": [
+              "Se houver intermediário contratado, registrar aluguel bruto, comissão e repasse líquido. O comprovante deve ligar o pagamento à obrigação do morador.",
+              "If a contracted intermediary collects, record gross rent, commission and net remittance. Evidence links the payment to the resident’s obligation."
+            ]
+          },
+          {
+            "title": [
+              "Conta bancária da entidade responsável",
+              "Account of the accountable entity"
+            ],
+            "body": [
+              "Receber e conciliar o valor em reais. Reservar tributos, custos, manutenção, obrigações e recursos restritos antes de decidir conversões ou distribuições.",
+              "Receive and reconcile BRL funds. Provide for taxes, costs, maintenance, obligations and restricted funds before deciding conversions or distributions."
+            ]
+          },
+          {
+            "title": [
+              "Prestador aprovado converte",
+              "Accepted provider converts"
+            ],
+            "body": [
+              "A entidade usa conta aprovada para sua forma jurídica. Registrar reais enviados, cotação, taxas e cripto recebido. Julho propunha ETH; a opção atual de USDC depende da rota escolhida.",
+              "The entity uses an account accepted for its legal form. Record BRL sent, exchange rate, fees and crypto received. July proposed ETH; the current USDC option depends on the selected route."
+            ]
+          },
+          {
+            "title": [
+              "Tesouraria recebe na rede correta",
+              "Treasury receives on the correct network"
+            ],
+            "body": [
+              "Conferir ativo, rede, endereço, controle da carteira e confirmação. O envio para Arc exige suporte direto ou uma rota adicional verificada, com custos e riscos registrados.",
+              "Check asset, network, address, wallet control and confirmation. Delivery to Arc requires direct support or a separately verified route, with recorded costs and risks."
+            ]
+          },
+          {
+            "title": [
+              "Uso conforme a autorização",
+              "Use according to authorization"
+            ],
+            "body": [
+              "Separar manutenção, expansão e eventuais pagamentos previstos em instrumento válido. Uma retirada de investidor só existe se houver direito e valor disponíveis; não é destino automático de todo aluguel.",
+              "Separate maintenance, expansion and any payments under a valid instrument. An investor claim exists only with an entitlement and available funds; it is not the automatic destination of all rent."
+            ]
+          }
+        ],
+        "note": [
+          "O fluxo bancário pode dispensar uma administradora quando o modelo contratado permitir cobrança direta. A titularidade das contas, mandatos e beneficiários deve corresponder à estrutura jurídica aceita.",
+          "The bank flow can omit a property manager where the contracted model permits direct collection. Account ownership, mandates and beneficiaries must match the accepted legal structure."
+        ]
+      },
+      {
+        "id": "construction-offramp",
+        "title": [
+          "2 / Da tesouraria digital à obra em reais",
+          "2 / From the digital treasury to BRL construction payments"
+        ],
+        "intro": [
+          "Taxas, doações e outros recursos mantêm sua origem e suas condições de uso.",
+          "Fees, donations and other funds retain their source and permitted uses."
+        ],
+        "steps": [
+          {
+            "title": [
+              "Receita ou recurso identificado",
+              "Identified receipt or funding"
+            ],
+            "body": [
+              "Tesouraria recebe USDC ou outro ativo aceito, com origem e finalidade registradas. Valor do token e liquidez bloqueada não são caixa de obra.",
+              "Treasury receives USDC or another accepted asset, with recorded origin and purpose. Token value and locked liquidity are not construction cash."
+            ]
+          },
+          {
+            "title": [
+              "Orçamento e pagamento autorizados",
+              "Budget and payment authorized"
+            ],
+            "body": [
+              "A pessoa responsável confere disponibilidade, restrições, orçamento e destinatário. O construtor não aprova a própria cobrança.",
+              "The responsible person checks availability, restrictions, budget and recipient. The builder does not approve their own invoice."
+            ]
+          },
+          {
+            "title": [
+              "Prestador recebe e vende o ativo",
+              "Provider receives and sells the asset"
+            ],
+            "body": [
+              "Enviar pela rede aceita pelo prestador, converter para reais e registrar custos. Não enviar USDC na Arc para um endereço que só aceite outra rede.",
+              "Send over the provider’s accepted network, convert to BRL and record costs. Do not send Arc USDC to an address supporting only another network."
+            ]
+          },
+          {
+            "title": [
+              "Conta da entidade recebe reais",
+              "Entity account receives BRL"
+            ],
+            "body": [
+              "Conciliar a entrada bancária com a transação de cripto, a ordem de conversão e o valor autorizado.",
+              "Reconcile the bank receipt with the crypto transaction, conversion order and authorized amount."
+            ]
+          },
+          {
+            "title": [
+              "Pagamento e comprovação da entrega",
+              "Payment and delivery evidence"
+            ],
+            "body": [
+              "Pagar a construtora ou fornecedor conforme contrato e conferência da etapa. Registrar nota, beneficiário e entrega; permitir contestação pelo processo acordado.",
+              "Pay the contractor or supplier under the agreement and milestone checks. Record invoice, beneficiary and delivery; allow challenges through the agreed process."
+            ]
+          }
+        ],
+        "note": [
+          "Um participante que receber cripto pode usar seu próprio prestador elegível para converter e receber moeda comum. Isso é uma operação separada, sujeita aos direitos, custos e regras que lhe cabem.",
+          "A participant receiving crypto can use their own eligible provider to convert and receive fiat. That is a separate operation, subject to their rights, costs and applicable rules."
+        ]
+      }
+    ],
+    "relationships_title": [
+      "O dinheiro não substitui os contratos",
+      "Payments do not replace agreements"
+    ],
+    "relationships": [
+      {
+        "title": [
+          "Entidade ↔ morador",
+          "Entity ↔ resident"
+        ],
+        "body": [
+          "Contrato de aluguel com opção de compra: uso, pagamentos, manutenção, créditos, saída e transferência. Direitos do morador não dependem de saldo de token.",
+          "Rent-to-own agreement: occupancy, payments, maintenance, credits, exit and transfer. Resident rights do not depend on token balance."
+        ]
+      },
+      {
+        "title": [
+          "Entidade ↔ construtora",
+          "Entity ↔ building contractor"
+        ],
+        "body": [
+          "Relação cliente/prestador descrita por Rafael: escopo, preço, prazo, responsabilidade e conferência. Vínculos do fundador e conflitos continuam declarados e controlados.",
+          "The client/contractor relationship Rafael described: scope, price, timing, responsibility and checking. Founder connections and conflicts remain disclosed and controlled."
+        ]
+      },
+      {
+        "title": [
+          "Entidade ↔ prestadores financeiros",
+          "Entity ↔ financial providers"
+        ],
+        "body": [
+          "Banco, conversão e eventual distribuição têm cadastro, titularidade, limites e responsabilidades próprios. The Flock pode mostrar o andamento aprovado; não é banco nem corretora por existir como bot.",
+          "Banking, conversion and any distribution each have their own onboarding, ownership, limits and responsibilities. The Flock can show approved status; being a bot does not make it a bank or exchange."
+        ]
+      }
+    ],
+    "registration": [
+      "A Receita Federal confirma a obrigação de CNPJ para pessoas jurídicas domiciliadas no exterior que possuam imóveis no Brasil. CNPJ é cadastro fiscal; a verificação de identidade pelo banco ou corretora é outro processo. A transferência de propriedade entre vivos depende do registro do título, nos termos do art. 1.245 do Código Civil. A opção entre entidade estrangeira e estrutura brasileira ainda requer definição; pagar tributos não esgota as obrigações da operação.",
+      "Receita Federal confirms the CNPJ requirement for foreign entities holding Brazilian property. CNPJ is tax registration; bank or exchange identity checks are a separate process. Transfer of property between living parties depends on registration of title under Civil Code article 1,245. The choice of foreign entity or Brazilian structure remains to be settled; paying taxes does not exhaust operating obligations."
+    ],
+    "provider_title": [
+      "O que verificar sobre Mercado Bitcoin",
+      "What to check about Mercado Bitcoin"
+    ],
+    "provider_note": [
+      "Mercado Bitcoin é o prestador citado no desenho de julho, não uma integração confirmada. Sua FAQ publicada, consultada em 15 outubro 2026, informa restrições ao cadastro de associações e cooperativas. Isso afeta a forma sem fins lucrativos em estudo. Selecionar um prestador que aceite a entidade real e confirme a rota, sem usar conta pessoal como substituto.",
+      "Mercado Bitcoin is the provider named in July’s design, not a confirmed integration. Its published FAQ, checked on 15 October 2026, states restrictions on onboarding associations and cooperatives. This affects the nonprofit form under study. Select a provider accepting the actual entity and confirming the route, without substituting a personal account."
+    ],
+    "network_note": [
+      "Não foi verificado suporte direto de saque de USDC do Mercado Bitcoin para Arc. Confirme ativo e rede nos dois sentidos. O prestador também deve confirmar os procedimentos aplicáveis de câmbio, operações internacionais e identificação da carteira sob as regras brasileiras de ativos virtuais.",
+      "Direct Mercado Bitcoin USDC withdrawal support to Arc has not been verified. Confirm asset and network in both directions. The provider must also confirm applicable FX, international-transfer and wallet-identification procedures under Brazilian virtual-asset rules."
+    ],
+    "evidence_title": [
+      "O teste de uma operação completa",
+      "The test for one complete operation"
+    ],
+    "evidence": [
+      [
+        "Definir entidade, mandatos, contas aprovadas e quem pode autorizar, conferir e recuperar o acesso.",
+        "Define the entity, mandates, accepted accounts and who can authorize, check and recover access."
+      ],
+      [
+        "Conciliar aluguel bruto, comissão, banco, cotação, taxas, transação, recebimento e destino final.",
+        "Reconcile gross rent, commission, bank entries, exchange rate, fees, transaction, receipt and final use."
+      ],
+      [
+        "Testar os dois sentidos, falhas e duplicidades; registrar limites, tempo e custo total.",
+        "Test both directions, failures and duplicates; record limits, timing and total cost."
+      ],
+      [
+        "Usar simulação primeiro. Uma operação real de teste depende de aprovação separada; o site não movimenta dinheiro.",
+        "Start in simulation. A real test transfer requires separate authorization; the website does not move money."
+      ]
+    ],
+    "limits": [
+      "Uma conversão torna o dinheiro digital; ela não cria lucro distribuível, direito a dividendo ou isenção regulatória. Recursos restritos, obrigações dos moradores e limites da forma sem fins lucrativos acompanham o dinheiro.",
+      "Conversion makes funds digital; it creates neither distributable profit, dividend rights nor a regulatory exemption. Restrictions, resident obligations and nonprofit distribution limits follow the money."
+    ]
   }
 }

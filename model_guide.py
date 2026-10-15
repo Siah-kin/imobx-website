@@ -63,6 +63,7 @@ def build_guide(root, page, tr, esc, language_controls):
                      'This publication does not present the final legal structure, pilot operation, onchain treasury or IMOBX token as deployed or verified.')) + '</div>'
     roadmap += '<nav class="guide-jump" aria-label="Sections">' + text(('Etapas', 'Stages'), 'a', 'href="#stages"')
     roadmap += text(('Governança', 'Governance'), 'a', 'href="#governance"')
+    roadmap += text(('Reais ↔ cripto', 'BRL ↔ crypto'), 'a', 'href="#settlement"')
     roadmap += text(('Diferença da ICO', 'ICO comparison'), 'a', 'href="#ico-comparison"')
     roadmap += text(('Perguntas', 'Questions'), 'a', 'href="faq.html"') + '</nav>'
     roadmap += '<section id="stages">' + text(('Etapas e condições para avançar', 'Stages and conditions for advancing'), 'h2')
@@ -77,6 +78,31 @@ def build_guide(root, page, tr, esc, language_controls):
             roadmap += text(label, 'dt') + text(stage[key], 'dd')
         roadmap += '</dl></article>'
     roadmap += '</section>'
+
+    # These diagrams describe proposed money/contract paths, not a payment API.
+    settlement = guide['settlement']
+    roadmap += '<section id="settlement">' + text(settlement['title'], 'h2')
+    roadmap += text(settlement['intro'])
+    roadmap += '<div class="settlement-history">' + text(settlement['historical_title'], 'h3')
+    roadmap += text(settlement['historical_route'], 'p', 'class="settlement-chain"')
+    roadmap += text(settlement['historical_note']) + '</div>'
+    for route in settlement['routes']:
+        roadmap += f'<article class="settlement-route" id="{esc(route["id"])}">' + text(route['title'], 'h3')
+        roadmap += text(route['intro']) + '<ol class="settlement-steps">'
+        for step in route['steps']:
+            roadmap += '<li><div>' + text(step['title'], 'strong') + text(step['body']) + '</div></li>'
+        roadmap += '</ol>' + text(route['note'], 'p', 'class="fine"') + '</article>'
+    roadmap += text(settlement['relationships_title'], 'h3')
+    roadmap += '<div class="settlement-relationships">'
+    for relationship in settlement['relationships']:
+        roadmap += '<article>' + text(relationship['title'], 'h3') + text(relationship['body']) + '</article>'
+    roadmap += '</div>' + text(settlement['registration']) + links(['cnpj', 'title'])
+    roadmap += '<div class="settlement-review">' + text(settlement['provider_title'], 'h3')
+    roadmap += text(settlement['provider_note']) + links(['mb']) + '</div>'
+    roadmap += text(settlement['network_note']) + links(['bcb'])
+    roadmap += text(settlement['evidence_title'], 'h3')
+    roadmap += '<ul>' + ''.join(text(x, 'li') for x in settlement['evidence']) + '</ul>'
+    roadmap += text(settlement['limits']) + links(['cash', 'nonprofit']) + '</section>'
 
     roadmap += '<section id="governance">' + text(('Quem decide o quê?', 'Who decides what?'), 'h2')
     roadmap += text(('Exemplo para consulta, não um estatuto já adotado. O objetivo é separar a voz de quem usa a moradia, '
