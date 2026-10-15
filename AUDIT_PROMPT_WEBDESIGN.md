@@ -1,5 +1,7 @@
 # IMOBX Website + Design Skill Audit Prompt
 
+> Historical reference. For the current white layout, progressive disclosure and image treatment, follow [DESIGN.md](DESIGN.md). Financial examples below are historical, not adopted token terms.
+
 **Purpose:** Copy-paste this into Gemini, ChatGPT, or any LLM to get an independent audit of the IMOBX website design against the design skill rules.
 
 ---

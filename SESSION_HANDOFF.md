@@ -1,5 +1,7 @@
 # IMOBX Website Session Handoff
 
+> Historical reference. For the current white layout, progressive disclosure and image treatment, follow [DESIGN.md](DESIGN.md). Financial examples below are historical, not adopted token terms.
+
 **Date:** 2026-02-27
 **Last commit:** a93de62 (pushed to main)
 

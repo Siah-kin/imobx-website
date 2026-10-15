@@ -16,6 +16,8 @@ The light file in the original repository has a PNG extension but WebP content. 
 
 ## 2. Colours and type
 
+The current [website design guidelines](https://siah-kin.github.io/imobx-website/design.html) explain the white layout, gradual disclosure and photographic circles. [Editable design reference](https://github.com/Siah-kin/imobx-website/blob/main/DESIGN.md).
+
 | Use | Colour |
 |---|---|
 | Web background | #FFFFFF |

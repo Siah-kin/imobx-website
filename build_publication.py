@@ -77,6 +77,21 @@ def translated(pt, en, tag='span', attributes=''):
 
 
 def resource_section(standalone=False):
+    if not standalone:
+        rows = []
+        for item in RESOURCE_CATALOG[:3]:
+            target, pt, en = item['links'][0]
+            rows.append(f'''<article class="resource-row" id="resource-{esc(item['id'])}">
+<div>{translated(item['pt'],item['en'],'h3')}{translated(item['description_pt'],item['description_en'],'p')}</div>
+{translated(pt + ' ↗',en + ' ↗','a',f'href="{esc(target)}" aria-label="{esc(item["en"])}"')}</article>''')
+        return '<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>' + \
+            translated('Recursos','Resources','span','class="eyebrow"') + \
+            translated('Conheça a proposta em detalhe.','Explore the proposal in detail.','h2') + \
+            translated('Documentos em inglês, em desenvolvimento. O media kit inclui descrições em português e inglês.',
+                       'English project documents, in development. The media kit includes Portuguese and English descriptions.','p') + \
+            '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">' + \
+            translated('Todos os documentos e downloads','All documents and downloads','a','href="resources.html"') + \
+            translated('Ficha do piloto e metas','Pilot specification and targets','a','id="resource-devsheet" href="devsheet.html"') + '</div>'
     cards = []
     for item in RESOURCE_CATALOG:
         links = []
@@ -113,6 +128,11 @@ language_controls = '''<div class="resource-language"><div class="lang" role="gr
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main id="main">' + language_controls + resource_section(standalone=True) + '</section></main>',
     '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Recursos'))
+if (ROOT / 'DESIGN.md').is_file():
+    design_html = markdown.markdown((ROOT / 'DESIGN.md').read_text(), extensions=['tables', 'toc'])
+    (ROOT / 'design.html').write_text(page('IMOBX | Design guidelines',
+        '<main class="paper"><p><a href="media-kit.html">IMOBX media kit</a> · '
+        '<a href="DESIGN.md" download>Download design guidelines</a></p>' + design_html + '</main>'))
 kit_html = markdown.markdown((ROOT / 'media-kit.md').read_text(), extensions=['tables', 'toc'])
 logo_previews = '''<div class="media-logo-grid"><figure class="media-logo light">
 <img src="assets/imobx-logo-light.png" width="400" height="400" alt="IMOBX logo on a white background">
@@ -322,9 +342,9 @@ def archive(name, paths, introduction):
 
 
 logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'assets/imobx-logo-light-source.webp']
-archive('media-kit.zip', ['media-kit.md', 'brand-colors.json'] + logo_paths,
+archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
         'IMOBX media kit v0.1 / 15 October 2026\nOriginal logo artwork, colour definitions and a review-draft usage guide.\nRead media-kit.md. Public claims must follow the accepted project status.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
-        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'media-kit.md', 'brand-colors.json'] + logo_paths,
+        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
         'IMOBX document collection / 15 October 2026\nWhitepaper v0.1, partner deck v0.1, developer/pilot specification v0.2 and media kit v0.1.\nThese are founder/partner review drafts. No token offer or legal approval is established.\nPDF files are for reading; the PowerPoint and text files are editable. The pilot roadmap is in section 7 of the developer specification.\n')
 print('Built document exports, on-page resources, the resources page, media kit and download archives.')

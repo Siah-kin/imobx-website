@@ -4,6 +4,8 @@ Public project-development website for a proposed rent-to-own housing pilot in R
 
 The homepage and Resources page introduce the model and link the whitepaper, partner pitch deck, pilot specification and brand kit. Project documents are development drafts; the site does not process payments or launch a token. Existing archive photographs and architectural concepts are labelled separately.
 
+Read [DESIGN.md](DESIGN.md) first for the current visual and interaction guidelines.
+
 ## Editing
 
 - `index.html`: Portuguese/English homepage.
