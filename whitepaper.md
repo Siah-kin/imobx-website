@@ -110,6 +110,8 @@ Longer residence may provide experience relevant to an elected role. It should n
 
 ## 8. What a token could represent
 
+The founders’ current research direction includes a possible yield-bearing token: specified rights to any future distributable surplus after housing obligations, operating costs and required reserves. Its rights, income sources and lawful structure remain to be designed; no current payout entitlement is established.
+
 The token decision follows the housing, cash and governance design. Options include a nontransferable participation credential or a legally structured financial interest. They serve different purposes and should not be promoted as interchangeable. A supporter credential does not imply equity, property title or rental income.
 
 If the desired product includes an economic claim, the issuer, rights, offer, eligibility, transfers and distribution method need to be specified with Brazilian advisers and a suitable provider. CVM guidance considers a cryptoasset's characteristics and rights when determining the relevant treatment; its label does not settle the question. [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html).
@@ -117,6 +119,8 @@ If the desired product includes an economic claim, the issuer, rights, offer, el
 The paper does not set token supply, tenant allocation, staking periods, dividends, fees or a public-sale date. It also does not claim SEC or MiCA approval. Foreign access would need its own assessment. If token participation adds no useful right or administrative benefit, the housing pilot can proceed with ordinary records and contracts.
 
 ## 9. What becomes digital
+
+The planned blockchain work focuses on traceable treasury receipts, authorized distributions and governance records within agreed decision boundaries. The complete token model remains in research and development, including rights, resident participation, distribution and transfer rules. These are proposed implementation areas, not a deployed IMOBX treasury or token system.
 
 The proposed digital service would help people find approved project information, read progress reports and obtain support. The Flock is the candidate Telegram access point for questions, resident-support handoffs, community education and approved updates. It remains a neutral service able to support other projects and compatible providers.
 

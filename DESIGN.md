@@ -4,7 +4,7 @@ Updated 15 October 2026. This is the current website design reference. The owner
 
 ## Purpose and sequence
 
-Help a resident, local partner or supporter understand the proposed housing pilot and choose how much detail to read. Start with the people and place. Continue to the housing arrangement, use of money, stages and project documents. Describe the current development status plainly.
+Help a resident, local partner or supporter understand a housing DAO in development, starting with its rent-to-own housing journey. Lead with the project, proposed homes, distinct cost scopes, and treasury/governance development. Documentary community context supports the proposal further down the homepage. Let readers choose detail and describe the actual development status plainly.
 
 Use two reading levels:
 
@@ -53,6 +53,14 @@ Link each displayed context photograph to the unchanged supplied original. State
 - Let readers control the pace. No scroll locking, forced slideshow, delayed content, autoplay, artificial loading or mandatory animation. Respect reduced-motion preferences.
 - Keep the PT/EN control visible. Update language, page title and image descriptions consistently. Open sections must stay open when language changes.
 - Aim for 44px interactive targets, visible focus and no horizontal page overflow at 390px. Check at 320px as a narrow-screen case.
+
+## Clickable model gallery
+
+Use a large, manually controlled carousel for the six loft views on the homepage and archive. Keep photographs separate from design slides. Provide previous/next buttons, numbered thumbnails, a current-slide counter, touch scrolling and keyboard navigation. Do not autoplay. Keep the drawings uncropped on white or pale backgrounds. Selecting a drawing opens a labelled on-page image viewer with Close, Escape dismissal, focus return and a link to its source. Without JavaScript, the horizontal gallery and original-image links remain usable. Translate controls, descriptions and captions; retain the selected slide when language changes. Respect reduced-motion preferences.
+
+The two replacement photographs show site access and construction beside a solar-panel roof. Preserve their supplied bytes. Their captions identify observable content; source dates, locations and association with the loft contract remain unconfirmed. The previous wall photograph stays in the asset archive but is no longer displayed.
+
+Keep problem, proposed solution, distinct cost bases and blockchain development status visible on the homepage. The two-loft construction figure is $27,777 combined; the historical village target is $27,777 per 45 m² home at a proposed scale of at least 36. The planned treasury/governance uses of blockchain do not define the complete token model, which remains in research and development.
 
 ## Content and maintenance
 
