@@ -63,7 +63,7 @@ def build_guide(root, page, tr, esc, language_controls):
                      'This publication does not present the final legal structure, pilot operation, onchain treasury or IMOBX token as deployed or verified.')) + '</div>'
     roadmap += '<nav class="guide-jump" aria-label="Sections">' + text(('Etapas', 'Stages'), 'a', 'href="#stages"')
     roadmap += text(('Governança', 'Governance'), 'a', 'href="#governance"')
-    roadmap += text(('Reais ↔ cripto', 'BRL ↔ crypto'), 'a', 'href="#settlement"')
+    roadmap += text(('Transparência', 'Transparency'), 'a', 'href="transparency.html"')
     roadmap += text(('Diferença da ICO', 'ICO comparison'), 'a', 'href="#ico-comparison"')
     roadmap += text(('Perguntas', 'Questions'), 'a', 'href="faq.html"') + '</nav>'
     roadmap += '<section id="stages">' + text(('Etapas e condições para avançar', 'Stages and conditions for advancing'), 'h2')
@@ -79,47 +79,107 @@ def build_guide(root, page, tr, esc, language_controls):
         roadmap += '</dl></article>'
     roadmap += '</section>'
 
+    # Keep old shared anchors usable while linking the single detailed reading page.
+    roadmap += '<section id="settlement"><span id="ramp-options"></span>' + text(
+        ('Dinheiro e transparência', 'Money and transparency'), 'h2')
+    roadmap += text(('O fluxo BRL/USDC, a comparação de prestadores e suas fontes agora têm uma página própria. '
+                     'Ela distingue a proposta, as restrições identificadas e os passos que faltam antes de operar.',
+                     'The BRL/USDC flow, provider comparison and sources now have their own page. '
+                     'It distinguishes the proposal, identified restrictions and the steps remaining before operation.'))
+    roadmap += text(('Ver fluxos, fontes e decisões ↗', 'View flows, sources and decisions ↗'),
+                    'a', 'class="button" href="transparency.html"') + '</section>'
+
     # These diagrams describe proposed money/contract paths, not a payment API.
     settlement = guide['settlement']
-    roadmap += '<section id="settlement">' + text(settlement['title'], 'h2')
-    roadmap += text(settlement['intro'])
-    roadmap += '<div class="settlement-history">' + text(settlement['historical_title'], 'h3')
-    roadmap += text(settlement['historical_route'], 'p', 'class="settlement-chain"')
-    roadmap += text(settlement['historical_note']) + '</div>'
+    settlement_html = ''
+    settlement_html += '<section id="settlement">' + text(settlement['title'], 'h2')
+    settlement_html += text(settlement['intro'])
+    settlement_html += '<div class="settlement-history">' + text(settlement['historical_title'], 'h3')
+    settlement_html += text(settlement['historical_route'], 'p', 'class="settlement-chain"')
+    settlement_html += text(settlement['historical_note']) + '</div>'
     for route in settlement['routes']:
-        roadmap += f'<article class="settlement-route" id="{esc(route["id"])}">' + text(route['title'], 'h3')
-        roadmap += text(route['intro']) + '<ol class="settlement-steps">'
+        settlement_html += f'<article class="settlement-route" id="{esc(route["id"])}">' + text(route['title'], 'h3')
+        settlement_html += text(route['intro']) + '<ol class="settlement-steps">'
         for step in route['steps']:
-            roadmap += '<li><div>' + text(step['title'], 'strong') + text(step['body']) + '</div></li>'
-        roadmap += '</ol>' + text(route['note'], 'p', 'class="fine"') + '</article>'
-    roadmap += text(settlement['relationships_title'], 'h3')
-    roadmap += '<div class="settlement-relationships">'
+            settlement_html += '<li><div>' + text(step['title'], 'strong') + text(step['body']) + '</div></li>'
+        settlement_html += '</ol>' + text(route['note'], 'p', 'class="fine"') + '</article>'
+    settlement_html += text(settlement['relationships_title'], 'h3')
+    settlement_html += '<div class="settlement-relationships">'
     for relationship in settlement['relationships']:
-        roadmap += '<article>' + text(relationship['title'], 'h3') + text(relationship['body']) + '</article>'
-    roadmap += '</div>' + text(settlement['registration']) + links(['cnpj', 'title'])
-    roadmap += '<div class="settlement-review">' + text(settlement['provider_title'], 'h3')
-    roadmap += text(settlement['provider_note']) + links(['mb']) + '</div>'
-    roadmap += text(settlement['network_note']) + links(['bcb'])
+        settlement_html += '<article>' + text(relationship['title'], 'h3') + text(relationship['body']) + '</article>'
+    settlement_html += '</div>' + text(settlement['registration']) + links(['cnpj', 'title'])
+    settlement_html += '<div class="settlement-review">' + text(settlement['provider_title'], 'h3')
+    settlement_html += text(settlement['provider_note']) + links(['mb']) + '</div>'
+    settlement_html += text(settlement['network_note']) + links(['bcb'])
     research = settlement['provider_research']
-    roadmap += '<section id="ramp-options">' + text(research['title'], 'h3')
-    roadmap += text(research['conclusion']) + text(research['lean_pilot'])
+    settlement_html += '<section id="ramp-options">' + text(research['title'], 'h3')
+    settlement_html += text(research['conclusion']) + text(research['lean_pilot'])
     for option in research['routes']:
-        roadmap += '<article class="settlement-option">' + text(option['title'], 'h3')
-        roadmap += text(option['flow'], 'p', 'class="settlement-chain"') + text(option['fit'])
-        roadmap += links(option['sources']) + '</article>'
-    roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in
+        settlement_html += '<article class="settlement-option">' + text(option['title'], 'h3')
+        settlement_html += text(option['flow'], 'p', 'class="settlement-chain"') + text(option['fit'])
+        settlement_html += links(option['sources']) + '</article>'
+    settlement_html += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in
         [('Opção', 'Option'), ('O que a documentação confirma', 'What documentation confirms'),
          ('Adequação à IMOBX', 'Fit for IMOBX')]) + '</tr></thead><tbody>'
     for provider in research['providers']:
-        roadmap += '<tr><th scope="row">' + esc(provider['name']) + '</th><td>' + text(provider['supported'])
-        roadmap += links(provider['sources']) + '</td><td>' + text(provider['fit']) + '</td></tr>'
-    roadmap += '</tbody></table></div>'
-    roadmap += text(research['cost']) + links(['blind-price']) + text(research['acceptance_title'], 'h3')
-    roadmap += '<ul>' + ''.join(text(p, 'li') for p in research['acceptance']) + '</ul>'
-    roadmap += text(research['status'], 'p', 'class="fine"') + '</section>'
-    roadmap += text(settlement['evidence_title'], 'h3')
-    roadmap += '<ul>' + ''.join(text(x, 'li') for x in settlement['evidence']) + '</ul>'
-    roadmap += text(settlement['limits']) + links(['cash', 'nonprofit']) + '</section>'
+        settlement_html += '<tr><th scope="row">' + esc(provider['name']) + '</th><td>' + text(provider['supported'])
+        settlement_html += links(provider['sources']) + '</td><td>' + text(provider['fit']) + '</td></tr>'
+    settlement_html += '</tbody></table></div>'
+    settlement_html += text(research['cost']) + links(['blind-price']) + text(research['acceptance_title'], 'h3')
+    settlement_html += '<ul>' + ''.join(text(p, 'li') for p in research['acceptance']) + '</ul>'
+    settlement_html += text(research['status'], 'p', 'class="fine"') + '</section>'
+    settlement_html += text(settlement['evidence_title'], 'h3')
+    settlement_html += '<ul>' + ''.join(text(x, 'li') for x in settlement['evidence']) + '</ul>'
+    settlement_html += text(settlement['limits']) + links(['cash', 'nonprofit']) + '</section>'
+
+    public = guide['transparency']
+    transparency = '<main class="paper guide-paper transparency-page" id="main">' + language_controls
+    transparency += text(public['title'], 'h1') + text(public['lead'], 'p', 'class="guide-lead"')
+    transparency += text(public['intro'])
+    transparency += '<section id="status">' + text(public['status_title'], 'h2')
+    transparency += '<div class="transparency-status">'
+    for item in public['statuses']:
+        transparency += '<article>' + text(item['title'], 'h3') + text(item['body']) + '</article>'
+    transparency += '</div></section><nav class="guide-jump" aria-label="Sections">'
+    for label, target in [(('Fluxos', 'Flows'), 'settlement'),
+                          (('Prestadores', 'Providers'), 'ramp-options'),
+                          (('Próximos passos', 'Next steps'), 'next-steps'),
+                          (('Relatórios', 'Reports'), 'reporting'),
+                          (('Fontes', 'Sources'), 'sources'),
+                          (('Atualizações', 'Updates'), 'updates')]:
+        transparency += text(label, 'a', f'href="#{target}"')
+    transparency += '</nav>' + settlement_html
+    transparency += '<section id="next-steps">' + text(public['followup_title'], 'h2')
+    transparency += text(public['followup_intro']) + '<dl class="transparency-followups">'
+    for item in public['followups']:
+        transparency += text(item['title'], 'dt') + text(item['body'], 'dd')
+    transparency += '</dl></section>'
+    transparency += '<section id="reporting">' + text(public['reporting_title'], 'h2')
+    transparency += text(public['reporting_intro']) + '<ul>'
+    transparency += ''.join(text(item, 'li') for item in public['reporting']) + '</ul></section>'
+    transparency += '<section id="sources">' + text(public['evidence_title'], 'h2')
+    for item in public['evidence']:
+        transparency += '<article>' + text(item['title'], 'h3') + text(item['body']) + '</article>'
+    transparency += text(public['sources_title'], 'h3') + text(public['sources_intro'])
+    for group in public['source_groups']:
+        transparency += '<details class="transparency-source-group"><summary>' + text(group['title'])
+        transparency += '</summary><ul>'
+        for key in group['keys']:
+            source = guide['sources'][key]
+            transparency += f'<li><a href="{esc(source["url"])}">{esc(source["label"])}</a></li>'
+        transparency += '</ul></details>'
+    transparency += '</section><section id="updates">' + text(public['changes_title'], 'h2')
+    transparency += '<ol class="transparency-updates">'
+    for change in public['changes']:
+        transparency += '<li><time datetime="' + esc(change['date']) + '">' + esc(change['date']) + '</time>'
+        transparency += text(change['title'], 'h3') + text(change['body']) + '</li>'
+    transparency += '</ol>' + text(public['maintenance']) + '</section><div class="guide-jump">'
+    transparency += text(('Baixar a fonte desta página (JSON)', 'Download this page’s content source (JSON)'),
+                         'a', 'href="model-guide.json" download')
+    transparency += text(('Roteiro do projeto', 'Project roadmap'), 'a', 'href="roadmap.html"')
+    transparency += text(('Todos os documentos', 'All documents'), 'a', 'href="resources.html"') + '</div></main>'
+    (root / 'transparency.html').write_text(page('IMOBX | Money and transparency', transparency,
+        '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Dinheiro e transparência'))
 
     roadmap += '<section id="governance">' + text(('Quem decide o quê?', 'Who decides what?'), 'h2')
     roadmap += text(('Exemplo para consulta, não um estatuto já adotado. O objetivo é separar a voz de quem usa a moradia, '
@@ -239,6 +299,7 @@ def build_guide(root, page, tr, esc, language_controls):
                       'Housing, money, participation and technology — with open choices identified.'), 'p', 'class="guide-lead"')
     faq_body += '<nav class="guide-jump" aria-label="Sections">' + text(('Roteiro', 'Roadmap'), 'a', 'href="roadmap.html"')
     faq_body += text(('Quem decide o quê?', 'Who decides what?'), 'a', 'href="roadmap.html#governance"')
+    faq_body += text(('Dinheiro e transparência', 'Money and transparency'), 'a', 'href="transparency.html"')
     faq_body += text(('Comparar plataformas', 'Compare platforms'), 'a', 'href="#faq-exchanges"') + '</nav>' + faq() + '</main>'
     (root / 'faq.html').write_text(page('IMOBX | Model questions', faq_body,
         '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Perguntas sobre o modelo'))

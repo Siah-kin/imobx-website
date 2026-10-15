@@ -43,7 +43,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None):
 <title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}</head>
 <body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review">{label('Projeto em desenvolvimento', 'Project in development')} · v{esc(version)} · 15 October 2026</div>
 <nav class="wrap paper-nav" aria-label="Documents"><a class="wordmark" href="index.html"><img class="brand-logo" src="assets/imobx-logo-light.png" width="94" height="94" alt="IMOBX"></a>
-<span><a href="resources.html">{label('Recursos', 'Resources')}</a> · <a href="roadmap.html">{label('Roteiro', 'Roadmap')}</a> · <a href="faq.html">FAQ</a> · <a href="whitepaper.html">Whitepaper</a> · <a href="pitchdeck.html">Pitch deck</a> · <a href="index.html">Website</a></span></nav>
+<span><a href="resources.html">{label('Recursos', 'Resources')}</a> · <a href="roadmap.html">{label('Roteiro', 'Roadmap')}</a> · <a href="transparency.html">{label('Transparência', 'Transparency')}</a> · <a href="faq.html">FAQ</a> · <a href="whitepaper.html">Whitepaper</a> · <a href="pitchdeck.html">Pitch deck</a> · <a href="index.html">Website</a></span></nav>
 {body}</body></html>'''
 
 
@@ -70,6 +70,12 @@ RESOURCE_CATALOG = [
      'description_en': 'Calculations, requirements, responsibilities and proposed first-90-day targets.',
      'meta_pt': '8 páginas · inglês · rascunho', 'meta_en': '8 pages · English · draft',
      'links': [('devsheet.html','Ler','Read'), ('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
+    {'id': 'transparency', 'pt': 'Dinheiro e transparência', 'en': 'Money and transparency', 'version': '0.1',
+     'description_pt': 'Fluxos BRL/USDC, prestadores pesquisados, fontes, decisões e próximos passos.',
+     'description_en': 'BRL/USDC flows, researched providers, sources, decisions and next steps.',
+     'meta_pt': 'Português e inglês · proposta e pesquisa documentadas',
+     'meta_en': 'Portuguese and English · documented proposal and research',
+     'links': [('transparency.html','Ver a página','View page')]},
 ]
 
 
@@ -93,6 +99,7 @@ def resource_section(standalone=False):
             '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">' + \
             translated('Todos os documentos e downloads','All documents and downloads','a','href="resources.html"') + \
             translated('Roteiro e governança','Roadmap and governance','a','href="roadmap.html"') + \
+            translated('Dinheiro e transparência','Money and transparency','a','href="transparency.html"') + \
             translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
             translated('Ficha do piloto e metas','Pilot specification and targets','a','id="resource-devsheet" href="devsheet.html"') + '</div>'
     cards = []
@@ -109,13 +116,13 @@ def resource_section(standalone=False):
     return '''<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>''' + \
         translated('05 / Recursos do projeto','05 / Project resources','span','class="eyebrow"') + \
         translated('Documentos e identidade IMOBX.','IMOBX documents and brand assets.','h1' if standalone else 'h2') + \
-        translated('Leia no navegador ou baixe os arquivos. Os documentos do projeto são rascunhos em inglês para revisão; o kit inclui descrições em português e inglês.',
-                    'Read in your browser or download the files. The project documents are English review drafts; the kit includes Portuguese and English descriptions.','p') + \
+        translated('Leia no navegador ou baixe os arquivos. Roteiro, FAQ e transparência estão em português e inglês; whitepaper, apresentação e ficha do piloto são rascunhos em inglês.',
+                    'Read in your browser or download the files. The roadmap, FAQ and transparency page are bilingual; the whitepaper, deck and pilot specification are English drafts.','p') + \
         '<div class="resource-grid">' + ''.join(cards) + '</div>' + \
         '<div class="resource-more">' + \
         translated('Ver roteiro e governança','View roadmap and governance','a','href="roadmap.html"') + \
         translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
-        translated('Fonte editável do roteiro e FAQ (JSON)','Editable roadmap and FAQ source (JSON)','a','href="model-guide.json" download') + \
+        translated('Fonte editável: roteiro, FAQ e transparência (JSON)','Editable source: roadmap, FAQ and transparency (JSON)','a','href="model-guide.json" download') + \
         translated('Ver fontes e premissas','View sources and assumptions','a','href="whitepaper.html#12-risks-decisions-and-evidence-register"') + \
         translated('Baixar documentos e logos (ZIP)','Download documents and logos (ZIP)','a','href="imobx-documents.zip" download') + \
         '</div>'
@@ -351,7 +358,7 @@ logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'asse
 archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
         'IMOBX media kit v0.2 / 15 October 2026\nOriginal logo artwork, colour definitions and a review-draft usage guide.\nRead media-kit.md. Public claims must follow the accepted project status.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
-        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'faq.html', 'model-guide.json',
+        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'faq.html', 'transparency.html', 'model-guide.json',
         'assets/style.css', 'assets/brand.css', 'assets/site.js', 'media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
-        'IMOBX document collection / 15 October 2026\nWhitepaper, partner deck, developer/pilot specification, roadmap, model FAQ and media kit.\nThese are founder/partner review drafts. No token offer or legal approval is established.\nPDF files are for reading; the PowerPoint and text files are editable. Read the roadmap and FAQ on the website; model-guide.json is their bilingual content source.\n')
+        'IMOBX document collection / 15 October 2026\nWhitepaper, partner deck, developer/pilot specification, roadmap, model FAQ, money/transparency page and media kit.\nThese are founder/partner review drafts. No token offer or legal approval is established.\nPDF files are for reading; the PowerPoint and text files are editable. Read the roadmap, FAQ and transparency page on the website; model-guide.json is their bilingual content source.\n')
 print('Built document exports, on-page resources, the resources page, media kit and download archives.')

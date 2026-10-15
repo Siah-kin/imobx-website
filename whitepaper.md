@@ -130,7 +130,7 @@ The Flock is the proposed neutral Telegram desk for approved updates, questions,
 
 SIAH/HiveDAO support for evidence, delegated work and inter-community coordination is proposed, separate backend work. Preserve challenges, provider replacement and outage continuity. Contribution records and rewards require authorized services and funded work; posting, recruiting buyers or holding a token does not automatically earn money.
 
-The current [BRL/USDC flow](roadmap.html#settlement) keeps rent and local reserves in reais, converts authorized amounts to native USDC and reverses the route for construction payments. Direct Arc delivery is preferred when eligible; native USDC via a supported network and CCTP is an alternative. The [provider comparison](roadmap.html#ramp-options) records nonprofit/activity restrictions and unresolved acceptance. No provider is confirmed. Preserve fees, obligations and restricted uses; residents need no crypto wallet.
+The current [BRL/USDC flow](transparency.html#settlement) keeps rent and local reserves in reais, converts authorized amounts to native USDC and reverses the route for construction payments. Direct Arc delivery is preferred when eligible; native USDC via a supported network and CCTP is an alternative. The [provider comparison](transparency.html#ramp-options) records nonprofit/activity restrictions and unresolved acceptance. No provider is confirmed. Preserve fees, obligations and restricted uses; residents need no crypto wallet.
 
 ## 10. Pilot roadmap and evidence
 

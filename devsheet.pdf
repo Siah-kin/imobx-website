@@ -130,14 +130,14 @@ endobj
 17 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (roadmap.html#settlement)
+/S /URI /Type /Action /URI (transparency.html#settlement)
 >> /Border [ 0 0 0 ] /Rect [ 120.2156 526.6 187.7871 538 ] /Subtype /Link /Type /Annot
 >>
 endobj
 18 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (roadmap.html#ramp-options)
+/S /URI /Type /Action /URI (transparency.html#ramp-options)
 >> /Border [ 0 0 0 ] /Rect [ 133.946 500.6 220.012 512 ] /Subtype /Link /Type /Annot
 >>
 endobj
@@ -494,7 +494,7 @@ endobj
 endobj
 34 0 obj
 <<
-/Author (IMOBX draft) /CreationDate (D:20261015212233+02'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261015212233+02'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (IMOBX draft) /CreationDate (D:20261015213530+02'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261015213530+02'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (IMOBX developer and pilot specification v0.3) /Trapped /False
 >>
 endobj
@@ -579,36 +579,36 @@ xref
 0000068317 00000 n 
 0000068534 00000 n 
 0000068756 00000 n 
-0000068924 00000 n 
-0000069092 00000 n 
-0000069314 00000 n 
-0000069471 00000 n 
-0000069639 00000 n 
-0000069786 00000 n 
-0000070015 00000 n 
-0000070211 00000 n 
-0000070970 00000 n 
-0000101498 00000 n 
-0000101744 00000 n 
-0000102888 00000 n 
-0000103652 00000 n 
-0000131346 00000 n 
-0000131604 00000 n 
-0000132787 00000 n 
-0000132857 00000 n 
-0000133167 00000 n 
-0000133276 00000 n 
-0000135784 00000 n 
-0000138540 00000 n 
-0000140758 00000 n 
-0000142982 00000 n 
-0000145575 00000 n 
-0000148283 00000 n 
-0000150680 00000 n 
+0000068929 00000 n 
+0000069102 00000 n 
+0000069324 00000 n 
+0000069481 00000 n 
+0000069649 00000 n 
+0000069796 00000 n 
+0000070025 00000 n 
+0000070221 00000 n 
+0000070980 00000 n 
+0000101508 00000 n 
+0000101754 00000 n 
+0000102898 00000 n 
+0000103662 00000 n 
+0000131356 00000 n 
+0000131614 00000 n 
+0000132797 00000 n 
+0000132867 00000 n 
+0000133177 00000 n 
+0000133286 00000 n 
+0000135794 00000 n 
+0000138550 00000 n 
+0000140768 00000 n 
+0000142992 00000 n 
+0000145585 00000 n 
+0000148293 00000 n 
+0000150690 00000 n 
 trailer
 <<
 /ID 
-[<1c95b87e778fcb5168776682efba20f8><1c95b87e778fcb5168776682efba20f8>]
+[<d2d2ee4a8d1c60ca844ef22ae69e0231><d2d2ee4a8d1c60ca844ef22ae69e0231>]
 % ReportLab generated PDF document -- digest (opensource)
 
 /Info 34 0 R
@@ -616,5 +616,5 @@ trailer
 /Size 44
 >>
 startxref
-153253
+153263
 %%EOF

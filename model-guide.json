@@ -656,7 +656,7 @@
     },
     "settlement": {
       "label": "IMOBX · BRL ↔ crypto flow",
-      "url": "roadmap.html#settlement"
+      "url": "transparency.html#settlement"
     },
     "arc-onramp": {
       "label": "Arc Onramp · Terms and eligibility",
@@ -704,7 +704,7 @@
     },
     "ramp-options": {
       "label": "IMOBX · Ramp options and eligibility",
-      "url": "roadmap.html#ramp-options"
+      "url": "transparency.html#ramp-options"
     }
   },
   "settlement": {
@@ -1130,5 +1130,263 @@
         "Documentary research, not commercial approval or a transfer test. No account, payment integration or wallet was created. CCTP applies only after checking both providers, assets, networks and permissions."
       ]
     }
+  },
+  "transparency": {
+    "title": [
+      "Dinheiro e transparência",
+      "Money and transparency"
+    ],
+    "lead": [
+      "Entenda o caminho do dinheiro, as fontes consultadas e o que ainda precisa ser resolvido.",
+      "Follow the money route, the sources consulted and what still needs to be resolved."
+    ],
+    "intro": [
+      "Esta página reúne a proposta de entrada e saída de USDC, a pesquisa de prestadores e o registro de decisões. A pesquisa documental foi consultada em 15 outubro 2026; não é uma cotação em tempo real nem prova de operação financeira.",
+      "This page brings together the proposed USDC on/off-ramps, provider research and decision record. Documentary research was checked on 15 October 2026; it is neither a live quote nor evidence of financial operation."
+    ],
+    "status_title": [
+      "O que está definido e o que falta",
+      "What is decided and what remains"
+    ],
+    "statuses": [
+      {
+        "title": [
+          "Proposta atual: USDC na Arc",
+          "Current proposal: USDC on Arc"
+        ],
+        "body": [
+          "O aluguel e as reservas locais permanecem em reais. Somente valores autorizados seriam convertidos para USDC.",
+          "Rent and local reserves stay in reais. Only authorized amounts would be converted to USDC."
+        ]
+      },
+      {
+        "title": [
+          "Prestador: ainda não confirmado",
+          "Provider: not yet confirmed"
+        ],
+        "body": [
+          "A documentação mostra opções técnicas. Ainda falta aceite para a entidade e a atividade reais da IMOBX, com custo completo e rota de volta.",
+          "Documentation shows technical options. Acceptance for IMOBX’s actual entity and activity, full costs and a return route are still needed."
+        ]
+      },
+      {
+        "title": [
+          "Operação: integração não demonstrada",
+          "Operation: integration not demonstrated"
+        ],
+        "body": [
+          "Esta publicação não comprova uma tesouraria financeira conectada. Saldos e extratos de operação ainda não estão publicados aqui; isso não significa saldo zero.",
+          "This publication does not establish a connected financial treasury. Operating balances and statements are not yet published here; that does not mean a zero balance."
+        ]
+      }
+    ],
+    "followup_title": [
+      "Próximas verificações",
+      "Next checks"
+    ],
+    "followup_intro": [
+      "São responsabilidades propostas para os fundadores aceitarem, não tarefas profissionais já contratadas. Nenhum prestador foi contatado por esta pesquisa.",
+      "These are proposed responsibilities for the founders to accept, not already contracted professional tasks. No provider was contacted through this research."
+    ],
+    "followups": [
+      {
+        "title": [
+          "Rafael e assessoria brasileira",
+          "Rafael and Brazilian advisers"
+        ],
+        "body": [
+          "Definir a entidade, seus documentos, a atividade de aluguel com opção de compra e os responsáveis pela conta bancária e administração.",
+          "Define the entity, its documents, rent-to-own activity and the people responsible for banking and administration."
+        ]
+      },
+      {
+        "title": [
+          "John e o prestador candidato",
+          "John and the candidate provider"
+        ],
+        "body": [
+          "Obter confirmação de elegibilidade e proposta de custos; verificar USDC nativo, redes, carteira, limites, suporte e rotas de entrada e saída.",
+          "Obtain eligibility confirmation and a cost proposal; verify native USDC, networks, wallet, limits, support and both payment directions."
+        ]
+      },
+      {
+        "title": [
+          "Fundadores e contador",
+          "Founders and accountant"
+        ],
+        "body": [
+          "Acordar reservas, valores autorizados para conversão e conciliação entre aluguel, banco, USDC e destino final, preservando recursos restritos.",
+          "Agree reserves, authorized conversion amounts and reconciliation between rent, bank, USDC and final use, preserving restricted funds."
+        ]
+      }
+    ],
+    "reporting_title": [
+      "O que publicar quando houver operação",
+      "What to publish once operations exist"
+    ],
+    "reporting_intro": [
+      "A proposta é publicar informações financeiras agregadas e aprovadas, com responsáveis e período de referência. Os campos abaixo ainda não são um relatório operacional.",
+      "The proposal is to publish approved aggregate financial information with responsible people and a reporting period. The fields below are not yet an operating report."
+    ],
+    "reporting": [
+      [
+        "Período do relatório e quem preparou e conferiu as contas.",
+        "Reporting period and who prepared and checked the accounts."
+      ],
+      [
+        "Saldo inicial e final; recebimentos por origem; despesas por finalidade; valores restritos e reservas.",
+        "Opening and closing balances; receipts by source; spending by purpose; restricted amounts and reserves."
+      ],
+      [
+        "Conversões BRL/USDC: valor enviado, cotação, taxas, valor recebido, referência bancária e transação quando puder ser publicada com segurança.",
+        "BRL/USDC conversions: amount sent, exchange rate, fees, amount received, bank reference and transaction where safe to publish."
+      ],
+      [
+        "Decisão que autorizou cada uso, etapa de obra conferida e diferenças ou falhas ainda sem conciliação.",
+        "The decision authorizing each use, checked construction milestone and any unreconciled differences or failures."
+      ],
+      [
+        "Dados pessoais, documentos de identidade e contratos privados dos moradores ficam fora da página pública e da blockchain.",
+        "Personal information, identity documents and private resident agreements stay off the public page and blockchain."
+      ]
+    ],
+    "evidence_title": [
+      "Como ler as fontes",
+      "How to read the evidence"
+    ],
+    "evidence": [
+      {
+        "title": [
+          "Informações dos fundadores",
+          "Founder information"
+        ],
+        "body": [
+          "A lógica de cobrança e repasse vem das conversas de julho, e o uso atual de USDC foi escolhido pelo fundador em outubro. Esses materiais orientam a proposta; mensagens privadas não são publicadas.",
+          "The collection/remittance logic comes from July’s discussions, and the current USDC choice was made by the founder in October. These materials inform the proposal; private messages are not published."
+        ]
+      },
+      {
+        "title": [
+          "Documentos dos próprios prestadores",
+          "Providers’ own documents"
+        ],
+        "body": [
+          "As fontes abaixo informam funcionalidades, condições de uso e restrições. São descrições dos prestadores, não uma auditoria independente nem aceite específico para IMOBX.",
+          "The sources below describe capabilities, terms and restrictions. They are provider descriptions, not an independent audit or specific IMOBX acceptance."
+        ]
+      },
+      {
+        "title": [
+          "Propostas de operação",
+          "Operating proposals"
+        ],
+        "body": [
+          "Conversão em lotes, reservas em reais e eventual conexão CCTP são escolhas propostas a validar com custos, contratos e testes. Não são resultados já medidos.",
+          "Batch conversion, BRL reserves and a possible CCTP connection are proposed choices to validate through costs, agreements and tests. They are not measured results."
+        ]
+      }
+    ],
+    "sources_title": [
+      "Fontes e data da pesquisa",
+      "Sources and research date"
+    ],
+    "sources_intro": [
+      "Fontes consultadas em 15 outubro 2026. A disponibilidade comercial e as condições podem mudar; revisar as páginas antes de contratar e registrar qualquer alteração nesta página.",
+      "Sources checked on 15 October 2026. Commercial availability and terms can change; review the pages before contracting and record changes here."
+    ],
+    "source_groups": [
+      {
+        "title": [
+          "Cadastro e propriedade",
+          "Registration and property"
+        ],
+        "keys": [
+          "cnpj",
+          "title"
+        ]
+      },
+      {
+        "title": [
+          "Arc, USDC e transferência entre redes",
+          "Arc, USDC and cross-chain transfer"
+        ],
+        "keys": [
+          "arc-onramp",
+          "circle-mint",
+          "circle-brasil",
+          "cctp"
+        ]
+      },
+      {
+        "title": [
+          "Prestadores e critérios de acesso",
+          "Providers and access criteria"
+        ],
+        "keys": [
+          "avenia",
+          "bridge-brl",
+          "bridge-routes",
+          "bridge-terms",
+          "blind-arc",
+          "blind-policy",
+          "blind-price",
+          "mb"
+        ]
+      },
+      {
+        "title": [
+          "Restrições e uso do dinheiro",
+          "Restrictions and use of funds"
+        ],
+        "keys": [
+          "bcb",
+          "nonprofit",
+          "cash"
+        ]
+      }
+    ],
+    "changes_title": [
+      "Registro de atualizações",
+      "Update record"
+    ],
+    "changes": [
+      {
+        "date": "2026-10-15",
+        "title": [
+          "USDC passa a ser o ativo da proposta",
+          "USDC becomes the proposed settlement asset"
+        ],
+        "body": [
+          "Atualizado o fluxo de cobrança, conversão e saída para reais; as conversas anteriores continuam como histórico de origem.",
+          "Updated collection, conversion and BRL cash-out flows; earlier discussions remain source history."
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": [
+          "Elegibilidade verificada além da capacidade técnica",
+          "Eligibility checked alongside technical capability"
+        ],
+        "body": [
+          "Registradas as restrições de Arc Onramp, BlindPay e Mercado Bitcoin. Avenia, Bridge e acesso institucional continuam sem aceite específico para IMOBX.",
+          "Recorded Arc Onramp, BlindPay and Mercado Bitcoin restrictions. Avenia, Bridge and institutional access remain without specific IMOBX acceptance."
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": [
+          "Página própria de transparência",
+          "Dedicated transparency page"
+        ],
+        "body": [
+          "Reunidos fluxos, comparação, decisões, fontes e próximos passos em uma página ligada ao roteiro, FAQ e documentos. Nenhuma conta financeira foi aberta por esta publicação.",
+          "Brought flows, comparison, decisions, sources and next steps into one page linked to the roadmap, FAQ and documents. No financial account was opened through this publication."
+        ]
+      }
+    ],
+    "maintenance": [
+      "Revisão manual: não há monitoramento automático de preços, regras dos prestadores ou saldos. Quando houver aceite, testes e operação, substituir o estado pendente por evidências datadas e relatórios aprovados.",
+      "Manual review: prices, provider rules and balances are not monitored automatically. As acceptance, tests and operations occur, replace pending status with dated evidence and approved reports."
+    ]
   }
 }
