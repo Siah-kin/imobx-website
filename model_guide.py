@@ -100,6 +100,23 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '<div class="settlement-review">' + text(settlement['provider_title'], 'h3')
     roadmap += text(settlement['provider_note']) + links(['mb']) + '</div>'
     roadmap += text(settlement['network_note']) + links(['bcb'])
+    research = settlement['provider_research']
+    roadmap += '<section id="ramp-options">' + text(research['title'], 'h3')
+    roadmap += text(research['conclusion']) + text(research['lean_pilot'])
+    for option in research['routes']:
+        roadmap += '<article class="settlement-option">' + text(option['title'], 'h3')
+        roadmap += text(option['flow'], 'p', 'class="settlement-chain"') + text(option['fit'])
+        roadmap += links(option['sources']) + '</article>'
+    roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in
+        [('Opção', 'Option'), ('O que a documentação confirma', 'What documentation confirms'),
+         ('Adequação à IMOBX', 'Fit for IMOBX')]) + '</tr></thead><tbody>'
+    for provider in research['providers']:
+        roadmap += '<tr><th scope="row">' + esc(provider['name']) + '</th><td>' + text(provider['supported'])
+        roadmap += links(provider['sources']) + '</td><td>' + text(provider['fit']) + '</td></tr>'
+    roadmap += '</tbody></table></div>'
+    roadmap += text(research['cost']) + links(['blind-price']) + text(research['acceptance_title'], 'h3')
+    roadmap += '<ul>' + ''.join(text(p, 'li') for p in research['acceptance']) + '</ul>'
+    roadmap += text(research['status'], 'p', 'class="fine"') + '</section>'
     roadmap += text(settlement['evidence_title'], 'h3')
     roadmap += '<ul>' + ''.join(text(x, 'li') for x in settlement['evidence']) + '</ul>'
     roadmap += text(settlement['limits']) + links(['cash', 'nonprofit']) + '</section>'

@@ -538,27 +538,30 @@
       "id": "on-off-ramp",
       "home": false,
       "q": [
-        "Como o aluguel vira cripto e como o dinheiro volta para a obra?",
-        "How does rent become crypto, and how does money return to construction?"
+        "Como o aluguel vira USDC e como volta para a obra?",
+        "How does rent become USDC, and how does it return to construction?"
       ],
       "a": [
         [
-          "A proposta de julho era morador → administradora → conta IMOBX em reais → Mercado Bitcoin → ETH → carteira e contrato de distribuição. O diagrama mostra essa referência e o desenho atual em estudo: preservar os valores necessários no Brasil e converter somente o montante autorizado, com registros que liguem origem e destino.",
-          "July’s proposal was resident → property manager → IMOBX BRL account → Mercado Bitcoin → ETH → wallet and distribution contract. The diagram shows that reference and the current design under study: retain cash needed in Brazil and convert only the authorized amount, with records linking source and destination."
+          "A proposta atual é morador → administradora, se contratada → conta da entidade em reais → prestador elegível → USDC na Arc. Só converter o valor autorizado, preservando obrigações e reservas em reais. O fluxo de julho foi atualizado para USDC em 15 outubro 2026.",
+          "The current proposal is resident → property manager, if contracted → entity BRL account → eligible provider → USDC on Arc. Convert only the authorized amount, preserving BRL obligations and reserves. July’s flow was updated to USDC on 15 October 2026."
         ],
         [
-          "No sentido inverso, a tesouraria envia um ativo pela rede aceita por um prestador aprovado; ele converte para reais; a entidade recebe no banco e paga a obra autorizada. Acesso ao prestador depende da entidade e da rede. A FAQ do Mercado Bitcoin informa restrições para associações e cooperativas, e não verificamos suporte direto a saques de USDC para Arc.",
-          "In reverse, the treasury sends an asset over a network accepted by an approved provider; it converts to BRL; the entity receives bank funds and pays the authorized construction work. Provider access depends on the entity and network. Mercado Bitcoin’s FAQ states restrictions for associations and cooperatives, and we have not verified direct USDC withdrawals to Arc."
+          "Há duas alternativas técnicas: entrega direta de USDC na Arc, ou USDC nativo em uma rede aceita, como Base, seguido de CCTP até Arc. A saída precisa funcionar no sentido inverso até o banco e o pagamento da obra. Avenia e Bridge documentam Pix/USDC; elegibilidade e custos para IMOBX continuam a confirmar.",
+          "There are two technical alternatives: direct Arc USDC delivery, or native USDC on an accepted network such as Base followed by CCTP to Arc. Cash-out must work in reverse through bank receipt and construction payment. Avenia and Bridge document Pix/USDC; IMOBX eligibility and costs remain to be confirmed."
         ],
         [
-          "CNPJ é registro fiscal, não aprovação automática de conta ou prova de propriedade. Um recebimento em ETH ainda é cripto; o off-ramp em moeda comum termina no recebimento bancário. A rota completa ainda será testada; o site não executa pagamentos.",
-          "CNPJ is tax registration, not automatic account approval or proof of ownership. An ETH receipt remains crypto; a fiat off-ramp ends with bank receipt. The full route remains to be tested; the website executes no payments."
+          "Arc Onramp exclui entidades sem fins lucrativos e não oferece saída para moeda comum nos termos atuais. BlindPay tem Pix/Arc, mas sua lista de atividades proibidas exclui ONGs e construção. CNPJ não garante cadastro. A pesquisa ainda não confirmou um prestador para a entidade; o site não executa pagamentos.",
+          "Arc Onramp excludes nonprofits and offers no fiat cash-out under current terms. BlindPay has Pix/Arc, but its prohibited-activities list excludes NGOs and construction. CNPJ does not guarantee onboarding. Research has not yet confirmed a provider for the entity; the website executes no payments."
         ]
       ],
       "sources": [
         "settlement",
-        "cnpj",
-        "mb"
+        "ramp-options",
+        "avenia",
+        "bridge-brl",
+        "arc-onramp",
+        "blind-policy"
       ]
     }
   ],
@@ -654,28 +657,76 @@
     "settlement": {
       "label": "IMOBX · BRL ↔ crypto flow",
       "url": "roadmap.html#settlement"
+    },
+    "arc-onramp": {
+      "label": "Arc Onramp · Terms and eligibility",
+      "url": "https://www.arc.io/legal/onramp"
+    },
+    "blind-arc": {
+      "label": "BlindPay · Arc support",
+      "url": "https://blindpay.com/changelog/2026-09-18-yield-ach-pull-tempo-arc-prompts"
+    },
+    "blind-policy": {
+      "label": "BlindPay · Prohibited activities",
+      "url": "https://blindpay.com/docs/kb/prohibited-activities"
+    },
+    "blind-price": {
+      "label": "BlindPay · Pricing",
+      "url": "https://blindpay.com/pricing"
+    },
+    "avenia": {
+      "label": "Avenia · Pix/USDC and supported networks",
+      "url": "https://integration-guide.avenia.io/docs/Operations/combinations/"
+    },
+    "bridge-brl": {
+      "label": "Bridge · BRL/Pix guide",
+      "url": "https://apidocs.bridge.xyz/get-started/guides/move-money/brl_pix_integration_guide"
+    },
+    "bridge-routes": {
+      "label": "Bridge · Supported routes",
+      "url": "https://apidocs.bridge.xyz/get-started/introduction/what-we-support/payment-routes"
+    },
+    "bridge-terms": {
+      "label": "Bridge · Terms outside US/EEA",
+      "url": "https://www.bridge.xyz/legal/row-user-terms/bridge-building-limited"
+    },
+    "circle-mint": {
+      "label": "Circle Mint · Supported chains",
+      "url": "https://developers.circle.com/circle-mint/references/supported-chains-and-currencies"
+    },
+    "circle-brasil": {
+      "label": "Circle · Brazil and BTG",
+      "url": "https://www.circle.com/pressroom/circle-launches-in-brazil-to-catalyze-digital-dollar-access"
+    },
+    "cctp": {
+      "label": "Circle · CCTP supported networks",
+      "url": "https://developers.circle.com/cctp/concepts/supported-chains-and-domains"
+    },
+    "ramp-options": {
+      "label": "IMOBX · Ramp options and eligibility",
+      "url": "roadmap.html#ramp-options"
     }
   },
   "settlement": {
     "title": [
-      "Como o dinheiro entra e sai da blockchain",
-      "How money moves onto and off the blockchain"
+      "Reais ↔ USDC: como o dinheiro entra e sai",
+      "BRL ↔ USDC: how money moves in and out"
     ],
     "intro": [
-      "O desenho separa aluguel em reais, conversão autorizada e pagamentos. É uma proposta de operação a testar, não um serviço financeiro já conectado. Moradores podem pagar e receber suporte sem carteira de cripto.",
-      "The diagram separates rent in reais, authorized conversion and payments. It is a proposed operating route to test, not an already connected financial service. Residents can pay and obtain support without a crypto wallet."
+      "A proposta atual usa USDC na Arc. Moradores continuam pagando em reais; o caixa brasileiro cobre obrigações locais. Só o valor autorizado segue para conversão. A rota é uma escolha de tesouraria a validar, não um serviço já conectado.",
+      "The current proposal uses USDC on Arc. Residents continue paying in reais; Brazilian cash covers local obligations. Only the authorized amount moves to conversion. The route is a treasury choice to validate, not an already connected service."
     ],
     "historical_title": [
-      "A rota discutida em 25–28 julho 2026",
-      "The route discussed on 25–28 July 2026"
+      "A rota atual, atualizada para USDC",
+      "The current route, updated to USDC"
     ],
     "historical_route": [
-      "Morador (BRL) → imobiliária/administradora (menos comissão) → conta IMOBX (BRL) → Mercado Bitcoin (compra de ETH) → carteira → contrato de distribuição → retirada por participante elegível (ETH).",
-      "Resident (BRL) → property manager (less commission) → IMOBX account (BRL) → Mercado Bitcoin (ETH purchase) → wallet → distribution contract → eligible participant claim (ETH)."
+      "Morador (BRL) → administradora, se contratada (menos comissão) → conta da entidade IMOBX (BRL) → prestador elegível (BRL → USDC) → tesouraria na Arc → uso aprovado; eventual distribuição exige direito e caixa disponíveis.",
+      "Resident (BRL) → property manager, if contracted (less commission) → IMOBX entity account (BRL) → eligible provider (BRL → USDC) → Arc treasury → approved use; any distribution requires entitlement and available cash."
     ],
     "historical_note": [
-      "Rafael também descreveu a relação IMOBX–construtora como cliente e prestador de obra. O desenho de julho usava ETH; a alternativa atual em estudo usa USDC e Arc. Um pagamento em ETH para uma carteira ainda é cripto: só se torna saída para moeda comum quando houver conversão e recebimento bancário.",
-      "Rafael also described IMOBX and the construction business as client and building contractor. The July design used ETH; the current alternative under study uses USDC and Arc. An ETH payment to a wallet remains crypto: it becomes a fiat off-ramp only upon conversion and bank receipt."
+      "Fluxo atualizado em 15 outubro 2026, mantendo a lógica operacional discutida em julho: cobrança, conta da entidade, conversão e destino rastreável. USDC é o ativo proposto de liquidação. Receber USDC em uma carteira ainda é cripto; a saída para reais termina no recebimento bancário.",
+      "Updated on 15 October 2026, preserving July’s operating logic: collection, entity account, conversion and a traceable destination. USDC is the proposed settlement asset. Receiving USDC in a wallet remains crypto; cash-out to reais ends with bank receipt."
     ],
     "routes": [
       {
@@ -685,8 +736,8 @@
           "1 / From BRL rent to the digital treasury"
         ],
         "intro": [
-          "Converter apenas o valor autorizado, preservando o dinheiro necessário no Brasil.",
-          "Convert only the authorized amount, retaining cash needed in Brazil."
+          "Cobrar em reais, manter reservas em reais e converter em lotes autorizados pode simplificar o piloto, sem exigir carteira de cada morador.",
+          "Collecting in reais, retaining BRL reserves and converting in authorized batches may simplify the pilot without requiring each resident to use a wallet."
         ],
         "steps": [
           {
@@ -725,8 +776,8 @@
               "Accepted provider converts"
             ],
             "body": [
-              "A entidade usa conta aprovada para sua forma jurídica. Registrar reais enviados, cotação, taxas e cripto recebido. Julho propunha ETH; a opção atual de USDC depende da rota escolhida.",
-              "The entity uses an account accepted for its legal form. Record BRL sent, exchange rate, fees and crypto received. July proposed ETH; the current USDC option depends on the selected route."
+              "Usar uma conta aprovada para a entidade e atividade reais. Converter BRL para USDC, registrando valor, cotação, taxas e destinatário. Não é necessário comprar outro criptoativo antes.",
+              "Use an account accepted for the actual entity and activity. Convert BRL to USDC, recording amount, exchange rate, fees and recipient. No preliminary purchase of another cryptoasset is needed."
             ]
           },
           {
@@ -735,8 +786,8 @@
               "Treasury receives on the correct network"
             ],
             "body": [
-              "Conferir ativo, rede, endereço, controle da carteira e confirmação. O envio para Arc exige suporte direto ou uma rota adicional verificada, com custos e riscos registrados.",
-              "Check asset, network, address, wallet control and confirmation. Delivery to Arc requires direct support or a separately verified route, with recorded costs and risks."
+              "Preferir USDC nativo enviado diretamente à Arc quando o prestador e a entidade forem elegíveis. Se a saída for em outra rede, avaliar uma transferência CCTP de USDC nativo para Arc; confirmar também a rota de volta.",
+              "Prefer native USDC delivered directly to Arc when the provider and entity are eligible. If delivery is on another network, assess a CCTP transfer of native USDC to Arc; confirm the reverse route too."
             ]
           },
           {
@@ -772,8 +823,8 @@
               "Identified receipt or funding"
             ],
             "body": [
-              "Tesouraria recebe USDC ou outro ativo aceito, com origem e finalidade registradas. Valor do token e liquidez bloqueada não são caixa de obra.",
-              "Treasury receives USDC or another accepted asset, with recorded origin and purpose. Token value and locked liquidity are not construction cash."
+              "Tesouraria recebe USDC com origem e finalidade registradas. Valor do token e liquidez bloqueada não são caixa de obra.",
+              "Treasury receives USDC with recorded source and purpose. Token value and locked liquidity are not construction cash."
             ]
           },
           {
@@ -792,8 +843,8 @@
               "Provider receives and sells the asset"
             ],
             "body": [
-              "Enviar pela rede aceita pelo prestador, converter para reais e registrar custos. Não enviar USDC na Arc para um endereço que só aceite outra rede.",
-              "Send over the provider’s accepted network, convert to BRL and record costs. Do not send Arc USDC to an address supporting only another network."
+              "Converter USDC para BRL por um prestador que aceite a entidade, a atividade e a rede. Se ele não receber na Arc, uma rota CCTP adicional precisa ser verificada antes do envio. Registrar todos os custos.",
+              "Convert USDC to BRL through a provider accepting the entity, activity and network. If it does not receive on Arc, an additional CCTP route needs verification before sending. Record every cost."
             ]
           },
           {
@@ -864,16 +915,16 @@
       "Receita Federal confirms the CNPJ requirement for foreign entities holding Brazilian property. CNPJ is tax registration; bank or exchange identity checks are a separate process. Transfer of property between living parties depends on registration of title under Civil Code article 1,245. The choice of foreign entity or Brazilian structure remains to be settled; paying taxes does not exhaust operating obligations."
     ],
     "provider_title": [
-      "O que verificar sobre Mercado Bitcoin",
-      "What to check about Mercado Bitcoin"
+      "Mercado Bitcoin deixa de ser a rota presumida",
+      "Mercado Bitcoin is no longer the presumed route"
     ],
     "provider_note": [
-      "Mercado Bitcoin é o prestador citado no desenho de julho, não uma integração confirmada. Sua FAQ publicada, consultada em 15 outubro 2026, informa restrições ao cadastro de associações e cooperativas. Isso afeta a forma sem fins lucrativos em estudo. Selecionar um prestador que aceite a entidade real e confirme a rota, sem usar conta pessoal como substituto.",
-      "Mercado Bitcoin is the provider named in July’s design, not a confirmed integration. Its published FAQ, checked on 15 October 2026, states restrictions on onboarding associations and cooperatives. This affects the nonprofit form under study. Select a provider accepting the actual entity and confirming the route, without substituting a personal account."
+      "Mercado Bitcoin foi citado na discussão de julho, mas não é uma integração confirmada. Sua FAQ informa restrições a associações e cooperativas. A proposta atual é escolher um prestador de BRL/USDC adequado à entidade, em vez de depender dessa corretora específica.",
+      "Mercado Bitcoin was named in July’s discussion, but is not a confirmed integration. Its FAQ states restrictions for associations and cooperatives. The current proposal is to select a BRL/USDC provider suited to the entity rather than depend on that particular exchange."
     ],
     "network_note": [
-      "Não foi verificado suporte direto de saque de USDC do Mercado Bitcoin para Arc. Confirme ativo e rede nos dois sentidos. O prestador também deve confirmar os procedimentos aplicáveis de câmbio, operações internacionais e identificação da carteira sob as regras brasileiras de ativos virtuais.",
-      "Direct Mercado Bitcoin USDC withdrawal support to Arc has not been verified. Confirm asset and network in both directions. The provider must also confirm applicable FX, international-transfer and wallet-identification procedures under Brazilian virtual-asset rules."
+      "USDC simplifica a denominação da tesouraria, mas mantém exposição ao dólar perante custos em reais. Confirme rede e ativo em ambos os sentidos, tributação, câmbio e identificação da carteira com o prestador responsável. CCTP conecta redes; não realiza conversão bancária nem aprova o cliente.",
+      "USDC simplifies treasury denomination but retains dollar exposure against BRL costs. Confirm network and asset in both directions, tax, FX and wallet identification with the responsible provider. CCTP connects networks; it neither performs bank conversion nor approves the customer."
     ],
     "evidence_title": [
       "O teste de uma operação completa",
@@ -900,6 +951,184 @@
     "limits": [
       "Uma conversão torna o dinheiro digital; ela não cria lucro distribuível, direito a dividendo ou isenção regulatória. Recursos restritos, obrigações dos moradores e limites da forma sem fins lucrativos acompanham o dinheiro.",
       "Conversion makes funds digital; it creates neither distributable profit, dividend rights nor a regulatory exemption. Restrictions, resident obligations and nonprofit distribution limits follow the money."
-    ]
+    ],
+    "provider_research": {
+      "title": [
+        "Opções pesquisadas para o piloto · 15 outubro 2026",
+        "Pilot options researched · 15 October 2026"
+      ],
+      "conclusion": [
+        "A documentação confirma que BRL/Pix e USDC na Arc podem ser conectados. Ainda não foi identificado um prestador com aceite confirmado para a forma sem fins lucrativos e a atividade completa da IMOBX. A decisão deve combinar elegibilidade, simplicidade operacional e custo total.",
+        "Documentation confirms that BRL/Pix and Arc USDC can be connected. No provider has yet confirmed acceptance of IMOBX’s nonprofit form and full activity. The choice needs to combine eligibility, operational simplicity and total cost."
+      ],
+      "lean_pilot": [
+        "Para começar, a hipótese mais simples é manter a cobrança de aluguel e os gastos locais no banco brasileiro; converter apenas valores autorizados da própria entidade. Isso reduz a necessidade de colocar cada morador no processo de cripto. Doações e pagamentos de terceiros exigem análise separada do prestador.",
+        "For a start, the simplest hypothesis is to keep rent collection and local expenses in the Brazilian bank and convert only authorized funds of the entity itself. This reduces the need to put each resident through a crypto process. Donations and third-party payments require separate provider review."
+      ],
+      "routes": [
+        {
+          "title": [
+            "A / Direto para Arc, se houver aceite",
+            "A / Direct to Arc, if accepted"
+          ],
+          "flow": [
+            "Banco IMOBX (BRL/Pix) ↔ prestador elegível ↔ USDC nativo na Arc",
+            "IMOBX bank (BRL/Pix) ↔ eligible provider ↔ native USDC on Arc"
+          ],
+          "fit": [
+            "É o percurso com menos etapas visíveis. BlindPay documenta a parte técnica, mas sua lista de atividades proibidas exclui ONGs/entidades sem fins lucrativos e construção; por isso não é uma recomendação para a estrutura atual. Não há aceite de outro prestador direto confirmado.",
+            "This has the fewest visible steps. BlindPay documents the technical capability, but its prohibited-activities list excludes NGOs/nonprofits and construction, so it is not a recommendation for the current structure. No other direct provider acceptance is confirmed."
+          ],
+          "sources": [
+            "blind-arc",
+            "blind-policy"
+          ]
+        },
+        {
+          "title": [
+            "B / BRL–USDC local e uma conexão entre redes",
+            "B / Local BRL–USDC and one cross-chain connection"
+          ],
+          "flow": [
+            "Banco IMOBX (BRL/Pix) ↔ prestador elegível ↔ USDC nativo em rede aceita ↔ CCTP ↔ Arc",
+            "IMOBX bank (BRL/Pix) ↔ eligible provider ↔ native USDC on an accepted network ↔ CCTP ↔ Arc"
+          ],
+          "fit": [
+            "Avenia e Bridge documentam Pix/USDC e redes como Base. Arc não consta nas respectivas tabelas consultadas. CCTP documenta Base e Arc: essa combinação é uma hipótese a verificar, não uma integração concluída. Ambas precisam avaliar a entidade, aluguel com opção de compra, doações e qualquer futura atividade financeira.",
+            "Avenia and Bridge document Pix/USDC and networks such as Base. Arc is absent from their consulted tables. CCTP documents Base and Arc: combining them is a hypothesis to verify, not a completed integration. Both must assess the entity, rent-to-own activity, donations and any future financial activity."
+          ],
+          "sources": [
+            "avenia",
+            "bridge-brl",
+            "bridge-routes",
+            "cctp"
+          ]
+        },
+        {
+          "title": [
+            "C / Rota institucional Circle ou parceiro brasileiro",
+            "C / Institutional Circle or Brazilian partner route"
+          ],
+          "flow": [
+            "Conta institucional aprovada ↔ conversão bancária BRL/USD, se necessária ↔ Circle Mint ou parceiro ↔ USDC na Arc",
+            "Accepted institutional account ↔ bank BRL/USD conversion, if needed ↔ Circle Mint or partner ↔ USDC on Arc"
+          ],
+          "fit": [
+            "Circle Mint lista suporte nativo à Arc. A parceria brasileira anunciada pela Circle com BTG documenta acesso local a USDC, mas não confirma uma conta Pix–Arc para a IMOBX. Cadastro, moeda bancária de liquidação, porte mínimo e preços precisam de proposta específica; não confundir essa rota com Arc Onramp.",
+            "Circle Mint lists native Arc support. Circle’s announced Brazilian BTG partnership documents local access to USDC but does not confirm an IMOBX Pix–Arc account. Onboarding, bank settlement currency, minimum scale and prices need a specific proposal; do not confuse this route with Arc Onramp."
+          ],
+          "sources": [
+            "circle-mint",
+            "circle-brasil"
+          ]
+        }
+      ],
+      "providers": [
+        {
+          "name": "Avenia",
+          "supported": [
+            "Pix ↔ USDC; Base e outras redes documentadas.",
+            "Pix ↔ USDC; Base and other networks documented."
+          ],
+          "fit": [
+            "Prioridade de consulta local: aceite de entidade sem fins lucrativos, atividade, preço e confirmação de USDC nativo em ambos os sentidos continuam pendentes. Sem suporte direto à Arc identificado.",
+            "Local inquiry priority: nonprofit/entity acceptance, activity, pricing and native USDC confirmation in both directions remain pending. No direct Arc support identified."
+          ],
+          "sources": [
+            "avenia"
+          ]
+        },
+        {
+          "name": "Bridge",
+          "supported": [
+            "Pix de entrada/saída e USDC em redes como Base.",
+            "Pix payins/payouts and USDC on networks such as Base."
+          ],
+          "fit": [
+            "Alternativa para avaliar. Os termos aplicáveis fora dos EUA/EEE listam serviços de investimento/crédito entre atividades proibidas; a atividade exata precisa de análise. Sem aceite de ONG ou rota Arc direta confirmados.",
+            "Alternative to assess. Its terms for outside the US/EEA list investment/credit services among prohibited activities; the exact activity needs review. Neither NGO acceptance nor a direct Arc route is confirmed."
+          ],
+          "sources": [
+            "bridge-brl",
+            "bridge-routes",
+            "bridge-terms"
+          ]
+        },
+        {
+          "name": "Circle Mint / BTG",
+          "supported": [
+            "Circle Mint suporta USDC nativo na Arc; Circle anunciou distribuição de USDC com BTG no Brasil.",
+            "Circle Mint supports native Arc USDC; Circle announced USDC distribution with BTG in Brazil."
+          ],
+          "fit": [
+            "Conversa institucional, sem aceite para IMOBX confirmado. A integração entre a conta em reais e o serviço precisa ser definida; anúncio de parceria não comprova a rota completa.",
+            "Institutional discussion, without confirmed IMOBX acceptance. The link from the BRL account to the service needs definition; a partnership announcement does not establish the complete route."
+          ],
+          "sources": [
+            "circle-mint",
+            "circle-brasil"
+          ]
+        },
+        {
+          "name": "Arc Onramp",
+          "supported": [
+            "Compra de USDC via prestadores; os termos atuais não incluem saída para moeda comum.",
+            "USDC purchases through providers; current terms do not include fiat cash-out."
+          ],
+          "fit": [
+            "Não atende a atual hipótese sem fins lucrativos: a elegibilidade exclui charities/not-for-profit. A interface pronta não resolve as duas pontas do projeto.",
+            "Does not fit the current nonprofit hypothesis: eligibility excludes charities/not-for-profits. The ready-made interface does not solve both ends of this project."
+          ],
+          "sources": [
+            "arc-onramp"
+          ]
+        },
+        {
+          "name": "BlindPay",
+          "supported": [
+            "Pix e Arc USDC documentados para entradas e saídas.",
+            "Pix and Arc USDC documented for payins and payouts."
+          ],
+          "fit": [
+            "Excluído para a estrutura proposta pela lista publicada: ONGs/sem fins lucrativos e construção constam como atividades proibidas. Suporte técnico não equivale a elegibilidade.",
+            "Excluded for the proposed structure by its published list: NGOs/nonprofits and construction are prohibited activities. Technical support is not eligibility."
+          ],
+          "sources": [
+            "blind-arc",
+            "blind-policy"
+          ]
+        }
+      ],
+      "cost": [
+        "Não há vencedor de custo confirmado. Comparar cotações para R$1.000 e R$10.000 nos dois sentidos, com cotação do dólar no mesmo momento, taxas, diferença cambial, custo de rede/CCTP, cadastro, mensalidade, mínimos e suporte. Avenia e Bridge precisam de proposta; o preço público da plataforma BlindPay começa em US$399/mês com cobrança anual, além de a estrutura proposta ser inelegível. Não usar promoções como custo permanente.",
+        "No lowest-cost winner is confirmed. Compare R$1,000 and R$10,000 quotes in both directions using the same-time FX reference, fees, spread, network/CCTP cost, onboarding, subscription, minimums and support. Avenia and Bridge need proposals; BlindPay’s public platform pricing starts at $399/month billed annually, besides the proposed structure being ineligible. Do not use promotions as permanent pricing."
+      ],
+      "acceptance_title": [
+        "O que decide a escolha",
+        "What determines the choice"
+      ],
+      "acceptance": [
+        [
+          "Aceite escrito para a entidade e jurisdição reais: associação/ONG, cooperativa, empresa brasileira ou entidade estrangeira com CNPJ, conforme a estrutura escolhida.",
+          "Written acceptance of the actual entity and jurisdiction: association/NGO, cooperative, Brazilian company or foreign entity with CNPJ, according to the chosen structure."
+        ],
+        [
+          "Descrever aluguel com opção de compra, construção terceirizada, doações e eventual instrumento financeiro; confirmar quais atividades e terceiros são permitidos. Não ocultar a atividade para obter cadastro.",
+          "Describe rent-to-own, outsourced construction, donations and any financial instrument; confirm permitted activities and counterparties. Do not conceal activity to obtain onboarding."
+        ],
+        [
+          "Confirmar banco, titularidade, rede, USDC nativo, carteira da entidade, limites, suporte, tratamento de falhas e a saída para reais antes de escolher a entrada.",
+          "Confirm bank, account ownership, network, native USDC, entity wallet, limits, support, failure handling and BRL cash-out before selecting the cash-in route."
+        ],
+        [
+          "Medir operação completa em simulação antes de integrar. No piloto pequeno, preferir acesso operado pelo prestador se isso evitar uma integração própria e mensalidade elevada.",
+          "Measure the complete operation in simulation before integration. For a small pilot, prefer provider-operated access if it avoids a custom integration and high subscription."
+        ]
+      ],
+      "status": [
+        "Pesquisa documental, não aprovação comercial ou teste de transferência. Nenhuma conta, integração de pagamentos ou carteira foi criada. O uso de CCTP só se aplica depois de validar os dois prestadores, ativos, redes e permissões.",
+        "Documentary research, not commercial approval or a transfer test. No account, payment integration or wallet was created. CCTP applies only after checking both providers, assets, networks and permissions."
+      ]
+    }
   }
 }

@@ -165,7 +165,7 @@ Review the instrument's substance and actual offer under Brazilian guidance. A n
 | Accounting/settlement | Reconcile payer, purpose, BRL receipt, conversion, USDC transaction and final use; preserve restrictions. |
 | Community-service backend | Supply any authorized contribution/reward results for display; no member scoring design in this front-end repository. |
 
-Use a provider handoff for permitted financial transactions. The [on/off-ramp diagrams](roadmap.html#settlement) distinguish July’s broker/bank/Mercado Bitcoin/ETH route from a proposed USDC/Arc route. Check entity eligibility: MB’s published FAQ excludes associations/cooperatives; direct Arc withdrawal support is unverified. CNPJ does not establish title or account approval. Reconcile gross rent, commission, bank, conversion, fees, wallet and final use in both directions. Keep identity/private agreements offchain and show pending, confirmed, failed and unresolved outcomes accurately.
+The current [BRL/USDC flow](roadmap.html#settlement) uses native USDC on Arc, directly or through a verified CCTP route. Keep local reserves in BRL and reconcile gross rent, commission, conversion, fees, wallet and final use in both directions. The [provider comparison](roadmap.html#ramp-options) distinguishes technical support from entity/activity acceptance: none is confirmed for IMOBX. CNPJ is not account approval. Keep private agreements offchain and show pending, confirmed, failed and unresolved states.
 
 ### Distribution accounting and the legacy Euler approach
 

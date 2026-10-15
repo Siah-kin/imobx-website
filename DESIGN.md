@@ -106,4 +106,9 @@ Explain Rafael’s $27,777 village budget through his explicit CUB/SINAPI refere
 
 ## On/off-ramp explanation
 
-The existing roadmap includes a bilingual settlement section with ordered, readable flow diagrams, July’s ETH route and the proposed USDC route distinguished. Show rent collection and spending back in BRL, preserve costs/reserves/restrictions before allocation, and distinguish CNPJ, title and provider approval. Mercado Bitcoin is a historical candidate, not an integrated or confirmed eligible provider. Keep contractor/client relations separate from banking and any token rights. Flow diagrams describe requirements, not an executable payment service.
+The existing roadmap includes a bilingual settlement section with ordered, readable flow diagrams, the current USDC route clearly distinguished from the original July discussion. Show rent collection and spending back in BRL, preserve costs/reserves/restrictions before allocation, and distinguish CNPJ, title and provider approval. Mercado Bitcoin is a historical candidate, not an integrated or confirmed eligible provider. Keep contractor/client relations separate from banking and any token rights. Flow diagrams describe requirements, not an executable payment service.
+
+
+## USDC settlement and provider research
+
+USDC is the proposed current settlement asset. Use provider-neutral flow diagrams and keep the July source history separate from the updated proposal. The existing roadmap includes a dated comparison of direct Arc delivery, a native-USDC/CCTP route and institutional access. State technical support separately from acceptance of IMOBX’s actual entity and activity. Provider exclusions, unknown prices and unconfirmed onboarding remain visible. A payment kit is not a bank account, and cross-chain transfer is not a fiat off-ramp. Keep local BRL reserves and preserve the distinction between approved website documentation and financial execution.
