@@ -51,7 +51,10 @@ body{background:var(--paper)}
 .media-logo.dark{background:#060708;color:#fff}
 .media-logo figcaption{font-size:13px;padding-top:15px}
 .links>.resources-link{display:inline-block!important}
-.mission-photo{display:block;width:100%;height:420px;object-fit:cover;object-position:50% 15%}
+.mission-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.context-photo{margin:0 0 32px}
+.context-photo img{display:block;width:100%;height:auto}
+.context-photo figcaption{font-size:12px;line-height:1.6;color:var(--muted);padding:12px 0;max-width:850px}
 .mission-intro{max-width:800px;margin-bottom:30px}
 .mission-intro p{color:var(--muted);font-size:18px}
 .image-story{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:start}
@@ -62,7 +65,7 @@ body{background:var(--paper)}
 .drawing img{max-width:100%}
 .mission-portrait{border-top:1px solid var(--line)}
 .paper-nav>span{overflow-wrap:anywhere}
-@media(max-width:600px){.image-story{grid-template-columns:1fr}.image-story img{height:auto}.mission-photo{height:310px}}
+@media(max-width:600px){.image-story{grid-template-columns:1fr}.image-story img{height:auto}}
 @media(max-width:900px){.resource-grid{grid-template-columns:1fr}.resource-card:last-child{grid-column:auto}}
 @media(max-width:600px){.resource-card{padding:20px}.media-logo-grid{grid-template-columns:1fr}.paper-nav>span{max-width:72%}.links{gap:12px}}
 @media(max-width:900px){.hero,.section-head,.money,.two{grid-template-columns:1fr;gap:28px}.steps,.timeline{grid-template-columns:1fr}.hero{padding-top:40px}.hero .drawing{max-width:650px}.nav{min-height:95px}.brand-logo{width:78px;height:78px}}
