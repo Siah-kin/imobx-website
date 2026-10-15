@@ -50,7 +50,7 @@ State the date, location, quantities and treatment of overhead/profit in the cho
 
 ### Separate two-loft development account
 
-On 20 January 2026 Rafael reported a two-loft contract awaiting its first deposit and described a steeply sloping site. His $27,777 reference needs confirmation of cost unit and scope; it is a separate case from the 36-home proposal. The [supplied drawings and site photograph](properties.html#estudo-lofts) give the pilot a concrete reporting example. Update the contract scope, funding, work stages and actual costs before treating it as delivered housing or a rent-to-own asset.
+On 20 January 2026 Rafael reported a two-loft contract awaiting its first deposit and described a steeply sloping site. The owner clarified that $27,777 covers both lofts together ($13,888.50 each by simple division). Included scope and final actual cost still need documentation; this is separate from the 36-home proposal. The [supplied drawings and site photograph](properties.html#estudo-lofts) give the pilot a concrete reporting example. Update the contract scope, funding, work stages and actual costs before treating it as delivered housing or a rent-to-own asset.
 
 ### Before including a property
 
