@@ -141,14 +141,23 @@ def build_guide(root, page, tr, esc, language_controls):
     for item in public['statuses']:
         transparency += '<article>' + text(item['title'], 'h3') + text(item['body']) + '</article>'
     transparency += '</div></section><nav class="guide-jump" aria-label="Sections">'
-    for label, target in [(('Fluxos', 'Flows'), 'settlement'),
+    for label, target in [(('Economia comunitária', 'Community economy'), 'community-economy'),
+                          (('Fluxos', 'Flows'), 'settlement'),
                           (('Prestadores', 'Providers'), 'ramp-options'),
                           (('Próximos passos', 'Next steps'), 'next-steps'),
                           (('Relatórios', 'Reports'), 'reporting'),
                           (('Fontes', 'Sources'), 'sources'),
                           (('Atualizações', 'Updates'), 'updates')]:
         transparency += text(label, 'a', f'href="#{target}"')
-    transparency += '</nav>' + settlement_html
+    transparency += '</nav>'
+    economy = guide['community_economy']
+    transparency += '<section id="community-economy">' + text(economy['title'], 'h2')
+    transparency += text(economy['intro']) + text(economy['status'], 'p', 'class="guide-status"')
+    for topic in economy['topics']:
+        transparency += f'<details class="community-topic" id="{esc(topic["id"])}">' + text(topic['title'], 'summary')
+        transparency += ''.join(text(pair) for pair in topic['body']) + links(topic['sources']) + '</details>'
+    transparency += text(economy['branding'], 'p', 'class="fine"') + links(['arc-brand']) + '</section>'
+    transparency += settlement_html
     transparency += '<section id="next-steps">' + text(public['followup_title'], 'h2')
     transparency += text(public['followup_intro']) + '<dl class="transparency-followups">'
     for item in public['followups']:

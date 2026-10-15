@@ -563,6 +563,28 @@
         "arc-onramp",
         "blind-policy"
       ]
+    },
+    {
+      "id": "thanks-zeal-lets",
+      "home": false,
+      "q": [
+        "Thanks e Zeal são a mesma coisa que USDC ou LETS?",
+        "Are Thanks and Zeal the same as USDC or LETS?"
+      ],
+      "a": [
+        [
+          "Não. Thanks é a moeda transferível proposta para a comunidade. Zeal é uma medida de contribuição reconhecida, não uma moeda. USDC é o dinheiro usado para liquidar pagamentos. As regras de Thanks ainda precisam definir emissão, circulação e eventual resgate; não prometemos paridade com USDC.",
+          "No. Thanks is the proposed transferable community currency. Zeal is a measure of recognized contribution, not a currency. USDC is the money used to settle payments. Thanks rules still need to define issuance, circulation and possible redemption; we promise no USDC parity."
+        ],
+        [
+          "LETS usa crédito mútuo entre membros. Um fundo em USDC só pode distribuir os recursos disponíveis e autorizados. A comparação ajuda a separar trocas comunitárias, reconhecimento e financiamento; não demonstra que um modelo substitui ou supera o outro.",
+          "LETS uses mutual credit between members. A USDC pool can distribute only available, authorized funds. The comparison helps distinguish community exchange, recognition and funding; it does not show that one model replaces or outperforms the other."
+        ]
+      ],
+      "sources": [
+        "lets",
+        "community-economy"
+      ]
     }
   ],
   "sources": {
@@ -705,6 +727,22 @@
     "ramp-options": {
       "label": "IMOBX · Ramp options and eligibility",
       "url": "transparency.html#ramp-options"
+    },
+    "lets": {
+      "label": "LETSlink UK · Mutual credit",
+      "url": "https://www.localexchange.org.uk/members/info/about.php"
+    },
+    "arc-brand": {
+      "label": "Arc · Brand guidelines",
+      "url": "https://www.arc.io/brand-guidelines-and-partner-toolkit"
+    },
+    "arc-studio": {
+      "label": "Arc Studio · Build and review",
+      "url": "https://studio.arc.io/"
+    },
+    "community-economy": {
+      "label": "IMOBX · Proposed community economy",
+      "url": "transparency.html#community-economy"
     }
   },
   "settlement": {
@@ -1382,11 +1420,130 @@
           "Reunidos fluxos, comparação, decisões, fontes e próximos passos em uma página ligada ao roteiro, FAQ e documentos. Nenhuma conta financeira foi aberta por esta publicação.",
           "Brought flows, comparison, decisions, sources and next steps into one page linked to the roadmap, FAQ and documents. No financial account was opened through this publication."
         ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": [
+          "Economia comunitária e funções das ferramentas",
+          "Community economy and tool roles"
+        ],
+        "body": [
+          "Separação entre voz dos moradores, direitos do eventual token, Thanks, Zeal e caixa USDC. Arc é a liquidação planejada; o teste financeiro ainda não foi demonstrado.",
+          "Separated resident voice, possible token rights, Thanks, Zeal and the USDC treasury. Arc is the planned settlement network; the financial test has not yet been demonstrated."
+        ]
       }
     ],
     "maintenance": [
       "Revisão manual: não há monitoramento automático de preços, regras dos prestadores ou saldos. Quando houver aceite, testes e operação, substituir o estado pendente por evidências datadas e relatórios aprovados.",
       "Manual review: prices, provider rules and balances are not monitored automatically. As acceptance, tests and operations occur, replace pending status with dated evidence and approved reports."
+    ]
+  },
+  "community_economy": {
+    "title": [
+      "Quem decide, quem contribui e quem paga?",
+      "Who decides, who contributes and who pays?"
+    ],
+    "intro": [
+      "Proposta para consulta. Separar essas funções permite desenvolver uma economia comunitária sem transformar dinheiro, trabalho e moradia no mesmo direito.",
+      "Consultation proposal. Separating these roles lets us develop a community economy without treating money, work and housing as the same entitlement."
+    ],
+    "status": [
+      "Liquidação planejada na Arc Network. A integração financeira, o token e as regras completas de Thanks ainda estão em desenvolvimento.",
+      "Planned settlement on Arc Network. The financial integration, token and complete Thanks rules are still in development."
+    ],
+    "topics": [
+      {
+        "id": "community-rights",
+        "title": [
+          "Moradores, titulares de tokens e responsáveis pelo trabalho",
+          "Residents, token holders and people responsible for the work"
+        ],
+        "body": [
+          [
+            "Moradores devem participar das regras de espaços comuns, manutenção e representação. Voz igual por membro é uma opção em consulta. Ocupação e compra seguem o contrato e a lei; não dependem de atividade online ou saldo de tokens.",
+            "Residents should participate in rules for shared spaces, maintenance and representation. Equal voice per member is an option for consultation. Occupancy and purchase follow agreements and law; they do not depend on online activity or token balances."
+          ],
+          [
+            "Um eventual token dá somente os direitos definidos no instrumento. Não concede poder irrestrito sobre casas, moradores ou doações. Quem executa tarefas recebe um mandato com limites, prazo e prestação de contas. Um registro de contribuição pode ajudar uma escolha humana, sem virar peso automático de voto.",
+            "A possible token grants only the rights defined in its instrument. It grants no unrestricted power over homes, residents or donations. People carrying out tasks receive a mandate with limits, a term and reporting. A contribution record can inform a human choice without becoming an automatic voting weight."
+          ]
+        ],
+        "sources": [
+          "charter",
+          "ostrom"
+        ]
+      },
+      {
+        "id": "community-tools",
+        "title": [
+          "Arc, Arctide, The Flock e SIAH: funções diferentes",
+          "Arc, Arctide, The Flock and SIAH: different roles"
+        ],
+        "body": [
+          [
+            "Arc é a rede proposta para liquidar pagamentos em USDC. Arctide é uma aplicação de lançamento e negociação: pode fornecer taxas destinadas ao projeto quando a configuração e os direitos de recebimento permitirem. Taxas de liquidez ou da plataforma não pertencem automaticamente à IMOBX. Outras fontes de recursos e outras plataformas precisam de suas próprias regras.",
+            "Arc is the proposed network for settling USDC payments. Arctide is a launch and exchange application: it can supply project-directed fees when configuration and recipient rights permit. Liquidity-provider and platform fees do not automatically belong to IMOBX. Other funding sources and platforms need their own rules."
+          ],
+          [
+            "The Flock é a interface Telegram para encaminhar pedidos e mostrar regras, decisões e resultados aprovados. O papel proposto de SIAH/HiveDAO é apoiar evidências e coordenação em desenvolvimento separado. Nenhum desses componentes, por si só, autoriza gastos, garante receita ou resolve conflitos de interesse.",
+            "The Flock is the Telegram interface for sending requests and showing approved rules, decisions and results. The proposed SIAH/HiveDAO role supports evidence and coordination through separate development. None of these components alone authorizes spending, guarantees income or resolves conflicts of interest."
+          ]
+        ],
+        "sources": [
+          "arc",
+          "arctide",
+          "digital"
+        ]
+      },
+      {
+        "id": "thanks-zeal-lets",
+        "title": [
+          "Thanks, Zeal e a comparação com LETS",
+          "Thanks, Zeal and the comparison with LETS"
+        ],
+        "body": [
+          [
+            "LETS é uma forma de crédito mútuo: membros registram trocas e os saldos do conjunto se compensam. Não é simplesmente uma moeda local garantida por dinheiro em banco. Nossa proposta de caixa em USDC é diferente: uma distribuição em USDC precisa de recursos recebidos e disponíveis.",
+            "LETS is a form of mutual credit: members record exchanges and their collective balances offset one another. It is not simply a local currency backed by cash in a bank. Our proposed USDC treasury is different: a USDC distribution needs received, available funds."
+          ],
+          [
+            "Thanks é a moeda transferível proposta para a comunidade. Zeal é uma medida de contribuição reconhecida, não um saldo ou moeda. USDC é o dinheiro de liquidação. Usar USDC não torna Thanks automaticamente resgatável, garantido ou equivalente a um dólar. Emissão, circulação e eventual resgate precisam de regras aceitas e verificadas.",
+            "Thanks is the proposed transferable community currency. Zeal is a measure of recognized contribution, not a balance or currency. USDC is the settlement money. Using USDC does not automatically make Thanks redeemable, backed or equivalent to one dollar. Issuance, circulation and possible redemption need accepted, verified rules."
+          ],
+          [
+            "Queremos testar registros confirmados por outras pessoas, consentimento, correção e recurso, além de orçamentos financiados e acesso assistido para quem não usa carteira. Trabalho reconhecido não deve desaparecer porque alguém descansa ou sai. Esses são objetivos a demonstrar, não prova de superioridade sobre LETS.",
+            "We want to test records confirmed by other people, consent, correction and appeals, alongside funded budgets and assisted access for people without wallets. Recognized work should not disappear when someone rests or leaves. These are aims to demonstrate, not proof of superiority over LETS."
+          ]
+        ],
+        "sources": [
+          "lets",
+          "charter"
+        ]
+      },
+      {
+        "id": "treasury-demonstration",
+        "title": [
+          "Primeiro teste: uma distribuição pequena e verificável",
+          "First test: a small, verifiable allocation"
+        ],
+        "body": [
+          [
+            "O teste proposto começa com um depósito de USDC identificado como verba de demonstração. Uma pessoa autorizada aprova valor e destinatário; o aplicativo mostra a aprovação, o pagamento confirmado e o saldo disponível, com links para as transações. Não é apresentado como aluguel recebido ou taxa de Arctide sem essa origem comprovada.",
+            "The proposed test starts with a USDC deposit identified as demonstration funding. An authorized person approves the amount and recipient; the app shows the approval, confirmed payment and available balance, with transaction links. It is not presented as collected rent or an Arctide fee without evidence of that source."
+          ],
+          [
+            "Esse teste verifica o caminho do dinheiro, não o modelo completo de governança ou recompensas. Ainda não há contrato, aplicativo financeiro ou transação de demonstração verificados por esta publicação.",
+            "This test verifies the money path, not the complete governance or reward model. This publication has not yet verified a contract, financial app or demonstration transaction."
+          ]
+        ],
+        "sources": [
+          "arc-studio"
+        ]
+      }
+    ],
+    "branding": [
+      "A identificação pública acompanha o estágio real. “Built on Arc” pode descrever uma integração construída; “Live on Arc” exige uma aplicação efetivamente no ar. O logo oficial deve seguir o guia da Arc e explicar a infraestrutura, sem sugerir patrocínio ou aprovação da IMOBX.",
+      "Public attribution follows the actual stage. “Built on Arc” can describe a built integration; “Live on Arc” requires an actually live app. The official logo must follow Arc’s guide and explain the infrastructure without suggesting sponsorship or endorsement of IMOBX."
     ]
   }
 }

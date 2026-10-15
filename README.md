@@ -11,7 +11,7 @@ Read [DESIGN.md](DESIGN.md) first for the current visual and interaction guideli
 - `index.html`: Portuguese/English homepage.
 - `assets/style.css`, `assets/brand.css`, `assets/site.js`: shared white layout and language controls.
 - `whitepaper.md`, `devsheet.md`, `pitchdeck.json`, `media-kit.md`, `brand-colors.json`: editable document sources.
-- `model-guide.json`: bilingual source for the roadmap, governance consultation, FAQ and money/transparency page; `model_guide.py` renders them into `roadmap.html`, `faq.html`, `transparency.html` and homepage summaries.
+- `model-guide.json`: bilingual source for the roadmap, governance consultation, FAQ, community-economy proposal and money/transparency page; `model_guide.py` renders them into `roadmap.html`, `faq.html`, `transparency.html` and homepage summaries.
 - `build_publication.py`: rebuilds HTML, PDF, PowerPoint and ZIP exports, including roadmap, FAQ, transparency and both Resources views. Run in a separate Python environment with `markdown`, `reportlab` and `python-pptx` installed.
 - `properties.html`: existing image archive with concept/photo captions.
 

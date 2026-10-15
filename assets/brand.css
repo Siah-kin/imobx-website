@@ -152,3 +152,5 @@ section.content>p,.section-head p,.money p,.two p{max-width:72ch}
 @media(prefers-reduced-motion:reduce){.carousel-track{scroll-behavior:auto}}
 
 .project-journey{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:28px 0 48px;border-bottom:1px solid var(--line)}.project-journey h2{font-size:20px;line-height:1.35;letter-spacing:-.4px}.project-journey p{font-size:15px;color:var(--muted)}.background-photos{min-width:0}.background-photos figure+figure{margin-top:24px}.governance-questions{max-width:80ch}.governance-questions li{padding:7px 0}@media(max-width:700px){.project-journey{grid-template-columns:1fr;gap:12px}.project-journey h2{margin:8px 0}.project-journey p{margin:8px 0}}
+
+.community-topic{border-bottom:1px solid var(--line);padding:12px 0}.community-topic>summary{cursor:pointer;font-weight:700;min-height:44px;padding:8px 0;line-height:1.5}.community-topic:target{border-left:3px solid var(--imobx-turquoise);padding-left:16px}
