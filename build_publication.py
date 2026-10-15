@@ -76,7 +76,7 @@ def translated(pt, en, tag='span', attributes=''):
     return f'<{tag} data-pt="{esc(pt)}" data-en="{esc(en)}" {attributes}>{esc(pt)}</{tag}>'
 
 
-def resource_section():
+def resource_section(standalone=False):
     cards = []
     for item in RESOURCE_CATALOG:
         links = []
@@ -90,7 +90,7 @@ def resource_section():
 <div class="resource-actions">{''.join(links)}</div></article>''')
     return '''<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>''' + \
         translated('05 / Recursos do projeto','05 / Project resources','span','class="eyebrow"') + \
-        translated('Documentos e identidade IMOBX.','IMOBX documents and brand assets.','h2') + \
+        translated('Documentos e identidade IMOBX.','IMOBX documents and brand assets.','h1' if standalone else 'h2') + \
         translated('Leia no navegador ou baixe os arquivos. Os documentos do projeto são rascunhos em inglês para revisão; o kit inclui descrições em português e inglês.',
                     'Read in your browser or download the files. The project documents are English review drafts; the kit includes Portuguese and English descriptions.','p') + \
         '<div class="resource-grid">' + ''.join(cards) + '</div>' + \
@@ -111,7 +111,7 @@ language_controls = '''<div class="resource-language"><div class="lang" role="gr
 <button type="button" data-language="pt" aria-pressed="true" aria-label="Português brasileiro">PT</button>
 <button type="button" data-language="en" aria-pressed="false" aria-label="English">EN</button></div></div>'''
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
-    '<main id="main">' + language_controls + resource_section() + '</section></main>',
+    '<main id="main">' + language_controls + resource_section(standalone=True) + '</section></main>',
     '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Recursos'))
 kit_html = markdown.markdown((ROOT / 'media-kit.md').read_text(), extensions=['tables', 'toc'])
 logo_previews = '''<div class="media-logo-grid"><figure class="media-logo light">
