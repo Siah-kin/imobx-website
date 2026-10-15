@@ -34,16 +34,45 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 
+def site_header(lang='pt-BR', current=''):
+    """One main menu; local section links belong inside each page."""
+    portuguese = lang.startswith('pt')
+    items = [
+        ('index.html#modelo', 'O projeto', 'The project'),
+        ('index.html#custos', 'Custos', 'Costs'),
+        ('roadmap.html', 'Roteiro', 'Roadmap'),
+        ('properties.html', 'Fotos e desenhos', 'Photos and drawings'),
+        ('transparency.html', 'Dinheiro', 'Money'),
+        ('resources.html', 'Documentos', 'Documents'),
+    ]
+    links = ''
+    for target, pt, en in items:
+        active = ' aria-current="page"' if target == current else ''
+        links += f'<a href="{target}" data-pt="{esc(pt)}" data-en="{esc(en)}"{active}>{esc(pt if portuguese else en)}</a>'
+    return ('<header class="top site-header"><nav class="wrap site-nav" data-site-nav '
+            'aria-label="Principal" data-aria-pt="Principal" data-aria-en="Main">'
+            '<a class="wordmark" href="index.html" aria-label="IMOBX"><img class="brand-logo" '
+            'src="assets/imobx-logo-light.png" width="94" height="94" alt="IMOBX"></a>'
+            '<div class="site-links">' + links + '</div>'
+            '<div class="lang" role="group" aria-label="Idioma / Language">'
+            f'<button type="button" data-language="pt" aria-pressed="{str(portuguese).lower()}" aria-label="Português brasileiro">PT</button>'
+            f'<button type="button" data-language="en" aria-pressed="{str(not portuguese).lower()}" aria-label="English">EN</button>'
+            '</div></nav></header>')
+
+
 def page(title, body, script='', version='0.1', lang='en', title_pt=None):
     def label(pt, en):
         return f'<span data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt if lang.startswith("pt") else en)}</span>'
+    if 'assets/site.js' not in script:
+        script += '<script src="assets/site.js" defer></script>'
+    current = {'IMOBX | Resources': 'resources.html', 'IMOBX | Money and transparency': 'transparency.html',
+               'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html'}.get(title, '')
     return f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="IMOBX housing pilot: model, roadmap and project resources.">
 <title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}</head>
 <body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review">{label('Projeto em desenvolvimento', 'Project in development')} · v{esc(version)} · 15 October 2026</div>
-<nav class="wrap paper-nav" aria-label="Documents"><a class="wordmark" href="index.html"><img class="brand-logo" src="assets/imobx-logo-light.png" width="94" height="94" alt="IMOBX"></a>
-<span><a href="resources.html">{label('Recursos', 'Resources')}</a> · <a href="roadmap.html">{label('Roteiro', 'Roadmap')}</a> · <a href="transparency.html">{label('Transparência', 'Transparency')}</a> · <a href="faq.html">FAQ</a> · <a href="whitepaper.html">Whitepaper</a> · <a href="pitchdeck.html">Pitch deck</a> · <a href="index.html">Website</a></span></nav>
+{site_header(lang, current)}
 {body}</body></html>'''
 
 
@@ -128,15 +157,23 @@ def resource_section(standalone=False):
         '</div>'
 
 
+for name in ['index.html', 'properties.html']:
+    target = ROOT / name
+    source, count = re.subn(r'<header class="top(?: site-header)?">.*?</header>',
+                           lambda _: site_header('pt-BR', 'properties.html' if name == 'properties.html' else ''),
+                           target.read_text(), count=1, flags=re.S)
+    if count != 1:
+        raise ValueError(f'Expected one main header in {name}.')
+    target.write_text(source)
+
+
 home = ROOT / 'index.html'
 home_source, replaced = re.subn(r' <section class="content wrap" id="documentos">.*?(?= <div class="faq"(?: id="faq")?>)',
                               lambda _: ' ' + resource_section() + '\n', home.read_text(), count=1, flags=re.S)
 if replaced != 1:
     raise ValueError('Expected one home resource section before the FAQ.')
 home.write_text(home_source)
-language_controls = '''<div class="resource-language"><div class="lang" role="group" aria-label="Idioma / Language">
-<button type="button" data-language="pt" aria-pressed="true" aria-label="Português brasileiro">PT</button>
-<button type="button" data-language="en" aria-pressed="false" aria-label="English">EN</button></div></div>'''
+language_controls = ''  # The shared header contains the single language control.
 build_guide(ROOT, page, translated, esc, language_controls)
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main id="main">' + language_controls + resource_section(standalone=True) + '</section></main>',

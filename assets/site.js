@@ -18,12 +18,18 @@ function setLanguage(language) {
     ? 'IMOBX | Proposta de piloto no Rio' : 'IMOBX | Proposed Rio housing pilot');
   const navigation = document.querySelector('nav');
   if (navigation) navigation.setAttribute('aria-label', language === 'pt' ? 'Principal' : 'Main');
+  try { localStorage.setItem('imobx-language', language); } catch (_) {}
   document.dispatchEvent(new Event('imobx:languagechange'));
 }
 document.querySelectorAll('[data-language]').forEach(button => {
   button.addEventListener('click', () => setLanguage(button.dataset.language));
 });
-setLanguage(document.documentElement.lang.startsWith('pt') ? 'pt' : 'en');
+let preferredLanguage = document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
+try {
+  const savedLanguage = localStorage.getItem('imobx-language');
+  if (savedLanguage === 'pt' || savedLanguage === 'en') preferredLanguage = savedLanguage;
+} catch (_) {}
+setLanguage(preferredLanguage);
 
 function revealAnchor() {
   if (!location.hash) return;

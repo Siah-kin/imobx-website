@@ -131,3 +131,10 @@ SIAH Protocol is the brand. Hive DAO is the founder-defined operating model and 
 Reviewed across the public site on 15 October 2026. Write for someone who has never used a crypto app or read a housing-finance paper. Lead with the person, action and result: who pays, who checks, who decides, who owns the home. Prefer short sentences and familiar verbs. Explain necessary names such as DAO, USDC, CNPJ and CCTP at first use on a reading page. Keep source names and specialist detail available through the existing links and expandable sections.
 
 Use “money left after bills and agreed savings” for surplus, “money set aside for repairs” for reserves, and “check the bank statement against the payment” for reconciliation. Explain a future token through what its agreement would let someone do or receive. Distinguish a right to live in a home, a membership voice and an investment. Plain wording must preserve conditions, uncertainty, source dates and protected commitments. Never turn a target into a promise or suggest an example calculation is a current price or return. Apply the same standard to Portuguese and English, navigation, photo captions, papers, slides and downloadable files. Keep the SIAH Protocol brand and Hive DAO operating model distinct.
+
+
+## Main menu and page sections
+
+Use the same main menu on every reading page: The project, Costs, Roadmap, Photos and drawings, Money, Documents. Each label has the same destination throughout the site. Keep all links available on phones by wrapping them into rows. Use the common site_header renderer in build_publication.py, including for the handwritten homepage and image archive. Show the current page where applicable. Keep a single PT/EN control in the header; remember the choice when following a link, without making storage necessary for navigation.
+
+The image archive supports the housing proposal with drawings, supplied photos, captions and original-image links. It is not a property sale catalogue. Its separate local links are labelled On this page and stay within the archive. Main navigation and page-section navigation must be visibly distinct.
