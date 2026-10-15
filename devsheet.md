@@ -21,7 +21,7 @@ Rafael supplies construction and local delivery knowledge. John supplies communi
 
 ### The proposed advantage
 
-Combine Rafael's delivery experience and supplied cost model with repeatable resident terms, a reinvestment policy, resident participation and accounts partners can check. Arctide is a candidate USDC market/settlement component. The Flock is the proposed Telegram project desk. These components support the housing organization; their use does not establish delivered homes or investor rights.
+Combine Rafael's delivery experience and supplied cost model with repeatable resident terms, a reinvestment policy, resident participation and accounts partners can check. SIAH Protocol is the brand; Hive DAO names the decentralized operating rails. Shared context, voluntary roles and succession should keep work moving. The proposed assembly combines Ostrom-informed rules, Python agents, Arc settlement, possible Arctide fees and The Flock’s Telegram interface. IMOBX still needs to demonstrate the complete loop. [Operating model](faq.html#faq-flock-siah).
 
 ### Design basis for this revision
 

@@ -24,8 +24,8 @@ def build_guide(root, page, tr, esc, language_controls):
             body += f'<details id="faq-{esc(item["id"])}">' + text(item['q'], 'summary')
             body += ''.join(text(pair) for pair in item['a']) + links(item['sources']) + '</details>'
         if home:
-            body += text(('Todas as perguntas: governança, The Flock, SIAH e comparação de plataformas ↗',
-                          'All questions: governance, The Flock, SIAH and platform comparison ↗'),
+            body += text(('Todas as perguntas: governança, The Flock, SIAH Protocol e comparação de plataformas ↗',
+                          'All questions: governance, The Flock, SIAH Protocol and platform comparison ↗'),
                          'a', 'class="guide-more" href="faq.html"')
         return body + '</div>'
 
@@ -260,15 +260,9 @@ def build_guide(root, page, tr, esc, language_controls):
                      'These are proposed IMOBX applications. Ostrom prescribed neither tokenomics nor a single voting system. '
                      'The trial includes a routine decision, an emergency, a challenged invoice and an expansion proposal. '
                      'Each case must identify who proposes, authorizes, executes, checks and can appeal.'))
-    roadmap += text(('O papel das ferramentas', 'The role of the tools'), 'h3')
-    roadmap += text(('The Flock deve permitir enviar dúvidas, solicitações e propostas e consultar regras e respostas aprovadas. '
-                     'O papel proposto para SIAH/HiveDAO é apoiar evidências, trabalho delegado e coordenação, sujeito a desenvolvimento separado. '
-                     'Essas ferramentas não escolhem quem tem direito à casa, não fixam a constituição e não substituem julgamento responsável. '
-                     'A comunidade precisa conseguir trocar prestadores e continuar operando durante uma falha.',
-                     'The Flock should let people send questions, requests and proposals and read approved rules and responses. '
-                     'The proposed SIAH/HiveDAO role supports evidence, delegated work and coordination, subject to separate development. '
-                     'These tools neither choose who is entitled to a home, set the constitution nor replace accountable judgment. '
-                     'The community needs to be able to replace providers and keep operating during an outage.'))
+    roadmap += text(('SIAH Protocol e Hive DAO', 'SIAH Protocol and Hive DAO'), 'h3')
+    for key in ['identity', 'assembly', 'loop', 'test']:
+        roadmap += text(guide['hive_dao'][key])
     roadmap += links(['digital']) + '</section>'
 
     roadmap += '<section id="ico-comparison">' + text(('O que muda em relação à venda de tokens?', 'What changes compared with a token sale?'), 'h2')

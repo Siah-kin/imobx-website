@@ -132,21 +132,21 @@ Consult on resident authority, delegated work and separately defined financial r
 
 
 
-## 8. Use digital records where they reduce work.
+## 8. Make fair cooperation the simplest path.
 
-The Flock is the proposed Telegram desk. Arc is the settlement network; Arctide is a candidate application.
-
-
-
-- Approved rules, requests and responses make responsibilities visible.
-
-- Compare Arctide project fees with Argus and Uniswap alternatives.
-
-- SIAH/HiveDAO coordination is proposed backend work, not a deployed IMOBX claim.
+SIAH Protocol is the brand. Hive DAO names the decentralized operating rails.
 
 
 
-**Presenter notes:** The Flock stays neutral. Arc documents USDC gas; Arctide documents token/USDC pairs and configured fee recipients. Argus also documents USDC distributions and accumulator dividends; Uniswap v4 supports custom hooks. No exclusive-reward or universal-cost advantage is established. Trial receipt reconciliation, permissions, support costs and provider replacement. No automated agent acquires authority over homes by being called a mentor.
+- Shared context, voluntary roles and succession help work continue.
+
+- Ostrom-informed rules; Python agents; Arc settlement; possible Arctide fees.
+
+- The Flock supplies Telegram access; IMOBX would test the complete loop.
+
+
+
+**Presenter notes:** Hive DAO describes the operating model, not a separate evidence service. Participants should be able to identify a need, take responsibility within agreed roles and budgets, obtain required authorization, check delivery and payment, and pass context to a successor. SIAH Protocol is the brand. Agents help maintain context and permissions around treasuries, identities and wallets. Resident rights and financial-holder rights stay distinct. Demonstrate coordination, challenges and handover without constant founder instructions. Complete IMOBX operation remains to be verified; the engineering follows separate authorized work. The Flock remains neutral and reusable across projects. Arc is the settlement network; Arctide is a candidate fee source, with Argus and Uniswap alternatives requiring their own integration proof.
 
 
 

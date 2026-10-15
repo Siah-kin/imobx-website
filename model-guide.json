@@ -98,8 +98,8 @@
         "John and authorized providers, with independent checks"
       ],
       "work": [
-        "Testar uma entrada autorizada em USDC, sua conciliação em reais, uma decisão dentro do orçamento e a comprovação do pagamento. The Flock recebe perguntas e propostas; serviços de SIAH/HiveDAO dependem de trabalho separado e autorizado.",
-        "Test an authorized USDC receipt, its BRL reconciliation, a decision within budget and payment evidence. The Flock receives questions and proposals; SIAH/HiveDAO services depend on separately authorized work."
+        "Testar uma entrada autorizada em USDC, sua conciliação em reais, uma decisão dentro do orçamento e a comprovação do pagamento. Testar um ciclo de Hive DAO sob a marca SIAH Protocol, com The Flock como interface e engenharia autorizada separadamente.",
+        "Test an authorized USDC receipt, its BRL reconciliation, a decision within budget and payment evidence. Test a Hive DAO loop under the SIAH Protocol brand, with The Flock as the interface and separately authorized engineering."
       ],
       "gate": [
         "Uma trilha completa entre comprovante, autorização e destino; testes de duplicidade, limites e falhas; troca de operador; participação assistida sem carteira. A simulação não é anunciada como tesouraria financeira em produção.",
@@ -468,21 +468,29 @@
       "id": "flock-siah",
       "home": false,
       "q": [
-        "É aqui que entram The Flock, SIAH e HiveDAO?",
-        "Is this where The Flock, SIAH and HiveDAO fit?"
+        "O que são SIAH Protocol e Hive DAO? Como The Flock participa?",
+        "What are SIAH Protocol and Hive DAO? How does The Flock fit?"
       ],
       "a": [
         [
-          "Sim, como ferramentas para exercer e acompanhar regras acordadas. The Flock é a interface Telegram proposta: mostrar regras e contas aprovadas, receber perguntas, pedidos e propostas, e devolver andamento e respostas. Precisa haver uma rota acessível para moradores sem carteira ou familiaridade com cripto.",
-          "Yes, as tools for exercising and following agreed rules. The Flock is the proposed Telegram interface: show approved rules and accounts, receive questions, requests and proposals, and return status and responses. Residents need an accessible route without a wallet or crypto familiarity."
+          "SIAH Protocol é a marca. Hive DAO é o nome que damos às regras e ferramentas para uma organização conduzir seu modelo de negócio de forma descentralizada.",
+          "SIAH Protocol is the brand. Hive DAO is our name for the rules and tools through which an organization runs its business model in a decentralized way."
         ],
         [
-          "O papel proposto para SIAH/HiveDAO é apoiar a organização de evidências, tarefas delegadas e coordenação entre comunidades. A implementação e as interfaces pertencem a trabalho separado do backend. Não afirmamos que esses serviços já executam a governança da IMOBX. Nenhum agente ganha autoridade sobre moradia ou pagamentos por ser chamado de mentor.",
-          "The proposed SIAH/HiveDAO role is to support evidence organization, delegated work and coordination across communities. Implementation and interfaces belong to separate backend work. We do not claim those services already execute IMOBX governance. Calling an agent a mentor gives it no authority over housing or payments."
+          "O objetivo é tornar a cooperação justa o caminho mais simples: contexto compartilhado, responsabilidades claras, participação voluntária e regras de sucessão permitem que as pessoas assumam trabalho e deem continuidade a ele sem esperar instruções constantes do fundador. Desacordos precisam de espaço e resolução.",
+          "The aim is to make fair cooperation the simplest path: shared context, clear responsibilities, voluntary participation and succession rules let people take on work and keep it moving without waiting for constant instructions from the founder. Disagreements need room and resolution."
         ],
         [
-          "Exemplo: o morador relata uma infiltração; um responsável avalia; o construtor apresenta orçamento; outra pessoa autoriza dentro do limite; a conclusão é conferida e o pagamento conciliado. A comunidade pode contestar o resultado. O teste é conseguir seguir esse processo, inclusive na ausência do fundador ou do bot.",
-          "Example: a resident reports a leak; a responsible person assesses it; the builder quotes; someone else authorizes within their limit; completion is checked and payment reconciled. The community can challenge the result. The test is whether this process works even when the founder or bot is unavailable."
+          "Na IMOBX, essa proposta reúne princípios de Ostrom, agentes em Python, liquidação em USDC na Arc e possível integração de taxas da Arctide. The Flock é a interface Telegram. O conjunto deve manter atualizados o contexto e as permissões em torno de tesourarias, identidades e carteiras.",
+          "For IMOBX, the proposal brings together Ostrom’s principles, Python agents, USDC settlement on Arc and possible Arctide fee integration. The Flock is the Telegram interface. Together they should keep context and permissions current around treasuries, identities and wallets."
+        ],
+        [
+          "Exemplo: um morador relata uma infiltração; a responsabilidade fica visível; alguém habilitado assume a avaliação; o orçamento segue a autoridade acordada; a conclusão é conferida e o pagamento conciliado. Se a pessoa sair, outra recebe o contexto para continuar.",
+          "Example: a resident reports a leak; responsibility becomes visible; someone qualified takes on the assessment; the quote follows the agreed authority; completion is checked and payment reconciled. If someone leaves, another person receives the context needed to continue."
+        ],
+        [
+          "IMOBX é o caso de uso proposto para testar esse modelo. O teste é conseguir coordenar, contestar decisões e trocar responsáveis sem depender do fundador. A operação completa ainda não foi demonstrada na IMOBX; engenharia e interfaces seguem desenvolvimento autorizado separado.",
+          "IMOBX is the proposed use case for testing this model. The test is whether people can coordinate, challenge decisions and replace responsible people without depending on the founder. Complete operation has not yet been demonstrated in IMOBX; engineering and interfaces follow separate authorized development."
         ]
       ],
       "sources": [
@@ -1431,6 +1439,17 @@
           "Separação entre voz dos moradores, direitos do eventual token, Thanks, Zeal e caixa USDC. Arc é a liquidação planejada; o teste financeiro ainda não foi demonstrado.",
           "Separated resident voice, possible token rights, Thanks, Zeal and the USDC treasury. Arc is the planned settlement network; the financial test has not yet been demonstrated."
         ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": [
+          "SIAH Protocol e Hive DAO: definição dos fundadores",
+          "SIAH Protocol and Hive DAO: founder definitions"
+        ],
+        "body": [
+          "SIAH Protocol é a marca; Hive DAO nomeia as regras e ferramentas para conduzir um modelo de negócio de forma descentralizada. IMOBX é o caso de uso proposto para testar cooperação, contexto compartilhado e sucessão.",
+          "SIAH Protocol is the brand; Hive DAO names the rules and tools for running a business model in a decentralized way. IMOBX is the proposed use case for testing cooperation, shared context and succession."
+        ]
       }
     ],
     "maintenance": [
@@ -1476,8 +1495,8 @@
       {
         "id": "community-tools",
         "title": [
-          "Arc, Arctide, The Flock e SIAH: funções diferentes",
-          "Arc, Arctide, The Flock and SIAH: different roles"
+          "SIAH Protocol e Hive DAO: como as partes trabalham juntas",
+          "SIAH Protocol and Hive DAO: how the parts work together"
         ],
         "body": [
           [
@@ -1485,8 +1504,24 @@
             "Arc is the proposed network for settling USDC payments. Arctide is a launch and exchange application: it can supply project-directed fees when configuration and recipient rights permit. Liquidity-provider and platform fees do not automatically belong to IMOBX. Other funding sources and platforms need their own rules."
           ],
           [
-            "The Flock é a interface Telegram para encaminhar pedidos e mostrar regras, decisões e resultados aprovados. O papel proposto de SIAH/HiveDAO é apoiar evidências e coordenação em desenvolvimento separado. Nenhum desses componentes, por si só, autoriza gastos, garante receita ou resolve conflitos de interesse.",
-            "The Flock is the Telegram interface for sending requests and showing approved rules, decisions and results. The proposed SIAH/HiveDAO role supports evidence and coordination through separate development. None of these components alone authorizes spending, guarantees income or resolves conflicts of interest."
+            "SIAH Protocol é a marca. Hive DAO é o nome que damos às regras e ferramentas para uma organização conduzir seu modelo de negócio de forma descentralizada.",
+            "SIAH Protocol is the brand. Hive DAO is our name for the rules and tools through which an organization runs its business model in a decentralized way."
+          ],
+          [
+            "O objetivo é tornar a cooperação justa o caminho mais simples: contexto compartilhado, responsabilidades claras, participação voluntária e regras de sucessão permitem que as pessoas assumam trabalho e deem continuidade a ele sem esperar instruções constantes do fundador. Desacordos precisam de espaço e resolução.",
+            "The aim is to make fair cooperation the simplest path: shared context, clear responsibilities, voluntary participation and succession rules let people take on work and keep it moving without waiting for constant instructions from the founder. Disagreements need room and resolution."
+          ],
+          [
+            "Na IMOBX, essa proposta reúne princípios de Ostrom, agentes em Python, liquidação em USDC na Arc e possível integração de taxas da Arctide. The Flock é a interface Telegram. O conjunto deve manter atualizados o contexto e as permissões em torno de tesourarias, identidades e carteiras.",
+            "For IMOBX, the proposal brings together Ostrom’s principles, Python agents, USDC settlement on Arc and possible Arctide fee integration. The Flock is the Telegram interface. Together they should keep context and permissions current around treasuries, identities and wallets."
+          ],
+          [
+            "O ciclo proposto: registrar uma necessidade → identificar o papel e o orçamento responsáveis → alguém assumir o trabalho → obter a autorização necessária → conferir a entrega e o pagamento → atualizar os registros ou passar a responsabilidade adiante.",
+            "The proposed loop: record a need → identify the responsible role and budget → someone takes on the work → obtain the required authorization → check delivery and payment → update the records or hand responsibility onward."
+          ],
+          [
+            "IMOBX é o caso de uso proposto para testar esse modelo. O teste é conseguir coordenar, contestar decisões e trocar responsáveis sem depender do fundador. A operação completa ainda não foi demonstrada na IMOBX; engenharia e interfaces seguem desenvolvimento autorizado separado.",
+            "IMOBX is the proposed use case for testing this model. The test is whether people can coordinate, challenge decisions and replace responsible people without depending on the founder. Complete operation has not yet been demonstrated in IMOBX; engineering and interfaces follow separate authorized development."
           ]
         ],
         "sources": [
@@ -1544,6 +1579,32 @@
     "branding": [
       "A identificação pública acompanha o estágio real. “Built on Arc” pode descrever uma integração construída; “Live on Arc” exige uma aplicação efetivamente no ar. O logo oficial deve seguir o guia da Arc e explicar a infraestrutura, sem sugerir patrocínio ou aprovação da IMOBX.",
       "Public attribution follows the actual stage. “Built on Arc” can describe a built integration; “Live on Arc” requires an actually live app. The official logo must follow Arc’s guide and explain the infrastructure without suggesting sponsorship or endorsement of IMOBX."
+    ]
+  },
+  "hive_dao": {
+    "identity": [
+      "SIAH Protocol é a marca. Hive DAO é o nome que damos às regras e ferramentas para uma organização conduzir seu modelo de negócio de forma descentralizada.",
+      "SIAH Protocol is the brand. Hive DAO is our name for the rules and tools through which an organization runs its business model in a decentralized way."
+    ],
+    "intent": [
+      "O objetivo é tornar a cooperação justa o caminho mais simples: contexto compartilhado, responsabilidades claras, participação voluntária e regras de sucessão permitem que as pessoas assumam trabalho e deem continuidade a ele sem esperar instruções constantes do fundador. Desacordos precisam de espaço e resolução.",
+      "The aim is to make fair cooperation the simplest path: shared context, clear responsibilities, voluntary participation and succession rules let people take on work and keep it moving without waiting for constant instructions from the founder. Disagreements need room and resolution."
+    ],
+    "assembly": [
+      "Na IMOBX, essa proposta reúne princípios de Ostrom, agentes em Python, liquidação em USDC na Arc e possível integração de taxas da Arctide. The Flock é a interface Telegram. O conjunto deve manter atualizados o contexto e as permissões em torno de tesourarias, identidades e carteiras.",
+      "For IMOBX, the proposal brings together Ostrom’s principles, Python agents, USDC settlement on Arc and possible Arctide fee integration. The Flock is the Telegram interface. Together they should keep context and permissions current around treasuries, identities and wallets."
+    ],
+    "loop": [
+      "O ciclo proposto: registrar uma necessidade → identificar o papel e o orçamento responsáveis → alguém assumir o trabalho → obter a autorização necessária → conferir a entrega e o pagamento → atualizar os registros ou passar a responsabilidade adiante.",
+      "The proposed loop: record a need → identify the responsible role and budget → someone takes on the work → obtain the required authorization → check delivery and payment → update the records or hand responsibility onward."
+    ],
+    "example": [
+      "Exemplo: um morador relata uma infiltração; a responsabilidade fica visível; alguém habilitado assume a avaliação; o orçamento segue a autoridade acordada; a conclusão é conferida e o pagamento conciliado. Se a pessoa sair, outra recebe o contexto para continuar.",
+      "Example: a resident reports a leak; responsibility becomes visible; someone qualified takes on the assessment; the quote follows the agreed authority; completion is checked and payment reconciled. If someone leaves, another person receives the context needed to continue."
+    ],
+    "test": [
+      "IMOBX é o caso de uso proposto para testar esse modelo. O teste é conseguir coordenar, contestar decisões e trocar responsáveis sem depender do fundador. A operação completa ainda não foi demonstrada na IMOBX; engenharia e interfaces seguem desenvolvimento autorizado separado.",
+      "IMOBX is the proposed use case for testing this model. The test is whether people can coordinate, challenge decisions and replace responsible people without depending on the founder. Complete operation has not yet been demonstrated in IMOBX; engineering and interfaces follow separate authorized development."
     ]
   }
 }
