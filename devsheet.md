@@ -46,7 +46,7 @@ This sheet replaces the original devsheet as a **review draft**. The whitepaper 
 
 The background proposal assumed at least 36 homes and a 12-month program: 36 × $27,777 = $999,972. These are founder-supplied estimates with shared costs, not a current one-home quote. For the selected pilot, document current BRL prices, land/control terms, permissions, utility connections, builder margin, contingency and lifecycle expenses. SINAPI and CUB are reference inputs to reconcile against scope and invoices; an index alone does not verify a particular complete-home price.
 
-State the date, location, quantities and treatment of overhead/profit in the chosen price basis before applying the old 15% deduction. [CAIXA: SINAPI reference documentation](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx).
+State the date, location, quantities, exclusions and treatment of overhead/profit in the selected price basis. Check the [CUB scope](https://sinduscon-caxias.net.br/servicos/cub) before any proposed margin deduction; builder remuneration is among its exclusions. [CAIXA: SINAPI reference documentation](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx).
 
 ### Separate two-loft development account
 
@@ -135,7 +135,7 @@ Fees received in USDC can fund agreed work without issuing more IMOBX tokens for
 | Financial participant, if offered | Issuer, legal claim, votes, eligibility, costs, transfer and distribution rules. |
 | Community contributor | Defined work, review responsibility, funded service/payment terms and data choices. |
 
-The Ostrom-inspired direction is to define membership and boundaries, involve affected residents in suitable decisions, monitor commitments and provide accessible conflict resolution. Local maintenance and shared-facility decisions can have resident representation within budget and safety duties. These are proposals to consult on. Rafael's interest in governance tokens has not established a tenant allocation or voting-weight plan.
+The Ostrom-inspired direction is to define membership and boundaries, involve affected residents in suitable decisions, monitor commitments and provide accessible conflict resolution. Local maintenance and shared-facility decisions can have resident representation within budget and safety duties. These are proposals to consult on. Rafael's interest in governance tokens has not established a tenant allocation or voting-weight plan. For the [village concept](properties.html#visao-rafael), cost and agree access, upkeep and replacement of shared solar, orchard, play and study facilities; track actual running costs and use.
 
 Token votes should not rewrite a resident's signed housing bargain. Longer residence may inform eligibility for an elected role; any rule must be explicit and preserve newer residents' basic rights. Investor and resident authority require clear boundaries in the legal documents and operating rules.
 

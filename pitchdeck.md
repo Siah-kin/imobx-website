@@ -56,7 +56,7 @@ US$27,777 per home was a founder-supplied proposal based on at least 36 homes.
 
 
 
-**Presenter notes:** The five lines total $27,777. The historical 36-home total is $999,972 with a 12-month proposal. This is neither an independent quote nor a one-home delivery commitment. The cost is an evidence item to reconcile, not a headline return claim.
+**Presenter notes:** The five lines total $27,777. The historical 36-home total is $999,972 with a 12-month proposal. This is neither an independent quote nor a one-home delivery commitment. The cost is an evidence item to reconcile, not a headline return claim. Rafael’s November village concept includes shared outdoor space, rooftop solar, an orchard and two study rooms. Explain these as intended household/community benefits, with maintenance and resident decision rules. The January two-loft amount is $27,777 combined, a different scope from this per-home village proposal. See the dated study archive.
 
 
 

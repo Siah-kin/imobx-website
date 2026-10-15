@@ -55,7 +55,7 @@ RESOURCE_CATALOG = [
     {'id': 'whitepaper', 'pt': 'Whitepaper', 'en': 'Whitepaper', 'version': '0.1',
      'description_pt': 'Modelo de moradia, custos, contratos, dinheiro e decisões em aberto.',
      'description_en': 'Housing model, costs, agreements, money and open decisions.',
-     'meta_pt': '7 páginas · inglês · rascunho', 'meta_en': '7 pages · English · draft',
+     'meta_pt': '8 páginas · inglês · rascunho', 'meta_en': '8 pages · English · draft',
      'links': [('whitepaper.html','Ler','Read'), ('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
     {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': '0.1',
      'description_pt': 'Apresentação para parceiros, com notas para quem apresenta.',

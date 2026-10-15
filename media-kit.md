@@ -41,6 +41,10 @@ IMOBX is preparing a rent-to-own housing pilot in Rio de Janeiro. Its proposed m
 
 A IMOBX está preparando um piloto de moradia com opção de compra no Rio de Janeiro. A proposta reúne experiência local de construção, contratos por escrito, reinvestimento em moradia e participação dos moradores nas decisões. A IMOBX pretende desenvolver uma DAO com regras compartilhadas e registros digitais úteis à medida que testa o modelo de operação. O piloto pretende testar a entrega, a manutenção, os pagamentos e o caminho até a propriedade. A estrutura jurídica, os acordos sobre os imóveis e os direitos de um eventual token ainda estão em definição.
 
+### Rafael's neighbourhood vision
+
+In his 30 November 2025 proposal, Rafael described duplex homes around a shared courtyard, rooftop solar, an orchard, play space and two study rooms. The intention is to connect housing access with everyday household costs, neighbourly life and learning. The [concept illustration and explanation](properties.html#visao-rafael) represent that vision, while the separate January two-loft account supplies an early construction case. Describe the purpose of each feature and the work needed to deliver and maintain it. Use measured results when available for cost, energy, safety and education claims.
+
 ## 5. Writing and claims
 
 Use a documentary approach: explain housing conditions, their sources and the community context before presenting IMOBX's response. Favelas have local histories and identities; international housing categories and displacement describe different things. Residents are participants with preferences, work and social ties. Use the dated sources and editorial rules in the [design guide](design.html#documentary-editorial-approach). Context photographs link to the supplied originals; displayed circles use generative annotation edits. The image archive records provenance limits. Engineering claims should point to responsible professionals, scoped designs, budgets and delivery evidence as these become available.

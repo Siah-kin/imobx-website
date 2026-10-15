@@ -26,6 +26,14 @@ A founder's willingness to provide land or a home is not a completed transfer. T
 
 Rafael's construction business is a proposed delivery resource. Its catalogue can support its track record when completed work and permissions for publication are checked. Because a founder is associated with the contractor, price, margin, change orders and approval authority should be disclosed and reviewed independently of that founder's own approval.
 
+### Rafael's village vision, 30 November 2025
+
+Rafael proposed 45 m² duplex homes facing a shared courtyard, roof-mounted solar power, a fruit orchard, play space and two small study rooms. The aim combines a route toward ownership with lower household running costs, neighbourly contact and space for children to learn. These are design intentions to test with residents, professional plans, budgets and operating records. The [supplied concept illustration](properties.html#visao-rafael) depicts that ambition. The later 36-home requirement reflects shared infrastructure and purchasing assumptions; the January two-loft case has its own scope and costs.
+
+Shared facilities need agreed use, maintenance, access and decision rules. This gives resident participation a practical subject: who looks after the orchard, allocates study-room access, approves repairs and reports spending. Solar bill savings depend on system design, consumption and applicable charges; ANEEL notes that low-voltage consumers still pay an availability charge. [ANEEL distributed-generation guidance](https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida/).
+
+<div class="pagebreak"></div>
+
 ## 3. The cost proposal already supplied
 
 The background discussion includes the following per-home planning proposal. It is presented here as a **founder-supplied historical estimate**, not a current quotation, asset valuation or commitment to deliver one pilot home for this amount.
@@ -40,6 +48,8 @@ The background discussion includes the following per-home planning proposal. It 
 | **Total** | **27,777** |
 
 The later proposal assumed at least 36 homes and a 12-month delivery program, totaling $999,972. Shared purchasing and infrastructure are part of the premise. An existing-home pilot and a small new-build pilot may have different costs. Rafael and the accountant should reconcile the selected scope, current BRL prices, land/control terms, builder margin, contingency, taxes, utilities, permissions and ongoing expenses. This updates existing work rather than starting from an unexplained construction figure.
+
+The proposed saving mechanism is direct procurement and shared infrastructure. Reconcile it with the selected reference series and an itemized budget. CUB excludes items including some site works, service connections, projects and builder remuneration; a presumed contractor margin cannot simply be deducted from every index. [Sinduscon: CUB scope](https://sinduscon-caxias.net.br/servicos/cub).
 
 A separate account dated 20 January 2026 reports a signed contract for two lofts, awaiting a first deposit, on a steeply sloping site. The owner clarified on 15 October 2026 that the $27,777 construction figure covers both lofts together: $13,888.50 per loft by simple division. Included scope and final actual costs still need documentation. Keep this construction case separate from the 36-home proposal. The supplied drawings and site photograph are available in the [project archive](properties.html#estudo-lofts). Current funding, execution and any rent-to-own use remain to be updated.
 

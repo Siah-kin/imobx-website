@@ -27,7 +27,7 @@ function revealAnchor() {
   try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); }
   catch (_) { return; }
   if (!target) return;
-  let ancestor = target.parentElement;
+  let ancestor = target;
   while (ancestor) {
     if (ancestor.tagName === 'DETAILS') ancestor.open = true;
     ancestor = ancestor.parentElement;
