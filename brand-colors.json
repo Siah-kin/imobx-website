@@ -1,0 +1,20 @@
+{
+  "brand": "IMOBX",
+  "version": "0.1",
+  "date": "2026-10-15",
+  "source": "https://github.com/Siah-kin/imobx-website/blob/main/AUDIT_PROMPT_WEBDESIGN.md",
+  "colors": {
+    "web_background": "#FFFFFF",
+    "web_surface": "#F7FAFB",
+    "web_border": "#D9E3E8",
+    "web_text": "#193D4E",
+    "web_secondary_text": "#526571",
+    "technical_accent": "#4A90A4",
+    "strategic_accent": "#FF8C00",
+    "print_technical_panel": "#E8F4F8"
+  },
+  "type": {
+    "family": "Arial, Helvetica, sans-serif"
+  },
+  "usage": "White website and print backgrounds, square corners, turquoise accents and orange sparingly. Check text contrast for each use."
+}
