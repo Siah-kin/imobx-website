@@ -2,7 +2,7 @@
 
 ## A documented rent-to-own housing model for Rio
 
-**Project paper v0.1 · 15 October 2026 · proposal for founder and partner review**
+**Project paper v0.2 · 15 October 2026 · proposal for founder and partner review**
 
 IMOBX is being designed to help households enter a written rent-to-own housing arrangement in Rio de Janeiro. The proposed organization would coordinate property access, building or refurbishment, resident agreements, maintenance and financial reporting. Rafael supplies construction and local operating knowledge; John supplies community and digital coordination. Their contractual roles and the organization's legal form remain to be agreed.
 
@@ -36,9 +36,9 @@ Shared facilities need agreed use, maintenance, access and decision rules. This 
 
 ## 3. The cost proposal already supplied
 
-The background discussion includes the following per-home planning proposal. It is presented here as a **founder-supplied historical estimate**, not a current quotation, asset valuation or commitment to deliver one pilot home for this amount.
+Rafael's **$27,777 per-home cost-engineered budget** has an explicit reference basis. In November 2025 he identified SindusCon's CUB and SINAPI as the construction references. On 30 November he showed a SindusCon-based construction calculation of $21,883.86 plus a $5,550 land allowance, then an itemized delivery plan allocating the $27,777 cap across construction, land, solar and shared facilities. The table records that plan, rather than an unexplained price assumption. [CAIXA: SINAPI references](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx).
 
-| Item | Proposed USD amount per home |
+| Item | Rafael’s budget, USD per home |
 |---|---:|
 | Land | 5,550 |
 | House construction, 45 square metres | 18,600 |
@@ -47,9 +47,9 @@ The background discussion includes the following per-home planning proposal. It 
 | Legal and design | 627 |
 | **Total** | **27,777** |
 
-The later proposal assumed at least 36 homes and a 12-month delivery program, totaling $999,972. Shared purchasing and infrastructure are part of the premise. An existing-home pilot and a small new-build pilot may have different costs. Rafael and the accountant should reconcile the selected scope, current BRL prices, land/control terms, builder margin, contingency, taxes, utilities, permissions and ongoing expenses. This updates existing work rather than starting from an unexplained construction figure.
+Rafael then specified at least 36 homes built together, a $999,972 total and a 12-month program. His cost strategy combines direct purchasing, in-house construction management and shared infrastructure. The selected delivery budget should retain its reference month, local quantities, BRL costs, scope and actual invoices. An existing-home pilot and the separate two-loft contract have different scopes; neither should inherit the village's shared-cost assumptions silently.
 
-The proposed saving mechanism is direct procurement and shared infrastructure. Reconcile it with the selected reference series and an itemized budget. CUB excludes items including some site works, service connections, projects and builder remuneration; a presumed contractor margin cannot simply be deducted from every index. [Sinduscon: CUB scope](https://sinduscon-caxias.net.br/servicos/cub).
+The optimized construction allocation is Rafael's execution-cost calculation; it is not a $27,777 price published by the index provider. Explain the saving through procurement, labor and scope. CUB excludes items including some site works, service connections, projects and builder remuneration, so a blanket deduction for contractor profit is not itself proof of the saving. [Sinduscon: CUB scope](https://sinduscon-caxias.net.br/servicos/cub).
 
 A separate account dated 20 January 2026 reports a signed contract for two lofts, awaiting a first deposit, on a steeply sloping site. The owner clarified on 15 October 2026 that the $27,777 construction figure covers both lofts together: $13,888.50 per loft by simple division. Included scope and final actual costs still need documentation. Keep this construction case separate from the 36-home proposal. The supplied drawings and site photograph are available in the [project archive](properties.html#estudo-lofts). Current funding, execution and any rent-to-own use remain to be updated.
 
@@ -96,7 +96,7 @@ The long-term ambition is a DAO with shared participation rules and useful digit
 
 The founders want to apply Ostrom's work where it fits: define the participating group, involve affected users in suitable decisions, make monitoring and dispute resolution accessible, and connect local decisions with wider organization responsibilities. This is a design direction, not a claim that token voting implements those principles. [Ostrom's Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/).
 
-The starting consultation should include residents, prospective residents, the builder, the organization, local service partners and any funders. They should agree which decisions each group can make and which rights cannot be changed by a simple vote.
+The starting consultation should include residents, prospective residents, the builder, the organization, local service partners and any funders. A governance token need not mean one token, one vote over everything. A consultation option separates equal member voice in resident matters, time-limited delegated work and the rights of any financial instrument. Membership is not silently sold with a token. [ICA cooperative identity](https://ica.coop/en/cooperatives/cooperative-identity); [proposed governance boundaries and eight Ostrom applications](roadmap.html#governance).
 
 | Area | Proposed decision boundary to review |
 |---|---|
@@ -106,11 +106,13 @@ The starting consultation should include residents, prospective residents, the b
 | Enterprise budgets and expansion | Defined board/member authority, reporting and resident representation. |
 | Any investor rights | Exact instrument terms and legal register; separate from resident eligibility. |
 
-Longer residence may provide experience relevant to an elected role. It should not silently change a purchase agreement or remove newer residents' basic voice. A household/member voting approach and separate resident representation are options for consultation; they are not settled allocations. No tenant-token plan has yet been adopted.
+Relevant work can inform election or appointment to a limited role, with reporting, challenges and replacement. It need not become automatic score-weighted voting. Longer residence can supply experience without removing newcomers' basic voice. Housing rights do not depend on posting, token balance or an agent's verdict. Quorum, representation and membership checks remain consultation decisions; no tenant-token plan is adopted.
 
 ## 8. What a token could represent
 
 The founders’ current research direction includes a possible yield-bearing token: specified rights to any future distributable surplus after housing obligations, operating costs and required reserves. Its rights, income sources and lawful structure remain to be designed; no current payout entitlement is established.
+
+The proposed nonprofit direction aims to keep resources serving housing and reinvestment. Its legal form is not established here. Under Law 13.019's nonprofit definition for public-sector partnerships, results must support the social purpose rather than distributions. A nonprofit operator cannot simply promise its surplus as investor dividends. Participation without profit rights and any separately permitted financial arrangement must be distinguished with Brazilian advisers; restricted donations remain restricted. [Law 13.019, article 2(I)(a)](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm).
 
 The token decision follows the housing, cash and governance design. Options include a nontransferable participation credential or a legally structured financial interest. They serve different purposes and should not be promoted as interchangeable. A supporter credential does not imply equity, property title or rental income.
 
@@ -122,17 +124,19 @@ The paper does not set token supply, tenant allocation, staking periods, dividen
 
 The planned blockchain work focuses on traceable treasury receipts, authorized distributions and governance records within agreed decision boundaries. The complete token model remains in research and development, including rights, resident participation, distribution and transfer rules. These are proposed implementation areas, not a deployed IMOBX treasury or token system.
 
+Arc is the candidate settlement network, with documented USDC gas and EVM compatibility; Arctide is a candidate exchange/launch application on it. Argus also documents USDC creator/holder distributions using Uniswap v4. Uniswap v4 supports custom hooks. No universal cost or exclusivity advantage is asserted: compare the same rights, controls, support and funding journey. [Arc](https://www.arc.io/litepaper); [Argus](https://github.com/arguspad/argus-world); [Uniswap v4](https://developers.uniswap.org/docs/protocols/v4/overview).
+
 The proposed digital service would help people find approved project information, read progress reports and obtain support. The Flock is the candidate Telegram access point for questions, resident-support handoffs, community education and approved updates. It remains a neutral service able to support other projects and compatible providers.
 
-Any confirmed contribution record or contributor reward requires the authorized backend service and a funded, approved work program. These capabilities are proposed requirements here. The website and bot must not imply that posting, recruiting token buyers or owning a token automatically earns money.
+The proposed SIAH/HiveDAO role is supporting evidence, delegated work and coordination between communities; its implementation is separate backend work, not a deployed IMOBX governance claim. The community must be able to challenge decisions, replace providers and operate during an outage. Any confirmed contribution record or contributor reward requires the authorized backend service and a funded, approved work program. These capabilities are proposed requirements here. The website and bot must not imply that posting, recruiting token buyers or owning a token automatically earns money.
 
 USDC settlement could make authorized transfers and receipts easier to inspect across counterparties. Brazilian commitments remain budgeted in BRL; conversion rates, costs and currency risk need reconciliation. Personal resident records, identity documents and private agreements should not be placed on a public ledger. The digital interface must provide a practical route for residents who do not use crypto wallets.
 
 ## 10. Pilot roadmap and evidence
 
-The proposed sequence is: founder agreement and property file; selected home and resident terms; budget and cash model; governance/legal/provider decisions; reviewed public paper and website; funded delivery and reporting; then a decision on further homes and any token trial.
+The [distinct roadmap](roadmap.html) sets proposed owners, preparation windows and evidence gates. The first 30 days cover roles, property, budget and resident consultation; days 31–60 cover cash and decision authority; day 90 targets a documented readiness decision. These are relative preparation targets, not construction or sale promises. A funded pilot is followed by at least three operating months before a replication review. Digital treasury trials may proceed alongside it within accepted rules.
 
-Three work streams may advance together: Rafael's housing and contractor evidence; John's communications and website; and professional review of the organization, resident rights and funding arrangement. Construction dates depend on the selected property, funding, permits and contractor plan. No token date is committed.
+Website v1 already presents the proposal and documents. Operational v2 adds verified delivery and financial reporting, independently of a token. Any v3 token access follows accepted rights, a reviewed offer/transfer route and verified technical/provider controls. A second local team must repeat the process before claims of scalable operation. [ICO comparison](roadmap.html#ico-comparison); [model FAQ](faq.html).
 
 | Pilot measure | Proposed evidence or decision |
 |---|---|
@@ -153,12 +157,12 @@ The first partner deck asks for expertise, evidence and a defined pilot delivery
 
 ## 12. Risks, decisions and evidence register
 
-Material questions remain: property contribution/control, legal form, enforceable resident terms, current costs, builder conflicts, affordability, reserves, tenancy risks, construction delivery, digital support, fraud, custody, conversion, market liquidity and permitted token transfers. The controls and responsible people should be named for the selected pilot, rather than assumed from the use of a DAO.
+The pilot needs named responsibility for property rights, agreements, affordability, construction, conflicts, reserves, custody and permitted transfers. Record unresolved decisions and their owners; a DAO label does not resolve them.
 
 | Statement | Evidence status for this draft |
 |---|---|
 | Rio rent-to-own aim and ground/digital roles | Founder direction recorded in the existing project research. |
-| $27,777 per-home / 36-home proposal | Founder-supplied historical planning figure; not a current pilot quote. |
+| $27,777 per-home / 36-home budget | Rafael’s November cost-engineered plan, using CUB/SINAPI references and itemized shared costs; preserve the reference basis and track execution. |
 | 20 January 2026 two-loft account | Founder-reported contract awaiting first deposit at that time; drawings/site photo supplied. Combined $27,777 construction figure clarified by the owner; scope and current status need confirmation. |
 | Donated/controlled properties and available capital | Unverified here; no number of received homes or donated value is asserted. |
 | IMOBX entity, executed agreements and permits | Needs documentary confirmation for the selected pilot. |
@@ -166,4 +170,4 @@ Material questions remain: property contribution/control, legal form, enforceabl
 | Reinvestment, resident voting and tokens | Design options; exact policies and rights still to agree. |
 | Scale and self-sufficiency | Hypotheses requiring a pilot baseline and cohort cash model. |
 
-Project assumptions and historical costs were supplied by the founders. This development paper does not independently verify property title, permits or company documents. Accepted pilot decisions and evidence will replace proposal wording as the project progresses. Public technical and regulatory sources are linked in the relevant sections.
+Founder inputs and cost references are attributed above. This publication does not independently verify title, permits or company documents. Update it as pilot decisions and evidence are accepted.

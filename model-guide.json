@@ -1,0 +1,612 @@
+{
+  "version": "0.1",
+  "date": "2026-10-15",
+  "stages": [
+    {
+      "id": "foundation",
+      "title": [
+        "Organização, imóvel e regras",
+        "Organization, property and rules"
+      ],
+      "window": [
+        "Meta proposta: primeiros 30 dias após o início acordado",
+        "Proposed target: first 30 days after an agreed start"
+      ],
+      "lead": [
+        "Rafael e John, com assessoria local",
+        "Rafael and John, with local advisers"
+      ],
+      "work": [
+        "Registrar responsabilidades e entidade, documentar acesso ao imóvel e usar o orçamento CUB/SINAPI de Rafael como base para o escopo escolhido, com valores em reais e acompanhamento de execução. Consultar as famílias sobre contrato e participação.",
+        "Record responsibilities and the entity, document property access and use Rafael’s CUB/SINAPI-based budget as the starting point for the selected scope, with BRL costs and execution tracking. Consult households on agreements and participation."
+      ],
+      "gate": [
+        "Um escopo de piloto; evidência de controle de cada imóvel incluído; orçamento completo; responsáveis nomeados; decisões jurídicas pendentes identificadas. Carta de intenções e doação concluída aparecem separadamente.",
+        "One pilot scope; evidence of control for every included property; a complete budget; named responsible people; identified legal decisions. A letter of intent and a completed donation are recorded separately."
+      ],
+      "web": [
+        "Website v1: proposta, estudos, custos históricos e documentos já acessíveis. Acrescentar documentos verificados e contatos autorizados conforme disponíveis.",
+        "Website v1: proposal, studies, historical costs and documents already accessible. Add verified documents and authorized contacts as available."
+      ]
+    },
+    {
+      "id": "cash-and-charter",
+      "title": [
+        "Dinheiro e poder de decisão",
+        "Money and decision authority"
+      ],
+      "window": [
+        "Meta proposta: dias 31–60; em paralelo à preparação do piloto",
+        "Proposed target: days 31–60; alongside pilot preparation"
+      ],
+      "lead": [
+        "Fundadores, moradores consultados, contador e assessoria jurídica",
+        "Founders, consulted residents, accountant and legal advisers"
+      ],
+      "work": [
+        "Definir reservas, créditos de compra, usos permitidos dos recursos e reinvestimento. Separar decisões dos moradores, deveres da administração e possíveis direitos financeiros. Rever a compatibilidade entre operação sem fins lucrativos e eventual rendimento a investidores.",
+        "Define reserves, purchase credits, permitted uses of funds and reinvestment. Separate resident decisions, management duties and possible financial rights. Review compatibility between nonprofit operation and any investor return."
+      ],
+      "gate": [
+        "Uma política de caixa testada com baixa ou nenhuma receita de negociação; uma carta de governança para consulta; quatro exercícios documentados: reparo comum, urgência de segurança, contestação de cobrança do construtor e expansão.",
+        "One cash policy tested with low or zero trading revenue; one consultation charter; four documented exercises: routine repair, safety emergency, challenged builder invoice and expansion."
+      ],
+      "web": [
+        "Publicar regras aprovadas, papéis, processo de reclamação e decisões ainda abertas, em linguagem simples.",
+        "Publish accepted rules, roles, complaint process and remaining decisions in plain language."
+      ]
+    },
+    {
+      "id": "funded-pilot",
+      "title": [
+        "Piloto financiado e acompanhado",
+        "Funded and monitored pilot"
+      ],
+      "window": [
+        "Decisão de prontidão até o dia 90; obra depende de recursos e autorizações",
+        "Readiness decision by day 90; construction depends on funds and permissions"
+      ],
+      "lead": [
+        "Entidade responsável, Rafael, profissionais habilitados e moradores",
+        "Accountable entity, Rafael, qualified professionals and residents"
+      ],
+      "work": [
+        "Contratar o escopo financiado, definir elegibilidade e contratos dos moradores, conferir a execução e registrar gastos. Após a ocupação, observar pelo menos três meses de operação antes da primeira avaliação de repetição.",
+        "Contract the funded scope, establish resident eligibility and agreements, check delivery and record spending. After occupancy, observe at least three operating months before the first replication review."
+      ],
+      "gate": [
+        "Antes da ocupação: controle do imóvel, condições de segurança e contratos adequados. Na avaliação: 100% dos recebimentos e pagamentos conciliados mensalmente; custos e atrasos apurados; saldo das reservas, obrigações e questões dos moradores registrados.",
+        "Before occupancy: property control, safety conditions and suitable agreements. At review: 100% of receipts and payments reconciled monthly; actual costs and delays reported; reserves, obligations and resident issues recorded."
+      ],
+      "web": [
+        "Website v2 operacional: relatórios reais de obra, caixa e compromissos. Dados pessoais ficam privados. Esta versão pode existir sem token.",
+        "Operational website v2: actual construction, cash and commitment reports. Personal data stays private. This version can exist without a token."
+      ]
+    },
+    {
+      "id": "digital-trial",
+      "title": [
+        "Tesouraria e participação em teste",
+        "Treasury and participation trial"
+      ],
+      "window": [
+        "Em paralelo, depois de regras e responsáveis definidos",
+        "In parallel, after rules and responsibilities are defined"
+      ],
+      "lead": [
+        "John e prestadores autorizados, com verificação independente",
+        "John and authorized providers, with independent checks"
+      ],
+      "work": [
+        "Testar uma entrada autorizada em USDC, sua conciliação em reais, uma decisão dentro do orçamento e a comprovação do pagamento. The Flock recebe perguntas e propostas; serviços de SIAH/HiveDAO dependem de trabalho separado e autorizado.",
+        "Test an authorized USDC receipt, its BRL reconciliation, a decision within budget and payment evidence. The Flock receives questions and proposals; SIAH/HiveDAO services depend on separately authorized work."
+      ],
+      "gate": [
+        "Uma trilha completa entre comprovante, autorização e destino; testes de duplicidade, limites e falhas; troca de operador; participação assistida sem carteira. A simulação não é anunciada como tesouraria financeira em produção.",
+        "A complete trail from evidence through authorization to destination; duplicate, limit and failure checks; operator handover; assisted participation without a wallet. A simulation is not reported as a production financial treasury."
+      ],
+      "web": [
+        "Mostrar o que foi simulado, testado ou efetivamente implantado, sem misturar esses estados.",
+        "Show what was simulated, tested or actually deployed, keeping these states distinct."
+      ]
+    },
+    {
+      "id": "token-decision",
+      "title": [
+        "Decidir o instrumento e o acesso",
+        "Decide the instrument and access"
+      ],
+      "window": [
+        "Sem data de venda; depende dos direitos e da rota jurídica",
+        "No sale date; dependent on rights and the legal route"
+      ],
+      "lead": [
+        "Entidade emissora, assessoria brasileira, participantes e prestadores responsáveis",
+        "Issuing entity, Brazilian advisers, participants and responsible providers"
+      ],
+      "work": [
+        "Escolher credencial de participação, instrumento financeiro ou estruturas distintas. Definir fonte de rendimento, direitos, registros, elegibilidade, transferência e custos. Comparar Arctide, Argus e soluções Uniswap com o mesmo percurso de uso.",
+        "Choose a participation credential, financial instrument or separate structures. Define income source, rights, registers, eligibility, transfers and costs. Compare Arctide, Argus and Uniswap solutions against the same owner journey."
+      ],
+      "gate": [
+        "Direitos e responsabilidades executáveis; rota de oferta e transferência revista; fonte de caixa demonstrada; contratos, custódia e permissões verificados; orçamento para suporte. Uma assessoria não equivale a aprovação regulatória. Se o token não melhorar o serviço, manter contratos e registros comuns.",
+        "Enforceable rights and responsibilities; reviewed offer and transfer route; demonstrated cash source; checked contracts, custody and permissions; funded support. Professional advice is not regulatory approval. If a token does not improve the service, retain ordinary agreements and records."
+      ],
+      "web": [
+        "Website v3, se aprovado: descrição exata dos direitos e acesso ao prestador adequado. Uma tela de compra não precede essa decisão.",
+        "Website v3, if accepted: exact rights and access to the appropriate provider. A purchase screen follows this decision."
+      ]
+    },
+    {
+      "id": "replication",
+      "title": [
+        "Repetir com outra equipe local",
+        "Repeat with another local team"
+      ],
+      "window": [
+        "Após a avaliação do piloto e o financiamento da próxima etapa",
+        "After pilot review and funding for the next stage"
+      ],
+      "lead": [
+        "Organização e representantes locais; nova equipe de execução",
+        "Organization and local representatives; a new delivery team"
+      ],
+      "work": [
+        "Reutilizar documentos, compras e relatórios, preservando decisões locais. Medir se outra equipe entrega o mesmo processo sem depender diariamente dos dois fundadores.",
+        "Reuse documents, purchasing and reports while preserving local decisions. Measure whether another team can deliver the same process without daily reliance on both founders."
+      ],
+      "gate": [
+        "Próximo escopo financiado; reservas e obrigações anteriores cobertas; custos completos de coordenação e controle comparados; nova equipe consegue operar. Modelar a perda de aluguel quando casas passam aos moradores. Mil casas não são uma prova automática de autossuficiência.",
+        "Next scope funded; existing reserves and obligations covered; full coordination and control costs compared; a new team can operate. Model rent ending as homes transfer to residents. One thousand homes is not automatic proof of self-sufficiency."
+      ],
+      "web": [
+        "Publicar resultados por projeto e etapa; distinguir casas planejadas, contratadas, entregues e transferidas.",
+        "Publish results by project and stage; distinguish homes planned, contracted, delivered and transferred."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ico",
+      "home": true,
+      "q": [
+        "O que muda em relação a uma ICO?",
+        "What changes compared with an ICO?"
+      ],
+      "a": [
+        [
+          "Uma ICO é uma venda de tokens para levantar capital. Em um percurso comum, vende-se primeiro para financiar o produto futuro. A proposta da IMOBX organiza primeiro o imóvel, os contratos, o custo e a autoridade sobre o dinheiro; a decisão sobre o token usa essas informações.",
+          "An ICO sells tokens to raise capital. A common journey sells first to finance a future product. IMOBX proposes first organizing the property, agreements, costs and authority over money; that evidence informs the token decision."
+        ],
+        [
+          "Isso muda a ordem e o objeto da prestação de contas; não cria uma nova receita nem dispensa regras de oferta. Doações, capital contratado e rendimentos têm usos distintos. Se houver venda futura, será preciso definir quem emite, o que o comprador recebe e como o dinheiro será usado. Nenhuma venda é estabelecida por este site.",
+          "This changes the sequence and what must be accounted for; it creates neither new revenue nor an exemption from offering rules. Donations, contracted capital and income have distinct uses. Any later sale needs a defined issuer, purchaser rights and uses of proceeds. This site establishes no sale."
+        ]
+      ],
+      "sources": [
+        "ico",
+        "cvm"
+      ]
+    },
+    {
+      "id": "cost-basis",
+      "home": true,
+      "q": [
+        "De onde vem o valor de US$27.777 por casa?",
+        "Where does the US$27,777 home figure come from?"
+      ],
+      "a": [
+        [
+          "É o orçamento desenvolvido por Rafael usando referências SindusCon/CUB e SINAPI, com sua estratégia de execução e compras. Em 30 novembro 2025, ele apresentou o cálculo de construção de US$21.883,86 e terreno de US$5.550, seguido de um orçamento otimizado dentro do teto de US$27.777 por casa de 45 m².",
+          "It is Rafael’s cost-engineered budget using SindusCon/CUB and SINAPI references, with his delivery and purchasing strategy. On 30 November 2025 he supplied a $21,883.86 construction calculation and $5,550 land allowance, followed by an optimized budget within a $27,777 cap per 45 m² home."
+        ],
+        [
+          "A composição final é: terreno US$5.550; construção US$18.600; solar US$1.500; infraestrutura e espaços compartilhados US$1.500; projetos e jurídico US$627. Rafael especificou pelo menos 36 casas construídas juntas para essa escala: US$999.972, em um programa de 12 meses. Os valores pertencem ao orçamento do projeto; não são uma tarifa completa por casa publicada pelo índice.",
+          "The final allocation is land $5,550; construction $18,600; solar $1,500; shared infrastructure and facilities $1,500; design and legal $627. Rafael specified at least 36 homes built together at that scale: $999,972, in a 12-month program. These are the project’s budget figures, not a complete-home tariff published by the index."
+        ],
+        [
+          "O trabalho agora é preservar a base de referência e acompanhar o orçamento por escopo, período, valores em reais e gastos realizados. O contrato de janeiro para dois lofts, US$27.777 pelos dois juntos, é outro caso e aparece separado.",
+          "The work now is to preserve the reference basis and track the budget by scope, period, BRL amounts and actual spending. The January contract for two lofts, $27,777 for both together, is a separate case shown separately."
+        ]
+      ],
+      "sources": [
+        "cost",
+        "sinapi",
+        "cub"
+      ]
+    },
+    {
+      "id": "yield",
+      "home": true,
+      "q": [
+        "Por que estudar um token com rendimento ou reinvestimento?",
+        "Why study a yield-bearing or compounding token?"
+      ],
+      "a": [
+        [
+          "Para avaliar se pequenos participantes podem ter direitos claros sobre uma atividade que gera receita e constrói novas moradias. Distribuir resultado e reinvestir resultado são escolhas diferentes. Reinvestir pode ampliar a operação; não aumenta automaticamente o preço do token nem cria um pagamento ao titular.",
+          "To assess whether small participants can hold clear rights connected to an income-producing activity that builds further homes. Distributing surplus and reinvesting it are different choices. Reinvestment may expand operations; it does not automatically increase token price or pay its holder."
+        ],
+        [
+          "O possível rendimento depende do caixa disponível depois de custos, obrigações com moradores e reservas, e de um direito financeiro válido. A proposta ainda não define taxas de retorno, períodos de espera ou reinvestimento automático. Se uma casa passa ao morador, seu aluguel deixa a carteira: a projeção precisa mostrar como a receita continua.",
+          "Potential yield depends on available cash after costs, resident obligations and reserves, and on a valid financial entitlement. The proposal has no defined return rate, waiting period or automatic reinvestment mechanism. When a home transfers to its resident, its rent leaves the portfolio: forecasts must show how revenue continues."
+        ]
+      ],
+      "sources": [
+        "cash"
+      ]
+    },
+    {
+      "id": "arc-arctide",
+      "home": true,
+      "q": [
+        "Por que Arc e Arctide? São a mesma coisa?",
+        "Why Arc and Arctide? Are they the same thing?"
+      ],
+      "a": [
+        [
+          "Arc é a rede de liquidação: a documentação descreve compatibilidade EVM e pagamento de taxas em USDC. Isso pode simplificar um caixa digital em USDC. Arctide é uma aplicação de lançamento e negociação nessa rede, com pares token/USDC e componentes separados de taxas para liquidez, projeto e plataforma.",
+          "Arc is the settlement network: its documentation describes EVM compatibility and USDC gas payments. That may simplify a USDC digital treasury. Arctide is a launch and exchange application on that network, with token/USDC pairs and separate liquidity, project and platform fee components."
+        ],
+        [
+          "A combinação é candidata para integrar receitas, não uma escolha irreversível. Gastos brasileiros continuam em reais; conversão e custos precisam ser medidos. Arc usa validadores permissionados. A autonomia da comunidade dependerá de direitos, controles e prestadores substituíveis, além da tecnologia utilizada.",
+          "The combination is a candidate for integrating receipts, not an irreversible choice. Brazilian expenses remain in BRL; conversion and costs need measurement. Arc uses permissioned validators. Community autonomy depends on rights, controls and replaceable providers as well as technology."
+        ]
+      ],
+      "sources": [
+        "arc",
+        "arctide"
+      ]
+    },
+    {
+      "id": "exchanges",
+      "home": false,
+      "q": [
+        "Por que não simplesmente Argus ou Uniswap?",
+        "Why not simply use Argus or Uniswap?"
+      ],
+      "a": [
+        [
+          "São alternativas reais. Argus documenta lançamentos na Arc com pools Uniswap v4 e receitas em USDC destinadas a criadores, dividendos e liquidez. Uniswap v4 permite lógica personalizada por hooks. USDC e recompensas financiadas por taxas não são exclusividades da Arctide.",
+          "They are real alternatives. Argus documents Arc launches using Uniswap v4 pools and USDC revenue allocations for creators, dividends and liquidity. Uniswap v4 supports custom logic through hooks. USDC and fee-funded rewards are not exclusive to Arctide."
+        ],
+        [
+          "Na Arctide, interessa testar o conjunto existente de lançamento, negociação e taxa de projeto. Exemplo: uma taxa recebida pelo destinatário autorizado pode ser conciliada com o caixa da organização. Na Argus, é preciso comparar as destinações e permissões do lançamento; em uma solução Uniswap, o pool e a lógica escolhidos. O teste compara custo completo, controles, suporte e compatibilidade jurídica, sem vencedor presumido.",
+          "Arctide’s existing launch, trading and project-fee components are worth testing together. For example, a fee received by an authorized recipient could be reconciled with the organization’s books. Argus requires comparing its launch allocations and permissions; a Uniswap solution requires selecting its pool and logic. The test compares full costs, controls, support and legal compatibility without a presumed winner."
+        ],
+        [
+          "Abrir outros mercados não acontece automaticamente. Tokens lançados na Arctide têm regras de aprovação de operadores descritas na documentação; a interoperabilidade deve ser verificada. Uma taxa de um pool não passa a valer em todos os outros, e espalhar liquidez cedo pode piorar preços e custos.",
+          "Additional markets do not open automatically. Arctide-launched tokens have documented spender-approval rules; interoperability must be checked. One pool’s fee does not apply to every other pool, and splitting liquidity too early can worsen execution and costs."
+        ]
+      ],
+      "sources": [
+        "arctide",
+        "argus",
+        "uniswap"
+      ]
+    },
+    {
+      "id": "funding",
+      "home": false,
+      "q": [
+        "As taxas de negociação pagam as casas?",
+        "Do trading fees pay for the homes?"
+      ],
+      "a": [
+        [
+          "Podem ser uma receita complementar quando realmente recebidas e destinadas a esse uso. Volume e preço do token não são dinheiro disponível para construir. Aluguel, doações, subsídios e taxas ficam identificados separadamente, com suas restrições e obrigações.",
+          "They can be supplementary revenue when actually received and allocated to that use. Trading volume and token price are not spendable construction cash. Rent, donations, grants and fees stay separately identified, with their restrictions and obligations."
+        ],
+        [
+          "A documentação da Arctide distingue negociações na curva, sem taxa de swap antes da graduação, e as taxas dos pools posteriores. Capital reservado à liquidez não pode também ser contado como orçamento de obra. O piloto deve ter um plano financiado que continue compreensível com receita de negociação baixa ou zero.",
+          "Arctide documentation distinguishes curve trading, with no swap fee before graduation, from subsequent pool fees. Capital allocated to liquidity cannot also count as construction funding. The pilot needs a funded plan that still makes sense with low or zero trading revenue."
+        ]
+      ],
+      "sources": [
+        "arctide",
+        "cash"
+      ]
+    },
+    {
+      "id": "property",
+      "home": true,
+      "q": [
+        "Por que não dividir cada imóvel em tokens?",
+        "Why not fractionalize each property?"
+      ],
+      "a": [
+        [
+          "A direção em estudo é apoiar uma operação habitacional que se repete, preservando a transferência de uma casa inteira à família. Evita-se criar uma assembleia de investidores diferente para cada imóvel. Compras, reservas e administração podem ser compartilhadas entre projetos.",
+          "The direction under study supports a repeatable housing operation while preserving transfer of a whole home to its household. It avoids creating a different investor assembly for every property. Purchasing, reserves and administration can be shared across projects."
+        ],
+        [
+          "Um eventual direito sobre uma entidade ou carteira precisa definir quais ativos, dívidas e receitas inclui; compartilhar a carteira também compartilha riscos. Fracionar um imóvel pode ser adequado a outros modelos. Aqui ainda não há um token que represente título, fração de casa ou participação financeira escolhida.",
+          "Any future claim on an entity or portfolio must define included assets, liabilities and income; pooling a portfolio also pools risks. Property fractionalization can suit other models. Here no token represents title, a home fraction or a selected financial interest today."
+        ]
+      ],
+      "sources": [
+        "rights"
+      ]
+    },
+    {
+      "id": "nonprofit",
+      "home": true,
+      "q": [
+        "Por que uma operação sem fins lucrativos? Como fica o rendimento?",
+        "Why nonprofit operation? What happens to investor yield?"
+      ],
+      "a": [
+        [
+          "A intenção é preservar a missão: manter moradias, cumprir acordos dos moradores e aplicar recursos na expansão. A forma jurídica está em revisão; este site não comprova que a IMOBX já seja uma entidade sem fins lucrativos registrada. Ter receita e contratar serviços legítimos é diferente de distribuir lucro aos investidores.",
+          "The intention is to preserve the mission: maintain homes, fulfill resident agreements and apply resources to expansion. The legal form is under review; this site does not establish that IMOBX is already a registered nonprofit. Earning revenue and contracting legitimate services differ from distributing profit to investors."
+        ],
+        [
+          "Na definição de entidade sem fins lucrativos da Lei 13.019 para parcerias com o poder público, os resultados são aplicados no objeto social e não distribuídos. Portanto, a proposta precisa escolher: participação sem direito a lucro, ou um arranjo financeiro permitido, possivelmente separado, revisto com assessoria brasileira. Um rótulo de DAO não resolve essa escolha, e doações restritas não viram dividendos.",
+          "Under Law 13.019’s nonprofit definition for public-sector partnerships, results go toward the social purpose rather than distributions. The proposal therefore needs a choice: participation without a profit entitlement, or a permitted financial arrangement, potentially separate, reviewed with Brazilian advisers. A DAO label does not resolve this choice, and restricted donations do not become dividends."
+        ]
+      ],
+      "sources": [
+        "nonprofit",
+        "cvm"
+      ]
+    },
+    {
+      "id": "scale",
+      "home": true,
+      "q": [
+        "O que pode tornar o modelo escalável e sustentável?",
+        "What could make the model scalable and sustainable?"
+      ],
+      "a": [
+        [
+          "Reutilizar projetos, contratos, compras e relatórios pode reduzir trabalho por moradia. Reinvestir recursos efetivamente disponíveis pode financiar novos projetos. Equipes locais decidem o que lhes cabe; a rede compartilha padrões e serviços. A hipótese combina construção, organização e registros comuns, em vez de depender de valorização contínua do token.",
+          "Reusing designs, agreements, purchasing and reports may reduce work per home. Reinvesting genuinely available funds may finance new projects. Local teams decide within their authority; the network shares standards and services. The hypothesis combines construction, organization and common records rather than relying on continuous token appreciation."
+        ],
+        [
+          "A vantagem precisa aparecer nos resultados: custo completo entregue, despesas de coordenação por casa, reservas, pagamentos cumpridos, resolução de problemas e progresso dos moradores até a compra. Uma segunda equipe deve repetir o processo. Blockchain, ausência de inflação do token e mil casas, isoladamente, não demonstram sustentabilidade.",
+          "The advantage must appear in outcomes: full delivered cost, coordination expense per home, reserves, fulfilled payments, issue resolution and residents’ ownership progress. A second team must repeat the process. Blockchain, a noninflationary token and one thousand homes do not individually demonstrate sustainability."
+        ]
+      ],
+      "sources": [
+        "roadmap",
+        "ostrom"
+      ]
+    },
+    {
+      "id": "rwa",
+      "home": true,
+      "q": [
+        "O que faz disso um ativo do mundo real, ou RWA?",
+        "What makes this a real-world asset, or RWA?"
+      ],
+      "a": [
+        [
+          "Os imóveis e os contratos são a base econômica real. Para um token representá-la, precisa existir uma ligação jurídica definida entre o titular e um ativo, entidade ou receita identificados, com responsabilidades e possibilidade de exigir o cumprimento do direito.",
+          "The properties and agreements are the real economic foundation. For a token to represent it, a defined legal connection must link its holder to identified assets, an entity or income, with responsibilities and an enforceable claim."
+        ],
+        [
+          "Uma foto de imóvel ou um comprovante de pagamento onchain não cria essa ligação. Hoje a IMOBX apresenta uma proposta habitacional e pesquisa sua estrutura de tokenização; ainda não afirma ter emitido um token lastreado nos imóveis.",
+          "A property photograph or onchain payment receipt does not create that connection. Today IMOBX presents a housing proposal and researches its tokenization structure; it does not claim to have issued a property-backed token."
+        ]
+      ],
+      "sources": [
+        "rights",
+        "cvm"
+      ]
+    },
+    {
+      "id": "dao",
+      "home": true,
+      "q": [
+        "Por que chamar de DAO? O que seria autônomo?",
+        "Why call it a DAO? What would be autonomous?"
+      ],
+      "a": [
+        [
+          "DAO descreve a direção: uma organização em que decisões e recursos seguem poderes compartilhados e regras verificáveis. Depois de aprovadas, tarefas limitadas, como executar uma distribuição autorizada, podem ser automatizadas. Construção, contratos e resolução de conflitos continuam com pessoas e instituições responsáveis.",
+          "DAO describes the direction: an organization where decisions and resources follow shared powers and verifiable rules. Once accepted, bounded tasks, such as executing an authorized distribution, may be automated. Construction, agreements and dispute resolution retain accountable people and institutions."
+        ],
+        [
+          "A IMOBX é uma DAO em desenvolvimento. Para demonstrar descentralização, precisa mostrar quem pode decidir, controlar pagamentos, contestar decisões e substituir operadores. Um token de votação controlado por poucas carteiras ou uma única chave de tesouraria não demonstra essa autonomia.",
+          "IMOBX is a DAO in development. To demonstrate decentralization, it needs to show who can decide, control payments, challenge decisions and replace operators. A voting token held by a few wallets or a single treasury key does not demonstrate that autonomy."
+        ]
+      ],
+      "sources": [
+        "roadmap",
+        "ostrom"
+      ]
+    },
+    {
+      "id": "governance",
+      "home": true,
+      "q": [
+        "Um token de governança dá todo o poder a quem tem mais dinheiro?",
+        "Does a governance token give the wealthy all the power?"
+      ],
+      "a": [
+        [
+          "Se a regra for um token igual a um voto em todas as decisões, quem compra mais pode dominar. Mas governança significa direitos de decisão definidos; não obriga essa fórmula. Um direito financeiro pode ser separado da condição de membro e da voz de quem mora no projeto.",
+          "If the rule is one token equals one vote on every decision, larger buyers can dominate. But governance means defined decision rights; it does not require that formula. A financial entitlement can be separate from membership and the voice of people living in the project."
+        ],
+        [
+          "Uma opção para consulta é ter voz igual por membro no conselho de moradores, representantes de trabalho eleitos e direitos de investidores limitados ao instrumento contratado. O registro de quem é membro deve ser verificável e não transferido junto com a venda de um token. A ICA oferece uma referência de controle democrático; Ostrom ajuda a adaptar responsabilidades e fiscalização ao recurso e às pessoas afetadas. Nenhum dos dois fornece uma fórmula automática para a IMOBX.",
+          "One consultation option is equal member voice in a resident body, elected work representatives and investor rights limited to their contracted instrument. The membership register must be verifiable and must not transfer with a token sale. The ICA supplies a democratic-control reference; Ostrom helps adapt responsibilities and oversight to the resource and affected people. Neither supplies an automatic IMOBX formula."
+        ]
+      ],
+      "sources": [
+        "ica",
+        "ostrom"
+      ]
+    },
+    {
+      "id": "merit",
+      "home": false,
+      "q": [
+        "Como dar espaço a quem faz e usa, sem criar outra elite?",
+        "How can users and contributors lead without creating another elite?"
+      ],
+      "a": [
+        [
+          "A experiência pode ajudar a escolher quem executa uma tarefa, sem dar a essa pessoa poder permanente sobre os demais. Uma opção é eleger ou nomear responsáveis por competência demonstrada, por prazo definido, com limites de gasto, prestação de contas, contestação e possibilidade de substituição.",
+          "Experience can help select someone to perform a task without giving them permanent power over everyone else. One option is to elect or appoint people for demonstrated competence, for a defined term, with spending limits, reporting, challenges and replacement."
+        ],
+        [
+          "Um morador pode ter voz sobre o espaço que usa sem competir em atividade online. Registros de trabalho podem informar uma escolha humana, com consentimento e revisão; não precisam virar pesos automáticos de voto. Mais tempo de residência pode apoiar uma candidatura, mas não deve apagar a voz dos recém-chegados. Descanso, doença ou saída não apagam trabalho já reconhecido.",
+          "A resident can have a voice over the space they use without competing in online activity. Work records can inform a human choice, with consent and review; they need not become automatic voting weights. Longer residence may support a candidacy without erasing newcomers’ voice. Rest, illness or leaving does not erase previously recognized work."
+        ],
+        [
+          "Direitos de ocupação e compra continuam definidos no contrato e na lei. Não dependem de pontuação, propaganda, saldo de token ou aprovação de um agente. Regras contra identidade duplicada, conflitos de interesse e captura de representação precisam ser testadas com os participantes.",
+          "Occupancy and purchase rights remain defined by agreements and law. They do not depend on a score, promotion, token balance or an agent’s approval. Rules against duplicate identities, conflicts and captured representation need testing with participants."
+        ]
+      ],
+      "sources": [
+        "charter",
+        "ica"
+      ]
+    },
+    {
+      "id": "flock-siah",
+      "home": false,
+      "q": [
+        "É aqui que entram The Flock, SIAH e HiveDAO?",
+        "Is this where The Flock, SIAH and HiveDAO fit?"
+      ],
+      "a": [
+        [
+          "Sim, como ferramentas para exercer e acompanhar regras acordadas. The Flock é a interface Telegram proposta: mostrar regras e contas aprovadas, receber perguntas, pedidos e propostas, e devolver andamento e respostas. Precisa haver uma rota acessível para moradores sem carteira ou familiaridade com cripto.",
+          "Yes, as tools for exercising and following agreed rules. The Flock is the proposed Telegram interface: show approved rules and accounts, receive questions, requests and proposals, and return status and responses. Residents need an accessible route without a wallet or crypto familiarity."
+        ],
+        [
+          "O papel proposto para SIAH/HiveDAO é apoiar a organização de evidências, tarefas delegadas e coordenação entre comunidades. A implementação e as interfaces pertencem a trabalho separado do backend. Não afirmamos que esses serviços já executam a governança da IMOBX. Nenhum agente ganha autoridade sobre moradia ou pagamentos por ser chamado de mentor.",
+          "The proposed SIAH/HiveDAO role is to support evidence organization, delegated work and coordination across communities. Implementation and interfaces belong to separate backend work. We do not claim those services already execute IMOBX governance. Calling an agent a mentor gives it no authority over housing or payments."
+        ],
+        [
+          "Exemplo: o morador relata uma infiltração; um responsável avalia; o construtor apresenta orçamento; outra pessoa autoriza dentro do limite; a conclusão é conferida e o pagamento conciliado. A comunidade pode contestar o resultado. O teste é conseguir seguir esse processo, inclusive na ausência do fundador ou do bot.",
+          "Example: a resident reports a leak; a responsible person assesses it; the builder quotes; someone else authorizes within their limit; completion is checked and payment reconciled. The community can challenge the result. The test is whether this process works even when the founder or bot is unavailable."
+        ]
+      ],
+      "sources": [
+        "charter",
+        "digital"
+      ]
+    },
+    {
+      "id": "tenant-access",
+      "home": false,
+      "q": [
+        "Como os moradores recebem tokens ou mais voz?",
+        "How would residents receive tokens or more voice?"
+      ],
+      "a": [
+        [
+          "Ainda não foi escolhido um plano de distribuição aos moradores. Primeiro precisamos distinguir a entrada no programa de moradia, a participação na comunidade e a aquisição de um possível investimento. Ter contrato de moradia não deve exigir comprar um token financeiro.",
+          "No resident distribution plan has been selected. First we need to distinguish entering the housing program, participating in the community and acquiring a possible investment. A housing agreement should not require purchasing a financial token."
+        ],
+        [
+          "Uma credencial pessoal de membro, representação eleita e eventual instrumento financeiro separado são opções a consultar. Ganhar experiência na comunidade pode apoiar responsabilidades maiores, com mandato e revisão. A fração adquirida da casa progride conforme o contrato, e não conforme votos ou atividade em redes sociais.",
+          "A personal membership credential, elected representation and a possible separate financial instrument are options for consultation. Community experience may support greater responsibility, with a mandate and review. The share of the home acquired progresses under the agreement, not according to votes or social-media activity."
+        ]
+      ],
+      "sources": [
+        "rights",
+        "charter"
+      ]
+    },
+    {
+      "id": "euler",
+      "home": false,
+      "q": [
+        "O cálculo acumulado de recompensas é uma vantagem exclusiva?",
+        "Is accumulator-based reward accounting an exclusive advantage?"
+      ],
+      "a": [
+        [
+          "O cálculo por acumulador permite atualizar um direito sem pagar todos os participantes a cada entrada. Cada pessoa faz sua retirada. Isso pode reduzir o trabalho de uma distribuição, mas há custos de retiradas, armazenamento e integração. A economia precisa ser medida com a mesma carga de uso.",
+          "Accumulator accounting can update an entitlement without paying every participant on each receipt. Each person claims separately. That may reduce work per distribution, but claims, storage and integration still cost money. Savings need measurement against the same workload."
+        ],
+        [
+          "É um padrão útil, não uma exclusividade comprovada: a própria documentação da Argus também descreve dividendos por acumulador e retirada individual. O cálculo não cria receita nem define quem tem direito. A vantagem para IMOBX teria de aparecer no conjunto de direitos, controles, integração e operação.",
+          "It is a useful pattern, not a demonstrated exclusive feature: Argus itself documents accumulator-based dividends and individual claims. Accounting creates neither revenue nor eligibility. An IMOBX advantage would have to appear in the combination of rights, controls, integration and operations."
+        ]
+      ],
+      "sources": [
+        "argus",
+        "technical"
+      ]
+    }
+  ],
+  "sources": {
+    "ico": {
+      "label": "Investor.gov · Initial coin offerings",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-16"
+    },
+    "cvm": {
+      "label": "CVM · Parecer de Orientação 40",
+      "url": "https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html"
+    },
+    "nonprofit": {
+      "label": "Lei 13.019 · art. 2º, I, a",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm"
+    },
+    "ica": {
+      "label": "ICA · Cooperative identity",
+      "url": "https://ica.coop/en/cooperatives/cooperative-identity"
+    },
+    "ostrom": {
+      "label": "Elinor Ostrom · Nobel lecture",
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/"
+    },
+    "arc": {
+      "label": "Arc · Litepaper",
+      "url": "https://www.arc.io/litepaper"
+    },
+    "arctide": {
+      "label": "Arctide · Integration documentation",
+      "url": "https://github.com/0xRustyDev/arctide-docs"
+    },
+    "argus": {
+      "label": "Argus · Official repository",
+      "url": "https://github.com/arguspad/argus-world"
+    },
+    "uniswap": {
+      "label": "Uniswap · v4 protocol overview",
+      "url": "https://developers.uniswap.org/docs/protocols/v4/overview"
+    },
+    "cash": {
+      "label": "IMOBX · Proposed cash policy",
+      "url": "whitepaper.html#4-how-the-money-would-work"
+    },
+    "rights": {
+      "label": "IMOBX · Proposed rights",
+      "url": "whitepaper.html#8-what-a-token-could-represent"
+    },
+    "digital": {
+      "label": "IMOBX · Proposed digital work",
+      "url": "whitepaper.html#9-what-becomes-digital"
+    },
+    "technical": {
+      "label": "IMOBX · Technical acceptance requirements",
+      "url": "devsheet.html#6-development-scope-and-acceptance-evidence"
+    },
+    "roadmap": {
+      "label": "IMOBX · Roadmap",
+      "url": "roadmap.html"
+    },
+    "charter": {
+      "label": "IMOBX · Governance consultation",
+      "url": "roadmap.html#governance"
+    },
+    "cost": {
+      "label": "IMOBX · Cost breakdown",
+      "url": "whitepaper.html#3-the-cost-proposal-already-supplied"
+    },
+    "sinapi": {
+      "label": "CAIXA · SINAPI",
+      "url": "https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx"
+    },
+    "cub": {
+      "label": "Sinduscon · CUB scope",
+      "url": "https://sinduscon-caxias.net.br/servicos/cub"
+    }
+  }
+}

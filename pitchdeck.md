@@ -2,7 +2,7 @@
 
 A documented rent-to-own housing model for Rio
 
-**Partner discussion draft · v0.1 · 15 October 2026**
+**Partner discussion draft · v0.2 · 15 October 2026**
 
 
 
@@ -42,9 +42,9 @@ The intended pilot serves households displaced or excluded from ordinary housing
 
 
 
-## 3. A cost proposal exists. The pilot needs its own budget.
+## 3. A reference-based budget. A delivery plan to track.
 
-US$27,777 per home was a founder-supplied proposal based on at least 36 homes.
+Rafael’s $27,777 per-home budget uses CUB/SINAPI references and cost engineering.
 
 
 
@@ -52,11 +52,11 @@ US$27,777 per home was a founder-supplied proposal based on at least 36 homes.
 
 - Shared infrastructure $1,500 · legal/design $627.
 
-- Update the selected pilot in BRL, with scope, margin, contingency and operating costs.
+- Track the reference period, BRL scope and actual spending; the village assumes 36 homes.
 
 
 
-**Presenter notes:** The five lines total $27,777. The historical 36-home total is $999,972 with a 12-month proposal. This is neither an independent quote nor a one-home delivery commitment. The cost is an evidence item to reconcile, not a headline return claim. Rafael’s November village concept includes shared outdoor space, rooftop solar, an orchard and two study rooms. Explain these as intended household/community benefits, with maintenance and resident decision rules. The January two-loft amount is $27,777 combined, a different scope from this per-home village proposal. See the dated study archive.
+**Presenter notes:** Rafael explicitly cited SindusCon/CUB and SINAPI in November 2025. On 30 November he provided a $21,883.86 construction calculation plus land, then an optimized $27,777 budget with direct procurement and shared costs. The five lines total $27,777. He specified 36 homes, $999,972 and a 12-month program. Present this engineering basis rather than an unexplained number. Preserve scope and current execution records. A blanket 15% CUB deduction is not an independently proved saving: the reference scope matters. The January two-loft contract is $27,777 combined and is a separate case.
 
 
 
@@ -114,75 +114,75 @@ Cover the homes already operating. Then finance the next cohort.
 
 
 
-## 7. Write down who decides what.
+## 7. A voice comes from a role, not just a balance.
 
-Residents help shape suitable local decisions; their contracts define their rights.
-
-
-
-- Consult on maintenance priorities, shared facilities and support.
-
-- Define board duties, budget authority and conflict rules.
-
-- Protect occupancy and the ownership path from unrelated token votes.
+Consult on resident authority, delegated work and separately defined financial rights.
 
 
 
-**Presenter notes:** Ostrom informs the design direction: boundaries, affected users' participation, monitoring and accessible dispute resolution. There is no tenant-token allocation or adopted voting-weight plan. Compare household/member participation options with advisers and residents. IMOBX’s ambition is a DAO supported by tested shared rules and useful digital records; the current paper sets out the proposed decision boundaries.
+- Resident voice on shared use and maintenance within agreed limits.
+
+- Time-limited delivery roles, conflict checks and replaceable representatives.
+
+- Occupancy and purchase rights stay protected by agreements and law.
+
+
+
+**Presenter notes:** One token, one vote on everything risks purchased control. The consultation example uses equal voice per verified member in resident matters, relevant experience for elected/appointed work roles, and financial-holder rights defined by their instrument. It is not an adopted charter. Ostrom informs boundaries, local fit, collective choice, accountable monitoring, proportionate responses, conflicts, recognized authority and nested levels. See roadmap.html#governance. Online activity or a score does not decide housing rights.
 
 
 
 ## 8. Use digital records where they reduce work.
 
-The Flock is the proposed Telegram project desk. Arctide is a candidate for USDC settlement.
+The Flock is the proposed Telegram desk. Arc is the settlement network; Arctide is a candidate application.
 
 
 
-- Approved updates and support requests reach the responsible people.
+- Approved rules, requests and responses make responsibilities visible.
 
-- A configured project-fee recipient could receive supplementary USDC trade fees.
+- Compare Arctide project fees with Argus and Uniswap alternatives.
 
-- Housing contracts and private resident records keep their own responsible process.
-
-
-
-**Presenter notes:** Arctide fee components are described in its integration documentation. The IMOBX recipient and integration are not demonstrated. The Flock remains neutral. Its contribution/reward backend is a separate authorized service; this deck does not promise live payouts.
+- SIAH/HiveDAO coordination is proposed backend work, not a deployed IMOBX claim.
 
 
 
-## 9. Define the right before selecting the token.
-
-A participation credential and a financial interest are different products.
+**Presenter notes:** The Flock stays neutral. Arc documents USDC gas; Arctide documents token/USDC pairs and configured fee recipients. Argus also documents USDC distributions and accumulator dividends; Uniswap v4 supports custom hooks. No exclusive-reward or universal-cost advantage is established. Trial receipt reconciliation, permissions, support costs and provider replacement. No automated agent acquires authority over homes by being called a mentor.
 
 
 
-- Specify issuer, rights, governance scope and transfer process.
+## 9. Separate participation from financial entitlement.
 
-- Review eligibility, offer language and providers with Brazilian advisers.
-
-- Proceed with ordinary contracts if a token adds no useful benefit.
+A mission-led nonprofit operator and an investor dividend need distinct legal consideration.
 
 
 
-**Presenter notes:** CVM Guidance Opinion 40 concerns cryptoasset characteristics and rights. Do not claim SEC, MiCA or Brazilian approval. No supply, APY, sale date, tenant allocation or payout plan is agreed. Website v2 requires accepted rights and a permitted provider route.
+- Choose the legal form and protect restricted donations and resident commitments.
+
+- Define any financial claim, issuer, cash source and permitted offer/transfer route.
+
+- Reinvestment may grow operations; it is not automatic token yield or appreciation.
 
 
 
-## 10. Move from evidence to a delivered pilot.
-
-Three work streams: housing evidence, operating/legal design and digital communication.
+**Presenter notes:** Under Law 13.019's nonprofit definition for public-sector partnerships, results support the social purpose rather than distributions. Do not promise the nonprofit's profits as investor dividends. Consider participation without profit rights or a separately permitted financial arrangement with Brazilian advisers; no structure is adopted. A DAO/governance label does not settle securities treatment. No supply, APY, sale date or tenant allocation is agreed.
 
 
 
-- Agree founder roles, property file and selected resident pathway.
+## 10. Evidence gates, with parallel work streams.
 
-- Reconcile the budget, cash rules and governance; review the whitepaper.
-
-- Publish verified website v1 information; deliver, report and evaluate the next cohort.
+The distinct roadmap links housing delivery, governance and useful digital services.
 
 
 
-**Presenter notes:** This roadmap has evidence gates rather than a promised calendar. Token-specific paper/website v2 follows the legal/provider and contract verification gates. Permits, funding and scope determine construction time.
+- Days 1–30: roles, entity/property evidence, scoped budget and consultation.
+
+- Days 31–60: cash rules and decision exercises; day 90: readiness decision.
+
+- Funded pilot → operating evidence → token decision and repeatable delivery.
+
+
+
+**Presenter notes:** Proposed preparation targets start only from an agreed date; construction needs funding, property and permits. Observe at least three operating months before the first replication review. Website v1 is published; operational v2 reports real delivery/cash and does not require a token. Optional v3 token access follows rights, legal/provider and technical verification. See roadmap.html and faq.html. A second local team must repeat the process; one thousand homes does not prove self-sufficiency.
 
 
 
@@ -237,3 +237,11 @@ The next ask is practical expertise and a bounded delivery arrangement.
 - [IBGE: 2022 Census context](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas)
 
 - [UN-Habitat: adequate housing](https://unhabitat.org/11-1-adequate-housing)
+
+- [IMOBX roadmap and consultation charter](https://siah-kin.github.io/imobx-website/roadmap.html)
+
+- [IMOBX model FAQ](https://siah-kin.github.io/imobx-website/faq.html)
+
+- [ICA cooperative identity](https://ica.coop/en/cooperatives/cooperative-identity)
+
+- [Law 13.019 article 2](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm)

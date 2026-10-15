@@ -2,7 +2,7 @@
 
 ## Developer & pilot specification
 
-**Revision 0.2 · 15 October 2026 · founder review draft**
+**Revision 0.3 · 15 October 2026 · founder review draft**
 
 ### 1. What we are preparing
 
@@ -33,9 +33,9 @@ This sheet replaces the original devsheet as a **review draft**. The whitepaper 
 
 ## 2. The home, budget and resident pathway
 
-### Existing cost proposal: preserve and update it
+### Rafael’s reference-based cost budget
 
-| Item | Historical USD estimate per home |
+| Item | Rafael’s budget, USD per home |
 |---|---:|
 | Land | 5,550 |
 | House construction, 45 square metres | 18,600 |
@@ -44,7 +44,7 @@ This sheet replaces the original devsheet as a **review draft**. The whitepaper 
 | Legal and design | 627 |
 | **Total** | **27,777** |
 
-The background proposal assumed at least 36 homes and a 12-month program: 36 × $27,777 = $999,972. These are founder-supplied estimates with shared costs, not a current one-home quote. For the selected pilot, document current BRL prices, land/control terms, permissions, utility connections, builder margin, contingency and lifecycle expenses. SINAPI and CUB are reference inputs to reconcile against scope and invoices; an index alone does not verify a particular complete-home price.
+Rafael explicitly identified SindusCon's CUB and SINAPI in November 2025. On 30 November he supplied the construction calculation, land allowance and the optimized budget above, followed by the minimum 36-home scale and a 12-month program: 36 × $27,777 = $999,972. Preserve that engineering/reference basis. Record the selected reference period, project quantities, BRL costs and actual invoices, alongside land/control, permissions, utility connections, contingency and lifecycle expenses.
 
 State the date, location, quantities, exclusions and treatment of overhead/profit in the selected price basis. Check the [CUB scope](https://sinduscon-caxias.net.br/servicos/cub) before any proposed margin deduction; builder remuneration is among its exclusions. [CAIXA: SINAPI reference documentation](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx).
 
@@ -184,27 +184,31 @@ These are acceptance requirements, not a designed API or an audit result. Use an
 
 ## 7. Pilot roadmap and success measures
 
-The following are **proposed planning targets relative to an agreed start date**, not confirmed commitments or launch forecasts. The founders should accept owners and dates after checking professional availability. Construction follows the selected funded scope and permissions, not these document-preparation targets.
+The [public roadmap](roadmap.html) consolidates owners, website versions and evidence gates; its [governance example](roadmap.html#governance) and [FAQ](faq.html) explain open rights, nonprofit/yield and platform choices. These are consultation and front-end requirements, not backend interfaces.
 
-| Target | Deliverable and measurable completion | Proposed lead |
-|---|---|---|
-| By day 14 | One founder responsibility/control agreement; one inventory covering every offered pilot property, with evidence status. | Rafael + John |
-| By day 30 | One selected pilot scope and current BRL budget; resident terms and property/control route submitted for local review. | Rafael + local advisers |
-| By day 45 | One cash model and allocation policy showing low/zero-trading needs, reserves, transfer obligations and separately funded expansion. | Founders + accountant |
-| By day 60 | Reviewed whitepaper and website v1 wording; resident consultation findings; priced legal/provider and digital implementation options. | John + Rafael + advisers |
-| By day 90 | Documented proceed/revise decision: accepted rights, cash available for the selected commitments, delivery responsibilities, reporting and support. | Accountable organization |
+Targets below start from an agreed date. The responsible people must accept them; construction additionally needs property, funding and permissions.
+
+| Target | Completion evidence and proposed lead |
+|---|---|
+| Day 14 | Founder roles/control agreement and inventory of offered properties. Rafael + John. |
+| Day 30 | Selected scope, current BRL budget, resident terms and property/control route for review. Rafael + local advisers. |
+| Day 45 | Cash rules covering reserves, low/zero trading, transfers and expansion. Founders + accountant. |
+| Day 60 | Reviewed v1 documents, resident consultation and decision charter; four decision exercises and priced provider options. Founders + advisers. |
+| Day 90 | Proceed/revise decision with rights, available funds, responsibilities, reporting and support. Accountable organization. |
 
 ### Once the pilot operates
 
-- **Rights:** every included home has documented control and an executed resident agreement before occupancy under the program.
-- **Money:** reconcile every receipt and payment monthly; report restricted funds, reserve balance and unexplained differences as unresolved.
-- **Delivery:** record actual cost, completion evidence and schedule variance for each included home.
-- **Resident outcomes:** record support resolution, participation and ownership progress under the agreement; set service-time and affordability targets with residents.
-- **Expansion:** fund the next cohort and its added operating responsibilities before committing to it. Do not use token price or holder count as evidence of housing delivery.
+- **Rights:** documented property control and an executed resident agreement for every included home before occupancy.
+- **Money:** reconcile 100% of receipts/payments monthly; identify restrictions, reserves and unresolved differences.
+- **Delivery:** record completion, actual cost and schedule variance for each included home.
+- **Residents:** record issues, participation and ownership progress; agree affordability and response-time targets locally.
+- **Replication:** observe at least three operating months before the first review; fund the next scope and preserve existing obligations.
+
+Website v2 reports verified operations without requiring a token. Any v3 token access follows accepted rights, a reviewed legal/provider route and checked controls. No fixed token launch date is set.
 
 ### Pilot-funded growth, not assumed grant awards
 
-Grants, donations and assigned external construction/service receipts are candidate funding routes. For each, establish eligibility, current terms, restricted uses, application costs and what has actually been awarded or received. SDG 11 is a reporting reference, not an IMOBX grant award. No named fund's amount or application date is assumed in this specification. One thousand homes remains a cohort-model hypothesis, not a self-sufficiency milestone already proved.
+Grants, donations and assigned service/construction receipts are candidate funding sources. Record eligibility, restrictions, awards and actual receipts separately. SDG 11 is not a grant award. One thousand homes remains a cohort-model hypothesis, not demonstrated self-sufficiency.
 
 <div class="pagebreak"></div>
 

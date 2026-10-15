@@ -5,6 +5,7 @@ import json
 import re
 import xml.etree.ElementTree as ET
 import zipfile
+from model_guide import build_guide
 
 import markdown
 from pptx import Presentation
@@ -42,29 +43,29 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None):
 <title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}</head>
 <body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review">{label('Projeto em desenvolvimento', 'Project in development')} · v{esc(version)} · 15 October 2026</div>
 <nav class="wrap paper-nav" aria-label="Documents"><a class="wordmark" href="index.html"><img class="brand-logo" src="assets/imobx-logo-light.png" width="94" height="94" alt="IMOBX"></a>
-<span><a href="resources.html">{label('Recursos', 'Resources')}</a> · <a href="whitepaper.html">Whitepaper</a> · <a href="pitchdeck.html">Pitch deck</a> · <a href="devsheet.html">{label('Ficha do piloto', 'Pilot specification')}</a> · <a href="index.html">Website</a></span></nav>
+<span><a href="resources.html">{label('Recursos', 'Resources')}</a> · <a href="roadmap.html">{label('Roteiro', 'Roadmap')}</a> · <a href="faq.html">FAQ</a> · <a href="whitepaper.html">Whitepaper</a> · <a href="pitchdeck.html">Pitch deck</a> · <a href="index.html">Website</a></span></nav>
 {body}</body></html>'''
 
 
 RESOURCE_CATALOG = [
-    {'id': 'media-kit', 'pt': 'Media kit IMOBX', 'en': 'IMOBX media kit', 'version': '0.1',
+    {'id': 'media-kit', 'pt': 'Media kit IMOBX', 'en': 'IMOBX media kit', 'version': '0.2',
      'description_pt': 'Logos para fundos claros e escuros, cores e guia de uso da marca.',
      'description_en': 'Logos for light and dark backgrounds, colours and brand usage guide.',
      'meta_pt': 'Guia em inglês · descrições PT/EN', 'meta_en': 'English guide · PT/EN descriptions',
      'links': [('media-kit.html','Ver o kit','View kit'), ('media-kit.zip','Baixar kit (ZIP)','Download kit (ZIP)')]},
-    {'id': 'whitepaper', 'pt': 'Whitepaper', 'en': 'Whitepaper', 'version': '0.1',
+    {'id': 'whitepaper', 'pt': 'Whitepaper', 'en': 'Whitepaper', 'version': '0.2',
      'description_pt': 'Modelo de moradia, custos, contratos, dinheiro e decisões em aberto.',
      'description_en': 'Housing model, costs, agreements, money and open decisions.',
      'meta_pt': '8 páginas · inglês · rascunho', 'meta_en': '8 pages · English · draft',
      'links': [('whitepaper.html','Ler','Read'), ('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
-    {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': '0.1',
+    {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': '0.2',
      'description_pt': 'Apresentação para parceiros, com notas para quem apresenta.',
      'description_en': 'Partner presentation with presenter notes.',
      'meta_pt': '12 slides · inglês · rascunho', 'meta_en': '12 slides · English · draft',
      'links': [('pitchdeck.html','Ver slides','View slides'), ('pitchdeck.pdf','PDF','PDF'),
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes'),
                ('pitchdeck.json','Dados dos slides (JSON)','Slide content (JSON)')]},
-    {'id': 'devsheet', 'pt': 'Ficha do piloto e desenvolvimento', 'en': 'Developer and pilot specification', 'version': '0.2',
+    {'id': 'devsheet', 'pt': 'Ficha do piloto e desenvolvimento', 'en': 'Developer and pilot specification', 'version': '0.3',
      'description_pt': 'Cálculos, requisitos, responsabilidades e metas propostas para os primeiros 90 dias.',
      'description_en': 'Calculations, requirements, responsibilities and proposed first-90-day targets.',
      'meta_pt': '8 páginas · inglês · rascunho', 'meta_en': '8 pages · English · draft',
@@ -91,6 +92,8 @@ def resource_section(standalone=False):
                        'English project documents, in development. The media kit includes Portuguese and English descriptions.','p') + \
             '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">' + \
             translated('Todos os documentos e downloads','All documents and downloads','a','href="resources.html"') + \
+            translated('Roteiro e governança','Roadmap and governance','a','href="roadmap.html"') + \
+            translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
             translated('Ficha do piloto e metas','Pilot specification and targets','a','id="resource-devsheet" href="devsheet.html"') + '</div>'
     cards = []
     for item in RESOURCE_CATALOG:
@@ -110,14 +113,16 @@ def resource_section(standalone=False):
                     'Read in your browser or download the files. The project documents are English review drafts; the kit includes Portuguese and English descriptions.','p') + \
         '<div class="resource-grid">' + ''.join(cards) + '</div>' + \
         '<div class="resource-more">' + \
-        translated('Ver roteiro e metas','View roadmap and targets','a','href="devsheet.html#7-pilot-roadmap-and-success-measures"') + \
+        translated('Ver roteiro e governança','View roadmap and governance','a','href="roadmap.html"') + \
+        translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
+        translated('Fonte editável do roteiro e FAQ (JSON)','Editable roadmap and FAQ source (JSON)','a','href="model-guide.json" download') + \
         translated('Ver fontes e premissas','View sources and assumptions','a','href="whitepaper.html#12-risks-decisions-and-evidence-register"') + \
         translated('Baixar documentos e logos (ZIP)','Download documents and logos (ZIP)','a','href="imobx-documents.zip" download') + \
         '</div>'
 
 
 home = ROOT / 'index.html'
-home_source, replaced = re.subn(r' <section class="content wrap" id="documentos">.*?(?= <div class="faq">)',
+home_source, replaced = re.subn(r' <section class="content wrap" id="documentos">.*?(?= <div class="faq"(?: id="faq")?>)',
                               lambda _: ' ' + resource_section() + '\n', home.read_text(), count=1, flags=re.S)
 if replaced != 1:
     raise ValueError('Expected one home resource section before the FAQ.')
@@ -125,6 +130,7 @@ home.write_text(home_source)
 language_controls = '''<div class="resource-language"><div class="lang" role="group" aria-label="Idioma / Language">
 <button type="button" data-language="pt" aria-pressed="true" aria-label="Português brasileiro">PT</button>
 <button type="button" data-language="en" aria-pressed="false" aria-label="English">EN</button></div></div>'''
+build_guide(ROOT, page, translated, esc, language_controls)
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main id="main">' + language_controls + resource_section(standalone=True) + '</section></main>',
     '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Recursos'))
@@ -142,19 +148,19 @@ logo_previews = '''<div class="media-logo-grid"><figure class="media-logo light"
 kit_html = kit_html.replace('<h2', logo_previews + '<h2', 1)
 (ROOT / 'media-kit.html').write_text(page('IMOBX | Media kit',
     '<main class="paper"><p><a href="media-kit.zip" download>Download media kit ZIP</a> · '
-    '<a href="media-kit.md" download>Editable guide</a> · <a href="brand-colors.json" download>Brand colours (JSON)</a></p>' + kit_html + '</main>'))
+    '<a href="media-kit.md" download>Editable guide</a> · <a href="brand-colors.json" download>Brand colours (JSON)</a></p>' + kit_html + '</main>', version='0.2'))
 
 
 paper_source = (ROOT / 'whitepaper.md').read_text()
 paper_html = markdown.markdown(paper_source, extensions=['tables', 'toc'])
-(ROOT / 'whitepaper.html').write_text(page('IMOBX | Project paper v0.1',
+(ROOT / 'whitepaper.html').write_text(page('IMOBX | Project paper v0.2',
     '<main class="paper"><p><a href="whitepaper.pdf" download>Download PDF</a> · '
-    '<a href="whitepaper.md" download>Editable text</a></p>' + paper_html + '</main>'))
+    '<a href="whitepaper.md" download>Editable text</a></p>' + paper_html + '</main>', version='0.2'))
 devsheet_html = markdown.markdown((ROOT / 'devsheet.md').read_text(), extensions=['tables', 'toc'])
-(ROOT / 'devsheet.html').write_text(page('IMOBX | Developer and pilot specification v0.2',
-    '<main class="paper"><p><strong>Developer and pilot specification · revision 0.2</strong><br>'
+(ROOT / 'devsheet.html').write_text(page('IMOBX | Developer and pilot specification v0.3',
+    '<main class="paper"><p><strong>Developer and pilot specification · revision 0.3</strong><br>'
     '<a href="devsheet.pdf" download>Download revised PDF</a> · '
-    '<a href="devsheet.md" download>Editable text</a></p>' + devsheet_html + '</main>', version='0.2'))
+    '<a href="devsheet.md" download>Editable text</a></p>' + devsheet_html + '</main>', version='0.3'))
 
 deck = json.loads((ROOT / 'pitchdeck.json').read_text())
 slides_html = []
@@ -173,7 +179,7 @@ body = '''<main class="deck"><div class="deck-controls" hidden>
 <button type="button" data-next aria-label="Next slide">Next →</button><button type="button" data-notes aria-pressed="false">Presenter notes</button>
 <a href="pitchdeck.pptx" download>PowerPoint</a><a href="pitchdeck.pdf" download>PDF</a></div>'''
 body += ''.join(slides_html) + f'<aside class="sources"><h2>Sources and context</h2><ul>{source_list}</ul></aside></main>'
-(ROOT / 'pitchdeck.html').write_text(page('IMOBX | Partner deck v0.1', body, '<script src="assets/deck.js" defer></script>'))
+(ROOT / 'pitchdeck.html').write_text(page('IMOBX | Partner deck v0.2', body, '<script src="assets/deck.js" defer></script>', version='0.2'))
 deck_md += ['## Sources', *('- ['+x['label']+']('+x['url']+')' for x in deck['sources'])]
 (ROOT / 'pitchdeck.md').write_text('\n\n'.join(deck_md) + '\n')
 
@@ -258,8 +264,8 @@ def paper_footer(c, doc):
 
 
 for name, content, label, title in [
-    ('whitepaper', paper_html, 'IMOBX / FOUNDER REVIEW / v0.1 / 15 OCTOBER 2026', 'IMOBX project paper v0.1'),
-    ('devsheet', devsheet_html, 'IMOBX / DEVSHEET REVIEW / v0.2 / 15 OCTOBER 2026', 'IMOBX developer and pilot specification v0.2'),
+    ('whitepaper', paper_html, 'IMOBX / FOUNDER REVIEW / v0.2 / 15 OCTOBER 2026', 'IMOBX project paper v0.2'),
+    ('devsheet', devsheet_html, 'IMOBX / DEVSHEET REVIEW / v0.3 / 15 OCTOBER 2026', 'IMOBX developer and pilot specification v0.3'),
 ]:
     document = SimpleDocTemplate(str(ROOT / (name + '.pdf')), pagesize=(594,842), rightMargin=63, leftMargin=63,
                                  topMargin=55,bottomMargin=62,title=title,author='IMOBX draft')
@@ -318,7 +324,7 @@ for number, item in enumerate(deck['slides'],1):
         ppt_text(slide,bullet,1.35,4.2+row*.73,11,.65,18)
     ppt_text(slide,'IMOBX / PARTNER DISCUSSION DRAFT / 15 OCT 2026',.82,7.04,10,.2,9,MUTED)
     ppt_text(slide,f'{number:02d} / {len(deck["slides"]):02d}',11.6,7.04,1,.2,9,MUTED)
-    slide.notes_slide.notes_text_frame.text = item['notes'] + '\n\nSources and factual limits: companion whitepaper v0.1.'
+    slide.notes_slide.notes_text_frame.text = item['notes'] + '\n\nSources and factual limits: companion whitepaper v0.2.'
     pdf.setFillColor(colors.HexColor(PAPER)); pdf.rect(0,0,13.333*inch,7.5*inch,fill=1,stroke=0)
     pdf.drawImage(str(ROOT / 'assets/imobx-logo-light.png'),11.6*inch,6.47*inch,width=.95*inch,height=.95*inch)
     pdf_text(item['eyebrow'],.82,.62,10,11,ACCENT,True)
@@ -343,8 +349,9 @@ def archive(name, paths, introduction):
 
 logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'assets/imobx-logo-light-source.webp']
 archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
-        'IMOBX media kit v0.1 / 15 October 2026\nOriginal logo artwork, colour definitions and a review-draft usage guide.\nRead media-kit.md. Public claims must follow the accepted project status.\n')
+        'IMOBX media kit v0.2 / 15 October 2026\nOriginal logo artwork, colour definitions and a review-draft usage guide.\nRead media-kit.md. Public claims must follow the accepted project status.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
-        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
-        'IMOBX document collection / 15 October 2026\nWhitepaper v0.1, partner deck v0.1, developer/pilot specification v0.2 and media kit v0.1.\nThese are founder/partner review drafts. No token offer or legal approval is established.\nPDF files are for reading; the PowerPoint and text files are editable. The pilot roadmap is in section 7 of the developer specification.\n')
+        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'faq.html', 'model-guide.json',
+        'assets/style.css', 'assets/brand.css', 'assets/site.js', 'media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
+        'IMOBX document collection / 15 October 2026\nWhitepaper, partner deck, developer/pilot specification, roadmap, model FAQ and media kit.\nThese are founder/partner review drafts. No token offer or legal approval is established.\nPDF files are for reading; the PowerPoint and text files are editable. Read the roadmap and FAQ on the website; model-guide.json is their bilingual content source.\n')
 print('Built document exports, on-page resources, the resources page, media kit and download archives.')

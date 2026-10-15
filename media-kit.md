@@ -1,6 +1,6 @@
 # IMOBX media kit
 
-**Version 0.1 · 15 October 2026 · review draft**
+**Version 0.2 · 15 October 2026 · review draft**
 
 This kit contains the existing IMOBX logo, brand colours and short project descriptions for preparing project materials. The project is preparing a rent-to-own housing pilot in Rio. Use the current whitepaper and developer specification for the design status of the model.
 
@@ -67,3 +67,8 @@ Keep token supply, tenant allocation, returns, partner relationships and receive
 ## 7. Brand provenance
 
 The existing logo assets come from [Siah-kin/imobx-website](https://github.com/Siah-kin/imobx-website). The repository's [session handoff](https://github.com/Siah-kin/imobx-website/blob/main/SESSION_HANDOFF.md) and [design audit brief](https://github.com/Siah-kin/imobx-website/blob/main/AUDIT_PROMPT_WEBDESIGN.md) record the visual direction. The owner’s current white-background direction supersedes the earlier dark-web guidance. This kit uses the existing identity with the current project wording; older financial examples in those source documents are not adopted by this kit.
+
+
+## Model explanation and roadmap
+
+The [roadmap](roadmap.html) connects the housing pilot, decision rules and staged digital work. The [FAQ](faq.html) explains the ICO comparison, proposed token rights, nonprofit/yield choice, resident authority and platform alternatives. These are development proposals, not adopted financial entitlements. Preserve Rafael’s explicit CUB/SINAPI cost-engineering basis when describing the village budget; distinguish it from the two-loft contract.
