@@ -130,6 +130,8 @@ Trading fees could pay for agreed work without creating more IMOBX tokens. They 
 
 ### Rights map before token settings
 
+The proposed financial token would raise capital for budgeted housing work. A new issue sends investors’ money to the issuing organization for defined financial rights. Choose the legal structure and fundraising route before designing the token. A later sale between investors normally pays the seller. Housing and resident participation follow their own agreements.
+
 | Participant | What the agreement must explain |
 |---|---|
 | Families | Affordable payments, purchase progress, repairs, hardship, leaving and whole-home transfer. |

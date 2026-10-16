@@ -113,24 +113,24 @@
     {
       "id": "token-decision",
       "title": [
-        "Decidir se haverá token e o que ele dá",
-        "Decide whether to use a token and what it gives"
+        "Definir o investimento e a função do token",
+        "Define the investment and the token’s job"
       ],
       "window": [
-        "Sem data de venda; depende dos direitos e da análise jurídica",
-        "No sale date; depends on the rights and legal review"
+        "Pode ser preparado junto ao piloto; qualquer venda depende dos direitos e da forma de captação",
+        "Can be prepared alongside the pilot; any sale depends on the rights and fundraising route"
       ],
       "lead": [
         "Organização que emitiria o token, assessores brasileiros, participantes e prestadores",
         "Organization that would issue the token, Brazilian advisers, participants and providers"
       ],
       "work": [
-        "Escolher entre um comprovante de participação, um investimento ou acordos separados. Explicar quem pode entrar, o que recebe, de onde vem o dinheiro e como pode sair. Comparar ferramentas para o mesmo trabalho.",
-        "Choose between a membership record, an investment or separate arrangements. Explain who may join, what they receive, where money comes from and how they may leave. Compare tools for the same job."
+        "Definir a organização que recebe o capital, o orçamento financiado e o que os investidores recebem. Comparar apenas estruturas compatíveis com o projeto e explicar custos, perdas, decisões e saída. Manter distintos o contrato da família e a participação dos moradores.",
+        "Define the organization receiving capital, the budget being financed and what investors receive. Compare structures that fit the project and explain costs, losses, decisions and exit. Keep the family agreement and resident participation distinct."
       ],
       "gate": [
-        "Ter direitos e responsabilidades escritos, uma forma de oferta e transferência revisada, dinheiro com origem demonstrada e sistemas de pagamento conferidos. A análise de um advogado não é aprovação do regulador. Se o token não ajudar, o piloto pode seguir com contratos e registros comuns.",
-        "Have written rights and responsibilities, a reviewed way to offer and transfer participation, a demonstrated money source and checked payment systems. A lawyer’s review is not regulatory approval. If a token does not help, the pilot can use ordinary agreements and records."
+        "Ter organização, direitos e responsabilidades definidos, orçamento e previsões conferidos, uma forma permitida de oferta e transferência e sistemas de pagamento testados. A captação pode anteceder a obra; pagamentos de renda dependem de receitas reais e das condições do acordo. Um parecer jurídico não é aprovação regulatória.",
+        "Have a defined organization, rights and responsibilities, checked budget and forecasts, a permitted offering and transfer route, and tested payment systems. Fundraising may precede construction; income payments depend on actual receipts and the agreement’s terms. A legal opinion is not regulatory approval."
       ],
       "web": [
         "Website v3, se aprovado pelos responsáveis: explicar exatamente o que o token dá e como acessar o prestador escolhido. Só então abrir uma tela de compra.",
@@ -224,8 +224,8 @@
       ],
       "a": [
         [
-          "Queremos estudar se as pessoas poderiam apoiar a construção e ter um direito claro a parte do dinheiro que sobra. Esse dinheiro só existe depois de pagar custos, cumprir os contratos das famílias e guardar o necessário para reparos e outras despesas. Também precisamos de uma estrutura jurídica que permita esse pagamento.",
-          "We want to study whether people could help fund housing and have a clear right to some of the money left over. That money exists only after costs, commitments to residents and money set aside for repairs and other needs. We also need a legal arrangement that allows the payment."
+          "Queremos estudar um token como forma de captar capital para moradias. Numa emissão, o investidor pagaria à organização e receberia um direito financeiro definido. Precisamos escolher se esse direito é uma participação na empresa ou outro investimento permitido. A renda para pagar investidores precisa vir de receitas identificadas, depois das obrigações e dos custos previstos no acordo.",
+          "We are studying a token as a way to raise capital for housing. In a new issue, an investor would pay the organization and receive a defined financial right. We need to choose whether that is a stake in a company or another permitted investment. Money to pay investors needs to come from identified income, after the obligations and costs specified in the agreement."
         ],
         [
           "Pagar esse dinheiro às pessoas e usá-lo para construir mais casas são escolhas diferentes. Reinvestir pode ajudar a ampliar o projeto; não garante que o token suba de preço. Não definimos taxa de rendimento, prazo ou reinvestimento automático. Quando uma família se torna dona da casa, deixa de pagar aluguel à IMOBX. O plano precisa mostrar de onde virá a receita depois.",
@@ -290,6 +290,10 @@
         [
           "O primeiro projeto precisa de dinheiro confirmado para o trabalho contratado. Doações, apoios, receitas de serviços e qualquer investimento precisam ter destino e condições registrados. Dinheiro possível ainda não é dinheiro recebido.",
           "The first project needs confirmed funding for the contracted work. Donations, grants, service income and any investment need recorded purposes and conditions. Possible money is not money received."
+        ],
+        [
+          "Um possível investimento poderia financiar a primeira obra, antes de haver aluguéis. Para isso, são necessários uma organização responsável, direito de usar o imóvel, orçamento, contrato de investimento e uma forma permitida de captar. Previsões de receita precisam ser identificadas como previsões. Se alguém comprar um token de outro investidor, o pagamento normalmente vai ao vendedor, não ao caixa da obra.",
+          "A possible investment could fund the first build before there is rental income. That needs a responsible organization, the right to use the property, a budget, an investment agreement and a permitted fundraising route. Income forecasts must be labelled as forecasts. If someone buys a token from another investor, that payment normally goes to the seller, not the building budget."
         ],
         [
           "Se um futuro mercado de tokens pagar taxas ao projeto, elas podem ajudar quando realmente chegarem. Mas o plano precisa cobrir as casas mesmo com poucas negociações ou nenhuma. O valor de mercado do token não paga uma conta da obra.",
@@ -1312,8 +1316,8 @@
         "Residents help decide the use of shared spaces and local priorities. Chosen people handle tasks within spending limits. Accounts show money received, money spent and what needs to be saved. Another team should be able to continue the operation."
       ],
       [
-        "Um token poderia registrar um direito definido no projeto: participar de certas decisões ou, se houver um acordo permitido, receber parte de uma receita. Ainda não escolhemos esses direitos. O contrato da família, a participação nas decisões e um investimento não precisam ser a mesma coisa.",
-        "A token could record a defined right in the project: taking part in specified decisions or, under a permitted agreement, receiving part of an income source. We have not chosen those rights. A family’s agreement, a say in decisions and an investment do not need to be the same thing."
+        "O token em estudo tem uma finalidade financeira: captar capital para construir e ampliar a operação de moradia. Numa emissão, investidores pagariam à organização em troca de direitos financeiros definidos em contrato. O token registraria esses direitos e poderia facilitar pagamentos e transferências permitidas. A estrutura, os direitos e a oferta ainda precisam ser definidos. O contrato da família e sua participação nas decisões continuam sendo relações próprias.",
+        "The token under study has a financial purpose: raise capital to build homes and grow the housing operation. In a new issue, investors would pay the organization in return for financial rights defined in an agreement. The token would record those rights and could help manage payments and permitted transfers. The structure, rights and offer remain to be defined. A family’s housing agreement and say in community decisions remain separate relationships."
       ]
     ],
     "roles_title": [
@@ -1472,8 +1476,8 @@
     ],
     "token": [
       [
-        "Primeiro precisamos dizer qual problema ele resolve para uma pessoa concreta. Por exemplo: registrar uma participação que possa ser conferida, facilitar uma transferência permitida ou calcular um pagamento já previsto em contrato.",
-        "First we need to say which problem it solves for a particular person. For example: recording participation that can be checked, making a permitted transfer easier, or calculating a payment already provided for in an agreement."
+        "O objetivo é reunir dinheiro de vários investidores para financiar trabalho com orçamento definido. Precisamos dizer quem recebe o capital, no que será usado e qual direito o investidor recebe. Um registro digital pode ajudar a acompanhar essas participações, pagamentos e transferências permitidas.",
+        "The aim is to bring together money from several investors to finance budgeted work. We need to state who receives the capital, what it pays for and what right the investor receives. A digital record could help manage those holdings, payments and permitted transfers."
       ],
       [
         "Depois comparar o custo e o trabalho com registros comuns. Um token não cria renda, não garante venda e não substitui o registro de um imóvel. A vantagem precisa aparecer no uso.",
@@ -1506,8 +1510,8 @@
         "Who may join, transfer or leave? What happens with losses or if the project ends?"
       ],
       [
-        "A forma jurídica permite isso sem usar doações ou dinheiro já prometido aos moradores?",
-        "Does the legal form allow this without using donations or money already promised to residents?"
+        "A forma jurídica permite esses direitos? Como serão respeitados o uso combinado das doações e os compromissos com os moradores?",
+        "Does the legal form permit those rights? How will the agreed use of donations and commitments to residents be respected?"
       ]
     ]
   }

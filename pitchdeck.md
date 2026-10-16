@@ -150,21 +150,21 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 
 
-## 9. A home, a voice and an investment are different rights.
+## 9. Raise capital for homes. Define what investors receive.
 
-A possible token needs a specific job and a written agreement.
-
-
-
-- Families need a protected path to owning their whole home.
-
-- Residents need a say; staff need clear duties and spending limits.
-
-- Any investor needs defined income, losses and exit terms.
+We are studying a financial token to fund construction and growth.
 
 
 
-**Presenter notes:** The nonprofit idea keeps resources serving housing. Under Law 13.019’s definition for public-sector partnerships, nonprofits use results for their social purpose. A nonprofit cannot simply promise those results as investor dividends. Brazilian advisers need to review any other permitted investment arrangement. No supply, return rate, sale date or resident token plan is agreed. The token’s name does not decide its legal treatment. A token could record defined decision or permitted financial rights across projects. These rights are not yet chosen. We need to speak with families, property contributors, builders, staff, donors, possible investors, neighbours and independent checkers before treating their needs as agreed. The participation map is a proposal for those conversations.
+- A new issue would bring investment money into the housing operation.
+
+- Define the issuer, financial rights, income source, losses and exit.
+
+- Keep family agreements and residents’ say in decisions protected.
+
+
+
+**Presenter notes:** The nonprofit idea keeps resources serving housing. Under Law 13.019’s definition for public-sector partnerships, nonprofits use results for their social purpose. A nonprofit cannot simply promise those results as investor dividends. Brazilian advisers need to review any other permitted investment arrangement. No supply, return rate, sale date or resident token plan is agreed. The token’s name does not decide its legal treatment. A token could record defined decision or permitted financial rights across projects. These rights are not yet chosen. We need to speak with families, property contributors, builders, staff, donors, possible investors, neighbours and independent checkers before treating their needs as agreed. The participation map is a proposal for those conversations. The financial purpose is capital raising for budgeted housing work. Formation of a share company, an investment offering and later trading are separate decisions. Financing may precede construction after the necessary organization, property authority, budget and permitted fundraising route are ready. Future income is forecast, not received. New investment paid to the issuer differs from a resale that pays another investor. The financing structure remains under study.
 
 
 

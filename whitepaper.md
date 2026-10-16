@@ -123,7 +123,7 @@ One option is equal member voice in resident matters and elected people responsi
 
 ## 8. What a token could represent
 
-A token could record an agreed right to take part in specified decisions or, if the legal arrangement permits, receive part of defined income. Its job would be to record and carry out those rights across projects. We have not chosen the rights, income source or legal arrangement. There is no current payment right.
+We are studying a token as a financial tool to raise capital for building homes and growing the housing operation. In a new issue, investors would pay the issuing organization for defined financial rights. The token could record those rights and help manage payments and permitted transfers. We still need to choose the legal structure, investor rights and income source. Fundraising could precede construction once the organization, property authority, budget and permitted offer are ready; future rent is a forecast, not money already received.
 
 We want each family to be able to own its **whole home**. Sharing purchasing and administration across projects could save work. The proposal does not split every house between token buyers. A future investment linked to IMOBX or several projects would need to state which properties, debts, income and shared risks it includes.
 
