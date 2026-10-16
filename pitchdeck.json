@@ -89,18 +89,18 @@
         "Someone else checks the work, payment and receipt.",
         "Open tasks and approvals are ready for whoever takes over."
       ],
-      "notes": "Before the pilot, residents and the organization need to agree which matters each group decides, spending limits and how a decision can be reviewed. For example: a resident reports a leak, the maintenance role assesses it and obtains a quote, spending follows the agreed rule, and another person checks the repair and payment. Routine work should proceed within those limits without constant founder instructions. Residents need ways to choose and replace responsible people. The Telegram bot would show requests, decisions and progress; software assistants could organize documents and reminders. Blockchain could show payment amounts and destinations. These tools follow the rules agreed by participants. The complete process still needs to be demonstrated in IMOBX."
+      "notes": "Before the pilot, residents and the organization need to agree which matters each group decides, spending limits and how a decision can be reviewed. For example: a resident reports a leak, the maintenance role assesses it and obtains a quote, spending follows the agreed rule, and another person checks the repair and payment. Routine work should proceed within those limits without constant founder instructions. Residents need ways to choose and replace responsible people. The support channel would show requests, decisions and progress; software assistants could organize documents and reminders. Blockchain could show payment amounts and destinations. These tools follow the rules agreed by participants. The complete process still needs to be demonstrated in IMOBX."
     },
     {
       "eyebrow": "09 / TOKEN DECISION",
-      "title": "Decide what a token would actually give.",
-      "lead": "A community membership record and an investment do different jobs.",
+      "title": "A home, a voice and an investment are different rights.",
+      "lead": "A possible token needs a specific job and a written agreement.",
       "bullets": [
-        "Choose the legal form and keep donations for their agreed purpose.",
-        "Explain who owes what, where payment money comes from and how to leave.",
-        "Using money to build more homes does not automatically raise a token’s price."
+        "Families need a protected path to owning their whole home.",
+        "Residents need a say; staff need clear duties and spending limits.",
+        "Any investor needs defined income, losses and exit terms."
       ],
-      "notes": "The nonprofit idea keeps resources serving housing. Under Law 13.019’s definition for public-sector partnerships, nonprofits use results for their social purpose. A nonprofit cannot simply promise those results as investor dividends. Brazilian advisers need to review any other permitted investment arrangement. No supply, return rate, sale date or resident token plan is agreed. The token’s name does not decide its legal treatment."
+      "notes": "The nonprofit idea keeps resources serving housing. Under Law 13.019’s definition for public-sector partnerships, nonprofits use results for their social purpose. A nonprofit cannot simply promise those results as investor dividends. Brazilian advisers need to review any other permitted investment arrangement. No supply, return rate, sale date or resident token plan is agreed. The token’s name does not decide its legal treatment. A token could record defined decision or permitted financial rights across projects. These rights are not yet chosen. We need to speak with families, property contributors, builders, staff, donors, possible investors, neighbours and independent checkers before treating their needs as agreed. The participation map is a proposal for those conversations."
     },
     {
       "eyebrow": "10 / THE ROADMAP",
@@ -140,10 +140,6 @@
     {
       "label": "Project facts and cost provenance",
       "url": "whitepaper.html#3-the-cost-proposal-already-supplied"
-    },
-    {
-      "label": "Arctide technical documentation",
-      "url": "https://github.com/0xRustyDev/arctide-docs/blob/main/README.md"
     },
     {
       "label": "CVM Guidance Opinion 40",

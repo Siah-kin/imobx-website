@@ -22,6 +22,10 @@ def build_guide(root, page, tr, esc, language_controls):
         for item in items:
             body += f'<details id="faq-{esc(item["id"])}">' + text(item['q'], 'summary')
             body += ''.join(text(pair) for pair in item['a']) + links(item['sources']) + '</details>'
+        if not home:
+            body += '<span id="faq-thanks-zeal-lets"></span><span id="faq-euler"></span>'
+            body += text(('Quem participa e quais direitos precisa combinar ↗', 'Who takes part and which rights need agreement ↗'),
+                         'a', 'class="guide-more" href="roadmap.html#participation"')
         if home:
             body += text(('Mais perguntas sobre moradia, dinheiro e decisões ↗', 'More questions about homes, money and decisions ↗'),
                          'a', 'class="guide-more" href="faq.html"')
@@ -47,6 +51,7 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '<div class="guide-status">' + text(('Onde estamos', 'Where we stand'), 'h2')
     roadmap += text(('O site, os documentos, os desenhos e o orçamento de Rafael já estão disponíveis. Ainda precisamos confirmar a estrutura jurídica e mostrar o piloto, o caixa na blockchain e o token da IMOBX em funcionamento.', 'The site, documents, drawings and Rafael’s budget are available. We still need to confirm the legal structure and demonstrate the pilot, blockchain-held funds and IMOBX token in use.')) + '</div>'
     roadmap += '<nav class="guide-jump" aria-label="Sections">' + text(('Etapas', 'Stages'), 'a', 'href="#stages"')
+    roadmap += text(('Quem participa', 'Who takes part'), 'a', 'href="#participation"')
     roadmap += text(('Decisões compartilhadas', 'Shared decisions'), 'a', 'href="#governance"')
     roadmap += text(('Transparência', 'Transparency'), 'a', 'href="transparency.html"')
     roadmap += text(('Diferença da ICO', 'ICO comparison'), 'a', 'href="#ico-comparison"')
@@ -64,10 +69,25 @@ def build_guide(root, page, tr, esc, language_controls):
         roadmap += '</dl></article>'
     roadmap += '</section>'
 
+    participation = guide['participation']
+    roadmap += '<section id="participation">' + text(participation['title'], 'h2')
+    roadmap += text(participation['intro'])
+    roadmap += ''.join(text(p) for p in participation['scenario'])
+    roadmap += text(participation['roles_title'], 'h3')
+    for role in participation['roles']:
+        roadmap += '<details class="participant-role">' + text(role['who'], 'summary')
+        for label, key in zip(participation['headings'][1:], ['need', 'decision']):
+            roadmap += text(label, 'h4') + text(role[key])
+        roadmap += '</details>'
+    for title, key in [('rights_title', 'rights'), ('token_title', 'token'), ('decision_title', 'decisions')]:
+        roadmap += text(participation[title], 'h3')
+        roadmap += '<ul>' + ''.join(text(p, 'li') for p in participation[key]) + '</ul>'
+    roadmap += links(['ica', 'ostrom', 'token-study', 'cvm']) + '</section>'
+
     # Keep old shared anchors usable while linking the single detailed reading page.
     roadmap += '<section id="settlement"><span id="ramp-options"></span>' + text(
         ('Dinheiro e transparência', 'Money and transparency'), 'h2')
-    roadmap += text(('Veja como o dinheiro passaria de reais para USDC e voltaria, quais empresas pesquisamos e o que falta confirmar.', 'See how money would move from reais to USDC and back, which companies we researched and what needs confirming.'))
+    roadmap += text(('Veja como o dinheiro entraria, o que precisa pagar e o que conferir antes de usar pagamentos na blockchain.', 'See how money would come in, what it needs to pay for and what to check before using blockchain payments.'))
     roadmap += text(('Ver fluxos, fontes e decisões ↗', 'View flows, sources and decisions ↗'),
                     'a', 'class="button" href="transparency.html"') + '</section>'
 
@@ -90,24 +110,10 @@ def build_guide(root, page, tr, esc, language_controls):
     for relationship in settlement['relationships']:
         settlement_html += '<article>' + text(relationship['title'], 'h3') + text(relationship['body']) + '</article>'
     settlement_html += '</div>' + text(settlement['registration']) + links(['cnpj', 'title'])
-    settlement_html += '<div class="settlement-review">' + text(settlement['provider_title'], 'h3')
-    settlement_html += text(settlement['provider_note']) + links(['mb']) + '</div>'
     settlement_html += text(settlement['network_note']) + links(['bcb'])
     research = settlement['provider_research']
     settlement_html += '<section id="ramp-options">' + text(research['title'], 'h3')
-    settlement_html += text(research['conclusion']) + text(research['lean_pilot'])
-    for option in research['routes']:
-        settlement_html += '<article class="settlement-option">' + text(option['title'], 'h3')
-        settlement_html += text(option['flow'], 'p', 'class="settlement-chain"') + text(option['fit'])
-        settlement_html += links(option['sources']) + '</article>'
-    settlement_html += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in
-        [('Opção', 'Option'), ('O que as empresas descrevem', 'What the companies describe'),
-         ('Adequação à IMOBX', 'Fit for IMOBX')]) + '</tr></thead><tbody>'
-    for provider in research['providers']:
-        settlement_html += '<tr><th scope="row">' + esc(provider['name']) + '</th><td>' + text(provider['supported'])
-        settlement_html += links(provider['sources']) + '</td><td>' + text(provider['fit']) + '</td></tr>'
-    settlement_html += '</tbody></table></div>'
-    settlement_html += text(research['cost']) + links(['blind-price']) + text(research['acceptance_title'], 'h3')
+    settlement_html += text(research['conclusion'])
     settlement_html += '<ul>' + ''.join(text(p, 'li') for p in research['acceptance']) + '</ul>'
     settlement_html += text(research['status'], 'p', 'class="fine"') + '</section>'
     settlement_html += text(settlement['evidence_title'], 'h3')
@@ -123,9 +129,9 @@ def build_guide(root, page, tr, esc, language_controls):
     for item in public['statuses']:
         transparency += '<article>' + text(item['title'], 'h3') + text(item['body']) + '</article>'
     transparency += '</div></section><nav class="guide-jump" aria-label="Sections">'
-    for label, target in [(('Economia comunitária', 'Community economy'), 'community-economy'),
+    for label, target in [(('Participação', 'Participation'), 'community-economy'),
                           (('Fluxos', 'Flows'), 'settlement'),
-                          (('Prestadores', 'Providers'), 'ramp-options'),
+                          (('Serviço de pagamento', 'Payment service'), 'ramp-options'),
                           (('Próximos passos', 'Next steps'), 'next-steps'),
                           (('Relatórios', 'Reports'), 'reporting'),
                           (('Fontes', 'Sources'), 'sources'),
@@ -138,7 +144,7 @@ def build_guide(root, page, tr, esc, language_controls):
     for topic in economy['topics']:
         transparency += f'<details class="community-topic" id="{esc(topic["id"])}">' + text(topic['title'], 'summary')
         transparency += ''.join(text(pair) for pair in topic['body']) + links(topic['sources']) + '</details>'
-    transparency += '</section>'
+    transparency += '<span id="thanks-zeal-lets"></span></section>'
     transparency += settlement_html
     transparency += '<section id="next-steps">' + text(public['followup_title'], 'h2')
     transparency += text(public['followup_intro']) + '<dl class="transparency-followups">'
@@ -224,7 +230,7 @@ def build_guide(root, page, tr, esc, language_controls):
          ('Definir imóvel, contratos, orçamento e responsáveis. Depois decidir se haverá token.', 'Agree the property, contracts, budget and responsible people. Then decide whether to use a token.')],
         [('De onde vem o dinheiro que sobra', 'Where money left over comes from'), ('Depende do projeto; o preço do token não demonstra receita.', 'Project-dependent; token price does not demonstrate income.'),
          ('Mostrar entradas, contas e dinheiro guardado. Qualquer pagamento exige dinheiro disponível e direito escrito.', 'Show income, bills and money set aside. Any payout needs available money and written rights.')],
-        [('As regras da oferta definem os direitos; alguns projetos dão mais votos a quem tem mais tokens.', 'The offer defines rights; some projects give more votes to people with more tokens.'), ('As regras da oferta definem os direitos; alguns projetos dão mais votos a quem tem mais tokens.', 'The offer defines rights; some projects give more votes to people with more tokens.'),
+        [('Decisões', 'Decisions'), ('As regras da oferta definem os direitos; alguns projetos dão mais votos a quem tem mais tokens.', 'The offer defines rights; some projects give more votes to people with more tokens.'),
          ('Combinar o que moradores, equipes e investidores podem decidir e como pedir revisão.', 'Agree what residents, teams and investors may decide and how to ask for review.')],
         [('Progresso', 'Progress'), ('Marcos de produto e de mercado escolhidos pelo emissor.', 'Product and market milestones selected by the issuer.'),
          ('Mostrar casas entregues, custos reais, contas conferidas e avanço das famílias na compra.', 'Show homes delivered, actual costs, checked accounts and families’ progress toward purchase.')]
@@ -246,7 +252,7 @@ def build_guide(root, page, tr, esc, language_controls):
     faq_body += '<nav class="guide-jump" aria-label="Sections">' + text(('Roteiro', 'Roadmap'), 'a', 'href="roadmap.html"')
     faq_body += text(('Quem decide o quê?', 'Who decides what?'), 'a', 'href="roadmap.html#governance"')
     faq_body += text(('Dinheiro e transparência', 'Money and transparency'), 'a', 'href="transparency.html"')
-    faq_body += text(('Comparar plataformas', 'Compare platforms'), 'a', 'href="#faq-exchanges"') + '</nav>' + faq() + '</main>'
+    faq_body += text(('Quem participa', 'Who takes part'), 'a', 'href="roadmap.html#participation"') + '</nav>' + faq() + '</main>'
     (root / 'faq.html').write_text(page('IMOBX | Model questions', faq_body,
         '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Perguntas sobre o modelo'))
 

@@ -75,7 +75,7 @@ The earlier US$250 payment over 180 months is an example, not a current offer. P
 
 **Money received → taxes and money with a required use → property and running costs → resident commitments and savings for future needs → approved new homes → any legally permitted investor payments.**
 
-Agree the actual budget before using this order. Keep enough money in reais for Brazilian bills. Record the exchange rate and all costs when converting to USDC.
+Agree the actual budget before using this order. Keep enough money in reais for Brazilian bills. Record the exchange rate and all costs when converting money.
 
 ### Correct the original rental arithmetic
 
@@ -102,9 +102,9 @@ Money counted toward a family’s purchase is a promise to honor, not a second r
 
 ## 4. Trade fees, liquidity and pilot capital
 
-### What the documented Arctide market provides
+### What a trading fee could fund
 
-Arctide lets people create and trade tokens. Its markets divide USDC fees between those supplying trading funds, the project and the platform. The fixed platform part is 0.25%; the total fee cap is 15%. These are not the old assumed flat US$10 buy and US$15 sell fees. Check the actual market settings and recipients. Its early bonding-curve sale has no trading fee. [Documentation](https://github.com/0xRustyDev/arctide-docs/blob/main/README.md).
+If a future token can be bought and sold, an agreed fee might support housing. Specify the recipient, amount, permitted use and payment record. The buyer’s main payment usually goes to the seller. Only a separately collected fee reaches the project. Trading fees are one possible funding source; they are not committed construction money.
 
 ### Measure what IMOBX actually receives
 
@@ -120,9 +120,9 @@ The 1% is an example, not a quote or chosen fee. At that rate, US$10 million of 
 
 ### Capital and fees have different destinations
 
-A contract review on 12 October found that the standard Arctide sale sends roughly 98% of raised USDC into the first trading market. That money helps people buy and sell tokens; it is not also a building budget. The destination of fees from that locked position needs checking. Recheck this dated finding for the chosen setup; it is not an IMOBX funding agreement.
+Money raised for construction and money set aside to let people trade need separate, agreed destinations. The same money cannot do both jobs. Record how much is available for bills and how much is locked or otherwise committed.
 
-USDC fees can pay for agreed work without creating more IMOBX tokens for that payment. They still depend on trading. Test the budget with little or no trading, and check whether fees go elsewhere. Money raised for construction and money placed in a trading market need separate, agreed destinations.
+Trading fees could pay for agreed work without creating more IMOBX tokens. They still depend on trading. Test the budget with little or no trading income.
 
 <div class="pagebreak"></div>
 
@@ -132,12 +132,14 @@ USDC fees can pay for agreed work without creating more IMOBX tokens for that pa
 
 | Participant | What the agreement must explain |
 |---|---|
-| Resident | Housing, payments, purchase progress, repairs, hardship, leaving and ownership transfer. |
-| Organization or board | Property authority, contracts, money set aside, personal interests, reporting and continuity. |
-| Builder | Work, price and profit, progress checks, changes and completion. |
-| Donor or grant funder | What the money may pay for, reports and any repayment conditions. |
-| Investor, if offered | Who owes what, voting, who may join, costs, selling and possible payments. |
-| Community contributor | Work, who checks it, agreed payment if funded and choices about personal data. |
+| Families | Affordable payments, purchase progress, repairs, hardship, leaving and whole-home transfer. |
+| Property contributors | Donation, lease or sale terms; title, debts, taxes and transfer costs. |
+| Staff and resident representatives | Powers, agreed pay, appointment, spending limits, reporting and replacement. |
+| Builders and suppliers | Work, price, payment dates, changes and independent completion checks. |
+| Donors and social funders | Permitted use, reports, delays, cancellation and any repayment conditions. |
+| Possible investors | Issuer, claim, income source, costs, losses, voting, transfers and exit terms. |
+| Neighbours | Local impacts, services, access and a way to raise concerns. |
+| Independent checkers | Authority and access to review property, safety, accounts and agreements. |
 
 Ostrom’s work asks how people manage shared resources. We want to define who participates, involve residents in appropriate decisions, check commitments and make disputes easy to raise. For the [village](properties.html#visao-rafael), this means agreeing who uses, maintains and replaces the solar equipment, orchard, play area and study rooms.
 
@@ -164,16 +166,18 @@ The actual rights matter more than labels such as “utility,” “governance�
 | Component | What people need from it |
 |---|---|
 | Website | Current progress, checked building costs, documents, responsible people and help. |
-| Telegram / The Flock | Portuguese explanations, questions, updates and approved account summaries. |
+| Support channel | Portuguese explanations, questions, updates and approved account summaries. |
 | Legal records | Signed agreements, property authority and any investor records held by the responsible party. |
-| Accounting and payments | Match the payer, purpose, bank receipt, conversion, USDC payment and final use. |
+| Accounting and payments | Match the payer, purpose, bank receipt, conversion, digital payment and final use. |
 | Community software | Show requests, responsible people, decisions and work confirmed by others. |
 
-Families would pay in reais. IMOBX would keep local money and convert only approved amounts into USDC on Arc. CCTP may help move USDC between networks; it does not convert it to reais. No provider is confirmed for IMOBX. A CNPJ does not guarantee an account. Private family agreements stay off the public blockchain. Show payments as waiting, confirmed, failed or needing investigation. [Money path](transparency.html#settlement); [providers](transparency.html#ramp-options).
+Families would pay in reais. Keep local money for bills and test any approved digital payment with an accepted provider, including return to the bank. Record exchange rates and total costs. No provider is confirmed for IMOBX. A CNPJ does not guarantee an account. Private family agreements stay off the public blockchain. Show payments as waiting, confirmed, failed or needing investigation. [Money path](transparency.html#settlement); [payment-service requirements](transparency.html#ramp-options).
 
-### Distribution accounting and the legacy Euler approach
+<div id="distribution-accounting-and-the-legacy-euler-approach"></div>
 
-The earlier contract review found a running calculation: when money arrives, update what people can receive instead of sending a payment to every person at once. People claim later. This may save work per deposit, but claims, storage and setup still cost. Argus also documents this pattern; it is not an exclusive Arctide feature. The old US$109 yearly cost and 99.9% saving are not supported by a comparable measurement.
+### Calculating possible payments
+
+If an agreement allows income payments, software could keep a running record of what each person may receive and let them claim later. Compare this with ordinary payment processing, including setup, individual claims, corrections and support. The earlier US$109 yearly cost and 99.9% saving are not supported by a comparable measurement.
 
 ### Technical demonstration required before a live financial integration
 
@@ -235,6 +239,6 @@ Grants, donations and agreed service or building income may help. Record applica
 
 This revision uses the original eight-page IMOBX development sheet, founder discussions already recorded in the research, and the linked cost and platform sources. Earlier work checked the original PDF’s text and layout; this wording update does not establish a fresh property or company audit.
 
-Rafael supplied the historical budget and two-loft account. Arctide’s documentation describes its service, not a completed IMOBX connection. Exact tax, title, permits, legal registration, grants and current building progress still need the appropriate documents and responsible review.
+Rafael supplied the historical budget and two-loft account. Research into payment services does not prove an IMOBX connection works. Exact tax, title, permits, legal registration, grants and current building progress still need the appropriate documents and responsible review.
 
 Use this sheet with founders, families, builders, accountants, housing advisers, lawyers and developers. When decisions are accepted, update the paper, deck and website together. State what is planned, signed, paid, completed and checked. This is still a development proposal, not a token offer or approval to run financial services.

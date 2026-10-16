@@ -99,24 +99,18 @@ Use case: precise-object-edit. Edit target: this exact supplied real neighbourho
 
 Keep a distinct roadmap linked from navigation and resources. Show stage, proposed owner, work, advancement evidence and the corresponding website version. Preparation windows are relative to an agreed start; construction needs funding and permissions. Website v2 can report operations without a token; any later token access follows accepted rights and the reviewed legal/provider route. Use model-guide.json as the bilingual source for roadmap and FAQ, rendered by model_guide.py through build_publication.py.
 
-Use native details for model questions, with direct section links and primary sources near claims. Separate Arc the settlement network from Arctide the exchange application; acknowledge Argus/Uniswap alternatives. Describe cooperative decision options as consultation proposals, not adopted token-weight rules or a demonstrated digital governance process. Nonprofit mission protection and any financial distribution require distinct, compatible rights.
+Use native details for model questions, with direct section links and primary sources near claims. Explain the household scenario before software. Keep provider comparisons and technical choices in the supporting research until a specific choice helps the reader act. Describe cooperative decision options as consultation proposals, not adopted token-weight rules or a demonstrated digital governance process. Nonprofit mission protection and any financial distribution require distinct, compatible rights.
 
 Explain Rafael’s $27,777 village budget through his explicit CUB/SINAPI reference basis and cost-engineering breakdown, rather than merely calling it a historical estimate. Date and distinguish this per-home/36-home plan from January’s combined two-loft contract. Preserve the reference period, scope and actual-spending trail; do not imply the index publisher certifies an individual complete-home price.
 
 
-## On/off-ramp explanation
+## Payment explanation
 
-The dedicated transparency page includes a bilingual settlement section with ordered, readable flow diagrams, the current USDC route clearly distinguished from the original July discussion. Show rent collection and spending back in BRL, preserve costs/reserves/restrictions before allocation, and distinguish CNPJ, title and provider approval. Mercado Bitcoin is a historical candidate, not an integrated or confirmed eligible provider. Keep contractor/client relations separate from banking and any token rights. Flow diagrams describe requirements, not an executable payment service.
-
-
-## USDC settlement and provider research
-
-USDC is the proposed current settlement asset. Use provider-neutral flow diagrams and keep the July source history separate from the updated proposal. The dedicated transparency page includes a dated comparison of direct Arc delivery, a native-USDC/CCTP route and institutional access. State technical support separately from acceptance of IMOBX’s actual entity and activity. Provider exclusions, unknown prices and unconfirmed onboarding remain visible. A payment kit is not a bank account, and cross-chain transfer is not a fiat off-ramp. Keep local BRL reserves and preserve the distinction between approved website documentation and financial execution.
-
+Show how money comes in, which obligations it pays and what would need checking before using blockchain payments. Families pay in reais. Preserve the requirements for an accepted provider, conversion costs, local reserves, private documents and a tested return to the bank. Keep bank registration, property ownership and provider acceptance distinct. Detailed provider comparisons remain supporting research; a first-time reader needs the proposed flow and responsibilities. No financial integration is implied.
 
 ## Dedicated money and transparency page
 
-transparency.html is the canonical reading page for BRL/USDC routes, provider research, evidence and pending decisions. Generate it from the existing model-guide.json source through model_guide.py. The roadmap retains a short linked summary and old section anchors. Link the dedicated page from homepage, document navigation, FAQ and Resources; keep it in the document ZIP.
+transparency.html is the canonical reading page for reais and digital payment routes, payment-service requirements, evidence and pending decisions. Generate it from the existing model-guide.json source through model_guide.py. The roadmap retains a short linked summary and old section anchors. Link the dedicated page from homepage, document navigation, FAQ and Resources; keep it in the document ZIP.
 
 Lead with proposal, provider-acceptance and operation-evidence status. Do not invent balances or show missing figures as zero. Distinguish documented provider capabilities from customer approval and actual tests. Show dates, sources, proposed follow-up responsibilities, a future reporting outline and a manual update record. Keep source groups expandable, the main money flow readable and the PT/EN experience usable without JavaScript. No live financial integration, automatic provider monitoring or member information is introduced.
 
@@ -142,3 +136,10 @@ The image archive supports the housing proposal with drawings, supplied photos, 
 ## Construction photo gallery
 
 Keep the fuller construction selection on the existing Photos and drawings page, separate from architectural drawings and neighbourhood context. Use a quiet two-column grid on desktop and one column on phones, with lazy-loaded originals and the existing accessible image viewer. The eight-photo selection shows access, exposed rock, excavation, timber/block work, formwork, concrete and roofing. Keep captions about visible features and retain source files unchanged. Do not infer capture dates, construction chronology, ownership, project identity, technical approval or completion from the photos. Keep the source limitations visible before the gallery. Avoid near-duplicate views or identifiable people when a clear alternative exists.
+
+
+## Explain participation before the token
+
+Use the proposed first project to show who arranges property and building, how a family becomes the owner, who makes shared decisions and how work and money are checked. Then explain the possible token through the precise rights it could record. Keep housing rights, a membership voice and an investment distinct even if one person has several roles. Cover families, property contributors, builders, staff, donors, potential investors, neighbours and independent checkers. Their needs are proposals to validate, not reported interviews.
+
+Do not introduce contribution points, reputation scores, internal protocol names or a catalogue of software products into the housing explanation. Shared decisions and accounts should make sense before the reader encounters technical detail. Explain a possible income payment through its payer, source, costs and conditions; never imply a nonprofit can distribute donations or that a tradable token guarantees an exit.

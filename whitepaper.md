@@ -84,7 +84,7 @@ Payments credited toward a family’s purchase are a commitment under its agreem
 
 ## 5. Trade fees as supplementary funding
 
-Arctide is an app for creating and trading tokens. Its markets charge fees in USDC, a digital currency linked to the US dollar. Fees are split between people funding trading, the project and the platform. The early sale stage, called a bonding curve, has no trading fee. IMOBX would need to show which later fees it has a right to receive and that they reached its account. [Arctide documentation](https://github.com/0xRustyDev/arctide-docs/blob/main/README.md).
+An optional source of funding is a fee collected when people buy or sell a future token. IMOBX would need an agreement stating which fees it receives, what they may pay for and how receipts are checked. A sale between two holders normally pays the seller; it does not provide a new building budget for IMOBX.
 
 These receipts could help fund agreed work without creating more IMOBX tokens for that payment. They still depend on trading. Test the plan with little or no trading income; higher fees may discourage buyers and sellers.
 
@@ -102,25 +102,28 @@ A one-off grant can help build, but it is not continuing income. Having 1,000 ho
 
 ## 7. Resident voice and accountable governance
 
-We are developing a DAO: an organization where people share decisions and use software to help follow the agreed rules. Residents, future residents, builders, staff and funders need to help define their roles.
+We are developing a DAO: an organization where people share decisions and use software to help follow the agreed rules. Residents, property contributors, builders, staff, donors, possible investors, neighbours and independent checkers need clear roles. We have mapped their likely needs for discussion, not confirmed them through interviews.
 
 Ostrom studied how people manage shared resources. We want to apply useful lessons: define the group, involve affected people, check work and spending, resolve disputes and keep local decisions close to residents. [Ostrom’s lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/).
 
 | Who or what | Proposed rule to discuss |
 |---|---|
-| A family’s home and purchase | Follow its agreement and law; a token vote cannot rewrite it on its own. |
-| Shared spaces and local repairs | Residents help decide within the budget and safety rules. |
-| Building and payments | Named people approve, check and pay, with separate checks. |
-| New projects | Agreed bodies decide, with local representation and reports. |
-| Investors | Receive only the rights in their written agreement. |
+| Families | Affordable payments, repairs and a written path to owning the whole home. |
+| Property contributors | Clear donation, sale or lease terms and responsibility for debts and transfer costs. |
+| Builders and suppliers | Agreed work, price, payment dates and independent delivery checks. |
+| Staff and resident representatives | Clear powers, spending limits, appointment, reporting and replacement. |
+| Donors and social funders | Agreed use of funds and evidence of housing results. |
+| Possible investors | Written claims, costs, losses, decision rights and exit terms. |
+| Neighbours | A voice on local impacts, services and access. |
+| Independent checkers | Access and authority to review property, safety, accounts and agreements. |
 
-One option is equal member voice in resident matters and elected people responsible for work. Experience can help choose someone for a time-limited role; online activity need not become votes. Newcomers need a way to participate. Resting, illness or leaving does not erase recognized work. Housing rights do not depend on a score. No resident token plan is agreed. [Cooperative principles](https://ica.coop/en/cooperatives/cooperative-identity); [decision examples](roadmap.html#governance).
+One option is equal member voice in resident matters and elected people responsible for work. Experience can help choose someone for a time-limited role; online activity need not become votes. Newcomers need a way to participate. A family’s housing and purchase agreement cannot be rewritten by a token vote alone. No resident token plan is agreed. [Cooperative principles](https://ica.coop/en/cooperatives/cooperative-identity); [decision examples](roadmap.html#governance).
 
 <div class="pagebreak"></div>
 
 ## 8. What a token could represent
 
-We are studying whether a token could give people a written right to part of the money genuinely left over after costs, commitments and savings for future needs. We have not chosen its rights, income source or legal arrangement. No current payment right is established.
+A token could record an agreed right to take part in specified decisions or, if the legal arrangement permits, receive part of defined income. Its job would be to record and carry out those rights across projects. We have not chosen the rights, income source or legal arrangement. There is no current payment right.
 
 We want each family to be able to own its **whole home**. Sharing purchasing and administration across projects could save work. The proposal does not split every house between token buyers. A future investment linked to IMOBX or several projects would need to state which properties, debts, income and shared risks it includes.
 
@@ -136,17 +139,17 @@ We have not set token supply, resident allocation, returns, lock-up periods, fee
 
 We want people to follow money in and out, see agreed decisions and check payments. Blockchain could provide a shared payment record. It does not check the quality of a roof or replace the family’s agreement.
 
-**Arc Network** is the proposed payment network. Its fees use USDC. **Arctide** is a possible token-creation and trading app, with project fees that might help fund work. **Argus and Uniswap** are alternatives. Compare the cost, permissions and support needed for the same job. No universal cheapest option is established. [Arc](https://www.arc.io/litepaper); [Argus](https://github.com/arguspad/argus-world); [Uniswap](https://developers.uniswap.org/docs/protocols/v4/overview).
+For the first project, compare a shared digital record with ordinary accounts and signed agreements: what gets easier to check, how much does it cost, who can correct an error and who keeps access? A token cannot create rental income, verify a building or guarantee a buyer when someone wants to leave. [OECD study](https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/11/understanding-the-tokenisation-of-assets-in-financial-markets_2e657111/c033401a-en.pdf).
 
 Residents and the organization would agree who decides each matter, spending limits and how a decision can be reviewed. Everyday work should follow these rules without waiting for instructions from the founder.
 
-For example, a resident reports a leak through the Telegram bot. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. Someone else checks the repair. The payment and receipt go into the accounts. Residents can raise a problem and ask for review.
+For example, a resident reports a leak through the support channel. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. Someone else checks the repair. The payment and receipt go into the accounts. Residents can raise a problem and ask for review.
 
 Tasks need a responsible person, deadline and budget. If someone leaves a role, their replacement should find the open work, approvals and documents needed to continue. Residents need ways to choose and replace responsible people. Personal information stays private.
 
 Software assistants could organize documents and remind people about unfinished work. Blockchain records could show payment amounts and destinations. The agreed rules still determine who may decide or spend. This method needs agreement with participants and a working pilot. [Daily decisions and tasks](faq.html#faq-flock-siah).
 
-Families would pay in reais. IMOBX would keep money for Brazilian bills, convert only approved amounts to USDC and convert back to pay builders. CCTP is a possible tool for moving USDC between networks. No conversion provider is confirmed for IMOBX. Residents would not need crypto wallets. [Money path](transparency.html#settlement); [providers researched](transparency.html#ramp-options).
+Families would pay in reais. IMOBX would keep money for Brazilian bills and use digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. No provider is confirmed for IMOBX. Residents would not need crypto wallets. [Money path](transparency.html#settlement); [payment-service requirements](transparency.html#ramp-options).
 
 <div class="pagebreak"></div>
 
@@ -174,6 +177,6 @@ We need practical help: confirm property access, update building and repair budg
 
 Rafael supplied the November budget and January two-loft account. Their dates and different purposes matter. Designs show intended buildings, not completed homes. No number of donated properties or received funding is confirmed here.
 
-The legal registration, property documents, permissions and signed agreements need checking for the chosen project. Arctide’s documentation describes its service; it does not prove an IMOBX connection is working. Resident voting, reinvestment and token rights remain decisions to agree.
+The legal registration, property documents, permissions and signed agreements need checking for the chosen project. The researched payment services do not establish a working IMOBX connection. Resident voting, reinvestment and token rights remain decisions to agree.
 
 Keep a list of unresolved questions and who will answer them. Update the website and documents as agreements are signed, money arrives and work is checked.

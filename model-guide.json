@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "stages": [
     {
       "id": "foundation",
@@ -98,8 +98,8 @@
         "John and authorized providers, with another person checking"
       ],
       "work": [
-        "Acompanhar uma entrada de USDC, conferir a origem, aprovar um gasto e conferir o pagamento. Testar um pedido de reparo pelo Telegram: responsável, orçamento, entrega, comprovante e passagem para outra pessoa.",
-        "Follow a USDC deposit, check its source, approve spending and check the payment. Test a repair request through Telegram: responsible person, budget, delivery, receipt and handover to someone else."
+        "Acompanhar uma entrada de moeda digital, conferir a origem, aprovar um gasto e conferir o pagamento. Testar um pedido de reparo pelo canal de atendimento: responsável, orçamento, entrega, comprovante e passagem para outra pessoa.",
+        "Follow a digital money deposit, check its source, approve spending and check the payment. Test a repair request through the support channel: responsible person, budget, delivery, receipt and handover to someone else."
       ],
       "gate": [
         "Conseguir seguir o dinheiro da origem ao destino. Testar repetição de pedidos, limites, falhas e troca de responsável. Oferecer ajuda a quem não usa carteira. Identificar claramente quando o teste usa dinheiro simulado.",
@@ -125,8 +125,8 @@
         "Organization that would issue the token, Brazilian advisers, participants and providers"
       ],
       "work": [
-        "Escolher entre um comprovante de participação, um investimento ou acordos separados. Explicar quem pode entrar, o que recebe, de onde vem o dinheiro e como pode sair. Comparar Arctide, Argus e Uniswap para o mesmo trabalho.",
-        "Choose between a membership record, an investment or separate arrangements. Explain who may join, what they receive, where money comes from and how they may leave. Compare Arctide, Argus and Uniswap for the same job."
+        "Escolher entre um comprovante de participação, um investimento ou acordos separados. Explicar quem pode entrar, o que recebe, de onde vem o dinheiro e como pode sair. Comparar ferramentas para o mesmo trabalho.",
+        "Choose between a membership record, an investment or separate arrangements. Explain who may join, what they receive, where money comes from and how they may leave. Compare tools for the same job."
       ],
       "gate": [
         "Ter direitos e responsabilidades escritos, uma forma de oferta e transferência revisada, dinheiro com origem demonstrada e sistemas de pagamento conferidos. A análise de um advogado não é aprovação do regulador. Se o token não ajudar, o piloto pode seguir com contratos e registros comuns.",
@@ -238,72 +238,65 @@
     },
     {
       "id": "arc-arctide",
-      "home": true,
+      "home": false,
       "q": [
-        "O que são Arc e Arctide?",
-        "What are Arc and Arctide?"
+        "O que um registro digital ajudaria a fazer?",
+        "What would a shared digital record help people do?"
       ],
       "a": [
         [
-          "Arc é uma rede blockchain: um registro digital compartilhado para pagamentos. Nela, as taxas da rede são pagas em USDC, uma moeda digital ligada ao dólar. Arctide é um aplicativo nessa rede para criar e negociar tokens. Parte das taxas de negociação pode ir ao projeto, conforme as regras de cada mercado.",
-          "Arc is a blockchain network: a shared digital record for payments. Its network fees are paid in USDC, a digital currency linked to the US dollar. Arctide is an app on that network for creating and trading tokens. Part of its trading fees can go to a project, depending on that market’s settings."
+          "Moradores, equipe e financiadores poderiam conferir a mesma decisão ou pagamento sem depender de um resumo enviado por uma pessoa. Cada registro precisa estar ligado a um responsável e a um documento que explique seu significado.",
+          "Residents, staff and funders could check the same decision or payment without relying on one person’s summary. Each record needs a responsible person and a document explaining what it means."
         ],
         [
-          "Estamos avaliando essa combinação. As contas brasileiras continuam em reais, então precisamos medir a conversão e seus custos. Os operadores que validam a rede Arc precisam de autorização para participar. A comunidade ainda precisa de regras claras, responsáveis e formas de trocar de prestador.",
-          "We are evaluating this combination. Brazilian bills remain in reais, so conversion and its costs matter. The operators who validate the Arc network need permission to participate. The community still needs clear rules, responsible people and ways to change service providers."
+          "Um pagamento pode ser registrado; a qualidade de uma obra precisa ser conferida no local. Documentos pessoais ficam privados. Vamos testar se o registro compartilhado reduz trabalho ou melhora a conferência.",
+          "A payment can be recorded; building quality needs an on-site check. Personal documents stay private. We will test whether a shared record reduces work or improves checking."
         ]
       ],
       "sources": [
-        "arc",
-        "arctide"
+        "digital"
       ]
     },
     {
       "id": "exchanges",
       "home": false,
       "q": [
-        "Por que não usar Argus ou Uniswap?",
-        "Why not use Argus or Uniswap?"
+        "Como alguém poderia sair de um investimento?",
+        "How could someone leave an investment?"
       ],
       "a": [
         [
-          "Também são opções. Argus usa mercados Uniswap v4 e oferece divisão de receitas em USDC. Uniswap permite programar regras adicionais de negociação. Por isso, USDC e recompensas pagas com taxas não são exclusivos da Arctide.",
-          "They are options too. Argus uses Uniswap v4 markets and offers USDC revenue sharing. Uniswap lets developers add trading rules. USDC and rewards funded by fees are therefore not exclusive to Arctide."
+          "Se houver um token de investimento, as regras precisam dizer se ele pode ser vendido, a quem, com quais custos e restrições. Colocá-lo num mercado não garante que alguém queira comprar.",
+          "If an investment token is offered, its rules need to say whether it may be sold, to whom, at what cost and under which restrictions. Listing it on a market does not guarantee a buyer."
         ],
         [
-          "A Arctide já reúne criação de tokens, negociação e taxas destinadas ao projeto. Vamos comparar quanto trabalho, dinheiro e suporte seriam necessários para fazer a mesma coisa nas outras opções, incluindo quem controla as taxas e quem pode recebê-las.",
-          "Arctide already combines token creation, trading and project-directed fees. We will compare the work, cost and support needed to do the same job elsewhere, including who controls fees and who can receive them."
-        ],
-        [
-          "Abrir um mercado em outro aplicativo exige trabalho e dinheiro próprios. Tokens criados na Arctide têm regras sobre quais aplicativos podem movimentá-los por autorização do usuário. Isso precisa ser verificado. Dividir pouco dinheiro entre vários mercados pode dificultar as compras e vendas.",
-          "Opening a market on another app needs its own setup and money. Arctide-created tokens have rules about which apps may move them with the user’s permission. Those rules need checking. Splitting a small amount of money across several markets can make buying and selling harder."
+          "Vender para outra pessoa não é o mesmo que a IMOBX devolver o dinheiro. Qualquer promessa de recompra precisaria de regras e recursos próprios. Uma saída não deve consumir o dinheiro reservado para reparos ou compromissos com famílias.",
+          "Selling to someone else is different from IMOBX returning the money. Any promise to buy it back would need its own rules and funding. An exit must not consume money set aside for repairs or commitments to families."
         ]
       ],
       "sources": [
-        "arctide",
-        "argus",
-        "uniswap"
+        "token-study",
+        "cvm"
       ]
     },
     {
       "id": "funding",
       "home": false,
       "q": [
-        "As taxas de negociação pagariam as casas?",
-        "Would trading fees pay for the homes?"
+        "De onde viria o dinheiro para as casas?",
+        "Where would money for the homes come from?"
       ],
       "a": [
         [
-          "Taxas realmente recebidas podem ajudar, se as regras permitirem esse uso. O valor de mercado do token não é dinheiro no caixa da obra. Aluguéis, doações, editais e taxas precisam ser registrados separadamente, respeitando o destino de cada um.",
-          "Fees actually received could help, if their rules allow that use. A token’s market value is not money in the building budget. Rent, donations, grants and fees need separate records, with each used for its agreed purpose."
+          "O primeiro projeto precisa de dinheiro confirmado para o trabalho contratado. Doações, apoios, receitas de serviços e qualquer investimento precisam ter destino e condições registrados. Dinheiro possível ainda não é dinheiro recebido.",
+          "The first project needs confirmed funding for the contracted work. Donations, grants, service income and any investment need recorded purposes and conditions. Possible money is not money received."
         ],
         [
-          "Na Arctide, a etapa inicial de venda por curva não cobra taxa de negociação; as taxas começam no mercado criado depois. O dinheiro colocado nesse mercado para permitir compras e vendas não pode ser contado também como dinheiro para construir. O piloto precisa funcionar mesmo com poucas negociações ou nenhuma.",
-          "Arctide’s early sale stage, called a bonding curve, has no trading fee; fees begin in the market created afterward. Money placed in that market to support buying and selling cannot also be counted as building funds. The pilot needs a plan that works with little or no trading."
+          "Se um futuro mercado de tokens pagar taxas ao projeto, elas podem ajudar quando realmente chegarem. Mas o plano precisa cobrir as casas mesmo com poucas negociações ou nenhuma. O valor de mercado do token não paga uma conta da obra.",
+          "If a future token market pays fees to the project, they may help when actually received. But the plan needs to cover the homes with little or no trading. A token’s market price does not pay a building bill."
         ]
       ],
       "sources": [
-        "arctide",
         "cash"
       ]
     },
@@ -447,16 +440,12 @@
       ],
       "a": [
         [
-          "O trabalho já feito pode ajudar a escolher alguém para uma função. Essa função deve ter prazo, limites de gasto, prestação de contas e uma forma de trocar a pessoa. Assim, experiência pode ajudar a comunidade sem dar poder permanente.",
-          "Someone’s past work can help the community choose them for a role. That role should have a time limit, spending limits, reporting and a way to replace them. Experience can help the community without giving someone permanent power."
+          "Moradores podem escolher responsáveis pela experiência, com prazo, limites de gasto e prestação de contas. Deve haver uma forma de trocar a pessoa e permitir que novos participantes assumam funções.",
+          "Residents can choose responsible people for their experience, with a time limit, spending limits and reporting. There needs to be a way to replace them and let newcomers take on roles."
         ],
         [
-          "O morador não precisa disputar atividade online para ter voz. Trabalho reconhecido continua reconhecido quando alguém descansa, adoece ou sai. Quem chegou há pouco também precisa poder participar.",
-          "Residents do not need to compete in online activity to have a say. Recognized work remains recognized when someone rests, becomes ill or leaves. Newcomers also need a way to participate."
-        ],
-        [
-          "O contrato e a lei definem o direito de morar e comprar a casa. Esse direito não depende de pontuação, propaganda, tokens ou aprovação de um agente. Vamos testar como evitar cadastros duplicados, favorecimento e concentração de decisões.",
-          "Agreements and law define the right to live in and buy a home. That right does not depend on a score, promotion, tokens or an agent’s approval. We will test how to prevent duplicate identities, favoritism and a small group controlling decisions."
+          "O direito de morar e comprar a casa segue o contrato e a lei. Não depende de fazer propaganda, investir dinheiro ou disputar atividade online.",
+          "The right to live in and buy the home follows the agreement and law. It does not depend on promotion, investment or competing in online activity."
         ]
       ],
       "sources": [
@@ -489,8 +478,8 @@
           "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
         ],
         [
-          "O bot de Telegram serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
-          "The Telegram bot would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
+          "O canal de atendimento digital serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
+          "The digital support channel would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
         ],
         [
           "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
@@ -526,77 +515,24 @@
       ]
     },
     {
-      "id": "euler",
-      "home": false,
-      "q": [
-        "Como funciona o cálculo de recompensas chamado Euler?",
-        "How does the reward calculation called Euler work?"
-      ],
-      "a": [
-        [
-          "Em vez de enviar pequenos pagamentos a todos a cada entrada, o sistema atualiza um registro do que cada pessoa pode receber. A pessoa solicita o pagamento depois. Isso pode reduzir o trabalho a cada entrada, mas registrar e receber os valores também tem custos. Precisamos comparar custos para a mesma quantidade de trabalho.",
-          "Instead of sending small payments to everyone whenever money arrives, the system updates a record of what each person can receive. People claim their payment later. This may reduce work each time money arrives, but recording and claiming money also costs. We need to compare costs for the same workload."
-        ],
-        [
-          "Esse método não é exclusivo da Arctide: Argus também documenta cálculos desse tipo. A conta não cria dinheiro nem decide quem tem direito a receber. Para a IMOBX, a utilidade depende de como o método se encaixa nos contratos, nas aprovações e no trabalho diário.",
-          "This method is not exclusive to Arctide: Argus also documents this kind of calculation. The calculation does not create money or decide who has a right to it. Its value for IMOBX depends on how it fits the agreements, approvals and everyday work."
-        ]
-      ],
-      "sources": [
-        "argus",
-        "technical"
-      ]
-    },
-    {
       "id": "on-off-ramp",
       "home": false,
       "q": [
-        "Como o aluguel em reais vira USDC e volta para pagar obras?",
-        "How would rent in reais become USDC and return to pay builders?"
+        "Como o dinheiro sairia do banco e voltaria para pagar uma obra?",
+        "How would money leave the bank and return to pay a builder?"
       ],
       "a": [
         [
-          "O caminho proposto é: família → administrador do imóvel, se houver → conta da IMOBX em reais → empresa que faz a conversão → USDC na rede Arc. Antes de converter, a IMOBX guarda em reais o dinheiro das contas locais e dos imprevistos.",
-          "The proposed path is: family → property manager, if used → IMOBX’s bank account in reais → conversion provider → USDC on Arc. Before converting, IMOBX keeps money in reais for local bills and unexpected costs."
+          "As famílias pagariam em reais. A IMOBX manteria dinheiro para as contas locais. Se um pagamento digital fosse útil, só o valor aprovado seria convertido por um prestador que aceite a organização e suas atividades.",
+          "Families would pay in reais. IMOBX would keep money for local bills. If a digital payment were useful, only the approved amount would be converted by a provider that accepts the organization and its activities."
         ],
         [
-          "Para pagar uma obra, o dinheiro faz o caminho de volta: USDC → conversão → conta em reais → construtora. Se o prestador não trabalhar diretamente com Arc, podemos avaliar outra rede e o CCTP, ferramenta que transfere USDC entre redes. Precisamos testar a ida e a volta e saber o custo total.",
-          "To pay a builder, money goes back: USDC → conversion → bank account in reais → builder. If the provider does not work directly with Arc, we can assess another network and CCTP, a tool for moving USDC between networks. We need to test both directions and know the full cost."
-        ],
-        [
-          "Avenia e Bridge documentam serviços de Pix e USDC, mas ainda não confirmaram que aceitam a IMOBX. Arc Onramp exclui organizações sem fins lucrativos e não oferece saída para reais. BlindPay documenta Pix e Arc, mas sua lista proíbe ONGs e construção. Ter CNPJ não garante abertura de conta. Este site não faz pagamentos.",
-          "Avenia and Bridge document Pix and USDC services, but have not confirmed they accept IMOBX. Arc Onramp excludes nonprofits and offers no cash-out to reais. BlindPay documents Pix and Arc, but its list prohibits NGOs and construction. Having a CNPJ, Brazil’s business tax registration, does not guarantee an account. This site makes no payments."
+          "Para pagar em reais, o dinheiro precisa voltar à conta bancária. É preciso conferir valor enviado, câmbio, taxas, valor recebido e destinatário. Ainda não há prestador confirmado nem pagamentos feitos por este site.",
+          "To pay in reais, money needs to return to the bank account. Check the amount sent, exchange rate, fees, amount received and recipient. No provider is confirmed and this site makes no payments."
         ]
       ],
       "sources": [
-        "settlement",
-        "ramp-options",
-        "avenia",
-        "bridge-brl",
-        "arc-onramp",
-        "blind-policy"
-      ]
-    },
-    {
-      "id": "thanks-zeal-lets",
-      "home": false,
-      "q": [
-        "Qual é a diferença entre Thanks, Zeal, USDC e LETS?",
-        "What is the difference between Thanks, Zeal, USDC and LETS?"
-      ],
-      "a": [
-        [
-          "Thanks é a moeda da comunidade que as pessoas poderiam transferir entre si. Zeal indica contribuição reconhecida; não é dinheiro. USDC é a moeda digital que usaríamos nos pagamentos. Ainda precisamos definir como Thanks é criado, usado e eventualmente trocado. Um Thanks não tem valor prometido de um USDC.",
-          "Thanks is the community currency people could transfer to one another. Zeal reflects recognized contribution; it is not money. USDC is the digital currency we would use for payments. We still need to define how Thanks is created, used and possibly exchanged. One Thanks has no promised value of one USDC."
-        ],
-        [
-          "LETS é um sistema de trocas: quando uma pessoa ajuda outra, os créditos e débitos são anotados nas contas dos membros. Não exige que todo crédito tenha dinheiro guardado no banco. Já um pagamento em USDC exige dinheiro disponível e aprovação para gastá-lo. São funções diferentes.",
-          "LETS is an exchange system: when one person helps another, credits and debts are recorded in members’ accounts. It does not require bank money behind every credit. A USDC payment does require available money and permission to spend it. These are different jobs."
-        ]
-      ],
-      "sources": [
-        "lets",
-        "community-economy"
+        "settlement"
       ]
     }
   ],
@@ -741,10 +677,6 @@
       "label": "IMOBX · Ramp options and eligibility",
       "url": "transparency.html#ramp-options"
     },
-    "lets": {
-      "label": "LETSlink UK · Mutual credit",
-      "url": "https://www.localexchange.org.uk/members/info/about.php"
-    },
     "arc-brand": {
       "label": "Arc · Brand guidelines",
       "url": "https://www.arc.io/brand-guidelines-and-partner-toolkit"
@@ -756,28 +688,32 @@
     "community-economy": {
       "label": "IMOBX · Proposed community economy",
       "url": "transparency.html#community-economy"
+    },
+    "token-study": {
+      "label": "OECD · Study of digital asset records",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/11/understanding-the-tokenisation-of-assets-in-financial-markets_2e657111/c033401a-en.pdf"
     }
   },
   "settlement": {
     "title": [
-      "Reais ↔ USDC: como o dinheiro entra e sai",
-      "BRL ↔ USDC: how money moves in and out"
+      "Do dinheiro recebido à conta paga",
+      "From money received to a paid bill"
     ],
     "intro": [
-      "As famílias continuariam pagando em reais. A IMOBX guardaria dinheiro para as contas brasileiras e só converteria o valor aprovado para USDC, moeda digital ligada ao dólar, na rede Arc. Esse caminho ainda precisa ser testado.",
-      "Families would keep paying in reais. IMOBX would keep money for Brazilian bills and convert only the approved amount into USDC, a digital currency linked to the dollar, on Arc. This path still needs testing."
+      "As famílias pagariam em reais. A IMOBX guardaria dinheiro para as contas e compromissos locais. Só um valor aprovado seria convertido para pagamentos digitais, se isso ajudar a operação.",
+      "Families would pay in reais. IMOBX would keep money for local bills and commitments. Only an approved amount would be converted for digital payments, if that helps the operation."
     ],
     "historical_title": [
       "O caminho proposto para o dinheiro",
       "The proposed money path"
     ],
     "historical_route": [
-      "Família (reais) → administrador, se contratado (menos sua taxa) → conta da IMOBX em reais → conversão para USDC → carteira na Arc → gasto aprovado. Um pagamento a investidores exigiria direito escrito e dinheiro disponível.",
-      "Family (reais) → property manager, if hired (less their fee) → IMOBX’s bank account in reais → conversion to USDC → wallet on Arc → approved spending. Investor payments would need written rights and available money."
+      "Família → conta da IMOBX em reais → contas, reparos e compromissos → dinheiro guardado → nova obra ou outro uso permitido.",
+      "Family → IMOBX bank account in reais → bills, repairs and commitments → money set aside → new building or another permitted use."
     ],
     "historical_note": [
-      "Proposta atualizada para USDC em 15 de outubro de 2026. O caminho continua o mesmo: cobrar, receber na conta, converter e registrar o destino. Ter USDC numa carteira ainda não é receber reais no banco.",
-      "Updated to USDC on 15 October 2026. The steps remain: collect, receive in the bank, convert and record where the money goes. Having USDC in a wallet is not the same as receiving reais in a bank account."
+      "Se houver administrador do imóvel, sua taxa aparece separadamente. Qualquer pagamento a investidores exige um acordo que o permita e dinheiro disponível.",
+      "If a property manager is used, their fee is shown separately. Any investor payment needs an agreement allowing it and available money."
     ],
     "routes": [
       {
@@ -827,18 +763,18 @@
               "An accepted provider converts the money"
             ],
             "body": [
-              "O prestador precisa aceitar a organização e suas atividades. Registrar quantos reais saíram, a cotação, as taxas e quantos USDC chegaram. Não é preciso comprar outra criptomoeda antes.",
-              "The provider must accept the organization and its activities. Record the reais sent, exchange rate, fees and USDC received. There is no need to buy another cryptocurrency first."
+              "O prestador precisa aceitar a organização e suas atividades. Registrar quantos reais saíram, a cotação, as taxas e quantos moeda digital chegaram. Não é preciso comprar outra criptomoeda antes.",
+              "The provider must accept the organization and its activities. Record the reais sent, exchange rate, fees and digital money received. There is no need to buy another cryptocurrency first."
             ]
           },
           {
             "title": [
-              "O USDC chega à carteira da rede certa",
-              "USDC reaches the wallet on the right network"
+              "Conferir o dinheiro digital recebido",
+              "Check the digital money received"
             ],
             "body": [
-              "Preferimos receber diretamente na Arc, se o prestador aceitar. Outra opção é receber USDC original em outra rede e usar CCTP para levá-lo à Arc. USDC original é o emitido nessa rede, em vez de uma cópia criada por outro serviço. A saída de volta também precisa funcionar.",
-              "We prefer direct delivery to Arc if the provider accepts it. Another option is to receive native USDC on another network and use CCTP to move it to Arc. Native USDC is issued on that network, rather than a copy created by another service. The return path must work too."
+              "Conferir a carteira de destino, a rede e o valor recebido. Uma pessoa responsável deve conseguir explicar o caminho de volta para a conta bancária.",
+              "Check the destination wallet, network and amount received. A responsible person must be able to explain the return path to the bank account."
             ]
           },
           {
@@ -860,8 +796,8 @@
       {
         "id": "construction-offramp",
         "title": [
-          "2 / Do USDC ao pagamento da obra em reais",
-          "2 / From USDC to a builder’s payment in reais"
+          "2 / Do moeda digital ao pagamento da obra em reais",
+          "2 / From digital money to a builder’s payment in reais"
         ],
         "intro": [
           "Registrar de onde veio cada valor e para que ele pode ser usado, inclusive taxas e doações.",
@@ -874,8 +810,8 @@
               "Record the money received"
             ],
             "body": [
-              "Anotar a origem e o destino combinado para cada entrada de USDC. O preço do token e o dinheiro preso num mercado de negociação não pagam a obra.",
-              "Record the source and agreed purpose of each USDC deposit. A token’s price and money locked in a trading market do not pay building bills."
+              "Anotar a origem e o destino combinado para cada entrada de moeda digital. O preço do token e o dinheiro preso num mercado de negociação não pagam a obra.",
+              "Record the source and agreed purpose of each digital money deposit. A token’s price and money locked in a trading market do not pay building bills."
             ]
           },
           {
@@ -890,12 +826,12 @@
           },
           {
             "title": [
-              "Trocar USDC por reais",
-              "Convert USDC to reais"
+              "Trocar moeda digital por reais",
+              "Convert digital money to reais"
             ],
             "body": [
-              "Usar um prestador que aceite a organização, suas atividades e a rede. Se ele não receber pela Arc, testar antes a transferência entre redes. Registrar todos os custos.",
-              "Use a provider that accepts the organization, its activities and the network. If it cannot receive on Arc, test the transfer between networks first. Record all costs."
+              "O prestador precisa aceitar a organização e suas atividades. Conferir custos, prazo, destino e quanto chegará em reais antes de enviar.",
+              "The provider must accept the organization and its activities. Check costs, timing, destination and how many reais will arrive before sending."
             ]
           },
           {
@@ -920,8 +856,8 @@
           }
         ],
         "note": [
-          "Quem receber um pagamento em USDC também pode precisar de um prestador próprio para trocar por reais. Essa troca tem seus custos e regras.",
-          "Someone paid in USDC may also need their own provider to convert it to reais. That conversion has its own costs and rules."
+          "Quem receber um pagamento em moeda digital também pode precisar de um prestador próprio para trocar por reais. Essa troca tem seus custos e regras.",
+          "Someone paid in digital money may also need their own provider to convert it to reais. That conversion has its own costs and rules."
         ]
       }
     ],
@@ -956,8 +892,8 @@
           "Entity ↔ financial providers"
         ],
         "body": [
-          "Banco, empresa de conversão e serviços de pagamento têm cadastros e regras próprios. The Flock pode mostrar o andamento; os pagamentos dependem desses prestadores.",
-          "The bank, conversion company and payment services each have their own account checks and rules. The Flock can show progress; payments depend on those providers."
+          "Banco, empresa de conversão e serviços de pagamento têm cadastros e regras próprios. A consulta de andamento prevista no projeto não substitui esses serviços.",
+          "The bank, conversion company and payment services each have their own account checks and rules. The planned progress view does not replace those services."
         ]
       }
     ],
@@ -965,17 +901,9 @@
       "Uma organização estrangeira que tenha imóveis no Brasil precisa de CNPJ, o cadastro tributário brasileiro. Isso não transfere a propriedade nem garante conta no banco ou corretora. A transferência precisa do registro do imóvel. A forma jurídica da IMOBX ainda precisa ser escolhida e revisada por assessores brasileiros.",
       "A foreign organization holding Brazilian property needs a CNPJ, Brazil’s tax registration. That does not transfer ownership or guarantee a bank or exchange account. A property transfer needs title registration. IMOBX’s legal form still needs to be chosen and reviewed by Brazilian advisers."
     ],
-    "provider_title": [
-      "Mercado Bitcoin foi uma opção inicial",
-      "Mercado Bitcoin was an early option"
-    ],
-    "provider_note": [
-      "Mercado Bitcoin foi citado em julho. Seu site informa restrições para associações e cooperativas. Ainda não há ligação com a IMOBX. Vamos escolher um prestador que aceite a organização e faça a troca entre reais e USDC.",
-      "Mercado Bitcoin was mentioned in July. Its site lists restrictions for associations and cooperatives. There is no IMOBX connection in place. We need a provider that accepts the organization and converts between reais and USDC."
-    ],
     "network_note": [
-      "USDC acompanha o dólar, enquanto as contas da obra são em reais. A mudança do câmbio pode alterar quanto dinheiro volta. Conferir a moeda, a rede, os impostos e a identificação das carteiras com o prestador. CCTP move USDC entre redes; não troca por reais nem aprova contas.",
-      "USDC follows the dollar while building bills are in reais. Exchange-rate changes can alter how much money comes back. Check the currency, network, taxes and wallet identification with the provider. CCTP moves USDC between networks; it does not convert to reais or approve accounts."
+      "Uma moeda digital ligada ao dólar muda de valor em reais com o câmbio. Precisamos conferir a entrada e a volta ao banco antes de escolher um serviço.",
+      "A digital currency linked to the dollar changes value in reais with the exchange rate. We need to check both the deposit and return to the bank before choosing a service."
     ],
     "evidence_title": [
       "Como testar o caminho completo",
@@ -1000,185 +928,39 @@
       ]
     ],
     "limits": [
-      "Trocar reais por USDC muda a forma do dinheiro, não o que ele pode pagar. Continuam valendo os contratos dos moradores, as regras das doações e os limites da organização sem fins lucrativos.",
-      "Converting reais to USDC changes the form of the money, not what it may pay for. Resident agreements, donation rules and nonprofit limits still apply."
+      "Mudar a forma do dinheiro não muda suas obrigações. Contratos dos moradores, doações com destino definido e limites da organização continuam valendo.",
+      "Changing the form of money does not change its obligations. Resident agreements, donations for a stated purpose and the organization’s limits still apply."
     ],
     "provider_research": {
       "title": [
-        "Opções pesquisadas para o piloto · 15 outubro 2026",
-        "Pilot options researched · 15 October 2026"
+        "O que um serviço de pagamento precisa cumprir",
+        "What a payment service needs to do"
       ],
       "conclusion": [
-        "Há caminhos técnicos para ligar Pix, USDC e Arc. Ainda precisamos de um prestador que confirme por escrito que aceita a IMOBX, sua forma jurídica e suas atividades, e informe o custo completo.",
-        "There are technical ways to connect Pix, USDC and Arc. We still need a provider to confirm in writing that it accepts IMOBX, its legal form and its activities, and quote the full cost."
-      ],
-      "lean_pilot": [
-        "Para começar, a família pagaria em reais e as contas locais ficariam no banco brasileiro. Só o valor aprovado da própria IMOBX seria convertido. Receber doações ou movimentar dinheiro de terceiros exige uma análise separada do prestador.",
-        "To start, families would pay in reais and local bills would stay in the Brazilian bank. Only an approved amount belonging to IMOBX would be converted. Donations or handling other people’s money need a separate provider review."
-      ],
-      "routes": [
-        {
-          "title": [
-            "A / Direto para Arc, se houver aceite",
-            "A / Direct to Arc, if accepted"
-          ],
-          "flow": [
-            "Conta da IMOBX em reais/Pix ↔ prestador que aceite o projeto ↔ USDC original na Arc",
-            "IMOBX bank in reais/Pix ↔ provider that accepts the project ↔ native USDC on Arc"
-          ],
-          "fit": [
-            "É o caminho com menos etapas. BlindPay documenta essa ligação, mas sua lista proíbe ONGs, organizações sem fins lucrativos e construção. Por isso, não serve para a estrutura proposta. Ainda não há outro prestador direto confirmado.",
-            "This has the fewest steps. BlindPay documents this connection, but its list prohibits NGOs, nonprofits and construction. It therefore does not fit the proposed structure. No other direct provider is confirmed."
-          ],
-          "sources": [
-            "blind-arc",
-            "blind-policy"
-          ]
-        },
-        {
-          "title": [
-            "B / Trocar no Brasil e transferir USDC entre redes",
-            "B / Convert in Brazil, then move USDC between networks"
-          ],
-          "flow": [
-            "Conta da IMOBX em reais/Pix ↔ prestador que aceite o projeto ↔ USDC original em outra rede aceita ↔ CCTP ↔ Arc",
-            "IMOBX bank in reais/Pix ↔ provider that accepts the project ↔ native USDC on another accepted network ↔ CCTP ↔ Arc"
-          ],
-          "fit": [
-            "Avenia e Bridge documentam Pix, USDC e redes como Base. Arc não aparece nas tabelas consultadas. CCTP permite mover USDC entre Base e Arc. A ligação completa ainda precisa ser testada, e os prestadores precisam aceitar as atividades da IMOBX.",
-            "Avenia and Bridge document Pix, USDC and networks such as Base. Arc does not appear in the tables checked. CCTP supports moving USDC between Base and Arc. The full connection still needs testing, and the providers need to accept IMOBX’s activities."
-          ],
-          "sources": [
-            "avenia",
-            "bridge-brl",
-            "bridge-routes",
-            "cctp"
-          ]
-        },
-        {
-          "title": [
-            "C / Serviços da Circle ou de um parceiro brasileiro para organizações",
-            "C / Circle or Brazilian partner services for organizations"
-          ],
-          "flow": [
-            "Conta aprovada para a organização ↔ conversão bancária entre reais e dólares, se necessária ↔ Circle Mint ou parceiro ↔ USDC na Arc",
-            "Approved organization account ↔ bank conversion between reais and dollars, if needed ↔ Circle Mint or partner ↔ USDC on Arc"
-          ],
-          "fit": [
-            "Circle Mint lista USDC na Arc. A parceria anunciada entre Circle e BTG no Brasil não confirma uma conta Pix–Arc para a IMOBX. Precisamos saber quem pode abrir conta, como o banco se conecta e quais são os custos e valores mínimos. Este serviço é diferente do Arc Onramp.",
-            "Circle Mint lists USDC on Arc. Circle’s announced BTG partnership in Brazil does not confirm a Pix–Arc account for IMOBX. We need to know who may open an account, how the bank connects, and the costs and minimum amounts. This service differs from Arc Onramp."
-          ],
-          "sources": [
-            "circle-mint",
-            "circle-brasil"
-          ]
-        }
-      ],
-      "providers": [
-        {
-          "name": "Avenia",
-          "supported": [
-            "Pix ↔ USDC; Base e outras redes documentadas.",
-            "Pix ↔ USDC; Base and other networks documented."
-          ],
-          "fit": [
-            "Perguntar se aceita a organização e suas atividades e quanto cobra. Confirmar a entrada e a saída de USDC original. Não encontramos suporte direto à Arc.",
-            "Ask whether it accepts the organization and its activities, and what it charges. Confirm native USDC in both directions. We found no direct Arc support."
-          ],
-          "sources": [
-            "avenia"
-          ]
-        },
-        {
-          "name": "Bridge",
-          "supported": [
-            "Entradas e saídas por Pix; USDC em redes como Base.",
-            "Send and receive Pix payments; USDC on networks such as Base."
-          ],
-          "fit": [
-            "Precisa de análise: os termos para fora dos EUA e do Espaço Econômico Europeu proíbem serviços de investimento e crédito. Ainda não confirmou aceitar a IMOBX ou trabalhar diretamente com Arc.",
-            "Needs review: terms outside the US and European Economic Area prohibit investment and credit services. It has not confirmed acceptance of IMOBX or direct Arc support."
-          ],
-          "sources": [
-            "bridge-brl",
-            "bridge-routes",
-            "bridge-terms"
-          ]
-        },
-        {
-          "name": "Circle Mint / BTG",
-          "supported": [
-            "Circle Mint suporta USDC nativo na Arc; Circle anunciou distribuição de USDC com BTG no Brasil.",
-            "Circle Mint supports native Arc USDC; Circle announced USDC distribution with BTG in Brazil."
-          ],
-          "fit": [
-            "Possível conversa institucional. Ainda não sabemos se aceita a IMOBX ou como ligar a conta em reais ao serviço.",
-            "A possible institutional route. We do not yet know whether it accepts IMOBX or how the bank account in reais would connect."
-          ],
-          "sources": [
-            "circle-mint",
-            "circle-brasil"
-          ]
-        },
-        {
-          "name": "Arc Onramp",
-          "supported": [
-            "Compra de USDC por prestadores; os termos atuais não oferecem troca de volta para dinheiro no banco.",
-            "USDC purchases through providers; current terms offer no conversion back to bank money."
-          ],
-          "fit": [
-            "Não serve para a proposta atual: exclui organizações sem fins lucrativos e não oferece troca de volta para reais.",
-            "Does not fit the current proposal: it excludes nonprofits and does not offer conversion back to reais."
-          ],
-          "sources": [
-            "arc-onramp"
-          ]
-        },
-        {
-          "name": "BlindPay",
-          "supported": [
-            "Entradas e saídas com Pix e USDC na Arc.",
-            "Send and receive Pix payments and USDC on Arc."
-          ],
-          "fit": [
-            "Não serve para a estrutura proposta: sua lista de atividades proibidas inclui ONGs, organizações sem fins lucrativos e construção.",
-            "Does not fit the proposed structure: its prohibited-activities list includes NGOs/nonprofits and construction."
-          ],
-          "sources": [
-            "blind-arc",
-            "blind-policy"
-          ]
-        }
-      ],
-      "cost": [
-        "Ainda não sabemos qual caminho custa menos. Pedir cotações de R$1.000 e R$10.000 nos dois sentidos, comparando o câmbio no mesmo horário, todas as taxas, transferências, mensalidades e limites. Avenia e Bridge precisam enviar propostas. BlindPay anuncia planos a partir de US$399 por mês, pagos anualmente, mas suas regras já excluem a estrutura proposta. Promoções não são preços permanentes.",
-        "We do not yet know which path costs least. Ask for R$1,000 and R$10,000 quotes in both directions, comparing the exchange rate at the same time, all fees, transfers, subscriptions and limits. Avenia and Bridge need to provide quotes. BlindPay advertises plans from US$399 a month, billed annually, but its rules already exclude the proposed structure. Promotions are not permanent prices."
-      ],
-      "acceptance_title": [
-        "O que perguntar antes de escolher",
-        "What to ask before choosing"
+        "Ainda não escolhemos um prestador. Antes de contratar, ele precisa confirmar que aceita a organização e o trabalho que fazemos.",
+        "We have not chosen a provider. Before signing up, it must confirm that it accepts the organization and the work we do."
       ],
       "acceptance": [
         [
-          "Aceita a forma jurídica e o país da organização? Isso pode ser associação, cooperativa, empresa brasileira ou organização estrangeira com CNPJ.",
-          "Does it accept the organization’s legal form and country? This might be an association, cooperative, Brazilian company or foreign organization with a CNPJ."
+          "Aceitar por escrito a forma jurídica, o aluguel com opção de compra, as doações e qualquer atividade financeira pretendida.",
+          "Accept in writing the legal form, rent-to-own, donations and any intended financial activity."
         ],
         [
-          "Aceita aluguel com opção de compra, obras contratadas, doações e um possível investimento? Descrever as atividades como elas são.",
-          "Does it allow rent-to-own, hired building work, donations and a possible investment? Describe the activities as they are."
+          "Mostrar o custo completo e quanto sai e chega em reais, incluindo câmbio, taxas e mensalidades.",
+          "Show the full cost and the reais sent and received, including exchange rate, fees and subscriptions."
         ],
         [
-          "Quais contas, carteiras e redes podem ser usadas? Como o dinheiro volta para reais? Quais os limites e o que acontece se algo falhar?",
-          "Which accounts, wallets and networks can be used? How does money return to reais? What are the limits, and what happens if something fails?"
+          "Permitir conferir os responsáveis, limites, carteira, entrada e volta ao banco e o que acontece numa falha.",
+          "Let us check responsible people, limits, wallet, deposits, return to the bank and what happens in a failure."
         ],
         [
-          "Quanto custa o caminho completo? Simular antes de contratar. Para um piloto pequeno, avaliar o serviço pronto do prestador antes de pagar por uma ligação de software própria.",
-          "What does the full path cost? Simulate it before signing up. For a small pilot, assess the provider’s existing service before paying for a custom software connection."
+          "Proteger documentos pessoais e oferecer ajuda para erro, acesso perdido e pagamentos atrasados.",
+          "Protect personal documents and provide help with errors, lost access and delayed payments."
         ]
       ],
       "status": [
-        "Esta é uma pesquisa em documentos, não uma aprovação comercial ou teste de transferência. Não abrimos conta nem criamos carteira ou serviço de pagamento.",
-        "This is document research, not provider approval or a transfer test. We have not opened an account or created a wallet or payment service."
+        "A escolha e os testes ainda estão pendentes. Este site explica o plano; não abre contas nem movimenta dinheiro.",
+        "Selection and tests remain pending. This site explains the plan; it does not open accounts or move money."
       ]
     }
   },
@@ -1192,8 +974,8 @@
       "See where money would come from, how it would be used and what remains to be resolved."
     ],
     "intro": [
-      "Aqui mostramos o caminho planejado entre reais e USDC, as empresas pesquisadas e as decisões pendentes. Consultamos os documentos em 15 de outubro de 2026. Ainda não há preços contratados ou serviço de pagamento funcionando pela IMOBX.",
-      "This page shows the planned path between reais and USDC, the companies researched and the decisions still needed. We checked the documents on 15 October 2026. IMOBX has no agreed prices or working payment service demonstrated here yet."
+      "Esta página mostra o caminho proposto para o dinheiro e as decisões que precisam estar claras antes de começar. Ainda não há um serviço de pagamento da IMOBX demonstrado aqui.",
+      "This page shows the proposed money path and the decisions needed before starting. No working IMOBX payment service is demonstrated here yet."
     ],
     "status_title": [
       "O que está definido e o que falta",
@@ -1202,12 +984,12 @@
     "statuses": [
       {
         "title": [
-          "Proposta atual: USDC na Arc",
-          "Current proposal: USDC on Arc"
+          "Proposta: pagar e guardar dinheiro em reais",
+          "Proposal: pay and keep local money in reais"
         ],
         "body": [
-          "O aluguel e as reservas locais permanecem em reais. Somente valores autorizados seriam convertidos para USDC.",
-          "Rent and local reserves stay in reais. Only authorized amounts would be converted to USDC."
+          "As famílias pagariam em reais. A IMOBX guardaria dinheiro para as contas e compromissos locais. Só um valor aprovado seria convertido para pagamentos digitais, se isso ajudar a operação.",
+          "Families would pay in reais. IMOBX would keep money for local bills and commitments. Only an approved amount would be converted for digital payments, if that helps the operation."
         ]
       },
       {
@@ -1312,8 +1094,8 @@
           "Founder information"
         ],
         "body": [
-          "As conversas dos fundadores em julho ajudaram a desenhar a cobrança e os repasses. A escolha atual de USDC veio em outubro. Usamos essas informações para o plano sem publicar mensagens privadas.",
-          "The founders’ July discussions helped shape collection and transfers. The current USDC choice came in October. We use that information for the plan without publishing private messages."
+          "As conversas dos fundadores em julho ajudaram a desenhar a cobrança e os repasses. Em outubro, estudamos pagamentos digitais para usos autorizados. Usamos essas informações para o plano sem publicar mensagens privadas.",
+          "The founders’ July discussions helped shape collection and transfers. In October, we studied digital payments for approved uses. We use that information for the plan without publishing private messages."
         ]
       },
       {
@@ -1322,8 +1104,8 @@
           "Providers’ own documents"
         ],
         "body": [
-          "As fontes abaixo mostram o que as empresas dizem oferecer e suas restrições. Não provam que a IMOBX foi aceita ou que o serviço foi conferido por uma auditoria independente.",
-          "The sources below show what companies say they offer and their restrictions. They do not prove IMOBX has been accepted or that an independent audit checked the service."
+          "As fontes explicam regras e possibilidades. Não significam aceite da IMOBX ou conferência independente de um serviço funcionando.",
+          "Sources explain rules and possibilities. They do not mean acceptance of IMOBX or an independent check of a working service."
         ]
       },
       {
@@ -1332,8 +1114,8 @@
           "Operating proposals"
         ],
         "body": [
-          "Guardar reais, juntar conversões e talvez usar CCTP são opções para testar. Ainda não são resultados medidos.",
-          "Keeping reais, combining conversions and possibly using CCTP are options to test. They are not measured results yet."
+          "Guardar dinheiro para contas locais e converter apenas valores aprovados são opções a testar no piloto.",
+          "Keeping money for local bills and converting only approved amounts are options to test in the pilot."
         ]
       }
     ],
@@ -1358,34 +1140,6 @@
       },
       {
         "title": [
-          "Arc, USDC e transferências entre redes",
-          "Arc, USDC and moving money between networks"
-        ],
-        "keys": [
-          "arc-onramp",
-          "circle-mint",
-          "circle-brasil",
-          "cctp"
-        ]
-      },
-      {
-        "title": [
-          "Prestadores e quem eles aceitam",
-          "Providers and who they accept"
-        ],
-        "keys": [
-          "avenia",
-          "bridge-brl",
-          "bridge-routes",
-          "bridge-terms",
-          "blind-arc",
-          "blind-policy",
-          "blind-price",
-          "mb"
-        ]
-      },
-      {
-        "title": [
           "Restrições e uso do dinheiro",
           "Restrictions and use of funds"
         ],
@@ -1402,25 +1156,14 @@
     ],
     "changes": [
       {
-        "date": "2026-10-15",
+        "date": "2026-10-16",
         "title": [
-          "USDC passa a ser a moeda digital proposta",
-          "USDC becomes the proposed digital currency"
+          "Situação do plano de pagamentos",
+          "Payment-plan status"
         ],
         "body": [
-          "Atualizado o fluxo de cobrança, conversão e saída para reais; as conversas anteriores continuam como histórico de origem.",
-          "Updated collection, conversion and BRL cash-out flows; earlier discussions remain source history."
-        ]
-      },
-      {
-        "date": "2026-10-15",
-        "title": [
-          "Conferimos quem os prestadores aceitam",
-          "Checked who providers accept"
-        ],
-        "body": [
-          "Registradas as restrições de Arc Onramp, BlindPay e Mercado Bitcoin. Avenia, Bridge e acesso institucional continuam sem aceite específico para IMOBX.",
-          "Recorded Arc Onramp, BlindPay and Mercado Bitcoin restrictions. Avenia, Bridge and institutional access remain without specific IMOBX acceptance."
+          "Famílias pagariam em reais. Qualquer conversão dependeria de um uso aprovado e de um prestador que aceite a organização. Ainda não há escolha ou operação confirmada.",
+          "Families would pay in reais. Any conversion would depend on an approved use and a provider that accepts the organization. No choice or working operation is confirmed yet."
         ]
       }
     ],
@@ -1435,12 +1178,12 @@
       "Who decides, who contributes and who pays?"
     ],
     "intro": [
-      "Esta é uma proposta para discutir com os participantes. Morar, ajudar e investir dinheiro são formas diferentes de participar, com direitos e responsabilidades próprios.",
-      "This is a proposal to discuss with participants. Living here, helping and investing money are different ways to take part, with their own rights and responsibilities."
+      "Moradores, equipe, doadores e possíveis investidores precisam saber como cada decisão e pagamento afeta seus acordos.",
+      "Residents, staff, donors and possible investors need to know how each decision and payment affects their agreements."
     ],
     "status": [
-      "Planejamos usar a Arc Network para pagamentos. A ligação financeira, o token e as regras completas de Thanks ainda estão em desenvolvimento.",
-      "We plan to use Arc Network for payments. The financial connection, token and complete Thanks rules are still in development."
+      "O projeto está em preparação. O token, os pagamentos digitais e seus direitos ainda não foram definidos ou demonstrados em funcionamento.",
+      "The project is being prepared. The token, digital payments and their rights have not yet been defined or demonstrated in use."
     ],
     "topics": [
       {
@@ -1488,8 +1231,8 @@
             "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
           ],
           [
-            "O bot de Telegram serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
-            "The Telegram bot would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
+            "O canal de atendimento digital serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
+            "The digital support channel would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
           ],
           [
             "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
@@ -1503,31 +1246,6 @@
         ]
       },
       {
-        "id": "thanks-zeal-lets",
-        "title": [
-          "Thanks, Zeal e a comparação com LETS",
-          "Thanks, Zeal and the comparison with LETS"
-        ],
-        "body": [
-          [
-            "LETS é um sistema de trocas: quando uma pessoa ajuda outra, os créditos e débitos são anotados nas contas dos membros. Não exige que todo crédito tenha dinheiro guardado no banco. Já um pagamento em USDC exige dinheiro disponível e aprovação para gastá-lo. São funções diferentes.",
-            "LETS is an exchange system: when one person helps another, credits and debts are recorded in members’ accounts. It does not require bank money behind every credit. A USDC payment does require available money and permission to spend it. These are different jobs."
-          ],
-          [
-            "Thanks é a moeda da comunidade que as pessoas poderiam transferir entre si. Zeal indica contribuição reconhecida; não é dinheiro. USDC é a moeda digital que usaríamos nos pagamentos. Ainda precisamos definir como Thanks é criado, usado e eventualmente trocado. Um Thanks não tem valor prometido de um USDC.",
-            "Thanks is the community currency people could transfer to one another. Zeal reflects recognized contribution; it is not money. USDC is the digital currency we would use for payments. We still need to define how Thanks is created, used and possibly exchanged. One Thanks has no promised value of one USDC."
-          ],
-          [
-            "Queremos que outra pessoa confirme o trabalho e que cada participante possa escolher o uso dos seus dados, corrigir erros e pedir revisão. Descansar ou sair não deve apagar ajuda já reconhecida. Também precisamos ajudar quem não usa carteira. Esses resultados ainda precisam ser demonstrados.",
-            "We want another person to confirm work, and each participant to choose how their data is used, correct errors and ask for review. Resting or leaving should not erase help already recognized. People without wallets also need support. These results still need to be demonstrated."
-          ]
-        ],
-        "sources": [
-          "lets",
-          "charter"
-        ]
-      },
-      {
         "id": "treasury-demonstration",
         "title": [
           "Primeiro teste: acompanhar um pequeno pagamento",
@@ -1535,16 +1253,16 @@
         ],
         "body": [
           [
-            "O teste começaria com uma pequena entrada de USDC identificada como dinheiro de demonstração. Uma pessoa autorizada aprova o valor e quem recebe. O aplicativo mostra a aprovação, o pagamento confirmado e o dinheiro que sobrou, com links para conferir. Não chamaremos esse dinheiro de aluguel ou taxa da Arctide sem comprovar a origem.",
-            "The test would start with a small USDC deposit labelled as demonstration money. An authorized person approves the amount and recipient. The app shows the approval, confirmed payment and money left, with links to check. We will not call this rent or an Arctide fee without proof of that source."
+            "O primeiro teste acompanharia um pequeno valor aprovado: quem enviou, para qual conta foi, quem autorizou o uso e o que o pagamento quitou. O valor de teste deve ficar separado do dinheiro destinado às famílias e às obras.",
+            "The first test would follow a small approved amount: who sent it, which account received it, who approved its use and what the payment paid for. Test funds should stay separate from money committed to families and construction."
           ],
           [
-            "Esse teste acompanha o dinheiro. As regras completas de decisão e recompensas serão outro trabalho. Ainda não demonstramos o contrato de software, o aplicativo financeiro ou o pagamento de teste da IMOBX.",
-            "This test follows the money. The full decision and reward rules are separate work. We have not yet demonstrated IMOBX’s software contract, financial app or test payment."
+            "Ainda não demonstramos esse caminho completo em funcionamento. O teste precisa permitir conferir o registro bancário, o pagamento digital e o comprovante final.",
+            "We have not yet demonstrated this complete path in use. The test needs to let people check the bank record, digital payment and final receipt."
           ]
         ],
         "sources": [
-          "arc-studio"
+          "digital"
         ]
       }
     ]
@@ -1567,12 +1285,230 @@
       "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
     ],
     "tools": [
-      "O bot de Telegram serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
-      "The Telegram bot would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
+      "O canal de atendimento digital serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
+      "The digital support channel would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
     ],
     "status": [
       "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
       "This is the proposed method for the pilot. We still need to agree it with participants and demonstrate it, including when an invoice is disputed or a responsible person is replaced."
+    ]
+  },
+  "participation": {
+    "title": [
+      "Uma casa para a família. Regras claras para quem participa.",
+      "A home for the family. Clear rules for everyone involved."
+    ],
+    "intro": [
+      "Este é o cenário de trabalho proposto para o primeiro projeto. Precisamos ouvir as pessoas envolvidas e fechar os contratos antes de tratá-lo como um serviço disponível.",
+      "This is the proposed working scenario for the first project. We need to hear from the people involved and complete the agreements before presenting it as an available service."
+    ],
+    "scenario": [
+      [
+        "A IMOBX obtém o direito de usar um imóvel, reúne dinheiro para a obra e contrata a construção. Uma família entra por critérios claros e assina um contrato que explica pagamentos, reparos e como pode se tornar dona da casa inteira.",
+        "IMOBX obtains the right to use a property, secures the building budget and hires the builder. A family joins under clear criteria and signs an agreement explaining payments, repairs and how it can become the owner of the whole home."
+      ],
+      [
+        "Moradores ajudam a decidir o uso dos espaços e as prioridades locais. Responsáveis escolhidos cuidam das tarefas dentro de limites de gasto. As contas mostram o que entrou, o que foi pago e o que precisa ficar guardado. Outra equipe deve conseguir continuar a operação.",
+        "Residents help decide the use of shared spaces and local priorities. Chosen people handle tasks within spending limits. Accounts show money received, money spent and what needs to be saved. Another team should be able to continue the operation."
+      ],
+      [
+        "Um token poderia registrar um direito definido no projeto: participar de certas decisões ou, se houver um acordo permitido, receber parte de uma receita. Ainda não escolhemos esses direitos. O contrato da família, a participação nas decisões e um investimento não precisam ser a mesma coisa.",
+        "A token could record a defined right in the project: taking part in specified decisions or, under a permitted agreement, receiving part of an income source. We have not chosen those rights. A family’s agreement, a say in decisions and an investment do not need to be the same thing."
+      ]
+    ],
+    "roles_title": [
+      "O que cada participante precisa saber",
+      "What each participant needs to know"
+    ],
+    "headings": [
+      [
+        "Quem participa",
+        "Who takes part"
+      ],
+      [
+        "O que precisa receber do projeto",
+        "What they need from the project"
+      ],
+      [
+        "O que falta combinar",
+        "What remains to be agreed"
+      ]
+    ],
+    "roles": [
+      {
+        "who": [
+          "Famílias que moram ou querem entrar",
+          "Families living here or applying"
+        ],
+        "need": [
+          "Pagamento que caiba no orçamento, moradia segura, reparos e um caminho escrito para a casa própria.",
+          "Affordable payments, a safe home, repairs and a written path to ownership."
+        ],
+        "decision": [
+          "Preço final, reajustes, quanto conta para a compra, atrasos, saída e como escolher representantes.",
+          "Final price, price changes, what counts toward purchase, late payments, leaving and how representatives are chosen."
+        ]
+      },
+      {
+        "who": [
+          "Quem disponibiliza um imóvel",
+          "People making property available"
+        ],
+        "need": [
+          "Saber se está doando, alugando ou vendendo, quando a responsabilidade muda e quais despesas continuam.",
+          "Know whether they are donating, leasing or selling, when responsibility changes and which costs remain theirs."
+        ],
+        "decision": [
+          "Documentos, dívidas, impostos, registro e condições da entrega.",
+          "Documents, debts, taxes, registration and handover conditions."
+        ]
+      },
+      {
+        "who": [
+          "Construtores e fornecedores",
+          "Builders and suppliers"
+        ],
+        "need": [
+          "Trabalho, preço, prazo e etapas de pagamento definidos, com conferência por outra pessoa.",
+          "Defined work, price, deadlines and payment stages, checked by someone else."
+        ],
+        "decision": [
+          "Alterações de custo, garantia, defeitos e quem aprova uma cobrança ligada a um fundador.",
+          "Cost changes, warranties, defects and who approves an invoice linked to a founder."
+        ]
+      },
+      {
+        "who": [
+          "Equipe e representantes dos moradores",
+          "Staff and resident representatives"
+        ],
+        "need": [
+          "Funções e limites claros, remuneração combinada quando houver e informação para continuar o trabalho.",
+          "Clear roles and limits, agreed pay where applicable and information needed to keep work moving."
+        ],
+        "decision": [
+          "Escolha e troca dos responsáveis, urgências, prestação de contas e reclamações.",
+          "Choosing and replacing responsible people, emergencies, reporting and complaints."
+        ]
+      },
+      {
+        "who": [
+          "Doadores e financiadores sociais",
+          "Donors and social funders"
+        ],
+        "need": [
+          "Ver o que o dinheiro paga e os resultados para as famílias.",
+          "See what their money pays for and the results for families."
+        ],
+        "decision": [
+          "Uso permitido, relatórios e o que acontece se a obra atrasar ou não puder seguir.",
+          "Permitted uses, reports and what happens if the build is delayed or cannot proceed."
+        ]
+      },
+      {
+        "who": [
+          "Possíveis compradores do token",
+          "Possible token buyers"
+        ],
+        "need": [
+          "Saber exatamente o que compram, quem responde pelo acordo e como podem perder dinheiro ou sair.",
+          "Know exactly what they buy, who is responsible for the agreement and how they may lose money or leave."
+        ],
+        "decision": [
+          "Direitos, fonte de pagamentos, custos, perdas, limites de voto e regras de venda. Não há garantia de comprador futuro.",
+          "Rights, payment source, costs, losses, voting limits and sale rules. There is no guaranteed future buyer."
+        ]
+      },
+      {
+        "who": [
+          "Vizinhos e comunidade local",
+          "Neighbours and the local community"
+        ],
+        "need": [
+          "Ser ouvidos sobre acesso, obras, serviços e uso dos espaços, sem tratar uma mudança como solução para todas as famílias.",
+          "Be heard about access, construction, services and shared spaces, without treating relocation as the answer for every family."
+        ],
+        "decision": [
+          "Efeitos da obra, acesso a trabalho e escola e um canal para resolver problemas.",
+          "Construction effects, access to work and school and a way to resolve problems."
+        ]
+      },
+      {
+        "who": [
+          "Quem confere documentos, obras e contas",
+          "People checking documents, buildings and accounts"
+        ],
+        "need": [
+          "Autorizações, registros e recursos para verificar o trabalho e cobrar correções.",
+          "Authority, records and resources to check the work and require corrections."
+        ],
+        "decision": [
+          "Responsáveis por segurança, registro, contabilidade e análise jurídica, com custos no orçamento.",
+          "Responsibility for safety, registration, accounting and legal review, with costs in the budget."
+        ]
+      }
+    ],
+    "rights_title": [
+      "O que seria decidido, e por quem",
+      "What would be decided, and by whom"
+    ],
+    "rights": [
+      [
+        "A família e a IMOBX assinam o contrato de moradia e compra. Uma votação não pode mudar sozinha esse acordo.",
+        "The family and IMOBX sign the housing and purchase agreement. A vote cannot change that agreement on its own."
+      ],
+      [
+        "Moradores participam das regras de uso e manutenção comuns. A organização mantém as responsabilidades legais e técnicas que lhe cabem.",
+        "Residents take part in rules for shared use and maintenance. The organization keeps its legal and technical responsibilities."
+      ],
+      [
+        "Quem compra um eventual token recebe apenas os direitos escritos na oferta e no acordo. Comprar mais não dá automaticamente controle sobre as casas ou os moradores.",
+        "Anyone buying a future token receives only the rights written in the offer and agreement. Buying more does not automatically give control over homes or residents."
+      ]
+    ],
+    "token_title": [
+      "Quando o token faria diferença",
+      "When a token would make a difference"
+    ],
+    "token": [
+      [
+        "Primeiro precisamos dizer qual problema ele resolve para uma pessoa concreta. Por exemplo: registrar uma participação que possa ser conferida, facilitar uma transferência permitida ou calcular um pagamento já previsto em contrato.",
+        "First we need to say which problem it solves for a particular person. For example: recording participation that can be checked, making a permitted transfer easier, or calculating a payment already provided for in an agreement."
+      ],
+      [
+        "Depois comparar o custo e o trabalho com registros comuns. Um token não cria renda, não garante venda e não substitui o registro de um imóvel. A vantagem precisa aparecer no uso.",
+        "Then compare the cost and work with ordinary records. A token does not create income, guarantee a sale or replace property registration. Its benefit needs to show in use."
+      ]
+    ],
+    "decision_title": [
+      "As decisões que vêm antes de uma oferta",
+      "Decisions needed before an offer"
+    ],
+    "decisions": [
+      [
+        "Quem emite o token e quem responde pelo acordo?",
+        "Who issues the token and who is responsible for the agreement?"
+      ],
+      [
+        "O que o comprador pode receber ou decidir? Quais são os limites?",
+        "What may the buyer receive or decide? What are the limits?"
+      ],
+      [
+        "Se houver rendimento, qual receita paga, depois de quais custos e reservas?",
+        "If there is income, which receipts fund it, after which costs and money set aside?"
+      ],
+      [
+        "Como ficam os direitos quando uma casa passa à família e seu aluguel termina?",
+        "What happens to those rights when a home passes to its family and rent ends?"
+      ],
+      [
+        "Quem pode entrar, transferir ou sair? O que acontece com perdas ou fim do projeto?",
+        "Who may join, transfer or leave? What happens with losses or if the project ends?"
+      ],
+      [
+        "A forma jurídica permite isso sem usar doações ou dinheiro já prometido aos moradores?",
+        "Does the legal form allow this without using donations or money already promised to residents?"
+      ]
     ]
   }
 }
