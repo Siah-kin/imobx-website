@@ -1,7 +1,7 @@
 {
   "title": "IMOBX",
   "subtitle": "A documented rent-to-own housing model for Rio",
-  "status": "Partner discussion draft · v0.2 · 15 October 2026",
+  "status": "Project proposal · v0.2 · 16 October 2026",
   "slides": [
     {
       "eyebrow": "01 / THE PROJECT",
@@ -56,7 +56,7 @@
         "Keep money for empty homes and commitments to families.",
         "Fund more homes; consider any permitted investor payments afterward."
       ],
-      "notes": "No old percentage split is agreed. Money credited toward a family’s purchase is not a second receipt of cash. Money paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Money locked in a trading market is not also available to build homes."
+      "notes": "Money credited toward a family’s purchase is not a second receipt of cash. Money paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Money locked in a trading market is not also available to build homes."
     },
     {
       "eyebrow": "06 / CONTINUITY",
@@ -67,7 +67,7 @@
         "Rent ends when the family becomes the home’s owner.",
         "Show how continuing income and new building funds will be found."
       ],
-      "notes": "Having a thousand homes does not itself show that the accounts balance. One-off grants can help construction but do not become continuing income. Any ongoing charge needs a real, affordable service under agreed terms. Reviews after three or six years are not promises of payouts."
+      "notes": "Having a thousand homes does not itself show that the accounts balance. One-off grants can help construction but do not become continuing income. Any ongoing charge needs a real, affordable service under agreed terms."
     },
     {
       "eyebrow": "07 / RESIDENT VOICE",

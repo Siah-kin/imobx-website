@@ -2,7 +2,7 @@
 
 ## A documented rent-to-own housing model for Rio
 
-**Project paper v0.2 · 15 October 2026 · draft for founders and partners**
+**Project paper v0.2 · 16 October 2026 · Project proposal**
 
 IMOBX wants to help families rent a home and follow a clear path to buying it. We are preparing a first housing project in Rio de Janeiro. The plan brings together local building work, written agreements, maintenance and accounts people can check.
 
@@ -26,7 +26,7 @@ Before anyone joins, the agreement must explain payments, the purchase price, re
 
 IMOBX would own each included property or have a written legal right to operate it. It would sign agreements with families and hire builders and other providers. Each property needs a file showing its owner, debts or restrictions, permissions, condition, building plan, budget and responsible people.
 
-A property might be donated, leased, sold or made available under another agreement. Record which one applies. A letter saying someone intends to donate is different from a completed transfer. Ownership needs the required property registration.
+A property might be donated, leased, sold or made available under another agreement. Its agreement needs to identify which arrangement applies. A letter saying someone intends to donate is different from a completed transfer. Ownership needs the required property registration.
 
 July’s discussions considered a foreign organization holding Brazilian property. Receita Federal confirms that such an organization needs a CNPJ, Brazil’s business tax registration. Registration, property ownership and acceptance by a bank or exchange are separate matters. IMOBX’s chosen legal form and any received properties still need documents. [Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/solicitacao-de-atos-perante-o-cnpj-por-meio-da-internet/orientacoes-para-pessoa-juridica-domiciliada-no-exterior).
 
@@ -61,15 +61,15 @@ These are Rafael’s project figures, not a finished-home price published by a c
 
 On 20 January 2026, Rafael reported a signed contract for two lofts on a steep site, waiting for the first deposit. The owner clarified that **US$27,777 covers both lofts together**: US$13,888.50 each by division. We still need the included work, current progress and final costs. This is separate from the village budget. [Drawings and photos](properties.html#estudo-lofts).
 
-The earlier US$250 monthly payment and 15-year term are planning examples. A family’s actual agreement needs affordable payments in reais and clear rules for price changes. These examples do not establish a current offer.
+The first project’s payment amount and purchase term remain to be agreed. Each family’s agreement needs affordable payments in reais and clear rules for price changes.
 
 <div class="pagebreak"></div>
 
 ## 4. How the money would work
 
-The current plan puts homes and continued service first. Earlier percentage splits are not agreed rules.
+The proposed financial plan covers homes and continued service. Payment and reinvestment rules remain to be agreed.
 
-Record who paid, why they paid and what the money may be used for. Keep rent, donations, grants, investments, service income and trading fees separately identified. If someone buys a token from another holder, the sale money normally goes to the seller. Only a separately collected project fee goes to IMOBX.
+The proposed accounts would identify each payer, purpose and permitted use, with separate records for rent, donations, grants, investments, service income and trading fees. If someone buys a token from another holder, the sale money normally goes to the seller. Only a separately collected project fee goes to IMOBX.
 
 The proposed order is:
 
@@ -88,7 +88,7 @@ An optional source of funding is a fee collected when people buy or sell a futur
 
 These receipts could help fund agreed work without creating more IMOBX tokens for that payment. They still depend on trading. Test the plan with little or no trading income; higher fees may discourage buyers and sellers.
 
-The proposed US$100,000 starting fund is an example, not committed money. A token’s market value does not mean that amount is available to build homes.
+The construction budget needs committed funding. A token’s market value does not establish money available to pay building bills.
 
 <div class="pagebreak"></div>
 
@@ -98,7 +98,7 @@ IMOBX would support its existing operation when recurring income covers its regu
 
 When a family becomes the owner, IMOBX stops receiving rent from that home. Forecasts must show how income continues afterward. Any ongoing service charge needs a real service, an affordable price and terms the resident agreed to.
 
-A one-off grant can help build, but it is not continuing income. Having 1,000 homes does not by itself show that the accounts balance. We need to follow groups of homes from building through payments to ownership. Reviews after three or six years are possible checkpoints, not promised payout dates.
+A one-off grant can help build, but it is not continuing income. Having 1,000 homes does not by itself show that the accounts balance. We need to follow groups of homes from building through payments to ownership.
 
 ## 7. Resident voice and accountable governance
 
@@ -179,4 +179,4 @@ Rafael supplied the November budget and January two-loft account. Their dates an
 
 The legal registration, property documents, permissions and signed agreements need checking for the chosen project. The researched payment services do not establish a working IMOBX connection. Resident voting, reinvestment and token rights remain decisions to agree.
 
-Keep a list of unresolved questions and who will answer them. Update the website and documents as agreements are signed, money arrives and work is checked.
+Planned project updates would show agreements signed, funding received and work completed, alongside open questions and the people responsible for answering them.

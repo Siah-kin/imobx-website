@@ -1,43 +1,54 @@
+
+
+<div id="1-what-we-are-preparing"></div>
+<div id="the-four-parts-to-connect"></div>
+<div id="the-proposed-advantage"></div>
+<div id="design-basis-for-this-revision"></div>
+
 # IMOBX
 
 ## Pilot and building guide
 
-**Revision 0.3 · 15 October 2026 · draft for founder review**
+**Project proposal · v0.3 · 16 October 2026**
 
-### 1. What we are preparing
+### 1. Homes with a path to ownership
 
-IMOBX is preparing a first rent-to-own housing project in Rio. A family would rent a home under a written agreement that explains how it can become the owner. IMOBX would arrange property access, building work, repairs and accounts.
+IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family would rent a home under an agreement explaining how it can become the owner. The organization would arrange access to property, contract construction and manage repairs and accounts.
 
-Rafael brings construction and local experience. John handles community communication and digital work. The legal organization, their responsibilities and the right to use each property need written agreements. This sheet confirms no property donation, token sale or working payment service.
+The proposed first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
 
-### The four parts to connect
+Rafael brings construction experience and local knowledge. John works on communication and digital tools. The organization’s legal form, property arrangements and their responsibilities remain to be agreed in writing.
 
-| Part | What needs to be ready |
+### How the operation would fit together
+
+| Part | Proposed arrangement |
 |---|---|
-| Homes | A chosen home, the right to use it, a building plan and a clear family agreement. |
-| Money | Record each payment once; cover bills, repairs and promises to residents. |
-| Decisions | Agree what residents, workers and any investors may decide. |
-| Digital tools | Show approved information, answer questions and let people check payments. |
+| Homes | Documented property rights, a building budget and a clear family agreement. |
+| Money | Separate records for funding, payments, costs and amounts set aside. |
+| Decisions | Defined powers for residents, staff and any investors. |
+| Services | A way to request repairs, follow progress and question decisions. |
 
-### The proposed advantage
+Shared designs, purchasing and administration could make further projects easier to deliver. Each family would have a route to owning its whole home. Residents would help shape shared spaces and local priorities.
 
-Reuse good building plans, agreements, purchasing and accounts so another local team can deliver more homes. Each family should be able to own its whole home; a separate group of investors would not run each house.
-
-The proposed process gives each task a responsible person, deadline and budget. Within agreed limits, work proceeds without daily instructions from the founders. Someone else checks delivery and spending. Open tasks and approvals remain available when a person changes roles. Residents need a way to question decisions and replace responsible people. [Daily decisions and tasks](faq.html#faq-flock-siah).
-
-### Design basis for this revision
-
-Cover homes and ongoing commitments before considering money for investors. Keep rent, donations, grants and fees separately identified. Old token supply and payout percentages are options from earlier discussions, not chosen rules.
-
-This is a working plan, not an investment offer. The [whitepaper](whitepaper.html) explains the project for a wider audience.
+The project is in preparation. This guide explains the proposal and its current evidence. [Project paper](whitepaper.html); [roadmap](roadmap.html).
 
 <div class="pagebreak"></div>
 
-## 2. The home, budget and resident pathway
+<div id="2-the-home-budget-and-resident-pathway"></div>
+<div id="rafaels-reference-based-cost-budget"></div>
+<div id="separate-two-loft-development-account"></div>
+<div id="before-including-a-property"></div>
+<div id="resident-agreement-to-design-locally"></div>
 
-### Rafael’s reference-based cost budget
+## 2. Housing designs and building costs
 
-| Item | Rafael’s budget, USD per home |
+### Rafael’s village proposal
+
+Rafael’s plan brings together 45 m² two-level homes around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [illustration](properties.html#visao-rafael) shows the intended community, rather than a completed development.
+
+On 30 November 2025, Rafael supplied building calculations using CUB and SINAPI, Brazilian cost references. His revised per-home budget is:
+
+| Item | USD per home |
 |---|---:|
 | Land | 5,550 |
 | House construction, 45 square metres | 18,600 |
@@ -46,201 +57,183 @@ This is a working plan, not an investment offer. The [whitepaper](whitepaper.htm
 | Legal and design | 627 |
 | **Total** | **27,777** |
 
-Rafael used CUB and SINAPI, Brazilian building-cost references. On 30 November 2025, he supplied the calculation, land allowance and revised budget above. He specified at least 36 homes built together over 12 months: **36 × US$27,777 = US$999,972**.
+The plan covers at least 36 homes built together over 12 months: **36 × US$27,777 = US$999,972**. These are Rafael’s dated project figures, not a finished-home price published by the indexes. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx); [CUB scope](https://sinduscon-caxias.net.br/servicos/cub).
 
-For the chosen site, record the price date, quantities, included work, prices in reais and actual bills. Check land, permissions, utility connections, unexpected costs and later maintenance. CUB leaves out some items, including builder payments; deducting a presumed profit percentage does not itself show a saving. [CUB scope](https://sinduscon-caxias.net.br/servicos/cub); [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx).
+### The separate two-loft case
 
-### Separate two-loft development account
-
-On 20 January 2026, Rafael reported a two-loft contract on a steep site, waiting for the first deposit. **US$27,777 covers both lofts**, or US$13,888.50 each by division. This is separate from the village plan. Record the included work, funding, current progress and final cost before calling it delivered housing. [Drawings and photos](properties.html#estudo-lofts).
-
-### Before including a property
-
-Check its owner, debts or restrictions, condition, building responsibilities and permissions. Record whether it is being donated, leased, sold or made available another way. A promise is not a received property. Check the builder’s catalogue against completed work and permission to publish it.
-
-### Resident agreement to design locally
-
-1. Say who may join, what they can afford and which home is included.
-2. Explain payments in reais, price changes, repairs and amounts credited toward purchase.
-3. Explain late payments, hardship, leaving, disputes and what happens if IMOBX fails.
-4. State the final price, transfer conditions, registration and who pays those costs.
-
-The earlier US$250 payment over 180 months is an example, not a current offer. Paying for 15 years does not by itself transfer title. Families need a clear purchase agreement and help that does not require buying a token or using a crypto wallet.
+On 20 January 2026, Rafael reported a contract for two lofts on a steep site, awaiting its first deposit. **US$27,777 covers both lofts together**, equivalent to US$13,888.50 each by division. Included work, current progress and final costs still need documentation. This is a separate case from the village budget. [Drawings and supplied photos](properties.html#estudo-lofts).
 
 <div class="pagebreak"></div>
 
-## 3. Cash allocation and the 15-year transfer
+<div id="3-cash-allocation-and-the-15-year-transfer"></div>
+<div id="proposed-housing-first-cash-order"></div>
+<div id="correct-the-original-rental-arithmetic"></div>
+<div id="a-retained-rent-illustration-not-a-forecast"></div>
+<div id="keep-claims-and-cash-distinct"></div>
 
-### Proposed housing-first cash order
+## 3. Payments and home ownership
 
-**Money received → taxes and money with a required use → property and running costs → resident commitments and savings for future needs → approved new homes → any legally permitted investor payments.**
+### The family’s agreement
 
-Agree the actual budget before using this order. Keep enough money in reais for Brazilian bills. Record the exchange rate and all costs when converting money.
+A rent-to-own agreement needs to explain the home, final purchase price, payments in reais, any price adjustments, repairs and the amount credited toward purchase. It also needs to cover hardship, late payments, leaving the program, disputes and the conditions and costs of transferring ownership.
 
-### Correct the original rental arithmetic
+The payment amount and purchase term have not been set for the proposed first project. They need to fit the household’s circumstances and the project’s full costs. A family would receive help without needing to buy an investment token or use a crypto wallet.
 
-The old example used US$250 rent, an assumed 15% tax and payment of 98% of the after-tax amount to participants. It works out as follows:
+### What the money would pay for
 
-| Destination | Per month | 180 months |
-|---|---:|---:|
-| Tenant payment | $250.00 | $45,000 |
-| Assumed tax | $37.50 | $6,750 |
-| Distributed under the old 98% rule | $208.25 | $37,485 |
-| Retained under the old 2% rule | $4.25 | $765 |
+The proposed budget covers taxes, property costs, maintenance, administration, commitments to families and money set aside for unexpected expenses. New construction and any investor payments need their own agreed funding and terms. Donations and grants retain their specified uses.
 
-The US$45,000 arrives over time and is already divided above. There is no extra US$17,223 cash payment when the family becomes the owner. Another home needs money saved or another funding source. Any profit from selling to an outside customer is a separate transaction, after its own costs.
+Each receipt is counted once. An amount credited toward buying the home records the family’s progress; it is not another receipt of cash. The spending plan needs to preserve the organization’s ability to complete the promised home transfer.
 
-### A retained-rent illustration, not a forecast
+### When the home becomes the family’s
 
-In another example, US$250 received minus US$37.50 assumed tax, US$20 property costs and US$1.70 conversion costs leaves **US$190.80 a month before central administration, major repairs and other bills**. These are unverified assumptions, not actual tax or price quotes. The accountant needs to replace them with the chosen project’s figures. This calculation does not prove a three- or six-year payback.
+IMOBX would stop receiving rent from that home. Continued services and further building therefore need identified funding. Any ongoing service charge would require an actual service and terms the household agreed to.
 
-### Keep claims and cash distinct
-
-Money counted toward a family’s purchase is a promise to honor, not a second receipt. Spending it elsewhere must not prevent the home transfer. Once the family owns the home, IMOBX loses that rent. Follow the accounts through that point: how are existing bills paid, and what funds the next homes?
+The financial plan needs to show costs and cash through construction, occupancy and transfer. It also needs to account for delays, major repairs and periods when a household cannot pay. [Money and transparency](transparency.html).
 
 <div class="pagebreak"></div>
 
-## 4. Trade fees, liquidity and pilot capital
+<div id="4-trade-fees-liquidity-and-pilot-capital"></div>
+<div id="what-a-trading-fee-could-fund"></div>
+<div id="measure-what-imobx-actually-receives"></div>
+<div id="capital-and-fees-have-different-destinations"></div>
 
-### What a trading fee could fund
+## 4. Funding construction and growth
 
-If a future token can be bought and sold, an agreed fee might support housing. Specify the recipient, amount, permitted use and payment record. The buyer’s main payment usually goes to the seller. Only a separately collected fee reaches the project. Trading fees are one possible funding source; they are not committed construction money.
+The first project needs funding for its contracted work. Possible sources include donations, grants, service income and a permitted investment. The proposed financial token would raise capital for budgeted housing work in exchange for defined investor rights. Its structure remains under study.
 
-### Measure what IMOBX actually receives
+### New investment and later trading
 
-Count **project fees received plus any trading-provider fees that IMOBX has the right to claim and has received**. Check the records without counting a payment twice. Fees paid to others, trading volume and estimated unpaid fees are not IMOBX cash. Another exchange needs its own setup and may not pay the same fees.
+A new issue would bring investors’ money into the issuing organization. A later sale between investors normally pays the seller. A separately collected trading fee could provide additional money to the project where the agreement allows it.
 
-| Example of monthly trading | If IMOBX actually receives 1% |
+| Illustrative monthly trading | Receipts if IMOBX receives 1% |
 |---|---:|
-| $0 | $0 |
-| $100,000 | $1,000 |
-| $1,000,000 | $10,000 |
+| US$0 | US$0 |
+| US$100,000 | US$1,000 |
+| US$1,000,000 | US$10,000 |
 
-The 1% is an example, not a quote or chosen fee. At that rate, US$10 million of trading produces US$100,000 before spending. Higher fees may discourage trading. Trade sizes, demand, fees reaching IMOBX and quiet periods all matter; counting transactions alone is not enough.
+The 1% is an illustration, not a chosen fee or forecast. Actual receipts depend on trading and the project’s entitlement to fees. Higher fees may discourage trading. The housing budget needs to work through periods of little or no trading income.
 
-### Capital and fees have different destinations
+### Money available for building
 
-Money raised for construction and money set aside to let people trade need separate, agreed destinations. The same money cannot do both jobs. Record how much is available for bills and how much is locked or otherwise committed.
+Funds committed to a trading market are unavailable for construction while that commitment lasts. The accounts would distinguish money available for bills, amounts reserved for families and repairs, and other commitments.
 
-Trading fees could pay for agreed work without creating more IMOBX tokens. They still depend on trading. Test the budget with little or no trading income.
+New investment could finance construction before rent begins once the organization, property authority, budget and permitted fundraising route are ready. Future rent is a forecast. Payments to investors depend on the chosen agreement and actual available funds. [Funding questions](faq.html#faq-funding).
 
 <div class="pagebreak"></div>
 
-## 5. Participation, token rights and governance
+<div id="5-participation-token-rights-and-governance"></div>
+<div id="rights-map-before-token-settings"></div>
+<div id="token-decision-table"></div>
 
-### Rights map before token settings
+## 5. Participation and decision rights
 
-The proposed financial token would raise capital for budgeted housing work. A new issue sends investors’ money to the issuing organization for defined financial rights. Choose the legal structure and fundraising route before designing the token. A later sale between investors normally pays the seller. Housing and resident participation follow their own agreements.
+A family’s housing agreement, its membership voice and an investment are separate relationships. One person could have more than one role.
 
-| Participant | What the agreement must explain |
+| Participant | What needs to be clear |
 |---|---|
-| Families | Affordable payments, purchase progress, repairs, hardship, leaving and whole-home transfer. |
-| Property contributors | Donation, lease or sale terms; title, debts, taxes and transfer costs. |
-| Staff and resident representatives | Powers, agreed pay, appointment, spending limits, reporting and replacement. |
-| Builders and suppliers | Work, price, payment dates, changes and independent completion checks. |
-| Donors and social funders | Permitted use, reports, delays, cancellation and any repayment conditions. |
-| Possible investors | Issuer, claim, income source, costs, losses, voting, transfers and exit terms. |
+| Families | Affordable payments, repairs, purchase progress, hardship, leaving and whole-home transfer. |
+| Property contributors | Donation, lease or sale terms; title, debts and transfer costs. |
+| Staff and resident representatives | Powers, pay, appointment, spending limits, reporting and replacement. |
+| Builders and suppliers | Work, price, payment stages and independent completion checks. |
+| Donors and social funders | Permitted use, reports, delays and cancellation. |
+| Possible investors | Issuer, claim, income source, costs, losses, voting, transfers and exit. |
 | Neighbours | Local impacts, services, access and a way to raise concerns. |
 | Independent checkers | Authority and access to review property, safety, accounts and agreements. |
 
-Ostrom’s work asks how people manage shared resources. We want to define who participates, involve residents in appropriate decisions, check commitments and make disputes easy to raise. For the [village](properties.html#visao-rafael), this means agreeing who uses, maintains and replaces the solar equipment, orchard, play area and study rooms.
+Residents would help set rules for shared spaces and local maintenance. One option for discussion is equal member voice in these matters, with elected representatives. Staff would have defined duties and spending limits. Token holders would receive the rights specified in their investment arrangement.
 
-Rafael’s interest in governance tokens does not mean a resident token plan is chosen. We can discuss equal voice in resident matters and time-limited work roles. A token vote should not rewrite a family’s housing agreement. Longer experience may help someone stand for a role, while newer residents keep their basic voice.
+A token vote cannot rewrite a family’s housing agreement on its own. These proposed powers need a legal basis and agreement with participants. No resident token allocation, token supply or voting system has been selected.
 
-### Token decision table
-
-| Question | Current answer |
-|---|---|
-| What does it give, and how is ownership recorded? | To agree with Brazilian advisers and the chosen provider. |
-| How many tokens and who receives them? | The old 1,000,000-token plan is an option, not a final choice. |
-| Do residents get tokens? | No plan yet; housing and support do not require buying an investment token. |
-| Who could receive income? | To define; owning a token, locking it in a staking service and funding a trading market are different roles. |
-| How could people buy or sell? | To establish for the chosen rights and applicable rules. |
-
-The actual rights matter more than labels such as “utility,” “governance” or “nonprofit.” Have advisers review the proposed arrangement before an offer. [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html).
+Ostrom’s work informs questions about membership, shared rules, checking work and resolving disputes. These questions apply to facilities such as solar equipment, the orchard and study rooms. [Decision examples](roadmap.html#governance); [participant map](roadmap.html#participation); [CVM guidance](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html).
 
 <div class="pagebreak"></div>
 
-## 6. Development scope and acceptance evidence
+<div id="6-development-scope-and-acceptance-evidence"></div>
+<div id="what-people-send-and-see"></div>
+<div id="calculating-possible-payments"></div>
+<div id="technical-demonstration-required-before-a-live-financial-integration"></div>
 
-### What people send and see
+## 6. Records, payments and support
 
-| Component | What people need from it |
+The proposed digital services would help people read agreements, request repairs, follow work and check approved information. Private family documents would stay outside the public website and blockchain.
+
+| Record or service | Purpose |
 |---|---|
-| Website | Current progress, checked building costs, documents, responsible people and help. |
-| Support channel | Portuguese explanations, questions, updates and approved account summaries. |
-| Legal records | Signed agreements, property authority and any investor records held by the responsible party. |
-| Accounting and payments | Match the payer, purpose, bank receipt, conversion, digital payment and final use. |
-| Community software | Show requests, responsible people, decisions and work confirmed by others. |
+| Project website | Explain the proposal, current progress, costs and documents. |
+| Support channel | Receive questions and requests, with a visible response and status. |
+| Legal records | Document property authority, family agreements and any investment. |
+| Accounts | Connect each receipt and payment to its purpose and evidence. |
+| Shared work record | Show responsibilities, decisions, deadlines and checked delivery. |
 
-Families would pay in reais. Keep local money for bills and test any approved digital payment with an accepted provider, including return to the bank. Record exchange rates and total costs. No provider is confirmed for IMOBX. A CNPJ does not guarantee an account. Private family agreements stay off the public blockchain. Show payments as waiting, confirmed, failed or needing investigation. [Money path](transparency.html#settlement); [payment-service requirements](transparency.html#ramp-options).
+### Following a payment
+
+Families would pay in reais. IMOBX would keep money for Brazilian bills. Any approved digital payment needs a provider that accepts the organization and its activities, a record of conversion costs and a tested return to the bank. No provider is confirmed for IMOBX. [Proposed money path](transparency.html#settlement).
 
 <div id="distribution-accounting-and-the-legacy-euler-approach"></div>
 
-### Calculating possible payments
+If an investment permits income payments, software could maintain a record of what each eligible person may claim. Running costs would include setup, individual claims, corrections and support. No operating-cost saving is established yet.
 
-If an agreement allows income payments, software could keep a running record of what each person may receive and let them claim later. Compare this with ordinary payment processing, including setup, individual claims, corrections and support. The earlier US$109 yearly cost and 99.9% saving are not supported by a comparable measurement.
+### How a repair would move forward
 
-### Technical demonstration required before a live financial integration
+A resident reports a leak. The maintenance role assesses it and obtains a quote. Spending follows the agreed budget and approval rule. Another person checks the completed repair; the accounts link its payment and receipt. The resident can question the result. Records of unfinished work support a replacement when someone leaves a role.
 
-The responsible technical team needs to:
-
-1. Identify the network, token, market, fees, recipients, control powers and any money locked for trading.
-2. Follow an approved payment from the bank record, through conversion, to the correct wallet and use.
-3. Check fee receipts, who may claim, rounding, failed payments and what happens when someone’s position changes or nobody qualifies.
-4. Test permissions, limits, repeated requests, retries and failures. Confirm who controls funds and who can recover access.
-
-These are requirements, not a completed system or audit. Begin with a simulation. Any real deployment or money transfer needs specific approval. The usual token and staking setup is not assumed to provide every needed rule.
+The complete process, including payment failures and lost access, still needs to be demonstrated. [Everyday decisions and tasks](faq.html#faq-flock-siah).
 
 <div class="pagebreak"></div>
 
-## 7. Pilot roadmap and success measures
+<div id="7-pilot-roadmap-and-success-measures"></div>
+<div id="once-the-pilot-operates"></div>
+<div id="pilot-funded-growth-not-assumed-grant-awards"></div>
 
-The [roadmap](roadmap.html), [decision examples](roadmap.html#governance) and [FAQ](faq.html) explain the plan. These are proposals for people to agree, not instructions to a working payment system.
+## 7. Proposed pilot timetable
 
-Targets start from an agreed date. Building also needs property, money and permissions.
+These preparation targets start from an agreed date. Construction also depends on property access, permissions and funding. The proposed leads need to accept their responsibilities.
 
-| Target | What should be ready, and who would lead |
+| Target | Proposed result and lead |
 |---|---|
-| Day 14 | Written founder roles and a list of offered properties. Rafael and John. |
-| Day 30 | Chosen work, current budget in reais, draft family terms and property documents for review. Rafael and local advisers. |
-| Day 45 | Money rules covering repairs, quiet trading, home transfers and new building. Founders and accountant. |
-| Day 60 | Reviewed documents, resident discussion, decision rules, four worked examples and provider quotes. Founders and advisers. |
-| Day 90 | Decision to proceed or revise, with rights, money, responsibilities, reports and support ready. Responsible organization. |
+| Day 14 | Written team responsibilities and a list of available properties. Rafael and John. |
+| Day 30 | Chosen work, budget in reais, draft family terms and property documents. Rafael and local advisers. |
+| Day 45 | Financial plan covering repairs, home transfers and further building. Founders and accountant. |
+| Day 60 | Resident discussions, reviewed agreements, decision examples and payment-provider quotes. Founders and advisers. |
+| Day 90 | A documented decision on readiness to proceed, with funding, responsibilities and support in place. Responsible organization. |
 
-### Once the pilot operates
+### Following an operating project
 
-- **Homes:** confirm property authority and sign the family agreement before moving in.
-- **Money:** check 100% of receipts and payments every month. Explain differences and amounts with a required use.
-- **Building:** record what was completed, actual costs and any delays.
-- **Families:** record questions, repairs, participation and purchase progress. Agree affordability and response targets locally.
-- **Next homes:** observe at least three operating months before the first review, and fund the next work without breaking existing commitments.
+The proposed monthly report would show receipts and payments, amounts set aside, building costs and delays, repairs, unresolved issues and families’ purchase progress. Every receipt and payment would be checked against its records. Affordability and service-response targets need to be agreed locally.
 
-Website v1 explains the plan. Website v2 shows real progress and accounts without needing a token. Any v3 token access follows agreed rights, legal review and checked payment arrangements. No token launch date is set.
+At least three operating months are proposed before the first expansion review. A second local team should be able to repeat the process, with funding for new work that respects existing commitments.
 
-### Pilot-funded growth, not assumed grant awards
+### What the public can follow
 
-Grants, donations and agreed service or building income may help. Record applications, awards and money received as different things. A UN development goal is not a grant. A thousand homes is a growth idea, not proof that income covers costs.
+The website explains the proposal now. As the project develops, reports would show signed agreements, approved work, funding received, construction and home transfers. Any investment access would follow defined rights, legal review and checked payment arrangements. No token launch date is set. [Detailed roadmap](roadmap.html).
 
 <div class="pagebreak"></div>
 
-## 8. What changes from the original devsheet
+<div id="source-and-decision-status"></div>
 
-| Earlier idea | What this plan requires |
+<div id="8-what-changes-from-the-original-devsheet"></div>
+
+## 8. Project status and next steps
+
+The housing operation and financial token remain in preparation. Published drawings and budgets help explain the intended work; they do not establish completed homes or an available investment.
+
+| Area | Current position |
 |---|---|
-| Guaranteed token price floor | No price guarantee. Check property values, debts and actual investor rights separately. |
-| Income rises when holders sell | A sale normally changes the owner. It does not create new income. |
-| Pay out 98% of rent, then fund replacement homes | Show what has already been paid out and what money is still available. |
-| Flat fees and profit in quiet markets | Use actual fees received and test quiet periods and full costs. |
-| US$109 a year at any member count | Measure the full cost of running calculations and individual claims. |
-| Locked trading funds prevent all losses | Check what is locked and its limits; price and building risks remain. |
-| Offered founder properties and possible grants | Count only documented property rights and money actually received. |
-| Comparisons with large financial products | Explain IMOBX’s own homes, agreements, accounts and results. |
+| Design and costs | Rafael’s dated village budget and the separate two-loft account are available. |
+| Property | The first project needs documented ownership or authority to use the site. |
+| Organization | Legal form, accountable roles and agreements remain to be finalized. |
+| Families | Eligibility, affordability, individual terms and shared decision rights need local discussion. |
+| Funding | No received grant, investment amount or donated-property count is confirmed here. |
+| Token | Issuer, financial rights, supply, access, income and transfer terms remain under study. |
+| Payments | Provider acceptance and the complete payment route remain to be demonstrated. |
 
-### Source and decision status
+### Evidence for the next project decision
 
-This revision uses the original eight-page IMOBX development sheet, founder discussions already recorded in the research, and the linked cost and platform sources. Earlier work checked the original PDF’s text and layout; this wording update does not establish a fresh property or company audit.
+The proposed readiness review brings together the property documents, site-specific budget, construction permissions, family terms, responsibilities and funding plan. Relevant building, accounting and legal professionals would review their parts. Participants would be able to see which commitments are agreed and which questions remain open.
 
-Rafael supplied the historical budget and two-loft account. Research into payment services does not prove an IMOBX connection works. Exact tax, title, permits, legal registration, grants and current building progress still need the appropriate documents and responsible review.
+### Following progress
 
-Use this sheet with founders, families, builders, accountants, housing advisers, lawyers and developers. When decisions are accepted, update the paper, deck and website together. State what is planned, signed, paid, completed and checked. This is still a development proposal, not a token offer or approval to run financial services.
+Planned reports would distinguish proposed, signed, paid and completed work. Residents would have access to their own agreements and purchase records. Public accounts would explain project spending without exposing household documents.
+
+The [whitepaper](whitepaper.html), [roadmap](roadmap.html), [money page](transparency.html) and [questions](faq.html) provide the current proposal and sources. [Photos and drawings](properties.html) show the supplied design and site material with captions. No investment is offered through this guide.

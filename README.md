@@ -1,20 +1,14 @@
-# IMOBX website
+# IMOBX
 
-Public project-development website for a proposed rent-to-own housing pilot in Rio de Janeiro.
+IMOBX is preparing a rent-to-own housing project in Rio de Janeiro, with shared decisions and a possible financial token to help fund construction and growth. The legal form, property arrangements and investment rights remain under study.
 
-The homepage and Resources page introduce the model and link the whitepaper, partner pitch deck, pilot specification and brand kit. Project documents are development drafts; the site does not process payments or launch a token. Existing archive photographs and architectural concepts are labelled separately.
+- [Project website](https://siah-kin.github.io/imobx-website/)
+- [Project paper](whitepaper.html)
+- [Pilot and building guide](devsheet.html)
+- [Roadmap and participation](roadmap.html)
+- [Money and transparency](transparency.html)
+- [Photos and drawings](properties.html)
+- [Media kit](media-kit.html)
+- [All documents](resources.html)
 
-Read [DESIGN.md](DESIGN.md) first for the current visual and interaction guidelines.
-
-## Editing
-
-- `index.html`: Portuguese/English homepage.
-- `assets/style.css`, `assets/brand.css`, `assets/site.js`: shared white layout and language controls.
-- `whitepaper.md`, `devsheet.md`, `pitchdeck.json`, `media-kit.md`, `brand-colors.json`: editable document sources.
-- `model-guide.json`: bilingual source for the roadmap, governance consultation, FAQ, community-economy proposal and money/transparency page; `model_guide.py` renders them into `roadmap.html`, `faq.html`, `transparency.html` and homepage summaries.
-- `build_publication.py`: rebuilds HTML, PDF, PowerPoint and ZIP exports, including roadmap, FAQ, transparency and both Resources views. Run in a separate Python environment with `markdown`, `reportlab` and `python-pptx` installed.
-- `properties.html`: existing image archive with concept/photo captions.
-
-Older public page URLs lead to the corresponding current documents. GitHub Pages publishes the root of `main`. Historical working notes already present in the repository are not current financial or token terms.
-
-Reader-facing copy uses everyday Portuguese and English. Explain technical names on first use, keep actual project figures and sources, and rebuild the downloadable documents after text edits. The plain-language section in DESIGN.md is the writing reference.
+The website explains the proposal and current evidence. It does not accept investments or process housing payments.

@@ -2,7 +2,7 @@
 
 A documented rent-to-own housing model for Rio
 
-**Partner discussion draft · v0.2 · 15 October 2026**
+**Project proposal · v0.2 · 16 October 2026**
 
 
 
@@ -92,7 +92,7 @@ Keep rent, donations, grants, service income and trading fees separately identif
 
 
 
-**Presenter notes:** No old percentage split is agreed. Money credited toward a family’s purchase is not a second receipt of cash. Money paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Money locked in a trading market is not also available to build homes.
+**Presenter notes:** Money credited toward a family’s purchase is not a second receipt of cash. Money paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Money locked in a trading market is not also available to build homes.
 
 
 
@@ -110,7 +110,7 @@ Running the existing homes and building more need separate budgets.
 
 
 
-**Presenter notes:** Having a thousand homes does not itself show that the accounts balance. One-off grants can help construction but do not become continuing income. Any ongoing charge needs a real, affordable service under agreed terms. Reviews after three or six years are not promises of payouts.
+**Presenter notes:** Having a thousand homes does not itself show that the accounts balance. One-off grants can help construction but do not become continuing income. Any ongoing charge needs a real, affordable service under agreed terms.
 
 
 

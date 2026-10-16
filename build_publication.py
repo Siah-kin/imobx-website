@@ -71,7 +71,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None):
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="IMOBX housing pilot: model, roadmap and project resources.">
 <title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}</head>
-<body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review">{label('Projeto em desenvolvimento', 'Project in development')} · v{esc(version)} · 15 October 2026</div>
+<body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review">{label('Projeto em desenvolvimento', 'Project in development')} · v{esc(version)} · 16 October 2026</div>
 {site_header(lang, current)}
 {body}</body></html>'''
 
@@ -95,13 +95,13 @@ RESOURCE_CATALOG = [
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes'),
                ('pitchdeck.json','Dados dos slides (JSON)','Slide content (JSON)')]},
     {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': '0.3',
-     'description_pt': 'Exemplos de contas, responsáveis e metas propostas para os primeiros 90 dias.',
-     'description_en': 'Worked examples, responsibilities and proposed targets for the first 90 days.',
+     'description_pt': 'Planos de moradia, responsabilidades e metas propostas para os primeiros 90 dias.',
+     'description_en': 'Housing plans, responsibilities and proposed targets for the first 90 days.',
      'meta_pt': '8 páginas · inglês · rascunho', 'meta_en': '8 pages · English · draft',
      'links': [('devsheet.html','Ler','Read'), ('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
     {'id': 'transparency', 'pt': 'Dinheiro e transparência', 'en': 'Money and transparency', 'version': '0.1',
-     'description_pt': 'Como o dinheiro passaria de reais para USDC e voltaria, com pesquisa de prestadores e próximos passos.',
-     'description_en': 'How money would move between reais and USDC, with provider research and next steps.',
+     'description_pt': 'Como o dinheiro entraria, o que pagaria e como os participantes poderiam conferir as contas.',
+     'description_en': 'How money would come in, what it would pay for and how participants could check the accounts.',
      'meta_pt': 'Português e inglês · planos e fontes',
      'meta_en': 'Portuguese and English · plans and sources',
      'links': [('transparency.html','Ver a página','View page')]},
@@ -202,8 +202,8 @@ paper_html = markdown.markdown(paper_source, extensions=['tables', 'toc'])
     '<a href="whitepaper.md" download>Editable text</a></p>' + paper_html + '</main>', version='0.2'))
 devsheet_html = markdown.markdown((ROOT / 'devsheet.md').read_text(), extensions=['tables', 'toc'])
 (ROOT / 'devsheet.html').write_text(page('IMOBX | Pilot and building guide v0.3',
-    '<main class="paper"><p><strong>Pilot and building guide · revision 0.3</strong><br>'
-    '<a href="devsheet.pdf" download>Download revised PDF</a> · '
+    '<main class="paper"><p><strong>Pilot and building guide · v0.3</strong><br>'
+    '<a href="devsheet.pdf" download>Download PDF</a> · '
     '<a href="devsheet.md" download>Editable text</a></p>' + devsheet_html + '</main>', version='0.3'))
 
 deck = json.loads((ROOT / 'pitchdeck.json').read_text())
@@ -308,8 +308,8 @@ def paper_footer(c, doc):
 
 
 for name, content, label, title in [
-    ('whitepaper', paper_html, 'IMOBX / FOUNDER REVIEW / v0.2 / 15 OCTOBER 2026', 'IMOBX project paper v0.2'),
-    ('devsheet', devsheet_html, 'IMOBX / DEVSHEET REVIEW / v0.3 / 15 OCTOBER 2026', 'IMOBX developer and pilot specification v0.3'),
+    ('whitepaper', paper_html, 'IMOBX / PROJECT PROPOSAL / v0.2 / 16 OCTOBER 2026', 'IMOBX project paper v0.2'),
+    ('devsheet', devsheet_html, 'IMOBX / PILOT AND BUILDING GUIDE / v0.3 / 16 OCTOBER 2026', 'IMOBX pilot and building guide v0.3'),
 ]:
     document = SimpleDocTemplate(str(ROOT / (name + '.pdf')), pagesize=(594,842), rightMargin=63, leftMargin=63,
                                  topMargin=55,bottomMargin=62,title=title,author='IMOBX draft')
@@ -393,9 +393,9 @@ def archive(name, paths, introduction):
 
 logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'assets/imobx-logo-light-source.webp']
 archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
-        'IMOBX media kit v0.2 / 15 October 2026\nOriginal logo artwork, colour definitions and a review-draft usage guide.\nRead media-kit.md. Public claims must follow the accepted project status.\n')
+        'IMOBX media kit v0.2 / 16 October 2026\nLogo artwork, colour definitions, image provenance and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
         'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'faq.html', 'transparency.html', 'model-guide.json',
         'assets/style.css', 'assets/brand.css', 'assets/site.js', 'media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
-        'IMOBX document collection / 15 October 2026\nWhitepaper, partner deck, developer/pilot specification, roadmap, model FAQ, money/transparency page and media kit.\nThese are founder/partner review drafts. No token offer or legal approval is established.\nPDF files are for reading; the PowerPoint and text files are editable. Read the roadmap, FAQ and transparency page on the website; model-guide.json is their bilingual content source.\n')
+        'IMOBX document collection / 16 October 2026\nProject paper, partner deck, pilot and building guide, roadmap, questions, money/transparency page and media kit.\nThe project is in preparation. These documents do not offer an investment.\nPDF files are for reading; the PowerPoint and text files are editable. The roadmap, questions and money page are available on the website in Portuguese and English.\n')
 print('Built document exports, on-page resources, the resources page, media kit and download archives.')

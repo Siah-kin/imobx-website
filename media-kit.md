@@ -1,6 +1,6 @@
 # IMOBX media kit
 
-**Version 0.2 · 15 October 2026 · working draft**
+**Version 0.2 · 16 October 2026 · Project in preparation**
 
 Use this kit for IMOBX logos, colours and short project descriptions. IMOBX is preparing a rent-to-own housing project in Rio. The paper and pilot guide explain the plan and the decisions still needed.
 
@@ -16,7 +16,7 @@ The PNG is ready for websites and PDFs. The original WebP is included too. No ed
 
 ## 2. Colours and type
 
-The [design guide](design.html) explains the white layout, expandable sections and circles on photos. [Editable guide](https://github.com/Siah-kin/imobx-website/blob/main/DESIGN.md).
+The [visual identity guide](design.html) describes the logo, colours and image provenance. [Text version](DESIGN.md).
 
 | Use | Colour |
 |---|---|
@@ -43,33 +43,25 @@ A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As fa
 
 ### Rafael's neighbourhood vision
 
-On 30 November 2025, Rafael described two-level homes around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. These features aim to support lower household costs, neighbourly life and learning. The [illustration](properties.html#visao-rafael) shows a plan, not a completed village. The January two-loft contract is a separate case. Explain what each feature is for, what it costs and who would maintain it. Use measured results when claiming savings.
+On 30 November 2025, Rafael described two-level homes around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. These features aim to support lower household costs, neighbourly life and learning. The [illustration](properties.html#visao-rafael) shows a plan, not a completed village. The January two-loft contract is a separate case. Costs, maintenance arrangements and any claimed savings need evidence from the chosen project.
 
-## 5. Writing and claims
+## 5. Project facts and images
 
-Write for a reader who knows nothing about housing finance or crypto. Start with people, homes and everyday tasks. Prefer “money left after the bills” to “distributable surplus,” and “check the bank record against the payment” to “reconcile.” Explain a necessary technical term when first used.
+IMOBX is in preparation. Its legal form, property arrangements and any token rights remain under study. No investment, guaranteed return, funding award or regulatory approval is established by these documents.
 
-Keep the documentary approach: describe what a photo shows, where the information comes from and its date. Favelas have their own histories and identities. Do not describe every resident as displaced. Listen to families about work, schools, travel and what they want. [Editorial guide](design.html#documentary-editorial-approach).
+Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 homes. The separate two-loft contract is US$27,777 for both together. The [project paper](whitepaper.html#3-the-cost-proposal-already-supplied) provides the dates and breakdown.
 
-Label photos and drawings clearly. The displayed photo circles were edited with AI; link the unchanged originals. Confirm the photographer, place, date and publication rights before calling a photo a verified site report.
-
-Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 homes. It is not a current one-home quote. The separate two-loft contract is US$27,777 for both together. Keep these different cases clear and preserve the cost breakdown and dates.
-
-Say what is planned, agreed, signed, paid and completed. Use exact dates and sources for numbers. No token sale, guaranteed return, funding award or regulatory approval is established by these drafts. Do not imply a partnership because a logo is displayed.
+The image archive distinguishes community context, construction photographs and architectural concepts. Some neighbourhood images have AI-edited circle annotations and link to their unchanged supplied originals. Captions state the available information and its limits. [Image provenance](design.html#documentary-editorial-approach).
 
 ## 6. Project resources
 
 - [Whitepaper](whitepaper.html): homes, money, shared decisions and sources.
 - [Pitch deck](pitchdeck.html): twelve slides for partners.
-- [Pilot and building guide](devsheet.html): worked examples, requirements and targets.
+- [Pilot and building guide](devsheet.html): housing plans, responsibilities and proposed targets.
 - [Roadmap](roadmap.html): steps and what must be ready before moving on.
 - [Questions](faq.html): plain explanations of the model and digital tools.
 - [All documents](resources.html): online reading and downloads.
 
 ## 7. Brand provenance
 
-The logo files come from [Siah-kin/imobx-website](https://github.com/Siah-kin/imobx-website). The current direction uses white backgrounds. Older dark designs and financial examples in the repository are not the current model.
-
-## Model explanation and roadmap
-
-Describe the proposed method through the work: residents raise issues and help set rules; agreed roles and budgets let people act; someone else checks delivery and payment; records let another person take over. Explain a tool only where it helps a reader understand an action or make a decision. Describe the pilot at its actual stage.
+The supplied logo files are available in this kit and in the [project repository](https://github.com/Siah-kin/imobx-website). The website and documents use white backgrounds, the light logo and the palette above.
