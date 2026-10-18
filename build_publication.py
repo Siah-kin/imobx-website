@@ -5,7 +5,11 @@ import json
 import re
 import xml.etree.ElementTree as ET
 import zipfile
+from urllib.parse import urljoin
 from model_guide import build_guide
+from contact_page import build_contact
+from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE
+from copy_review import require_review
 
 import markdown
 from pptx import Presentation
@@ -23,7 +27,8 @@ from reportlab.pdfgen import canvas
 
 
 ROOT = Path(__file__).resolve().parent
-INK = '#1a1a1a'
+PREVIEW_ONLY = require_review(ROOT)
+INK = '#193d4e'
 ACCENT = '#4a90a4'
 MUTED = '#596772'
 PAPER = '#ffffff'
@@ -39,11 +44,12 @@ def site_header(lang='pt-BR', current=''):
     portuguese = lang.startswith('pt')
     items = [
         ('index.html#modelo', 'O projeto', 'The project'),
-        ('index.html#custos', 'Custos', 'Costs'),
+        ('index.html#custos', 'Custos da construção', 'Construction costs'),
         ('roadmap.html', 'Roteiro', 'Roadmap'),
-        ('properties.html', 'Fotos e desenhos', 'Photos and drawings'),
-        ('transparency.html', 'Dinheiro', 'Money'),
+        ('properties.html', 'Moradias e projetos', 'Homes & designs'),
+        ('transparency.html', 'Financiamento e gastos', 'Funding & spending'),
         ('resources.html', 'Documentos', 'Documents'),
+        ('contact.html', 'Participar', 'Get involved'),
     ]
     links = ''
     for target, pt, en in items:
@@ -66,12 +72,13 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None):
     if 'assets/site.js' not in script:
         script += '<script src="assets/site.js" defer></script>'
     current = {'IMOBX | Resources': 'resources.html', 'IMOBX | Money and transparency': 'transparency.html',
-               'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html'}.get(title, '')
+               'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html',
+               'IMOBX | Get involved': 'contact.html'}.get(title, '')
     return f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="IMOBX housing pilot: model, roadmap and project resources.">
 <title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}</head>
-<body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review">{label('Projeto em desenvolvimento', 'Project in development')} · v{esc(version)} · 16 October 2026</div>
+<body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review">{label('Projeto em desenvolvimento', 'Project in development')} · v{esc(version)} · {label('Revisão do conteúdo', 'Content review')}: {REVIEW_DATE}</div>
 {site_header(lang, current)}
 {body}</body></html>'''
 
@@ -82,22 +89,22 @@ RESOURCE_CATALOG = [
      'description_en': 'Logos for light and dark backgrounds, colours and brand usage guide.',
      'meta_pt': 'Guia em inglês · descrições PT/EN', 'meta_en': 'English guide · PT/EN descriptions',
      'links': [('media-kit.html','Ver o kit','View kit'), ('media-kit.zip','Baixar kit (ZIP)','Download kit (ZIP)')]},
-    {'id': 'whitepaper', 'pt': 'Whitepaper', 'en': 'Whitepaper', 'version': '0.2',
+    {'id': 'whitepaper', 'pt': 'Whitepaper', 'en': 'Whitepaper', 'version': VERSION,
      'description_pt': 'Modelo de moradia, custos, contratos, dinheiro e decisões em aberto.',
      'description_en': 'Housing model, costs, agreements, money and open decisions.',
-     'meta_pt': '8 páginas · inglês · rascunho', 'meta_en': '8 pages · English · draft',
+     'meta_pt': 'Inglês · rascunho de referência', 'meta_en': 'English · reference draft',
      'links': [('whitepaper.html','Ler','Read'), ('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
-    {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': '0.2',
+    {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': VERSION,
      'description_pt': 'Apresentação para parceiros, com notas para quem apresenta.',
      'description_en': 'Partner presentation with presenter notes.',
      'meta_pt': '12 slides · inglês · rascunho', 'meta_en': '12 slides · English · draft',
      'links': [('pitchdeck.html','Ver slides','View slides'), ('pitchdeck.pdf','PDF','PDF'),
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes'),
                ('pitchdeck.json','Dados dos slides (JSON)','Slide content (JSON)')]},
-    {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': '0.3',
-     'description_pt': 'Planos de moradia, responsabilidades e metas propostas para os primeiros 90 dias.',
-     'description_en': 'Housing plans, responsibilities and proposed targets for the first 90 days.',
-     'meta_pt': '8 páginas · inglês · rascunho', 'meta_en': '8 pages · English · draft',
+    {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': VERSION,
+     'description_pt': 'Planos de moradia, participação dos moradores e etapas de desenvolvimento propostas.',
+     'description_en': 'Housing plans, resident participation and proposed development stages.',
+     'meta_pt': 'Inglês · processo proposto', 'meta_en': 'English · proposed process',
      'links': [('devsheet.html','Ler','Read'), ('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
     {'id': 'transparency', 'pt': 'Dinheiro e transparência', 'en': 'Money and transparency', 'version': '0.1',
      'description_pt': 'Como o dinheiro entraria, o que pagaria e como os participantes poderiam conferir as contas.',
@@ -106,6 +113,25 @@ RESOURCE_CATALOG = [
      'meta_en': 'Portuguese and English · plans and sources',
      'links': [('transparency.html','Ver a página','View page')]},
 ]
+RESOURCE_CATALOG[-1]['version'] = VERSION
+RESOURCE_CATALOG.insert(0, {
+    'id': 'housing', 'pt': 'Aluguel e compra da casa', 'en': 'Renting and buying the home', 'version': VERSION,
+    'description_pt': 'Como os pagamentos contariam para a compra, quem cuidaria dos reparos e o que os moradores poderiam decidir.',
+    'description_en': 'How payments would count towards purchase, who would handle repairs and what residents could decide.',
+    'meta_pt': 'Português e inglês · modelo proposto', 'meta_en': 'Portuguese and English · proposed arrangement',
+    'links': [('rent-to-own.html', 'Ler a explicação', 'Read the explanation')]
+})
+RESOURCE_CATALOG.append({
+    'id': 'reference', 'pt': 'Referência atual do projeto', 'en': 'Current project reference', 'version': VERSION,
+    'description_pt': 'Situação, responsabilidades, fontes e mapa dos capítulos do documento de Rafael.',
+    'description_en': 'Status, responsibilities, sources and a chapter map for Rafael’s manuscript.',
+    'meta_pt': 'Português e inglês · revisão datada', 'meta_en': 'Portuguese and English · dated review',
+    'links': [('reference.html', 'Ler a referência', 'Read the reference'),
+              ('project-reference-pt.pdf', 'PDF em português', 'Portuguese PDF'),
+              ('project-reference-en.pdf', 'PDF em inglês', 'English PDF'),
+              ('project-reference-pt.md', 'Texto editável PT', 'Editable text PT'),
+              ('project-reference-en.md', 'Texto editável EN', 'Editable text EN')]
+})
 
 
 def translated(pt, en, tag='span', attributes=''):
@@ -115,7 +141,7 @@ def translated(pt, en, tag='span', attributes=''):
 def resource_section(standalone=False):
     if not standalone:
         rows = []
-        for item in RESOURCE_CATALOG[:3]:
+        for item in [item for item in RESOURCE_CATALOG if item['id'] in ('housing', 'whitepaper', 'pitchdeck')]:
             target, pt, en = item['links'][0]
             rows.append(f'''<article class="resource-row" id="resource-{esc(item['id'])}">
 <div>{translated(item['pt'],item['en'],'h3')}{translated(item['description_pt'],item['description_en'],'p')}</div>
@@ -123,10 +149,11 @@ def resource_section(standalone=False):
         return '<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>' + \
             translated('Recursos','Resources','span','class="eyebrow"') + \
             translated('Conheça a proposta em detalhe.','Explore the proposal in detail.','h2') + \
-            translated('Documentos em inglês, em desenvolvimento. O media kit inclui descrições em português e inglês.',
-                       'English project documents, in development. The media kit includes Portuguese and English descriptions.','p') + \
+            translated('A explicação para famílias trata de pagamentos, reparos e compra da casa em português e inglês. O whitepaper detalha o projeto e o financiamento; os slides servem para conversas com parceiros. Esses dois documentos são rascunhos em inglês.',
+                       'The household explanation covers payments, repairs and buying the home in Portuguese and English. The paper details the project and funding; the slides support partner discussions. Those two documents are English drafts.','p') + \
             '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">' + \
             translated('Todos os documentos e downloads','All documents and downloads','a','href="resources.html"') + \
+            translated('Referência atual do projeto','Current project reference','a','href="reference.html"') + \
             translated('Roteiro e decisões compartilhadas','Roadmap and shared decisions','a','href="roadmap.html"') + \
             translated('Dinheiro e transparência','Money and transparency','a','href="transparency.html"') + \
             translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
@@ -145,14 +172,15 @@ def resource_section(standalone=False):
     return '''<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>''' + \
         translated('05 / Documentos do projeto','05 / Project documents','span','class="eyebrow"') + \
         translated('Documentos e identidade IMOBX.','IMOBX documents and brand assets.','h1' if standalone else 'h2') + \
-        translated('Leia online ou baixe os arquivos. O roteiro, as perguntas e a página do dinheiro estão em português e inglês. O whitepaper, os slides e o guia do piloto são rascunhos em inglês.',
-                    'Read online or download the files. The roadmap, questions and money page are in Portuguese and English. The paper, slides and pilot guide are English drafts.','p') + \
+        translated('Para entender pagamentos, reparos e compra da casa, comece pela explicação para famílias, em português e inglês. O whitepaper aprofunda os custos e o financiamento; o guia da construção trata de quem executaria e conferiria o trabalho; os slides resumem a proposta para parceiros. Esses três documentos são rascunhos em inglês. A referência em português e inglês reúne fontes e o mapa de capítulos do documento de Rafael.',
+                    'For payments, repairs and buying the home, start with the household explanation in Portuguese and English. The paper develops the costs and funding; the building guide covers who would carry out and inspect the work; the slides summarize the proposal for partners. Those three documents are English drafts. The bilingual project reference provides sources and a chapter map for Rafael’s manuscript.','p') + \
+        '<p>' + translated('Consultar a referência do projeto e o mapa de capítulos','Read the project reference and chapter map','a','class="button" href="reference.html"') + '</p>' + \
         '<div class="resource-grid">' + ''.join(cards) + '</div>' + \
         '<div class="resource-more">' + \
         translated('Ver roteiro e decisões compartilhadas','View roadmap and shared decisions','a','href="roadmap.html"') + \
         translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
         translated('Para desenvolvedores: conteúdo das páginas (JSON)','For developers: page content (JSON)','a','href="model-guide.json" download') + \
-        translated('Ver fontes e números do planejamento','Read the sources and planning figures','a','href="whitepaper.html#12-risks-decisions-and-evidence-register"') + \
+        translated('Fontes, versões e situação da evidência','Sources, versions and evidence status','a','href="reference.html#sources"') + \
         translated('Baixar documentos e logos (ZIP)','Download documents and logos (ZIP)','a','href="imobx-documents.zip" download') + \
         '</div>'
 
@@ -164,6 +192,13 @@ for name in ['index.html', 'properties.html']:
                            target.read_text(), count=1, flags=re.S)
     if count != 1:
         raise ValueError(f'Expected one main header in {name}.')
+    review_pt = f'Projeto em desenvolvimento · v{VERSION} · Revisão: {REVIEW_DATE}'
+    review_en = f'Project in development · v{VERSION} · Reviewed: {REVIEW_DATE}'
+    source, count = re.subn(r'<div class="review"[^>]*>.*?</div>',
+        lambda _: f'<div class="review" data-pt="{esc(review_pt)}" data-en="{esc(review_en)}">{esc(review_pt)}</div>',
+        source, count=1, flags=re.S)
+    if count != 1:
+        raise ValueError(f'Expected one review date in {name}.')
     target.write_text(source)
 
 
@@ -175,9 +210,11 @@ if replaced != 1:
 home.write_text(home_source)
 language_controls = ''  # The shared header contains the single language control.
 build_guide(ROOT, page, translated, esc, language_controls)
+build_reference(ROOT, page, translated, esc)
+build_contact(ROOT, page, translated, esc, VERSION)
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main id="main">' + language_controls + resource_section(standalone=True) + '</section></main>',
-    '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Recursos'))
+    '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
 if (ROOT / 'DESIGN.md').is_file():
     design_html = markdown.markdown((ROOT / 'DESIGN.md').read_text(), extensions=['tables', 'toc'])
     (ROOT / 'design.html').write_text(page('IMOBX | Design guidelines',
@@ -197,14 +234,14 @@ kit_html = kit_html.replace('<h2', logo_previews + '<h2', 1)
 
 paper_source = (ROOT / 'whitepaper.md').read_text()
 paper_html = markdown.markdown(paper_source, extensions=['tables', 'toc'])
-(ROOT / 'whitepaper.html').write_text(page('IMOBX | Project paper v0.2',
+(ROOT / 'whitepaper.html').write_text(page('IMOBX | Project paper v' + VERSION,
     '<main class="paper"><p><a href="whitepaper.pdf" download>Download PDF</a> · '
-    '<a href="whitepaper.md" download>Editable text</a></p>' + paper_html + '</main>', version='0.2'))
+    '<a href="whitepaper.md" download>Editable text</a> · <a href="reference.html">Project reference · PT/EN</a></p>' + paper_html + '</main>', version=VERSION))
 devsheet_html = markdown.markdown((ROOT / 'devsheet.md').read_text(), extensions=['tables', 'toc'])
-(ROOT / 'devsheet.html').write_text(page('IMOBX | Pilot and building guide v0.3',
-    '<main class="paper"><p><strong>Pilot and building guide · v0.3</strong><br>'
+(ROOT / 'devsheet.html').write_text(page('IMOBX | Pilot and building guide v' + VERSION,
+    f'<main class="paper"><p><strong>Pilot and building guide · v{VERSION}</strong><br>'
     '<a href="devsheet.pdf" download>Download PDF</a> · '
-    '<a href="devsheet.md" download>Editable text</a></p>' + devsheet_html + '</main>', version='0.3'))
+    '<a href="devsheet.md" download>Editable text</a> · <a href="reference.html">Project reference · PT/EN</a></p>' + devsheet_html + '</main>', version=VERSION))
 
 deck = json.loads((ROOT / 'pitchdeck.json').read_text())
 slides_html = []
@@ -223,9 +260,13 @@ body = '''<main class="deck"><div class="deck-controls" hidden>
 <button type="button" data-next aria-label="Next slide">Next →</button><button type="button" data-notes aria-pressed="false">Presenter notes</button>
 <a href="pitchdeck.pptx" download>PowerPoint</a><a href="pitchdeck.pdf" download>PDF</a></div>'''
 body += ''.join(slides_html) + f'<aside class="sources"><h2>Sources and context</h2><ul>{source_list}</ul></aside></main>'
-(ROOT / 'pitchdeck.html').write_text(page('IMOBX | Partner deck v0.2', body, '<script src="assets/deck.js" defer></script>', version='0.2'))
+(ROOT / 'pitchdeck.html').write_text(page('IMOBX | Partner deck v' + VERSION, body, '<script src="assets/deck.js" defer></script>', version=VERSION))
 deck_md += ['## Sources', *('- ['+x['label']+']('+x['url']+')' for x in deck['sources'])]
 (ROOT / 'pitchdeck.md').write_text('\n\n'.join(deck_md) + '\n')
+
+if PREVIEW_ONLY:
+    print('Rendered local HTML for editorial and browser review. Existing exports are unchanged.')
+    raise SystemExit(0)
 
 # Fonts are local system fonts, not external requests from the website.
 font_candidates = [
@@ -256,6 +297,7 @@ styles.add(ParagraphStyle(name='SpecCell', parent=styles['PaperCell'], fontSize=
 def inline(element):
     value = ET.tostring(element, encoding='unicode', method='html')
     value = re.sub(r'^<[^>]+>|</[^>]+>$', '', value.strip())
+    value = re.sub(r'href="([^"]+)"', lambda m: 'href="' + urljoin('https://siah-kin.github.io/imobx-website/', m[1]) + '"', value)
     return value.replace('<strong>', '<b>').replace('</strong>', '</b>').replace('<em>', '<i>').replace('</em>', '</i>')
 
 
@@ -308,8 +350,11 @@ def paper_footer(c, doc):
 
 
 for name, content, label, title in [
-    ('whitepaper', paper_html, 'IMOBX / PROJECT PROPOSAL / v0.2 / 16 OCTOBER 2026', 'IMOBX project paper v0.2'),
-    ('devsheet', devsheet_html, 'IMOBX / PILOT AND BUILDING GUIDE / v0.3 / 16 OCTOBER 2026', 'IMOBX pilot and building guide v0.3'),
+    ('whitepaper', paper_html, f'IMOBX / PROJECT PROPOSAL / v{VERSION} / {REVIEW_DATE}', 'IMOBX project paper v' + VERSION),
+    ('devsheet', devsheet_html, f'IMOBX / PILOT AND BUILDING GUIDE / v{VERSION} / {REVIEW_DATE}', 'IMOBX pilot and building guide v' + VERSION),
+    *[(f'project-reference-{lang}', markdown.markdown((ROOT / f'project-reference-{lang}.md').read_text(), extensions=['tables']),
+       f'IMOBX / {lang.upper()} / v{VERSION} / {REVIEW_DATE}', f'IMOBX project reference / {lang.upper()} / v{VERSION}')
+      for lang in ['pt', 'en']],
 ]:
     document = SimpleDocTemplate(str(ROOT / (name + '.pdf')), pagesize=(594,842), rightMargin=63, leftMargin=63,
                                  topMargin=55,bottomMargin=62,title=title,author='IMOBX draft')
@@ -366,9 +411,9 @@ for number, item in enumerate(deck['slides'],1):
     for row, bullet in enumerate(item['bullets']):
         ppt_text(slide,'0'+str(row+1),.82,4.25+row*.73,.42,.35,11,ACCENT,True)
         ppt_text(slide,bullet,1.35,4.2+row*.73,11,.65,18)
-    ppt_text(slide,'IMOBX / PARTNER DISCUSSION DRAFT / 15 OCT 2026',.82,7.04,10,.2,9,MUTED)
+    ppt_text(slide,f'IMOBX / PARTNER DISCUSSION DRAFT / v{VERSION} / {REVIEW_DATE}',.82,7.04,10,.2,9,MUTED)
     ppt_text(slide,f'{number:02d} / {len(deck["slides"]):02d}',11.6,7.04,1,.2,9,MUTED)
-    slide.notes_slide.notes_text_frame.text = item['notes'] + '\n\nSources and factual limits: companion whitepaper v0.2.'
+    slide.notes_slide.notes_text_frame.text = item['notes'] + f'\n\nSources and factual limits: companion whitepaper v{VERSION} and reference.html.'
     pdf.setFillColor(colors.HexColor(PAPER)); pdf.rect(0,0,13.333*inch,7.5*inch,fill=1,stroke=0)
     pdf.drawImage(str(ROOT / 'assets/imobx-logo-light.png'),11.6*inch,6.47*inch,width=.95*inch,height=.95*inch)
     pdf_text(item['eyebrow'],.82,.62,10,11,ACCENT,True)
@@ -377,17 +422,18 @@ for number, item in enumerate(deck['slides'],1):
     for row, bullet in enumerate(item['bullets']):
         pdf_text('0'+str(row+1),.82,4.25+row*.73,.42,11,ACCENT,True)
         pdf_text(bullet,1.35,4.2+row*.73,11,18,limit=.65)
-    pdf_text('IMOBX / PARTNER DISCUSSION DRAFT / 15 OCT 2026',.82,7.04,10,9,MUTED)
+    pdf_text(f'IMOBX / PARTNER DISCUSSION DRAFT / v{VERSION} / {REVIEW_DATE}',.82,7.04,10,9,MUTED)
     pdf_text(f'{number:02d} / {len(deck["slides"]):02d}',11.6,7.04,1,9,MUTED)
     pdf.showPage()
 presentation.save(ROOT / 'pitchdeck.pptx')
 pdf.save()
+write_manifest(ROOT)
 
 
 def archive(name, paths, introduction):
     with zipfile.ZipFile(ROOT / name, 'w', compression=zipfile.ZIP_DEFLATED) as bundle:
         bundle.writestr('READ-ME.txt', introduction)
-        for path in paths:
+        for path in dict.fromkeys(paths):
             bundle.write(ROOT / path, path)
 
 
@@ -396,6 +442,10 @@ archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + lo
         'IMOBX media kit v0.2 / 16 October 2026\nLogo artwork, colour definitions, image provenance and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
         'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'faq.html', 'transparency.html', 'model-guide.json',
-        'assets/style.css', 'assets/brand.css', 'assets/site.js', 'media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
-        'IMOBX document collection / 16 October 2026\nProject paper, partner deck, pilot and building guide, roadmap, questions, money/transparency page and media kit.\nThe project is in preparation. These documents do not offer an investment.\nPDF files are for reading; the PowerPoint and text files are editable. The roadmap, questions and money page are available on the website in Portuguese and English.\n')
+        'project-reference.json', 'project-reference-pt.md', 'project-reference-en.md', 'publication-manifest.json', 'contact-routes.json',
+        'project-reference-pt.pdf', 'project-reference-en.pdf', 'media-kit.md', 'media-kit.zip', 'brand-colors.json', 'DESIGN.md']
+        + sorted(str(p.relative_to(ROOT)) for p in ROOT.glob('*.html'))
+        + sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'research').rglob('*.html'))
+        + sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'assets').rglob('*') if p.is_file()),
+        f'IMOBX document collection / v{VERSION} / {REVIEW_DATE}\nStart with reference.html or project-reference-pt.pdf for status, sources and the manuscript chapter map.\nThe project is in preparation. These documents do not offer an investment.\nThe paper, deck and working guide are English drafts. The project reference, roadmap, questions and money page are Portuguese/English.\nThe bundle includes the website HTML and assets. External sources require an internet connection.\n')
 print('Built document exports, on-page resources, the resources page, media kit and download archives.')

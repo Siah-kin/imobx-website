@@ -2,11 +2,11 @@
 
 A documented rent-to-own housing model for Rio
 
-**Project proposal · v0.2 · 16 October 2026**
+**Partner discussion draft · v0.6 · 17 October 2026**
 
 
 
-## 1. Rent a home. Work toward owning it.
+## 1. Families would rent toward owning their home.
 
 IMOBX is preparing a first rent-to-own housing project in Rio.
 
@@ -60,21 +60,21 @@ His US$27,777 per-home plan uses CUB and SINAPI, Brazilian building-cost referen
 
 
 
-## 4. Put the home and responsibilities in writing.
+## 4. Part of each payment would go towards buying the home.
 
-IMOBX would arrange property access, family agreements and building work.
-
-
-
-- Check who owns the property and how IMOBX may use it.
-
-- Agree the builder’s work, price, deadline and who checks it.
-
-- Explain payments, purchase progress and the final transfer.
+The household could see what it has paid towards the purchase and how much remains.
 
 
 
-**Presenter notes:** A promise to donate is different from a completed property transfer. A founder linked to the builder should not approve its own bill. Brazilian advisers need to review the property and legal arrangement. A token does not replace title registration.
+- The agreement sets the price and how much of each payment goes towards buying.
+
+- The household can follow the amount paid and the remaining price.
+
+- The whole home transfers to the household once the purchase terms are met.
+
+
+
+**Presenter notes:** This is the proposed arrangement, not a current home offer. The first purchase price, monthly payment, purchase credit and payment period have not been set. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Property authority, budget and independent inspection remain necessary for delivery.
 
 
 
@@ -114,21 +114,21 @@ Running the existing homes and building more need separate budgets.
 
 
 
-## 7. Give residents a real say.
+## 7. Residents would decide how shared spaces are used.
 
-Discuss which decisions belong to residents, workers and possible investors.
-
-
-
-- Residents help decide how shared spaces and repairs work.
-
-- People chosen for work have time limits and can be replaced.
-
-- Housing and purchase rights stay protected by agreements and law.
+Courtyard use, study-room hours, repair priorities and representatives are resident matters.
 
 
 
-**Presenter notes:** One option is equal member voice in resident matters, elected people responsible for work, and investor rights limited to the written investment agreement. Buying tokens would not buy membership or control over every housing decision. Ostrom’s ideas help us ask who participates, who checks and how disputes are resolved. These are proposed rules to agree. Online activity and scores do not decide housing rights.
+- One vote per member is an option under discussion.
+
+- No investment purchase or promotional work would be required for a voice.
+
+- Investor rights and each household’s contract have their own terms.
+
+
+
+**Presenter notes:** The voting procedure, spending limits and review route have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Buying tokens would not give control over another household’s contracted purchase price. See rent-to-own.html#decisions and roadmap.html#governance. Do not describe this proposal as a functioning resident assembly.
 
 
 
@@ -150,39 +150,39 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 
 
-## 9. Raise capital for homes. Define what investors receive.
+## 9. A possible token could fund operations and outreach.
 
-We are studying a financial token to fund construction and growth.
-
-
-
-- A new issue would bring investment money into the housing operation.
-
-- Define the issuer, financial rights, income source, losses and exit.
-
-- Keep family agreements and residents’ say in decisions protected.
+In a direct issue, buyers would pay the issuing organization; their rights are still undecided.
 
 
 
-**Presenter notes:** The nonprofit idea keeps resources serving housing. Under Law 13.019’s definition for public-sector partnerships, nonprofits use results for their social purpose. A nonprofit cannot simply promise those results as investor dividends. Brazilian advisers need to review any other permitted investment arrangement. No supply, return rate, sale date or resident token plan is agreed. The token’s name does not decide its legal treatment. A token could record defined decision or permitted financial rights across projects. These rights are not yet chosen. We need to speak with families, property contributors, builders, staff, donors, possible investors, neighbours and independent checkers before treating their needs as agreed. The participation map is a proposal for those conversations. The financial purpose is capital raising for budgeted housing work. Formation of a share company, an investment offering and later trading are separate decisions. Financing may precede construction after the necessary organization, property authority, budget and permitted fundraising route are ready. Future income is forecast, not received. New investment paid to the issuer differs from a resale that pays another investor. The financing structure remains under study.
+- A later resale normally pays the seller; any project fee is separate.
+
+- Paid outreach needs a funded brief, accepted work and disclosure.
+
+- No dividend, discount or token voting model has been selected.
 
 
 
-## 10. Prepare, test, then decide the next step.
-
-The roadmap links homes, money, shared decisions and digital tools.
+**Presenter notes:** Four scenarios remain: no IMOBX token, a service or membership benefit, fee participation, or an investment in the operation. These are alternatives, not combined promised rights. Capital for construction, outreach payments and investor income have different budgets and commitments. Residents’ participation would not depend on investment or promotion. Reference.html#token compares what a buyer might receive and the decisions still open.
 
 
 
-- Days 1–30: roles, property, budget and family discussions.
+## 10. Each stage needs evidence before it advances.
 
-- Days 31–60: money rules and worked examples; day 90: readiness decision.
-
-- Fund the pilot, follow results and test with another local team.
+The roadmap names proposed roles and conditions for proceeding.
 
 
 
-**Presenter notes:** These are preparation targets from an agreed start, not promised building dates. Construction needs property, funding and permissions. Follow at least three operating months before the first expansion review. Website v1 explains the plan; v2 reports real building and accounts without needing a token. Any later token access follows agreed rights and checked legal and payment arrangements.
+- Property rights, household terms and budgets underpin the first homes.
+
+- Digital payment trials and token research can progress alongside them.
+
+- Expansion follows operating results and funding for existing commitments.
+
+
+
+**Presenter notes:** The six stages are legal structure and property; resident participation; first homes; transparent treasury; funding and account review; more homes and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible founder-linked contractor requiring independent approval. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
 
 
 
@@ -204,25 +204,27 @@ Follow actual costs, accounts and families’ experience.
 
 
 
-## 12. Help prepare the first project.
+## 12. One property can become a project to assess.
 
-We need people who can check the homes, agreements and budget.
-
-
-
-- Building partners: confirm the work, property access, costs and timing.
-
-- Housing, accounting and legal advisers: review agreements and money rules.
-
-- Families and community partners: test the information and help process.
+An owner, building team, local organization and funder could develop a costed proposal together.
 
 
 
-**Presenter notes:** Agree the specific work, responsible people and dates with each partner. This draft does not ask readers to buy a token or promise a funding award. The paper and pilot guide give the calculations, sources and decisions still needed.
+- Owners: property, condition and donation, sale or lease terms.
+
+- Builders and funders: costed work, funding purpose and commitments.
+
+- Households: affordable terms, location, repairs and resident decisions.
+
+
+
+**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Receiving contacts are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. A founder-linked builder needs independent contract and delivery review. See contact.html and rent-to-own.html#property.
 
 
 
 ## Sources
+
+- [Dated project reference: status, roles, token alternatives and chapter map](reference.html)
 
 - [Project facts and cost provenance](whitepaper.html#3-the-cost-proposal-already-supplied)
 

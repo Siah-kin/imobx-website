@@ -1,0 +1,1267 @@
+{
+  "version": "0.6",
+  "reviewed": "2026-10-17",
+  "title": [
+    "A IMOBX prepara moradias com um caminho até a compra.",
+    "IMOBX is preparing homes with a path to ownership."
+  ],
+  "intro": [
+    "Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 17 de outubro de 2026.",
+    "This page states the current plan, with Rafael’s figures and links to their sources. It explains who would do each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 17 October 2026."
+  ],
+  "sections": [
+    {
+      "id": "status",
+      "nav": [
+        "O que existe",
+        "What exists"
+      ],
+      "title": [
+        "O que existe hoje?",
+        "What exists today?"
+      ],
+      "body": [
+        [
+          "A proposta combina aluguel com opção de compra, construção local e contas que os participantes possam conferir. Cada família teria um caminho contratual até a propriedade da casa inteira. O valor das parcelas e o prazo do primeiro projeto ainda não estão definidos.",
+          "The proposal combines rent-to-own agreements, local construction and accounts participants can inspect. Each household would have a contractual path to owning its whole home. Payment amounts and the first project’s purchase term are still open."
+        ]
+      ],
+      "columns": [
+        [
+          "Material",
+          "Material"
+        ],
+        [
+          "O que oferece",
+          "What it provides"
+        ],
+        [
+          "Situação em 17/10/2026",
+          "Position on 17 October 2026"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Whitepaper",
+            "Whitepaper"
+          ],
+          [
+            "Explicação do modelo, custos e riscos.",
+            "An explanation of the model, costs and risks."
+          ],
+          [
+            "Rascunho de referência em inglês, v0.5. O texto de cerca de 30 páginas de Rafael está em preparação.",
+            "English reference draft, v0.5. Rafael’s roughly 30-page manuscript is in preparation."
+          ]
+        ],
+        [
+          [
+            "Apresentação",
+            "Deck"
+          ],
+          [
+            "Resumo para conversas com parceiros, com notas de apresentação.",
+            "A partner discussion summary, with presenter notes."
+          ],
+          [
+            "12 slides em inglês, v0.5.",
+            "12 English slides, v0.5."
+          ]
+        ],
+        [
+          [
+            "Guia de trabalho (devsheet)",
+            "Working guide (devsheet)"
+          ],
+          [
+            "Como pedidos, obras e pagamentos seriam acompanhados.",
+            "How requests, construction and payments would be followed."
+          ],
+          [
+            "Rascunho em inglês, v0.5. Descreve o processo proposto.",
+            "English draft, v0.5. Describes the proposed process."
+          ]
+        ],
+        [
+          [
+            "Roteiro",
+            "Roadmap"
+          ],
+          [
+            "Etapas, funções responsáveis e condições para avançar.",
+            "Stages, responsible roles and conditions for proceeding."
+          ],
+          [
+            "PT/EN. Datas de obra dependem dos projetos e de seus recursos.",
+            "PT/EN. Construction dates depend on each project and its funding."
+          ]
+        ],
+        [
+          [
+            "Desenhos e fotos",
+            "Drawings and photographs"
+          ],
+          [
+            "Visão da comunidade, modelos dos lofts e imagens fornecidas.",
+            "Community vision, loft designs and supplied images."
+          ],
+          [
+            "Ilustrações e fotos têm legendas. Não comprovam entrega de moradias pela IMOBX.",
+            "Illustrations and photos have captions. They do not establish homes delivered by IMOBX."
+          ]
+        ],
+        [
+          [
+            "Operação e pagamentos",
+            "Operations and payments"
+          ],
+          [
+            "Plano de contratos, participação e acompanhamento do dinheiro.",
+            "A plan for agreements, participation and following money."
+          ],
+          [
+            "A operação completa, a transferência de imóveis e uma tesouraria IMOBX funcionando na blockchain ainda não estão demonstradas nesta referência.",
+            "This page does not yet show a complete housing project, completed property transfers or IMOBX funds managed on the blockchain."
+          ]
+        ]
+      ],
+      "links": [
+        {
+          "url": "rent-to-own.html",
+          "label": [
+            "Como seriam pagamentos, reparos e compra da casa",
+            "How payments, repairs and buying the home would work"
+          ]
+        },
+        {
+          "url": "resources.html",
+          "label": [
+            "Documentos e downloads",
+            "Documents and downloads"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "costs",
+      "nav": [
+        "Números e origem",
+        "Figures and origin"
+      ],
+      "title": [
+        "O que cobrem os dois orçamentos?",
+        "What do the two budgets cover?"
+      ],
+      "body": [
+        [
+          "Rafael forneceu os cálculos e a proposta da comunidade em 30 de novembro de 2025. O orçamento por casa de 45 m² soma terreno US$5,550, construção US$18,600, solar US$1,500, infraestrutura compartilhada US$1,500 e projeto e trabalho jurídico US$627. Total: US$27,777 por casa. Para 36 casas: US$999,972, com execução proposta em 12 meses.",
+          "Rafael supplied the calculations and community proposal on 30 November 2025. His budget for each 45 m² home includes land US$5,550, construction US$18,600, solar US$1,500, shared infrastructure US$1,500, and design and legal work US$627. Total: US$27,777 per home. For 36 homes: US$999,972, with a proposed 12-month build."
+        ],
+        [
+          "Em 20 de janeiro de 2026, Rafael relatou um contrato de US$27,777 para dois lofts juntos, aguardando o primeiro depósito naquela data. A divisão dá US$13,888.50 por loft. Esse contrato tem outro escopo. Não substitui o orçamento da comunidade. O andamento atual e os custos finais precisam de documentos próprios.",
+          "On 20 January 2026, Rafael reported a US$27,777 contract for both lofts together, awaiting the first deposit at that date. Division gives US$13,888.50 per loft. That contract has a different scope. It does not replace the community budget. Current progress and final costs need their own documents."
+        ],
+        [
+          "A origem desses números é a informação fornecida pelo fundador. CUB e SINAPI são referências de custo usadas no cálculo. Não publicaram esse preço de casa pronta. O orçamento do terreno escolhido, em reais, terá data e itens incluídos. As mensagens de origem não são publicadas com dados pessoais. Os resumos abaixo permitem localizar cada caso.",
+          "These figures come from the founder’s supplied information. CUB and SINAPI are cost references used in the calculation. They did not publish this finished-home price. The chosen site’s budget in reais will need a date and included items. Original messages with personal data are not published. The summaries below identify each case."
+        ]
+      ],
+      "links": [
+        {
+          "url": "whitepaper.html#3-the-cost-proposal-already-supplied",
+          "label": [
+            "Orçamento e cálculo completos",
+            "Full budget and calculation"
+          ]
+        },
+        {
+          "url": "properties.html#estudo-lofts",
+          "label": [
+            "Caso dos dois lofts",
+            "The two-loft case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "nav": [
+        "Como funcionaria",
+        "How it would work"
+      ],
+      "title": [
+        "Quem organizaria o projeto e conferiria a obra?",
+        "Who would organize the project and inspect the work?"
+      ],
+      "body": [
+        [
+          "Um morador relata uma infiltração. A pessoa responsável pela manutenção avalia o problema e obtém um orçamento. O gasto segue os limites de aprovação combinados. Outra pessoa confere o conserto, e o pagamento fica ligado ao comprovante. O morador pode pedir revisão. Se alguém deixar a função, quem assumir encontra as pendências e os valores aprovados.",
+          "A resident reports a leak. The maintenance role assesses the problem and obtains a quote. Spending follows the agreed approval limits. Another person inspects the repair, and the payment is linked to its receipt. The resident can ask for review. A replacement can find unfinished tasks and approved amounts when someone leaves a role."
+        ],
+        [
+          "O mesmo método se aplica a obras e fornecedores. Uma construtora ligada a um fundador precisa declarar essa relação. Outras pessoas comparam o preço, aprovam o contrato e conferem a entrega. A divulgação do vínculo, sozinha, não resolve o conflito de interesse.",
+          "The same method applies to construction and suppliers. A builder linked to a founder needs to disclose that relationship. Other people compare the price, approve the contract and inspect delivery. Disclosure alone does not resolve the conflict of interest."
+        ]
+      ],
+      "links": [
+        {
+          "url": "devsheet.html#6-records-payments-and-support",
+          "label": [
+            "Guia do processo de trabalho",
+            "Working-process guide"
+          ]
+        },
+        {
+          "url": "roadmap.html#governance",
+          "label": [
+            "Quem decide e como pedir revisão",
+            "Who decides and how to request review"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "nav": [
+        "Quem participa",
+        "Who takes part"
+      ],
+      "title": [
+        "Quem já contribui e quais funções ainda estão vagas?",
+        "Who is contributing and which roles remain unfilled?"
+      ],
+      "columns": [
+        [
+          "Pessoa ou grupo",
+          "Person or group"
+        ],
+        [
+          "Papel proposto",
+          "Proposed role"
+        ],
+        [
+          "Autoridade e situação",
+          "Authority and status"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Rafael Britto",
+            "Rafael Britto"
+          ],
+          [
+            "Conhecimento da obra, orçamento e articulação local.",
+            "Construction knowledge, budgets and local relationships."
+          ],
+          [
+            "Fundador. Responsabilidades formais ainda por documentar. Qualificações profissionais precisam de referências publicáveis.",
+            "Rafael is a founder. His formal duties still need to be put in writing. Professional credentials need sources readers can consult."
+          ]
+        ],
+        [
+          [
+            "John",
+            "John"
+          ],
+          [
+            "Comunicação, documentação e coordenação das ferramentas digitais.",
+            "Communication, documentation and coordination of digital tools."
+          ],
+          [
+            "Participação na preparação. Poderes de gasto ou representação ainda não atribuídos nesta referência.",
+            "John helps prepare the project. The right to spend money or sign for IMOBX still needs a written appointment."
+          ]
+        ],
+        [
+          [
+            "IMOBX",
+            "IMOBX"
+          ],
+          [
+            "Organização do projeto, contratos e acompanhamento das contas.",
+            "Project organisation, agreements and account reporting."
+          ],
+          [
+            "A forma jurídica e os representantes legais estão em definição.",
+            "Legal form and legal representatives are being defined."
+          ]
+        ],
+        [
+          [
+            "OLYMPUS",
+            "OLYMPUS"
+          ],
+          [
+            "Possível construtora contratada, ligada a Rafael.",
+            "Possible contracted builder, linked to Rafael."
+          ],
+          [
+            "Contratação depende de escopo, comparação de preço e aprovação independente.",
+            "Appointment depends on scope, price comparison and independent approval."
+          ]
+        ],
+        [
+          [
+            "Moradores",
+            "Residents"
+          ],
+          [
+            "Condições de moradia e participação nos assuntos comuns.",
+            "Housing terms and participation in shared matters."
+          ],
+          [
+            "Voz proposta sem comprar tokens. Representantes e regras serão discutidos com os participantes.",
+            "Proposed voice without buying tokens. Representatives and rules will be discussed with participants."
+          ]
+        ],
+        [
+          [
+            "Parceiro comunitário ou beneficente",
+            "Community or charitable partner"
+          ],
+          [
+            "Possível acesso a imóvel, famílias ou financiadores.",
+            "Possible access to property, households or funders."
+          ],
+          [
+            "Cenário de parceria em discussão. Nenhum acordo ou endosso confirmado nesta referência.",
+            "Partnership scenario under discussion. No agreement or endorsement is confirmed in this reference."
+          ]
+        ],
+        [
+          [
+            "Assessoria jurídica, contabilidade e conferência da obra",
+            "Legal advice, accounting and building inspection"
+          ],
+          [
+            "Revisão dos contratos, contas e segurança.",
+            "Review of agreements, accounts and safety."
+          ],
+          [
+            "Profissionais responsáveis ainda não identificados nesta referência.",
+            "Responsible professionals are not yet identified in this reference."
+          ]
+        ],
+        [
+          [
+            "Investidores, doadores e divulgadores",
+            "Investors, donors and ambassadors"
+          ],
+          [
+            "Recursos ou trabalho conforme acordos próprios.",
+            "Funding or work under their own agreements."
+          ],
+          [
+            "Não recebem controle automático sobre contratos de moradia. Um divulgador precisa revelar quando recebe pelo trabalho.",
+            "No automatic control over housing agreements. An ambassador needs to disclose paid work."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "token",
+      "nav": [
+        "Token e divulgação",
+        "Token and outreach"
+      ],
+      "title": [
+        "Para que serviria o token e quem receberia o dinheiro?",
+        "What would the token fund and who would receive the money?"
+      ],
+      "body": [
+        [
+          "Doações, editais, receitas de serviços e um investimento permitido são possibilidades. Também estudamos um token para financiar a operação e a divulgação. Numa emissão direta, o comprador pagaria à organização emissora; numa revenda entre investidores, o valor normalmente vai ao vendedor. Uma taxa recebida pela IMOBX seria registrada separadamente.",
+          "Possible sources include donations, grants, service income and a permitted investment. A token to fund operations and outreach is also under study. In a direct issue, the buyer would pay the issuing organization; in a resale between investors, the money normally goes to the seller. Any fee received by IMOBX would be recorded separately."
+        ],
+        [
+          "Um divulgador ou moderador recebe uma tarefa e apresenta o trabalho. Um revisor compara a entrega com o combinado antes de aprovar o pagamento. O orçamento precisa ter recursos para os pagamentos prometidos. Relações remuneradas precisam ser informadas ao público.",
+          "An ambassador or moderator receives a brief and submits their work. A reviewer compares delivery with the agreement before approving payment. The budget needs funds for promised payments. Paid relationships need to be disclosed to the public."
+        ],
+        [
+          "Pagar por trabalho aceito difere de pagar pelo simples investimento. Os serviços de divulgação precisam respeitar as regras de cada canal e informar a remuneração. Promessas de retorno, distribuição de taxas ou de lucros precisam de análise jurídica própria. Chamar um token de utilidade ou governança não define seu tratamento legal.",
+          "Paying for accepted work differs from paying for an investment alone. Outreach needs to follow each channel’s rules and disclose compensation. Promised returns, trading-fee payments or profit distributions need their own legal assessment. Calling a token utility or governance does not determine its legal treatment."
+        ]
+      ],
+      "columns": [
+        [
+          "Caminho em estudo",
+          "Path under study"
+        ],
+        [
+          "O que alguém receberia",
+          "What someone would receive"
+        ],
+        [
+          "O que falta resolver",
+          "What remains open"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "A. Piloto e divulgação sem token próprio",
+            "A. Pilot and outreach without an IMOBX token"
+          ],
+          [
+            "Moradia por contrato. Trabalho de divulgação pago por entrega aceita.",
+            "Housing through agreements. Outreach paid for accepted work."
+          ],
+          [
+            "Fontes de recursos, orçamento, participantes e regras de pagamento.",
+            "Funding sources, budget, participants and payment rules."
+          ]
+        ],
+        [
+          [
+            "B. Acesso a um serviço ou benefício",
+            "B. Access to a service or benefit"
+          ],
+          [
+            "Um serviço concreto ou desconto definido. Possível recompra seria uma regra separada.",
+            "A defined service or discount. A possible buyback would be a separate rule."
+          ],
+          [
+            "Serviço disponível, preço, quem paga o desconto e eventual recompra. Queimar tokens não paga dividendos automaticamente.",
+            "Available service, price, who funds discounts and any buyback. Burning tokens does not automatically pay dividends."
+          ]
+        ],
+        [
+          [
+            "C. Participação em taxas",
+            "C. Fee participation"
+          ],
+          [
+            "Direito definido a parte das taxas realmente recebidas, se a estrutura permitir.",
+            "A defined right to part of fees actually received, if the structure permits."
+          ],
+          [
+            "Emissor, direitos, custos, perdas, restrições e caminho permitido de oferta. A negociação pode gerar receita zero.",
+            "Issuer, rights, costs, losses, restrictions and permitted offering route. Trading may generate zero income."
+          ]
+        ],
+        [
+          [
+            "D. Investimento na operação",
+            "D. Investment in the operation"
+          ],
+          [
+            "Ações representadas por tokens ou outro direito de investimento definido. Distribuições dependeriam do acordo e de recursos disponíveis.",
+            "Tokenised shares or another defined investment right. Distributions would depend on the agreement and available money."
+          ],
+          [
+            "Entidade adequada, ativos e dívidas incluídos, direitos, impostos e oferta. Eventual renda de imóveis precisa respeitar o destino dos recursos e a transferência das casas às famílias.",
+            "Suitable entity, included assets and debts, rights, taxes and offering route. Rent can only be used as the agreements allow. The project must still be able to transfer homes to families."
+          ]
+        ]
+      ],
+      "links": [
+        {
+          "url": "whitepaper.html#8-what-a-token-could-represent",
+          "label": [
+            "Alternativas e direitos do token",
+            "Token alternatives and rights"
+          ]
+        },
+        {
+          "url": "https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html",
+          "label": [
+            "CVM: os direitos e a oferta determinam a análise",
+            "CVM: rights and the offer determine the assessment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "nav": [
+        "Voz e proteção",
+        "Voice and protection"
+      ],
+      "title": [
+        "O que os moradores poderiam decidir?",
+        "What could residents decide?"
+      ],
+      "body": [
+        [
+          "Horários da sala de estudos, uso do pátio, prioridades de reparo dos espaços comuns e escolha de representantes são exemplos de assuntos dos moradores. Uma opção em discussão é um voto por membro nesses assuntos, com representantes que possam ser substituídos.",
+          "Study-room hours, courtyard use, shared-space repair priorities and choosing representatives are examples of resident decisions. One option under discussion is one vote per member on these matters, with representatives who can be replaced."
+        ],
+        [
+          "Ostrom estudou como pessoas cuidam de recursos comuns. Na IMOBX, suas perguntas ajudam a definir quem participa, como as regras são alteradas, quem confere os gastos e como resolver conflitos. O roteiro apresenta os oito princípios e exemplos. Essa proposta ainda precisa ser construída com os moradores. Os princípios não substituem essa participação.",
+          "Ostrom studied how people care for shared resources. At IMOBX, her questions help define who participates, how rules change, who checks spending and how disputes are resolved. The roadmap presents the eight principles and examples. Residents still need to help develop this proposal. The principles do not replace that participation."
+        ]
+      ],
+      "links": [
+        {
+          "url": "rent-to-own.html#decisions",
+          "label": [
+            "Decisões da comunidade e contrato da família",
+            "Community decisions and the household agreement"
+          ]
+        },
+        {
+          "url": "roadmap.html#governance",
+          "label": [
+            "Regras de decisão e aplicação de Ostrom",
+            "Decision rules and Ostrom’s application"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "nav": [
+        "Ferramentas e limites",
+        "Tools and limits"
+      ],
+      "title": [
+        "Como acompanhar um reparo e seu pagamento?",
+        "How could a repair and its payment be followed?"
+      ],
+      "body": [
+        [
+          "No método proposto, um morador comunica uma infiltração. A pessoa responsável pela manutenção avalia o problema, obtém um orçamento e encaminha o gasto conforme o limite combinado. Outra pessoa confere o conserto antes da aprovação final do pagamento.",
+          "In the proposed process, a resident reports a leak. The maintenance contact assesses the problem, obtains a quote and follows the agreed spending limit. Someone else checks the repair before final payment approval."
+        ],
+        [
+          "Arc é a rede de blockchain considerada para pagamentos em USDC, uma moeda digital que busca acompanhar o dólar dos Estados Unidos. O teste proposto mostraria quem autorizou um pequeno pagamento e seu comprovante público. As contas ainda precisam ligar esse pagamento ao gasto real e ao documento bancário. Famílias pagariam em reais e não precisariam de carteira de criptomoedas.",
+          "Arc is the blockchain network considered for payments in USDC, a digital currency designed to track the US dollar. The proposed test would show who authorised a small payment and its public receipt. Accounts still need to connect that payment to the actual expense and bank record. Households would pay in reais and would not need crypto wallets."
+        ],
+        [
+          "Arctide e Argus são exemplos de exchanges, ou plataformas de negociação, na rede Arc.",
+          "Arctide and Argus are examples of exchanges, or trading platforms, on the Arc network."
+        ],
+        [
+          "A ferramenta de comunidade organizaria pedidos e entregas. Assistentes de software poderiam reunir documentos e lembrar pendências. Pessoas responsáveis continuariam aprovando decisões e conferindo serviços. Documentos pessoais ficam fora da blockchain pública. A propriedade legal das casas depende dos registros e contratos aplicáveis.",
+          "The community tool would organise requests and submissions. Software assistants could gather documents and flag unfinished work. Accountable people would still approve decisions and inspect services. Personal documents stay off the public blockchain. Legal ownership of homes depends on the applicable records and agreements."
+        ]
+      ],
+      "links": [
+        {
+          "url": "transparency.html#settlement",
+          "label": [
+            "Caminho proposto entre reais e USDC",
+            "Proposed path between reais and USDC"
+          ]
+        },
+        {
+          "url": "https://docs.arc.io/",
+          "label": [
+            "Documentação de Arc",
+            "Arc documentation"
+          ]
+        },
+        {
+          "url": "https://arctide.app/",
+          "label": [
+            "Arctide · exchange na Arc",
+            "Arctide · Arc-based exchange"
+          ]
+        },
+        {
+          "url": "https://argus.world/",
+          "label": [
+            "Argus · exchange na Arc",
+            "Argus · Arc-based exchange"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "risks",
+      "nav": [
+        "Custos e riscos",
+        "Costs and risks"
+      ],
+      "title": [
+        "O que poderia impedir o avanço do projeto?",
+        "What could prevent the project from proceeding?"
+      ],
+      "body": [
+        [
+          "O dinheiro recebido teria destino registrado. Impostos, custos da operação, manutenção e compromissos com as famílias precisam estar cobertos. O orçamento de divulgação e de novas obras precisa de recursos próprios aprovados. Eventuais pagamentos a investidores dependem da estrutura escolhida e do dinheiro disponível. Quando uma família se torna proprietária, o aluguel daquela casa deixa de entrar para a IMOBX.",
+          "Received money would have a recorded purpose. Taxes, operating costs, maintenance and commitments to families need funding. Outreach and new construction need their own approved budgets. Any investor payments depend on the chosen structure and available money. When a household becomes the owner, rent from that home stops going to IMOBX."
+        ],
+        [
+          "O estudo financeiro ainda precisa reunir orçamento em reais, parcelas acessíveis e cenários de atraso, reparos, câmbio e negociação zero do token. O site explica a ordem proposta de uso do dinheiro. Ainda não apresenta um modelo financeiro calibrado que comprove equilíbrio ou expansão nacional.",
+          "The cash plan needs a budget in reais and payments families can afford. It also needs to show what happens if costs rise or repairs take longer. One case must assume no money comes from token trading. The site explains the proposed order for using money. There is no cash plan here yet showing that income covers bills or that the project can grow across Brazil."
+        ]
+      ],
+      "columns": [
+        [
+          "Risco",
+          "Risk"
+        ],
+        [
+          "Proteção em estudo",
+          "Proposed protection"
+        ],
+        [
+          "Quem precisa revisar",
+          "Required reviewing role"
+        ]
+      ],
+      "rows": [
+        [
+          [
+            "Imóvel sem autoridade documentada. Obra com custo maior.",
+            "Undocumented property authority. Construction overruns."
+          ],
+          [
+            "Documentos do imóvel, orçamento por local, permissões e conferência independente da entrega.",
+            "Property documents, site budget, permissions and independent delivery inspection."
+          ],
+          [
+            "Assessoria jurídica e profissional da obra. Nomes pendentes.",
+            "Legal adviser and building professional. Names pending."
+          ]
+        ],
+        [
+          [
+            "Família sem condições de continuar pagando.",
+            "Household unable to keep paying."
+          ],
+          [
+            "Avaliação de capacidade de pagamento e regras de dificuldade, saída e revisão no contrato.",
+            "Affordability assessment and contractual hardship, exit and review rules."
+          ],
+          [
+            "Moradores e responsável pelos contratos. Nome pendente.",
+            "Residents and agreement administrator. Appointment pending."
+          ]
+        ],
+        [
+          [
+            "Falta de dinheiro ou dependência de negociação do token.",
+            "Cash shortfall or dependence on token trading."
+          ],
+          [
+            "Reservas, recursos comprometidos identificados e cenário com taxas de negociação iguais a zero.",
+            "Reserves, identified commitments and a zero-trading-fee scenario."
+          ],
+          [
+            "Administração e contador. Nomeações pendentes.",
+            "Administration and accountant. Appointments pending."
+          ]
+        ],
+        [
+          [
+            "Oferta ou publicidade de investimento sem caminho permitido.",
+            "Investment offer or promotion without a permitted route."
+          ],
+          [
+            "Revisão dos direitos e países alcançados antes de venda ou campanha paga.",
+            "Review of rights and target countries before sales or paid campaigns."
+          ],
+          [
+            "Assessoria jurídica das jurisdições envolvidas. Contratação pendente.",
+            "Legal advisers in relevant jurisdictions. Appointment pending."
+          ]
+        ],
+        [
+          [
+            "Erro de pagamento, perda de acesso ou falha do software.",
+            "Payment error, lost access or software failure."
+          ],
+          [
+            "Teste com valor pequeno e regras de aprovação, recuperação e resposta a incidentes.",
+            "Small-value trial and approval, recovery and incident-response rules."
+          ],
+          [
+            "Responsável técnico e revisores independentes. Nomeações pendentes.",
+            "Technical lead and independent reviewers. Appointments pending."
+          ]
+        ]
+      ],
+      "links": [
+        {
+          "url": "transparency.html",
+          "label": [
+            "Contas e pagamentos propostos",
+            "Proposed accounts and payments"
+          ]
+        },
+        {
+          "url": "reference.html#source-cvm249",
+          "label": [
+            "O limite do programa experimental CVM 249",
+            "The limits of the CVM 249 experimental programme"
+          ]
+        }
+      ]
+    }
+  ],
+  "chapters_title": [
+    "Cada capítulo pode citar uma seção identificável.",
+    "Each chapter can cite an identifiable section."
+  ],
+  "chapters_intro": [
+    "O mapa abaixo acompanha o escopo do documento de Rafael. As páginas existentes são material de referência. O manuscrito final reunirá a tese, os documentos novos e as decisões aprovadas. Uma seção marcada como proposta não vira fato por ser citada no documento.",
+    "The map below follows the scope of Rafael’s document. Existing pages provide reference material. The final manuscript will bring together the thesis, new documents and approved decisions. Citing a proposed arrangement does not turn it into a fact."
+  ],
+  "chapters": [
+    {
+      "id": "summary",
+      "title": [
+        "Sumário executivo. Visão e missão",
+        "Executive summary. Vision and mission"
+      ],
+      "scope": [
+        "Proposta de moradia, público pretendido e estágio atual. A tese final depende das decisões jurídicas e financeiras.",
+        "Housing proposal, intended participants and current stage. The final thesis depends on legal and financial decisions."
+      ],
+      "links": [
+        {
+          "url": "reference.html#status",
+          "label": [
+            "Situação do projeto",
+            "Project status"
+          ]
+        },
+        {
+          "url": "whitepaper.html",
+          "label": [
+            "Whitepaper",
+            "Whitepaper"
+          ]
+        },
+        {
+          "url": "pitchdeck.html",
+          "label": [
+            "Apresentação",
+            "Deck"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "title": [
+        "O problema",
+        "The problem"
+      ],
+      "scope": [
+        "Contexto habitacional e fontes oficiais. Os dados nacionais não substituem a avaliação das famílias do projeto.",
+        "Housing context and official sources. National data do not replace assessment of the participating households."
+      ],
+      "links": [
+        {
+          "url": "whitepaper.html#1-who-the-pilot-is-for",
+          "label": [
+            "Público e contexto",
+            "Participants and context"
+          ]
+        },
+        {
+          "url": "reference.html#source-ibge",
+          "label": [
+            "IBGE",
+            "IBGE"
+          ]
+        },
+        {
+          "url": "reference.html#source-fjp",
+          "label": [
+            "Déficit habitacional: FJP",
+            "Housing deficit: FJP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solution",
+      "title": [
+        "A solução pela ótica do morador",
+        "The solution from the resident’s perspective"
+      ],
+      "scope": [
+        "Contrato, parcelas, reparos e compra da casa inteira. Valor, prazo e critérios de entrada ainda abertos.",
+        "Agreement, payments, repairs and whole-home purchase. Amount, term and admission criteria remain open."
+      ],
+      "links": [
+        {
+          "url": "rent-to-own.html",
+          "label": [
+            "Explicação para famílias: pagamentos, reparos e decisões",
+            "Household explanation: payments, repairs and decisions"
+          ]
+        },
+        {
+          "url": "devsheet.html#3-payments-and-home-ownership",
+          "label": [
+            "Caminho da família",
+            "Household pathway"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pilot",
+      "title": [
+        "O piloto",
+        "The pilot"
+      ],
+      "scope": [
+        "Imóvel, entidade, contrato de uso ou transferência e acordo com a família. A parceria comunitária é uma possibilidade em discussão.",
+        "Property, entity, use or transfer agreement and household agreement. A community partnership is a possibility under discussion."
+      ],
+      "links": [
+        {
+          "url": "roadmap.html#foundation",
+          "label": [
+            "Base jurídica e imóvel",
+            "Legal and property foundations"
+          ]
+        },
+        {
+          "url": "reference.html#people",
+          "label": [
+            "Funções propostas",
+            "Proposed roles"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "title": [
+        "Economia do imóvel e modelo financeiro",
+        "Property economics and financial model"
+      ],
+      "scope": [
+        "Orçamento de Rafael, escopos distintos e uso proposto do dinheiro. Fluxo financeiro calibrado e cenários ainda em desenvolvimento.",
+        "Rafael’s budget, separate scopes and proposed use of money. A calibrated cash-flow model and scenarios remain in development."
+      ],
+      "links": [
+        {
+          "url": "reference.html#costs",
+          "label": [
+            "Custos e origem",
+            "Costs and origin"
+          ]
+        },
+        {
+          "url": "whitepaper.html#4-how-the-money-would-work",
+          "label": [
+            "Ordem de uso do dinheiro",
+            "Order for using money"
+          ]
+        },
+        {
+          "url": "reference.html#risks",
+          "label": [
+            "Cenários e riscos",
+            "Scenarios and risks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "legal",
+      "title": [
+        "Estrutura jurídica",
+        "Legal structure"
+      ],
+      "scope": [
+        "Comparação entre finalidade social e investimento com direitos financeiros. Entidade, assessoria e rota de oferta ainda não selecionadas.",
+        "Comparison of social-purpose activity and investment with financial rights. Entity, advisers and offering route are not yet selected."
+      ],
+      "links": [
+        {
+          "url": "reference.html#source-cvm40",
+          "label": [
+            "CVM e direitos do token",
+            "CVM and token rights"
+          ]
+        },
+        {
+          "url": "reference.html#source-cvm249",
+          "label": [
+            "Programa experimental CVM 249",
+            "CVM 249 experimental programme"
+          ]
+        },
+        {
+          "url": "faq.html#faq-nonprofit",
+          "label": [
+            "Finalidade social e forma jurídica",
+            "Social purpose and legal form"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "token",
+      "title": [
+        "O papel do token",
+        "The token’s role"
+      ],
+      "scope": [
+        "Finalidade do token e possíveis direitos, ainda em pesquisa. Pagamentos por trabalho e direitos de investimento são relações distintas.",
+        "Token purpose and possible rights remain under research. Payment for work and investment rights are separate relationships."
+      ],
+      "links": [
+        {
+          "url": "reference.html#token",
+          "label": [
+            "Motivação e alternativas",
+            "Motivation and alternatives"
+          ]
+        },
+        {
+          "url": "whitepaper.html#8-what-a-token-could-represent",
+          "label": [
+            "Direitos e limites",
+            "Rights and limits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "title": [
+        "Governança",
+        "Governance"
+      ],
+      "scope": [
+        "Voz dos moradores, funções, revisão e conflito com uma construtora ligada ao fundador. As regras finais dependem de participação e aprovação.",
+        "Resident voice, roles, review and conflicts involving a founder-linked builder. Final rules depend on participation and approval."
+      ],
+      "links": [
+        {
+          "url": "roadmap.html#governance",
+          "label": [
+            "Ostrom e decisões",
+            "Ostrom and decisions"
+          ]
+        },
+        {
+          "url": "reference.html#people",
+          "label": [
+            "Responsabilidades",
+            "Responsibilities"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": [
+        "Tecnologia",
+        "Technology"
+      ],
+      "scope": [
+        "O que Arc, USDC e as ferramentas de trabalho poderiam fazer. A operação IMOBX completa ainda precisa de demonstração.",
+        "What Arc, USDC and working tools could do. The complete IMOBX operation still needs a demonstration."
+      ],
+      "links": [
+        {
+          "url": "reference.html#technology",
+          "label": [
+            "Ferramentas e limites",
+            "Tools and limits"
+          ]
+        },
+        {
+          "url": "transparency.html#settlement",
+          "label": [
+            "Entradas e saídas",
+            "Money in and out"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "risk",
+      "title": [
+        "Risco e conformidade",
+        "Risk and compliance"
+      ],
+      "scope": [
+        "Riscos de obra, finanças, moradia e oferta. Revisão jurídica e de segurança ainda pendentes. Não há aprovação regulatória declarada.",
+        "Construction, financial, housing and offering risks. Legal and security reviews remain pending. No regulatory approval is claimed."
+      ],
+      "links": [
+        {
+          "url": "reference.html#risks",
+          "label": [
+            "Riscos e responsáveis pela revisão",
+            "Risks and reviewing roles"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roadmap",
+      "title": [
+        "Roteiro",
+        "Roadmap"
+      ],
+      "scope": [
+        "Etapas com condição de avanço, função responsável e motivo para suspensão. Datas de entrega entram após nomeações, orçamento e dependências confirmadas.",
+        "Stages with proceeding conditions, responsible roles and reasons to pause. Delivery dates follow confirmed appointments, budgets and dependencies."
+      ],
+      "links": [
+        {
+          "url": "roadmap.html#stages",
+          "label": [
+            "Etapas e condições",
+            "Stages and conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "title": [
+        "Equipe, fundador e parceiros",
+        "Team, founder and partners"
+      ],
+      "scope": [
+        "Participação atual e funções propostas. Referências profissionais, nomeações e acordos com parceiros precisam ser documentados.",
+        "Current involvement and proposed roles. Professional references, appointments and partner agreements need documentation."
+      ],
+      "links": [
+        {
+          "url": "reference.html#people",
+          "label": [
+            "Pessoas e situação das funções",
+            "People and role status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appendices",
+      "title": [
+        "Conclusão e apêndices",
+        "Conclusion and appendices"
+      ],
+      "scope": [
+        "As conclusões devem acompanhar a evidência disponível. Fontes, versões e termos estão reunidos aqui. O modelo financeiro completo permanece uma entrega aberta.",
+        "Conclusions should follow the available evidence. Sources, versions and terms are collected here. The complete financial model remains an open deliverable."
+      ],
+      "links": [
+        {
+          "url": "reference.html#sources",
+          "label": [
+            "Fontes",
+            "Sources"
+          ]
+        },
+        {
+          "url": "faq.html",
+          "label": [
+            "Termos e perguntas",
+            "Terms and questions"
+          ]
+        },
+        {
+          "url": "reference.html#versions",
+          "label": [
+            "Versões",
+            "Versions"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources_title": [
+    "As fontes sustentam afirmações específicas.",
+    "Sources support specific claims."
+  ],
+  "sources_intro": [
+    "Revisão em 17/10/2026. Fontes oficiais explicam normas e dados. Não aprovam a IMOBX. Documentação de um fornecedor descreve seu produto, sem comprovar uma integração IMOBX. Números fornecidos pelo fundador mantêm essa atribuição.",
+    "Reviewed on 17 October 2026. Official sources explain rules and data. They do not approve IMOBX. A provider’s documentation describes its product, without establishing an IMOBX integration. Founder-supplied figures retain that attribution."
+  ],
+  "sources": [
+    {
+      "id": "founder",
+      "label": [
+        "Rafael: orçamento e relato dos lofts",
+        "Rafael: budget and loft account"
+      ],
+      "url": "whitepaper.html#3-the-cost-proposal-already-supplied",
+      "scope": [
+        "Informação do fundador de 30/11/2025 e 20/01/2026. Resumo público, sem a conversa privada. Não é relatório de custo final nem laudo independente.",
+        "Founder information dated 30 November 2025 and 20 January 2026. Public summary without private correspondence. It is not a final-cost report or independent assessment."
+      ]
+    },
+    {
+      "id": "ibge",
+      "label": [
+        "IBGE: Censo 2022, favelas e comunidades urbanas",
+        "IBGE: 2022 Census, favelas and urban communities"
+      ],
+      "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas",
+      "scope": [
+        "16.4 milhões de moradores, 8.1% da população, no Censo 2022. Não mede sozinho o déficit de moradia nem descreve cada família.",
+        "16.4 million residents, 8.1% of the population, in the 2022 Census. This does not itself measure the housing deficit or describe each household."
+      ]
+    },
+    {
+      "id": "sinapi",
+      "label": [
+        "CAIXA: SINAPI",
+        "CAIXA: SINAPI"
+      ],
+      "url": "https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx",
+      "scope": [
+        "Referência brasileira para custos e insumos de construção. Um orçamento específico precisa de local, data e escopo.",
+        "Brazilian reference for construction costs and inputs. A specific budget needs a location, date and scope."
+      ]
+    },
+    {
+      "id": "ostrom",
+      "label": [
+        "Elinor Ostrom: palestra Nobel",
+        "Elinor Ostrom: Nobel lecture"
+      ],
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/",
+      "scope": [
+        "Base de pesquisa para os princípios de gestão de recursos comuns. A aplicação à IMOBX é uma proposta do projeto.",
+        "Research basis for shared-resource governance principles. Their application to IMOBX is the project’s proposal."
+      ]
+    },
+    {
+      "id": "ica",
+      "label": [
+        "ICA: identidade cooperativa",
+        "ICA: cooperative identity"
+      ],
+      "url": "https://ica.coop/en/cooperatives/cooperative-identity",
+      "scope": [
+        "Controle democrático dos membros e autonomia. Não estabelece que a IMOBX já seja uma cooperativa registrada.",
+        "Democratic member control and autonomy. Does not establish that IMOBX is already a registered cooperative."
+      ]
+    },
+    {
+      "id": "cvm40",
+      "label": [
+        "CVM: Parecer de Orientação 40",
+        "CVM: Guidance Opinion 40"
+      ],
+      "url": "https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html",
+      "scope": [
+        "A CVM, reguladora brasileira do mercado de valores mobiliários, analisa as características e os direitos dos tokens. Rótulos de utilidade ou governança não autorizam uma oferta.",
+        "CVM, Brazil’s securities-market regulator, examines token characteristics and rights. Utility or governance labels do not authorise an offer."
+      ]
+    },
+    {
+      "id": "cvm249",
+      "label": [
+        "CVM: Resolução 249 de 13/10/2026",
+        "CVM: Resolution 249 of 13 October 2026"
+      ],
+      "url": "https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm",
+      "scope": [
+        "O programa experimental do artigo 1º, §3º não permite investidores reais, valores mobiliários efetivamente emitidos ou movimentação de dinheiro real nos testes. Não concede autorização para oferta pública ou outras atividades reguladas.",
+        "The experimental programme under article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in its tests. It does not authorise public offerings or other regulated activities."
+      ]
+    },
+    {
+      "id": "nonprofit",
+      "label": [
+        "Lei 13.019: definição para parcerias com o poder público",
+        "Law 13.019: definition for public-sector partnerships"
+      ],
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm",
+      "scope": [
+        "O artigo 2º define organizações sem fins lucrativos para essa lei. O encaixe entre finalidade social e qualquer investimento proposto precisa de revisão jurídica específica.",
+        "Article 2 defines nonprofit organisations for that law. The fit between social purpose and any proposed investment needs specific legal review."
+      ]
+    },
+    {
+      "id": "arc",
+      "label": [
+        "Arc: documentação oficial",
+        "Arc: official documentation"
+      ],
+      "url": "https://docs.arc.io/",
+      "scope": [
+        "Características da rede e ferramentas para pagamentos digitais. Não comprova uso pela IMOBX, parceria ou aprovação regulatória.",
+        "Network features and tools for digital payments. Does not establish IMOBX use, partnership or regulatory approval."
+      ]
+    },
+    {
+      "id": "arctide",
+      "label": [
+        "Arctide · exchange na Arc",
+        "Arctide · Arc-based exchange"
+      ],
+      "url": "https://arctide.app/",
+      "scope": [
+        "Exemplo de plataforma de negociação na rede Arc.",
+        "An example of a trading platform on the Arc network."
+      ]
+    },
+    {
+      "id": "fjp",
+      "label": [
+        "Fundação João Pinheiro: déficit habitacional de 2024",
+        "Fundação João Pinheiro: 2024 housing deficit"
+      ],
+      "url": "https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/",
+      "scope": [
+        "Estimativa de 5,773,983 domicílios no déficit de 2024. Mede necessidades habitacionais por critérios próprios. É diferente da contagem de pessoas em favelas do Censo 2022.",
+        "An estimated 5,773,983 homes in the 2024 deficit. This measures housing needs under its own criteria. It differs from the 2022 Census count of people living in favelas."
+      ]
+    },
+    {
+      "id": "paid-outreach",
+      "label": [
+        "FTC: divulgação de relações comerciais",
+        "FTC: disclosing brand relationships"
+      ],
+      "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+      "scope": [
+        "Orientação dos Estados Unidos sobre informar relações remuneradas. Não autoriza ofertas de investimento e não substitui regras dos outros países alcançados.",
+        "US guidance on disclosing paid relationships. It does not authorise investment offers or replace rules in other countries reached."
+      ]
+    },
+    {
+      "id": "x-policy",
+      "label": [
+        "X: política de parcerias pagas",
+        "X: paid-partnerships policy"
+      ],
+      "url": "https://help.x.com/en/rules-and-policies/paid-partnerships-policy",
+      "scope": [
+        "Exige divulgação de parcerias pagas e proíbe categorias de conteúdo. As restrições variam por país e incluem cripto e produtos financeiros na União Europeia, no Reino Unido e na Austrália. Um aviso de publicidade não torna permitido um conteúdo proibido.",
+        "Requires paid-partnership disclosure and prohibits content categories. Country rules include crypto and financial products in the EU, UK and Australia. A disclosure does not make prohibited content permissible."
+      ]
+    },
+    {
+      "id": "argus",
+      "label": [
+        "Argus · exchange na Arc",
+        "Argus · Arc-based exchange"
+      ],
+      "url": "https://argus.world/",
+      "scope": [
+        "Exemplo de plataforma de negociação na rede Arc.",
+        "An example of a trading platform on the Arc network."
+      ]
+    }
+  ],
+  "versions_title": [
+    "Uma citação deve identificar a versão e a seção.",
+    "A citation should identify the version and section."
+  ],
+  "versions": [
+    [
+      "Referência para citação: IMOBX, Referência do projeto, v0.6, revisão de 17/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.",
+      "Citation format: IMOBX, Project reference, v0.6, reviewed 17 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start."
+    ],
+    [
+      "Correções e novas decisões precisam indicar data, quem forneceu a informação, quem aprovou a mudança e a evidência correspondente. Quando houver operação, os relatórios terão período, responsável pelas contas e responsável pela conferência. Valores propostos, contratados, recebidos e gastos serão apresentados separadamente.",
+      "Each correction needs a date and a named source. A new decision also needs the name of the person who approved it and a link to its basis. Once operations exist, reports will state their period, account preparer and reviewer. Proposed, contracted, received and spent amounts will be shown separately."
+    ],
+    [
+      "Nesta edição, os números do fundador permanecem atribuídos a ele. Os demais responsáveis por revisão financeira, jurídica e técnica ainda precisam de nomeação. O site não acompanha saldos ou mudanças legais automaticamente.",
+      "In this edition, founder figures remain attributed to him. People still need to be chosen to review accounts, contracts and software. The site does not automatically monitor balances or legal changes."
+    ]
+  ]
+}

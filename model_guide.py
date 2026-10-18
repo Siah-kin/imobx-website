@@ -22,6 +22,10 @@ def build_guide(root, page, tr, esc, language_controls):
         for item in items:
             body += f'<details id="faq-{esc(item["id"])}">' + text(item['q'], 'summary')
             body += ''.join(text(pair) for pair in item['a']) + links(item['sources']) + '</details>'
+            if item.get('detail_url'):
+                body = body[:-len('</details>')] + text(
+                    ('Veja a explicação completa', 'Read the full explanation'), 'a',
+                    f'href="{esc(item["detail_url"])}"') + '</details>'
         if not home:
             body += '<span id="faq-thanks-zeal-lets"></span><span id="faq-euler"></span>'
             body += text(('Quem participa e quais direitos precisa combinar ↗', 'Who takes part and which rights need agreement ↗'),
@@ -31,40 +35,76 @@ def build_guide(root, page, tr, esc, language_controls):
                          'a', 'class="guide-more" href="faq.html"')
         return body + '</div>'
 
+    journey = guide['resident_journey']
+    resident = '<main class="paper guide-paper resident-page" id="main">'
+    resident += text(journey['title'], 'h1') + text(journey['intro'], 'p', 'class="guide-lead"')
+    resident += '<aside class="guide-status">' + text(journey['status']) + '</aside>'
+    resident += '<nav class="guide-jump" aria-label="Sections">'
+    for ident, label in [('payments', ('Pagamentos e compra', 'Payments and purchase')),
+                         ('repairs', ('Reparos', 'Repairs')), ('decisions', ('Decisões', 'Decisions')),
+                         ('hardship', ('Dificuldade de pagamento e saída', 'Hardship and leaving')),
+                         ('funding', ('Financiamento', 'Funding')), ('property', ('Imóveis e parceiros', 'Property and partners'))]:
+        resident += text(label, 'a', f'href="#{ident}"')
+    resident += '</nav><section id="payments">' + text(journey['steps_title'], 'h2') + '<ol>'
+    for step in journey['steps']:
+        resident += '<li>' + text(step['title'], 'h3') + text(step['body']) + '</li>'
+    resident += '</ol>' + text(journey['payments_title'], 'h3')
+    resident += ''.join(text(pair) for pair in journey['payments'])
+    resident += text(('Veja os dois orçamentos de construção', 'Read the two construction budgets'),
+                     'a', 'href="index.html#custos"') + '</section>'
+    for ident in ('repairs', 'decisions', 'hardship', 'funding', 'property', 'next'):
+        resident += f'<section id="{ident}">' + text(journey[ident + '_title'], 'h2')
+        resident += ''.join(text(pair) for pair in journey[ident])
+        target, label = {
+            'repairs': ('roadmap.html#governance', ('Responsáveis, limites e revisão de decisões', 'Responsible roles, limits and decision reviews')),
+            'decisions': ('roadmap.html#participation', ('Como os papéis se relacionam', 'How participant roles fit together')),
+            'hardship': ('reference.html#status', ('Situação atual e documentos disponíveis', 'Current status and available documents')),
+            'funding': ('transparency.html#community-economy', ('Orçamentos, fontes de recursos e pagamentos', 'Budgets, funding sources and payments')),
+            'property': ('contact.html?role=property', ('Preparar uma apresentação do imóvel', 'Prepare a property introduction')),
+            'next': ('contact.html?role=resident', ('Preparar uma conversa sobre moradia', 'Prepare a housing conversation')),
+        }[ident]
+        resident += text(label, 'a', f'href="{target}"') + '</section>'
+    resident += '</main>'
+    (root / 'rent-to-own.html').write_text(page('IMOBX | Renting and buying a home', resident,
+        version=guide['version'], lang='pt-BR', title_pt='IMOBX | Aluguel e compra da casa'))
+
     summary = '<section class="content wrap scale-section" id="etapas"><span id="dinheiro"></span>'
     summary += text(('04 / Roteiro do projeto', '04 / Project roadmap'), 'span', 'class="eyebrow"')
-    summary += text(('Começar com um projeto. Aprender a construir mais.', 'Start with one project. Learn how to build more.'), 'h2')
-    summary += text(('Preparar o primeiro projeto, acompanhar os resultados e testar onde a blockchain ajuda. Os prazos contam a partir de uma data combinada. A obra depende do imóvel, do dinheiro e das autorizações.', 'Prepare the first project, follow the results and test where blockchain helps. The timetable starts from an agreed date. Building depends on the property, funding and permissions.'))
+    summary += text(('Das primeiras casas a uma rede de moradia.', 'From the first homes to a wider housing network.'), 'h2')
+    summary += text(('O caminho da IMOBX reúne moradia com opção de compra, participação dos moradores e contas transparentes. O primeiro projeto está em preparação; a estrutura jurídica, as regras de participação e as ferramentas digitais estão em desenvolvimento.', 'IMOBX’s roadmap brings together rent-to-own housing, resident participation and transparent accounts. The first project is in preparation, with the legal structure, participation rules and digital tools under development.'))
     summary += '<ol class="roadmap-overview">'
     for i, stage in enumerate(guide['stages'], 1):
         summary += f'<li><span class="roadmap-number">{i:02}</span><div>'
-        summary += text(stage['title'], 'h3') + text(stage['window'], 'p', 'class="fine"')
+        summary += text(stage['title'], 'h3') + text(stage['summary'], 'p', 'class="fine"')
         summary += '</div></li>'
-    summary += '</ol>' + text(('Ver responsáveis, entregas e critérios para avançar ↗',
-                              'See owners, deliverables and criteria for advancing ↗'),
+    summary += '</ol>' + text(('Conheça as etapas do projeto ↗',
+                              'Explore the project roadmap ↗'),
                              'a', 'class="button" href="roadmap.html"') + '</section>'
 
     roadmap = '<main class="paper guide-paper" id="main">' + language_controls
     roadmap += text(('Roteiro IMOBX', 'IMOBX roadmap'), 'h1')
-    roadmap += text(('Um primeiro projeto que as pessoas possam acompanhar e ajudar a decidir.', 'A first project people can follow and help shape.'), 'p', 'class="guide-lead"')
-    roadmap += text(('Plano para discussão · 15 de outubro de 2026. São metas de preparação; não são datas prometidas de obra ou venda. Rafael cuida da construção e das informações locais; John, da comunicação e das ferramentas digitais. Cada responsável precisa aceitar seu papel.', 'Plan for discussion · 15 October 2026. These are preparation targets, not promised building or sale dates. Rafael handles construction and local information; John handles communication and digital tools. Each person needs to agree to their role.'))
+    roadmap += text(('Das primeiras casas a uma rede de moradia.', 'From the first homes to a wider housing network.'), 'p', 'class="guide-lead"')
+    roadmap += text(('O plano de desenvolvimento reúne um primeiro projeto de moradia no Rio, participação dos moradores e financiamento. A preparação jurídica, o desenho da participação e os testes digitais podem avançar em paralelo. As datas de obra dependem do projeto escolhido, dos recursos e das permissões.', 'The development plan connects a first housing project in Rio with resident participation and funding. Legal preparation, participation design and digital trials can progress in parallel. Construction dates depend on the chosen project, funding and permissions.'))
     roadmap += '<div class="guide-status">' + text(('Onde estamos', 'Where we stand'), 'h2')
-    roadmap += text(('O site, os documentos, os desenhos e o orçamento de Rafael já estão disponíveis. Ainda precisamos confirmar a estrutura jurídica e mostrar o piloto, o caixa na blockchain e o token da IMOBX em funcionamento.', 'The site, documents, drawings and Rafael’s budget are available. We still need to confirm the legal structure and demonstrate the pilot, blockchain-held funds and IMOBX token in use.')) + '</div>'
+    roadmap += text(('O projeto está em preparação. O site, os documentos, os desenhos e o orçamento de Rafael estão publicados. A estrutura jurídica está em definição; a operação de moradia e a tesouraria na blockchain ainda não estão demonstradas. O modelo do token permanece em pesquisa.', 'The project is in preparation. The website, documents, drawings and Rafael’s budget are published. The legal structure is being defined; the housing operation and onchain treasury have not yet been demonstrated. The token model remains under research.')) + '</div>'
     roadmap += '<nav class="guide-jump" aria-label="Sections">' + text(('Etapas', 'Stages'), 'a', 'href="#stages"')
     roadmap += text(('Quem participa', 'Who takes part'), 'a', 'href="#participation"')
     roadmap += text(('Decisões compartilhadas', 'Shared decisions'), 'a', 'href="#governance"')
     roadmap += text(('Transparência', 'Transparency'), 'a', 'href="transparency.html"')
-    roadmap += text(('Diferença da ICO', 'ICO comparison'), 'a', 'href="#ico-comparison"')
+    roadmap += text(('Referência e fontes', 'Reference and sources'), 'a', 'href="reference.html"')
+    roadmap += text(('Relatórios do projeto', 'Project reports'), 'a', 'href="#ico-comparison"')
     roadmap += text(('Perguntas', 'Questions'), 'a', 'href="faq.html"') + '</nav>'
-    roadmap += '<section id="stages">' + text(('Etapas e o que precisa estar pronto', 'Steps and what needs to be ready'), 'h2')
+    roadmap += '<section id="stages">' + text(('Etapas de desenvolvimento', 'Development stages'), 'h2')
     for i, stage in enumerate(guide['stages'], 1):
         roadmap += f'<article class="roadmap-stage" id="{esc(stage["id"])}"><span class="eyebrow">{i:02}</span>'
         roadmap += text(stage['title'], 'h3') + text(stage['window'], 'p', 'class="guide-window"')
         roadmap += '<dl>'
-        for label, key in [(('Quem faria', 'Who would do it'), 'lead'),
-                           (('Trabalho', 'Work'), 'work'),
-                           (('Antes da próxima etapa', 'Before the next step'), 'gate'),
-                           (('O que mostrar no site', 'What to show on the site'), 'web')]:
+        for label, key in [(('Funções responsáveis propostas', 'Proposed responsible roles'), 'responsible'),
+                           (('Prazo e dependências', 'Timing and dependencies'), 'schedule'),
+                           (('O que está previsto', 'Planned scope'), 'work'),
+                           (('Resultado esperado', 'Intended outcome'), 'gate'),
+                           (('Condição de suspensão', 'Reason to pause'), 'pause'),
+                           (('Progresso público', 'Public progress'), 'web')]:
             roadmap += text(label, 'dt') + text(stage[key], 'dd')
         roadmap += '</dl></article>'
     roadmap += '</section>'
@@ -82,6 +122,9 @@ def build_guide(root, page, tr, esc, language_controls):
     for title, key in [('rights_title', 'rights'), ('token_title', 'token'), ('decision_title', 'decisions')]:
         roadmap += text(participation[title], 'h3')
         roadmap += '<ul>' + ''.join(text(p, 'li') for p in participation[key]) + '</ul>'
+    roadmap += text(('Veja como isso funcionaria para uma família: pagamentos, reparos e decisões',
+                     'See how this would work for a household: payments, repairs and decisions'),
+                    'a', 'href="rent-to-own.html"')
     roadmap += links(['ica', 'ostrom', 'token-study', 'cvm']) + '</section>'
 
     # Keep old shared anchors usable while linking the single detailed reading page.
@@ -138,6 +181,12 @@ def build_guide(root, page, tr, esc, language_controls):
                           (('Atualizações', 'Updates'), 'updates')]:
         transparency += text(label, 'a', f'href="#{target}"')
     transparency += '</nav>'
+    transparency += '<section id="household-payments">' + text(
+        ('O pagamento da família e a compra da casa', 'The household payment and home purchase'), 'h2')
+    transparency += text(journey['steps'][1]['body']) + text(journey['payments'][0])
+    transparency += text(('Como seriam os pagamentos e a transferência do imóvel',
+                         'How payments and the property transfer would work'),
+                        'a', 'href="rent-to-own.html#payments"') + '</section>'
     economy = guide['community_economy']
     transparency += '<section id="community-economy">' + text(economy['title'], 'h2')
     transparency += text(economy['intro']) + text(economy['status'], 'p', 'class="guide-status"')
@@ -176,10 +225,10 @@ def build_guide(root, page, tr, esc, language_controls):
     transparency += text(('Roteiro do projeto', 'Project roadmap'), 'a', 'href="roadmap.html"')
     transparency += text(('Todos os documentos', 'All documents'), 'a', 'href="resources.html"') + '</div></main>'
     (root / 'transparency.html').write_text(page('IMOBX | Money and transparency', transparency,
-        '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Dinheiro e transparência'))
+        '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Dinheiro e transparência'))
 
     roadmap += '<section id="governance">' + text(('Quem decide o quê?', 'Who decides what?'), 'h2')
-    roadmap += text(('Proposta para discutir com a comunidade. Uma pessoa pode morar, trabalhar e investir no mesmo projeto. Precisamos deixar claro o que cada papel permite decidir.', 'A proposal to discuss with the community. One person may live, work and invest in the same project. We need to make clear what each role may decide.'))
+    roadmap += text(('No modelo proposto, uma pessoa pode morar, trabalhar e investir no mesmo projeto. Cada relação tem seus próprios direitos e responsabilidades.', 'In the proposed model, one person may live, work and invest in the same project. Each relationship has its own rights and responsibilities.'))
     headings = [('Decisão', 'Decision'), ('Quem decidiria', 'Who would decide'), ('Limites e conferências', 'Limits and checks')]
     rows = [
         [('Moradia e compra', 'Occupancy and purchase'),
@@ -187,7 +236,7 @@ def build_guide(root, page, tr, esc, language_controls):
          ('Uma votação de tokens não muda sozinha o contrato da família. É preciso poder questionar e pedir revisão.', 'A token vote cannot change a family’s agreement on its own. People need a way to question a decision and ask for review.')],
         [('Uso de espaços e manutenção local', 'Shared spaces and local maintenance'),
          ('Uma opção para discutir: voz igual para cada membro do grupo de moradores.', 'One option to discuss: equal voice for each member of the resident group.'),
-         ('Respeitar o orçamento e a segurança, oferecer ajuda para participar e permitir trocar os representantes.', 'Follow the budget and safety rules, help people take part and allow representatives to be replaced.')],
+         ('Decisões dentro do orçamento e das regras de segurança, com apoio à participação e possibilidade de substituir representantes.', 'Decisions within the budget and safety rules, with support for participation and a way to replace representatives.')],
         [('Execução e compras', 'Delivery and purchasing'),
          ('Pessoas escolhidas pela experiência, com função e prazo claros.', 'People chosen for their experience, with a clear job and time limit.'),
          ('A construtora não aprova a própria cobrança. Aprovar o gasto, conferir a entrega e pagar são tarefas com conferências separadas.', 'The builder does not approve its own invoice. Approving spending, checking delivery and paying need separate checks.')],
@@ -196,55 +245,55 @@ def build_guide(root, page, tr, esc, language_controls):
          ('Comprar tokens não dá controle automático sobre moradores. Os contratos e o uso combinado das doações continuam valendo.', 'Buying tokens does not give automatic control over residents. Agreements and the stated purpose of donations still apply.')],
         [('Expansão e regras da rede', 'Expansion and network rules'),
          ('Grupos definidos nas regras da organização, com representantes locais e contas abertas à conferência.', 'Groups defined in the organization’s rules, with local representatives and accounts people can check.'),
-         ('Combinar quantas pessoas precisam votar, quem decide cada assunto e como resolver conflitos e trocar responsáveis.', 'Agree how many people must vote, who decides each issue, and how to resolve disputes and replace responsible people.')]
+         ('Regras de votação, competências, resolução de conflitos e substituição dos responsáveis previstas nos acordos da organização.', 'Voting requirements, decision powers, dispute resolution and replacement of responsible people set out in the organisation’s agreements.')]
     ]
     roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in headings)
     roadmap += '</tr></thead><tbody>'
     for row in rows:
         roadmap += '<tr>' + ''.join(text(cell, 'td') for cell in row) + '</tr>'
     roadmap += '</tbody></table></div>'
-    roadmap += text(('O trabalho já feito pode ajudar a escolher alguém para uma função. Isso não precisa virar votos por atividade online. A comunidade precisa decidir os prazos, as formas de revisão e como novos moradores podem participar.', 'Past work can help the community choose someone for a role. It does not need to become votes for online activity. The community needs to agree time limits, review and how newcomers can participate.'))
+    roadmap += text(('A experiência e o trabalho realizado podem orientar a escolha de responsáveis. A proposta combina funções com prazo definido, revisão das decisões e participação de novos moradores, sem vincular a voz dos moradores ao saldo de tokens.', 'Experience and completed work can inform appointments. The proposal combines time-limited roles, decision reviews and participation by new residents, without tying residents’ voice to token balances.'))
     roadmap += links(['ica', 'ostrom'])
     roadmap += text(('Aplicando Ostrom ao piloto', 'Applying Ostrom to the pilot'), 'h3')
     principles = [
-        ('Quem participa? Definir os membros, os imóveis, o que é compartilhado e o que pertence a cada família.', 'Who takes part? Agree the members, properties, shared resources and what belongs to each family.'),
-        ('O que cabe na vida local? Ajustar custos e responsabilidades ao que as famílias podem fazer e pagar.', 'What fits local life? Match costs and responsibilities to what families can do and afford.'),
-        ('Quem muda as regras? As pessoas afetadas participam das decisões que lhes cabem.', 'Who changes the rules? People affected take part in the decisions within their role.'),
-        ('Quem confere? Quem verifica dinheiro e trabalho presta contas aos participantes e declara interesses próprios.', 'Who checks? People checking money and work report to participants and disclose their own interests.'),
-        ('E se uma regra for descumprida? Ouvir a pessoa, considerar a gravidade e dar uma resposta proporcional.', 'What if a rule is broken? Hear the person, consider how serious it is and respond fairly.'),
-        ('Como resolver uma discussão? Oferecer mediação e revisão acessíveis, preservando os direitos de moradia.', 'How are disputes resolved? Offer accessible mediation and review while protecting housing rights.'),
-        ('As regras têm validade? Dar base jurídica às responsabilidades e decisões combinadas.', 'Do the rules carry legal weight? Give agreed responsibilities and decisions a legal basis.'),
-        ('O que fica perto dos moradores? Resolver assuntos locais no próprio projeto e compartilhar os serviços que ajudam vários projetos.', 'What stays close to residents? Handle local matters in each project and share services that help several projects.')
+        ('Membros, imóveis, recursos compartilhados e direitos de cada família claramente identificados.', 'Clearly identified members, properties, shared resources and household rights.'),
+        ('Custos e responsabilidades adequados às condições locais e à capacidade das famílias.', 'Costs and responsibilities suited to local conditions and household circumstances.'),
+        ('Participação das pessoas afetadas nas decisões sobre suas regras comuns.', 'Participation by affected people in decisions about their shared rules.'),
+        ('Conferência de dinheiro e trabalho por pessoas que prestam contas aos participantes e declaram seus interesses.', 'Checks on money and work by people accountable to participants who disclose their interests.'),
+        ('Respostas proporcionais ao descumprimento de regras, com oportunidade de defesa.', 'Proportionate responses to rule violations, with an opportunity to be heard.'),
+        ('Mediação e revisão acessíveis, com proteção aos direitos de moradia.', 'Accessible mediation and review, with protection for housing rights.'),
+        ('Base jurídica para as responsabilidades e decisões da organização.', 'A legal basis for the organisation’s responsibilities and decisions.'),
+        ('Decisões locais próximas dos moradores e serviços compartilhados entre projetos.', 'Local decisions close to residents, with services shared across projects.')
     ]
     roadmap += '<ol class="ostrom-application">' + ''.join(text(p, 'li') for p in principles) + '</ol>'
-    roadmap += text(('Estas perguntas adaptam as ideias de Ostrom à IMOBX. Ostrom estudou como pessoas cuidam de recursos comuns; não criou um modelo de token. Vamos ensaiar um reparo, uma urgência, uma cobrança contestada e uma nova obra. Em cada caso: quem pede, aprova, faz, confere e pode questionar?', 'These questions apply Ostrom’s ideas to IMOBX. Ostrom studied how people manage shared resources; she did not create a token model. We will walk through a repair, an emergency, a disputed invoice and a new build. In each case: who asks, approves, acts, checks and may challenge?'))
+    roadmap += text(('Estes princípios adaptam o trabalho de Ostrom sobre recursos comuns à governança proposta para a IMOBX. Sua aplicação abrange manutenção, urgências, cobranças contestadas e novas obras, com responsabilidades identificáveis em cada decisão.', 'These principles adapt Ostrom’s work on shared resources to IMOBX’s proposed governance. Their application covers maintenance, emergencies, disputed invoices and new construction, with identifiable responsibility for each decision.'))
     roadmap += text(('Como o trabalho segue no dia a dia', 'How everyday work moves forward'), 'h3')
     for key in ['work', 'example', 'continuity', 'status']:
         roadmap += text(guide['dao_operations'][key])
     roadmap += links(['digital']) + '</section>'
 
-    roadmap += '<section id="ico-comparison">' + text(('O que muda em relação à venda de tokens?', 'What changes compared with a token sale?'), 'h2')
-    roadmap += text(('Uma ICO é uma venda inicial de tokens para arrecadar dinheiro. A tabela compara uma venda para financiar um produto futuro com o caminho que propomos. Projetos de ICO variam; a IMOBX também precisa seguir as regras de uma eventual oferta.', 'An ICO is an initial token sale to raise money. This table compares selling to fund a future product with our proposed path. ICO projects vary; IMOBX also needs to follow the rules for any future offer.'))
+    roadmap += '<section id="ico-comparison">' + text(('Os relatórios ligariam cada etapa ao trabalho entregue.', 'Reports would connect each stage to delivered work.'), 'h2')
+    roadmap += text(('O acompanhamento proposto reúne os contratos, os gastos e os resultados de cada projeto. Valores previstos, recebidos e gastos aparecem separadamente.', 'The proposed reporting brings together each project’s agreements, spending and results. Forecast, received and spent amounts are shown separately.'))
     comparison = [
-        [('Ponto de partida', 'Starting point'), ('Venda financia a construção do produto futuro.', 'A sale finances the future product.'),
-         ('Definir imóvel, contratos, orçamento e responsáveis. Depois decidir se haverá token.', 'Agree the property, contracts, budget and responsible people. Then decide whether to use a token.')],
-        [('De onde vem o dinheiro que sobra', 'Where money left over comes from'), ('Depende do projeto; o preço do token não demonstra receita.', 'Project-dependent; token price does not demonstrate income.'),
-         ('Mostrar entradas, contas e dinheiro guardado. Qualquer pagamento exige dinheiro disponível e direito escrito.', 'Show income, bills and money set aside. Any payout needs available money and written rights.')],
-        [('Decisões', 'Decisions'), ('As regras da oferta definem os direitos; alguns projetos dão mais votos a quem tem mais tokens.', 'The offer defines rights; some projects give more votes to people with more tokens.'),
-         ('Combinar o que moradores, equipes e investidores podem decidir e como pedir revisão.', 'Agree what residents, teams and investors may decide and how to ask for review.')],
-        [('Progresso', 'Progress'), ('Marcos de produto e de mercado escolhidos pelo emissor.', 'Product and market milestones selected by the issuer.'),
-         ('Mostrar casas entregues, custos reais, contas conferidas e avanço das famílias na compra.', 'Show homes delivered, actual costs, checked accounts and families’ progress toward purchase.')]
+        [('Imóvel e contratos', 'Property and agreements'),
+         ('Direito documentado de uso do imóvel e condições de moradia.', 'Documented property authority and housing terms.')],
+        [('Recebimentos e gastos', 'Receipts and spending'),
+         ('Origem, finalidade e comprovante de cada pagamento, com conferência por outra pessoa.', 'Source, purpose and receipt for each payment, reviewed by another person.')],
+        [('Decisões', 'Decisions'),
+         ('Responsável, limite de gasto e possibilidade de pedir revisão.', 'Responsible person, spending limit and a way to request review.')],
+        [('Moradia entregue', 'Delivered housing'),
+         ('Custos reais, reparos pendentes e avanço das famílias na compra.', 'Actual costs, unresolved repairs and households’ purchase progress.')]
     ]
     roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in
-        [('Aspecto', 'Aspect'), ('Percurso comum de ICO', 'A common ICO journey'), ('Direção IMOBX', 'IMOBX direction')]) + '</tr></thead><tbody>'
+        [('Área', 'Area'), ('O que o relatório mostraria', 'What the report would show')]) + '</tr></thead><tbody>'
     roadmap += ''.join('<tr>' + ''.join(text(cell, 'td') for cell in row) + '</tr>' for row in comparison)
-    roadmap += '</tbody></table></div>' + links(['ico', 'cvm'])
+    roadmap += '</tbody></table></div>' + links(['cash', 'cost'])
     roadmap += text(('Queremos que o dinheiro e as ferramentas ajudem a cumprir o compromisso de moradia. O primeiro projeto precisa mostrar se isso funciona e se outra equipe consegue repetir.', 'We want money and tools to help fulfill the housing commitment. The first project needs to show whether this works and whether another team can repeat it.'))
     roadmap += '</section><div class="guide-jump">' + text(('Perguntas sobre token, rede e governança ↗',
         'Questions about the token, network and governance ↗'), 'a', 'href="faq.html"')
     roadmap += text(('Whitepaper e premissas ↗', 'Whitepaper and assumptions ↗'), 'a', 'href="whitepaper.html"') + '</div></main>'
     (root / 'roadmap.html').write_text(page('IMOBX | Roadmap', roadmap,
-        '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Roteiro'))
+        '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Roteiro'))
 
     faq_body = '<main class="paper guide-paper" id="main">' + language_controls
     faq_body += text(('Como funciona a proposta IMOBX?', 'How does the IMOBX proposal work?'), 'h1')
@@ -254,11 +303,20 @@ def build_guide(root, page, tr, esc, language_controls):
     faq_body += text(('Dinheiro e transparência', 'Money and transparency'), 'a', 'href="transparency.html"')
     faq_body += text(('Quem participa', 'Who takes part'), 'a', 'href="roadmap.html#participation"') + '</nav>' + faq() + '</main>'
     (root / 'faq.html').write_text(page('IMOBX | Model questions', faq_body,
-        '<script src="assets/site.js" defer></script>', lang='pt-BR', title_pt='IMOBX | Perguntas sobre o modelo'))
+        '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Perguntas sobre o modelo'))
 
     home = root / 'index.html'
+    cards = '<div class="solution-principles">'
+    for item in journey['home_cards']:
+        cards += '<article>' + text(item['title'], 'h3') + text(item['body'])
+        cards += text(item['label'], 'a', f'href="{esc(item["url"])}"') + '</article>'
+    cards += '</div>'
+    home_source, count = re.subn(r'<div class="solution-principles">.*?</div>',
+                                lambda _: cards, home.read_text(), count=1, flags=re.S)
+    if count != 1:
+        raise ValueError('Expected one homepage housing explanation.')
     source, count = re.subn(r'<section class="content wrap scale-section" id="etapas">.*?</section>(?=<section class="content tint" id="digital">)',
-                            lambda _: summary, home.read_text(), count=1, flags=re.S)
+                            lambda _: summary, home_source, count=1, flags=re.S)
     if count != 1:
         raise ValueError('Expected one homepage roadmap before the digital section.')
     source, count = re.subn(r'<div class="faq"(?: id="faq")?>.*?</div>\s*</section>',

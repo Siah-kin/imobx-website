@@ -171,3 +171,18 @@ section.content>p,.section-head p,.money p,.two p{max-width:72ch}
 .construction-photo-grid figcaption{display:flex;gap:12px;padding:14px 0;font-size:14px;line-height:1.6;color:var(--muted)}
 .photo-number{font-size:12px;font-variant-numeric:tabular-nums;flex:none;padding-top:2px;color:var(--orange)}
 @media(max-width:600px){.construction-photo-grid{grid-template-columns:1fr;gap:22px}}
+
+/* Long reference tables scroll within the reading column on small screens. */
+.reference-page section{padding-block:28px;border-bottom:1px solid var(--line)}
+.reference-page section>h2{margin-top:0}
+.reference-page .guide-table{max-width:100%;overflow-x:auto}
+.reference-page table{min-width:620px}
+.reference-page td{vertical-align:top}
+.reference-chapters{padding-left:26px}
+.reference-chapters>li{padding-block:14px}
+.reference-chapters h3{font-size:20px;margin:0 0 10px}
+.reference-page [id]{scroll-margin-top:24px}
+.reference-page a{overflow-wrap:anywhere}
+.reference-page #sources li{margin-bottom:22px}
+.reference-page #sources li p{margin-top:6px}
+@media print{.reference-page .guide-table{overflow:visible}.reference-page table{min-width:0;font-size:10px}}

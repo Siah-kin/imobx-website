@@ -1,0 +1,242 @@
+{
+  "contact": {
+    "email": "",
+    "telegram": ""
+  },
+  "routes": [
+    {
+      "id": "resident",
+      "title": [
+        "Procuro uma moradia",
+        "I am looking for a home"
+      ],
+      "description": [
+        "Converse sobre suas necessidades e o caminho até a compra.",
+        "Discuss your needs and a path to home ownership."
+      ],
+      "context": [
+        "Conte onde precisa morar e quais condições de aluguel e compra procura. O preço, a prestação e o prazo da primeira moradia ainda não estão definidos. Esta apresentação serve para uma conversa; não há reserva de casa nem aprovação de cadastro.",
+        "Tell us where you need to live and what rental and purchase terms you are looking for. The first home’s price, monthly payment and purchase period have not been set. This introduction prepares a conversation; it does not reserve a home or approve an application."
+      ],
+      "fields": [
+        {
+          "id": "city",
+          "label": [
+            "Em qual cidade ou região você procura moradia?",
+            "In which city or area are you looking for a home?"
+          ],
+          "required": true
+        },
+        {
+          "id": "needs",
+          "label": [
+            "O que uma moradia precisaria oferecer à sua família?",
+            "What would a home need to provide for your household?"
+          ],
+          "multiline": true,
+          "required": true
+        }
+      ],
+      "reading_url": "rent-to-own.html#payments",
+      "reading_label": [
+        "Pagamentos, reparos e compra da casa",
+        "Payments, repairs and buying the home"
+      ]
+    },
+    {
+      "id": "property",
+      "title": [
+        "Tenho um imóvel ou terreno",
+        "I have a property or land"
+      ],
+      "description": [
+        "Apresente um imóvel e a forma de participação que considera.",
+        "Introduce a property and the arrangement you would consider."
+      ],
+      "context": [
+        "Informe a região, o estado do imóvel e se considera doação, locação ou venda. Isso permite discutir uma avaliação do local e um orçamento. Um acordo posterior precisaria definir uso, obras, despesas e eventual transferência.",
+        "Describe the area, property condition and whether donation, lease or sale is being considered. This allows a site assessment and budget to be discussed. A later agreement would define use, works, expenses and any transfer."
+      ],
+      "fields": [
+        {
+          "id": "area",
+          "label": [
+            "Cidade, tipo de imóvel e sua relação com ele",
+            "City, property type and your relationship to it"
+          ],
+          "required": true
+        },
+        {
+          "id": "arrangement",
+          "label": [
+            "Que acordo você consideraria: aluguel, venda, doação ou moradia com opção de compra?",
+            "What arrangement would you consider: lease, sale, donation or rent-to-own?"
+          ],
+          "multiline": true,
+          "required": true
+        }
+      ],
+      "reading_url": "rent-to-own.html#property",
+      "reading_label": [
+        "Como um imóvel poderia entrar no projeto",
+        "How a property could enter the project"
+      ]
+    },
+    {
+      "id": "professional",
+      "title": [
+        "Ofereço trabalho ou serviços",
+        "I offer work or services"
+      ],
+      "description": [
+        "Construção, materiais, serviços jurídicos, contabilidade ou apoio técnico.",
+        "Construction, materials, legal advice, accounting or technical support."
+      ],
+      "context": [
+        "Descreva seu serviço, região e experiência. Um trabalho de construção, revisão jurídica ou contabilidade teria escopo, preço, prazo e uma pessoa responsável pela aceitação. Esta apresentação não confirma contratação.",
+        "Describe your service, area and experience. Construction, legal review or accounting work would have an agreed scope, price, deadline and person accepting delivery. This introduction does not confirm an appointment."
+      ],
+      "fields": [
+        {
+          "id": "service",
+          "label": [
+            "Qual serviço você oferece e em qual região?",
+            "What service do you offer, and in which area?"
+          ],
+          "required": true
+        },
+        {
+          "id": "experience",
+          "label": [
+            "Experiência relevante e referências públicas, se houver",
+            "Relevant experience and public references, if available"
+          ],
+          "multiline": true,
+          "required": true
+        }
+      ],
+      "reading_url": "devsheet.html#2-housing-designs-and-building-costs",
+      "reading_label": [
+        "Projetos e processo de construção · guia em inglês",
+        "Designs and construction process · English guide"
+      ]
+    },
+    {
+      "id": "organisation",
+      "title": [
+        "Represento uma organização",
+        "I represent an organisation"
+      ],
+      "description": [
+        "Associações, entidades beneficentes e grupos locais.",
+        "Associations, charities and local groups."
+      ],
+      "context": [
+        "Uma associação pode apresentar necessidades de moradia, um imóvel ou uma rede de participantes. A conversa pode resultar na avaliação de um projeto específico, com responsabilidades e financiamento próprios. Nenhuma parceria é confirmada por esta apresentação.",
+        "An association can introduce housing needs, a property or a participant network. A conversation can lead to assessing a specific project with its own responsibilities and funding. This introduction does not confirm a partnership."
+      ],
+      "fields": [
+        {
+          "id": "organisation",
+          "label": [
+            "Organização, local de atuação e sua função",
+            "Organisation, location and your role"
+          ],
+          "required": true
+        },
+        {
+          "id": "proposal",
+          "label": [
+            "Que necessidade ou possibilidade de colaboração você gostaria de discutir?",
+            "What need or opportunity to work together would you like to discuss?"
+          ],
+          "multiline": true,
+          "required": true
+        }
+      ],
+      "reading_url": "rent-to-own.html#property",
+      "reading_label": [
+        "Possíveis contribuições de uma organização",
+        "How an organization could contribute"
+      ]
+    },
+    {
+      "id": "funding",
+      "title": [
+        "Quero apoiar o financiamento",
+        "I would like to discuss funding"
+      ],
+      "description": [
+        "Doações, editais, crédito ou uma conversa sobre investimento.",
+        "Donations, grants, lending or an investment conversation."
+      ],
+      "context": [
+        "Diga se considera doação, edital, empréstimo ou investimento e quais documentos precisa analisar. Construção, manutenção e divulgação têm finalidades e orçamentos distintos. O modelo do token ainda não foi escolhido; esta página não recebe dinheiro nem aceita compras.",
+        "Say whether you are considering a donation, grant, loan or investment and what documents you need to review. Construction, maintenance and outreach have distinct purposes and budgets. The token model has not been chosen; this page receives no money and accepts no purchases."
+      ],
+      "fields": [
+        {
+          "id": "support",
+          "label": [
+            "Que tipo de apoio você gostaria de discutir?",
+            "What type of support would you like to discuss?"
+          ],
+          "required": true
+        },
+        {
+          "id": "purpose",
+          "label": [
+            "Qual parte do projeto interessa a você e quais informações precisa conhecer?",
+            "Which part of the project interests you, and what information would you need?"
+          ],
+          "multiline": true,
+          "required": true
+        }
+      ],
+      "reading_url": "transparency.html#community-economy",
+      "reading_label": [
+        "Como os recursos seriam usados",
+        "How funding would be used"
+      ]
+    },
+    {
+      "id": "community",
+      "title": [
+        "Quero contribuir com a comunidade",
+        "I would like to help the community"
+      ],
+      "description": [
+        "Divulgação, moderação, tradução e apoio aos participantes.",
+        "Outreach, moderation, translation and participant support."
+      ],
+      "context": [
+        "Explique como gostaria de ajudar: tradução, moderação, comunicação ou apoio a participantes. Uma tarefa remunerada teria uma entrega combinada, orçamento e revisão antes do pagamento. Ainda não há uma oferta de trabalho ou de recompensas nesta página.",
+        "Explain how you would like to help: translation, moderation, communication or participant support. Paid work would have an agreed deliverable, budget and review before payment. This page does not yet offer a job or rewards."
+      ],
+      "fields": [
+        {
+          "id": "contribution",
+          "label": [
+            "Como gostaria de contribuir?",
+            "How would you like to contribute?"
+          ],
+          "required": true
+        },
+        {
+          "id": "availability",
+          "label": [
+            "Idiomas, experiência e disponibilidade",
+            "Languages, experience and availability"
+          ],
+          "multiline": true,
+          "required": true
+        }
+      ],
+      "reading_url": "transparency.html#campaign-work",
+      "reading_label": [
+        "Como um trabalho de divulgação seria pago",
+        "How outreach work would be paid"
+      ]
+    }
+  ]
+}
