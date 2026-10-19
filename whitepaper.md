@@ -2,15 +2,15 @@
 
 ## A documented rent-to-own housing model for Rio
 
-**Project paper v0.6 · 17 October 2026 · Project proposal**
+**Project paper v0.7 · 19 October 2026 · Project proposal**
 
 IMOBX wants to help families rent a home and follow a clear path to buying it. We are preparing a first housing project in Rio de Janeiro. The plan brings together local building work, written agreements, maintenance and accounts people can check.
 
 Rafael brings construction experience and knowledge of local conditions. John works on community communication and digital tools. Their responsibilities and IMOBX’s legal form still need to be agreed in writing.
 
-Under the proposed arrangement, a household would live in the home and make monthly payments in reais. The agreement would record the amount credited towards the purchase and the remaining agreed price. Ownership of the whole home would pass to the household once the purchase conditions and property transfer are completed. IMOBX would then stop receiving rent from that home.
+A family would rent the home and make monthly payments in reais. The agreement would record the amount credited towards the purchase and the remaining agreed price. Ownership of the whole home would pass to the household once the purchase conditions and property transfer are completed. IMOBX would then stop receiving rent from that home.
 
-The household purchase price, monthly payment, purchase credit and payment period have not been set for the first project. The [household explanation](rent-to-own.html) covers the proposed payments, repairs, decisions and exit questions in Portuguese and English. The [dated project reference](reference.html) identifies sources and current responsibilities; its [chapter map](reference.html#chapters) connects the available material to Rafael’s longer manuscript.
+For the first project, the home’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying the home also remains to be agreed. The [household explanation](rent-to-own.html) covers the proposed payments, repairs, decisions and exit questions in Portuguese and English. The [dated project reference](reference.html) identifies sources and current responsibilities; its [chapter map](reference.html#chapters) connects the available material to Rafael’s longer manuscript.
 
 ## 1. Who the pilot is for
 
@@ -20,11 +20,11 @@ Housing problems exist worldwide. In Brazil, favelas and urban communities have 
 
 ### How a household would move from renting to owning
 
-The proposed arrangement has three steps. First, IMOBX and the household agree the home, purchase price, monthly payment and amount credited towards purchase. Then each payment updates the household’s purchase record. Finally, once the purchase conditions are met, the required documents and registration transfer the whole home to the household.
+A family would take three steps towards owning the home. First, IMOBX and the household agree the home, purchase price, monthly payment and amount credited towards purchase. Then each payment updates the household’s purchase record. Finally, once the purchase conditions are met, the required documents and registration transfer the whole home to the household.
 
-The purchase record would distinguish money paid from purchase credit: only the agreed credit reduces the amount still owed for the home. The credit is part of the same payment, not extra income available to IMOBX. Neither the village construction budget nor the separate two-loft contract is an announced sale price for a household.
+The purchase record would show the total paid and the part of that money that counts towards buying the home. Only that agreed part reduces the price still owed. It is part of the same payment, not extra income for IMOBX. Neither the village construction budget nor the separate two-loft contract is an announced sale price for a household.
 
-Repair charges, late payments, temporary hardship and leaving the arrangement need their own agreed terms. No refund formula or grace period has been selected. A household would need to know how previous purchase credit is treated if it leaves or IMOBX cannot continue. These are open terms of the first offer, not decisions already made on the household’s behalf. [Payments and transfer](rent-to-own.html#payments); [hardship and leaving](rent-to-own.html#hardship).
+Repair charges, late payments, temporary hardship and leaving the arrangement need their own agreed terms. No refund formula or grace period has been selected. A household would need to know how amounts previously counted towards buying the home is treated if it leaves or IMOBX cannot continue. These are open terms of the first offer, not decisions already made on the household’s behalf. [Payments and transfer](rent-to-own.html#payments); [hardship and leaving](rent-to-own.html#hardship).
 
 <div class="pagebreak"></div>
 
@@ -36,7 +36,7 @@ A property might be donated, leased, sold or made available under another agreem
 
 July’s discussions considered a foreign organization holding Brazilian property. Receita Federal confirms that such an organization needs a CNPJ, Brazil’s business tax registration. Registration, property ownership and acceptance by a bank or exchange are separate matters. IMOBX’s chosen legal form and any received properties still need documents. [Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/solicitacao-de-atos-perante-o-cnpj-por-meio-da-internet/orientacoes-para-pessoa-juridica-domiciliada-no-exterior).
 
-Rafael’s building company is a possible contractor. Its catalogue can show experience when completed work and permission to publish it are checked. A founder linked to a builder should not approve that builder’s own bill: price, profit, changes and delivery need checks by someone else.
+Rafael’s building company is a possible contractor. Its catalogue can show experience when completed work and permission to publish it are checked. If a founder is connected to a builder, that founder should not approve the builder’s bill. Someone else needs to check the price, profit, changes and completed work.
 
 ### Rafael's village vision, 30 November 2025
 
@@ -65,7 +65,7 @@ These are Rafael’s project figures, not a finished-home price published by a c
 
 ### The separate two-loft case
 
-On 20 January 2026, Rafael reported a signed contract for two lofts on a steep site, waiting for the first deposit. The owner clarified that **US$27,777 covers both lofts together**: US$13,888.50 each by division. We still need the included work, current progress and final costs. This is separate from the village budget. [Drawings and photos](properties.html#estudo-lofts).
+On 20 January 2026, Rafael reported a signed contract for two lofts on a steep site, waiting for the first deposit. The construction figure is **US$27,777 for both lofts together**: US$13,888.50 each by division. We still need the included work, current progress and final costs. This is separate from the village budget. [Drawings and photos](properties.html#estudo-lofts).
 
 The first project’s payment amount and purchase term remain to be agreed. Each family’s agreement needs affordable payments in reais and clear rules for price changes.
 
@@ -82,7 +82,7 @@ The proposed order is:
 1. Record the money actually received.
 2. Set aside taxes and amounts promised for a specific purpose.
 3. Pay agreed property, maintenance and administration bills.
-4. Keep money for repairs, empty homes, resident commitments and unexpected costs.
+4. Keep money for repairs, empty homes, promises made to families and unexpected costs.
 5. Fund new homes under the agreed budget.
 6. Consider investor payments only if money remains and a valid agreement allows them.
 
@@ -102,7 +102,7 @@ The construction budget needs committed funding. A token’s market value does n
 
 ## 6. What self-sufficiency means
 
-IMOBX would support its existing operation when recurring income covers its regular bills, repairs and commitments to families. Building more homes needs additional money. These are two separate tests.
+IMOBX would support its existing operation when recurring income covers its regular bills, repairs and the cost of keeping promises to families. Building more homes needs additional money. These are two separate tests.
 
 When a family becomes the owner, IMOBX stops receiving rent from that home. Forecasts must show how income continues afterward. Any ongoing service charge needs a real service, an affordable price and terms the resident agreed to.
 
@@ -118,14 +118,14 @@ Ostrom studied how people manage shared resources. We want to apply useful lesso
 |---|---|
 | Families | Affordable payments, repairs and a written path to owning the whole home. |
 | Property contributors | Clear donation, sale or lease terms and responsibility for debts and transfer costs. |
-| Builders and suppliers | Agreed work, price, payment dates and independent delivery checks. |
+| Builders and suppliers | Agreed work, price, payment dates and independent checks of the completed work. |
 | Staff and resident representatives | Clear powers, spending limits, appointment, reporting and replacement. |
 | Donors and social funders | Agreed use of funds and evidence of housing results. |
-| Possible investors | Written claims, costs, losses, decision rights and exit terms. |
+| Possible investors | Written rights explaining what investors could receive, costs, possible losses, decision powers and how they could sell or leave. |
 | Neighbours | A voice on local impacts, services and access. |
 | Independent checkers | Access and authority to review property, safety, accounts and agreements. |
 
-For example, residents could agree study-room hours, courtyard use and the order of shared-space repairs. One option under discussion is one vote per member on these matters, with representatives who can be replaced. People handling maintenance would act within an agreed budget; someone else would check the work and bill. A disputed charge would have a review route.
+For example, residents could agree study-room hours, courtyard use and the order of shared-space repairs. One option under discussion is one vote per member on these matters, with representatives who can be replaced. People handling maintenance would act within an agreed budget; someone else would check the work and bill. A resident who disagrees with a charge would have a way to ask for it to be checked.
 
 Buying an investment token would not buy control over another household’s purchase agreement. Participation in resident decisions would be independent of investment, promotional work and online activity points. The voting procedure, spending limits, repair responsibilities and review process remain to be developed with participants. [Resident decisions and repairs](rent-to-own.html#decisions); [cooperative principles](https://ica.coop/en/cooperatives/cooperative-identity); [decision examples](roadmap.html#governance).
 
@@ -133,22 +133,22 @@ Buying an investment token would not buy control over another household’s purc
 
 ## 8. What a token could represent
 
-The motivation includes financing IMOBX’s operations, branding and outreach, with a community helping introduce the housing project to partners and supporters. In a direct token issue, buyers would pay the issuing organization, which would use the proceeds under the agreed funding terms. What buyers would receive has not been chosen. A later sale between holders normally pays the seller; any fee received by IMOBX would be recorded separately.
+The motivation includes financing IMOBX’s operations, branding and outreach, with a community helping introduce the housing project to partners and supporters. When investors buy new tokens, they would pay the organisation that creates and sells them. That organisation would use the money under the agreed funding terms. What buyers would receive has not been chosen. A later sale between holders normally pays the seller; any fee received by IMOBX would be recorded separately.
 
 Four paths remain under study:
 
 | Path | What a participant would receive | Main decision still open |
 |---|---|---|
-| A. No IMOBX token | A housing agreement or payment for accepted work. | Funding sources, campaign budget and work-review rules. |
+| A. No IMOBX token | A housing agreement, or payment for completed work that meets the agreement. | Funding sources, campaign budget and work-review rules. |
 | B. Service or membership benefit | A specific service or discount under stated terms. | The service, who funds discounts and any separately funded buyback. |
-| C. Fee participation | A defined claim on fees actually received, where permitted. | Issuer, claim, costs, restrictions, losses and offering route. |
-| D. Investment in the operation | Tokenised shares or another defined investment claim. | Entity, included assets and debts, investor rights and offering route. |
+| C. Share of collected fees | A written right to receive part of the fees actually collected, if legally permitted. | Who would create the token, what buyers could receive, costs, restrictions, losses and the legal process for selling it. |
+| D. Investment in the operation | Shares recorded as tokens, or another written right stating what the investor could receive. | The organisation responsible, the property and debts included, investor rights and the legal process for selling the investment. |
 
 These paths give different rights. A buyback pays a seller; burning the purchased tokens does not automatically pay remaining holders. Dividend rights require their own structure. Reinvesting income, sometimes called compounding, requires money actually received and a rule explaining its use. Locking tokens, called staking, does not create that income.
 
-The proposed outreach programme would issue work briefs, accept submissions and pay for approved delivery from an already funded budget. A community tool could show the brief, reviewer decision and payment status. Housing rights and residents’ voice would remain independent of this programme.
+The outreach programme would set out tasks in writing, check the work submitted and pay for work that meets the agreement from money already set aside. A community tool could show the task, who checked the work and whether it had been paid for. Housing rights and residents’ voice would remain independent of this programme.
 
-Any later profit or rental-income payments would depend on the chosen agreement, eligible income and money available after its stated obligations. A 10–15-year aspiration is not a distribution timetable. Funding receipts, trading receipts and operating income need separate accounting.
+Any later payments of profits or rental income would depend on the chosen agreement. It would need to say which income may be paid to investors and which bills and promises must be covered first. No date has been agreed for payments of profits or rental income to token holders. Money raised from funders, fees collected from token trading and income from running the homes need separate records.
 
 We want each family to be able to own its **whole home**. Sharing purchasing and administration across projects could save work. The proposal does not split every house between token buyers. A possible investment linked to IMOBX or several projects would need to state which properties, debts, income and shared risks it includes.
 
@@ -182,19 +182,19 @@ Families would pay in reais. IMOBX would keep money for Brazilian bills and use 
 
 ## 10. Pilot roadmap and evidence
 
-The [roadmap](roadmap.html#stages) follows six stages: legal structure and property, resident participation, first homes, a transparent treasury, funding and account review, and further projects. Each stage identifies its proposed responsible roles, dependencies and evidence needed to proceed. Construction dates depend on the chosen project, funding and permissions. Legal preparation, resident discussions and digital trials can progress alongside one another.
+The [roadmap](roadmap.html#stages) follows six stages: legal structure and property, resident participation, first homes, payment records people can check, funding and account review, and further projects. Each stage explains who would do the work, what must happen first and which records are needed before it can proceed. Construction dates depend on the chosen project, funding and permissions. Legal preparation, resident discussions and digital trials can progress alongside one another.
 
 After families move in, follow at least three months before reviewing expansion. A second local team should be able to repeat the work. The website can report real progress and accounts before any token exists. A later purchase screen would follow agreed rights and a checked legal and payment route.
 
 | What to follow | What to show |
 |---|---|
-| Homes and agreements | Written property authority and a signed family agreement before moving in. |
+| Homes and agreements | Written proof of the right to use the property and a signed family agreement before moving in. |
 | Building | What was delivered, actual cost and any delay. |
-| Money | Monthly checks of every receipt, payment and amount set aside. |
+| Money | Monthly checks of all money received, paid and set aside. |
 | Families | Repair requests, unresolved issues, participation and purchase progress. |
 | Continuing the project | Bills covered during low trading and funding for the next homes. |
 
-Service targets depend on the first project’s needs and resident participation. An unresolved property right, funding gap or unsafe building would prevent the affected stage from proceeding. Expansion requires evidence that existing commitments remain funded. Token prices and holder counts do not measure how well a family is housed.
+Service targets depend on the first project’s needs and resident participation. An unresolved property right, funding gap or unsafe building would prevent the affected stage from proceeding. Expansion requires evidence that there is enough money for promises already made. Token prices and holder counts do not measure how well a family is housed.
 
 ## 11. Partner participation
 
@@ -204,16 +204,18 @@ Receiving contacts are not yet available. Visitors can prepare and copy an intro
 
 A possible partnership would combine IMOBX as project organiser, OLYMPUS as a contracted builder and a community or charitable organisation as a property or local partner. A financing partner could support an agreed project budget. These are proposed relationships, with no partner agreement or funding commitment established here. A property visit could produce a condition assessment and a costed next step.
 
-Builders, legal advisers and accountants would review their own areas. Families would help shape the service before rules are fixed. A founder-linked contractor requires independent price comparison, contract approval and delivery inspection. [People and appointment status](reference.html#people).
+Builders, legal advisers and accountants would review their own areas. Families would help shape the service before rules are fixed. If a builder is connected to an IMOBX founder, other people must compare prices, approve the contract and inspect the completed work. [People and appointment status](reference.html#people).
 
-## 12. Risks, decisions and evidence register
+<div id="12-risks-decisions-and-evidence-register"></div>
+
+## 12. Risks and what still needs checking
 
 Rafael supplied the November budget and January two-loft account. Their dates and different purposes matter. Designs show intended buildings, not completed homes. No number of donated properties or received funding is confirmed here.
 
 The legal registration, property documents, permissions and signed agreements need checking for the chosen project. The researched payment services do not establish a working IMOBX connection. Resident voting, reinvestment and token rights remain decisions to agree.
 
-The public [risk register](reference.html#risks) identifies construction, household, cash, offering and software risks, with reviewing roles still to be appointed. The complete financial model remains a deliverable: it needs site costs in reais, affordable payments, repair and delay scenarios, and zero token-trading income. This paper does not establish financial break-even or national scalability.
+The public [risk list](reference.html#risks) identifies construction, household, cash, offering and software risks, with reviewing roles still to be appointed. The complete financial model is not ready yet: it needs site costs in reais, affordable payments, repair and delay scenarios, and zero token-trading income. This paper does not show that income would cover all costs or that the project could work across Brazil.
 
-CVM is Brazil’s securities-market regulator. Its Resolution 249 creates an experimental DLT programme. Article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in those tests; it does not authorise a public offering. The project’s legal form and any fundraising route need their own review. [CVM Resolution 249](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm).
+CVM is Brazil’s securities-market regulator. Its Resolution 249 creates an experimental DLT programme. Article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in those tests; it does not authorise a public offering. The project’s legal form and any way to raise the money need their own review. [CVM Resolution 249](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm).
 
-Project updates would show agreements signed, funding received and work completed, alongside open questions and responsible roles. The [source register](reference.html#sources) states which claim each source supports. The [version record](reference.html#versions) identifies this edition for citation; private household documents stay unpublished.
+Project updates would show agreements signed, funding received and work completed, alongside open questions and responsible roles. The [source list](reference.html#sources) shows which statement each source supports. The [version record](reference.html#versions) identifies this edition for citation; private household documents stay unpublished.

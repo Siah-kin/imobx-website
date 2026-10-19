@@ -1,18 +1,18 @@
 # A IMOBX prepara moradias com um caminho até a compra.
 
-**v0.6 · 2026-10-17**
+**v0.7 · 2026-10-19**
 
-Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 17 de outubro de 2026.
+Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 19 de outubro de 2026.
 
 ## O que existe hoje?
 
-A proposta combina aluguel com opção de compra, construção local e contas que os participantes possam conferir. Cada família teria um caminho contratual até a propriedade da casa inteira. O valor das parcelas e o prazo do primeiro projeto ainda não estão definidos.
+A proposta combina aluguel com opção de compra, construção local e contas que os participantes possam conferir. Cada família teria um contrato que explicasse como poderia se tornar dona da casa inteira. O valor das parcelas e o prazo do primeiro projeto ainda não estão definidos.
 
-| Material | O que oferece | Situação em 17/10/2026 |
+| Material | O que oferece | Situação em 19/10/2026 |
 | --- | --- | --- |
-| Whitepaper | Explicação do modelo, custos e riscos. | Rascunho de referência em inglês, v0.5. O texto de cerca de 30 páginas de Rafael está em preparação. |
-| Apresentação | Resumo para conversas com parceiros, com notas de apresentação. | 12 slides em inglês, v0.5. |
-| Guia de trabalho (devsheet) | Como pedidos, obras e pagamentos seriam acompanhados. | Rascunho em inglês, v0.5. Descreve o processo proposto. |
+| Whitepaper | Explicação do modelo, custos e riscos. | Rascunho de referência em inglês, v0.7. O texto de cerca de 30 páginas de Rafael está em preparação. |
+| Apresentação | Resumo para conversas com parceiros, com notas de apresentação. | 12 slides em inglês, v0.7. |
+| Guia do piloto e da construção | Como pedidos, obras e pagamentos seriam acompanhados. | Rascunho em inglês, v0.7. Descreve o processo proposto. |
 | Roteiro | Etapas, funções responsáveis e condições para avançar. | PT/EN. Datas de obra dependem dos projetos e de seus recursos. |
 | Desenhos e fotos | Visão da comunidade, modelos dos lofts e imagens fornecidas. | Ilustrações e fotos têm legendas. Não comprovam entrega de moradias pela IMOBX. |
 | Operação e pagamentos | Plano de contratos, participação e acompanhamento do dinheiro. | A operação completa, a transferência de imóveis e uma tesouraria IMOBX funcionando na blockchain ainda não estão demonstradas nesta referência. |
@@ -25,7 +25,7 @@ A proposta combina aluguel com opção de compra, construção local e contas qu
 
 Rafael forneceu os cálculos e a proposta da comunidade em 30 de novembro de 2025. O orçamento por casa de 45 m² soma terreno US$5,550, construção US$18,600, solar US$1,500, infraestrutura compartilhada US$1,500 e projeto e trabalho jurídico US$627. Total: US$27,777 por casa. Para 36 casas: US$999,972, com execução proposta em 12 meses.
 
-Em 20 de janeiro de 2026, Rafael relatou um contrato de US$27,777 para dois lofts juntos, aguardando o primeiro depósito naquela data. A divisão dá US$13,888.50 por loft. Esse contrato tem outro escopo. Não substitui o orçamento da comunidade. O andamento atual e os custos finais precisam de documentos próprios.
+Em 20 de janeiro de 2026, Rafael relatou um contrato de US$27,777 para dois lofts juntos, aguardando o primeiro depósito naquela data. A divisão dá US$13,888.50 por loft. Esse contrato cobre outros serviços de construção. Não substitui o orçamento da comunidade. O andamento atual e os custos finais precisam de documentos próprios.
 
 A origem desses números é a informação fornecida pelo fundador. CUB e SINAPI são referências de custo usadas no cálculo. Não publicaram esse preço de casa pronta. O orçamento do terreno escolhido, em reais, terá data e itens incluídos. As mensagens de origem não são publicadas com dados pessoais. Os resumos abaixo permitem localizar cada caso.
 
@@ -37,7 +37,7 @@ A origem desses números é a informação fornecida pelo fundador. CUB e SINAPI
 
 Um morador relata uma infiltração. A pessoa responsável pela manutenção avalia o problema e obtém um orçamento. O gasto segue os limites de aprovação combinados. Outra pessoa confere o conserto, e o pagamento fica ligado ao comprovante. O morador pode pedir revisão. Se alguém deixar a função, quem assumir encontra as pendências e os valores aprovados.
 
-O mesmo método se aplica a obras e fornecedores. Uma construtora ligada a um fundador precisa declarar essa relação. Outras pessoas comparam o preço, aprovam o contrato e conferem a entrega. A divulgação do vínculo, sozinha, não resolve o conflito de interesse.
+O mesmo método se aplica a obras e fornecedores. Uma construtora ligada a um fundador precisa declarar essa relação. Outras pessoas comparam o preço, aprovam o contrato e conferem se o serviço foi feito como combinado. A divulgação do vínculo, sozinha, não resolve o conflito de interesse.
 
 [Guia do processo de trabalho](https://siah-kin.github.io/imobx-website/devsheet.html#6-records-payments-and-support)
 
@@ -50,7 +50,7 @@ O mesmo método se aplica a obras e fornecedores. Uma construtora ligada a um fu
 | Rafael Britto | Conhecimento da obra, orçamento e articulação local. | Fundador. Responsabilidades formais ainda por documentar. Qualificações profissionais precisam de referências publicáveis. |
 | John | Comunicação, documentação e coordenação das ferramentas digitais. | Participação na preparação. Poderes de gasto ou representação ainda não atribuídos nesta referência. |
 | IMOBX | Organização do projeto, contratos e acompanhamento das contas. | A forma jurídica e os representantes legais estão em definição. |
-| OLYMPUS | Possível construtora contratada, ligada a Rafael. | Contratação depende de escopo, comparação de preço e aprovação independente. |
+| OLYMPUS | Possível construtora contratada, ligada a Rafael. | Contratação depende dos serviços combinados, da comparação de preços e da aprovação por alguém independente da construtora. |
 | Moradores | Condições de moradia e participação nos assuntos comuns. | Voz proposta sem comprar tokens. Representantes e regras serão discutidos com os participantes. |
 | Parceiro comunitário ou beneficente | Possível acesso a imóvel, famílias ou financiadores. | Cenário de parceria em discussão. Nenhum acordo ou endosso confirmado nesta referência. |
 | Assessoria jurídica, contabilidade e conferência da obra | Revisão dos contratos, contas e segurança. | Profissionais responsáveis ainda não identificados nesta referência. |
@@ -58,18 +58,18 @@ O mesmo método se aplica a obras e fornecedores. Uma construtora ligada a um fu
 
 ## Para que serviria o token e quem receberia o dinheiro?
 
-Doações, editais, receitas de serviços e um investimento permitido são possibilidades. Também estudamos um token para financiar a operação e a divulgação. Numa emissão direta, o comprador pagaria à organização emissora; numa revenda entre investidores, o valor normalmente vai ao vendedor. Uma taxa recebida pela IMOBX seria registrada separadamente.
+Doações, editais, receitas de serviços e um investimento que a organização escolhida possa oferecer legalmente são possibilidades. Também estudamos um token para financiar a operação e a divulgação. Ao comprar tokens novos, o comprador pagaria à organização que os cria e vende. Ao comprar de outro investidor, o dinheiro normalmente vai para esse vendedor. Uma taxa recebida pela IMOBX seria registrada separadamente.
 
-Um divulgador ou moderador recebe uma tarefa e apresenta o trabalho. Um revisor compara a entrega com o combinado antes de aprovar o pagamento. O orçamento precisa ter recursos para os pagamentos prometidos. Relações remuneradas precisam ser informadas ao público.
+Um divulgador ou moderador receberia uma tarefa por escrito e apresentaria o trabalho pronto. Outra pessoa conferiria se o resultado está de acordo com o combinado antes de aprovar o pagamento. O orçamento precisa ter dinheiro para os pagamentos prometidos. Quem recebe para divulgar o projeto deve informar isso ao público.
 
-Pagar por trabalho aceito difere de pagar pelo simples investimento. Os serviços de divulgação precisam respeitar as regras de cada canal e informar a remuneração. Promessas de retorno, distribuição de taxas ou de lucros precisam de análise jurídica própria. Chamar um token de utilidade ou governança não define seu tratamento legal.
+Pagar alguém por um serviço feito como combinado é diferente de pagar renda porque essa pessoa investiu dinheiro. A divulgação precisa seguir as regras de cada canal e informar quando é paga. Promessas de retorno, pagamentos de taxas ou de lucros precisam de análise jurídica própria. Chamar um token de utilidade ou governança não define seu tratamento legal.
 
 | Caminho em estudo | O que alguém receberia | O que falta resolver |
 | --- | --- | --- |
-| A. Piloto e divulgação sem token próprio | Moradia por contrato. Trabalho de divulgação pago por entrega aceita. | Fontes de recursos, orçamento, participantes e regras de pagamento. |
+| A. Piloto e divulgação sem token próprio | Moradia por contrato. Pagamento pela divulgação após conferir se o trabalho foi feito como combinado. | Fontes de recursos, orçamento, participantes e regras de pagamento. |
 | B. Acesso a um serviço ou benefício | Um serviço concreto ou desconto definido. Possível recompra seria uma regra separada. | Serviço disponível, preço, quem paga o desconto e eventual recompra. Queimar tokens não paga dividendos automaticamente. |
-| C. Participação em taxas | Direito definido a parte das taxas realmente recebidas, se a estrutura permitir. | Emissor, direitos, custos, perdas, restrições e caminho permitido de oferta. A negociação pode gerar receita zero. |
-| D. Investimento na operação | Ações representadas por tokens ou outro direito de investimento definido. Distribuições dependeriam do acordo e de recursos disponíveis. | Entidade adequada, ativos e dívidas incluídos, direitos, impostos e oferta. Eventual renda de imóveis precisa respeitar o destino dos recursos e a transferência das casas às famílias. |
+| C. Parte das taxas recebidas | Direito definido a parte das taxas realmente recebidas, se a estrutura permitir. | Quem criaria o token, direitos do comprador, custos, perdas possíveis, restrições e forma legal de vendê-lo. A negociação pode gerar receita zero. |
+| D. Investimento na operação | Ações representadas por tokens ou outro direito de investimento definido. Os pagamentos a investidores dependeriam do contrato e do dinheiro disponível. | Organização responsável, bens e dívidas incluídos, direitos, impostos e forma legal de oferecer o investimento. Eventual renda de imóveis precisa respeitar o destino dos recursos e a transferência das casas às famílias. |
 
 [Alternativas e direitos do token](https://siah-kin.github.io/imobx-website/whitepaper.html#8-what-a-token-could-represent)
 
@@ -87,7 +87,7 @@ Ostrom estudou como pessoas cuidam de recursos comuns. Na IMOBX, suas perguntas 
 
 ## Como acompanhar um reparo e seu pagamento?
 
-No método proposto, um morador comunica uma infiltração. A pessoa responsável pela manutenção avalia o problema, obtém um orçamento e encaminha o gasto conforme o limite combinado. Outra pessoa confere o conserto antes da aprovação final do pagamento.
+Um morador comunicaria uma infiltração à pessoa responsável pela manutenção. Essa pessoa avaliaria o problema, pediria um orçamento e seguiria o limite de gasto combinado. Outra pessoa conferiria o conserto antes de aprovar o pagamento final.
 
 Arc é a rede de blockchain considerada para pagamentos em USDC, uma moeda digital que busca acompanhar o dólar dos Estados Unidos. O teste proposto mostraria quem autorizou um pequeno pagamento e seu comprovante público. As contas ainda precisam ligar esse pagamento ao gasto real e ao documento bancário. Famílias pagariam em reais e não precisariam de carteira de criptomoedas.
 
@@ -107,13 +107,13 @@ A ferramenta de comunidade organizaria pedidos e entregas. Assistentes de softwa
 
 O dinheiro recebido teria destino registrado. Impostos, custos da operação, manutenção e compromissos com as famílias precisam estar cobertos. O orçamento de divulgação e de novas obras precisa de recursos próprios aprovados. Eventuais pagamentos a investidores dependem da estrutura escolhida e do dinheiro disponível. Quando uma família se torna proprietária, o aluguel daquela casa deixa de entrar para a IMOBX.
 
-O estudo financeiro ainda precisa reunir orçamento em reais, parcelas acessíveis e cenários de atraso, reparos, câmbio e negociação zero do token. O site explica a ordem proposta de uso do dinheiro. Ainda não apresenta um modelo financeiro calibrado que comprove equilíbrio ou expansão nacional.
+O estudo financeiro ainda precisa reunir orçamento em reais, parcelas acessíveis e cenários de atraso, reparos, câmbio e negociação zero do token. O site explica a ordem proposta de uso do dinheiro. Ainda não apresenta um cálculo que mostre se a receita cobriria os custos e permitiria levar o projeto a outras regiões do Brasil.
 
 | Risco | Proteção em estudo | Quem precisa revisar |
 | --- | --- | --- |
-| Imóvel sem autoridade documentada. Obra com custo maior. | Documentos do imóvel, orçamento por local, permissões e conferência independente da entrega. | Assessoria jurídica e profissional da obra. Nomes pendentes. |
+| Falta de documentos comprovando o direito de usar o imóvel. Obra acima do orçamento. | Documentos do imóvel, orçamento por local, permissões e conferência independente da entrega. | Assessoria jurídica e profissional da obra. Nomes pendentes. |
 | Família sem condições de continuar pagando. | Avaliação de capacidade de pagamento e regras de dificuldade, saída e revisão no contrato. | Moradores e responsável pelos contratos. Nome pendente. |
-| Falta de dinheiro ou dependência de negociação do token. | Reservas, recursos comprometidos identificados e cenário com taxas de negociação iguais a zero. | Administração e contador. Nomeações pendentes. |
+| Falta de dinheiro ou dependência de negociação do token. | Dinheiro guardado, lista de contas e compromissos a pagar, e orçamento que não dependa de taxas de negociação. | Administração e contador. Nomeações pendentes. |
 | Oferta ou publicidade de investimento sem caminho permitido. | Revisão dos direitos e países alcançados antes de venda ou campanha paga. | Assessoria jurídica das jurisdições envolvidas. Contratação pendente. |
 | Erro de pagamento, perda de acesso ou falha do software. | Teste com valor pequeno e regras de aprovação, recuperação e resposta a incidentes. | Responsável técnico e revisores independentes. Nomeações pendentes. |
 
@@ -163,7 +163,7 @@ Imóvel, entidade, contrato de uso ou transferência e acordo com a família. A 
 
 ### Economia do imóvel e modelo financeiro
 
-Orçamento de Rafael, escopos distintos e uso proposto do dinheiro. Fluxo financeiro calibrado e cenários ainda em desenvolvimento.
+Orçamento de Rafael, trabalhos diferentes e uso proposto do dinheiro. A previsão do dinheiro que entra e sai, com os custos do projeto escolhido e casos de atraso e reparos, ainda está em desenvolvimento.
 
 [Custos e origem](https://siah-kin.github.io/imobx-website/reference.html#costs)
 
@@ -173,7 +173,7 @@ Orçamento de Rafael, escopos distintos e uso proposto do dinheiro. Fluxo financ
 
 ### Estrutura jurídica
 
-Comparação entre finalidade social e investimento com direitos financeiros. Entidade, assessoria e rota de oferta ainda não selecionadas.
+Comparação entre finalidade social e investimento com direitos financeiros. Entidade, assessoria e forma legal de oferecer o investimento ainda não selecionadas.
 
 [CVM e direitos do token](https://siah-kin.github.io/imobx-website/reference.html#source-cvm40)
 
@@ -225,7 +225,7 @@ Participação atual e funções propostas. Referências profissionais, nomeaç�
 
 ### Conclusão e apêndices
 
-As conclusões devem acompanhar a evidência disponível. Fontes, versões e termos estão reunidos aqui. O modelo financeiro completo permanece uma entrega aberta.
+As conclusões devem acompanhar a evidência disponível. Fontes, versões e termos estão reunidos aqui. O modelo financeiro completo ainda não está pronto.
 
 [Fontes](https://siah-kin.github.io/imobx-website/reference.html#sources)
 
@@ -295,7 +295,7 @@ Exemplo de plataforma de negociação na rede Arc.
 
 ## Uma citação deve identificar a versão e a seção.
 
-Referência para citação: IMOBX, Referência do projeto, v0.6, revisão de 17/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.
+Referência para citação: IMOBX, Referência do projeto, v0.7, revisão de 19/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.
 
 Correções e novas decisões precisam indicar data, quem forneceu a informação, quem aprovou a mudança e a evidência correspondente. Quando houver operação, os relatórios terão período, responsável pelas contas e responsável pela conferência. Valores propostos, contratados, recebidos e gastos serão apresentados separadamente.
 

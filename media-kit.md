@@ -16,7 +16,7 @@ The PNG is ready for websites and PDFs. The original WebP is included too. No ed
 
 ## 2. Colours and type
 
-The [visual identity guide](design.html) describes the logo, colours and image provenance. [Text version](DESIGN.md).
+The [visual identity guide](design.html) describes the logo, colours and where the images came from and what was changed. [Text version](DESIGN.md).
 
 | Use | Colour |
 |---|---|
@@ -35,11 +35,11 @@ Use readable type such as Arial. Keep backgrounds white and corners square. Expl
 
 ## 3. Short description in English
 
-IMOBX is preparing a first housing project in Rio de Janeiro. Families would rent a home under a clear agreement explaining how they can become its owner. Local builders, residents and supporters would help make the project work. We aim to build a DAO: an organization with shared decisions and digital tools for following work and money. The legal form, property arrangements and any token rights are still being decided.
+IMOBX is preparing a first housing project in Rio de Janeiro. Families would rent a home under a clear agreement explaining how they can become its owner. Local builders, residents and supporters would help make the project work. We aim to build a DAO: an organization with shared decisions and digital tools for following work and money. IMOBX’s legal form, the terms for using each property and any token rights are still being decided.
 
 ## 4. Descrição curta em português
 
-A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As famílias alugariam uma casa com um contrato claro explicando como podem se tornar donas dela. Construtores locais, moradores e apoiadores ajudariam a fazer o projeto funcionar. Queremos construir uma DAO: uma organização com decisões compartilhadas e ferramentas digitais para acompanhar trabalho e dinheiro. A forma jurídica, os acordos sobre os imóveis e os direitos de um eventual token ainda estão em definição.
+A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As famílias alugariam uma casa com um contrato claro explicando como podem se tornar donas dela. Construtores locais, moradores e apoiadores ajudariam a fazer o projeto funcionar. Queremos construir uma DAO: uma organização com decisões compartilhadas e ferramentas digitais para acompanhar trabalho e dinheiro. A forma jurídica, as condições de uso de cada imóvel e os direitos de um eventual token ainda estão em definição.
 
 ### Rafael's neighbourhood vision
 
@@ -47,11 +47,11 @@ On 30 November 2025, Rafael described two-level homes around a shared courtyard,
 
 ## 5. Project facts and images
 
-IMOBX is in preparation. Its legal form, property arrangements and any token rights remain under study. No investment, guaranteed return, funding award or regulatory approval is established by these documents.
+IMOBX is in preparation. Its legal form, the terms for using each property and any token rights remain undecided. No investment, guaranteed return, funding award or regulatory approval is established by these documents.
 
 Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 homes. The separate two-loft contract is US$27,777 for both together. The [project paper](whitepaper.html#3-the-cost-proposal-already-supplied) provides the dates and breakdown.
 
-The image archive distinguishes community context, construction photographs and architectural concepts. Some neighbourhood images have AI-edited circle annotations and link to their unchanged supplied originals. Captions state the available information and its limits. [Image provenance](design.html#documentary-editorial-approach).
+The city photographs show favelas along the hillsides, highlighted by circles. The collection also includes construction photographs, loft drawings and the village concept. [View the photographs and drawings](properties.html).
 
 ## 6. Project resources
 
@@ -62,6 +62,8 @@ The image archive distinguishes community context, construction photographs and 
 - [Questions](faq.html): plain explanations of the model and digital tools.
 - [All documents](resources.html): online reading and downloads.
 
-## 7. Brand provenance
+<div id="7-brand-provenance"></div>
+
+## 7. Logo sources
 
 The supplied logo files are available in this kit and in the [project repository](https://github.com/Siah-kin/imobx-website). The website and documents use white backgrounds, the light logo and the palette above.

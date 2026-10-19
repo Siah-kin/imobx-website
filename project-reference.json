@@ -1,13 +1,13 @@
 {
-  "version": "0.6",
-  "reviewed": "2026-10-17",
+  "version": "0.7",
+  "reviewed": "2026-10-19",
   "title": [
     "A IMOBX prepara moradias com um caminho até a compra.",
     "IMOBX is preparing homes with a path to ownership."
   ],
   "intro": [
-    "Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 17 de outubro de 2026.",
-    "This page states the current plan, with Rafael’s figures and links to their sources. It explains who would do each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 17 October 2026."
+    "Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 19 de outubro de 2026.",
+    "This page states the current plan, with Rafael’s figures and links to their sources. It explains who would do each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 19 October 2026."
   ],
   "sections": [
     {
@@ -22,8 +22,8 @@
       ],
       "body": [
         [
-          "A proposta combina aluguel com opção de compra, construção local e contas que os participantes possam conferir. Cada família teria um caminho contratual até a propriedade da casa inteira. O valor das parcelas e o prazo do primeiro projeto ainda não estão definidos.",
-          "The proposal combines rent-to-own agreements, local construction and accounts participants can inspect. Each household would have a contractual path to owning its whole home. Payment amounts and the first project’s purchase term are still open."
+          "A proposta combina aluguel com opção de compra, construção local e contas que os participantes possam conferir. Cada família teria um contrato que explicasse como poderia se tornar dona da casa inteira. O valor das parcelas e o prazo do primeiro projeto ainda não estão definidos.",
+          "The proposal combines rent-to-own agreements, local construction and accounts participants can inspect. Each family would have an agreement explaining how it could become the owner of its whole home. Payment amounts and the first project’s purchase term are still open."
         ]
       ],
       "columns": [
@@ -36,8 +36,8 @@
           "What it provides"
         ],
         [
-          "Situação em 17/10/2026",
-          "Position on 17 October 2026"
+          "Situação em 19/10/2026",
+          "Position on 19 October 2026"
         ]
       ],
       "rows": [
@@ -51,8 +51,8 @@
             "An explanation of the model, costs and risks."
           ],
           [
-            "Rascunho de referência em inglês, v0.5. O texto de cerca de 30 páginas de Rafael está em preparação.",
-            "English reference draft, v0.5. Rafael’s roughly 30-page manuscript is in preparation."
+            "Rascunho de referência em inglês, v0.7. O texto de cerca de 30 páginas de Rafael está em preparação.",
+            "English reference draft, v0.7. Rafael’s roughly 30-page manuscript is in preparation."
           ]
         ],
         [
@@ -65,22 +65,22 @@
             "A partner discussion summary, with presenter notes."
           ],
           [
-            "12 slides em inglês, v0.5.",
-            "12 English slides, v0.5."
+            "12 slides em inglês, v0.7.",
+            "12 English slides, v0.7."
           ]
         ],
         [
           [
-            "Guia de trabalho (devsheet)",
-            "Working guide (devsheet)"
+            "Guia do piloto e da construção",
+            "Pilot and building guide"
           ],
           [
             "Como pedidos, obras e pagamentos seriam acompanhados.",
             "How requests, construction and payments would be followed."
           ],
           [
-            "Rascunho em inglês, v0.5. Descreve o processo proposto.",
-            "English draft, v0.5. Describes the proposed process."
+            "Rascunho em inglês, v0.7. Descreve o processo proposto.",
+            "English draft, v0.7. Describes the proposed process."
           ]
         ],
         [
@@ -159,8 +159,8 @@
           "Rafael supplied the calculations and community proposal on 30 November 2025. His budget for each 45 m² home includes land US$5,550, construction US$18,600, solar US$1,500, shared infrastructure US$1,500, and design and legal work US$627. Total: US$27,777 per home. For 36 homes: US$999,972, with a proposed 12-month build."
         ],
         [
-          "Em 20 de janeiro de 2026, Rafael relatou um contrato de US$27,777 para dois lofts juntos, aguardando o primeiro depósito naquela data. A divisão dá US$13,888.50 por loft. Esse contrato tem outro escopo. Não substitui o orçamento da comunidade. O andamento atual e os custos finais precisam de documentos próprios.",
-          "On 20 January 2026, Rafael reported a US$27,777 contract for both lofts together, awaiting the first deposit at that date. Division gives US$13,888.50 per loft. That contract has a different scope. It does not replace the community budget. Current progress and final costs need their own documents."
+          "Em 20 de janeiro de 2026, Rafael relatou um contrato de US$27,777 para dois lofts juntos, aguardando o primeiro depósito naquela data. A divisão dá US$13,888.50 por loft. Esse contrato cobre outros serviços de construção. Não substitui o orçamento da comunidade. O andamento atual e os custos finais precisam de documentos próprios.",
+          "On 20 January 2026, Rafael reported a US$27,777 contract for both lofts together, awaiting the first deposit at that date. Division gives US$13,888.50 per loft. That contract covers different building work. It does not replace the community budget. Current progress and final costs need their own documents."
         ],
         [
           "A origem desses números é a informação fornecida pelo fundador. CUB e SINAPI são referências de custo usadas no cálculo. Não publicaram esse preço de casa pronta. O orçamento do terreno escolhido, em reais, terá data e itens incluídos. As mensagens de origem não são publicadas com dados pessoais. Os resumos abaixo permitem localizar cada caso.",
@@ -200,8 +200,8 @@
           "A resident reports a leak. The maintenance role assesses the problem and obtains a quote. Spending follows the agreed approval limits. Another person inspects the repair, and the payment is linked to its receipt. The resident can ask for review. A replacement can find unfinished tasks and approved amounts when someone leaves a role."
         ],
         [
-          "O mesmo método se aplica a obras e fornecedores. Uma construtora ligada a um fundador precisa declarar essa relação. Outras pessoas comparam o preço, aprovam o contrato e conferem a entrega. A divulgação do vínculo, sozinha, não resolve o conflito de interesse.",
-          "The same method applies to construction and suppliers. A builder linked to a founder needs to disclose that relationship. Other people compare the price, approve the contract and inspect delivery. Disclosure alone does not resolve the conflict of interest."
+          "O mesmo método se aplica a obras e fornecedores. Uma construtora ligada a um fundador precisa declarar essa relação. Outras pessoas comparam o preço, aprovam o contrato e conferem se o serviço foi feito como combinado. A divulgação do vínculo, sozinha, não resolve o conflito de interesse.",
+          "The same method applies to construction and suppliers. A builder linked to a founder needs to disclose that relationship. Other people compare the price, approve the contract and inspect the completed work. Disclosure alone does not resolve the conflict of interest."
         ]
       ],
       "links": [
@@ -298,8 +298,8 @@
             "Possible contracted builder, linked to Rafael."
           ],
           [
-            "Contratação depende de escopo, comparação de preço e aprovação independente.",
-            "Appointment depends on scope, price comparison and independent approval."
+            "Contratação depende dos serviços combinados, da comparação de preços e da aprovação por alguém independente da construtora.",
+            "Appointment depends on the agreed work, price comparison and approval by someone independent of the builder."
           ]
         ],
         [
@@ -372,16 +372,16 @@
       ],
       "body": [
         [
-          "Doações, editais, receitas de serviços e um investimento permitido são possibilidades. Também estudamos um token para financiar a operação e a divulgação. Numa emissão direta, o comprador pagaria à organização emissora; numa revenda entre investidores, o valor normalmente vai ao vendedor. Uma taxa recebida pela IMOBX seria registrada separadamente.",
-          "Possible sources include donations, grants, service income and a permitted investment. A token to fund operations and outreach is also under study. In a direct issue, the buyer would pay the issuing organization; in a resale between investors, the money normally goes to the seller. Any fee received by IMOBX would be recorded separately."
+          "Doações, editais, receitas de serviços e um investimento que a organização escolhida possa oferecer legalmente são possibilidades. Também estudamos um token para financiar a operação e a divulgação. Ao comprar tokens novos, o comprador pagaria à organização que os cria e vende. Ao comprar de outro investidor, o dinheiro normalmente vai para esse vendedor. Uma taxa recebida pela IMOBX seria registrada separadamente.",
+          "Possible sources include donations, grants, service income and investment that the chosen organisation is legally allowed to offer. A token to fund operations and outreach is also under study. When someone buys new tokens, they would pay the organisation that creates and sells them. When they buy from another holder, the money normally goes to that seller. Any fee received by IMOBX would be recorded separately."
         ],
         [
-          "Um divulgador ou moderador recebe uma tarefa e apresenta o trabalho. Um revisor compara a entrega com o combinado antes de aprovar o pagamento. O orçamento precisa ter recursos para os pagamentos prometidos. Relações remuneradas precisam ser informadas ao público.",
-          "An ambassador or moderator receives a brief and submits their work. A reviewer compares delivery with the agreement before approving payment. The budget needs funds for promised payments. Paid relationships need to be disclosed to the public."
+          "Um divulgador ou moderador receberia uma tarefa por escrito e apresentaria o trabalho pronto. Outra pessoa conferiria se o resultado está de acordo com o combinado antes de aprovar o pagamento. O orçamento precisa ter dinheiro para os pagamentos prometidos. Quem recebe para divulgar o projeto deve informar isso ao público.",
+          "A promoter or moderator would receive a written task and submit the completed work. Someone would check that it matches what was agreed before approving payment. The budget needs money for promised payments. Paid participants must tell the public that they are being paid."
         ],
         [
-          "Pagar por trabalho aceito difere de pagar pelo simples investimento. Os serviços de divulgação precisam respeitar as regras de cada canal e informar a remuneração. Promessas de retorno, distribuição de taxas ou de lucros precisam de análise jurídica própria. Chamar um token de utilidade ou governança não define seu tratamento legal.",
-          "Paying for accepted work differs from paying for an investment alone. Outreach needs to follow each channel’s rules and disclose compensation. Promised returns, trading-fee payments or profit distributions need their own legal assessment. Calling a token utility or governance does not determine its legal treatment."
+          "Pagar alguém por um serviço feito como combinado é diferente de pagar renda porque essa pessoa investiu dinheiro. A divulgação precisa seguir as regras de cada canal e informar quando é paga. Promessas de retorno, pagamentos de taxas ou de lucros precisam de análise jurídica própria. Chamar um token de utilidade ou governança não define seu tratamento legal.",
+          "Paying someone for completed work that meets the agreement is different from paying income because they invested money. Outreach needs to follow each channel’s rules and disclose compensation. Promised returns, trading-fee payments or payments of profits need their own legal assessment. Calling a token utility or governance does not determine its legal treatment."
         ]
       ],
       "columns": [
@@ -405,8 +405,8 @@
             "A. Pilot and outreach without an IMOBX token"
           ],
           [
-            "Moradia por contrato. Trabalho de divulgação pago por entrega aceita.",
-            "Housing through agreements. Outreach paid for accepted work."
+            "Moradia por contrato. Pagamento pela divulgação após conferir se o trabalho foi feito como combinado.",
+            "Housing through agreements. Payment for outreach work after it has been checked against the agreement."
           ],
           [
             "Fontes de recursos, orçamento, participantes e regras de pagamento.",
@@ -429,16 +429,16 @@
         ],
         [
           [
-            "C. Participação em taxas",
-            "C. Fee participation"
+            "C. Parte das taxas recebidas",
+            "C. Share of collected fees"
           ],
           [
             "Direito definido a parte das taxas realmente recebidas, se a estrutura permitir.",
             "A defined right to part of fees actually received, if the structure permits."
           ],
           [
-            "Emissor, direitos, custos, perdas, restrições e caminho permitido de oferta. A negociação pode gerar receita zero.",
-            "Issuer, rights, costs, losses, restrictions and permitted offering route. Trading may generate zero income."
+            "Quem criaria o token, direitos do comprador, custos, perdas possíveis, restrições e forma legal de vendê-lo. A negociação pode gerar receita zero.",
+            "Who would create the token, buyers’ rights, costs, possible losses, restrictions and the legal process for selling it. Trading may generate zero income."
           ]
         ],
         [
@@ -447,12 +447,12 @@
             "D. Investment in the operation"
           ],
           [
-            "Ações representadas por tokens ou outro direito de investimento definido. Distribuições dependeriam do acordo e de recursos disponíveis.",
-            "Tokenised shares or another defined investment right. Distributions would depend on the agreement and available money."
+            "Ações representadas por tokens ou outro direito de investimento definido. Os pagamentos a investidores dependeriam do contrato e do dinheiro disponível.",
+            "Tokenised shares or another defined investment right. Payments to investors would depend on the agreement and money available."
           ],
           [
-            "Entidade adequada, ativos e dívidas incluídos, direitos, impostos e oferta. Eventual renda de imóveis precisa respeitar o destino dos recursos e a transferência das casas às famílias.",
-            "Suitable entity, included assets and debts, rights, taxes and offering route. Rent can only be used as the agreements allow. The project must still be able to transfer homes to families."
+            "Organização responsável, bens e dívidas incluídos, direitos, impostos e forma legal de oferecer o investimento. Eventual renda de imóveis precisa respeitar o destino dos recursos e a transferência das casas às famílias.",
+            "The organisation responsible, the property and debts included, rights, taxes and the legal process for selling the investment. Rent can only be used as the agreements allow. The project must still be able to transfer homes to families."
           ]
         ]
       ],
@@ -522,8 +522,8 @@
       ],
       "body": [
         [
-          "No método proposto, um morador comunica uma infiltração. A pessoa responsável pela manutenção avalia o problema, obtém um orçamento e encaminha o gasto conforme o limite combinado. Outra pessoa confere o conserto antes da aprovação final do pagamento.",
-          "In the proposed process, a resident reports a leak. The maintenance contact assesses the problem, obtains a quote and follows the agreed spending limit. Someone else checks the repair before final payment approval."
+          "Um morador comunicaria uma infiltração à pessoa responsável pela manutenção. Essa pessoa avaliaria o problema, pediria um orçamento e seguiria o limite de gasto combinado. Outra pessoa conferiria o conserto antes de aprovar o pagamento final.",
+          "A resident would report a leak to the person responsible for maintenance. That person would assess the problem, get a quote and follow the agreed spending limit. Someone else would check the repair before approving the final payment."
         ],
         [
           "Arc é a rede de blockchain considerada para pagamentos em USDC, uma moeda digital que busca acompanhar o dólar dos Estados Unidos. O teste proposto mostraria quem autorizou um pequeno pagamento e seu comprovante público. As contas ainda precisam ligar esse pagamento ao gasto real e ao documento bancário. Famílias pagariam em reais e não precisariam de carteira de criptomoedas.",
@@ -582,10 +582,10 @@
       "body": [
         [
           "O dinheiro recebido teria destino registrado. Impostos, custos da operação, manutenção e compromissos com as famílias precisam estar cobertos. O orçamento de divulgação e de novas obras precisa de recursos próprios aprovados. Eventuais pagamentos a investidores dependem da estrutura escolhida e do dinheiro disponível. Quando uma família se torna proprietária, o aluguel daquela casa deixa de entrar para a IMOBX.",
-          "Received money would have a recorded purpose. Taxes, operating costs, maintenance and commitments to families need funding. Outreach and new construction need their own approved budgets. Any investor payments depend on the chosen structure and available money. When a household becomes the owner, rent from that home stops going to IMOBX."
+          "Received money would have a recorded purpose. Taxes, running costs, repairs and the cost of keeping promises to families need funding. Outreach and new construction need their own approved budgets. Any investor payments depend on the chosen structure and available money. When a household becomes the owner, rent from that home stops going to IMOBX."
         ],
         [
-          "O estudo financeiro ainda precisa reunir orçamento em reais, parcelas acessíveis e cenários de atraso, reparos, câmbio e negociação zero do token. O site explica a ordem proposta de uso do dinheiro. Ainda não apresenta um modelo financeiro calibrado que comprove equilíbrio ou expansão nacional.",
+          "O estudo financeiro ainda precisa reunir orçamento em reais, parcelas acessíveis e cenários de atraso, reparos, câmbio e negociação zero do token. O site explica a ordem proposta de uso do dinheiro. Ainda não apresenta um cálculo que mostre se a receita cobriria os custos e permitiria levar o projeto a outras regiões do Brasil.",
           "The cash plan needs a budget in reais and payments families can afford. It also needs to show what happens if costs rise or repairs take longer. One case must assume no money comes from token trading. The site explains the proposed order for using money. There is no cash plan here yet showing that income covers bills or that the project can grow across Brazil."
         ]
       ],
@@ -606,12 +606,12 @@
       "rows": [
         [
           [
-            "Imóvel sem autoridade documentada. Obra com custo maior.",
-            "Undocumented property authority. Construction overruns."
+            "Falta de documentos comprovando o direito de usar o imóvel. Obra acima do orçamento.",
+            "Missing documents showing the right to use the property. Building costs above budget."
           ],
           [
             "Documentos do imóvel, orçamento por local, permissões e conferência independente da entrega.",
-            "Property documents, site budget, permissions and independent delivery inspection."
+            "Property documents, site budget, permissions and independent inspection of the completed work."
           ],
           [
             "Assessoria jurídica e profissional da obra. Nomes pendentes.",
@@ -638,8 +638,8 @@
             "Cash shortfall or dependence on token trading."
           ],
           [
-            "Reservas, recursos comprometidos identificados e cenário com taxas de negociação iguais a zero.",
-            "Reserves, identified commitments and a zero-trading-fee scenario."
+            "Dinheiro guardado, lista de contas e compromissos a pagar, e orçamento que não dependa de taxas de negociação.",
+            "Money set aside, a list of bills and promises to be paid, and a budget that works with no token-trading income."
           ],
           [
             "Administração e contador. Nomeações pendentes.",
@@ -649,7 +649,7 @@
         [
           [
             "Oferta ou publicidade de investimento sem caminho permitido.",
-            "Investment offer or promotion without a permitted route."
+            "Selling or promoting an investment without a legally allowed way to do so."
           ],
           [
             "Revisão dos direitos e países alcançados antes de venda ou campanha paga.",
@@ -831,8 +831,8 @@
         "Property economics and financial model"
       ],
       "scope": [
-        "Orçamento de Rafael, escopos distintos e uso proposto do dinheiro. Fluxo financeiro calibrado e cenários ainda em desenvolvimento.",
-        "Rafael’s budget, separate scopes and proposed use of money. A calibrated cash-flow model and scenarios remain in development."
+        "Orçamento de Rafael, trabalhos diferentes e uso proposto do dinheiro. A previsão do dinheiro que entra e sai, com os custos do projeto escolhido e casos de atraso e reparos, ainda está em desenvolvimento.",
+        "Rafael’s budget, the different building work covered by each case and the proposed use of money. A forecast of money coming in and going out, using the costs of the chosen project and different cases for delays and repairs, is still being developed."
       ],
       "links": [
         {
@@ -865,8 +865,8 @@
         "Legal structure"
       ],
       "scope": [
-        "Comparação entre finalidade social e investimento com direitos financeiros. Entidade, assessoria e rota de oferta ainda não selecionadas.",
-        "Comparison of social-purpose activity and investment with financial rights. Entity, advisers and offering route are not yet selected."
+        "Comparação entre finalidade social e investimento com direitos financeiros. Entidade, assessoria e forma legal de oferecer o investimento ainda não selecionadas.",
+        "Comparison of social-purpose activity and investment with financial rights. The legal form, advisers and process for offering any investment are still undecided."
       ],
       "links": [
         {
@@ -927,7 +927,7 @@
       ],
       "scope": [
         "Voz dos moradores, funções, revisão e conflito com uma construtora ligada ao fundador. As regras finais dependem de participação e aprovação.",
-        "Resident voice, roles, review and conflicts involving a founder-linked builder. Final rules depend on participation and approval."
+        "Resident voice, roles, review and conflicts when a builder is connected to one of IMOBX’s founders. Final rules depend on participation and approval."
       ],
       "links": [
         {
@@ -1040,8 +1040,8 @@
         "Conclusion and appendices"
       ],
       "scope": [
-        "As conclusões devem acompanhar a evidência disponível. Fontes, versões e termos estão reunidos aqui. O modelo financeiro completo permanece uma entrega aberta.",
-        "Conclusions should follow the available evidence. Sources, versions and terms are collected here. The complete financial model remains an open deliverable."
+        "As conclusões devem acompanhar a evidência disponível. Fontes, versões e termos estão reunidos aqui. O modelo financeiro completo ainda não está pronto.",
+        "Conclusions should follow the available evidence. Sources, versions and terms are collected here. The complete financial model is not ready yet."
       ],
       "links": [
         {
@@ -1252,8 +1252,8 @@
   ],
   "versions": [
     [
-      "Referência para citação: IMOBX, Referência do projeto, v0.6, revisão de 17/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.",
-      "Citation format: IMOBX, Project reference, v0.6, reviewed 17 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start."
+      "Referência para citação: IMOBX, Referência do projeto, v0.7, revisão de 19/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.",
+      "Citation format: IMOBX, Project reference, v0.7, reviewed 19 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start."
     ],
     [
       "Correções e novas decisões precisam indicar data, quem forneceu a informação, quem aprovou a mudança e a evidência correspondente. Quando houver operação, os relatórios terão período, responsável pelas contas e responsável pela conferência. Valores propostos, contratados, recebidos e gastos serão apresentados separadamente.",

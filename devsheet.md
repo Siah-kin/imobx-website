@@ -9,7 +9,7 @@
 
 ## Pilot and building guide
 
-**Project proposal · v0.5 · 17 October 2026**
+**Project proposal · v0.7 · 19 October 2026**
 
 ### 1. Homes with a path to ownership
 
@@ -17,20 +17,20 @@ IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family wou
 
 The proposed first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
 
-Rafael brings construction experience and local knowledge. John works on communication and digital tools. The organization’s legal form, property arrangements and their responsibilities remain to be agreed in writing.
+Rafael brings construction experience and local knowledge. John works on communication and digital tools. IMOBX’s legal form, the terms for using each property and Rafael’s and John’s responsibilities still need written agreements.
 
 ### How the operation would fit together
 
-| Part | Proposed arrangement |
+| Part | How it would work |
 |---|---|
-| Homes | Documented property rights, a building budget and a clear family agreement. |
+| Homes | Documents showing ownership or the legal right to use the property, a building budget and a clear family agreement. |
 | Money | Separate records for funding, payments, costs and amounts set aside. |
 | Decisions | Defined powers for residents, staff and any investors. |
 | Services | A way to request repairs, follow progress and question decisions. |
 
 Shared designs, purchasing and administration could make further projects easier to deliver. Each family would have a route to owning its whole home. Residents would help shape shared spaces and local priorities.
 
-The project is in preparation. This guide describes how work would move from a request to accepted delivery and payment. The [project reference](reference.html) records evidence, responsibilities and sources in Portuguese and English. The [whitepaper](whitepaper.html) explains the model; the [roadmap](roadmap.html) sets out stages and conditions for proceeding.
+The project is in preparation. This guide explains how a request would lead to completed work, a check that it meets the agreement and payment. The [project reference](reference.html) records evidence, responsibilities and sources in Portuguese and English. The [whitepaper](whitepaper.html) explains the model; the [roadmap](roadmap.html) sets out stages and conditions for proceeding.
 
 <div class="pagebreak"></div>
 
@@ -75,23 +75,23 @@ On 20 January 2026, Rafael reported a contract for two lofts on a steep site, aw
 
 ### The family’s agreement
 
-In the proposed arrangement, a household lives in the home and pays an agreed monthly amount in reais. Its agreement identifies the purchase price and how much of each payment counts towards buying the home. Its purchase record then shows the credit accumulated and the remaining agreed price.
+A family would rent the home and pay the agreed monthly amount in reais. Its agreement would state the purchase price and how much of each payment counts towards buying the home. Its purchase record would show how much has counted towards buying the home and how much remains to pay.
 
-The first household’s purchase price, monthly payment, purchase credit and payment period have not been set. Rafael’s construction budgets are evidence for assessing building costs, not household sale offers. The household would not need to buy an investment token or use a crypto wallet. [Household explanation in Portuguese and English](rent-to-own.html#payments).
+For the first household, the home’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying the home also remains to be agreed. Rafael’s construction budgets are evidence for assessing building costs, not household sale offers. The household would not need to buy an investment token or use a crypto wallet. [Household explanation in Portuguese and English](rent-to-own.html#payments).
 
-Repair charges, missed payments, temporary hardship and leaving need separate terms. In particular, the treatment of accumulated purchase credit on exit remains unresolved. No refund formula or grace period is established here. These terms belong in the offer the household assesses before agreeing to move in.
+Repair charges, missed payments, temporary hardship and leaving need separate terms. If a family leaves, we still need to agree what happens to the money already counted towards buying its home. No refund formula or grace period is established here. These terms belong in the offer the household assesses before agreeing to move in.
 
 ### What the money would pay for
 
-The proposed budget covers taxes, property costs, maintenance, administration, commitments to families and money set aside for unexpected expenses. New construction and any investor payments need their own agreed funding and terms. Donations and grants retain their specified uses.
+The proposed budget covers taxes, property costs, maintenance, administration, the cost of keeping promises to families and money set aside for unexpected expenses. New construction and any investor payments need their own agreed funding and terms. Donations and grants retain their specified uses.
 
-Each receipt is counted once. An amount credited toward buying the home records the family’s progress; it is not another receipt of cash. The spending plan needs to preserve the organization’s ability to complete the promised home transfer.
+Each amount received is counted once. An amount credited toward buying the home records the family’s progress; it is not another receipt of cash. The spending plan needs to preserve the organization’s ability to complete the promised home transfer.
 
 ### When the home becomes the family’s
 
 Once the purchase conditions are met, the required documents and registration would transfer the whole home to the household. A token transfer does not perform that property transfer. IMOBX would stop receiving rent from the home. Continued services and further construction would need their own funding; any ongoing service charge would need an actual service and terms the household agreed to.
 
-The financial plan needs to show costs and cash through construction, occupancy and transfer. It also needs to account for delays, major repairs and periods when a household cannot pay. [Money and transparency](transparency.html).
+The financial plan needs to show costs and cash through construction, occupancy and transfer. It also needs to account for delays, major repairs and periods when a household cannot pay. [Funding and spending](transparency.html).
 
 <div class="pagebreak"></div>
 
@@ -102,7 +102,7 @@ The financial plan needs to show costs and cash through construction, occupancy 
 
 ## 4. Funding construction and growth
 
-The first project needs funding for its contracted work. Possible sources include donations, grants, service income and a permitted investment. The token proposal also aims to fund branding and a community outreach programme. Housing, outreach and any investor payments need their own approved budgets. Token rights remain under study; the [four paths](reference.html#token) range from proceeding without an IMOBX token to an investment in the operation.
+The first project needs funding for its contracted work. Possible sources include donations, grants, service income and investment that the chosen organisation is legally allowed to offer. The token proposal also aims to fund branding and a community outreach programme. Housing, outreach and any investor payments need their own approved budgets. Token rights remain under study; the [four paths](reference.html#token) range from proceeding without an IMOBX token to an investment in the operation.
 
 ### New investment and later trading
 
@@ -114,11 +114,11 @@ The housing budget needs to work through periods of little or no trading income.
 
 Funds committed to a trading market are unavailable for construction while that commitment lasts. The accounts would distinguish money available for bills, amounts reserved for families and repairs, and other commitments.
 
-New investment could finance agreed work before rent begins once the organization, property authority, budget and permitted fundraising route are ready. Forecast rent is not money already received. Payments to investors depend on the chosen agreement and actual available funds. [Funding questions](faq.html#faq-funding).
+New investment could pay for agreed work before families start paying rent. First, IMOBX needs its legal form, documents showing the right to use the property, a budget and a legally allowed way to raise that money. Forecast rent is not money already received. Payments to investors depend on the chosen agreement and actual available funds. [Funding questions](faq.html#faq-funding).
 
 ### How outreach work would be paid
 
-An approved campaign budget would fund specific work briefs. A participant would submit their work; a reviewer would compare it with the brief before approving payment. The community tool could show submission, review and payment status. Paid participants need to disclose compensation and follow each channel’s rules.
+An approved campaign budget would pay for specific tasks, with the work and payment terms written down first. A participant would submit their work; a reviewer would check that it matches the agreed task before approving payment. The community tool could show submission, review and payment status. Paid participants need to disclose compensation and follow each channel’s rules.
 
 Work payments and passive investment income require separate terms. The token model and its rights remain under research. Residents would not need to promote the project to retain housing or decision rights.
 
@@ -139,7 +139,7 @@ A family’s housing agreement, its membership voice and an investment are separ
 | Staff and resident representatives | Powers, pay, appointment, spending limits, reporting and replacement. |
 | Builders and suppliers | Work, price, payment stages and independent completion checks. |
 | Donors and social funders | Permitted use, reports, delays and cancellation. |
-| Possible investors | Issuer, claim, income source, costs, losses, voting, transfers and exit. |
+| Possible investors | Who would create the token, what buyers could receive, where income would come from, costs, possible losses, voting, sales and leaving. |
 | Neighbours | Local impacts, services, access and a way to raise concerns. |
 | Independent checkers | Authority and access to review property, safety, accounts and agreements. |
 
@@ -164,9 +164,9 @@ The proposed digital services would help people read agreements, request repairs
 |---|---|
 | Project website | Explain the proposal, current progress, costs and documents. |
 | Support channel | Receive questions and requests, with a visible response and status. |
-| Legal records | Document property authority, family agreements and any investment. |
-| Accounts | Connect each receipt and payment to its purpose and evidence. |
-| Shared work record | Show responsibilities, decisions, deadlines and checked delivery. |
+| Legal records | Document the legal right to use the property, family agreements and any investment. |
+| Accounts | Connect each amount received and paid to its purpose and evidence. |
+| Shared work record | Show responsibilities, decisions, deadlines and work checked against the agreement. |
 
 ### Following a payment
 
@@ -180,7 +180,7 @@ If an investment permits income payments, software could maintain a record of wh
 
 A resident reports a leak. The maintenance role assesses it and obtains a quote. Spending follows the agreed budget and approval rule. Another person checks the completed repair; the accounts link its payment and receipt. The resident can question the result. Records of unfinished work support a replacement when someone leaves a role.
 
-The complete process, including payment failures and lost access, still needs to be demonstrated. A public report would link an approved budget to accepted delivery and the amount paid. It would identify who prepared and reviewed the accounts. Private identity and household documents would remain outside the public site. [Everyday decisions and tasks](faq.html#faq-flock-siah).
+The complete process, including payment failures and lost access, still needs to be demonstrated. A public report would show the approved budget, the work completed, who checked it and the amount paid. It would identify who prepared and reviewed the accounts. Private identity and household documents would remain outside the public site. [Everyday decisions and tasks](faq.html#faq-flock-siah).
 
 <div class="pagebreak"></div>
 
@@ -194,18 +194,18 @@ IMOBX’s development plan connects the first homes in Rio with resident partici
 
 | Stage | Intended result |
 |---|---|
-| Legal structure and property | A responsible organization, documented property authority and reviewed housing agreements. |
+| Legal structure and property | A responsible organization, documents showing the legal right to use the property and reviewed housing agreements. |
 | Resident participation | A say in shared matters without buying investment tokens, with defined budgets and review procedures. |
 | First homes | Funded construction, safe occupancy and records of household payments and purchase progress. |
-| Transparent treasury | A demonstration of USDC receipts and authorized payments on Arc, linked to accounts and evidence. |
-| Funding and account review | Identified funds, authorised spending and funded commitments to households. |
+| Payment records people can check | A demonstration of USDC received and payments approved on Arc, linked to accounts and evidence. |
+| Funding and account review | Records of where funding would come from, which spending is approved and how promises to families would be paid for. |
 | More homes and owner partnerships | Further projects with local teams and possible rent-to-own services for participating owners. |
 
 ### Following an operating project
 
-The proposed monthly report would show receipts and payments, amounts set aside, building costs and delays, repairs, unresolved issues and families’ purchase progress. Every receipt and payment would be checked against its records. Affordability and service-response targets need to be agreed locally.
+The proposed monthly report would show receipts and payments, amounts set aside, building costs and delays, repairs, unresolved issues and families’ purchase progress. Every amount received and paid would be checked against its records. Affordability and service-response targets need to be agreed locally.
 
-A first expansion review is proposed after at least three operating months. This is a review point, not proof of long-term viability. A second local team should be able to repeat the process, with funding for new work that respects existing commitments. The detailed roadmap identifies proposed responsible roles, conditions for proceeding and reasons to pause. Named appointments and delivery dates remain open.
+A first expansion review is proposed after at least three operating months. This is a review point, not proof of long-term viability. A second local team should be able to repeat the process, with funding for new work that respects existing commitments. The detailed roadmap explains who would do the work, what must be ready and what would stop a stage. Named appointments and delivery dates remain open.
 
 ### What the public can follow
 

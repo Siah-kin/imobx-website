@@ -7,7 +7,7 @@ IMOBX is preparing a rent-to-own housing project in Rio de Janeiro, with shared 
 - [Project paper](whitepaper.html)
 - [Pilot and building guide](devsheet.html)
 - [Roadmap and participation](roadmap.html)
-- [Money and transparency](transparency.html)
+- [Funding and spending](transparency.html)
 - [Photos and drawings](properties.html)
 - [Media kit](media-kit.html)
 - [All documents](resources.html)

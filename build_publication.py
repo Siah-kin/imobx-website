@@ -71,7 +71,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None):
         return f'<span data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt if lang.startswith("pt") else en)}</span>'
     if 'assets/site.js' not in script:
         script += '<script src="assets/site.js" defer></script>'
-    current = {'IMOBX | Resources': 'resources.html', 'IMOBX | Money and transparency': 'transparency.html',
+    current = {'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
                'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html',
                'IMOBX | Get involved': 'contact.html'}.get(title, '')
     return f'''<!doctype html>
@@ -90,8 +90,8 @@ RESOURCE_CATALOG = [
      'meta_pt': 'Guia em inglês · descrições PT/EN', 'meta_en': 'English guide · PT/EN descriptions',
      'links': [('media-kit.html','Ver o kit','View kit'), ('media-kit.zip','Baixar kit (ZIP)','Download kit (ZIP)')]},
     {'id': 'whitepaper', 'pt': 'Whitepaper', 'en': 'Whitepaper', 'version': VERSION,
-     'description_pt': 'Modelo de moradia, custos, contratos, dinheiro e decisões em aberto.',
-     'description_en': 'Housing model, costs, agreements, money and open decisions.',
+     'description_pt': 'Modelo de moradia, custos, contratos, fluxo de caixa e decisões em aberto.',
+     'description_en': 'Housing model, costs, agreements, cash flow and open decisions.',
      'meta_pt': 'Inglês · rascunho de referência', 'meta_en': 'English · reference draft',
      'links': [('whitepaper.html','Ler','Read'), ('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
     {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': VERSION,
@@ -106,9 +106,9 @@ RESOURCE_CATALOG = [
      'description_en': 'Housing plans, resident participation and proposed development stages.',
      'meta_pt': 'Inglês · processo proposto', 'meta_en': 'English · proposed process',
      'links': [('devsheet.html','Ler','Read'), ('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
-    {'id': 'transparency', 'pt': 'Dinheiro e transparência', 'en': 'Money and transparency', 'version': '0.1',
-     'description_pt': 'Como o dinheiro entraria, o que pagaria e como os participantes poderiam conferir as contas.',
-     'description_en': 'How money would come in, what it would pay for and how participants could check the accounts.',
+    {'id': 'transparency', 'pt': 'Financiamento e gastos', 'en': 'Funding and spending', 'version': '0.1',
+     'description_pt': 'Fontes de financiamento, despesas previstas e como os participantes poderiam conferir as contas.',
+     'description_en': 'Funding sources, planned spending and how participants could check the accounts.',
      'meta_pt': 'Português e inglês · planos e fontes',
      'meta_en': 'Portuguese and English · plans and sources',
      'links': [('transparency.html','Ver a página','View page')]},
@@ -118,7 +118,7 @@ RESOURCE_CATALOG.insert(0, {
     'id': 'housing', 'pt': 'Aluguel e compra da casa', 'en': 'Renting and buying the home', 'version': VERSION,
     'description_pt': 'Como os pagamentos contariam para a compra, quem cuidaria dos reparos e o que os moradores poderiam decidir.',
     'description_en': 'How payments would count towards purchase, who would handle repairs and what residents could decide.',
-    'meta_pt': 'Português e inglês · modelo proposto', 'meta_en': 'Portuguese and English · proposed arrangement',
+    'meta_pt': 'Português e inglês · modelo proposto', 'meta_en': 'Portuguese and English · housing plan',
     'links': [('rent-to-own.html', 'Ler a explicação', 'Read the explanation')]
 })
 RESOURCE_CATALOG.append({
@@ -139,50 +139,66 @@ def translated(pt, en, tag='span', attributes=''):
 
 
 def resource_section(standalone=False):
-    if not standalone:
-        rows = []
-        for item in [item for item in RESOURCE_CATALOG if item['id'] in ('housing', 'whitepaper', 'pitchdeck')]:
-            target, pt, en = item['links'][0]
-            rows.append(f'''<article class="resource-row" id="resource-{esc(item['id'])}">
-<div>{translated(item['pt'],item['en'],'h3')}{translated(item['description_pt'],item['description_en'],'p')}</div>
-{translated(pt + ' ↗',en + ' ↗','a',f'href="{esc(target)}" aria-label="{esc(item["en"])}"')}</article>''')
-        return '<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>' + \
-            translated('Recursos','Resources','span','class="eyebrow"') + \
-            translated('Conheça a proposta em detalhe.','Explore the proposal in detail.','h2') + \
-            translated('A explicação para famílias trata de pagamentos, reparos e compra da casa em português e inglês. O whitepaper detalha o projeto e o financiamento; os slides servem para conversas com parceiros. Esses dois documentos são rascunhos em inglês.',
-                       'The household explanation covers payments, repairs and buying the home in Portuguese and English. The paper details the project and funding; the slides support partner discussions. Those two documents are English drafts.','p') + \
-            '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">' + \
-            translated('Todos os documentos e downloads','All documents and downloads','a','href="resources.html"') + \
-            translated('Referência atual do projeto','Current project reference','a','href="reference.html"') + \
-            translated('Roteiro e decisões compartilhadas','Roadmap and shared decisions','a','href="roadmap.html"') + \
-            translated('Dinheiro e transparência','Money and transparency','a','href="transparency.html"') + \
-            translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
-            translated('Guia do piloto e metas','Pilot guide and targets','a','id="resource-devsheet" href="devsheet.html"') + '</div>'
-    cards = []
-    for item in RESOURCE_CATALOG:
-        links = []
+    catalog = {item['id']: item for item in RESOURCE_CATALOG}
+    document_ids = ('whitepaper', 'pitchdeck', 'devsheet')
+
+    def card(item):
+        actions = []
         for target, pt, en in item['links']:
             download = ' download' if '#' not in target and not target.endswith('.html') else ''
-            links.append(translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["en"] + ": " + en)}"{download}'))
-        cards.append(f'''<article class="resource-card" id="resource-{esc(item['id'])}" aria-labelledby="title-{esc(item['id'])}">
-{translated(item['pt'],item['en'],'h3',f'id="title-{item["id"]}"')}
-{translated(item['description_pt'],item['description_en'],'p')}
-<p class="resource-meta">v{esc(item['version'])} · {translated(item['meta_pt'],item['meta_en'])}</p>
-<div class="resource-actions">{''.join(links)}</div></article>''')
-    return '''<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>''' + \
-        translated('05 / Documentos do projeto','05 / Project documents','span','class="eyebrow"') + \
-        translated('Documentos e identidade IMOBX.','IMOBX documents and brand assets.','h1' if standalone else 'h2') + \
-        translated('Para entender pagamentos, reparos e compra da casa, comece pela explicação para famílias, em português e inglês. O whitepaper aprofunda os custos e o financiamento; o guia da construção trata de quem executaria e conferiria o trabalho; os slides resumem a proposta para parceiros. Esses três documentos são rascunhos em inglês. A referência em português e inglês reúne fontes e o mapa de capítulos do documento de Rafael.',
-                    'For payments, repairs and buying the home, start with the household explanation in Portuguese and English. The paper develops the costs and funding; the building guide covers who would carry out and inspect the work; the slides summarize the proposal for partners. Those three documents are English drafts. The bilingual project reference provides sources and a chapter map for Rafael’s manuscript.','p') + \
-        '<p>' + translated('Consultar a referência do projeto e o mapa de capítulos','Read the project reference and chapter map','a','class="button" href="reference.html"') + '</p>' + \
-        '<div class="resource-grid">' + ''.join(cards) + '</div>' + \
-        '<div class="resource-more">' + \
-        translated('Ver roteiro e decisões compartilhadas','View roadmap and shared decisions','a','href="roadmap.html"') + \
-        translated('Perguntas sobre o modelo','Model questions','a','href="faq.html"') + \
-        translated('Para desenvolvedores: conteúdo das páginas (JSON)','For developers: page content (JSON)','a','href="model-guide.json" download') + \
-        translated('Fontes, versões e situação da evidência','Sources, versions and evidence status','a','href="reference.html#sources"') + \
-        translated('Baixar documentos e logos (ZIP)','Download documents and logos (ZIP)','a','href="imobx-documents.zip" download') + \
-        '</div>'
+            actions.append(translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["en"] + ": " + en)}"{download}'))
+        return f'''<article class="resource-card" id="resource-{esc(item['id'])}" aria-labelledby="title-{esc(item['id'])}">
+{translated(item['pt'], item['en'], 'h3', f'id="title-{item["id"]}"')}
+{translated(item['description_pt'], item['description_en'], 'p')}
+<p class="resource-meta">v{esc(item['version'])} · {translated(item['meta_pt'], item['meta_en'])}</p>
+<div class="resource-actions">{''.join(actions)}</div></article>'''
+
+    intro_pt = 'O whitepaper apresenta a proposta de moradia e seu financiamento. O pitch deck resume o projeto para parceiros. O guia do piloto detalha o trabalho e as responsabilidades. Os três documentos são rascunhos em inglês.'
+    intro_en = 'The whitepaper explains the housing proposal and its funding. The pitch deck presents the project to partners. The pilot and building guide covers the work and responsibilities. All three documents are English drafts.'
+    body = '<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>'
+    body += translated('Documentos do projeto', 'Project documents', 'span', 'class="eyebrow"')
+    body += translated('Documentos do projeto.', 'Project documents.', 'h1' if standalone else 'h2')
+    body += translated(intro_pt, intro_en, 'p')
+    if not standalone:
+        rows = []
+        for key in document_ids:
+            item = catalog[key]
+            target, pt, en = item['links'][0]
+            rows.append(f'''<article class="resource-row" id="resource-{esc(key)}">
+<div>{translated(item['pt'], item['en'], 'h3')}{translated(item['description_pt'], item['description_en'], 'p')}</div>
+{translated(pt + ' ↗', en + ' ↗', 'a', f'href="{esc(target)}" aria-label="{esc(item["en"])}"')}</article>''')
+        body += '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">'
+        body += translated('Todos os documentos e downloads', 'All documents and downloads', 'a', 'href="resources.html"')
+        body += translated('Aluguel e compra da casa', 'Renting and buying the home', 'a', 'id="resource-housing" href="rent-to-own.html"')
+        body += translated('Financiamento e gastos', 'Funding and spending', 'a', 'href="transparency.html"')
+        body += translated('Referência atual do projeto', 'Current project reference', 'a', 'href="reference.html"')
+        body += translated('Roteiro e decisões compartilhadas', 'Roadmap and shared decisions', 'a', 'href="roadmap.html"')
+        body += translated('Perguntas sobre o modelo', 'Model questions', 'a', 'href="faq.html"')
+        return body + '</div>'
+
+    body += '<div class="resource-grid">' + ''.join(card(catalog[key]) for key in document_ids + ('reference',)) + '</div>'
+    body += '<section id="media-resources" aria-labelledby="media-resources-title">'
+    body += translated('Materiais para divulgação', 'Media resources', 'h2', 'id="media-resources-title"')
+    body += '<div class="resource-grid">' + card(catalog['media-kit']) + '</div></section>'
+    body += '<section id="website-pages" aria-labelledby="website-pages-title">'
+    body += translated('No site', 'On the website', 'h2', 'id="website-pages-title"')
+    body += '<div class="resource-more">'
+    for key in ('housing', 'transparency'):
+        item = catalog[key]
+        target = item['links'][0][0]
+        body += f'<span id="title-{key}">' + translated(item['pt'], item['en'], 'a', f'id="resource-{key}" href="{esc(target)}"') + '</span>'
+    body += translated('Roteiro e decisões compartilhadas', 'Roadmap and shared decisions', 'a', 'href="roadmap.html"')
+    body += translated('Perguntas sobre o modelo', 'Model questions', 'a', 'href="faq.html"') + '</div>'
+    body += '<nav class="archive-nav" aria-label="Contexto do projeto" data-aria-pt="Contexto do projeto" data-aria-en="Project background">'
+    body += translated('Por que a IMOBX existe', 'Why IMOBX exists', 'a', 'href="index.html#missao"')
+    body += translated('A visão de Rafael para a vila', 'Rafael’s village vision', 'a', 'href="properties.html#visao-rafael"')
+    body += translated('Pessoas e responsabilidades', 'People and responsibilities', 'a', 'href="reference.html#people"')
+    body += translated('Fontes da proposta', 'Sources behind the proposal', 'a', 'href="reference.html#sources"') + '</nav></section>'
+    body += '<div class="resource-more">'
+    body += translated('Fontes e mapa de capítulos do documento do projeto', 'Sources and chapter map for the project paper', 'a', 'href="reference.html#chapters"')
+    body += translated('Para desenvolvedores: conteúdo das páginas (JSON)', 'For developers: page content (JSON)', 'a', 'href="model-guide.json" download')
+    body += translated('Baixar documentos e logos (ZIP)', 'Download documents and logos (ZIP)', 'a', 'href="imobx-documents.zip" download')
+    return body + '</div>'
 
 
 for name in ['index.html', 'properties.html']:
@@ -439,7 +455,7 @@ def archive(name, paths, introduction):
 
 logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'assets/imobx-logo-light-source.webp']
 archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
-        'IMOBX media kit v0.2 / 16 October 2026\nLogo artwork, colour definitions, image provenance and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
+        'IMOBX media kit v0.2 / 16 October 2026\nLogo artwork, colours, image sources and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
         'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'faq.html', 'transparency.html', 'model-guide.json',
         'project-reference.json', 'project-reference-pt.md', 'project-reference-en.md', 'publication-manifest.json', 'contact-routes.json',

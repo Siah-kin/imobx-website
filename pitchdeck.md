@@ -2,7 +2,7 @@
 
 A documented rent-to-own housing model for Rio
 
-**Partner discussion draft · v0.6 · 17 October 2026**
+**Partner discussion draft · v0.7 · 19 October 2026**
 
 
 
@@ -38,7 +38,7 @@ The first project would help displaced families and people unable to use ordinar
 
 
 
-**Presenter notes:** Brazil’s 2022 Census counted about 16.4 million residents in favelas and urban communities, 8.1% of the population. That is national context, not a description of a selected family or site. Living in a favela does not itself mean being displaced. Listen to families about work, schools, transport, support networks and whether a move suits them. No pilot families are claimed as enrolled.
+**Presenter notes:** Brazil’s 2022 Census counted about 16.4 million residents in favelas and urban communities, 8.1% of the population. That is national context, not a description of a selected family or site. Living in a favela does not itself mean being displaced. Listen to families about work, schools, transport, support networks and whether a move suits them. Participating households are not identified in this draft.
 
 
 
@@ -74,7 +74,7 @@ The household could see what it has paid towards the purchase and how much remai
 
 
 
-**Presenter notes:** This is the proposed arrangement, not a current home offer. The first purchase price, monthly payment, purchase credit and payment period have not been set. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Property authority, budget and independent inspection remain necessary for delivery.
+**Presenter notes:** The first homes are still being planned. This slide does not offer a home. The first home’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
 
 
 
@@ -86,7 +86,7 @@ Keep rent, donations, grants, service income and trading fees separately identif
 
 - Pay taxes, repairs and agreed running costs.
 
-- Keep money for empty homes and commitments to families.
+- Keep money for empty homes and promises made to families.
 
 - Fund more homes; consider any permitted investor payments afterward.
 
@@ -128,7 +128,7 @@ Courtyard use, study-room hours, repair priorities and representatives are resid
 
 
 
-**Presenter notes:** The voting procedure, spending limits and review route have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Buying tokens would not give control over another household’s contracted purchase price. See rent-to-own.html#decisions and roadmap.html#governance. Do not describe this proposal as a functioning resident assembly.
+**Presenter notes:** The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Buying tokens would not give control over another household’s contracted purchase price. See rent-to-own.html#decisions and roadmap.html#governance. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX.
 
 
 
@@ -152,19 +152,19 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 ## 9. A possible token could fund operations and outreach.
 
-In a direct issue, buyers would pay the issuing organization; their rights are still undecided.
+Buyers of new tokens would pay the organisation that creates and sells them. Their rights are still undecided.
 
 
 
 - A later resale normally pays the seller; any project fee is separate.
 
-- Paid outreach needs a funded brief, accepted work and disclosure.
+- Paid outreach needs a funded task, a check of the completed work and disclosure of payment.
 
 - No dividend, discount or token voting model has been selected.
 
 
 
-**Presenter notes:** Four scenarios remain: no IMOBX token, a service or membership benefit, fee participation, or an investment in the operation. These are alternatives, not combined promised rights. Capital for construction, outreach payments and investor income have different budgets and commitments. Residents’ participation would not depend on investment or promotion. Reference.html#token compares what a buyer might receive and the decisions still open.
+**Presenter notes:** Four scenarios remain: no IMOBX token, a service or membership benefit, a share of collected fees, or an investment in the operation. These are alternatives, not combined promised rights. Capital for construction, outreach payments and investor income have different budgets and commitments. Residents’ participation would not depend on investment or promotion. Reference.html#token compares what a buyer might receive and the decisions still open.
 
 
 
@@ -182,7 +182,7 @@ The roadmap names proposed roles and conditions for proceeding.
 
 
 
-**Presenter notes:** The six stages are legal structure and property; resident participation; first homes; transparent treasury; funding and account review; more homes and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible founder-linked contractor requiring independent approval. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
+**Presenter notes:** The six stages are legal structure and property; resident participation; first homes; payment records people can check; funding and account review; more homes and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
 
 
 
@@ -194,13 +194,13 @@ Follow actual costs, accounts and families’ experience.
 
 - Check completed work, final cost and delays.
 
-- Match every receipt and payment; report repairs and unresolved issues.
+- Check money received and paid against the records; report repairs and unresolved issues.
 
 - Show participation and progress toward owning the home.
 
 
 
-**Presenter notes:** Agree response times and affordability targets with local participants. Report homes as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. No completed transfers or committed capital are invented here.
+**Presenter notes:** Agree response times and affordability targets with local participants. Report homes as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. The published records do not yet document completed home transfers or committed capital.
 
 
 
@@ -218,7 +218,7 @@ An owner, building team, local organization and funder could develop a costed pr
 
 
 
-**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Receiving contacts are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. A founder-linked builder needs independent contract and delivery review. See contact.html and rent-to-own.html#property.
+**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Receiving contacts are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property.
 
 
 

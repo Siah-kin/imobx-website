@@ -9,7 +9,7 @@ def build_contact(root, page, tr, esc, version):
     contact = data['contact']
     body = '<main class="paper contact-page" id="main">'
     body += t(('Conte como gostaria de participar.', 'Tell us how you would like to take part.'), 'h1')
-    body += t(('Escolha o assunto mais próximo do que procura. As perguntas mudam conforme sua escolha. Você pode revisar a mensagem antes de enviá-la.', 'Choose the route closest to what you need. The questions change with your choice. You can review the message before sending it.'))
+    body += t(('Escolha o assunto mais próximo do que procura. As perguntas mudam conforme sua escolha. Depois, você pode conferir e copiar sua mensagem.', 'Choose the subject closest to what you need. The questions change with your choice. You can then check and copy your message.'))
     if not contact['email'] and not contact['telegram']:
         body += '<aside class="guide-status">' + t(('Os contatos para receber mensagens ainda não estão disponíveis. Você pode conhecer as opções e preparar uma apresentação.', 'Contact details for receiving enquiries are not available yet. You can explore the routes and prepare an introduction.')) + '</aside>'
     body += '<noscript>' + t(('Para preparar uma mensagem nesta página, ative JavaScript no navegador.', 'Enable JavaScript in your browser to prepare a message on this page.')) + '</noscript>'
@@ -36,7 +36,7 @@ def build_contact(root, page, tr, esc, version):
     body += '<p class="fine">' + t(('Compartilhe uma breve apresentação. Deixe de fora documentos de identidade, dados bancários e chaves de carteiras.', 'Share a brief introduction. Leave out identity documents, bank details and wallet keys.')) + '</p>'
     body += '<div class="contact-field"><label class="contact-consent"><input type="checkbox" id="contact-consent" required disabled>' + t(('Revisei as informações e concordo em compartilhá-las com a equipe da IMOBX para responder a este contato.', 'I have reviewed this information and agree to share it with the IMOBX team to respond to this enquiry.')) + '</label></div>'
     body += t(('Revisar mensagem', 'Review message'), 'button', 'type="submit" class="button"') + '</div></form>'
-    body += '<section id="enquiry-review" hidden aria-labelledby="review-title">' + t(('Confira sua mensagem antes de enviar.', 'Review your message before sending.'), 'h2', 'id="review-title" tabindex="-1"')
+    body += '<section id="enquiry-review" hidden aria-labelledby="review-title">' + t(('Confira sua mensagem.', 'Review your message.'), 'h2', 'id="review-title" tabindex="-1"')
     body += '<label for="enquiry-message">' + t(('Mensagem preparada', 'Prepared message')) + '</label><textarea id="enquiry-message" rows="15" readonly></textarea><div class="contact-actions">'
     body += t(('Copiar mensagem', 'Copy message'), 'button', 'type="button" class="button" id="copy-enquiry"')
     if contact['email']:
@@ -45,10 +45,10 @@ def build_contact(root, page, tr, esc, version):
         body += t(('Abrir contato no Telegram', 'Open Telegram contact'), 'a', f'class="button" href="{esc(contact["telegram"])}" target="_blank" rel="noopener noreferrer"')
     body += t(('Editar respostas', 'Edit answers'), 'button', 'type="button" id="edit-enquiry"') + '</div>'
     body += '<p id="enquiry-status" role="status" aria-live="polite"></p>'
-    body += t(('Preparar ou copiar a mensagem não a envia. Envie pelo seu e-mail ou pelo contato indicado e mantenha uma cópia.', 'Preparing or copying the message does not send it. Send it through your email or the listed contact and keep a copy.'), 'p', 'class="fine"')
+    body += t(('Preparar ou copiar a mensagem não a envia. Guarde uma cópia até ter um contato da equipe para recebê-la.', 'Preparing or copying the message does not send it. Keep a copy until you have a team contact to receive it.'), 'p', 'class="fine"')
     body += '</section><section class="contact-next">' + t(('A primeira conversa ajuda a definir o próximo passo.', 'The first conversation helps define the next step.'), 'h2')
     body += t(('O assunto e a região ajudam a encaminhar a conversa. A equipe poderá esclarecer necessidades e combinar uma avaliação, uma reunião ou a análise de uma proposta. Moradia, contratação e financiamento dependem de acordos próprios.', 'The subject and location help direct the conversation. The team can clarify needs and agree an assessment, meeting or proposal review. Housing, appointments and funding depend on their own agreements.'))
-    body += '<p><a href="roadmap.html#participation">' + t(('Conheça os papéis de cada participante', 'Read about each participant’s role')) + '</a> · <a href="reference.html#status">' + t(('Situação atual do projeto', 'Current project status')) + '</a></p></section></main>'
+    body += '<p><a href="roadmap.html#participation">' + t(('Conheça os papéis de cada participante', 'Read about each participant’s role'), 'span') + '</a> · <a href="reference.html#status">' + t(('Situação atual do projeto', 'Current project status'), 'span') + '</a></p></section></main>'
     embedded = json.dumps(data, ensure_ascii=False).replace('<', '\\u003c')
     body += '<script id="contact-route-data" type="application/json">' + embedded + '</script>'
     (root / 'contact.html').write_text(page('IMOBX | Get involved', body,

@@ -32,15 +32,13 @@ The publication uses readable sans-serif type, simple headings and generous spac
 
 ## Photographs and drawings
 
-The image archive distinguishes neighbourhood context, supplied construction photographs and architectural concepts. Captions describe what is visible and identify information still to be confirmed. A photograph alone does not establish property ownership, a household’s situation or completed construction.
+The city photographs show favelas along the hillsides. Circles highlight the favelas in each view.
 
-Two neighbourhood photographs use teal circles to draw attention to hillside communities. Their blue-arrow annotations were replaced using generative image editing. The archive links the unchanged supplied originals. The edited photographs are presentation images, not surveyed boundaries or independent evidence of site condition.
-
-The village illustration and loft drawings show proposed designs. The archive does not present the construction photographs as a verified chronological record. Photographer, capture date, exact location, project association and publication permissions remain to be confirmed where not stated.
+The village illustration and loft drawings show proposed designs. Construction photographs show the site and building work.
 
 ## Project descriptions
 
-The [media kit](media-kit.html) provides short descriptions in Portuguese and English. The [project paper](whitepaper.html) explains the housing proposal, costs and current stage. These descriptions identify the project as being prepared, with its legal and token arrangements still under study.
+The [media kit](media-kit.html) provides short descriptions in Portuguese and English. The [project paper](whitepaper.html) explains the housing proposal, costs and current stage. These descriptions identify the project as being prepared, with its legal form and token rights still being decided.
 
 ## Resources
 

@@ -93,8 +93,8 @@
         "Construction, materials, legal advice, accounting or technical support."
       ],
       "context": [
-        "Descreva seu serviço, região e experiência. Um trabalho de construção, revisão jurídica ou contabilidade teria escopo, preço, prazo e uma pessoa responsável pela aceitação. Esta apresentação não confirma contratação.",
-        "Describe your service, area and experience. Construction, legal review or accounting work would have an agreed scope, price, deadline and person accepting delivery. This introduction does not confirm an appointment."
+        "Descreva seu serviço, região e experiência. Antes de contratar, seriam combinados os serviços, o preço, o prazo e quem conferiria o trabalho. Esta apresentação não confirma contratação.",
+        "Describe your service, area and experience. Construction, legal review or accounting work would need an agreement on the work, price, deadline and who checks its completion. This introduction does not confirm an appointment."
       ],
       "fields": [
         {
@@ -211,7 +211,7 @@
       ],
       "context": [
         "Explique como gostaria de ajudar: tradução, moderação, comunicação ou apoio a participantes. Uma tarefa remunerada teria uma entrega combinada, orçamento e revisão antes do pagamento. Ainda não há uma oferta de trabalho ou de recompensas nesta página.",
-        "Explain how you would like to help: translation, moderation, communication or participant support. Paid work would have an agreed deliverable, budget and review before payment. This page does not yet offer a job or rewards."
+        "Explain how you would like to help: translation, moderation, communication or participant support. For paid tasks, the work, budget and check required before payment would be agreed first. This page does not yet offer a job or rewards."
       ],
       "fields": [
         {

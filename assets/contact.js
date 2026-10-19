@@ -97,7 +97,7 @@
     try {
       if (!navigator.clipboard) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(message.value);
-      status.textContent = say('Mensagem copiada. Envie pelo contato escolhido.', 'Message copied. Send it through your chosen contact.');
+      status.textContent = say('Mensagem copiada. Ela ainda não foi enviada.', 'Message copied. It has not been sent.');
     } catch (_) {
       message.focus();
       message.select();

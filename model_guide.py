@@ -31,7 +31,7 @@ def build_guide(root, page, tr, esc, language_controls):
             body += text(('Quem participa e quais direitos precisa combinar ↗', 'Who takes part and which rights need agreement ↗'),
                          'a', 'class="guide-more" href="roadmap.html#participation"')
         if home:
-            body += text(('Mais perguntas sobre moradia, dinheiro e decisões ↗', 'More questions about homes, money and decisions ↗'),
+            body += text(('Mais perguntas sobre moradia, financiamento e decisões ↗', 'More questions about homes, funding and decisions ↗'),
                          'a', 'class="guide-more" href="faq.html"')
         return body + '</div>'
 
@@ -56,7 +56,7 @@ def build_guide(root, page, tr, esc, language_controls):
         resident += f'<section id="{ident}">' + text(journey[ident + '_title'], 'h2')
         resident += ''.join(text(pair) for pair in journey[ident])
         target, label = {
-            'repairs': ('roadmap.html#governance', ('Responsáveis, limites e revisão de decisões', 'Responsible roles, limits and decision reviews')),
+            'repairs': ('roadmap.html#governance', ('Quem cuida do trabalho e como questionar uma decisão', 'Who handles the work and how to question a decision')),
             'decisions': ('roadmap.html#participation', ('Como os papéis se relacionam', 'How participant roles fit together')),
             'hardship': ('reference.html#status', ('Situação atual e documentos disponíveis', 'Current status and available documents')),
             'funding': ('transparency.html#community-economy', ('Orçamentos, fontes de recursos e pagamentos', 'Budgets, funding sources and payments')),
@@ -84,9 +84,9 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap = '<main class="paper guide-paper" id="main">' + language_controls
     roadmap += text(('Roteiro IMOBX', 'IMOBX roadmap'), 'h1')
     roadmap += text(('Das primeiras casas a uma rede de moradia.', 'From the first homes to a wider housing network.'), 'p', 'class="guide-lead"')
-    roadmap += text(('O plano de desenvolvimento reúne um primeiro projeto de moradia no Rio, participação dos moradores e financiamento. A preparação jurídica, o desenho da participação e os testes digitais podem avançar em paralelo. As datas de obra dependem do projeto escolhido, dos recursos e das permissões.', 'The development plan connects a first housing project in Rio with resident participation and funding. Legal preparation, participation design and digital trials can progress in parallel. Construction dates depend on the chosen project, funding and permissions.'))
+    roadmap += text(('O plano reúne as primeiras moradias no Rio, as decisões dos moradores e o financiamento. A preparação jurídica, as conversas sobre como os moradores decidiriam os assuntos comuns e os testes digitais podem acontecer ao mesmo tempo. As datas de obra dependem do projeto escolhido, dos recursos e das permissões.', 'The plan brings together the first homes in Rio, resident decisions and funding. Legal work, discussions about how residents would decide shared matters, and digital tests can happen at the same time. Construction dates depend on the chosen project, funding and permissions.'))
     roadmap += '<div class="guide-status">' + text(('Onde estamos', 'Where we stand'), 'h2')
-    roadmap += text(('O projeto está em preparação. O site, os documentos, os desenhos e o orçamento de Rafael estão publicados. A estrutura jurídica está em definição; a operação de moradia e a tesouraria na blockchain ainda não estão demonstradas. O modelo do token permanece em pesquisa.', 'The project is in preparation. The website, documents, drawings and Rafael’s budget are published. The legal structure is being defined; the housing operation and onchain treasury have not yet been demonstrated. The token model remains under research.')) + '</div>'
+    roadmap += text(('O projeto está em preparação. O site, os documentos, os desenhos e o orçamento de Rafael estão publicados. A forma jurídica está em definição; ainda falta demonstrar o funcionamento das moradias e o uso de blockchain para guardar e pagar recursos do projeto. O modelo do token permanece em pesquisa.', 'The project is in preparation. The website, documents, drawings and Rafael’s budget are published. The legal form is being defined. Running the homes and using blockchain to hold and pay project funds still need to be demonstrated. The token model remains under research.')) + '</div>'
     roadmap += '<nav class="guide-jump" aria-label="Sections">' + text(('Etapas', 'Stages'), 'a', 'href="#stages"')
     roadmap += text(('Quem participa', 'Who takes part'), 'a', 'href="#participation"')
     roadmap += text(('Decisões compartilhadas', 'Shared decisions'), 'a', 'href="#governance"')
@@ -95,18 +95,20 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += text(('Relatórios do projeto', 'Project reports'), 'a', 'href="#ico-comparison"')
     roadmap += text(('Perguntas', 'Questions'), 'a', 'href="faq.html"') + '</nav>'
     roadmap += '<section id="stages">' + text(('Etapas de desenvolvimento', 'Development stages'), 'h2')
+    roadmap += text(('Abra uma etapa para ver os prazos, o trabalho previsto, o que precisa estar pronto e o que impediria o avanço.', 'Open a stage to see its timing, planned work, what needs to be ready and what would stop it.'))
     for i, stage in enumerate(guide['stages'], 1):
-        roadmap += f'<article class="roadmap-stage" id="{esc(stage["id"])}"><span class="eyebrow">{i:02}</span>'
-        roadmap += text(stage['title'], 'h3') + text(stage['window'], 'p', 'class="guide-window"')
-        roadmap += '<dl>'
-        for label, key in [(('Funções responsáveis propostas', 'Proposed responsible roles'), 'responsible'),
-                           (('Prazo e dependências', 'Timing and dependencies'), 'schedule'),
-                           (('O que está previsto', 'Planned scope'), 'work'),
-                           (('Resultado esperado', 'Intended outcome'), 'gate'),
-                           (('Condição de suspensão', 'Reason to pause'), 'pause'),
-                           (('Progresso público', 'Public progress'), 'web')]:
+        roadmap += f'<details class="roadmap-stage" id="{esc(stage["id"])}"><summary><span class="eyebrow">{i:02}</span>'
+        roadmap += text(stage['title'], 'h3') + text(stage['window'], 'span', 'class="guide-window"')
+        roadmap += '<span class="stage-owner">' + text(('Quem: ', 'Who: '), 'strong') + text(stage['overview_owner'], 'span') + '</span>'
+        roadmap += '<span class="stage-needs">' + text(('Precisa de: ', 'Needs: '), 'strong') + text(stage['overview_needs'], 'span') + '</span></summary><dl>'
+        for label, key in [(('Quem faria o trabalho', 'Who would do the work'), 'responsible'),
+                           (('Quando poderia acontecer', 'When it could happen'), 'schedule'),
+                           (('O trabalho previsto', 'The planned work'), 'work'),
+                           (('O que precisa estar pronto', 'What needs to be ready'), 'gate'),
+                           (('O que impediria esta etapa', 'What would stop this stage'), 'pause'),
+                           (('O que as pessoas poderiam acompanhar', 'What people could follow'), 'web')]:
             roadmap += text(label, 'dt') + text(stage[key], 'dd')
-        roadmap += '</dl></article>'
+        roadmap += '</dl></details>'
     roadmap += '</section>'
 
     participation = guide['participation']
@@ -129,8 +131,8 @@ def build_guide(root, page, tr, esc, language_controls):
 
     # Keep old shared anchors usable while linking the single detailed reading page.
     roadmap += '<section id="settlement"><span id="ramp-options"></span>' + text(
-        ('Dinheiro e transparência', 'Money and transparency'), 'h2')
-    roadmap += text(('Veja como o dinheiro entraria, o que precisa pagar e o que conferir antes de usar pagamentos na blockchain.', 'See how money would come in, what it needs to pay for and what to check before using blockchain payments.'))
+        ('Financiamento e gastos', 'Funding and spending'), 'h2')
+    roadmap += text(('Veja o fluxo de caixa proposto, as despesas previstas e o que conferir antes de usar pagamentos na blockchain.', 'See the proposed cash flow, planned spending and checks needed before using blockchain payments.'))
     roadmap += text(('Ver fluxos, fontes e decisões ↗', 'View flows, sources and decisions ↗'),
                     'a', 'class="button" href="transparency.html"') + '</section>'
 
@@ -224,15 +226,15 @@ def build_guide(root, page, tr, esc, language_controls):
                          'a', 'href="model-guide.json" download')
     transparency += text(('Roteiro do projeto', 'Project roadmap'), 'a', 'href="roadmap.html"')
     transparency += text(('Todos os documentos', 'All documents'), 'a', 'href="resources.html"') + '</div></main>'
-    (root / 'transparency.html').write_text(page('IMOBX | Money and transparency', transparency,
-        '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Dinheiro e transparência'))
+    (root / 'transparency.html').write_text(page('IMOBX | Funding and spending', transparency,
+        '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
 
     roadmap += '<section id="governance">' + text(('Quem decide o quê?', 'Who decides what?'), 'h2')
-    roadmap += text(('No modelo proposto, uma pessoa pode morar, trabalhar e investir no mesmo projeto. Cada relação tem seus próprios direitos e responsabilidades.', 'In the proposed model, one person may live, work and invest in the same project. Each relationship has its own rights and responsibilities.'))
+    roadmap += text(('Uma pessoa poderia morar numa casa, trabalhar para a IMOBX e investir no projeto. Cada relação tem seus próprios direitos e responsabilidades.', 'One person could live in a home, work for IMOBX and invest in the project. Each relationship has its own rights and responsibilities.'))
     headings = [('Decisão', 'Decision'), ('Quem decidiria', 'Who would decide'), ('Limites e conferências', 'Limits and checks')]
     rows = [
         [('Moradia e compra', 'Occupancy and purchase'),
-         ('Morador e entidade, pelo contrato e pela lei.', 'Resident and entity, through agreement and law.'),
+         ('O morador e a organização, conforme o contrato e a lei.', 'The resident and the organisation, under their agreement and the law.'),
          ('Uma votação de tokens não muda sozinha o contrato da família. É preciso poder questionar e pedir revisão.', 'A token vote cannot change a family’s agreement on its own. People need a way to question a decision and ask for review.')],
         [('Uso de espaços e manutenção local', 'Shared spaces and local maintenance'),
          ('Uma opção para discutir: voz igual para cada membro do grupo de moradores.', 'One option to discuss: equal voice for each member of the resident group.'),
@@ -252,7 +254,7 @@ def build_guide(root, page, tr, esc, language_controls):
     for row in rows:
         roadmap += '<tr>' + ''.join(text(cell, 'td') for cell in row) + '</tr>'
     roadmap += '</tbody></table></div>'
-    roadmap += text(('A experiência e o trabalho realizado podem orientar a escolha de responsáveis. A proposta combina funções com prazo definido, revisão das decisões e participação de novos moradores, sem vincular a voz dos moradores ao saldo de tokens.', 'Experience and completed work can inform appointments. The proposal combines time-limited roles, decision reviews and participation by new residents, without tying residents’ voice to token balances.'))
+    roadmap += text(('A experiência e o trabalho realizado podem orientar a escolha de responsáveis. A proposta combina funções com prazo definido, revisão das decisões e participação de novos moradores, sem vincular a voz dos moradores ao saldo de tokens.', 'Experience and completed work can inform appointments. People would hold roles for an agreed period. Residents could question decisions, replace representatives and let newcomers take on responsibilities. A resident’s voice would not depend on how many tokens they hold.'))
     roadmap += links(['ica', 'ostrom'])
     roadmap += text(('Aplicando Ostrom ao piloto', 'Applying Ostrom to the pilot'), 'h3')
     principles = [
@@ -276,7 +278,7 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += text(('O acompanhamento proposto reúne os contratos, os gastos e os resultados de cada projeto. Valores previstos, recebidos e gastos aparecem separadamente.', 'The proposed reporting brings together each project’s agreements, spending and results. Forecast, received and spent amounts are shown separately.'))
     comparison = [
         [('Imóvel e contratos', 'Property and agreements'),
-         ('Direito documentado de uso do imóvel e condições de moradia.', 'Documented property authority and housing terms.')],
+         ('Direito documentado de uso do imóvel e condições de moradia.', 'Documents showing the legal right to use the property and housing terms.')],
         [('Recebimentos e gastos', 'Receipts and spending'),
          ('Origem, finalidade e comprovante de cada pagamento, com conferência por outra pessoa.', 'Source, purpose and receipt for each payment, reviewed by another person.')],
         [('Decisões', 'Decisions'),
@@ -300,19 +302,33 @@ def build_guide(root, page, tr, esc, language_controls):
     faq_body += text(('Moradia, dinheiro, participação e ferramentas: o que planejamos e o que ainda falta decidir.', 'Homes, money, participation and tools: what we plan and what remains undecided.'), 'p', 'class="guide-lead"')
     faq_body += '<nav class="guide-jump" aria-label="Sections">' + text(('Roteiro', 'Roadmap'), 'a', 'href="roadmap.html"')
     faq_body += text(('Quem decide o quê?', 'Who decides what?'), 'a', 'href="roadmap.html#governance"')
-    faq_body += text(('Dinheiro e transparência', 'Money and transparency'), 'a', 'href="transparency.html"')
+    faq_body += text(('Financiamento e gastos', 'Funding and spending'), 'a', 'href="transparency.html"')
     faq_body += text(('Quem participa', 'Who takes part'), 'a', 'href="roadmap.html#participation"') + '</nav>' + faq() + '</main>'
     (root / 'faq.html').write_text(page('IMOBX | Model questions', faq_body,
         '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Perguntas sobre o modelo'))
 
     home = root / 'index.html'
-    cards = '<div class="solution-principles">'
-    for item in journey['home_cards']:
-        cards += '<article>' + text(item['title'], 'h3') + text(item['body'])
-        cards += text(item['label'], 'a', f'href="{esc(item["url"])}"') + '</article>'
-    cards += '</div>'
-    home_source, count = re.subn(r'<div class="solution-principles">.*?</div>',
-                                lambda _: cards, home.read_text(), count=1, flags=re.S)
+    overview = guide['home_overview']
+    housing = '<section class="content wrap solution-section" id="modelo" aria-labelledby="home-purchase-title">'
+    housing += '<header class="home-model-heading">' + text(('01 / A solução em estudo', '01 / The proposed solution'), 'span', 'class="eyebrow"')
+    housing += text(overview['title'], 'h2', 'id="home-purchase-title"') + text(overview['intro']) + '</header>'
+    housing += '<div class="home-model-layout"><div class="home-purchase"><ol class="home-purchase-steps">'
+    for step in overview['steps']:
+        housing += '<li>' + text(step['title'], 'h3') + text(step['body']) + '</li>'
+    housing += '</ol><aside class="home-purchase-terms" id="participation-summary">'
+    housing += text(overview['terms_title'], 'h3') + text(overview['terms_status'])
+    housing += '<details>' + text(overview['terms_more_title'], 'summary') + text(overview['terms_more_body']) + '</details></aside>'
+    housing += text(overview['link'], 'a', 'class="button" href="rent-to-own.html"') + '</div>'
+    housing += '<aside class="home-village-vision" id="visao-rafael">' + text(overview['vision_title'], 'h3') + text(overview['vision_intro'])
+    housing += '<figure class="village-illustration"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" '
+    housing += 'alt="Ilustração conceitual da vila imaginada por Rafael, com casas e espaços compartilhados." '
+    housing += 'data-alt-pt="Ilustração conceitual da vila imaginada por Rafael, com casas e espaços compartilhados." '
+    housing += 'data-alt-en="Concept illustration of Rafael’s village vision, with homes and shared spaces.">'
+    housing += '<figcaption>' + text(overview['vision_caption']) + '</figcaption></figure>'
+    housing += text(overview['vision_decisions']) + text(overview['vision_link'], 'a', 'href="rent-to-own.html#decisions"')
+    housing += '</aside></div></section>'
+    home_source, count = re.subn(r'<section class="content wrap solution-section" id="modelo"[^>]*>.*?</section>',
+                                lambda _: housing, home.read_text(), count=1, flags=re.S)
     if count != 1:
         raise ValueError('Expected one homepage housing explanation.')
     source, count = re.subn(r'<section class="content wrap scale-section" id="etapas">.*?</section>(?=<section class="content tint" id="digital">)',

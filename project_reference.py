@@ -7,8 +7,8 @@ import json
 import re
 from urllib.parse import urljoin
 
-VERSION = '0.6'
-REVIEW_DATE = '2026-10-17'
+VERSION = '0.7'
+REVIEW_DATE = '2026-10-19'
 
 
 def build_reference(root, page, tr, esc):
