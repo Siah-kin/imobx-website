@@ -8,7 +8,7 @@ import re
 from urllib.parse import urljoin
 
 VERSION = '0.7'
-REVIEW_DATE = '2026-10-19'
+REVIEW_DATE = '2026-10-21'
 
 
 def build_reference(root, page, tr, esc):
@@ -99,7 +99,7 @@ def write_manifest(root):
              'project-reference-pt.pdf', 'project-reference-en.pdf', 'reference.html',
              'whitepaper.md', 'whitepaper.html', 'whitepaper.pdf', 'devsheet.md', 'devsheet.html', 'devsheet.pdf',
              'pitchdeck.json', 'pitchdeck.md', 'pitchdeck.html', 'pitchdeck.pdf', 'pitchdeck.pptx',
-             'roadmap.html', 'transparency.html', 'faq.html', 'resources.html', 'model-guide.json',
+             'roadmap.html', 'transparency.html', 'resources.html', 'model-guide.json',
              'contact.html', 'contact-routes.json', 'assets/contact.js', 'assets/contact.css']
     data = {'version': VERSION, 'reviewed': REVIEW_DATE, 'status': 'Project proposal; no investment offer',
             'reference': 'reference.html',

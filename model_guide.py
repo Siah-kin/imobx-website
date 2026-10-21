@@ -2,6 +2,39 @@
 import json
 import re
 
+# FAQ items that moved into rent-to-own.html; the other questions moved into transparency.html.
+HOUSEHOLD_FAQ = ('home-purchase', 'home-repairs', 'home-exit', 'home-decisions', 'home-participate', 'tenant-access')
+
+
+def new_faq_location(old_link):
+    """Where a link to the retired faq.html now points: faq.html#faq-<id> -> the page that holds the item."""
+    match = re.fullmatch(r'faq\.html(?:#faq-([a-z0-9-]+))?', old_link)
+    if not match:
+        return old_link
+    ident = match.group(1)
+    if not ident:
+        return 'rent-to-own.html#questions'
+    page_name = 'rent-to-own.html' if ident in HOUSEHOLD_FAQ else 'transparency.html'
+    return f'{page_name}#faq-{ident}'
+
+
+def redirect_stub(title, heading, target, open_label, per_question=None):
+    """A page that has moved: meta refresh, a visible link, one PT/EN line. Same pattern as buy.html.
+    per_question maps an old #faq-<id> anchor to the page that now holds it, so old links land on the item."""
+    script = ''
+    if per_question:
+        script = ('<script>(function(){var m=' + json.dumps(per_question) + ';var h=location.hash;var t=' + json.dumps(target) + ';'
+                  'if(h.indexOf("#faq-")===0&&m[h.slice(5)])t=m[h.slice(5)]+h;'
+                  'var a=document.getElementById("moved-link");if(a)a.href=t;location.replace(t);})();</script>')
+    refresh = f'<meta http-equiv="refresh" content="0;url={target}">'
+    if per_question:
+        refresh = '<noscript>' + refresh + '</noscript>'
+    return ('<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+            f'<title>{title}</title>{refresh}<link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css"></head>'
+            '<body><main class="paper"><a href="index.html"><img class="brand-logo" src="assets/imobx-logo-light.png" width="94" height="94" alt="IMOBX"></a>'
+            f'<h1>{heading}</h1><p>Esta página foi atualizada. / This page has moved.</p>'
+            f'<p><a id="moved-link" href="{target}">Abrir a versão atual / {open_label}</a></p></main>{script}</body></html>')
+
 
 def build_guide(root, page, tr, esc, language_controls):
     guide = json.loads((root / 'model-guide.json').read_text())
@@ -14,8 +47,8 @@ def build_guide(root, page, tr, esc, language_controls):
                 'The ICA’s statement of cooperative identity informs how residents and members take part in shared decisions.'),
         'ostrom': ('A pesquisa de Elinor Ostrom sobre a gestão de recursos compartilhados orienta as regras para as decisões dos moradores.',
                    'Elinor Ostrom’s research on managing shared resources informs the rules for resident decisions.'),
-        'token-study': ('Um estudo da OCDE sobre registros de ativos digitais orienta o que o plano diz que um token pode e não pode fazer: ele não cria renda de aluguel, não verifica um prédio e não garante um comprador.',
-                        'An OECD study of digital asset records informs what the plan says a token can and cannot do: it cannot create rental income, verify a building or guarantee a buyer.'),
+        'token-study': ('A afirmação de que um token não cria renda de aluguel, não verifica um prédio e não garante um comprador é do próprio plano. O estudo da OCDE é um panorama geral sobre tokenização e não analisa a IMOBX.',
+                        'The statement that a token cannot create rental income, verify a building or guarantee a buyer is the plan’s own. The OECD study is general background on tokenisation and does not review IMOBX.'),
         'cvm': ('O Parecer de Orientação 40 da CVM, órgão que regula o mercado de valores do Brasil, orienta como o plano descreve os direitos de um investimento: conta o que ele realmente dá, não o nome.',
                 'Guidance Opinion 40 from the CVM, Brazil’s securities-market regulator, informs how the plan describes investment rights: what counts is what an investment actually gives, not its name.'),
         'digital': ('O trabalho digital proposto está detalhado na seção do whitepaper sobre o que se torna digital.',
@@ -27,13 +60,31 @@ def build_guide(root, page, tr, esc, language_controls):
     }
 
     own_source_labels = {
+        'cvm': ('CVM · Parecer de Orientação 40', 'CVM · Guidance Opinion 40'),
+        'nonprofit': ('Lei 13.019 · art. 2º, I, a', 'Law 13.019 · article 2, I, a'),
+        'ica': ('ICA · Identidade cooperativa', 'ICA · Cooperative identity'),
+        'ostrom': ('Elinor Ostrom · Palestra do Nobel', 'Elinor Ostrom · Nobel lecture'),
+        'arc': ('Arc · Litepaper', 'Arc · Litepaper'),
+        'arctide': ('Arctide · exchange na Arc', 'Arctide · exchange on Arc'),
+        'argus': ('Argus · exchange na Arc', 'Argus · exchange on Arc'),
         'cash': ('Whitepaper, seção 4: a política de caixa', 'Whitepaper, section 4: the cash policy'),
         'rights': ('Whitepaper, seção 8: o que um token poderia representar', 'Whitepaper, section 8: what a token could represent'),
         'digital': ('Whitepaper, seção 9: o que passa a ser digital', 'Whitepaper, section 9: what becomes digital'),
         'technical': ('Guia do piloto, seção 6: escopo e aceitação', 'Pilot guide, section 6: scope and acceptance'),
-        'roadmap': ('Roteiro', 'Roadmap'),
-        'charter': ('Roteiro: quem decide o quê', 'Roadmap: who decides what'),
+        'roadmap': ('Etapas do projeto', 'Project stages'),
+        'charter': ('Etapas do projeto: quem decide o quê', 'Project stages: who decides what'),
         'cost': ('Whitepaper, seção 3: os custos', 'Whitepaper, section 3: the costs'),
+        'sinapi': ('CAIXA · SINAPI', 'CAIXA · SINAPI'),
+        'cub': ('Sinduscon · escopo do CUB', 'Sinduscon · CUB scope'),
+        'cnpj': ('Receita Federal · entidades estrangeiras e CNPJ', 'Receita Federal · foreign entities and CNPJ'),
+        'title': ('Código Civil · art. 1.245', 'Civil Code · article 1,245'),
+        'mb': ('Mercado Bitcoin · elegibilidade de contas', 'Mercado Bitcoin · account eligibility'),
+        'bcb': ('Banco Central · Resolução 521', 'Central Bank · Resolution 521'),
+        'settlement': ('Fluxo reais ↔ moeda digital', 'Reais ↔ digital money flow'),
+        'ramp-options': ('Opções de conversão e elegibilidade', 'Conversion options and eligibility'),
+        'community-economy': ('Economia comunitária proposta', 'Proposed community economy'),
+        'token-study': ('OCDE · Estudo sobre registros de ativos digitais', 'OECD · Study of digital asset records'),
+        'reference-token': ('Token e divulgação', 'Token and outreach'),
     }
 
     def label_text(key):
@@ -59,26 +110,51 @@ def build_guide(root, page, tr, esc, language_controls):
             f'<a href="{esc(guide["sources"][key]["url"])}">{label_text(key)}</a>'
             for key in keys) + '</p>'
 
-    def faq(home=False):
-        items = [x for x in guide['questions'] if not home or x['home']]
+    FAQ_DETAIL_LABEL = ('Veja a explicação completa', 'Read the full explanation')
+
+    def faq_item(item, prefix, local_page=None, short=False):
+        """One collapsible question. Links to a section of the page it sits on drop the file name."""
+        answers = item['short'] if short and item.get('short') else item['a']
+        body = f'<details id="{prefix}{esc(item["id"])}">' + text(item['q'], 'summary')
+        body += ''.join(text(pair) for pair in answers) + (links(item['sources']) if item['sources'] else '')
+        if item.get('detail_url'):
+            target = item['detail_url']
+            if local_page and target.startswith(local_page + '#'):
+                target = target[len(local_page):]
+            body += text(FAQ_DETAIL_LABEL, 'a', f'href="{esc(target)}"')
+        return body + '</details>'
+
+    def faq(home=True):
+        """The homepage subset. Its anchors are home-faq-<id>: each faq-<id> anchor exists once, on the page that holds the full item."""
         body = '<div class="faq" id="faq">' + text(
             ('Perguntas sobre o projeto', 'Questions about the project'), 'h2')
         body += text(('Como o projeto funcionaria e o que ainda falta decidir.', 'How the project would work and what remains undecided.'))
-        for item in items:
-            body += f'<details id="faq-{esc(item["id"])}">' + text(item['q'], 'summary')
-            body += ''.join(text(pair) for pair in item['a']) + (links(item['sources']) if item['sources'] else '') + '</details>'
-            if item.get('detail_url'):
-                body = body[:-len('</details>')] + text(
-                    ('Veja a explicação completa', 'Read the full explanation'), 'a',
-                    f'href="{esc(item["detail_url"])}"') + '</details>'
-        if not home:
-            body += '<span id="faq-thanks-zeal-lets"></span><span id="faq-euler"></span>'
-            body += text(('Quem participa e quais direitos precisa combinar', 'Who takes part and which rights need agreement'),
-                         'a', 'class="guide-more" href="roadmap.html#participation"')
-        if home:
-            body += text(('Mais perguntas sobre moradia, financiamento e decisões', 'More questions about homes, funding and decisions'),
-                         'a', 'class="guide-more" href="faq.html"')
+        body += ''.join(faq_item(x, 'home-faq-') for x in guide['questions'] if x['home'])
+        body += text(('Mais perguntas das famílias', 'More questions families ask'),
+                     'a', 'class="guide-more" href="rent-to-own.html#questions"')
         return body + '</div>'
+
+    family_questions = [x for x in guide['questions'] if x['id'] in HOUSEHOLD_FAQ]
+    funding_questions = [x for x in guide['questions'] if x['id'] not in HOUSEHOLD_FAQ]
+
+    def family_faq_section():
+        body = '<section class="faq" id="questions">' + text(('Perguntas das famílias', 'Questions families ask'), 'h2')
+        body += ''.join(faq_item(x, 'faq-', 'rent-to-own.html', short=True) for x in family_questions)
+        body += text(('Mais perguntas, sobre financiamento e governança', 'More questions, about funding and governance'),
+                     'a', 'class="guide-more" href="transparency.html#funding-questions"')
+        return body + '</section>'
+
+    def funding_faq_section():
+        body = '<section class="faq" id="funding-questions">' + text(
+            ('Perguntas sobre financiamento, tokens e governança', 'Questions about funding, tokens and governance'), 'h2')
+        body += text(('Como o projeto funcionaria e o que ainda falta decidir.', 'How the project would work and what remains undecided.'))
+        body += ''.join(faq_item(x, 'faq-', 'transparency.html') for x in funding_questions)
+        body += '<span id="faq-thanks-zeal-lets"></span><span id="faq-euler"></span>'
+        body += text(('Quem participa e quais direitos precisa combinar', 'Who takes part and which rights need agreement'),
+                     'a', 'class="guide-more" href="roadmap.html#participation"')
+        body += text(('Perguntas das famílias sobre aluguel e compra da casa', 'Questions families ask about renting and buying the home'),
+                     'a', 'class="guide-more" href="rent-to-own.html#questions"')
+        return body + '</section>'
 
     journey = guide['resident_journey']
     resident = '<main class="paper guide-paper resident-page" id="main">'
@@ -88,7 +164,8 @@ def build_guide(root, page, tr, esc, language_controls):
     for ident, label in [('payments', ('Pagamentos e compra', 'Payments and purchase')),
                          ('repairs', ('Reparos', 'Repairs')), ('decisions', ('Decisões', 'Decisions')),
                          ('hardship', ('Dificuldade de pagamento e saída', 'Hardship and leaving')),
-                         ('funding', ('Financiamento', 'Funding')), ('property', ('Imóveis e parceiros', 'Property and partners'))]:
+                         ('funding', ('Financiamento', 'Funding')), ('property', ('Imóveis e parceiros', 'Property and partners')),
+                         ('questions', ('Perguntas', 'Questions'))]:
         resident += text(label, 'a', f'href="#{ident}"')
     resident += '</nav><section id="payments">' + text(journey['steps_title'], 'h2') + '<ol>'
     for step in journey['steps']:
@@ -104,18 +181,18 @@ def build_guide(root, page, tr, esc, language_controls):
             'repairs': ('roadmap.html#governance', ('Quem cuida do trabalho e como questionar uma decisão', 'Who handles the work and how to question a decision')),
             'decisions': ('roadmap.html#participation', ('Como os papéis se relacionam', 'How participant roles fit together')),
             'hardship': ('reference.html#status', ('Situação atual e documentos disponíveis', 'Current status and available documents')),
-            'funding': ('transparency.html#community-economy', ('Orçamentos, fontes de recursos e pagamentos', 'Budgets, funding sources and payments')),
+            'funding': ('transparency.html#faq-funding', ('De onde viria o dinheiro para as casas', 'Where the money for the homes would come from')),
             'property': ('contact.html?role=property', ('Preparar uma apresentação do imóvel', 'Prepare a property introduction')),
             'next': ('contact.html?role=resident', ('Preparar uma conversa sobre moradia', 'Prepare a housing conversation')),
         }[ident]
         resident += text(label, 'a', f'href="{target}"') + '</section>'
-    resident += '</main>'
+    resident += family_faq_section() + '</main>'
     (root / 'rent-to-own.html').write_text(page('IMOBX | Renting and buying a home', resident,
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | Aluguel e compra da casa'))
 
     summary = '<section class="content wrap scale-section" id="etapas"><span id="dinheiro"></span>'
     summary += text(('Etapas do projeto', 'Project stages'), 'h2')
-    summary += text(('O caminho da IMOBX reúne moradia com opção de compra, participação dos moradores e contas transparentes. O primeiro projeto está em preparação; a estrutura jurídica, as regras de participação e as ferramentas digitais estão em desenvolvimento.', 'IMOBX’s roadmap brings together rent-to-own housing, resident participation and transparent accounts. The first project is in preparation, with the legal structure, participation rules and digital tools under development.'))
+    summary += text(('O caminho da IMOBX reúne moradia com opção de compra, participação dos moradores e contas transparentes. A estrutura jurídica, as regras de participação e as ferramentas digitais estão em desenvolvimento.', 'IMOBX’s roadmap brings together rent-to-own housing, resident participation and transparent accounts. The legal structure, participation rules and digital tools are under development.'))
     summary += '<ol class="roadmap-overview">'
     for i, stage in enumerate(guide['stages'], 1):
         summary += '<li><div>'
@@ -134,10 +211,10 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '<nav class="guide-jump" aria-label="Sections">' + text(('Etapas', 'Stages'), 'a', 'href="#stages"')
     roadmap += text(('Quem participa', 'Who takes part'), 'a', 'href="#participation"')
     roadmap += text(('Decisões compartilhadas', 'Shared decisions'), 'a', 'href="#governance"')
-    roadmap += text(('Transparência', 'Transparency'), 'a', 'href="transparency.html"')
+    roadmap += text(('Financiamento e gastos', 'Funding and spending'), 'a', 'href="transparency.html"')
     roadmap += text(('Referência e fontes', 'Reference and sources'), 'a', 'href="reference.html"')
     roadmap += text(('Relatórios do projeto', 'Project reports'), 'a', 'href="#ico-comparison"')
-    roadmap += text(('Perguntas', 'Questions'), 'a', 'href="faq.html"') + '</nav>'
+    roadmap += text(('Perguntas', 'Questions'), 'a', 'href="transparency.html#funding-questions"') + '</nav>'
     roadmap += '<section id="stages">' + text(('Etapas de desenvolvimento', 'Development stages'), 'h2')
     roadmap += text(('Abra uma etapa para ver os prazos, o trabalho previsto, o que precisa estar pronto e o que impede o avanço.', 'Open a stage to see its timing, planned work, what needs to be ready and what stops it.'))
     for i, stage in enumerate(guide['stages'], 1):
@@ -226,7 +303,8 @@ def build_guide(root, page, tr, esc, language_controls):
                           (('Próximos passos', 'Next steps'), 'next-steps'),
                           (('Relatórios', 'Reports'), 'reporting'),
                           (('Fontes', 'Sources'), 'sources'),
-                          (('Atualizações', 'Updates'), 'updates')]:
+                          (('Atualizações', 'Updates'), 'updates'),
+                          (('Perguntas', 'Questions'), 'funding-questions')]:
         transparency += text(label, 'a', f'href="#{target}"')
     transparency += '</nav>'
     transparency += '<section id="household-payments">' + text(
@@ -260,14 +338,14 @@ def build_guide(root, page, tr, esc, language_controls):
         transparency += '</summary><ul>'
         for key in group['keys']:
             source = guide['sources'][key]
-            transparency += f'<li><a href="{esc(source["url"])}">{esc(source["label"])}</a></li>'
+            transparency += f'<li><a href="{esc(source["url"])}">{label_text(key)}</a></li>'
         transparency += '</ul></details>'
     transparency += '</section><section id="updates">' + text(public['changes_title'], 'h2')
     transparency += '<ol class="transparency-updates">'
     for change in public['changes']:
         transparency += '<li><time datetime="' + esc(change['date']) + '">' + esc(change['date']) + '</time>'
         transparency += text(change['title'], 'h3') + text(change['body']) + '</li>'
-    transparency += '</ol>' + text(public['maintenance']) + '</section><div class="guide-jump">'
+    transparency += '</ol>' + text(public['maintenance']) + '</section>' + funding_faq_section() + '<div class="guide-jump">'
     transparency += text(('Para desenvolvedores: conteúdo da página (JSON)', 'For developers: page content (JSON)'),
                          'a', 'href="model-guide.json" download')
     transparency += text(('Roteiro do projeto', 'Project roadmap'), 'a', 'href="roadmap.html"')
@@ -339,15 +417,12 @@ def build_guide(root, page, tr, esc, language_controls):
     (root / 'roadmap.html').write_text(page('IMOBX | Roadmap', roadmap,
         '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Roteiro'))
 
-    faq_body = '<main class="paper guide-paper" id="main">' + language_controls
-    faq_body += text(('Como funciona a proposta IMOBX?', 'How does the IMOBX proposal work?'), 'h1')
-    faq_body += text(('Moradia, dinheiro, participação e ferramentas: o que planejamos e o que ainda falta decidir.', 'Homes, money, participation and tools: what we plan and what remains undecided.'), 'p', 'class="guide-lead"')
-    faq_body += '<nav class="guide-jump" aria-label="Sections">' + text(('Roteiro', 'Roadmap'), 'a', 'href="roadmap.html"')
-    faq_body += text(('Quem decide o quê?', 'Who decides what?'), 'a', 'href="roadmap.html#governance"')
-    faq_body += text(('Financiamento e gastos', 'Funding and spending'), 'a', 'href="transparency.html"')
-    faq_body += text(('Quem participa', 'Who takes part'), 'a', 'href="roadmap.html#participation"') + '</nav>' + faq() + '</main>'
-    (root / 'faq.html').write_text(page('IMOBX | Model questions', faq_body,
-        '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Perguntas sobre o modelo'))
+    stub_targets = {item['id']: ('rent-to-own.html' if item['id'] in HOUSEHOLD_FAQ else 'transparency.html')
+                    for item in guide['questions']}
+    stub_targets.update({'thanks-zeal-lets': 'transparency.html', 'euler': 'transparency.html'})
+    (root / 'faq.html').write_text(redirect_stub(
+        'IMOBX | Perguntas sobre o modelo', 'Perguntas sobre o modelo', 'rent-to-own.html#questions',
+        'Open the current version →', per_question=stub_targets))
 
     home = root / 'index.html'
     overview = guide['home_overview']

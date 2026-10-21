@@ -299,14 +299,20 @@
           "IMOBX proposes that a household rent a home while paying towards buying the whole property. The agreement records how much of each payment counts towards the purchase. Once the agreed conditions are met, ownership passes to the household through the property transfer."
         ],
         [
-          "Ainda não há prestação anunciada. O preço da casa, a prestação mensal, o prazo e os reajustes precisam caber no orçamento da família e nos custos do projeto.",
+          "Ainda não há pagamento mensal anunciado. O preço da casa, o pagamento mensal, o prazo e os reajustes precisam caber no orçamento da família e nos custos do projeto.",
           "No monthly payment has been announced. The home’s price, monthly payment, time to pay and any price changes have to fit the family’s budget and the project’s costs."
         ]
       ],
       "sources": [
         "cost"
       ],
-      "detail_url": "rent-to-own.html#payments"
+      "detail_url": "rent-to-own.html#payments",
+      "short": [
+        [
+          "A proposta da IMOBX é que a família more de aluguel enquanto paga pela compra da casa inteira. Ainda não há pagamento mensal anunciado.",
+          "IMOBX proposes that a household rent a home while paying towards buying the whole property. No monthly payment has been announced."
+        ]
+      ]
     },
     {
       "id": "home-repairs",
@@ -328,7 +334,13 @@
       "sources": [
         "digital"
       ],
-      "detail_url": "rent-to-own.html#repairs"
+      "detail_url": "rent-to-own.html#repairs",
+      "short": [
+        [
+          "O contrato precisa distinguir os reparos pagos pela organização daqueles que cabem à família. Ainda faltam a divisão desses custos, os prazos de atendimento, o contato responsável e a forma de revisar uma cobrança ou um serviço contestado.",
+          "The agreement needs to distinguish repairs paid for by the organization from those the household pays for. Who pays, how quickly repairs are handled, who to contact and how to question a charge or repair have not yet been agreed."
+        ]
+      ]
     },
     {
       "id": "home-exit",
@@ -346,11 +358,17 @@
       "sources": [
         "cash"
       ],
-      "detail_url": "rent-to-own.html#hardship"
+      "detail_url": "rent-to-own.html#hardship",
+      "short": [
+        [
+          "Essas condições ainda não estão definidas. Não estamos anunciando devolução automática, prazo de tolerância ou desconto já aprovado.",
+          "Those terms have not been defined. No automatic refund, grace period or approved discount is being announced."
+        ]
+      ]
     },
     {
       "id": "home-decisions",
-      "home": true,
+      "home": false,
       "q": [
         "Quem decide os assuntos comuns?",
         "Who decides shared matters?"
@@ -361,16 +379,22 @@
           "Study-room hours, courtyard use, shared-space repair priorities and choosing representatives are for residents to decide. One option under discussion is one vote per member, with representatives who can be replaced."
         ],
         [
-          "A participação dos moradores não depende de investir dinheiro. Um voto sobre o pátio não muda, por si só, o contrato de uma família, e quem investe recebe somente os direitos escritos no seu acordo.",
-          "Residents’ say does not depend on investing money. A vote about the courtyard does not, by itself, change a family’s agreement, and investors receive only the rights written in their agreement."
+          "A participação dos moradores não depende de investir dinheiro. Nenhuma votação muda sozinha o contrato de moradia de uma família nem o preço de compra combinado, e quem investe recebe somente os direitos escritos no seu acordo.",
+          "Residents’ say does not depend on investing money. No vote can on its own change a family’s housing agreement or its agreed purchase price, and investors receive only the rights written in their agreement."
         ]
       ],
       "sources": [],
-      "detail_url": "rent-to-own.html#decisions"
+      "detail_url": "rent-to-own.html#decisions",
+      "short": [
+        [
+          "Horários da sala de estudos, uso do pátio, prioridades de reparo dos espaços comuns e escolha de representantes são assuntos dos moradores. A participação dos moradores não depende de investir dinheiro. Nenhuma votação muda sozinha o contrato de moradia de uma família nem o preço de compra combinado, e quem investe recebe somente os direitos escritos no seu acordo.",
+          "Study-room hours, courtyard use, shared-space repair priorities and choosing representatives are for residents to decide. Residents’ say does not depend on investing money. No vote can on its own change a family’s housing agreement or its agreed purchase price, and investors receive only the rights written in their agreement."
+        ]
+      ]
     },
     {
       "id": "home-participate",
-      "home": true,
+      "home": false,
       "q": [
         "Como posso participar?",
         "How can I take part?"
@@ -388,13 +412,13 @@
       "id": "tenant-access",
       "home": false,
       "q": [
-        "Preciso comprar tokens ou usar cripto para participar?",
-        "Would I need tokens or crypto to participate?"
+        "Preciso investir ou comprar algo para participar?",
+        "Do I need to invest or buy anything to take part?"
       ],
       "a": [
         [
-          "A proposta não exige que moradores comprem tokens de investimento, divulguem o projeto ou usem uma carteira de criptoativos. Os pagamentos da família são em reais. A participação nas decisões sobre os espaços e serviços comuns segue regras de membro ainda em discussão com os participantes.",
-          "The proposal does not require residents to buy investment tokens, promote the project or use a crypto wallet. Household payments are in reais. Participation in decisions about shared spaces and services follows membership rules still to be discussed with participants."
+          "Não. A participação dos moradores não depende de investir dinheiro. Os pagamentos da família são em reais. As regras para participar das decisões sobre os espaços e serviços comuns ainda estão em discussão com os participantes.",
+          "No. Residents’ say does not depend on investing money. Household payments are in reais. The rules for taking part in decisions about shared spaces and services are still being discussed with participants."
         ]
       ],
       "sources": [
@@ -497,8 +521,8 @@
           "A payment can be recorded; building quality needs an on-site check. Personal documents stay private. We will test whether a shared record reduces work or improves checking."
         ],
         [
-          "Arctide e Argus são exemplos de exchanges, ou plataformas de negociação, na rede Arc.",
-          "Arctide and Argus are examples of exchanges, or trading platforms, on the Arc network."
+          "Arctide e Argus são exemplos de exchanges, ou plataformas de negociação, na rede Arc. Essas plataformas existem de forma independente; não há uso nem parceria com a IMOBX.",
+          "Arctide and Argus are examples of exchanges, or trading platforms, on the Arc network. These platforms exist independently; there is no IMOBX use or partnership."
         ]
       ],
       "sources": [
@@ -677,8 +701,8 @@
           "Study-room hours, courtyard use, shared-space repair priorities and choosing representatives are examples of resident decisions. One option under discussion is one vote per member on these matters, with representatives who can be replaced."
         ],
         [
-          "A participação dos moradores não depende da compra de tokens, da divulgação do projeto nem de pontos por atividade online. Os direitos de um investidor seguem o acordo de investimento. Um voto sobre o pátio não muda, por si só, o preço de compra no contrato de uma família.",
-          "Residents’ participation does not depend on buying tokens, promoting the project or earning online activity points. Investor rights follow the investment agreement. A vote about the courtyard does not, by itself, change a household’s contracted purchase price."
+          "A participação dos moradores não depende da compra de tokens, da divulgação do projeto nem de pontos por atividade online. Os direitos de um investidor seguem o acordo de investimento. Nenhuma votação, nem mesmo de quem tem tokens, muda sozinha o contrato de moradia de uma família nem o preço de compra combinado.",
+          "Residents’ participation does not depend on buying tokens, promoting the project or earning online activity points. Investor rights follow the investment agreement. No vote, including a token vote, can on its own change a family’s housing agreement or its agreed purchase price."
         ]
       ],
       "sources": [
@@ -734,8 +758,8 @@
           "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
         ],
         [
-          "O canal de atendimento digital serve para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software organizam documentos e lembram pendências. Pagamentos na blockchain permitem conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
-          "The digital support channel lets people submit requests, follow progress and read decisions. Software assistants organise documents and remind people about unfinished tasks. Blockchain payments let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
+          "O canal de atendimento digital serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continuaria definido pelas regras acordadas, não pelo bot. Nada disso funciona ainda.",
+          "The digital support channel would let people submit requests, follow progress and read decisions. Software assistants could organise documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, would determine who may decide and spend. None of this is working yet."
         ],
         [
           "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
@@ -897,8 +921,8 @@
       {
         "id": "rent-onramp",
         "title": [
-          "1 / Do aluguel em reais ao caixa digital",
-          "1 / From rent in reais to digital project funds"
+          "Passo 1: do aluguel em reais ao caixa digital",
+          "Step 1: from rent in reais to digital project funds"
         ],
         "intro": [
           "A família não precisaria usar criptomoedas. A IMOBX poderia juntar os valores aprovados e fazer uma conversão, mantendo em reais o dinheiro das contas locais.",
@@ -974,8 +998,8 @@
       {
         "id": "construction-offramp",
         "title": [
-          "2 / De USDC ao pagamento da construtora em reais",
-          "2 / From USDC to a builder’s payment in reais"
+          "Passo 2: de USDC ao pagamento da construtora em reais",
+          "Step 2: from USDC to a builder’s payment in reais"
         ],
         "intro": [
           "Registrar de onde veio cada valor e para que ele pode ser usado, inclusive taxas e doações.",
@@ -1333,6 +1357,17 @@
       "Update record"
     ],
     "changes": [
+      {
+        "date": "2026-10-21",
+        "title": [
+          "Páginas reorganizadas para as famílias",
+          "Pages reorganised for families"
+        ],
+        "body": [
+          "As explicações para as famílias foram reescritas em linguagem simples; as perguntas sobre financiamento, tokens e governança passaram para esta página; o menu ficou com seis itens; o texto dos documentos foi revisto. Nada mudou nos valores, nos fatos ou nas decisões em aberto.",
+          "The explanations for families were rewritten in plain language; the questions about funding, tokens and governance moved to this page; the menu now has six items; the text of the documents was revised. No figures, facts or open decisions changed."
+        ]
+      },
       {
         "date": "2026-10-17",
         "title": [
@@ -1731,7 +1766,7 @@
       "IMOBX proposes that a household rent a home while paying towards buying the whole property. In the proposal, the agreement records how much of each payment counts towards the purchase. Once the agreed purchase conditions are met, ownership passes to the household through the property transfer."
     ],
     "status": [
-      "O primeiro projeto está em preparação. Ainda não há preço de compra, prestação mensal, parcela destinada à compra ou prazo de pagamento definidos para uma família. Esta página explica o modelo proposto; não é uma oferta de moradia disponível.",
+      "O primeiro projeto está em preparação. Ainda não há preço de compra, pagamento mensal, parcela destinada à compra ou prazo de pagamento definidos para uma família. Esta página explica o modelo proposto; não é uma oferta de moradia disponível.",
       "The first project is in preparation. No price, monthly payment or time to pay has been set for a household, and how much of each payment counts towards buying the home is not yet agreed. This page explains the proposed model. It is not an offer of an available home."
     ],
     "steps_title": [
@@ -1745,7 +1780,7 @@
           "The household agrees the price and payments"
         ],
         "body": [
-          "Antes de entrar, a família conhece o preço de compra, a prestação em reais e quanto conta para a compra. As regras também tratam de reajustes, reparos, atraso e saída do programa.",
+          "Antes de entrar, a família conhece o preço de compra, a pagamento em reais e quanto conta para a compra. As regras também tratam de reajustes, reparos, atraso e saída do programa.",
           "Before moving in, the household knows the purchase price, the payment in reais and the amount credited towards buying the home. The terms also cover price changes, repairs, missed payments and leaving the arrangement."
         ]
       },
@@ -1776,11 +1811,15 @@
     ],
     "payments": [
       [
-        "Ainda não há prestação anunciada. O preço da casa, a prestação mensal, o prazo e os reajustes precisam caber no orçamento da família e nos custos do projeto.",
+        "Cada mês, a família faz um pagamento. Uma parte é o aluguel da casa; outra parte conta para a compra. Quanto é cada parte ainda não foi definido.",
+        "Each month the family makes one payment. Part is rent for the home; part counts towards buying it. How much is which has not been decided."
+      ],
+      [
+        "Ainda não há pagamento mensal anunciado. O preço da casa, o pagamento mensal, o prazo e os reajustes precisam caber no orçamento da família e nos custos do projeto.",
         "No monthly payment has been announced. The home’s price, monthly payment, time to pay and any price changes have to fit the family’s budget and the project’s costs."
       ],
       [
-        "Os US$27.777 por casa de 45 m² são o orçamento de Rafael para uma vila com pelo menos 36 casas. O contrato dos dois lofts usa o mesmo total para os dois juntos. Nenhum desses valores é uma prestação mensal ou um preço de venda já oferecido a uma família.",
+        "Os US$27.777 por casa de 45 m² são o orçamento de Rafael para uma vila com pelo menos 36 casas. O contrato dos dois lofts usa o mesmo total para os dois juntos. Nenhum desses valores é um pagamento mensal ou um preço de venda já oferecido a uma família.",
         "US$27,777 per 45 m² home is Rafael’s budget for a village of at least 36 homes. The separate two-loft contract uses the same total for both lofts together. Neither figure is a monthly payment or a sale price already offered to a household."
       ]
     ],
@@ -1808,8 +1847,8 @@
         "Study-room hours, courtyard use, shared-space repair priorities and choosing representatives are for residents to decide. One option under discussion is one vote per member on these matters, with representatives who can be replaced."
       ],
       [
-        "A participação dos moradores não depende de investir dinheiro, divulgar o projeto ou ganhar pontos por atividade online. Quem investe recebe somente os direitos escritos no seu acordo, e nenhuma votação muda sozinha o contrato de moradia de uma família ou o preço de compra combinado.",
-        "Residents’ say does not depend on investing money, promoting the project or earning online activity points. Investors receive only the rights in their written agreement, and no vote can on its own change a family’s housing agreement or its agreed purchase price."
+        "A participação dos moradores não depende de investir dinheiro. Quem investe recebe somente os direitos escritos no seu acordo, e nenhuma votação muda sozinha o contrato de moradia de uma família ou o preço de compra combinado.",
+        "Residents’ say does not depend on investing money. Investors receive only the rights in their written agreement, and no vote can on its own change a family’s housing agreement or its agreed purchase price."
       ],
       [
         "O método de votação, os limites de gasto e a maneira de resolver uma discordância ainda precisam ser construídos com os participantes. Pela proposta, ferramentas digitais registrariam essas decisões, mostrariam os responsáveis e acompanhariam os pagamentos.",
@@ -1836,8 +1875,8 @@
         "The proposal brings together property contributors, a building team and project funders. A property can be donated, sold or leased to the organization; each arrangement needs its own agreement. Before construction, the budget has to show where the money for the contracted work and promises to families comes from."
       ],
       [
-        "Doações, editais, receitas de serviços e um investimento que a organização escolhida possa oferecer legalmente são fontes possíveis. A proposta não exige que os moradores comprem tokens ou usem uma carteira de criptoativos. Os pagamentos da família são em reais.",
-        "Sources include donations, grants, service income and investment that the chosen organisation is legally allowed to offer. The proposal does not require residents to buy tokens or use a crypto wallet. Household payments are in reais."
+        "Doações, editais, receitas de serviços e um investimento que a organização escolhida possa oferecer legalmente são fontes possíveis. Os pagamentos da família são em reais e não dependem de investimento.",
+        "Sources include donations, grants, service income and investment that the chosen organisation is legally allowed to offer. Household payments are in reais and do not depend on any investment."
       ],
       [
         "As fontes de recursos, os gastos previstos e como as contas seriam conferidas estão na página Financiamento e gastos.",
@@ -1881,7 +1920,7 @@
           "Agree the price and payments"
         ],
         "body": [
-          "Antes de entrar, a família combina o preço, a prestação mensal e quanto de cada pagamento conta para a compra.",
+          "Antes de entrar, a família combina o preço, o pagamento mensal e quanto de cada pagamento conta para a compra.",
           "Before moving in, the family agrees the price, the monthly payment and how much of each payment counts towards buying the home."
         ]
       },
@@ -1923,8 +1962,8 @@
       "A village with shared spaces"
     ],
     "vision_intro": [
-      "Rafael Britto, um dos fundadores da IMOBX, imaginou casas de 45 m² em torno de um pátio, com energia solar, pomar, espaço para brincar e salas de estudo.",
-      "Rafael Britto, an IMOBX founder, imagined 45 m² homes around a courtyard, with solar power, an orchard, play space and study rooms."
+      "Rafael Britto, fundador da IMOBX, imaginou casas de 45 m² em torno de um pátio, com energia solar, pomar, espaço para brincar e salas de estudo.",
+      "Rafael Britto, founder of IMOBX, imagined 45 m² homes around a courtyard, with solar power, an orchard, play space and study rooms."
     ],
     "vision_caption": [
       "Visão de Rafael · 30 de novembro de 2025. Ilustração conceitual feita com um gerador de imagens.",

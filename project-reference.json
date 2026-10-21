@@ -7,7 +7,7 @@
   ],
   "intro": [
     "Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 19 de outubro de 2026.",
-    "This page states the current plan, with Rafael’s figures and links to their sources. It explains who would do each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 19 October 2026."
+    "This page states the current plan, with Rafael’s figures and links to their sources. It explains who does each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 19 October 2026."
   ],
   "sections": [
     {
@@ -22,8 +22,12 @@
       ],
       "body": [
         [
-          "A proposta combina aluguel com opção de compra, construção local e contas que os participantes possam conferir. Cada família teria um contrato que explicasse como poderia se tornar dona da casa inteira. O valor das parcelas e o prazo do primeiro projeto ainda não estão definidos.",
-          "The proposal combines rent-to-own agreements, local construction and accounts participants can inspect. Each family would have an agreement explaining how it could become the owner of its whole home. Payment amounts and the first project’s purchase term are still open."
+          "Na proposta, cada família tem um contrato que explica como se torna dona da casa inteira. A proposta combina aluguel com opção de compra, construção local e contas que os participantes possam conferir.",
+          "Under the proposal, each family has an agreement that explains how it becomes the owner of its whole home. The proposal combines rent-to-own agreements, local construction and accounts participants can inspect."
+        ],
+        [
+          "Ainda não estão decididos: o imóvel; o preço, o pagamento mensal, o prazo e a parte de cada pagamento que conta para a compra; as regras de reparos, atraso e saída; a forma jurídica da organização; o financiamento e o que os financiadores recebem; e os direitos de qualquer token.",
+          "Not decided: the property; the price, monthly payment, time to pay and the share of each payment that counts towards buying; the terms for repairs, missed payments and leaving; the organisation’s legal form; funding and what funders receive; and the rights of any token."
         ]
       ],
       "columns": [
@@ -75,12 +79,12 @@
             "Pilot and building guide"
           ],
           [
-            "Como pedidos, obras e pagamentos seriam acompanhados.",
-            "How requests, construction and payments would be followed."
+            "Como pedidos, obras e pagamentos são acompanhados.",
+            "How requests, construction and payments are followed."
           ],
           [
-            "Rascunho em inglês, v0.7. Descreve o processo proposto.",
-            "English draft, v0.7. Describes the proposed process."
+            "Rascunho em inglês, v0.7. Descreve o processo previsto.",
+            "English draft, v0.7. Describes the process under the plan."
           ]
         ],
         [
@@ -130,8 +134,8 @@
         {
           "url": "rent-to-own.html",
           "label": [
-            "Como seriam pagamentos, reparos e compra da casa",
-            "How payments, repairs and buying the home would work"
+            "Como funcionam pagamentos, reparos e a compra da casa",
+            "How payments, repairs and buying the home work"
           ]
         },
         {
@@ -155,11 +159,11 @@
       ],
       "body": [
         [
-          "Rafael forneceu os cálculos e a proposta da comunidade em 30 de novembro de 2025. O orçamento por casa de 45 m² soma terreno US$5,550, construção US$18,600, solar US$1,500, infraestrutura compartilhada US$1,500 e projeto e trabalho jurídico US$627. Total: US$27,777 por casa. Para 36 casas: US$999,972, com execução proposta em 12 meses.",
-          "Rafael supplied the calculations and community proposal on 30 November 2025. His budget for each 45 m² home includes land US$5,550, construction US$18,600, solar US$1,500, shared infrastructure US$1,500, and design and legal work US$627. Total: US$27,777 per home. For 36 homes: US$999,972, with a proposed 12-month build."
+          "Rafael forneceu os cálculos e a proposta da comunidade em 30 de novembro de 2025. O orçamento por casa de 45 m² soma terreno US$5.550, construção US$18.600, solar US$1.500, infraestrutura compartilhada US$1.500 e projeto e trabalho jurídico US$627. Total: US$27.777 por casa. Para 36 casas: US$999.972, com obra prevista em 12 meses.",
+          "Rafael supplied the calculations and community proposal on 30 November 2025. His budget for each 45 m² home includes land US$5,550, construction US$18,600, solar US$1,500, shared infrastructure US$1,500, and design and legal work US$627. Total: US$27,777 per home. For 36 homes: US$999,972, with a 12-month build in the plan."
         ],
         [
-          "Em 20 de janeiro de 2026, Rafael relatou um contrato de US$27,777 para dois lofts juntos, aguardando o primeiro depósito naquela data. A divisão dá US$13,888.50 por loft. Esse contrato cobre outros serviços de construção. Não substitui o orçamento da comunidade. O andamento atual e os custos finais precisam de documentos próprios.",
+          "Em 20 de janeiro de 2026, Rafael relatou um contrato de US$27.777 para dois lofts juntos, aguardando o primeiro depósito naquela data. A divisão dá US$13.888,50 por loft. Esse contrato cobre outros serviços de construção. Não substitui o orçamento da comunidade. O andamento atual e os custos finais precisam de documentos próprios.",
           "On 20 January 2026, Rafael reported a US$27,777 contract for both lofts together, awaiting the first deposit at that date. Division gives US$13,888.50 per loft. That contract covers different building work. It does not replace the community budget. Current progress and final costs need their own documents."
         ],
         [
@@ -187,12 +191,12 @@
     {
       "id": "work",
       "nav": [
-        "Como funcionaria",
-        "How it would work"
+        "Como funciona",
+        "How it works"
       ],
       "title": [
-        "Quem organizaria o projeto e conferiria a obra?",
-        "Who would organize the project and inspect the work?"
+        "Quem organiza o projeto e confere a obra?",
+        "Who organizes the project and inspects the work?"
       ],
       "body": [
         [
@@ -237,8 +241,8 @@
           "Person or group"
         ],
         [
-          "Papel proposto",
-          "Proposed role"
+          "Papel no plano",
+          "Role in the plan"
         ],
         [
           "Autoridade e situação",
@@ -256,8 +260,8 @@
             "Construction knowledge, budgets and local relationships."
           ],
           [
-            "Fundador. Responsabilidades formais ainda por documentar. Qualificações profissionais precisam de referências publicáveis.",
-            "Rafael is a founder. His formal duties still need to be put in writing. Professional credentials need sources readers can consult."
+            "Fundador. Suas responsabilidades formais não foram registradas por escrito, e suas qualificações profissionais precisam de referências que o leitor possa consultar.",
+            "Rafael is a founder. His formal duties have not been put in writing, and his professional credentials need sources readers can consult."
           ]
         ],
         [
@@ -271,7 +275,7 @@
           ],
           [
             "Participação na preparação. Poderes de gasto ou representação ainda não atribuídos nesta referência.",
-            "John helps prepare the project. The right to spend money or sign for IMOBX still needs a written appointment."
+            "John helps prepare the project. This reference assigns him no right to spend money or sign for IMOBX; that needs a written appointment."
           ]
         ],
         [
@@ -294,8 +298,8 @@
             "OLYMPUS"
           ],
           [
-            "Possível construtora contratada, ligada a Rafael.",
-            "Possible contracted builder, linked to Rafael."
+            "Construtora em consideração, ligada a Rafael.",
+            "Builder under consideration, linked to Rafael."
           ],
           [
             "Contratação depende dos serviços combinados, da comparação de preços e da aprovação por alguém independente da construtora.",
@@ -312,8 +316,8 @@
             "Housing terms and participation in shared matters."
           ],
           [
-            "Voz proposta sem comprar tokens. Representantes e regras serão discutidos com os participantes.",
-            "Proposed voice without buying tokens. Representatives and rules will be discussed with participants."
+            "A participação dos moradores não depende de comprar tokens. Representantes e regras serão discutidos com os participantes.",
+            "Residents’ say does not depend on buying tokens. Representatives and rules will be discussed with participants."
           ]
         ],
         [
@@ -322,8 +326,8 @@
             "Community or charitable partner"
           ],
           [
-            "Possível acesso a imóvel, famílias ou financiadores.",
-            "Possible access to property, households or funders."
+            "Acesso a imóvel, famílias ou financiadores, se a parceria for acordada.",
+            "Access to property, households or funders, if a partnership is agreed."
           ],
           [
             "Cenário de parceria em discussão. Nenhum acordo ou endosso confirmado nesta referência.",
@@ -367,17 +371,17 @@
         "Token and outreach"
       ],
       "title": [
-        "Para que serviria o token e quem receberia o dinheiro?",
-        "What would the token fund and who would receive the money?"
+        "Se a IMOBX tiver um token, o que ele financia e quem recebe o dinheiro?",
+        "If IMOBX has a token, what does it fund and who receives the money?"
       ],
       "body": [
         [
-          "Doações, editais, receitas de serviços e um investimento que a organização escolhida possa oferecer legalmente são possibilidades. Também estudamos um token para financiar a operação e a divulgação. Ao comprar tokens novos, o comprador pagaria à organização que os cria e vende. Ao comprar de outro investidor, o dinheiro normalmente vai para esse vendedor. Uma taxa recebida pela IMOBX seria registrada separadamente.",
-          "Possible sources include donations, grants, service income and investment that the chosen organisation is legally allowed to offer. A token to fund operations and outreach is also under study. When someone buys new tokens, they would pay the organisation that creates and sells them. When they buy from another holder, the money normally goes to that seller. Any fee received by IMOBX would be recorded separately."
+          "Doações, editais, receitas de serviços e um investimento que a organização escolhida possa oferecer legalmente estão em consideração. Também estudamos um token, um registro digital de um direito que pode ser comprado e vendido, para financiar a operação e a divulgação. Se a IMOBX criar um, quem comprar tokens novos paga à organização que os cria e vende. Ao comprar de outro investidor, o dinheiro normalmente vai para esse vendedor. Uma taxa recebida pela IMOBX é registrada separadamente.",
+          "Sources under consideration are donations, grants, service income and investment that the chosen organisation is legally allowed to offer. A token to fund operations and outreach, which is a digital record of a right that can be bought and sold, is also under study. If IMOBX creates one, buyers of new tokens pay the organisation that creates and sells them. When they buy from another holder, the money normally goes to that seller. Any fee received by IMOBX is recorded separately."
         ],
         [
-          "Um divulgador ou moderador receberia uma tarefa por escrito e apresentaria o trabalho pronto. Outra pessoa conferiria se o resultado está de acordo com o combinado antes de aprovar o pagamento. O orçamento precisa ter dinheiro para os pagamentos prometidos. Quem recebe para divulgar o projeto deve informar isso ao público.",
-          "A promoter or moderator would receive a written task and submit the completed work. Someone would check that it matches what was agreed before approving payment. The budget needs money for promised payments. Paid participants must tell the public that they are being paid."
+          "Um divulgador ou moderador recebe uma tarefa por escrito e apresenta o trabalho pronto. Outra pessoa confere se o resultado está de acordo com o combinado antes de aprovar o pagamento. O orçamento precisa ter dinheiro para os pagamentos prometidos. Quem recebe para divulgar o projeto deve informar isso ao público.",
+          "A promoter or moderator receives a written task and submits the completed work. Someone checks that it matches what was agreed before approving payment. The budget needs money for promised payments. Paid participants must tell the public that they are being paid."
         ],
         [
           "Pagar alguém por um serviço feito como combinado é diferente de pagar renda porque essa pessoa investiu dinheiro. A divulgação precisa seguir as regras de cada canal e informar quando é paga. Promessas de retorno, pagamentos de taxas ou de lucros precisam de análise jurídica própria. Chamar um token de utilidade ou governança não define seu tratamento legal.",
@@ -390,8 +394,8 @@
           "Path under study"
         ],
         [
-          "O que alguém receberia",
-          "What someone would receive"
+          "O que alguém recebe",
+          "What someone receives"
         ],
         [
           "O que falta resolver",
@@ -419,8 +423,8 @@
             "B. Access to a service or benefit"
           ],
           [
-            "Um serviço concreto ou desconto definido. Possível recompra seria uma regra separada.",
-            "A defined service or discount. A possible buyback would be a separate rule."
+            "Um serviço concreto ou desconto definido. Qualquer recompra é uma regra separada.",
+            "A defined service or discount. Any buyback is a separate rule."
           ],
           [
             "Serviço disponível, preço, quem paga o desconto e eventual recompra. Queimar tokens não paga dividendos automaticamente.",
@@ -437,8 +441,8 @@
             "A defined right to part of fees actually received, if the structure permits."
           ],
           [
-            "Quem criaria o token, direitos do comprador, custos, perdas possíveis, restrições e forma legal de vendê-lo. A negociação pode gerar receita zero.",
-            "Who would create the token, buyers’ rights, costs, possible losses, restrictions and the legal process for selling it. Trading may generate zero income."
+            "Quem cria o token, direitos do comprador, custos, risco de perda, restrições e forma legal de vendê-lo. A negociação pode gerar receita zero.",
+            "Who creates the token, buyers’ rights, costs, risk of loss, restrictions and the legal process for selling it. Trading can produce zero income."
           ]
         ],
         [
@@ -447,8 +451,8 @@
             "D. Investment in the operation"
           ],
           [
-            "Ações representadas por tokens ou outro direito de investimento definido. Os pagamentos a investidores dependeriam do contrato e do dinheiro disponível.",
-            "Tokenised shares or another defined investment right. Payments to investors would depend on the agreement and money available."
+            "Ações representadas por tokens ou outro direito de investimento definido. Os pagamentos a investidores dependem do contrato e do dinheiro disponível.",
+            "Tokenised shares or another defined investment right. Payments to investors depend on the agreement and the money available."
           ],
           [
             "Organização responsável, bens e dívidas incluídos, direitos, impostos e forma legal de oferecer o investimento. Eventual renda de imóveis precisa respeitar o destino dos recursos e a transferência das casas às famílias.",
@@ -480,8 +484,8 @@
         "Voice and protection"
       ],
       "title": [
-        "O que os moradores poderiam decidir?",
-        "What could residents decide?"
+        "O que os moradores decidem?",
+        "What do residents decide?"
       ],
       "body": [
         [
@@ -489,8 +493,12 @@
           "Study-room hours, courtyard use, shared-space repair priorities and choosing representatives are examples of resident decisions. One option under discussion is one vote per member on these matters, with representatives who can be replaced."
         ],
         [
-          "Ostrom estudou como pessoas cuidam de recursos comuns. Na IMOBX, suas perguntas ajudam a definir quem participa, como as regras são alteradas, quem confere os gastos e como resolver conflitos. O roteiro apresenta os oito princípios e exemplos. Essa proposta ainda precisa ser construída com os moradores. Os princípios não substituem essa participação.",
-          "Ostrom studied how people care for shared resources. At IMOBX, her questions help define who participates, how rules change, who checks spending and how disputes are resolved. The roadmap presents the eight principles and examples. Residents still need to help develop this proposal. The principles do not replace that participation."
+          "Elinor Ostrom estudou como as pessoas cuidam de recursos comuns; a base de pesquisa é a palestra Nobel dela, listada nas fontes. Na IMOBX, as perguntas dela ajudam a definir quem participa, como as regras mudam, quem confere os gastos e como resolver conflitos. O roteiro apresenta os oito princípios e exemplos. Aplicá-los à IMOBX é decisão do projeto e depende dos moradores; Ostrom não endossa a IMOBX.",
+          "Elinor Ostrom studied how people care for shared resources, and the research basis is her Nobel lecture, listed under the sources. At IMOBX, her questions help define who participates, how rules change, who checks spending and how disputes are resolved. The roadmap presents the eight principles and examples. Applying them to IMOBX is the project’s own step and depends on residents; Ostrom’s work does not endorse IMOBX."
+        ],
+        [
+          "Nenhuma votação, nem mesmo de tokens, muda sozinha o contrato de moradia de uma família. A participação dos moradores não depende de investir, e quem investe recebe somente os direitos escritos no seu acordo.",
+          "A vote, including a token vote, cannot on its own change a family’s housing agreement. Residents’ say does not depend on investing, and investors receive only the rights written in their agreement."
         ]
       ],
       "links": [
@@ -518,32 +526,32 @@
       ],
       "title": [
         "Como acompanhar um reparo e seu pagamento?",
-        "How could a repair and its payment be followed?"
+        "How is a repair and its payment followed?"
       ],
       "body": [
         [
-          "Um morador comunicaria uma infiltração à pessoa responsável pela manutenção. Essa pessoa avaliaria o problema, pediria um orçamento e seguiria o limite de gasto combinado. Outra pessoa conferiria o conserto antes de aprovar o pagamento final.",
-          "A resident would report a leak to the person responsible for maintenance. That person would assess the problem, get a quote and follow the agreed spending limit. Someone else would check the repair before approving the final payment."
+          "Os passos de um reparo são os descritos acima, em quem organiza o projeto e confere a obra. Esta seção trata das ferramentas pensadas para registrá-los e dos seus limites.",
+          "The steps for a repair are the ones described above, under who organizes the project and inspects the work. This section covers the tools meant to record them, and their limits."
         ],
         [
-          "Arc é a rede de blockchain considerada para pagamentos em USDC, uma moeda digital que busca acompanhar o dólar dos Estados Unidos. O teste proposto mostraria quem autorizou um pequeno pagamento e seu comprovante público. As contas ainda precisam ligar esse pagamento ao gasto real e ao documento bancário. Famílias pagariam em reais e não precisariam de carteira de criptomoedas.",
-          "Arc is the blockchain network considered for payments in USDC, a digital currency designed to track the US dollar. The proposed test would show who authorised a small payment and its public receipt. Accounts still need to connect that payment to the actual expense and bank record. Households would pay in reais and would not need crypto wallets."
+          "Blockchain é um registro digital compartilhado que mostra quem aprovou um pagamento. Arc é a rede de blockchain em consideração para pagamentos em USDC, uma moeda digital que busca acompanhar o dólar dos Estados Unidos. O teste previsto mostra quem autorizou um pequeno pagamento e seu comprovante público. As contas precisam ligar esse pagamento ao gasto real e ao documento bancário. As famílias pagam em reais e não precisam de carteira de criptomoedas.",
+          "A blockchain is a shared digital record that shows who approved a payment. Arc is the blockchain network under consideration for payments in USDC, a digital currency designed to track the US dollar. The planned test shows who authorised a small payment and its public receipt. The accounts have to connect that payment to the actual expense and bank record. Households pay in reais and do not need crypto wallets."
         ],
         [
           "Arctide e Argus são exemplos de exchanges, ou plataformas de negociação, na rede Arc.",
           "Arctide and Argus are examples of exchanges, or trading platforms, on the Arc network."
         ],
         [
-          "A ferramenta de comunidade organizaria pedidos e entregas. Assistentes de software poderiam reunir documentos e lembrar pendências. Pessoas responsáveis continuariam aprovando decisões e conferindo serviços. Documentos pessoais ficam fora da blockchain pública. A propriedade legal das casas depende dos registros e contratos aplicáveis.",
-          "The community tool would organise requests and submissions. Software assistants could gather documents and flag unfinished work. Accountable people would still approve decisions and inspect services. Personal documents stay off the public blockchain. Legal ownership of homes depends on the applicable records and agreements."
+          "Pelo plano, a ferramenta de comunidade organiza pedidos e entregas. Assistentes de software reúnem documentos e lembram pendências. Pessoas responsáveis continuam aprovando decisões e conferindo serviços. Documentos pessoais ficam fora da blockchain pública. A propriedade legal das casas depende dos registros e contratos aplicáveis.",
+          "Under the plan, the community tool organises requests and submissions. Software assistants gather documents and flag unfinished work. Accountable people still approve decisions and inspect services. Personal documents stay off the public blockchain. Legal ownership of homes depends on the applicable records and agreements."
         ]
       ],
       "links": [
         {
           "url": "transparency.html#settlement",
           "label": [
-            "Caminho proposto entre reais e USDC",
-            "Proposed path between reais and USDC"
+            "Caminho previsto entre reais e USDC",
+            "Planned path between reais and USDC"
           ]
         },
         {
@@ -576,17 +584,17 @@
         "Costs and risks"
       ],
       "title": [
-        "O que poderia impedir o avanço do projeto?",
-        "What could prevent the project from proceeding?"
+        "O que pode impedir o avanço do projeto?",
+        "What can stop the project from proceeding?"
       ],
       "body": [
         [
-          "O dinheiro recebido teria destino registrado. Impostos, custos da operação, manutenção e compromissos com as famílias precisam estar cobertos. O orçamento de divulgação e de novas obras precisa de recursos próprios aprovados. Eventuais pagamentos a investidores dependem da estrutura escolhida e do dinheiro disponível. Quando uma família se torna proprietária, o aluguel daquela casa deixa de entrar para a IMOBX.",
-          "Received money would have a recorded purpose. Taxes, running costs, repairs and the cost of keeping promises to families need funding. Outreach and new construction need their own approved budgets. Any investor payments depend on the chosen structure and available money. When a household becomes the owner, rent from that home stops going to IMOBX."
+          "Pelo plano, o dinheiro recebido tem destino registrado. Impostos, custos da operação, manutenção e compromissos com as famílias precisam estar cobertos. O orçamento de divulgação e de novas obras precisa de recursos próprios aprovados. Eventuais pagamentos a investidores dependem da estrutura escolhida e do dinheiro disponível. Quando uma família se torna proprietária, o aluguel daquela casa deixa de entrar para a IMOBX.",
+          "Under the plan, received money has a recorded purpose. Taxes, running costs, repairs and the cost of keeping promises to families need funding. Outreach and new construction need their own approved budgets. Any investor payments depend on the chosen structure and available money. When a household becomes the owner, rent from that home stops going to IMOBX."
         ],
         [
-          "O estudo financeiro ainda precisa reunir orçamento em reais, parcelas acessíveis e cenários de atraso, reparos, câmbio e negociação zero do token. O site explica a ordem proposta de uso do dinheiro. Ainda não apresenta um cálculo que mostre se a receita cobriria os custos e permitiria levar o projeto a outras regiões do Brasil.",
-          "The cash plan needs a budget in reais and payments families can afford. It also needs to show what happens if costs rise or repairs take longer. One case must assume no money comes from token trading. The site explains the proposed order for using money. There is no cash plan here yet showing that income covers bills or that the project can grow across Brazil."
+          "O estudo financeiro precisa reunir orçamento em reais, parcelas acessíveis e cenários de atraso, reparos, câmbio e negociação zero do token. O site explica a ordem prevista de uso do dinheiro. Não apresenta um cálculo que mostre se a receita cobre os custos e permite levar o projeto a outras regiões do Brasil.",
+          "The cash plan needs a budget in reais and payments families can afford. It also needs to show what happens if costs rise or repairs take longer. One case must assume no money comes from token trading. The site explains the planned order for using money. This page has no cash plan showing that income covers bills or that the project can grow across Brazil."
         ]
       ],
       "columns": [
@@ -595,8 +603,8 @@
           "Risk"
         ],
         [
-          "Proteção em estudo",
-          "Proposed protection"
+          "Proteção prevista",
+          "Protection in the plan"
         ],
         [
           "Quem precisa revisar",
@@ -679,8 +687,8 @@
         {
           "url": "transparency.html",
           "label": [
-            "Contas e pagamentos propostos",
-            "Proposed accounts and payments"
+            "Contas e pagamentos previstos",
+            "Accounts and payments in the plan"
           ]
         },
         {
@@ -699,7 +707,7 @@
   ],
   "chapters_intro": [
     "O mapa abaixo acompanha o escopo do documento de Rafael. As páginas existentes são material de referência. O manuscrito final reunirá a tese, os documentos novos e as decisões aprovadas. Uma seção marcada como proposta não vira fato por ser citada no documento.",
-    "The map below follows the scope of Rafael’s document. Existing pages provide reference material. The final manuscript will bring together the thesis, new documents and approved decisions. Citing a proposed arrangement does not turn it into a fact."
+    "The map below follows the scope of Rafael’s document. Existing pages provide reference material. The final manuscript will bring together the thesis, new documents and approved decisions. A section marked as a proposal does not become fact by being cited in the document."
   ],
   "chapters": [
     {
@@ -818,8 +826,8 @@
         {
           "url": "reference.html#people",
           "label": [
-            "Funções propostas",
-            "Proposed roles"
+            "Funções previstas",
+            "Planned roles"
           ]
         }
       ]
@@ -831,8 +839,8 @@
         "Property economics and financial model"
       ],
       "scope": [
-        "Orçamento de Rafael, trabalhos diferentes e uso proposto do dinheiro. A previsão do dinheiro que entra e sai, com os custos do projeto escolhido e casos de atraso e reparos, ainda está em desenvolvimento.",
-        "Rafael’s budget, the different building work covered by each case and the proposed use of money. A forecast of money coming in and going out, using the costs of the chosen project and different cases for delays and repairs, is still being developed."
+        "Orçamento de Rafael, trabalhos diferentes e uso previsto do dinheiro. A previsão do dinheiro que entra e sai, com os custos do projeto escolhido e casos de atraso e reparos, está em desenvolvimento.",
+        "Rafael’s budget, the different building work covered by each case and the planned use of money. A forecast of money coming in and going out, using the costs of the chosen project and different cases for delays and repairs, is being developed."
       ],
       "links": [
         {
@@ -884,7 +892,7 @@
           ]
         },
         {
-          "url": "faq.html#faq-nonprofit",
+          "url": "transparency.html#faq-nonprofit",
           "label": [
             "Finalidade social e forma jurídica",
             "Social purpose and legal form"
@@ -899,8 +907,8 @@
         "The token’s role"
       ],
       "scope": [
-        "Finalidade do token e possíveis direitos, ainda em pesquisa. Pagamentos por trabalho e direitos de investimento são relações distintas.",
-        "Token purpose and possible rights remain under research. Payment for work and investment rights are separate relationships."
+        "Finalidade e direitos do token estão em pesquisa. Pagamentos por trabalho e direitos de investimento são relações distintas.",
+        "Token purpose and rights are under research. Payment for work and investment rights are separate relationships."
       ],
       "links": [
         {
@@ -953,8 +961,8 @@
         "Technology"
       ],
       "scope": [
-        "O que Arc, USDC e as ferramentas de trabalho poderiam fazer. A operação IMOBX completa ainda precisa de demonstração.",
-        "What Arc, USDC and working tools could do. The complete IMOBX operation still needs a demonstration."
+        "Para que servem Arc, USDC e as ferramentas de trabalho, e seus limites. A operação IMOBX completa não foi demonstrada.",
+        "What Arc, USDC and the working tools are for, and their limits. The complete IMOBX operation has not been demonstrated."
       ],
       "links": [
         {
@@ -1020,8 +1028,8 @@
         "Team, founder and partners"
       ],
       "scope": [
-        "Participação atual e funções propostas. Referências profissionais, nomeações e acordos com parceiros precisam ser documentados.",
-        "Current involvement and proposed roles. Professional references, appointments and partner agreements need documentation."
+        "Participação atual e funções previstas. Referências profissionais, nomeações e acordos com parceiros precisam ser documentados.",
+        "Current involvement and planned roles. Professional references, appointments and partner agreements need documentation."
       ],
       "links": [
         {
@@ -1052,7 +1060,7 @@
           ]
         },
         {
-          "url": "faq.html",
+          "url": "transparency.html#funding-questions",
           "label": [
             "Termos e perguntas",
             "Terms and questions"
@@ -1097,7 +1105,7 @@
       ],
       "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas",
       "scope": [
-        "16.4 milhões de moradores, 8.1% da população, no Censo 2022. Não mede sozinho o déficit de moradia nem descreve cada família.",
+        "16,4 milhões de moradores, 8,1% da população, no Censo 2022. Não mede sozinho o déficit de moradia nem descreve cada família.",
         "16.4 million residents, 8.1% of the population, in the 2022 Census. This does not itself measure the housing deficit or describe each household."
       ]
     },
@@ -1169,8 +1177,8 @@
       ],
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm",
       "scope": [
-        "O artigo 2º define organizações sem fins lucrativos para essa lei. O encaixe entre finalidade social e qualquer investimento proposto precisa de revisão jurídica específica.",
-        "Article 2 defines nonprofit organisations for that law. The fit between social purpose and any proposed investment needs specific legal review."
+        "O artigo 2º define organizações sem fins lucrativos para essa lei. O encaixe entre finalidade social e qualquer investimento oferecido precisa de revisão jurídica específica.",
+        "Article 2 defines nonprofit organisations for that law. The fit between social purpose and any investment offered needs specific legal review."
       ]
     },
     {
@@ -1193,8 +1201,8 @@
       ],
       "url": "https://arctide.app/",
       "scope": [
-        "Exemplo de plataforma de negociação na rede Arc.",
-        "An example of a trading platform on the Arc network."
+        "Exemplo de plataforma de negociação na rede Arc. Não comprova uso pela IMOBX.",
+        "An example of a trading platform on the Arc network. It does not establish IMOBX use."
       ]
     },
     {
@@ -1205,7 +1213,7 @@
       ],
       "url": "https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/",
       "scope": [
-        "Estimativa de 5,773,983 domicílios no déficit de 2024. Mede necessidades habitacionais por critérios próprios. É diferente da contagem de pessoas em favelas do Censo 2022.",
+        "Estimativa de 5.773.983 domicílios no déficit de 2024. Mede necessidades habitacionais por critérios próprios. É diferente da contagem de pessoas em favelas do Censo 2022.",
         "An estimated 5,773,983 homes in the 2024 deficit. This measures housing needs under its own criteria. It differs from the 2022 Census count of people living in favelas."
       ]
     },
@@ -1241,8 +1249,8 @@
       ],
       "url": "https://argus.world/",
       "scope": [
-        "Exemplo de plataforma de negociação na rede Arc.",
-        "An example of a trading platform on the Arc network."
+        "Exemplo de plataforma de negociação na rede Arc. Não comprova uso pela IMOBX.",
+        "An example of a trading platform on the Arc network. It does not establish IMOBX use."
       ]
     }
   ],
@@ -1260,8 +1268,8 @@
       "Each correction needs a date and a named source. A new decision also needs the name of the person who approved it and a link to its basis. Once operations exist, reports will state their period, account preparer and reviewer. Proposed, contracted, received and spent amounts will be shown separately."
     ],
     [
-      "Nesta edição, os números do fundador permanecem atribuídos a ele. Os demais responsáveis por revisão financeira, jurídica e técnica ainda precisam de nomeação. O site não acompanha saldos ou mudanças legais automaticamente.",
-      "In this edition, founder figures remain attributed to him. People still need to be chosen to review accounts, contracts and software. The site does not automatically monitor balances or legal changes."
+      "Nesta edição, os números do fundador permanecem atribuídos a ele. Os responsáveis pela revisão financeira, jurídica e técnica não foram nomeados. O site não acompanha saldos ou mudanças legais automaticamente.",
+      "In this edition, founder figures remain attributed to him. Reviewers for accounts, contracts and software have not been chosen. The site does not automatically monitor balances or legal changes."
     ]
   ]
 }

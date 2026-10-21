@@ -218,7 +218,7 @@ An owner, building team, local organization and funder could develop a costed pr
 
 
 
-**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Contact details are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property.
+**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. There is no contact address yet: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property.
 
 
 
@@ -240,7 +240,7 @@ An owner, building team, local organization and funder could develop a costed pr
 
 - [IMOBX roadmap and consultation charter](https://siah-kin.github.io/imobx-website/roadmap.html)
 
-- [IMOBX model FAQ](https://siah-kin.github.io/imobx-website/faq.html)
+- [IMOBX questions about funding, tokens and governance](https://siah-kin.github.io/imobx-website/transparency.html#funding-questions)
 
 - [ICA cooperative identity](https://ica.coop/en/cooperatives/cooperative-identity)
 

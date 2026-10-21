@@ -121,7 +121,7 @@
         "Builders and funders: costed work, funding purpose and commitments.",
         "Households: affordable terms, location, repairs and resident decisions."
       ],
-      "notes": "These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Contact details are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property."
+      "notes": "These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. There is no contact address yet: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property."
     }
   ],
   "sources": [
@@ -158,8 +158,8 @@
       "url": "https://siah-kin.github.io/imobx-website/roadmap.html"
     },
     {
-      "label": "IMOBX model FAQ",
-      "url": "https://siah-kin.github.io/imobx-website/faq.html"
+      "label": "IMOBX questions about funding, tokens and governance",
+      "url": "https://siah-kin.github.io/imobx-website/transparency.html#funding-questions"
     },
     {
       "label": "ICA cooperative identity",

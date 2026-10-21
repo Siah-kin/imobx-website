@@ -237,3 +237,62 @@ figcaption,figcaption p,figcaption span{font-size:15px;line-height:1.45}
 .site-footer p{max-width:72ch;font-size:16px;margin:0 0 8px}
 
 .report-list{list-style:none;padding:0;margin:20px 0;max-width:72ch}.report-list li{padding:12px 0;border-top:1px solid var(--line)}.report-list li:last-child{border-bottom:1px solid var(--line)}
+
+/* Sprint 4: a shorter phone header and tighter section spacing. Desktop and tablet are unchanged. */
+@media(max-width:600px){
+.review{font-size:15px;line-height:1.3;padding:5px 5%}
+.site-nav{min-height:0;padding-block:0;gap:0 12px}
+.site-nav .wordmark{min-height:48px}
+.site-nav .brand-logo{width:48px;height:48px}
+.site-nav .lang{padding:0}
+.site-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 4px;font-size:15px;padding-bottom:2px}
+.site-links>a{justify-content:center;text-align:center;line-height:1.2;padding-inline:2px}
+section.content{padding:24px 0}
+section.content.tint{padding:28px 0}
+section.content>h2,section.content>.wrap>h2,section.content>header>h2{margin-top:0}
+.hero{padding-top:20px;padding-bottom:12px;gap:20px}
+.hero .actions{margin-top:16px;gap:0 24px}
+.hero .drawing{padding:12px}
+.status-columns{margin:12px 0;gap:8px}
+.status-columns h3{margin:12px 0 4px}
+.status-columns li{padding:2px 0}
+.home-model-layout{gap:24px}
+.home-model-heading{margin-bottom:16px}
+.home-purchase-steps li{padding-bottom:14px}
+.home-purchase-steps h3{margin-bottom:6px}
+.home-purchase-terms{padding-top:16px;margin-bottom:16px}
+.home-village-vision{padding-top:20px}
+.home-village-vision .village-illustration{margin:12px 0}
+.cost-comparison{margin:16px 0;gap:16px}
+.cost-comparison article{padding-top:14px}
+.cost-comparison h3,.cost-number{margin-bottom:8px}
+.model-carousel{margin:16px 0 20px}
+.carousel-slide img{height:250px}
+.carousel-count,.resource-more a,.resource-row>a,.button,.text-link,.lang button,.carousel-controls button,.carousel-thumbs span{font-size:15px}
+.text-link,.faq details>a{display:inline-flex;align-items:center;min-height:44px}
+.roadmap-overview{margin:16px 0}
+.roadmap-overview li{padding:14px 0}
+.resource-rows{margin-top:16px}
+.resource-row{padding:14px 0}
+.resource-more{gap:0 24px;padding:8px 0 12px}
+.viewer-toolbar a{font-size:15px}
+.faq{margin:16px 0}
+.faq details{padding:6px 0}
+h2{margin-bottom:8px}
+:where(section.content) p{margin-block:0 12px}
+figcaption{padding-block:8px 0}
+figcaption p{margin:0}
+.archive-nav{gap:0 24px;margin-top:8px}
+.faq .guide-more{margin-top:8px}
+body{line-height:1.5}
+.home-purchase-steps p,.home-village-vision>p{line-height:1.5}
+}
+
+/* Phone tables: stack each row, with the column name above every cell, so no column sits off screen. */
+@media(max-width:600px){.guide-paper .guide-table table,.guide-table table{display:block;min-width:0;width:100%}
+.guide-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.guide-table tbody,.guide-table tr,.guide-table td{display:block;width:100%;box-sizing:border-box}
+.guide-table tr{border:1px solid var(--line);margin:0 0 14px;background:#fff}
+.guide-table td{border:0;border-bottom:1px solid var(--line);padding:10px 14px}
+.guide-table td:last-child{border-bottom:0}
+.guide-table td::before{content:attr(data-label);display:block;font-weight:700;font-size:14px;color:var(--ink);margin-bottom:4px}}

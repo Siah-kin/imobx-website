@@ -18,6 +18,19 @@ function setLanguage(language) {
     ? 'IMOBX | Proposta de piloto no Rio' : 'IMOBX | Proposed Rio housing pilot');
   const navigation = document.querySelector('nav');
   if (navigation) navigation.setAttribute('aria-label', language === 'pt' ? 'Principal' : 'Main');
+  // Documents written only in English keep lang="en"; the parts that follow the chosen language say so themselves.
+  if (/\/(whitepaper|devsheet|pitchdeck)\.html$/.test(location.pathname)) {
+    document.documentElement.lang = 'en';
+    const own = language === 'pt' ? 'pt-BR' : 'en';
+    document.querySelectorAll('.review, .site-header, .site-footer, .skip').forEach(part => part.setAttribute('lang', own));
+  }
+  // Tables: each cell carries its column name so rows can stack on a phone.
+  document.querySelectorAll('.guide-table table').forEach(table => {
+    const names = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+    table.querySelectorAll('tbody tr').forEach(row => {
+      Array.from(row.children).forEach((cell, index) => { if (names[index]) cell.setAttribute('data-label', names[index]); });
+    });
+  });
   try { localStorage.setItem('imobx-language', language); } catch (_) {}
   document.dispatchEvent(new Event('imobx:languagechange'));
 }

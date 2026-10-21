@@ -16,7 +16,7 @@ The PNG is ready for websites and PDFs. The original WebP is included too. No ed
 
 ## 2. Colours and type
 
-The [visual identity guide](design.html) describes the logo, colours and where the images came from and what was changed. [Text version](DESIGN.md).
+The [visual identity guide](media-kit.html#brand-guide) describes the logo, colours and where the images came from and what was changed. [Text version](DESIGN.md).
 
 | Use | Colour |
 |---|---|
@@ -35,11 +35,11 @@ Use readable type such as Arial. Keep backgrounds white and corners square. Expl
 
 ## 3. Short description in English
 
-IMOBX is preparing a first housing project in Rio de Janeiro. Families would rent a home under a clear agreement explaining how they can become its owner. Local builders, residents and supporters would help make the project work. We aim to build a DAO: an organization with shared decisions and digital tools for following work and money. IMOBX’s legal form, the terms for using each property and any token rights are still being decided.
+IMOBX is preparing a first housing project in Rio de Janeiro. Families would rent a home under a clear agreement explaining how they can become its owner. Local builders, residents and supporters would help make the project work. Shared decisions and digital tools for following work and money are being developed. IMOBX’s legal form, the terms for using each property and any token rights are still being decided.
 
 ## 4. Descrição curta em português
 
-A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As famílias alugariam uma casa com um contrato claro explicando como podem se tornar donas dela. Construtores locais, moradores e apoiadores ajudariam a fazer o projeto funcionar. Queremos construir uma DAO: uma organização com decisões compartilhadas e ferramentas digitais para acompanhar trabalho e dinheiro. A forma jurídica, as condições de uso de cada imóvel e os direitos de um eventual token ainda estão em definição.
+A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As famílias alugariam uma casa com um contrato claro explicando como podem se tornar donas dela. Construtores locais, moradores e apoiadores ajudariam a fazer o projeto funcionar. Estão sendo desenvolvidas decisões compartilhadas e ferramentas digitais para acompanhar trabalho e dinheiro. A forma jurídica, as condições de uso de cada imóvel e os direitos de um eventual token ainda estão em definição.
 
 ### Rafael's neighbourhood vision
 
@@ -59,7 +59,8 @@ The city photographs show favelas along the hillsides, highlighted by circles. T
 - [Pitch deck](pitchdeck.html): twelve slides for partners.
 - [Pilot and building guide](devsheet.html): housing plans, responsibilities and proposed targets.
 - [Roadmap](roadmap.html): steps and what must be ready before moving on.
-- [Questions](faq.html): plain explanations of the model and digital tools.
+- [Questions about funding, tokens and governance](transparency.html#funding-questions): plain explanations of the model and digital tools.
+- [Questions families ask](rent-to-own.html#questions): renting, buying, repairs, decisions and taking part.
 - [All documents](resources.html): online reading and downloads.
 
 <div id="7-brand-provenance"></div>

@@ -6,7 +6,7 @@ import re
 import xml.etree.ElementTree as ET
 import zipfile
 from urllib.parse import urljoin
-from model_guide import build_guide
+from model_guide import build_guide, redirect_stub, new_faq_location
 from contact_page import build_contact
 from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE
 from copy_review import require_review
@@ -57,11 +57,11 @@ def site_header(lang='pt-BR', current=''):
     """One main menu; local section links belong inside each page."""
     portuguese = lang.startswith('pt')
     items = [
-        ('index.html#modelo', 'O projeto', 'The project'),
-        ('index.html#custos', 'Custos da construção', 'Construction costs'),
-        ('roadmap.html', 'Acompanhe o projeto', 'Follow the project'),
-        ('properties.html', 'Moradias e projetos', 'Homes & designs'),
+        ('index.html', 'O projeto', 'The project'),
+        ('rent-to-own.html', 'Como funciona', 'How it works'),
+        ('roadmap.html', 'Etapas do projeto', 'Project stages'),
         ('transparency.html', 'Financiamento e gastos', 'Funding & spending'),
+        ('properties.html', 'Desenhos e fotos', 'Drawings and photos'),
         ('resources.html', 'Documentos', 'Documents'),
     ]
     links = ''
@@ -79,7 +79,7 @@ def site_header(lang='pt-BR', current=''):
             '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John. A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, a founder, and John. The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John. A forma jurídica da organização ainda está sendo definida.</p><p><a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a></p></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, founder, and John (communication and digital tools). The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida.</p><p><a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a> · <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None):
@@ -89,8 +89,9 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None):
         script += '<script src="assets/site.js" defer></script>'
     current = {'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
                'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html',
+               'IMOBX | Renting and buying a home': 'rent-to-own.html',
                'IMOBX | Take part': 'contact.html'}.get(title, '')
-    return f'''<!doctype html>
+    document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="IMOBX housing pilot: model, roadmap and project resources.">
 <title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}</head>
@@ -98,7 +99,9 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None):
 <a href="#main" class="skip" data-pt="Pular para o conteúdo" data-en="Skip to content">{'Pular para o conteúdo' if lang.startswith('pt') else 'Skip to content'}</a>
 {site_header(lang, current)}
 {body}
-<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John. A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, a founder, and John. The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John. A forma jurídica da organização ainda está sendo definida.</p><p><a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a></p></div></footer></body></html>'''
+{SITE_FOOTER}</body></html>'''
+    # Text sources owned by other work (whitepaper, pilot guide, project reference) may still link to the retired faq.html.
+    return re.sub(r'href="(faq\.html[^"]*)"', lambda m: 'href="' + new_faq_location(m.group(1)) + '"', document)
 
 
 RESOURCE_CATALOG = [
@@ -164,7 +167,7 @@ def resource_section(standalone=False):
         actions = []
         for target, pt, en in item['links']:
             download = ' download' if '#' not in target and not target.endswith('.html') else ''
-            actions.append(translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["en"] + ": " + en)}"{download}'))
+            actions.append(translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["pt"] + ": " + pt)}" data-aria-pt="{esc(item["pt"] + ": " + pt)}" data-aria-en="{esc(item["en"] + ": " + en)}"{download}'))
         return f'''<article class="resource-card" id="resource-{esc(item['id'])}" aria-labelledby="title-{esc(item['id'])}">
 {translated(item['pt'], item['en'], level, f'id="title-{item["id"]}"')}
 {translated(item['description_pt'], item['description_en'], 'p')}
@@ -183,14 +186,14 @@ def resource_section(standalone=False):
             target, pt, en = item['links'][0]
             rows.append(f'''<article class="resource-row" id="resource-{esc(key)}">
 <div>{translated(item['pt'], item['en'], 'h3')}{translated(item['description_pt'], item['description_en'], 'p')}</div>
-{translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["en"])}"')}</article>''')
+{translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["pt"])}" data-aria-pt="{esc(item["pt"])}" data-aria-en="{esc(item["en"])}"')}</article>''')
         body += '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">'
         body += translated('Todos os documentos e downloads', 'All documents and downloads', 'a', 'href="resources.html"')
         body += translated('Aluguel e compra da casa', 'Renting and buying the home', 'a', 'id="resource-housing" href="rent-to-own.html"')
         body += translated('Financiamento e gastos', 'Funding and spending', 'a', 'href="transparency.html"')
         body += translated('Referência atual do projeto', 'Current project reference', 'a', 'href="reference.html"')
         body += translated('Roteiro e decisões compartilhadas', 'Roadmap and shared decisions', 'a', 'href="roadmap.html"')
-        body += translated('Perguntas sobre o modelo', 'Model questions', 'a', 'href="faq.html"')
+        body += translated('Perguntas das famílias', 'Questions families ask', 'a', 'href="rent-to-own.html#questions"')
         return body + '</div>'
 
     body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h2') for key in document_ids + ('reference',)) + '</div>'
@@ -205,7 +208,9 @@ def resource_section(standalone=False):
         target = item['links'][0][0]
         body += f'<span id="title-{key}">' + translated(item['pt'], item['en'], 'a', f'id="resource-{key}" href="{esc(target)}"') + '</span>'
     body += translated('Roteiro e decisões compartilhadas', 'Roadmap and shared decisions', 'a', 'href="roadmap.html"')
-    body += translated('Perguntas sobre o modelo', 'Model questions', 'a', 'href="faq.html"') + '</div>'
+    body += translated('Perguntas das famílias', 'Questions families ask', 'a', 'href="rent-to-own.html#questions"')
+    body += translated('Perguntas sobre financiamento, tokens e governança', 'Questions about funding, tokens and governance', 'a', 'href="transparency.html#funding-questions"')
+    body += translated('Participar', 'Take part', 'a', 'href="contact.html"') + '</div>'
     body += '<nav class="archive-nav" aria-label="Contexto do projeto" data-aria-pt="Contexto do projeto" data-aria-en="Project background">'
     body += translated('Por que a IMOBX existe', 'Why IMOBX exists', 'a', 'href="index.html#missao"')
     body += translated('A visão de Rafael para a vila', 'Rafael’s village vision', 'a', 'href="properties.html#visao-rafael"')
@@ -221,7 +226,7 @@ def resource_section(standalone=False):
 for name in ['index.html', 'properties.html']:
     target = ROOT / name
     source, count = re.subn(r'<header class="top(?: site-header)?">.*?</header>',
-                           lambda _: site_header('pt-BR', 'properties.html' if name == 'properties.html' else ''),
+                           lambda _: site_header('pt-BR', name),
                            target.read_text(), count=1, flags=re.S)
     if count != 1:
         raise ValueError(f'Expected one main header in {name}.')
@@ -250,11 +255,6 @@ build_contact(ROOT, page, translated, esc, VERSION)
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main id="main">' + language_controls + resource_section(standalone=True) + '</section></main>',
     '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
-if (ROOT / 'DESIGN.md').is_file():
-    design_html = markdown.markdown((ROOT / 'DESIGN.md').read_text(), extensions=['tables', 'toc'])
-    (ROOT / 'design.html').write_text(page('IMOBX | Design guidelines',
-        '<main class="paper"><p><a href="media-kit.html">IMOBX media kit</a> · '
-        '<a href="DESIGN.md" download>Download design guidelines</a></p>' + design_html + '</main>'))
 kit_html = markdown.markdown((ROOT / 'media-kit.md').read_text(), extensions=['tables', 'toc'])
 logo_previews = '''<div class="media-logo-grid"><figure class="media-logo light">
 <img src="assets/imobx-logo-light.png" width="400" height="400" alt="IMOBX logo on a white background">
@@ -262,9 +262,18 @@ logo_previews = '''<div class="media-logo-grid"><figure class="media-logo light"
 <figure class="media-logo light"><img src="assets/imobx-logo-light.png" width="400" height="400" alt="Existing IMOBX house symbol and wordmark">
 <figcaption>Original IMOBX identity · white website and document backgrounds</figcaption></figure></div>'''
 kit_html = kit_html.replace('<h2', logo_previews + '<h2', 1)
+# The brand guide (DESIGN.md) is a section of the media kit; design.html is a redirect stub.
+brand_html = markdown.markdown((ROOT / 'DESIGN.md').read_text(), extensions=['tables', 'toc'])
+brand_html = re.sub(r'<(/?)h2\b', r'<\1h4', brand_html)
+brand_html = re.sub(r'<(/?)h1\b', r'<\1h3', brand_html)
+brand_section = ('<section id="brand-guide"><h2>Brand guide</h2>'
+                 '<p><a href="DESIGN.md" download>Download design guidelines</a></p>' + brand_html + '</section>')
 (ROOT / 'media-kit.html').write_text(page('IMOBX | Media kit',
     '<main class="paper"><p><a href="media-kit.zip" download>Download media kit ZIP</a> · '
-    '<a href="media-kit.md" download>Editable guide</a> · <a href="brand-colors.json" download>Brand colours (JSON)</a></p>' + kit_html + '</main>', version='0.2'))
+    '<a href="media-kit.md" download>Editable guide</a> · <a href="brand-colors.json" download>Brand colours (JSON)</a> · '
+    '<a href="#brand-guide">Brand guide</a></p>' + kit_html + brand_section + '</main>', version='0.2'))
+(ROOT / 'design.html').write_text(redirect_stub(
+    'IMOBX | Design guidelines', 'Design guidelines', 'media-kit.html#brand-guide', 'Open the current version →'))
 
 
 paper_source = (ROOT / 'whitepaper.md').read_text()
@@ -474,7 +483,7 @@ logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'asse
 archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
         'IMOBX media kit v0.2 / 16 October 2026\nLogo artwork, colours, image sources and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
-        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'faq.html', 'transparency.html', 'model-guide.json',
+        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'transparency.html', 'model-guide.json',
         'project-reference.json', 'project-reference-pt.md', 'project-reference-en.md', 'publication-manifest.json', 'contact-routes.json',
         'project-reference-pt.pdf', 'project-reference-en.pdf', 'media-kit.md', 'media-kit.zip', 'brand-colors.json', 'DESIGN.md']
         + sorted(str(p.relative_to(ROOT)) for p in ROOT.glob('*.html'))
