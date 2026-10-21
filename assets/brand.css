@@ -296,3 +296,7 @@ body{line-height:1.5}
 .guide-table td{border:0;border-bottom:1px solid var(--line);padding:10px 14px}
 .guide-table td:last-child{border-bottom:0}
 .guide-table td::before{content:attr(data-label);display:block;font-weight:700;font-size:14px;color:var(--ink);margin-bottom:4px}}
+
+/* Links in the text and footer are blue and underlined, so a visitor can see what is clickable. Buttons and the menu keep their own look. */
+main a:not(.button),.site-footer a{color:#1b5e8f;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+main a:not(.button):hover,.site-footer a:hover{color:#123f60;text-decoration-thickness:2px}
