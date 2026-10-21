@@ -34,7 +34,7 @@ The publication uses readable sans-serif type, simple headings and generous spac
 
 The city photographs show favelas along the hillsides. Circles highlight the favelas in each view.
 
-The village illustration and loft drawings show proposed designs. Construction photographs show the site and building work.
+The village illustration, made with an image generator, and the loft drawings show proposed designs. Construction photographs show the site and building work.
 
 ## Project descriptions
 

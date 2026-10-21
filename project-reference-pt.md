@@ -1,4 +1,4 @@
-# A IMOBX prepara moradias com um caminho até a compra.
+# A IMOBX prepara moradias com um caminho até a compra
 
 **v0.7 · 2026-10-19**
 
@@ -121,7 +121,7 @@ O estudo financeiro ainda precisa reunir orçamento em reais, parcelas acessíve
 
 [O limite do programa experimental CVM 249](https://siah-kin.github.io/imobx-website/reference.html#source-cvm249)
 
-## Cada capítulo pode citar uma seção identificável.
+## Capítulos e seções
 
 O mapa abaixo acompanha o escopo do documento de Rafael. As páginas existentes são material de referência. O manuscrito final reunirá a tese, os documentos novos e as decisões aprovadas. Uma seção marcada como proposta não vira fato por ser citada no documento.
 
@@ -233,7 +233,7 @@ As conclusões devem acompanhar a evidência disponível. Fontes, versões e ter
 
 [Versões](https://siah-kin.github.io/imobx-website/reference.html#versions)
 
-## As fontes sustentam afirmações específicas.
+## As fontes sustentam afirmações específicas
 
 Revisão em 17/10/2026. Fontes oficiais explicam normas e dados. Não aprovam a IMOBX. Documentação de um fornecedor descreve seu produto, sem comprovar uma integração IMOBX. Números fornecidos pelo fundador mantêm essa atribuição.
 
@@ -293,7 +293,7 @@ Exige divulgação de parcerias pagas e proíbe categorias de conteúdo. As rest
 
 Exemplo de plataforma de negociação na rede Arc.
 
-## Uma citação deve identificar a versão e a seção.
+## Como citar esta referência
 
 Referência para citação: IMOBX, Referência do projeto, v0.7, revisão de 19/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.
 

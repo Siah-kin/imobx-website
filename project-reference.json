@@ -2,8 +2,8 @@
   "version": "0.7",
   "reviewed": "2026-10-19",
   "title": [
-    "A IMOBX prepara moradias com um caminho até a compra.",
-    "IMOBX is preparing homes with a path to ownership."
+    "A IMOBX prepara moradias com um caminho até a compra",
+    "IMOBX is preparing homes with a path to ownership"
   ],
   "intro": [
     "Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 19 de outubro de 2026.",
@@ -694,8 +694,8 @@
     }
   ],
   "chapters_title": [
-    "Cada capítulo pode citar uma seção identificável.",
-    "Each chapter can cite an identifiable section."
+    "Capítulos e seções",
+    "Chapters and sections"
   ],
   "chapters_intro": [
     "O mapa abaixo acompanha o escopo do documento de Rafael. As páginas existentes são material de referência. O manuscrito final reunirá a tese, os documentos novos e as decisões aprovadas. Uma seção marcada como proposta não vira fato por ser citada no documento.",
@@ -1069,8 +1069,8 @@
     }
   ],
   "sources_title": [
-    "As fontes sustentam afirmações específicas.",
-    "Sources support specific claims."
+    "As fontes sustentam afirmações específicas",
+    "Sources support specific claims"
   ],
   "sources_intro": [
     "Revisão em 17/10/2026. Fontes oficiais explicam normas e dados. Não aprovam a IMOBX. Documentação de um fornecedor descreve seu produto, sem comprovar uma integração IMOBX. Números fornecidos pelo fundador mantêm essa atribuição.",
@@ -1247,8 +1247,8 @@
     }
   ],
   "versions_title": [
-    "Uma citação deve identificar a versão e a seção.",
-    "A citation should identify the version and section."
+    "Como citar esta referência",
+    "How to cite this reference"
   ],
   "versions": [
     [

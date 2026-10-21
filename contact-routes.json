@@ -30,8 +30,8 @@
         {
           "id": "needs",
           "label": [
-            "O que uma moradia precisaria oferecer à sua família?",
-            "What would a home need to provide for your household?"
+            "O que a moradia precisa oferecer à sua família?",
+            "What does a home need to provide for your household?"
           ],
           "multiline": true,
           "required": true
@@ -50,12 +50,12 @@
         "I have a property or land"
       ],
       "description": [
-        "Apresente um imóvel e a forma de participação que considera.",
-        "Introduce a property and the arrangement you would consider."
+        "Apresente um imóvel e a forma de participação que você considera.",
+        "Introduce a property and the arrangement you are considering."
       ],
       "context": [
-        "Informe a região, o estado do imóvel e se considera doação, locação ou venda. Isso permite discutir uma avaliação do local e um orçamento. Um acordo posterior precisaria definir uso, obras, despesas e eventual transferência.",
-        "Describe the area, property condition and whether donation, lease or sale is being considered. This allows a site assessment and budget to be discussed. A later agreement would define use, works, expenses and any transfer."
+        "Informe a região, o estado do imóvel e se considera doação, locação ou venda. Isso permite discutir uma avaliação do local e um orçamento. Um acordo posterior define uso, obras, despesas e eventual transferência.",
+        "Describe the area, property condition and whether donation, lease or sale is being considered. This allows a site assessment and budget to be discussed. A later agreement defines use, works, expenses and any transfer."
       ],
       "fields": [
         {
@@ -69,8 +69,8 @@
         {
           "id": "arrangement",
           "label": [
-            "Que acordo você consideraria: aluguel, venda, doação ou moradia com opção de compra?",
-            "What arrangement would you consider: lease, sale, donation or rent-to-own?"
+            "Qual acordo você considera: aluguel, venda, doação ou moradia com opção de compra?",
+            "Which arrangement are you considering: lease, sale, donation or rent-to-own?"
           ],
           "multiline": true,
           "required": true
@@ -78,8 +78,8 @@
       ],
       "reading_url": "rent-to-own.html#property",
       "reading_label": [
-        "Como um imóvel poderia entrar no projeto",
-        "How a property could enter the project"
+        "Como um imóvel entra no projeto",
+        "How a property enters the project"
       ]
     },
     {
@@ -93,8 +93,8 @@
         "Construction, materials, legal advice, accounting or technical support."
       ],
       "context": [
-        "Descreva seu serviço, região e experiência. Antes de contratar, seriam combinados os serviços, o preço, o prazo e quem conferiria o trabalho. Esta apresentação não confirma contratação.",
-        "Describe your service, area and experience. Construction, legal review or accounting work would need an agreement on the work, price, deadline and who checks its completion. This introduction does not confirm an appointment."
+        "Descreva seu serviço, região e experiência. Antes de contratar, a IMOBX combina os serviços, o preço, o prazo e quem confere o trabalho. Esta apresentação não confirma contratação.",
+        "Describe your service, area and experience. Construction, legal review or accounting work needs an agreement on the work, price, deadline and who checks its completion. This introduction does not confirm an appointment."
       ],
       "fields": [
         {
@@ -147,8 +147,8 @@
         {
           "id": "proposal",
           "label": [
-            "Que necessidade ou possibilidade de colaboração você gostaria de discutir?",
-            "What need or opportunity to work together would you like to discuss?"
+            "Que necessidade ou oportunidade de colaboração você quer discutir?",
+            "What need or opportunity to work together do you want to discuss?"
           ],
           "multiline": true,
           "required": true
@@ -156,15 +156,15 @@
       ],
       "reading_url": "rent-to-own.html#property",
       "reading_label": [
-        "Possíveis contribuições de uma organização",
-        "How an organization could contribute"
+        "Como uma organização contribui",
+        "How an organization can contribute"
       ]
     },
     {
       "id": "funding",
       "title": [
         "Quero apoiar o financiamento",
-        "I would like to discuss funding"
+        "I want to discuss funding"
       ],
       "description": [
         "Doações, editais, crédito ou uma conversa sobre investimento.",
@@ -178,8 +178,8 @@
         {
           "id": "support",
           "label": [
-            "Que tipo de apoio você gostaria de discutir?",
-            "What type of support would you like to discuss?"
+            "Que tipo de apoio você quer discutir?",
+            "What type of support do you want to discuss?"
           ],
           "required": true
         },
@@ -187,7 +187,7 @@
           "id": "purpose",
           "label": [
             "Qual parte do projeto interessa a você e quais informações precisa conhecer?",
-            "Which part of the project interests you, and what information would you need?"
+            "Which part of the project interests you, and what information do you need?"
           ],
           "multiline": true,
           "required": true
@@ -195,30 +195,30 @@
       ],
       "reading_url": "transparency.html#community-economy",
       "reading_label": [
-        "Como os recursos seriam usados",
-        "How funding would be used"
+        "Como os recursos são usados",
+        "How funding is used"
       ]
     },
     {
       "id": "community",
       "title": [
         "Quero contribuir com a comunidade",
-        "I would like to help the community"
+        "I want to help the community"
       ],
       "description": [
         "Divulgação, moderação, tradução e apoio aos participantes.",
         "Outreach, moderation, translation and participant support."
       ],
       "context": [
-        "Explique como gostaria de ajudar: tradução, moderação, comunicação ou apoio a participantes. Uma tarefa remunerada teria uma entrega combinada, orçamento e revisão antes do pagamento. Ainda não há uma oferta de trabalho ou de recompensas nesta página.",
-        "Explain how you would like to help: translation, moderation, communication or participant support. For paid tasks, the work, budget and check required before payment would be agreed first. This page does not yet offer a job or rewards."
+        "Explique como quer ajudar: tradução, moderação, comunicação ou apoio a participantes. Uma tarefa remunerada tem uma entrega combinada, orçamento e revisão antes do pagamento. Ainda não há uma oferta de trabalho ou de recompensas nesta página.",
+        "Explain how you want to help: translation, moderation, communication or participant support. A paid task has an agreed result, a budget and a check before payment. This page does not yet offer a job or rewards."
       ],
       "fields": [
         {
           "id": "contribution",
           "label": [
-            "Como gostaria de contribuir?",
-            "How would you like to contribute?"
+            "Como você quer contribuir?",
+            "How do you want to contribute?"
           ],
           "required": true
         },
@@ -234,8 +234,8 @@
       ],
       "reading_url": "transparency.html#campaign-work",
       "reading_label": [
-        "Como um trabalho de divulgação seria pago",
-        "How outreach work would be paid"
+        "Como um trabalho de divulgação é pago",
+        "How outreach work is paid"
       ]
     }
   ]

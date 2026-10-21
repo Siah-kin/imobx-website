@@ -198,7 +198,7 @@ Service targets depend on the first project’s needs and resident participation
 
 ## 11. Partner participation
 
-The [Get involved page](contact.html) has separate routes for residents, property owners, building professionals, community organisations, funding partners and community contributors. A household can describe its location and housing needs. An owner can describe a property and whether donation, sale or lease is being considered. A builder can introduce a service and area of work. A funding partner can state the type of support and documents it needs to assess.
+The [participation page](contact.html) has separate routes for residents, property owners, building professionals, community organisations, funding partners and community contributors. A household can describe its location and housing needs. An owner can describe a property and whether donation, sale or lease is being considered. A builder can introduce a service and area of work. A funding partner can state the type of support and documents it needs to assess.
 
 Receiving contacts are not yet available. Visitors can prepare and copy an introduction, but the site does not send it or reserve housing, appoint a contractor or accept an investment. [Household route](contact.html?role=resident); [property route](contact.html?role=property); [funding route](contact.html?role=funding).
 

@@ -29,7 +29,7 @@ from reportlab.pdfgen import canvas
 ROOT = Path(__file__).resolve().parent
 PREVIEW_ONLY = require_review(ROOT)
 INK = '#193d4e'
-ACCENT = '#4a90a4'
+ACCENT = '#276578'
 MUTED = '#596772'
 PAPER = '#ffffff'
 LINE = '#dae2e6'
@@ -39,17 +39,30 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 
+MONTHS_PT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto',
+             'setembro', 'outubro', 'novembro', 'dezembro']
+MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+             'September', 'October', 'November', 'December']
+
+
+def status_bar_text():
+    """Visitor-facing status bar: the project status and the date, without a version number."""
+    year, month, day = (int(part) for part in REVIEW_DATE.split('-'))
+    pt = f'Projeto em preparação · atualizado em {day} de {MONTHS_PT[month - 1]} de {year}'
+    en = f'Project in preparation · updated {day} {MONTHS_EN[month - 1]} {year}'
+    return pt, en
+
+
 def site_header(lang='pt-BR', current=''):
     """One main menu; local section links belong inside each page."""
     portuguese = lang.startswith('pt')
     items = [
         ('index.html#modelo', 'O projeto', 'The project'),
         ('index.html#custos', 'Custos da construção', 'Construction costs'),
-        ('roadmap.html', 'Roteiro', 'Roadmap'),
+        ('roadmap.html', 'Acompanhe o projeto', 'Follow the project'),
         ('properties.html', 'Moradias e projetos', 'Homes & designs'),
         ('transparency.html', 'Financiamento e gastos', 'Funding & spending'),
         ('resources.html', 'Documentos', 'Documents'),
-        ('contact.html', 'Participar', 'Get involved'),
     ]
     links = ''
     for target, pt, en in items:
@@ -66,21 +79,26 @@ def site_header(lang='pt-BR', current=''):
             '</div></nav></header>')
 
 
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John. A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, a founder, and John. The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John. A forma jurídica da organização ainda está sendo definida.</p><p><a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a></p></div></footer>'
+
+
 def page(title, body, script='', version='0.1', lang='en', title_pt=None):
-    def label(pt, en):
-        return f'<span data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt if lang.startswith("pt") else en)}</span>'
+    if 'id="main"' not in body:
+        body = re.sub(r'<main(?![^>]*\bid=)', '<main id="main"', body, count=1)
     if 'assets/site.js' not in script:
         script += '<script src="assets/site.js" defer></script>'
     current = {'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
                'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html',
-               'IMOBX | Get involved': 'contact.html'}.get(title, '')
+               'IMOBX | Take part': 'contact.html'}.get(title, '')
     return f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="IMOBX housing pilot: model, roadmap and project resources.">
 <title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}</head>
-<body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review">{label('Projeto em desenvolvimento', 'Project in development')} · v{esc(version)} · {label('Revisão do conteúdo', 'Content review')}: {REVIEW_DATE}</div>
+<body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review" data-pt="{esc(status_bar_text()[0])}" data-en="{esc(status_bar_text()[1])}">{esc(status_bar_text()[0] if lang.startswith('pt') else status_bar_text()[1])}</div>
+<a href="#main" class="skip" data-pt="Pular para o conteúdo" data-en="Skip to content">{'Pular para o conteúdo' if lang.startswith('pt') else 'Skip to content'}</a>
 {site_header(lang, current)}
-{body}</body></html>'''
+{body}
+<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John. A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, a founder, and John. The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John. A forma jurídica da organização ainda está sendo definida.</p><p><a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a></p></div></footer></body></html>'''
 
 
 RESOURCE_CATALOG = [
@@ -142,13 +160,13 @@ def resource_section(standalone=False):
     catalog = {item['id']: item for item in RESOURCE_CATALOG}
     document_ids = ('whitepaper', 'pitchdeck', 'devsheet')
 
-    def card(item):
+    def card(item, level='h3'):
         actions = []
         for target, pt, en in item['links']:
             download = ' download' if '#' not in target and not target.endswith('.html') else ''
             actions.append(translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["en"] + ": " + en)}"{download}'))
         return f'''<article class="resource-card" id="resource-{esc(item['id'])}" aria-labelledby="title-{esc(item['id'])}">
-{translated(item['pt'], item['en'], 'h3', f'id="title-{item["id"]}"')}
+{translated(item['pt'], item['en'], level, f'id="title-{item["id"]}"')}
 {translated(item['description_pt'], item['description_en'], 'p')}
 <p class="resource-meta">v{esc(item['version'])} · {translated(item['meta_pt'], item['meta_en'])}</p>
 <div class="resource-actions">{''.join(actions)}</div></article>'''
@@ -156,8 +174,7 @@ def resource_section(standalone=False):
     intro_pt = 'O whitepaper apresenta a proposta de moradia e seu financiamento. O pitch deck resume o projeto para parceiros. O guia do piloto detalha o trabalho e as responsabilidades. Os três documentos são rascunhos em inglês.'
     intro_en = 'The whitepaper explains the housing proposal and its funding. The pitch deck presents the project to partners. The pilot and building guide covers the work and responsibilities. All three documents are English drafts.'
     body = '<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>'
-    body += translated('Documentos do projeto', 'Project documents', 'span', 'class="eyebrow"')
-    body += translated('Documentos do projeto.', 'Project documents.', 'h1' if standalone else 'h2')
+    body += translated('Documentos do projeto', 'Project documents', 'h1' if standalone else 'h2')
     body += translated(intro_pt, intro_en, 'p')
     if not standalone:
         rows = []
@@ -166,7 +183,7 @@ def resource_section(standalone=False):
             target, pt, en = item['links'][0]
             rows.append(f'''<article class="resource-row" id="resource-{esc(key)}">
 <div>{translated(item['pt'], item['en'], 'h3')}{translated(item['description_pt'], item['description_en'], 'p')}</div>
-{translated(pt + ' ↗', en + ' ↗', 'a', f'href="{esc(target)}" aria-label="{esc(item["en"])}"')}</article>''')
+{translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["en"])}"')}</article>''')
         body += '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">'
         body += translated('Todos os documentos e downloads', 'All documents and downloads', 'a', 'href="resources.html"')
         body += translated('Aluguel e compra da casa', 'Renting and buying the home', 'a', 'id="resource-housing" href="rent-to-own.html"')
@@ -176,7 +193,7 @@ def resource_section(standalone=False):
         body += translated('Perguntas sobre o modelo', 'Model questions', 'a', 'href="faq.html"')
         return body + '</div>'
 
-    body += '<div class="resource-grid">' + ''.join(card(catalog[key]) for key in document_ids + ('reference',)) + '</div>'
+    body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h2') for key in document_ids + ('reference',)) + '</div>'
     body += '<section id="media-resources" aria-labelledby="media-resources-title">'
     body += translated('Materiais para divulgação', 'Media resources', 'h2', 'id="media-resources-title"')
     body += '<div class="resource-grid">' + card(catalog['media-kit']) + '</div></section>'
@@ -208,13 +225,15 @@ for name in ['index.html', 'properties.html']:
                            target.read_text(), count=1, flags=re.S)
     if count != 1:
         raise ValueError(f'Expected one main header in {name}.')
-    review_pt = f'Projeto em desenvolvimento · v{VERSION} · Revisão: {REVIEW_DATE}'
-    review_en = f'Project in development · v{VERSION} · Reviewed: {REVIEW_DATE}'
+    review_pt, review_en = status_bar_text()
     source, count = re.subn(r'<div class="review"[^>]*>.*?</div>',
         lambda _: f'<div class="review" data-pt="{esc(review_pt)}" data-en="{esc(review_en)}">{esc(review_pt)}</div>',
         source, count=1, flags=re.S)
     if count != 1:
         raise ValueError(f'Expected one review date in {name}.')
+    source, count = re.subn(r'<footer class="footer(?: site-footer)?">.*?</footer>', lambda _: SITE_FOOTER, source, count=1, flags=re.S)
+    if count != 1:
+        raise ValueError(f'Expected one footer in {name}.')
     target.write_text(source)
 
 
@@ -264,7 +283,7 @@ slides_html = []
 deck_md = [f"# {deck['title']}", deck['subtitle'], f"**{deck['status']}**", '']
 for number, item in enumerate(deck['slides'], 1):
     slides_html.append(f'''<section class="slide" aria-labelledby="slide-{number}">
-<div class="eyebrow">{esc(item['eyebrow'])}</div><h1 id="slide-{number}">{esc(item['title'])}</h1>
+<h1 id="slide-{number}">{esc(item['title'])}</h1>
 <p class="lead">{esc(item['lead'])}</p><ul>{''.join('<li>'+esc(x)+'</li>' for x in item['bullets'])}</ul>
 <div class="slide-foot"><span>IMOBX / PARTNER DISCUSSION DRAFT</span><span>{number:02d} / {len(deck['slides']):02d}</span></div>
 <aside class="notes"><strong>Presenter notes</strong><p>{esc(item['notes'])}</p></aside></section>''')
@@ -421,7 +440,6 @@ for number, item in enumerate(deck['slides'],1):
     accent = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE,Inches(.65),Inches(.62),Inches(.07),Inches(.2))
     accent.fill.solid(); accent.fill.fore_color.rgb=RGBColor.from_string(ACCENT.lstrip('#')); accent.line.fill.background()
     slide.shapes.add_picture(str(ROOT / 'assets/imobx-logo-light.png'), Inches(11.6), Inches(.08), width=Inches(.95), height=Inches(.95))
-    ppt_text(slide,item['eyebrow'],.9,.6,10,.35,11,ACCENT,True)
     ppt_text(slide,item['title'],.8,1.17,11.7,1.7,40,INK,False,'Arial')
     ppt_text(slide,item['lead'],.82,3.03,11.6,1.0,21,MUTED)
     for row, bullet in enumerate(item['bullets']):
@@ -432,7 +450,6 @@ for number, item in enumerate(deck['slides'],1):
     slide.notes_slide.notes_text_frame.text = item['notes'] + f'\n\nSources and factual limits: companion whitepaper v{VERSION} and reference.html.'
     pdf.setFillColor(colors.HexColor(PAPER)); pdf.rect(0,0,13.333*inch,7.5*inch,fill=1,stroke=0)
     pdf.drawImage(str(ROOT / 'assets/imobx-logo-light.png'),11.6*inch,6.47*inch,width=.95*inch,height=.95*inch)
-    pdf_text(item['eyebrow'],.82,.62,10,11,ACCENT,True)
     pdf_text(item['title'],.82,1.18,11.7,40,limit=1.7)
     pdf_text(item['lead'],.82,3.03,11.6,21,MUTED,limit=1.0)
     for row, bullet in enumerate(item['bullets']):

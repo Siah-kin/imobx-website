@@ -4,8 +4,7 @@
   "status": "Partner discussion draft · v0.7 · 19 October 2026",
   "slides": [
     {
-      "eyebrow": "01 / THE PROJECT",
-      "title": "Families would rent toward owning their home.",
+      "title": "Families would rent toward owning their home",
       "lead": "IMOBX is preparing a first rent-to-own housing project in Rio.",
       "bullets": [
         "Local construction and clear family agreements.",
@@ -15,8 +14,7 @@
       "notes": "Rafael brings construction and local experience; John handles community and digital work. Their roles, the legal organization and the right to use each property need written agreements. This draft explains the plan and asks for partners; it does not offer an investment."
     },
     {
-      "eyebrow": "02 / THE PEOPLE",
-      "title": "Start with what a family needs.",
+      "title": "Start with what a family needs",
       "lead": "The first project would help displaced families and people unable to use ordinary housing finance.",
       "bullets": [
         "Agree who can join and what payments are affordable.",
@@ -26,8 +24,7 @@
       "notes": "Brazil’s 2022 Census counted about 16.4 million residents in favelas and urban communities, 8.1% of the population. That is national context, not a description of a selected family or site. Living in a favela does not itself mean being displaced. Listen to families about work, schools, transport, support networks and whether a move suits them. Participating households are not identified in this draft."
     },
     {
-      "eyebrow": "03 / DELIVERY KNOWLEDGE",
-      "title": "Rafael has supplied a building budget.",
+      "title": "Rafael has supplied a building budget",
       "lead": "His US$27,777 per-home plan uses CUB and SINAPI, Brazilian building-cost references.",
       "bullets": [
         "Land US$5,550 · construction US$18,600 · solar US$1,500.",
@@ -37,8 +34,7 @@
       "notes": "On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six homes total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together."
     },
     {
-      "eyebrow": "04 / THE OPERATING MODEL",
-      "title": "Part of each payment would go towards buying the home.",
+      "title": "Part of each payment would go towards buying the home",
       "lead": "The household could see what it has paid towards the purchase and how much remains.",
       "bullets": [
         "The agreement sets the price and how much of each payment goes towards buying.",
@@ -48,8 +44,7 @@
       "notes": "The first homes are still being planned. This slide does not offer a home. The first home’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work."
     },
     {
-      "eyebrow": "05 / MONEY",
-      "title": "Show where each payment goes.",
+      "title": "Show where each payment goes",
       "lead": "Keep rent, donations, grants, service income and trading fees separately identified.",
       "bullets": [
         "Pay taxes, repairs and agreed running costs.",
@@ -59,8 +54,7 @@
       "notes": "Money credited toward a family’s purchase is not a second receipt of cash. Money paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Money locked in a trading market is not also available to build homes."
     },
     {
-      "eyebrow": "06 / CONTINUITY",
-      "title": "Pay today’s bills. Plan the next homes.",
+      "title": "Pay today’s bills and plan the next homes",
       "lead": "Running the existing homes and building more need separate budgets.",
       "bullets": [
         "Check the budget with little or no trading income.",
@@ -70,8 +64,7 @@
       "notes": "Having a thousand homes does not itself show that the accounts balance. One-off grants can help construction but do not become continuing income. Any ongoing charge needs a real, affordable service under agreed terms."
     },
     {
-      "eyebrow": "07 / RESIDENT VOICE",
-      "title": "Residents would decide how shared spaces are used.",
+      "title": "Residents would decide how shared spaces are used",
       "lead": "Courtyard use, study-room hours, repair priorities and representatives are resident matters.",
       "bullets": [
         "One vote per member is an option under discussion.",
@@ -81,8 +74,7 @@
       "notes": "The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Buying tokens would not give control over another household’s contracted purchase price. See rent-to-own.html#decisions and roadmap.html#governance. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX."
     },
     {
-      "eyebrow": "08 / DIGITAL TOOLS",
-      "title": "From a request to checked work.",
+      "title": "From a request to checked work",
       "lead": "Agreed roles, spending limits and shared records keep everyday work moving.",
       "bullets": [
         "A resident raises an issue; a responsible person takes it forward.",
@@ -92,8 +84,7 @@
       "notes": "Before the pilot, residents and the organization need to agree which matters each group decides, spending limits and how a decision can be reviewed. For example: a resident reports a leak, the maintenance role assesses it and obtains a quote, spending follows the agreed rule, and another person checks the repair and payment. Routine work should proceed within those limits without constant founder instructions. Residents need ways to choose and replace responsible people. The support channel would show requests, decisions and progress; software assistants could organize documents and reminders. Blockchain could show payment amounts and destinations. These tools follow the rules agreed by participants. The complete process still needs to be demonstrated in IMOBX."
     },
     {
-      "eyebrow": "09 / TOKEN DECISION",
-      "title": "A possible token could fund operations and outreach.",
+      "title": "A possible token could fund operations and outreach",
       "lead": "Buyers of new tokens would pay the organisation that creates and sells them. Their rights are still undecided.",
       "bullets": [
         "A later resale normally pays the seller; any project fee is separate.",
@@ -103,8 +94,7 @@
       "notes": "Four scenarios remain: no IMOBX token, a service or membership benefit, a share of collected fees, or an investment in the operation. These are alternatives, not combined promised rights. Capital for construction, outreach payments and investor income have different budgets and commitments. Residents’ participation would not depend on investment or promotion. Reference.html#token compares what a buyer might receive and the decisions still open."
     },
     {
-      "eyebrow": "10 / THE ROADMAP",
-      "title": "Each stage needs evidence before it advances.",
+      "title": "Each stage needs evidence before it advances",
       "lead": "The roadmap names proposed roles and conditions for proceeding.",
       "bullets": [
         "Property rights, household terms and budgets underpin the first homes.",
@@ -114,8 +104,7 @@
       "notes": "The six stages are legal structure and property; resident participation; first homes; payment records people can check; funding and account review; more homes and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage."
     },
     {
-      "eyebrow": "11 / PILOT EVIDENCE",
-      "title": "Measure homes and promises kept.",
+      "title": "Measure homes and promises kept",
       "lead": "Follow actual costs, accounts and families’ experience.",
       "bullets": [
         "Check completed work, final cost and delays.",
@@ -125,15 +114,14 @@
       "notes": "Agree response times and affordability targets with local participants. Report homes as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. The published records do not yet document completed home transfers or committed capital."
     },
     {
-      "eyebrow": "12 / NEXT PARTNERS",
-      "title": "One property can become a project to assess.",
+      "title": "One property can become a project to assess",
       "lead": "An owner, building team, local organization and funder could develop a costed proposal together.",
       "bullets": [
         "Owners: property, condition and donation, sale or lease terms.",
         "Builders and funders: costed work, funding purpose and commitments.",
         "Households: affordable terms, location, repairs and resident decisions."
       ],
-      "notes": "These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Receiving contacts are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property."
+      "notes": "These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Contact details are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property."
     }
   ],
   "sources": [

@@ -6,7 +6,7 @@ A documented rent-to-own housing model for Rio
 
 
 
-## 1. Families would rent toward owning their home.
+## 1. Families would rent toward owning their home
 
 IMOBX is preparing a first rent-to-own housing project in Rio.
 
@@ -24,7 +24,7 @@ IMOBX is preparing a first rent-to-own housing project in Rio.
 
 
 
-## 2. Start with what a family needs.
+## 2. Start with what a family needs
 
 The first project would help displaced families and people unable to use ordinary housing finance.
 
@@ -42,7 +42,7 @@ The first project would help displaced families and people unable to use ordinar
 
 
 
-## 3. Rafael has supplied a building budget.
+## 3. Rafael has supplied a building budget
 
 His US$27,777 per-home plan uses CUB and SINAPI, Brazilian building-cost references.
 
@@ -60,7 +60,7 @@ His US$27,777 per-home plan uses CUB and SINAPI, Brazilian building-cost referen
 
 
 
-## 4. Part of each payment would go towards buying the home.
+## 4. Part of each payment would go towards buying the home
 
 The household could see what it has paid towards the purchase and how much remains.
 
@@ -78,7 +78,7 @@ The household could see what it has paid towards the purchase and how much remai
 
 
 
-## 5. Show where each payment goes.
+## 5. Show where each payment goes
 
 Keep rent, donations, grants, service income and trading fees separately identified.
 
@@ -96,7 +96,7 @@ Keep rent, donations, grants, service income and trading fees separately identif
 
 
 
-## 6. Pay today’s bills. Plan the next homes.
+## 6. Pay today’s bills and plan the next homes
 
 Running the existing homes and building more need separate budgets.
 
@@ -114,7 +114,7 @@ Running the existing homes and building more need separate budgets.
 
 
 
-## 7. Residents would decide how shared spaces are used.
+## 7. Residents would decide how shared spaces are used
 
 Courtyard use, study-room hours, repair priorities and representatives are resident matters.
 
@@ -132,7 +132,7 @@ Courtyard use, study-room hours, repair priorities and representatives are resid
 
 
 
-## 8. From a request to checked work.
+## 8. From a request to checked work
 
 Agreed roles, spending limits and shared records keep everyday work moving.
 
@@ -150,7 +150,7 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 
 
-## 9. A possible token could fund operations and outreach.
+## 9. A possible token could fund operations and outreach
 
 Buyers of new tokens would pay the organisation that creates and sells them. Their rights are still undecided.
 
@@ -168,7 +168,7 @@ Buyers of new tokens would pay the organisation that creates and sells them. The
 
 
 
-## 10. Each stage needs evidence before it advances.
+## 10. Each stage needs evidence before it advances
 
 The roadmap names proposed roles and conditions for proceeding.
 
@@ -186,7 +186,7 @@ The roadmap names proposed roles and conditions for proceeding.
 
 
 
-## 11. Measure homes and promises kept.
+## 11. Measure homes and promises kept
 
 Follow actual costs, accounts and families’ experience.
 
@@ -204,7 +204,7 @@ Follow actual costs, accounts and families’ experience.
 
 
 
-## 12. One property can become a project to assess.
+## 12. One property can become a project to assess
 
 An owner, building team, local organization and funder could develop a costed proposal together.
 
@@ -218,7 +218,7 @@ An owner, building team, local organization and funder could develop a costed pr
 
 
 
-**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Receiving contacts are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property.
+**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. Contact details are still placeholders: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property.
 
 
 

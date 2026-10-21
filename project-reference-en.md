@@ -1,4 +1,4 @@
-# IMOBX is preparing homes with a path to ownership.
+# IMOBX is preparing homes with a path to ownership
 
 **v0.7 · 2026-10-19**
 
@@ -121,7 +121,7 @@ The cash plan needs a budget in reais and payments families can afford. It also 
 
 [The limits of the CVM 249 experimental programme](https://siah-kin.github.io/imobx-website/reference.html#source-cvm249)
 
-## Each chapter can cite an identifiable section.
+## Chapters and sections
 
 The map below follows the scope of Rafael’s document. Existing pages provide reference material. The final manuscript will bring together the thesis, new documents and approved decisions. Citing a proposed arrangement does not turn it into a fact.
 
@@ -233,7 +233,7 @@ Conclusions should follow the available evidence. Sources, versions and terms ar
 
 [Versions](https://siah-kin.github.io/imobx-website/reference.html#versions)
 
-## Sources support specific claims.
+## Sources support specific claims
 
 Reviewed on 17 October 2026. Official sources explain rules and data. They do not approve IMOBX. A provider’s documentation describes its product, without establishing an IMOBX integration. Founder-supplied figures retain that attribution.
 
@@ -293,7 +293,7 @@ Requires paid-partnership disclosure and prohibits content categories. Country r
 
 An example of a trading platform on the Arc network.
 
-## A citation should identify the version and section.
+## How to cite this reference
 
 Citation format: IMOBX, Project reference, v0.7, reviewed 19 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start.
 

@@ -70,7 +70,7 @@ def build_reference(root, page, tr, esc):
         body += text(source['scope']) + '</li>'
     body += '</ol></section><section id="versions">' + text(data['versions_title'], 'h2')
     body += ''.join(text(p) for p in data['versions'])
-    body += '<p><a href="publication-manifest.json">' + text(('Versões e identificação dos arquivos', 'File versions and identifiers')) + '</a></p>'
+    body += '<p><a href="publication-manifest.json">' + text(('Versões e identificação dos arquivos', 'File versions and identifiers'), 'span') + '</a></p>'
     body += '<p><a href="project-reference-pt.pdf" download>Português · PDF</a> · '
     body += '<a href="project-reference-pt.md" download>Português · Markdown</a> · '
     body += '<a href="project-reference-en.pdf" download>English · PDF</a> · '

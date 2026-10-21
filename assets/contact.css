@@ -11,7 +11,7 @@
 .contact-route-description{font-size:14px;line-height:1.6;color:var(--muted);margin-top:7px}
 .contact-route:hover,.contact-route.is-selected{border-color:#276578;background:var(--pale)}
 .contact-route:focus-within{outline:3px solid #276578;outline-offset:3px}
-.contact-context{max-width:72ch;border-left:3px solid var(--imobx-turquoise);padding:8px 18px;margin:24px 0}
+.contact-context{max-width:72ch;background:var(--pale);padding:8px 18px;margin:24px 0}
 .contact-selected-route{font-weight:700;margin-bottom:6px}
 .contact-field{margin:22px 0}
 .contact-field>label,.contact-page label[for="enquiry-message"]{display:block;font-weight:700;font-size:16px;margin-bottom:8px}
