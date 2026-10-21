@@ -1,8 +1,8 @@
 # IMOBX is preparing homes with a path to ownership
 
-**v0.7 · 2026-10-21**
+**Version 0.7, 21 October 2026**
 
-This page states the current plan, with Rafael’s figures and links to their sources. It explains who does each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 19 October 2026.
+This page states the current plan, with Rafael’s figures and links to their sources. It explains who does each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 21 October 2026.
 
 ## What exists today?
 
@@ -10,7 +10,7 @@ Under the proposal, each family has an agreement that explains how it becomes th
 
 Not decided: the property; the price, monthly payment, time to pay and the share of each payment that counts towards buying; the terms for repairs, missed payments and leaving; the organisation’s legal form; funding and what funders receive; and the rights of any token.
 
-| Material | What it provides | Position on 19 October 2026 |
+| Material | What it provides | Position on 21 October 2026 |
 | --- | --- | --- |
 | Whitepaper | An explanation of the model, costs and risks. | English reference draft, v0.7. Rafael’s roughly 30-page manuscript is in preparation. |
 | Deck | A partner discussion summary, with presenter notes. | 12 English slides, v0.7. |
@@ -299,7 +299,7 @@ An example of a trading platform on the Arc network. It does not establish IMOBX
 
 ## How to cite this reference
 
-Citation format: IMOBX, Project reference, v0.7, reviewed 19 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start.
+Citation format: IMOBX, Project reference, v0.7, reviewed 21 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start.
 
 Each correction needs a date and a named source. A new decision also needs the name of the person who approved it and a link to its basis. Once operations exist, reports will state their period, account preparer and reviewer. Proposed, contracted, received and spent amounts will be shown separately.
 

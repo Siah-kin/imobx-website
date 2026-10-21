@@ -67,13 +67,13 @@ def build_guide(root, page, tr, esc, language_controls):
         'arc': ('Arc · Litepaper', 'Arc · Litepaper'),
         'arctide': ('Arctide · exchange na Arc', 'Arctide · exchange on Arc'),
         'argus': ('Argus · exchange na Arc', 'Argus · exchange on Arc'),
-        'cash': ('Whitepaper, seção 4: a política de caixa', 'Whitepaper, section 4: the cash policy'),
-        'rights': ('Whitepaper, seção 8: o que um token poderia representar', 'Whitepaper, section 8: what a token could represent'),
-        'digital': ('Whitepaper, seção 9: o que passa a ser digital', 'Whitepaper, section 9: what becomes digital'),
-        'technical': ('Guia do piloto, seção 6: escopo e aceitação', 'Pilot guide, section 6: scope and acceptance'),
+        'cash': ('Whitepaper, seção 4: a política de caixa (em inglês)', 'Whitepaper, section 4: the cash policy'),
+        'rights': ('Whitepaper, seção 8: o que um token poderia representar (em inglês)', 'Whitepaper, section 8: what a token could represent'),
+        'digital': ('Whitepaper, seção 9: o que passa a ser digital (em inglês)', 'Whitepaper, section 9: what becomes digital'),
+        'technical': ('Guia do piloto, seção 6: escopo e aceitação (em inglês)', 'Pilot guide, section 6: scope and acceptance'),
         'roadmap': ('Etapas do projeto', 'Project stages'),
         'charter': ('Etapas do projeto: quem decide o quê', 'Project stages: who decides what'),
-        'cost': ('Whitepaper, seção 3: os custos', 'Whitepaper, section 3: the costs'),
+        'cost': ('Whitepaper, seção 3: os custos (em inglês)', 'Whitepaper, section 3: the costs'),
         'sinapi': ('CAIXA · SINAPI', 'CAIXA · SINAPI'),
         'cub': ('Sinduscon · escopo do CUB', 'Sinduscon · CUB scope'),
         'cnpj': ('Receita Federal · entidades estrangeiras e CNPJ', 'Receita Federal · foreign entities and CNPJ'),
@@ -86,6 +86,99 @@ def build_guide(root, page, tr, esc, language_controls):
         'token-study': ('OCDE · Estudo sobre registros de ativos digitais', 'OECD · Study of digital asset records'),
         'reference-token': ('Token e divulgação', 'Token and outreach'),
     }
+
+    # What each source does and does not establish. One line per source, shown under the paragraph it supports.
+    source_effect = {
+        'cost': ('Mostra os custos como Rafael os enviou. Não mostra um preço nem um pagamento mensal para uma família.',
+                 'Shows the costs as Rafael supplied them. It does not show a price or monthly payment for a family.'),
+        'digital': ('Descreve o trabalho digital proposto. Não mostra que algo disso já funciona.',
+                    'Describes the proposed digital work. It does not show that any of it works yet.'),
+        'cash': ('Descreve a política de caixa proposta. É uma proposta, não uma regra aprovada.',
+                 'Describes the proposed cash policy. It is a proposal, not an approved rule.'),
+        'rights': ('Descreve o que um token poderia representar. Nenhum token foi emitido.',
+                   'Describes what a token could represent. No token has been issued.'),
+        'charter': ('Mostra quem decidiria o quê. As regras ainda estão em discussão com os participantes.',
+                    'Shows who would decide what. The rules are still being discussed with participants.'),
+        'roadmap': ('Mostra as etapas e o que precisa estar pronto em cada uma. Não define datas.',
+                    'Shows the stages and what must be ready in each. It sets no dates.'),
+        'sinapi': ('É a referência pública de custos que Rafael diz ter usado. Não dá o preço deste projeto.',
+                   'Is the public cost reference Rafael says he used. It does not price this project.'),
+        'cub': ('Explica o que o índice CUB cobre. Não confirma o orçamento de Rafael.',
+                'Explains what the CUB index covers. It does not confirm Rafael’s budget.'),
+        'reference-token': ('Lista o que está e o que não está decidido sobre o token. Nenhum caminho foi aprovado.',
+                            'Lists what is and is not decided about the token. No path has been approved.'),
+        'cvm': ('Diz que o regulador brasileiro olha o que um investimento realmente dá, não o nome. Não diz se o plano da IMOBX cumpre as regras.',
+                'Says Brazil’s regulator looks at what an investment actually gives, not its name. It does not say whether the IMOBX plan complies.'),
+        'arctide': ('É o site da própria plataforma. Não mostra uso nem parceria com a IMOBX.',
+                    'Is the platform’s own site. It does not show any IMOBX use or partnership.'),
+        'argus': ('É o site da própria plataforma. Não mostra uso nem parceria com a IMOBX.',
+                  'Is the platform’s own site. It does not show any IMOBX use or partnership.'),
+        'token-study': ('É um panorama geral sobre tokenização. Não analisa a IMOBX.',
+                        'Is general background on tokenisation. It does not review IMOBX.'),
+        'nonprofit': ('Define as organizações sem fins lucrativos nas parcerias com o setor público. Não diz que a IMOBX é uma delas.',
+                      'Defines nonprofits in partnerships with the public sector. It does not say IMOBX is one.'),
+        'ostrom': ('É uma pesquisa sobre como comunidades administram recursos compartilhados. Não testa as regras da IMOBX.',
+                   'Is research on how communities manage shared resources. It does not test IMOBX’s rules.'),
+        'ica': ('Apresenta os princípios das cooperativas, entre eles a participação dos membros. Não analisa a IMOBX.',
+                'States the principles of cooperatives, including member participation. It does not review IMOBX.'),
+        'cnpj': ('Explica como uma organização estrangeira se cadastra no CNPJ. Não garante conta em banco ou corretora.',
+                 'Explains how a foreign organisation registers for a CNPJ. It does not guarantee a bank or exchange account.'),
+        'title': ('Diz que a propriedade de um imóvel passa com o registro do título. Não decide nada sobre o projeto da IMOBX.',
+                  'Says ownership of a property passes with registration of the title. It decides nothing about the IMOBX project.'),
+        'bcb': ('É a norma do Banco Central que o plano cita sobre moeda digital. A assessoria jurídica ainda precisa confirmar o que ela exige da IMOBX.',
+                'Is the Central Bank rule the plan cites on digital money. Legal advisers still need to confirm what it requires of IMOBX.'),
+        'settlement': ('Mostra o caminho proposto do dinheiro. Nenhum provedor está confirmado.',
+                       'Shows the proposed route of the money. No provider is confirmed.'),
+    }
+    # (question id, source key) -> index of the answer paragraph the source supports.
+    source_at = {
+        'home-purchase': {'cost': 1}, 'home-repairs': {'digital': 0}, 'home-exit': {'cash': 0},
+        'tenant-access': {'charter': 0}, 'ico': {'cash': 0, 'roadmap': 1},
+        'cost-basis': {'sinapi': 0, 'cub': 0, 'cost': 1},
+        'yield': {'reference-token': 0, 'cvm': 1, 'cash': 2},
+        'arc-arctide': {'digital': 0, 'arctide': 2, 'argus': 2},
+        'exchanges': {'token-study': 0, 'cvm': 0}, 'funding': {'cash': 0}, 'property': {'rights': 1},
+        'nonprofit': {'nonprofit': 1, 'cvm': 1}, 'scale': {'roadmap': 0, 'ostrom': 0},
+        'rwa': {'rights': 0, 'cvm': 0}, 'dao': {'ostrom': 0, 'roadmap': 1},
+        'governance': {'ica': 0, 'ostrom': 0}, 'merit': {'charter': 0, 'ica': 0},
+        'flock-siah': {'charter': 0, 'ostrom': 1, 'digital': 4}, 'on-off-ramp': {'settlement': 0},
+        # fold-outs on the funding page (community economy)
+        'community-rights': {'charter': 0, 'ostrom': 1},
+        'community-tools': {'charter': 0, 'ostrom': 1, 'digital': 4},
+        'treasury-demonstration': {'digital': 1}, 'campaign-work': {'reference-token': 0},
+    }
+
+    def with_sources(item_id, answers):
+        """Answer paragraphs, each source line directly under the paragraph it supports.
+        A shortened answer has fewer paragraphs: its sources follow the last one."""
+        placed = source_at.get(item_id, {})
+        out = ''
+        for index, pair in enumerate(answers):
+            out += text(pair) + ''.join(source_line(key) for key, at in placed.items()
+                                        if min(at, len(answers) - 1) == index)
+        return out
+
+    def sentences(pair):
+        """Split a PT/EN pair into matching sentences."""
+        parts = [re.split(r'(?<=[.!?])\s+(?=[A-ZÀ-Ú])', side) for side in pair]
+        assert len(parts[0]) == len(parts[1]), pair
+        return list(zip(*parts))
+
+    def cited_paragraph(pair, by_sentence):
+        """One paragraph per cited sentence group, with that sentence's sources under it."""
+        out, pending = '', []
+        for index, sentence in enumerate(sentences(pair)):
+            pending.append(sentence)
+            if index in by_sentence or index == len(sentences(pair)) - 1:
+                out += text((' '.join(x[0] for x in pending), ' '.join(x[1] for x in pending)))
+                out += ''.join(source_line(key) for key in by_sentence.get(index, []))
+                pending = []
+        return out
+
+    def source_line(key):
+        source = guide['sources'][key]
+        return ('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span')
+                + f'<a href="{esc(source["url"])}">{label_text(key)}</a>. ' + text(source_effect[key], 'span') + '</p>')
 
     def label_text(key):
         if key in own_source_labels:
@@ -102,8 +195,20 @@ def build_guide(root, page, tr, esc, language_controls):
         return html
 
     def numbered(number, pair):
-        """The stage order is real, so it is part of the heading text."""
+        """Only stages that really follow one another are numbered."""
         return (f'{number}. {pair[0]}', f'{number}. {pair[1]}')
+
+    # Four kinds of work run side by side; the last two stages depend on the ones before them.
+    parallel_ids = ('foundation', 'cash-and-charter', 'digital-trial', 'token-decision')
+    stage_groups = [
+        (('Quatro frentes de trabalho ao mesmo tempo', 'Four kinds of work at the same time'), False),
+        (('Depois, uma etapa de cada vez', 'Then, one stage after another'), True)]
+
+    def grouped_stages():
+        """Yield (group label, in order?, [(number or None, stage)]) with parallel work first."""
+        for label, ordered in stage_groups:
+            members = [st for st in guide['stages'] if (st['id'] in parallel_ids) != ordered]
+            yield label, ordered, [(n if ordered else None, st) for n, st in enumerate(members, 1)]
 
     def links(keys):
         return '<p class="guide-sources">' + ' · '.join(
@@ -116,12 +221,16 @@ def build_guide(root, page, tr, esc, language_controls):
         """One collapsible question. Links to a section of the page it sits on drop the file name."""
         answers = item['short'] if short and item.get('short') else item['a']
         body = f'<details id="{prefix}{esc(item["id"])}">' + text(item['q'], 'summary')
-        body += ''.join(text(pair) for pair in answers) + (links(item['sources']) if item['sources'] else '')
+        assert set(source_at.get(item['id'], {})) <= set(item['sources']), item['id']  # unplaced sources are dropped
+        body += with_sources(item['id'], answers)
         if item.get('detail_url'):
             target = item['detail_url']
             if local_page and target.startswith(local_page + '#'):
                 target = target[len(local_page):]
-            body += text(FAQ_DETAIL_LABEL, 'a', f'href="{esc(target)}"')
+            # The visible words repeat on every question, so the accessible name carries the question too.
+            named = tuple(f'{label}: {question}' for label, question in zip(FAQ_DETAIL_LABEL, item['q']))
+            body += text(FAQ_DETAIL_LABEL, 'a', f'href="{esc(target)}" aria-label="{esc(named[0])}" '
+                                              f'data-aria-pt="{esc(named[0])}" data-aria-en="{esc(named[1])}"')
         return body + '</details>'
 
     def faq(home=True):
@@ -193,12 +302,15 @@ def build_guide(root, page, tr, esc, language_controls):
     summary = '<section class="content wrap scale-section" id="etapas"><span id="dinheiro"></span>'
     summary += text(('Etapas do projeto', 'Project stages'), 'h2')
     summary += text(('O caminho da IMOBX reúne moradia com opção de compra, participação dos moradores e contas transparentes. A estrutura jurídica, as regras de participação e as ferramentas digitais estão em desenvolvimento.', 'IMOBX’s roadmap brings together rent-to-own housing, resident participation and transparent accounts. The legal structure, participation rules and digital tools are under development.'))
-    summary += '<ol class="roadmap-overview">'
-    for i, stage in enumerate(guide['stages'], 1):
-        summary += '<li><div>'
-        summary += text(numbered(i, stage['title']), 'h3') + text(stage['summary'], 'p')
-        summary += '</div></li>'
-    summary += '</ol>' + text(('Conheça as etapas do projeto',
+    for label, ordered, members in grouped_stages():
+        summary += text(label, 'p', 'class="stage-group"')
+        summary += '<ol class="roadmap-overview">' if ordered else '<ul class="roadmap-overview">'
+        for number, stage in members:
+            summary += '<li><div>'
+            summary += text(numbered(number, stage['title']) if number else stage['title'], 'h3') + text(stage['summary'], 'p')
+            summary += '</div></li>'
+        summary += '</ol>' if ordered else '</ul>'
+    summary += text(('Conheça as etapas do projeto',
                               'Explore the project roadmap'),
                              'a', 'class="button" href="roadmap.html"') + '</section>'
 
@@ -217,9 +329,11 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += text(('Perguntas', 'Questions'), 'a', 'href="transparency.html#funding-questions"') + '</nav>'
     roadmap += '<section id="stages">' + text(('Etapas de desenvolvimento', 'Development stages'), 'h2')
     roadmap += text(('Abra uma etapa para ver os prazos, o trabalho previsto, o que precisa estar pronto e o que impede o avanço.', 'Open a stage to see its timing, planned work, what needs to be ready and what stops it.'))
-    for i, stage in enumerate(guide['stages'], 1):
+    for label, ordered, members in grouped_stages():
+      roadmap += text(label, 'p', 'class="stage-group"')
+      for number, stage in members:
         roadmap += f'<details class="roadmap-stage" id="{esc(stage["id"])}"><summary>'
-        roadmap += text(numbered(i, stage['title']), 'h3') + text(stage['window'], 'span', 'class="guide-window"')
+        roadmap += text(numbered(number, stage['title']) if number else stage['title'], 'h3') + text(stage['window'], 'span', 'class="guide-window"')
         roadmap += '<span class="stage-owner">' + text(('Quem: ', 'Who: '), 'strong') + text(stage['overview_owner'], 'span') + '</span>'
         roadmap += '<span class="stage-needs">' + text(('Precisa de: ', 'Needs: '), 'strong') + text(stage['overview_needs'], 'span') + '</span></summary><dl>'
         for label, key in [(('Quem faria o trabalho', 'Who would do the work'), 'responsible'),
@@ -277,8 +391,8 @@ def build_guide(root, page, tr, esc, language_controls):
     settlement_html += '<div class="settlement-relationships">'
     for relationship in settlement['relationships']:
         settlement_html += '<article>' + text(relationship['title'], 'h3') + text(relationship['body']) + '</article>'
-    settlement_html += '</div>' + text(settlement['registration']) + links(['cnpj', 'title'])
-    settlement_html += text(settlement['network_note']) + links(['bcb'])
+    settlement_html += '</div>' + cited_paragraph(settlement['registration'], {0: ['cnpj'], 2: ['title']})
+    settlement_html += cited_paragraph(settlement['network_note'], {0: ['bcb']})
     research = settlement['provider_research']
     settlement_html += '<section id="ramp-options">' + text(research['title'], 'h3')
     settlement_html += text(research['conclusion'])
@@ -286,7 +400,7 @@ def build_guide(root, page, tr, esc, language_controls):
     settlement_html += text(research['status'], 'p', 'class="fine"') + '</section>'
     settlement_html += text(settlement['evidence_title'], 'h3')
     settlement_html += '<ul>' + ''.join(text(x, 'li') for x in settlement['evidence']) + '</ul>'
-    settlement_html += text(settlement['limits']) + links(['cash', 'nonprofit']) + '</section>'
+    settlement_html += cited_paragraph(settlement['limits'], {0: ['cash'], 1: ['nonprofit']}) + '</section>'
 
     public = guide['transparency']
     transparency = '<main class="paper guide-paper transparency-page" id="main">' + language_controls
@@ -318,7 +432,7 @@ def build_guide(root, page, tr, esc, language_controls):
     transparency += text(economy['intro']) + text(economy['status'], 'p', 'class="guide-status"')
     for topic in economy['topics']:
         transparency += f'<details class="community-topic" id="{esc(topic["id"])}">' + text(topic['title'], 'summary')
-        transparency += ''.join(text(pair) for pair in topic['body']) + links(topic['sources']) + '</details>'
+        transparency += with_sources(topic['id'], topic['body']) + '</details>'
     transparency += '<span id="thanks-zeal-lets"></span></section>'
     transparency += settlement_html
     transparency += '<section id="next-steps">' + text(public['followup_title'], 'h2')
@@ -422,7 +536,7 @@ def build_guide(root, page, tr, esc, language_controls):
     stub_targets.update({'thanks-zeal-lets': 'transparency.html', 'euler': 'transparency.html'})
     (root / 'faq.html').write_text(redirect_stub(
         'IMOBX | Perguntas sobre o modelo', 'Perguntas sobre o modelo', 'rent-to-own.html#questions',
-        'Open the current version →', per_question=stub_targets))
+        'Open the current version', per_question=stub_targets))
 
     home = root / 'index.html'
     overview = guide['home_overview']

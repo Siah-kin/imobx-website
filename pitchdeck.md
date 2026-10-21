@@ -2,7 +2,7 @@
 
 A documented rent-to-own housing model for Rio
 
-**Partner discussion draft · v0.7 · 19 October 2026**
+**Partner discussion draft · Version 0.7, 21 October 2026**
 
 
 
@@ -19,6 +19,8 @@ IMOBX is preparing a first rent-to-own housing project in Rio.
 - Current stage: planning, documents and design.
 
 
+
+Source: [IMOBX project reference](reference.html). Lists what exists and what is not decided, with a review date. It is the project's own record.
 
 **Presenter notes:** Rafael brings construction and local experience; John handles community and digital work. Their roles, the legal organization and the right to use each property need written agreements. This draft explains the plan and asks for partners; it does not offer an investment.
 
@@ -38,6 +40,8 @@ The first project would help displaced families and people unable to use ordinar
 
 
 
+Source: [UN-Habitat: adequate housing](https://unhabitat.org/11-1-adequate-housing). Describes what adequate housing means. It does not assess IMOBX.
+
 **Presenter notes:** Brazil’s 2022 Census counted about 16.4 million residents in favelas and urban communities, 8.1% of the population. That is national context, not a description of a selected family or site. Living in a favela does not itself mean being displaced. Listen to families about work, schools, transport, support networks and whether a move suits them. Participating households are not identified in this draft.
 
 
@@ -55,6 +59,8 @@ His US$27,777 per-home plan uses CUB and SINAPI, Brazilian building-cost referen
 - The village plan assumes at least 36 homes built together.
 
 
+
+Source: [Whitepaper, section 3: the costs](whitepaper.html#3-the-cost-proposal-already-supplied). Shows how Rafael supplied these figures. It is not an independent check of them.
 
 **Presenter notes:** On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six homes total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together.
 
@@ -128,6 +134,10 @@ Courtyard use, study-room hours, repair priorities and representatives are resid
 
 
 
+Source: [ICA: cooperative identity](https://ica.coop/en/cooperatives/cooperative-identity). States the principles of cooperatives, including member participation. It does not review IMOBX.
+
+Source: [Elinor Ostrom: Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/). Is research on how communities manage shared resources. It does not test IMOBX's rules.
+
 **Presenter notes:** The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Buying tokens would not give control over another household’s contracted purchase price. See rent-to-own.html#decisions and roadmap.html#governance. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX.
 
 
@@ -164,6 +174,10 @@ Buyers of new tokens would pay the organisation that creates and sells them. The
 
 
 
+Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). Says Brazil's regulator looks at what an investment actually gives, not its name. It does not say whether an IMOBX token would comply.
+
+Source: [IMOBX: questions about funding, tokens and governance](https://siah-kin.github.io/imobx-website/transparency.html#funding-questions). Holds the project's own answers on the token. Nothing there is decided.
+
 **Presenter notes:** Four scenarios remain: no IMOBX token, a service or membership benefit, a share of collected fees, or an investment in the operation. These are alternatives, not combined promised rights. Capital for construction, outreach payments and investor income have different budgets and commitments. Residents’ participation would not depend on investment or promotion. Reference.html#token compares what a buyer might receive and the decisions still open.
 
 
@@ -181,6 +195,8 @@ The roadmap names proposed roles and conditions for proceeding.
 - Expansion follows operating results and funding for existing commitments.
 
 
+
+Source: [IMOBX project stages](https://siah-kin.github.io/imobx-website/roadmap.html). Sets out the stages and what must be ready in each. It sets no dates.
 
 **Presenter notes:** The six stages are legal structure and property; resident participation; first homes; payment records people can check; funding and account review; more homes and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
 
@@ -221,27 +237,3 @@ An owner, building team, local organization and funder could develop a costed pr
 **Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. There is no contact address yet: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property.
 
 
-
-## Sources
-
-- [Dated project reference: status, roles, token alternatives and chapter map](reference.html)
-
-- [Project facts and cost provenance](whitepaper.html#3-the-cost-proposal-already-supplied)
-
-- [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html)
-
-- [Ostrom Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/)
-
-- [IBGE: favelas and urban communities](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15788-favelas-ecomunidades-urbanas.html?edicao=38944&t=o-que-e)
-
-- [IBGE: 2022 Census context](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas)
-
-- [UN-Habitat: adequate housing](https://unhabitat.org/11-1-adequate-housing)
-
-- [IMOBX roadmap and consultation charter](https://siah-kin.github.io/imobx-website/roadmap.html)
-
-- [IMOBX questions about funding, tokens and governance](https://siah-kin.github.io/imobx-website/transparency.html#funding-questions)
-
-- [ICA cooperative identity](https://ica.coop/en/cooperatives/cooperative-identity)
-
-- [Law 13.019 article 2](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm)

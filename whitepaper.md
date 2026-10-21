@@ -2,7 +2,7 @@
 
 ## A rent-to-own housing proposal for Rio
 
-**Project paper v0.7 · 19 October 2026 · Project proposal**
+**Project paper · Version 0.7, 21 October 2026**
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family rents a home, part of each payment counts towards buying it, and the whole home is transferred to the family once the agreed conditions are met. The plan brings together local building work, written agreements, maintenance and accounts people can check.
 
@@ -38,7 +38,7 @@ Under the plan, IMOBX owns each included property or holds a written legal right
 
 A property can reach IMOBX by donation, lease, sale or another agreement, and the property’s agreement says which. A letter saying someone intends to donate is different from a completed transfer. Ownership needs the required property registration.
 
-July’s discussions considered a foreign organization holding Brazilian property. [Receita Federal’s guidance for legal entities based abroad](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/solicitacao-de-atos-perante-o-cnpj-por-meio-da-internet/orientacoes-para-pessoa-juridica-domiciliada-no-exterior) confirms that such an organization needs a CNPJ, Brazil’s business tax registration. A CNPJ does not give property ownership or make a bank or exchange accept the organization; these are separate matters. IMOBX has not chosen its legal form and no property is confirmed here, so both still need documents.
+One structure under consideration is a foreign organization holding Brazilian property. [Receita Federal’s guidance for legal entities based abroad](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/solicitacao-de-atos-perante-o-cnpj-por-meio-da-internet/orientacoes-para-pessoa-juridica-domiciliada-no-exterior) confirms that such an organization needs a CNPJ, Brazil’s business tax registration. A CNPJ does not give property ownership or make a bank or exchange accept the organization; these are separate matters. IMOBX has not chosen its legal form and no property is confirmed here, so both still need documents.
 
 Rafael’s building company is a contractor under consideration. Its catalogue can show experience once the completed work, and permission to publish it, have been checked. Under the plan, a founder who is connected to a builder does not approve that builder’s bill. Someone else checks the price, profit, changes and completed work.
 

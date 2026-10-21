@@ -1,6 +1,6 @@
 {
   "version": "0.7",
-  "date": "2026-10-19",
+  "date": "2026-10-21",
   "stages": [
     {
       "id": "foundation",
@@ -910,8 +910,8 @@
       "The proposed payment route"
     ],
     "historical_route": [
-      "Família → conta da IMOBX em reais → contas, reparos e compromissos → dinheiro guardado → nova obra ou outro uso permitido.",
-      "Family → IMOBX bank account in reais → bills, repairs and commitments → money set aside → new building or another permitted use."
+      "A família paga em reais na conta bancária da IMOBX. Dela saem as contas, os reparos e os compromissos. O dinheiro guardado vai para uma nova obra ou outro uso permitido.",
+      "The family pays in reais into the IMOBX bank account. Bills, repairs and commitments are paid from it. Money set aside goes to a new building or another permitted use."
     ],
     "historical_note": [
       "Se houver administrador do imóvel, sua taxa aparece separadamente. Qualquer pagamento a investidores exige um acordo que o permita e dinheiro disponível.",
@@ -1780,7 +1780,7 @@
           "The household agrees the price and payments"
         ],
         "body": [
-          "Antes de entrar, a família conhece o preço de compra, a pagamento em reais e quanto conta para a compra. As regras também tratam de reajustes, reparos, atraso e saída do programa.",
+          "Antes de entrar, a família conhece o preço de compra, o pagamento em reais e quanto conta para a compra. As regras também tratam de reajustes, reparos, atraso e saída do programa.",
           "Before moving in, the household knows the purchase price, the payment in reais and the amount credited towards buying the home. The terms also cover price changes, repairs, missed payments and leaving the arrangement."
         ]
       },

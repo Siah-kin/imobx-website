@@ -17,7 +17,7 @@
 .roadmap-stage[open]>summary{margin-bottom:24px}
 .guide-table{overflow-x:auto}.guide-table table{min-width:600px}.guide-table th{font-size:14px}.guide-table td{font-size:15px;line-height:1.6}
 .guide-sources{font-size:16px!important;line-height:1.7;overflow-wrap:anywhere}.ostrom-application li{margin-bottom:12px}
-.settlement-history,.settlement-review{background:var(--pale);padding:4px 22px;margin:28px 0}.settlement-chain{font-weight:600;line-height:1.9;overflow-wrap:anywhere}
+.settlement-history,.settlement-review{background:var(--pale);padding:4px 22px;margin:28px 0}.settlement-chain{line-height:1.9;overflow-wrap:anywhere}
 .settlement-route{margin:36px 0}.settlement-steps{list-style:none;counter-reset:cash-step;padding:0;margin:24px 0}.settlement-steps li{display:grid;grid-template-columns:38px 1fr;gap:16px;counter-increment:cash-step;padding:0 0 25px;margin:0;position:relative}
 .settlement-steps li::before{content:counter(cash-step);display:flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--imobx-turquoise);border-radius:50%!important;background:#fff;color:var(--orange);z-index:1;font-size:14px}
 .settlement-steps li:not(:last-child)::after{content:"";position:absolute;left:16px;top:32px;bottom:0;border-left:1px solid var(--line)}.settlement-steps strong{display:block;padding-top:2px}.settlement-steps p{margin:6px 0 0}
@@ -300,3 +300,10 @@ body{line-height:1.5}
 /* Links in the text and footer are blue and underlined, so a visitor can see what is clickable. Buttons and the menu keep their own look. */
 main a:not(.button),.site-footer a{color:#1b5e8f;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 main a:not(.button):hover,.site-footer a:hover{color:#123f60;text-decoration-thickness:2px}
+
+.icon{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.carousel-controls button,.viewer-toolbar button,.deck-controls button{display:inline-flex;align-items:center;gap:8px}
+.stage-group{font-weight:700;margin:28px 0 0}
+.photo-number,.carousel-thumbs span,.paper-nav>span,.resource-card .resource-meta,.transparency-updates time{font-size:14px}
+.resource-row>a{min-width:44px;justify-content:center}
+section.archive-section>h2{font-size:clamp(26px,3vw,32px)}
+.budget-table th:last-child{white-space:normal;min-width:7em}.budget-table th:first-child,.budget-table td:first-child{padding-right:12px}

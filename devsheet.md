@@ -9,7 +9,7 @@
 
 ## Pilot and building guide
 
-**Project proposal · v0.7 · 19 October 2026**
+**Project proposal · Version 0.7, 21 October 2026**
 
 ### 1. Homes with a path to ownership
 

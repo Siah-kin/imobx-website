@@ -8,7 +8,7 @@ import zipfile
 from urllib.parse import urljoin
 from model_guide import build_guide, redirect_stub, new_faq_location
 from contact_page import build_contact
-from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE
+from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE, DATE_PT, DATE_EN, LABEL_EN, LABEL_PT
 from copy_review import require_review
 
 import markdown
@@ -37,6 +37,12 @@ LINE = '#dae2e6'
 
 def esc(value):
     return html.escape(str(value), quote=True)
+
+
+def version_label(item, lang):
+    """'Version 0.7, 21 October 2026'. Items that were not revised on that date show only their version."""
+    word, date = ('Versão', DATE_PT) if lang == 'pt' else ('Version', DATE_EN)
+    return f"{word} {item['version']}" + (f', {date}' if item['version'] == VERSION else '')
 
 
 MONTHS_PT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto',
@@ -146,7 +152,7 @@ RESOURCE_CATALOG.append({
     'id': 'reference', 'pt': 'Referência atual do projeto', 'en': 'Current project reference', 'version': VERSION,
     'description_pt': 'Situação, responsabilidades, fontes e mapa dos capítulos do documento de Rafael.',
     'description_en': 'Status, responsibilities, sources and a chapter map for Rafael’s manuscript.',
-    'meta_pt': 'Português e inglês · revisão datada', 'meta_en': 'Portuguese and English · dated review',
+    'meta_pt': 'Português e inglês', 'meta_en': 'Portuguese and English',
     'links': [('reference.html', 'Ler a referência', 'Read the reference'),
               ('project-reference-pt.pdf', 'PDF em português', 'Portuguese PDF'),
               ('project-reference-en.pdf', 'PDF em inglês', 'English PDF'),
@@ -171,7 +177,7 @@ def resource_section(standalone=False):
         return f'''<article class="resource-card" id="resource-{esc(item['id'])}" aria-labelledby="title-{esc(item['id'])}">
 {translated(item['pt'], item['en'], level, f'id="title-{item["id"]}"')}
 {translated(item['description_pt'], item['description_en'], 'p')}
-<p class="resource-meta">v{esc(item['version'])} · {translated(item['meta_pt'], item['meta_en'])}</p>
+<p class="resource-meta">{translated(version_label(item, 'pt') + ' · ' + item['meta_pt'], version_label(item, 'en') + ' · ' + item['meta_en'])}</p>
 <div class="resource-actions">{''.join(actions)}</div></article>'''
 
     intro_pt = 'O whitepaper apresenta a proposta de moradia e seu financiamento. O pitch deck resume o projeto para parceiros. O guia do piloto detalha o trabalho e as responsabilidades. Os três documentos são rascunhos em inglês.'
@@ -196,7 +202,7 @@ def resource_section(standalone=False):
         body += translated('Perguntas das famílias', 'Questions families ask', 'a', 'href="rent-to-own.html#questions"')
         return body + '</div>'
 
-    body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h2') for key in document_ids + ('reference',)) + '</div>'
+    body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h2') for key in ('reference',) + document_ids) + '</div>'
     body += '<section id="media-resources" aria-labelledby="media-resources-title">'
     body += translated('Materiais para divulgação', 'Media resources', 'h2', 'id="media-resources-title"')
     body += '<div class="resource-grid">' + card(catalog['media-kit']) + '</div></section>'
@@ -273,7 +279,7 @@ brand_section = ('<section id="brand-guide"><h2>Brand guide</h2>'
     '<a href="media-kit.md" download>Editable guide</a> · <a href="brand-colors.json" download>Brand colours (JSON)</a> · '
     '<a href="#brand-guide">Brand guide</a></p>' + kit_html + brand_section + '</main>', version='0.2'))
 (ROOT / 'design.html').write_text(redirect_stub(
-    'IMOBX | Design guidelines', 'Design guidelines', 'media-kit.html#brand-guide', 'Open the current version →'))
+    'IMOBX | Design guidelines', 'Design guidelines', 'media-kit.html#brand-guide', 'Open the current version'))
 
 
 paper_source = (ROOT / 'whitepaper.md').read_text()
@@ -283,7 +289,7 @@ paper_html = markdown.markdown(paper_source, extensions=['tables', 'toc'])
     '<a href="whitepaper.md" download>Editable text</a> · <a href="reference.html">Project reference · PT/EN</a></p>' + paper_html + '</main>', version=VERSION))
 devsheet_html = markdown.markdown((ROOT / 'devsheet.md').read_text(), extensions=['tables', 'toc'])
 (ROOT / 'devsheet.html').write_text(page('IMOBX | Pilot and building guide v' + VERSION,
-    f'<main class="paper"><p><strong>Pilot and building guide · v{VERSION}</strong><br>'
+    f'<main class="paper"><p><strong>Pilot and building guide · {LABEL_EN}</strong><br>'
     '<a href="devsheet.pdf" download>Download PDF</a> · '
     '<a href="devsheet.md" download>Editable text</a> · <a href="reference.html">Project reference · PT/EN</a></p>' + devsheet_html + '</main>', version=VERSION))
 
@@ -294,18 +300,18 @@ for number, item in enumerate(deck['slides'], 1):
     slides_html.append(f'''<section class="slide" aria-labelledby="slide-{number}">
 <h1 id="slide-{number}">{esc(item['title'])}</h1>
 <p class="lead">{esc(item['lead'])}</p><ul>{''.join('<li>'+esc(x)+'</li>' for x in item['bullets'])}</ul>
+{''.join('<p class="source-note">Source: <a href="'+esc(x['url'])+'">'+esc(x['label'])+'</a>. '+esc(x['effect'])+'</p>' for x in item.get('sources', []))}
 <div class="slide-foot"><span>IMOBX / PARTNER DISCUSSION DRAFT</span><span>{number:02d} / {len(deck['slides']):02d}</span></div>
 <aside class="notes"><strong>Presenter notes</strong><p>{esc(item['notes'])}</p></aside></section>''')
     deck_md += [f"## {number}. {item['title']}", item['lead'], '', *('- '+b for b in item['bullets']), '',
+                *(f"Source: [{x['label']}]({x['url']}). {x['effect']}" for x in item.get('sources', [])),
                 '**Presenter notes:** '+item['notes'], '']
-source_list = ''.join(f'<li><a href="{esc(x["url"])}">{esc(x["label"])}</a></li>' for x in deck['sources'])
 body = '''<main class="deck"><div class="deck-controls" hidden>
-<button type="button" data-previous aria-label="Previous slide">← Previous</button><output data-counter aria-live="polite"></output>
-<button type="button" data-next aria-label="Next slide">Next →</button><button type="button" data-notes aria-pressed="false">Presenter notes</button>
+<button type="button" data-previous aria-label="Previous slide"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Previous</button><output data-counter aria-live="polite"></output>
+<button type="button" data-next aria-label="Next slide">Next<svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><button type="button" data-notes aria-pressed="false">Presenter notes</button>
 <a href="pitchdeck.pptx" download>PowerPoint</a><a href="pitchdeck.pdf" download>PDF</a></div>'''
-body += ''.join(slides_html) + f'<aside class="sources"><h2>Sources and context</h2><ul>{source_list}</ul></aside></main>'
+body += ''.join(slides_html) + '</main>'
 (ROOT / 'pitchdeck.html').write_text(page('IMOBX | Partner deck v' + VERSION, body, '<script src="assets/deck.js" defer></script>', version=VERSION))
-deck_md += ['## Sources', *('- ['+x['label']+']('+x['url']+')' for x in deck['sources'])]
 (ROOT / 'pitchdeck.md').write_text('\n\n'.join(deck_md) + '\n')
 
 if PREVIEW_ONLY:
@@ -394,10 +400,10 @@ def paper_footer(c, doc):
 
 
 for name, content, label, title in [
-    ('whitepaper', paper_html, f'IMOBX / PROJECT PROPOSAL / v{VERSION} / {REVIEW_DATE}', 'IMOBX project paper v' + VERSION),
-    ('devsheet', devsheet_html, f'IMOBX / PILOT AND BUILDING GUIDE / v{VERSION} / {REVIEW_DATE}', 'IMOBX pilot and building guide v' + VERSION),
+    ('whitepaper', paper_html, f'IMOBX / PROJECT PROPOSAL / {LABEL_EN}', 'IMOBX project paper v' + VERSION),
+    ('devsheet', devsheet_html, f'IMOBX / PILOT AND BUILDING GUIDE / {LABEL_EN}', 'IMOBX pilot and building guide v' + VERSION),
     *[(f'project-reference-{lang}', markdown.markdown((ROOT / f'project-reference-{lang}.md').read_text(), extensions=['tables']),
-       f'IMOBX / {lang.upper()} / v{VERSION} / {REVIEW_DATE}', f'IMOBX project reference / {lang.upper()} / v{VERSION}')
+       f'IMOBX / {lang.upper()} / {LABEL_PT if lang == "pt" else LABEL_EN}', f'IMOBX project reference / {lang.upper()} / v{VERSION}')
       for lang in ['pt', 'en']],
 ]:
     document = SimpleDocTemplate(str(ROOT / (name + '.pdf')), pagesize=(594,842), rightMargin=63, leftMargin=63,
@@ -454,7 +460,9 @@ for number, item in enumerate(deck['slides'],1):
     for row, bullet in enumerate(item['bullets']):
         ppt_text(slide,'0'+str(row+1),.82,4.25+row*.73,.42,.35,11,ACCENT,True)
         ppt_text(slide,bullet,1.35,4.2+row*.73,11,.65,18)
-    ppt_text(slide,f'IMOBX / PARTNER DISCUSSION DRAFT / v{VERSION} / {REVIEW_DATE}',.82,7.04,10,.2,9,MUTED)
+    for line, src in enumerate(item.get('sources', [])):
+        ppt_text(slide,f"Source: {src['label']}. {src['effect']}",.82,6.3+line*.3,11.6,.28,11,MUTED)
+    ppt_text(slide,f'IMOBX / PARTNER DISCUSSION DRAFT / {LABEL_EN}',.82,7.04,10,.2,9,MUTED)
     ppt_text(slide,f'{number:02d} / {len(deck["slides"]):02d}',11.6,7.04,1,.2,9,MUTED)
     slide.notes_slide.notes_text_frame.text = item['notes'] + f'\n\nSources and factual limits: companion whitepaper v{VERSION} and reference.html.'
     pdf.setFillColor(colors.HexColor(PAPER)); pdf.rect(0,0,13.333*inch,7.5*inch,fill=1,stroke=0)
@@ -464,7 +472,9 @@ for number, item in enumerate(deck['slides'],1):
     for row, bullet in enumerate(item['bullets']):
         pdf_text('0'+str(row+1),.82,4.25+row*.73,.42,11,ACCENT,True)
         pdf_text(bullet,1.35,4.2+row*.73,11,18,limit=.65)
-    pdf_text(f'IMOBX / PARTNER DISCUSSION DRAFT / v{VERSION} / {REVIEW_DATE}',.82,7.04,10,9,MUTED)
+    for line, src in enumerate(item.get('sources', [])):
+        pdf_text(f"Source: {src['label']}. {src['effect']}",.82,6.3+line*.3,11.6,11,MUTED,limit=.3)
+    pdf_text(f'IMOBX / PARTNER DISCUSSION DRAFT / {LABEL_EN}',.82,7.04,10,9,MUTED)
     pdf_text(f'{number:02d} / {len(deck["slides"]):02d}',11.6,7.04,1,9,MUTED)
     pdf.showPage()
 presentation.save(ROOT / 'pitchdeck.pptx')
@@ -489,5 +499,5 @@ archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pd
         + sorted(str(p.relative_to(ROOT)) for p in ROOT.glob('*.html'))
         + sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'research').rglob('*.html'))
         + sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'assets').rglob('*') if p.is_file()),
-        f'IMOBX document collection / v{VERSION} / {REVIEW_DATE}\nStart with reference.html or project-reference-pt.pdf for status, sources and the manuscript chapter map.\nThe project is in preparation. These documents do not offer an investment.\nThe paper, deck and working guide are English drafts. The project reference, roadmap, questions and money page are Portuguese/English.\nThe bundle includes the website HTML and assets. External sources require an internet connection.\n')
+        f'IMOBX document collection / {LABEL_EN}\nStart with reference.html or project-reference-pt.pdf for status, sources and the manuscript chapter map.\nThe project is in preparation. These documents do not offer an investment.\nThe paper, deck and working guide are English drafts. The project reference, roadmap, questions and money page are Portuguese/English.\nThe bundle includes the website HTML and assets. External sources require an internet connection.\n')
 print('Built document exports, on-page resources, the resources page, media kit and download archives.')

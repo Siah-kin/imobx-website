@@ -1,7 +1,7 @@
 {
   "title": "IMOBX",
   "subtitle": "A documented rent-to-own housing model for Rio",
-  "status": "Partner discussion draft · v0.7 · 19 October 2026",
+  "status": "Partner discussion draft · Version 0.7, 21 October 2026",
   "slides": [
     {
       "title": "Families would rent toward owning their home",
@@ -11,7 +11,14 @@
         "Residents help shape shared spaces and decisions.",
         "Current stage: planning, documents and design."
       ],
-      "notes": "Rafael brings construction and local experience; John handles community and digital work. Their roles, the legal organization and the right to use each property need written agreements. This draft explains the plan and asks for partners; it does not offer an investment."
+      "notes": "Rafael brings construction and local experience; John handles community and digital work. Their roles, the legal organization and the right to use each property need written agreements. This draft explains the plan and asks for partners; it does not offer an investment.",
+      "sources": [
+        {
+          "label": "IMOBX project reference",
+          "url": "reference.html",
+          "effect": "Lists what exists and what is not decided, with a review date. It is the project's own record."
+        }
+      ]
     },
     {
       "title": "Start with what a family needs",
@@ -21,7 +28,14 @@
         "Explain repairs, payments and the path to buying the home.",
         "Make help and complaints easy to access."
       ],
-      "notes": "Brazil’s 2022 Census counted about 16.4 million residents in favelas and urban communities, 8.1% of the population. That is national context, not a description of a selected family or site. Living in a favela does not itself mean being displaced. Listen to families about work, schools, transport, support networks and whether a move suits them. Participating households are not identified in this draft."
+      "notes": "Brazil’s 2022 Census counted about 16.4 million residents in favelas and urban communities, 8.1% of the population. That is national context, not a description of a selected family or site. Living in a favela does not itself mean being displaced. Listen to families about work, schools, transport, support networks and whether a move suits them. Participating households are not identified in this draft.",
+      "sources": [
+        {
+          "label": "UN-Habitat: adequate housing",
+          "url": "https://unhabitat.org/11-1-adequate-housing",
+          "effect": "Describes what adequate housing means. It does not assess IMOBX."
+        }
+      ]
     },
     {
       "title": "Rafael has supplied a building budget",
@@ -31,7 +45,14 @@
         "Shared works US$1,500 · design and legal work US$627.",
         "The village plan assumes at least 36 homes built together."
       ],
-      "notes": "On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six homes total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together."
+      "notes": "On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six homes total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together.",
+      "sources": [
+        {
+          "label": "Whitepaper, section 3: the costs",
+          "url": "whitepaper.html#3-the-cost-proposal-already-supplied",
+          "effect": "Shows how Rafael supplied these figures. It is not an independent check of them."
+        }
+      ]
     },
     {
       "title": "Part of each payment would go towards buying the home",
@@ -71,7 +92,19 @@
         "No investment purchase or promotional work would be required for a voice.",
         "Investor rights and each household’s contract have their own terms."
       ],
-      "notes": "The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Buying tokens would not give control over another household’s contracted purchase price. See rent-to-own.html#decisions and roadmap.html#governance. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX."
+      "notes": "The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Buying tokens would not give control over another household’s contracted purchase price. See rent-to-own.html#decisions and roadmap.html#governance. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX.",
+      "sources": [
+        {
+          "label": "ICA: cooperative identity",
+          "url": "https://ica.coop/en/cooperatives/cooperative-identity",
+          "effect": "States the principles of cooperatives, including member participation. It does not review IMOBX."
+        },
+        {
+          "label": "Elinor Ostrom: Nobel lecture",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/",
+          "effect": "Is research on how communities manage shared resources. It does not test IMOBX's rules."
+        }
+      ]
     },
     {
       "title": "From a request to checked work",
@@ -91,7 +124,19 @@
         "Paid outreach needs a funded task, a check of the completed work and disclosure of payment.",
         "No dividend, discount or token voting model has been selected."
       ],
-      "notes": "Four scenarios remain: no IMOBX token, a service or membership benefit, a share of collected fees, or an investment in the operation. These are alternatives, not combined promised rights. Capital for construction, outreach payments and investor income have different budgets and commitments. Residents’ participation would not depend on investment or promotion. Reference.html#token compares what a buyer might receive and the decisions still open."
+      "notes": "Four scenarios remain: no IMOBX token, a service or membership benefit, a share of collected fees, or an investment in the operation. These are alternatives, not combined promised rights. Capital for construction, outreach payments and investor income have different budgets and commitments. Residents’ participation would not depend on investment or promotion. Reference.html#token compares what a buyer might receive and the decisions still open.",
+      "sources": [
+        {
+          "label": "CVM Guidance Opinion 40",
+          "url": "https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html",
+          "effect": "Says Brazil's regulator looks at what an investment actually gives, not its name. It does not say whether an IMOBX token would comply."
+        },
+        {
+          "label": "IMOBX: questions about funding, tokens and governance",
+          "url": "https://siah-kin.github.io/imobx-website/transparency.html#funding-questions",
+          "effect": "Holds the project's own answers on the token. Nothing there is decided."
+        }
+      ]
     },
     {
       "title": "Each stage needs evidence before it advances",
@@ -101,7 +146,14 @@
         "Digital payment trials and token research can progress alongside them.",
         "Expansion follows operating results and funding for existing commitments."
       ],
-      "notes": "The six stages are legal structure and property; resident participation; first homes; payment records people can check; funding and account review; more homes and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage."
+      "notes": "The six stages are legal structure and property; resident participation; first homes; payment records people can check; funding and account review; more homes and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.",
+      "sources": [
+        {
+          "label": "IMOBX project stages",
+          "url": "https://siah-kin.github.io/imobx-website/roadmap.html",
+          "effect": "Sets out the stages and what must be ready in each. It sets no dates."
+        }
+      ]
     },
     {
       "title": "Measure homes and promises kept",
@@ -124,51 +176,6 @@
       "notes": "These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. There is no contact address yet: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property."
     }
   ],
-  "sources": [
-    {
-      "label": "Dated project reference: status, roles, token alternatives and chapter map",
-      "url": "reference.html"
-    },
-    {
-      "label": "Project facts and cost provenance",
-      "url": "whitepaper.html#3-the-cost-proposal-already-supplied"
-    },
-    {
-      "label": "CVM Guidance Opinion 40",
-      "url": "https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html"
-    },
-    {
-      "label": "Ostrom Nobel lecture",
-      "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/"
-    },
-    {
-      "label": "IBGE: favelas and urban communities",
-      "url": "https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15788-favelas-ecomunidades-urbanas.html?edicao=38944&t=o-que-e"
-    },
-    {
-      "label": "IBGE: 2022 Census context",
-      "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas"
-    },
-    {
-      "label": "UN-Habitat: adequate housing",
-      "url": "https://unhabitat.org/11-1-adequate-housing"
-    },
-    {
-      "label": "IMOBX roadmap and consultation charter",
-      "url": "https://siah-kin.github.io/imobx-website/roadmap.html"
-    },
-    {
-      "label": "IMOBX questions about funding, tokens and governance",
-      "url": "https://siah-kin.github.io/imobx-website/transparency.html#funding-questions"
-    },
-    {
-      "label": "ICA cooperative identity",
-      "url": "https://ica.coop/en/cooperatives/cooperative-identity"
-    },
-    {
-      "label": "Law 13.019 article 2",
-      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm"
-    }
-  ],
+  "sources": [],
   "version": "0.7"
 }

@@ -1,13 +1,13 @@
 {
   "version": "0.7",
-  "reviewed": "2026-10-19",
+  "reviewed": "2026-10-21",
   "title": [
     "A IMOBX prepara moradias com um caminho até a compra",
     "IMOBX is preparing homes with a path to ownership"
   ],
   "intro": [
-    "Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 19 de outubro de 2026.",
-    "This page states the current plan, with Rafael’s figures and links to their sources. It explains who does each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 19 October 2026."
+    "Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 21 de outubro de 2026.",
+    "This page states the current plan, with Rafael’s figures and links to their sources. It explains who does each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 21 October 2026."
   ],
   "sections": [
     {
@@ -40,8 +40,8 @@
           "What it provides"
         ],
         [
-          "Situação em 19/10/2026",
-          "Position on 19 October 2026"
+          "Situação em 21/10/2026",
+          "Position on 21 October 2026"
         ]
       ],
       "rows": [
@@ -1260,8 +1260,8 @@
   ],
   "versions": [
     [
-      "Referência para citação: IMOBX, Referência do projeto, v0.7, revisão de 19/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.",
-      "Citation format: IMOBX, Project reference, v0.7, reviewed 19 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start."
+      "Referência para citação: IMOBX, Referência do projeto, v0.7, revisão de 21/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.",
+      "Citation format: IMOBX, Project reference, v0.7, reviewed 21 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start."
     ],
     [
       "Correções e novas decisões precisam indicar data, quem forneceu a informação, quem aprovou a mudança e a evidência correspondente. Quando houver operação, os relatórios terão período, responsável pelas contas e responsável pela conferência. Valores propostos, contratados, recebidos e gastos serão apresentados separadamente.",

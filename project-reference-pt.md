@@ -1,8 +1,8 @@
 # A IMOBX prepara moradias com um caminho até a compra
 
-**v0.7 · 2026-10-21**
+**Versão 0.7, 21 de outubro de 2026**
 
-Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 19 de outubro de 2026.
+Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 21 de outubro de 2026.
 
 ## O que existe hoje?
 
@@ -10,7 +10,7 @@ Na proposta, cada família tem um contrato que explica como se torna dona da cas
 
 Ainda não estão decididos: o imóvel; o preço, o pagamento mensal, o prazo e a parte de cada pagamento que conta para a compra; as regras de reparos, atraso e saída; a forma jurídica da organização; o financiamento e o que os financiadores recebem; e os direitos de qualquer token.
 
-| Material | O que oferece | Situação em 19/10/2026 |
+| Material | O que oferece | Situação em 21/10/2026 |
 | --- | --- | --- |
 | Whitepaper | Explicação do modelo, custos e riscos. | Rascunho de referência em inglês, v0.7. O texto de cerca de 30 páginas de Rafael está em preparação. |
 | Apresentação | Resumo para conversas com parceiros, com notas de apresentação. | 12 slides em inglês, v0.7. |
@@ -299,7 +299,7 @@ Exemplo de plataforma de negociação na rede Arc. Não comprova uso pela IMOBX.
 
 ## Como citar esta referência
 
-Referência para citação: IMOBX, Referência do projeto, v0.7, revisão de 19/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.
+Referência para citação: IMOBX, Referência do projeto, v0.7, revisão de 21/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.
 
 Correções e novas decisões precisam indicar data, quem forneceu a informação, quem aprovou a mudança e a evidência correspondente. Quando houver operação, os relatórios terão período, responsável pelas contas e responsável pela conferência. Valores propostos, contratados, recebidos e gastos serão apresentados separadamente.
 

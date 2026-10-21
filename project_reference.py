@@ -9,6 +9,13 @@ from urllib.parse import urljoin
 
 VERSION = '0.7'
 REVIEW_DATE = '2026-10-21'
+_MONTHS_PT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+_MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+_y, _m, _d = (int(x) for x in REVIEW_DATE.split('-'))
+DATE_PT = f'{_d} de {_MONTHS_PT[_m - 1]} de {_y}'
+DATE_EN = f'{_d} {_MONTHS_EN[_m - 1]} {_y}'
+LABEL_PT = f'Versão {VERSION}, {DATE_PT}'
+LABEL_EN = f'Version {VERSION}, {DATE_EN}'
 
 
 def build_reference(root, page, tr, esc):
@@ -19,7 +26,7 @@ def build_reference(root, page, tr, esc):
 
     body = '<main class="paper guide-paper reference-page" id="main">'
     body += text(data['title'], 'h1') + text(data['intro'])
-    body += '<p class="resource-meta">v' + VERSION + ' · ' + REVIEW_DATE + '</p>'
+    body += text((LABEL_PT, LABEL_EN), 'p', 'class="resource-meta"')
     body += '<nav class="guide-jump" aria-label="Sections">'
     for section in data['sections']:
         body += text(section['nav'], 'a', f'href="#{esc(section["id"])}"')
@@ -29,7 +36,7 @@ def build_reference(root, page, tr, esc):
     body += '</nav>'
     exports = [[], []]
     for i in range(2):
-        exports[i] = ['# ' + data['title'][i], f'**v{VERSION} · {REVIEW_DATE}**', data['intro'][i]]
+        exports[i] = ['# ' + data['title'][i], f'**{(LABEL_PT, LABEL_EN)[i]}**', data['intro'][i]]
     for section in data['sections']:
         body += f'<section id="{esc(section["id"])}">' + text(section['title'], 'h2')
         for i in range(2):
