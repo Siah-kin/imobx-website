@@ -328,14 +328,16 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += text(('Relatórios do projeto', 'Project reports'), 'a', 'href="#ico-comparison"')
     roadmap += text(('Perguntas', 'Questions'), 'a', 'href="transparency.html#funding-questions"') + '</nav>'
     roadmap += '<section id="stages">' + text(('Etapas de desenvolvimento', 'Development stages'), 'h2')
-    roadmap += text(('Abra uma etapa para ver os prazos, o trabalho previsto, o que precisa estar pronto e o que impede o avanço.', 'Open a stage to see its timing, planned work, what needs to be ready and what stops it.'))
+    roadmap += text(('Use “Mais informações” em cada etapa para ver os prazos, o trabalho previsto, o que precisa estar pronto e o que impede o avanço.', 'Use “More information” on a stage to see its timing, planned work, what needs to be ready and what stops it.'))
     for label, ordered, members in grouped_stages():
       roadmap += text(label, 'p', 'class="stage-group"')
       for number, stage in members:
         roadmap += f'<details class="roadmap-stage" id="{esc(stage["id"])}"><summary>'
         roadmap += text(numbered(number, stage['title']) if number else stage['title'], 'h3') + text(stage['window'], 'span', 'class="guide-window"')
         roadmap += '<span class="stage-owner">' + text(('Quem: ', 'Who: '), 'strong') + text(stage['overview_owner'], 'span') + '</span>'
-        roadmap += '<span class="stage-needs">' + text(('Precisa de: ', 'Needs: '), 'strong') + text(stage['overview_needs'], 'span') + '</span></summary><dl>'
+        roadmap += '<span class="stage-needs">' + text(('Precisa de: ', 'Needs: '), 'strong') + text(stage['overview_needs'], 'span') + '</span>'
+        # A quiet link-styled cue; the whole summary row is the control and the browser keeps it keyboard-operable.
+        roadmap += '<span class="stage-toggle">' + text(('Mais informações', 'More information'), 'span', 'class="more"') + text(('Menos informações', 'Less information'), 'span', 'class="less"') + '</span></summary><dl>'
         for label, key in [(('Quem faria o trabalho', 'Who would do the work'), 'responsible'),
                            (('Quando poderia acontecer', 'When it could happen'), 'schedule'),
                            (('O trabalho previsto', 'The planned work'), 'work'),

@@ -308,3 +308,9 @@ main a:not(.button):hover,.site-footer a:hover{color:#123f60;text-decoration-thi
 section.archive-section>h2{font-size:clamp(26px,3vw,32px)}
 .budget-table th:last-child{white-space:normal;min-width:7em}.budget-table th:first-child,.budget-table td:first-child{padding-right:12px}
 .home-model-heading h2{margin-top:0}
+.roadmap-stage>summary{list-style:none}
+.roadmap-stage>summary::-webkit-details-marker{display:none}
+.stage-toggle{display:inline-block;margin-top:10px;font-size:15px;color:#1b5e8f;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.stage-toggle .less,.roadmap-stage[open] .stage-toggle .more{display:none}
+.roadmap-stage[open] .stage-toggle .less{display:inline}
+.roadmap-stage>summary:focus-visible{outline:3px solid #276578;outline-offset:3px}
