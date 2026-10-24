@@ -1,6 +1,7 @@
 """Public roadmap and model explanation. Content only; no governance execution."""
 import json
 import re
+from money_flow import money_flow_html, SCRIPT as MF_SCRIPT
 
 # FAQ items that moved into rent-to-own.html; the other questions moved into transparency.html.
 HOUSEHOLD_FAQ = ('home-purchase', 'home-repairs', 'home-exit', 'home-decisions', 'home-participate', 'tenant-access')
@@ -325,7 +326,7 @@ def build_guide(root, page, tr, esc, language_controls):
                          ('questions', ('Perguntas', 'Questions'))]:
         resident += text(label, 'a', f'href="#{ident}"')
     resident += '</nav><section id="payments">' + ''.join(f'<span id="{a}"></span>' for a in anchors['payments'])
-    resident += text(journey['steps_title'], 'h2') + '<ol>'
+    resident += text(journey['steps_title'], 'h2') + money_flow_html(text) + '<ol>'
     for step in journey['steps']:
         resident += '<li>' + text(step['title'], 'h3') + text(step['body']) + '</li>'
     resident += '</ol>' + text(journey['payments_title'], 'h3')
@@ -351,6 +352,7 @@ def build_guide(root, page, tr, esc, language_controls):
         resident += text(label, 'a', f'href="{target}"') + '</section>'
     resident += family_faq_section() + '<span id="funding"></span><span id="property"></span>' + partner_line('rent-to-own.html') + '</main>'
     (root / 'rent-to-own.html').write_text(page('IMOBX | Renting and buying a home', resident,
+        '<link rel="stylesheet" href="assets/flow.css">' + MF_SCRIPT,
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | Aluguel e compra da casa'))
 
     roadmap = '<main class="paper guide-paper" id="main">' + language_controls
