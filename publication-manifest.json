@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "3e183423eb8fedf7f7e8d84da0af5ce573c083c771f3ef67b09b4c0b842eb48e"
+      "sha256": "7322ff94d5e1531fe2939483b26ed114409e88545d220bcefd316372694fa1bb"
     },
     {
       "path": "rent-to-own.html",
@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "6fbe8b0e13066b843bda7d79fe8db1f491634f9f6e33bb70d9a594280abed8d1"
+      "sha256": "85e76e04c78879ba529eff0c8d141aef6ee29e0ccd166a225d85e68edfae42a9"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "7c1c303020dc463a8cd8d30e8cb0a34f84593ab2006072c89b8387f2e4346a9e"
+      "sha256": "22787606934712ffeb3da169b4bb6c174631704ee57624e70a23b9c10f2b8736"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "6d7d2b96373bf780245888482e1e83613c9cc8dd92b4f0871e939c067ebf99d5"
+      "sha256": "c172278358a443daf827c7940a14c946c5a118363eae4fcf0dd5e8748ecf1ef6"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "69554f59c8fe76f63350ed6b9730941d6cc11f46822dc8dbb3f9f2dc9b31b4a7"
+      "sha256": "bb1616ecc32593d4b0c528b82e072bd9ed3291c9d61edf7cf46225df9b09a3be"
     },
     {
       "path": "pitchdeck.json",
@@ -78,11 +78,11 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "7524d39ed7c010e5c966737abc798564f31168ca1abfeb6f6269cfb6444a08dd"
+      "sha256": "853716cbe50e1feb8df987843ec783ad69c952ac17af49e979edc4c07779266b"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "420e751ee358f31cab27dcc75da6cc4b2fcab46f94f0236014aff20dfb99d221"
+      "sha256": "b625b9e7f54e2be1c228c71f3ef1d96b81db4a35cb94742e29108f3a146c7c7a"
     },
     {
       "path": "roadmap.html",
@@ -98,7 +98,7 @@
     },
     {
       "path": "model-guide.json",
-      "sha256": "93fb15c33c09a8ec8aa3a9be1adf73fec4a002f5372d93099e9d5e9bc506b97d"
+      "sha256": "a82454ef595e21c033f250fba13fdafc59548ba91e91d7be8873dbcd1bb83fdc"
     },
     {
       "path": "contact.html",

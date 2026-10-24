@@ -35,6 +35,16 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
 .vision-path p{font-size:16px;line-height:1.55;margin:0;color:#193D4E}
 .vision-after{margin-top:40px;max-width:44em;font-size:16px;line-height:1.6}
 
+/* Our prototype: the two-loft model, one large view and five smaller ones; each opens the image viewer */
+.proto-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:12px;margin-top:24px}
+.proto-view{display:block;border:1px solid #D9E3E8;background:#fff;padding:10px;line-height:0}
+.proto-view img{width:100%;height:100%;object-fit:contain;display:block;aspect-ratio:3/2}
+.proto-1{grid-row:span 2}
+.proto-1 img{aspect-ratio:auto;max-height:560px}
+.proto-view:hover{border-color:#4A90A4}
+.proto-figure{margin:0}
+.proto-caption{display:block;margin-top:14px;font-size:15px;color:#526571;max-width:44em}
+
 /* Three ways to house a family */
 .three-ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0;padding:0;list-style:none}
 .three-ways>li{border-top:3px solid #D9E3E8;padding-top:20px}
@@ -97,6 +107,8 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
   .vision-path::before{display:none}
   .three-ways{grid-template-columns:1fr;gap:36px}
   .way-art{max-width:200px}
+  .proto-grid{grid-template-columns:1fr 1fr}
+  .proto-1{grid-column:span 2;grid-row:auto}
   #como-chegamos .flow-phases,.join-steps{grid-template-columns:1fr;gap:20px}
   .circle-band .partner-list{grid-template-columns:1fr}
   .home-section{padding-top:64px}
