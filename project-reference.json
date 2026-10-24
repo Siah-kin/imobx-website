@@ -1,13 +1,13 @@
 {
-  "version": "0.7",
-  "reviewed": "2026-10-21",
+  "version": "0.8",
+  "reviewed": "2026-10-24",
   "title": [
-    "A IMOBX prepara moradias com um caminho até a compra",
-    "IMOBX is preparing homes with a path to ownership"
+    "Pessoas, fontes e versões",
+    "People, sources and versions"
   ],
   "intro": [
-    "Esta é a referência da proposta atual. Ela reúne os números fornecidos por Rafael, o método de trabalho e as decisões ainda abertas. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante. A última revisão do conteúdo foi em 21 de outubro de 2026.",
-    "This page states the current plan, with Rafael’s figures and links to their sources. It explains who does each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 21 October 2026."
+    "Esta página reúne as pessoas e os papéis no projeto, as fontes e o histórico de versões. Os contratos assinados e os documentos oficiais determinam os direitos de cada participante.",
+    "This page lists the people and roles in the project, the sources and the version history. Each person’s rights depend on signed agreements and official records."
   ],
   "sections": [
     {
@@ -40,8 +40,8 @@
           "What it provides"
         ],
         [
-          "Situação em 21/10/2026",
-          "Position on 21 October 2026"
+          "Situação em 24/10/2026",
+          "Position on 24 October 2026"
         ]
       ],
       "rows": [
@@ -55,8 +55,8 @@
             "An explanation of the model, costs and risks."
           ],
           [
-            "Rascunho de referência em inglês, v0.7. O texto de cerca de 30 páginas de Rafael está em preparação.",
-            "English reference draft, v0.7. Rafael’s roughly 30-page manuscript is in preparation."
+            "Rascunho de referência em inglês, v0.8. O texto de cerca de 30 páginas de Rafael está em preparação.",
+            "English reference draft, v0.8. Rafael’s roughly 30-page manuscript is in preparation."
           ]
         ],
         [
@@ -69,8 +69,8 @@
             "A partner discussion summary, with presenter notes."
           ],
           [
-            "12 slides em inglês, v0.7.",
-            "12 English slides, v0.7."
+            "12 slides em inglês, v0.8.",
+            "12 English slides, v0.8."
           ]
         ],
         [
@@ -83,8 +83,8 @@
             "How requests, construction and payments are followed."
           ],
           [
-            "Rascunho em inglês, v0.7. Descreve o processo previsto.",
-            "English draft, v0.7. Describes the process under the plan."
+            "Rascunho em inglês, v0.8. Descreve o processo previsto.",
+            "English draft, v0.8. Describes the process under the plan."
           ]
         ],
         [
@@ -298,8 +298,8 @@
             "OLYMPUS"
           ],
           [
-            "Construtora em consideração, ligada a Rafael.",
-            "Builder under consideration, linked to Rafael."
+            "Construtora proposta, ligada a Rafael; nenhum contrato assinado.",
+            "Proposed builder, linked to Rafael; no contract signed."
           ],
           [
             "Contratação depende dos serviços combinados, da comparação de preços e da aprovação por alguém independente da construtora.",
@@ -361,6 +361,17 @@
             "Não recebem controle automático sobre contratos de moradia. Um divulgador precisa revelar quando recebe pelo trabalho.",
             "No automatic control over housing agreements. An ambassador needs to disclose paid work."
           ]
+        ]
+      ],
+      "keep": true,
+      "after": [
+        [
+          "O mesmo método se aplica a obras e fornecedores. Uma construtora ligada a um fundador precisa declarar essa relação. Outras pessoas comparam o preço, aprovam o contrato e conferem se o serviço foi feito como combinado. A divulgação do vínculo, sozinha, não resolve o conflito de interesse.",
+          "The same method applies to construction and suppliers. A builder linked to a founder needs to disclose that relationship. Other people compare the price, approve the contract and inspect the completed work. Disclosure alone does not resolve the conflict of interest."
+        ],
+        [
+          "Nenhuma votação, nem mesmo de tokens, muda sozinha o contrato de moradia de uma família. A participação dos moradores não depende de investir, e quem investe recebe somente os direitos escritos no seu acordo.",
+          "A vote, including a token vote, cannot on its own change a family’s housing agreement. Residents’ say does not depend on investing, and investors receive only the rights written in their agreement."
         ]
       ]
     },
@@ -706,8 +717,8 @@
     "Chapters and sections"
   ],
   "chapters_intro": [
-    "O mapa abaixo acompanha o escopo do documento de Rafael. As páginas existentes são material de referência. O manuscrito final reunirá a tese, os documentos novos e as decisões aprovadas. Uma seção marcada como proposta não vira fato por ser citada no documento.",
-    "The map below follows the scope of Rafael’s document. Existing pages provide reference material. The final manuscript will bring together the thesis, new documents and approved decisions. A section marked as a proposal does not become fact by being cited in the document."
+    "O mapa abaixo acompanha o escopo do documento de Rafael. Uma seção marcada como proposta não vira fato por ser citada no documento. O texto de cerca de 30 páginas de Rafael está em preparação.",
+    "The map below follows the scope of Rafael’s document. A section marked as a proposal does not become fact by being cited in the document. Rafael’s roughly 30-page manuscript is in preparation."
   ],
   "chapters": [
     {
@@ -785,8 +796,8 @@
         "The solution from the resident’s perspective"
       ],
       "scope": [
-        "Contrato, parcelas, reparos e compra da casa inteira. Valor, prazo e critérios de entrada ainda abertos.",
-        "Agreement, payments, repairs and whole-home purchase. Amount, term and admission criteria remain open."
+        "Contrato, parcelas, reparos e compra da casa inteira. Valor, prazo e critérios de entrada definidos por projeto.",
+        "Agreement, payments, repairs and whole-home purchase. Amount, term and admission criteria are set for each project."
       ],
       "links": [
         {
@@ -873,8 +884,8 @@
         "Legal structure"
       ],
       "scope": [
-        "Comparação entre finalidade social e investimento com direitos financeiros. Entidade, assessoria e forma legal de oferecer o investimento ainda não selecionadas.",
-        "Comparison of social-purpose activity and investment with financial rights. The legal form, advisers and process for offering any investment are still undecided."
+        "Comparação entre finalidade social e investimento com direitos financeiros. Entidade, assessoria e forma legal de oferecer o investimento fazem parte do trabalho jurídico em andamento.",
+        "Comparison of social-purpose activity and investment with financial rights. The legal form, advisers and process for offering any investment are part of the legal work under way."
       ],
       "links": [
         {
@@ -1260,16 +1271,70 @@
   ],
   "versions": [
     [
-      "Referência para citação: IMOBX, Referência do projeto, v0.7, revisão de 21/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.",
-      "Citation format: IMOBX, Project reference, v0.7, reviewed 21 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start."
+      "Referência para citação: IMOBX, Referência do projeto, v0.8, revisão de 24/10/2026, seguida do título da seção e do endereço do link. O arquivo de versões identifica os documentos desta edição. A data indica revisão do conteúdo. Não confirma publicação, assinatura ou início de obra.",
+      "Citation format: IMOBX, Project reference, v0.8, reviewed 24 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start."
     ],
     [
-      "Correções e novas decisões precisam indicar data, quem forneceu a informação, quem aprovou a mudança e a evidência correspondente. Quando houver operação, os relatórios terão período, responsável pelas contas e responsável pela conferência. Valores propostos, contratados, recebidos e gastos serão apresentados separadamente.",
-      "Each correction needs a date and a named source. A new decision also needs the name of the person who approved it and a link to its basis. Once operations exist, reports will state their period, account preparer and reviewer. Proposed, contracted, received and spent amounts will be shown separately."
+      "Correções e novas decisões precisam indicar data, quem forneceu a informação, quem aprovou a mudança e a evidência correspondente.",
+      "Each correction needs a date and a named source. A new decision also needs the name of the person who approved it and a link to its basis."
     ],
     [
-      "Nesta edição, os números do fundador permanecem atribuídos a ele. Os responsáveis pela revisão financeira, jurídica e técnica não foram nomeados. O site não acompanha saldos ou mudanças legais automaticamente.",
-      "In this edition, founder figures remain attributed to him. Reviewers for accounts, contracts and software have not been chosen. The site does not automatically monitor balances or legal changes."
+      "Nesta edição, os números do fundador permanecem atribuídos a ele. O site não acompanha saldos ou mudanças legais automaticamente.",
+      "In this edition, founder figures remain attributed to him. The site does not automatically monitor balances or legal changes."
     ]
+  ],
+  "changes_title": [
+    "Registro de atualizações",
+    "Update record"
+  ],
+  "changes": [
+    {
+      "date": "2026-10-24",
+      "title": [
+        "Convite ao círculo de fundadores",
+        "An invitation to the founding circle"
+      ],
+      "body": [
+        "O site agora se dirige primeiro a quem pode ajudar a fundar a cooperativa. Novas seções: Por que moradia, as três fases de crescimento, o uso do dinheiro e o contato pelo Telegram. As proteções das famílias não mudaram.",
+        "The site now speaks first to people who could help found the cooperative. New sections: Why housing, the three phases of growth, how money would be used and contact on Telegram. The families' protections did not change."
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "title": [
+        "Páginas reorganizadas para as famílias",
+        "Pages reorganised for families"
+      ],
+      "body": [
+        "As explicações para as famílias foram reescritas em linguagem simples; as perguntas sobre financiamento, tokens e governança passaram para esta página; o menu ficou com seis itens; o texto dos documentos foi revisto. Nada mudou nos valores, nos fatos ou nas decisões em aberto.",
+        "The explanations for families were rewritten in plain language; the questions about funding, tokens and governance moved to this page; the menu now has six items; the text of the documents was revised. No figures, facts or open decisions changed."
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "title": [
+        "Divulgação e alternativas do token",
+        "Outreach and token alternatives"
+      ],
+      "body": [
+        "O acompanhamento proposto separa orçamento de divulgação, pagamento por trabalho conferido e aprovado e compromissos com as famílias. As regras ainda estão em estudo.",
+        "Reports would show the money set aside for outreach, payments for completed work that has been checked, and money needed to keep promises to families. The rules are still being developed."
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "title": [
+        "Situação do plano de pagamentos",
+        "Payment-plan status"
+      ],
+      "body": [
+        "Famílias pagariam em reais. Qualquer conversão dependeria de um uso aprovado e de um prestador que aceite a organização. Ainda não há escolha ou operação confirmada.",
+        "Families would pay in reais. Any conversion would depend on an approved use and a provider that accepts the organization. No choice or working operation is confirmed yet."
+      ]
+    }
+  ],
+  "maintenance": [
+    "Revisão manual: preços, regras dos prestadores e saldos não são acompanhados automaticamente. Vamos atualizar a página com confirmações, testes e relatórios datados quando existirem.",
+    "Manual review: prices, provider rules and balances are not monitored automatically. We will update this page with dated confirmations, tests and reports when available."
   ]
 }

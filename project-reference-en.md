@@ -1,49 +1,22 @@
-# IMOBX is preparing homes with a path to ownership
+# People, sources and versions
 
-**Version 0.7, 21 October 2026**
+**Version 0.8, 24 October 2026**
 
-This page states the current plan, with Rafael’s figures and links to their sources. It explains who does each job and what remains open. Each person’s rights depend on signed agreements and official records. Last reviewed: 21 October 2026.
+This page lists the people and roles in the project, the sources and the version history. Each person’s rights depend on signed agreements and official records.
 
-## What exists today?
+- [What exists](https://siah-kin.github.io/imobx-website/roadmap.html#open-terms)
 
-Under the proposal, each family has an agreement that explains how it becomes the owner of its whole home. The proposal combines rent-to-own agreements, local construction and accounts participants can inspect.
+- [Figures and origin](https://siah-kin.github.io/imobx-website/transparency.html#budgets)
 
-Not decided: the property; the price, monthly payment, time to pay and the share of each payment that counts towards buying; the terms for repairs, missed payments and leaving; the organisation’s legal form; funding and what funders receive; and the rights of any token.
+- [How it works](https://siah-kin.github.io/imobx-website/roadmap.html#governance)
 
-| Material | What it provides | Position on 21 October 2026 |
-| --- | --- | --- |
-| Whitepaper | An explanation of the model, costs and risks. | English reference draft, v0.7. Rafael’s roughly 30-page manuscript is in preparation. |
-| Deck | A partner discussion summary, with presenter notes. | 12 English slides, v0.7. |
-| Pilot and building guide | How requests, construction and payments are followed. | English draft, v0.7. Describes the process under the plan. |
-| Roadmap | Stages, responsible roles and conditions for proceeding. | PT/EN. Construction dates depend on each project and its funding. |
-| Drawings and photographs | Community vision, loft designs and supplied images. | Illustrations and photos have captions. They do not establish homes delivered by IMOBX. |
-| Operations and payments | A plan for agreements, participation and following money. | This page does not yet show a complete housing project, completed property transfers or IMOBX funds managed on the blockchain. |
+- [Token and outreach](https://siah-kin.github.io/imobx-website/transparency.html#token-options)
 
-[How payments, repairs and buying the home work](https://siah-kin.github.io/imobx-website/rent-to-own.html)
+- [Voice and protection](https://siah-kin.github.io/imobx-website/rent-to-own.html#decisions)
 
-[Documents and downloads](https://siah-kin.github.io/imobx-website/resources.html)
+- [Tools and limits](https://siah-kin.github.io/imobx-website/transparency.html#digital-records)
 
-## What do the two budgets cover?
-
-Rafael supplied the calculations and community proposal on 30 November 2025. His budget for each 45 m² home includes land US$5,550, construction US$18,600, solar US$1,500, shared infrastructure US$1,500, and design and legal work US$627. Total: US$27,777 per home. For 36 homes: US$999,972, with a 12-month build in the plan.
-
-On 20 January 2026, Rafael reported a US$27,777 contract for both lofts together, awaiting the first deposit at that date. Division gives US$13,888.50 per loft. That contract covers different building work. It does not replace the community budget. Current progress and final costs need their own documents.
-
-These figures come from the founder’s supplied information. CUB and SINAPI are cost references used in the calculation. They did not publish this finished-home price. The chosen site’s budget in reais will need a date and included items. Original messages with personal data are not published. The summaries below identify each case.
-
-[Full budget and calculation](https://siah-kin.github.io/imobx-website/whitepaper.html#3-the-cost-proposal-already-supplied)
-
-[The two-loft case](https://siah-kin.github.io/imobx-website/properties.html#estudo-lofts)
-
-## Who organizes the project and inspects the work?
-
-A resident reports a leak. The maintenance role assesses the problem and obtains a quote. Spending follows the agreed approval limits. Another person inspects the repair, and the payment is linked to its receipt. The resident can ask for review. A replacement can find unfinished tasks and approved amounts when someone leaves a role.
-
-The same method applies to construction and suppliers. A builder linked to a founder needs to disclose that relationship. Other people compare the price, approve the contract and inspect the completed work. Disclosure alone does not resolve the conflict of interest.
-
-[Working-process guide](https://siah-kin.github.io/imobx-website/devsheet.html#6-records-payments-and-support)
-
-[Who decides and how to request review](https://siah-kin.github.io/imobx-website/roadmap.html#governance)
+- [Costs and risks](https://siah-kin.github.io/imobx-website/roadmap.html#stages)
 
 ## Who is contributing and which roles remain unfilled?
 
@@ -52,82 +25,19 @@ The same method applies to construction and suppliers. A builder linked to a fou
 | Rafael Britto | Construction knowledge, budgets and local relationships. | Rafael is a founder. His formal duties have not been put in writing, and his professional credentials need sources readers can consult. |
 | John | Communication, documentation and coordination of digital tools. | John helps prepare the project. This reference assigns him no right to spend money or sign for IMOBX; that needs a written appointment. |
 | IMOBX | Project organisation, agreements and account reporting. | Legal form and legal representatives are being defined. |
-| OLYMPUS | Builder under consideration, linked to Rafael. | Appointment depends on the agreed work, price comparison and approval by someone independent of the builder. |
+| OLYMPUS | Proposed builder, linked to Rafael; no contract signed. | Appointment depends on the agreed work, price comparison and approval by someone independent of the builder. |
 | Residents | Housing terms and participation in shared matters. | Residents’ say does not depend on buying tokens. Representatives and rules will be discussed with participants. |
 | Community or charitable partner | Access to property, households or funders, if a partnership is agreed. | Partnership scenario under discussion. No agreement or endorsement is confirmed in this reference. |
 | Legal advice, accounting and building inspection | Review of agreements, accounts and safety. | Responsible professionals are not yet identified in this reference. |
 | Investors, donors and ambassadors | Funding or work under their own agreements. | No automatic control over housing agreements. An ambassador needs to disclose paid work. |
 
-## If IMOBX has a token, what does it fund and who receives the money?
-
-Sources under consideration are donations, grants, service income and investment that the chosen organisation is legally allowed to offer. A token to fund operations and outreach, which is a digital record of a right that can be bought and sold, is also under study. If IMOBX creates one, buyers of new tokens pay the organisation that creates and sells them. When they buy from another holder, the money normally goes to that seller. Any fee received by IMOBX is recorded separately.
-
-A promoter or moderator receives a written task and submits the completed work. Someone checks that it matches what was agreed before approving payment. The budget needs money for promised payments. Paid participants must tell the public that they are being paid.
-
-Paying someone for completed work that meets the agreement is different from paying income because they invested money. Outreach needs to follow each channel’s rules and disclose compensation. Promised returns, trading-fee payments or payments of profits need their own legal assessment. Calling a token utility or governance does not determine its legal treatment.
-
-| Path under study | What someone receives | What remains open |
-| --- | --- | --- |
-| A. Pilot and outreach without an IMOBX token | Housing through agreements. Payment for outreach work after it has been checked against the agreement. | Funding sources, budget, participants and payment rules. |
-| B. Access to a service or benefit | A defined service or discount. Any buyback is a separate rule. | Available service, price, who funds discounts and any buyback. Burning tokens does not automatically pay dividends. |
-| C. Share of collected fees | A defined right to part of fees actually received, if the structure permits. | Who creates the token, buyers’ rights, costs, risk of loss, restrictions and the legal process for selling it. Trading can produce zero income. |
-| D. Investment in the operation | Tokenised shares or another defined investment right. Payments to investors depend on the agreement and the money available. | The organisation responsible, the property and debts included, rights, taxes and the legal process for selling the investment. Rent can only be used as the agreements allow. The project must still be able to transfer homes to families. |
-
-[Token alternatives and rights](https://siah-kin.github.io/imobx-website/whitepaper.html#8-what-a-token-could-represent)
-
-[CVM: rights and the offer determine the assessment](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html)
-
-## What do residents decide?
-
-Study-room hours, courtyard use, shared-space repair priorities and choosing representatives are examples of resident decisions. One option under discussion is one vote per member on these matters, with representatives who can be replaced.
-
-Elinor Ostrom studied how people care for shared resources, and the research basis is her Nobel lecture, listed under the sources. At IMOBX, her questions help define who participates, how rules change, who checks spending and how disputes are resolved. The roadmap presents the eight principles and examples. Applying them to IMOBX is the project’s own step and depends on residents; Ostrom’s work does not endorse IMOBX.
+The same method applies to construction and suppliers. A builder linked to a founder needs to disclose that relationship. Other people compare the price, approve the contract and inspect the completed work. Disclosure alone does not resolve the conflict of interest.
 
 A vote, including a token vote, cannot on its own change a family’s housing agreement. Residents’ say does not depend on investing, and investors receive only the rights written in their agreement.
 
-[Community decisions and the household agreement](https://siah-kin.github.io/imobx-website/rent-to-own.html#decisions)
-
-[Decision rules and Ostrom’s application](https://siah-kin.github.io/imobx-website/roadmap.html#governance)
-
-## How is a repair and its payment followed?
-
-The steps for a repair are the ones described above, under who organizes the project and inspects the work. This section covers the tools meant to record them, and their limits.
-
-A blockchain is a shared digital record that shows who approved a payment. Arc is the blockchain network under consideration for payments in USDC, a digital currency designed to track the US dollar. The planned test shows who authorised a small payment and its public receipt. The accounts have to connect that payment to the actual expense and bank record. Households pay in reais and do not need crypto wallets.
-
-Arctide and Argus are examples of exchanges, or trading platforms, on the Arc network.
-
-Under the plan, the community tool organises requests and submissions. Software assistants gather documents and flag unfinished work. Accountable people still approve decisions and inspect services. Personal documents stay off the public blockchain. Legal ownership of homes depends on the applicable records and agreements.
-
-[Planned path between reais and USDC](https://siah-kin.github.io/imobx-website/transparency.html#settlement)
-
-[Arc documentation](https://docs.arc.io/)
-
-[Arctide · Arc-based exchange](https://arctide.app/)
-
-[Argus · Arc-based exchange](https://argus.world/)
-
-## What can stop the project from proceeding?
-
-Under the plan, received money has a recorded purpose. Taxes, running costs, repairs and the cost of keeping promises to families need funding. Outreach and new construction need their own approved budgets. Any investor payments depend on the chosen structure and available money. When a household becomes the owner, rent from that home stops going to IMOBX.
-
-The cash plan needs a budget in reais and payments families can afford. It also needs to show what happens if costs rise or repairs take longer. One case must assume no money comes from token trading. The site explains the planned order for using money. This page has no cash plan showing that income covers bills or that the project can grow across Brazil.
-
-| Risk | Protection in the plan | Required reviewing role |
-| --- | --- | --- |
-| Missing documents showing the right to use the property. Building costs above budget. | Property documents, site budget, permissions and independent inspection of the completed work. | Legal adviser and building professional. Names pending. |
-| Household unable to keep paying. | Affordability assessment and contractual hardship, exit and review rules. | Residents and agreement administrator. Appointment pending. |
-| Cash shortfall or dependence on token trading. | Money set aside, a list of bills and promises to be paid, and a budget that works with no token-trading income. | Administration and accountant. Appointments pending. |
-| Selling or promoting an investment without a legally allowed way to do so. | Review of rights and target countries before sales or paid campaigns. | Legal advisers in relevant jurisdictions. Appointment pending. |
-| Payment error, lost access or software failure. | Small-value trial and approval, recovery and incident-response rules. | Technical lead and independent reviewers. Appointments pending. |
-
-[Accounts and payments in the plan](https://siah-kin.github.io/imobx-website/transparency.html)
-
-[The limits of the CVM 249 experimental programme](https://siah-kin.github.io/imobx-website/reference.html#source-cvm249)
-
 ## Chapters and sections
 
-The map below follows the scope of Rafael’s document. Existing pages provide reference material. The final manuscript will bring together the thesis, new documents and approved decisions. A section marked as a proposal does not become fact by being cited in the document.
+The map below follows the scope of Rafael’s document. A section marked as a proposal does not become fact by being cited in the document. Rafael’s roughly 30-page manuscript is in preparation.
 
 ### Executive summary. Vision and mission
 
@@ -151,7 +61,7 @@ Housing context and official sources. National data do not replace assessment of
 
 ### The solution from the resident’s perspective
 
-Agreement, payments, repairs and whole-home purchase. Amount, term and admission criteria remain open.
+Agreement, payments, repairs and whole-home purchase. Amount, term and admission criteria are set for each project.
 
 [Household explanation: payments, repairs and decisions](https://siah-kin.github.io/imobx-website/rent-to-own.html)
 
@@ -177,7 +87,7 @@ Rafael’s budget, the different building work covered by each case and the plan
 
 ### Legal structure
 
-Comparison of social-purpose activity and investment with financial rights. The legal form, advisers and process for offering any investment are still undecided.
+Comparison of social-purpose activity and investment with financial rights. The legal form, advisers and process for offering any investment are part of the legal work under way.
 
 [CVM and token rights](https://siah-kin.github.io/imobx-website/reference.html#source-cvm40)
 
@@ -299,8 +209,20 @@ An example of a trading platform on the Arc network. It does not establish IMOBX
 
 ## How to cite this reference
 
-Citation format: IMOBX, Project reference, v0.7, reviewed 21 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start.
+Citation format: IMOBX, Project reference, v0.8, reviewed 24 October 2026, followed by the section title and link. The version file identifies documents in this edition. The date records content review. It does not confirm publication, signature or construction start.
 
-Each correction needs a date and a named source. A new decision also needs the name of the person who approved it and a link to its basis. Once operations exist, reports will state their period, account preparer and reviewer. Proposed, contracted, received and spent amounts will be shown separately.
+Each correction needs a date and a named source. A new decision also needs the name of the person who approved it and a link to its basis.
 
-In this edition, founder figures remain attributed to him. Reviewers for accounts, contracts and software have not been chosen. The site does not automatically monitor balances or legal changes.
+In this edition, founder figures remain attributed to him. The site does not automatically monitor balances or legal changes.
+
+### Update record
+
+**2026-10-24** An invitation to the founding circle. The site now speaks first to people who could help found the cooperative. New sections: Why housing, the three phases of growth, how money would be used and contact on Telegram. The families' protections did not change.
+
+**2026-10-21** Pages reorganised for families. The explanations for families were rewritten in plain language; the questions about funding, tokens and governance moved to this page; the menu now has six items; the text of the documents was revised. No figures, facts or open decisions changed.
+
+**2026-10-17** Outreach and token alternatives. Reports would show the money set aside for outreach, payments for completed work that has been checked, and money needed to keep promises to families. The rules are still being developed.
+
+**2026-10-16** Payment-plan status. Families would pay in reais. Any conversion would depend on an approved use and a provider that accepts the organization. No choice or working operation is confirmed yet.
+
+Manual review: prices, provider rules and balances are not monitored automatically. We will update this page with dated confirmations, tests and reports when available.

@@ -1,7 +1,7 @@
 {
   "title": "IMOBX",
   "subtitle": "A documented rent-to-own housing model for Rio",
-  "status": "Partner discussion draft · Version 0.7, 21 October 2026",
+  "status": "Partner discussion draft · Version 0.8, 24 October 2026",
   "slides": [
     {
       "title": "Families would rent toward owning their home",
@@ -117,7 +117,7 @@
       "notes": "Before the pilot, residents and the organization need to agree which matters each group decides, spending limits and how a decision can be reviewed. For example: a resident reports a leak, the maintenance role assesses it and obtains a quote, spending follows the agreed rule, and another person checks the repair and payment. Routine work should proceed within those limits without constant founder instructions. Residents need ways to choose and replace responsible people. The support channel would show requests, decisions and progress; software assistants could organize documents and reminders. Blockchain could show payment amounts and destinations. These tools follow the rules agreed by participants. The complete process still needs to be demonstrated in IMOBX."
     },
     {
-      "title": "A possible token could fund operations and outreach",
+      "title": "A possible token could fund homes, operations and outreach",
       "lead": "Buyers of new tokens would pay the organisation that creates and sells them. Their rights are still undecided.",
       "bullets": [
         "A later resale normally pays the seller; any project fee is separate.",
@@ -177,5 +177,5 @@
     }
   ],
   "sources": [],
-  "version": "0.7"
+  "version": "0.8"
 }

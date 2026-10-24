@@ -7,8 +7,8 @@ import json
 import re
 from urllib.parse import urljoin
 
-VERSION = '0.7'
-REVIEW_DATE = '2026-10-21'
+VERSION = '0.8'
+REVIEW_DATE = '2026-10-24'
 _MONTHS_PT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
 _MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 _y, _m, _d = (int(x) for x in REVIEW_DATE.split('-'))
@@ -28,7 +28,8 @@ def build_reference(root, page, tr, esc):
     body += text(data['title'], 'h1') + text(data['intro'])
     body += text((LABEL_PT, LABEL_EN), 'p', 'class="resource-meta"')
     body += '<nav class="guide-jump" aria-label="Sections">'
-    for section in data['sections']:
+    body += text(('Onde está cada assunto', 'Where each subject is'), 'a', 'href="#subjects"')
+    for section in [x for x in data['sections'] if x.get('keep')]:
         body += text(section['nav'], 'a', f'href="#{esc(section["id"])}"')
     for label, target in [(('Mapa de capítulos', 'Chapter map'), 'chapters'),
                           (('Fontes', 'Sources'), 'sources'), (('Versões e downloads', 'Versions and downloads'), 'versions')]:
@@ -37,7 +38,17 @@ def build_reference(root, page, tr, esc):
     exports = [[], []]
     for i in range(2):
         exports[i] = ['# ' + data['title'][i], f'**{(LABEL_PT, LABEL_EN)[i]}**', data['intro'][i]]
+    elsewhere = {'status': 'roadmap.html#open-terms', 'costs': 'transparency.html#budgets', 'work': 'roadmap.html#governance',
+                 'token': 'transparency.html#token-options', 'governance': 'rent-to-own.html#decisions',
+                 'technology': 'transparency.html#digital-records', 'risks': 'roadmap.html#stages'}
+    body += '<section id="subjects">' + text(('Onde está cada assunto', 'Where each subject is'), 'h2') + '<ul>'
     for section in data['sections']:
+        if not section.get('keep'):
+            body += f'<li id="{esc(section["id"])}">' + text(section['nav'], 'a', f'href="{elsewhere[section["id"]]}"') + '</li>'
+            for i in range(2):
+                exports[i].append(f'- [{section["nav"][i]}]({elsewhere[section["id"]]})')
+    body += '</ul></section>'
+    for section in [x for x in data['sections'] if x.get('keep')]:
         body += f'<section id="{esc(section["id"])}">' + text(section['title'], 'h2')
         for i in range(2):
             exports[i].append('## ' + section['title'][i])
@@ -57,6 +68,10 @@ def build_reference(root, page, tr, esc):
                          '| ' + ' | '.join('---' for _ in section['columns']) + ' |']
                 table += ['| ' + ' | '.join(cell[i] for cell in row) + ' |' for row in section['rows']]
                 exports[i].append('\n'.join(table))
+        for paragraph in section.get('after', []):
+            body += text(paragraph)
+            for i in range(2):
+                exports[i].append(paragraph[i])
         for item in section.get('links', []):
             body += '<p>' + text(item['label'], 'a', f'href="{esc(item["url"])}"') + '</p>'
             for i in range(2):
@@ -77,6 +92,11 @@ def build_reference(root, page, tr, esc):
         body += text(source['scope']) + '</li>'
     body += '</ol></section><section id="versions">' + text(data['versions_title'], 'h2')
     body += ''.join(text(p) for p in data['versions'])
+    body += text(data['changes_title'], 'h3') + '<ol class="transparency-updates">'
+    for change in data['changes'][:2]:   # the page shows the two latest updates; the downloadable reference keeps all
+        body += '<li><time datetime="' + esc(change['date']) + '">' + esc(change['date']) + '</time>'
+        body += text(change['title'], 'h4') + text(change['body']) + '</li>'
+    body += '</ol>' + text(('Atualizações anteriores estão na referência para baixar.', 'Earlier updates are in the downloadable reference.')) + text(data['maintenance'])
     body += '<p><a href="publication-manifest.json">' + text(('Versões e identificação dos arquivos', 'File versions and identifiers'), 'span') + '</a></p>'
     body += '<p><a href="project-reference-pt.pdf" download>Português · PDF</a> · '
     body += '<a href="project-reference-pt.md" download>Português · Markdown</a> · '
@@ -94,6 +114,8 @@ def build_reference(root, page, tr, esc):
         for source in data['sources']:
             exports[i].append(f'[{source["label"][i]}]({source["url"]})\n\n{source["scope"][i]}')
         exports[i] += ['## ' + data['versions_title'][i], *[p[i] for p in data['versions']]]
+        exports[i] += ['### ' + data['changes_title'][i], *[f"**{c['date']}** {c['title'][i]}. {c['body'][i]}" for c in data['changes']],
+                       data['maintenance'][i]]
         # Editable exports retain working links when shared away from the site.
         source = '\n\n'.join(exports[i]) + '\n'
         source = re.sub(r'\]\(([^)]+)\)', lambda m: '](' + urljoin('https://siah-kin.github.io/imobx-website/', m[1]) + ')', source)

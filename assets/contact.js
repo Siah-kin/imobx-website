@@ -54,8 +54,9 @@
   function prepare() {
     if (!selected) return;
     const lines = [say('Contato IMOBX', 'IMOBX enquiry'), selected.title[language()], '',
-      say('Nome: ', 'Name: ') + document.getElementById('contact-name').value.trim(),
-      say('Responder por: ', 'Reply to: ') + document.getElementById('contact-reply').value.trim()];
+      say('Nome: ', 'Name: ') + document.getElementById('contact-name').value.trim()];
+    const reply = document.getElementById('contact-reply').value.trim();
+    if (reply) lines.push(say('Responder por: ', 'Reply to: ') + reply);
     for (const field of selected.fields) {
       lines.push('', field.label[language()], document.getElementById(`${selected.id}-${field.id}`).value.trim());
     }

@@ -2,7 +2,7 @@
 
 ## A rent-to-own housing proposal for Rio
 
-**Project paper · Version 0.7, 21 October 2026**
+**Project paper · Version 0.8, 24 October 2026**
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family rents a home, part of each payment counts towards buying it, and the whole home is transferred to the family once the agreed conditions are met. The plan brings together local building work, written agreements, maintenance and accounts people can check.
 
@@ -94,7 +94,7 @@ Payments credited toward a family’s purchase are a commitment under its agreem
 
 ## 5. Trade fees as supplementary funding
 
-The token proposal includes financing branding and outreach. A community of supporters introduces the project to prospective residents, owners, partners and funders. Construction, outreach and any investor payments have separate budgets and obligations.
+Besides building and expanding homes, the token proposal includes financing branding and outreach, each on its own budget line. A community of supporters introduces the project to prospective residents, owners, partners and funders. Construction, outreach and any investor payments have separate budgets and obligations.
 
 A fee collected when people buy or sell the token is an optional source of funding. IMOBX needs an agreement stating which fees it receives, what they can pay for and how receipts are checked. A sale between two holders normally pays the seller; it does not provide a new building budget for IMOBX.
 
@@ -137,7 +137,7 @@ A vote, including a token vote, cannot on its own change a family’s housing ag
 
 ## 8. What a token could represent
 
-The reason to consider a token is to finance IMOBX’s operations, branding and outreach, with a community helping introduce the housing project to partners and supporters. When investors buy new tokens, they pay the organisation that creates and sells them, and that organisation uses the money under the agreed funding terms. What buyers receive has not been chosen. A later sale between holders normally pays the seller; any fee received by IMOBX is recorded separately.
+The reason to consider a token is to raise money for budgeted housing construction and expansion and, on separate budget lines, IMOBX’s operations, branding and outreach, with a community helping introduce the housing project to partners and supporters. When investors buy new tokens, they pay the organisation that creates and sells them, and that organisation uses the money under the agreed funding terms. What buyers receive has not been chosen. A later sale between holders normally pays the seller; any fee received by IMOBX is recorded separately.
 
 Four paths are under study:
 

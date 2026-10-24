@@ -9,7 +9,7 @@
 
 ## Pilot and building guide
 
-**Project proposal · Version 0.7, 21 October 2026**
+**Project proposal · Version 0.8, 24 October 2026**
 
 ### 1. Homes with a path to ownership
 
@@ -102,7 +102,7 @@ The financial plan needs to show costs and cash through construction, occupancy 
 
 ## 4. Funding construction and growth
 
-The first project needs funding for its contracted work. Sources under consideration are donations, grants, service income and investment that the chosen organisation is legally allowed to offer. The token proposal also aims to fund branding and a community outreach programme. Housing, outreach and any investor payments need their own approved budgets. Token rights remain under study; the [four paths](reference.html#token) range from proceeding without an IMOBX token to an investment in the operation.
+The first project needs funding for its contracted work. Sources under consideration are donations, grants, service income and investment that the chosen organisation is legally allowed to offer. The token proposal aims to fund housing construction and expansion and, on separate budget lines, branding and a community outreach programme. Housing, outreach and any investor payments need their own approved budgets. Token rights remain under study; the [four paths](reference.html#token) range from proceeding without an IMOBX token to an investment in the operation.
 
 ### New investment and later trading
 
@@ -228,7 +228,7 @@ The housing operation and financial token remain in preparation. Published drawi
 | Organization | Legal form, accountable roles and agreements remain to be finalized. |
 | Families | Eligibility, affordability, individual terms and shared decision rights need local discussion. |
 | Funding | No received grant, investment amount or donated-property count is confirmed here. |
-| Token | Branding and outreach are intended uses. The issuer, financial rights, supply, access, income and transfer terms remain under study. |
+| Token | Housing construction and expansion and, separately, branding and outreach are intended uses. The issuer, financial rights, supply, access, income and transfer terms remain under study. |
 | Payments | Provider acceptance and the complete payment route remain to be demonstrated. |
 
 ### Evidence for the next project decision

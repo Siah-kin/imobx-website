@@ -14,7 +14,7 @@ SOURCES = (
 QUESTIONS = ('housing_offer', 'resident_decisions', 'funding', 'project_status', 'next_action')
 READER_PAGES = ('index.html', 'rent-to-own.html', 'roadmap.html',
                 'transparency.html', 'contact.html', 'properties.html', 'resources.html',
-                'whitepaper.html', 'devsheet.html', 'pitchdeck.html', 'reference.html')
+                'whitepaper.html', 'devsheet.html', 'pitchdeck.html', 'reference.html', 'why.html')
 
 
 def fingerprints(root):

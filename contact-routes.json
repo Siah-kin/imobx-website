@@ -1,7 +1,7 @@
 {
   "contact": {
     "email": "",
-    "telegram": ""
+    "telegram": "https://t.me/Arctide_TheFlock_Bot?start=imobx"
   },
   "routes": [
     {
@@ -76,10 +76,10 @@
           "required": true
         }
       ],
-      "reading_url": "rent-to-own.html#property",
+      "reading_url": "roadmap.html#participation",
       "reading_label": [
-        "Como um imóvel entra no projeto",
-        "How a property enters the project"
+        "O que um proprietário precisa combinar",
+        "What a property owner needs to agree"
       ]
     },
     {
@@ -154,10 +154,10 @@
           "required": true
         }
       ],
-      "reading_url": "rent-to-own.html#property",
+      "reading_url": "index.html#parceiros",
       "reading_label": [
-        "Como uma organização contribui",
-        "How an organization can contribute"
+        "O que uma organização pode trazer",
+        "What an organisation could bring"
       ]
     },
     {

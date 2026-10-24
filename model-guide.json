@@ -1,6 +1,6 @@
 {
-  "version": "0.7",
-  "date": "2026-10-21",
+  "version": "0.8",
+  "date": "2026-10-24",
   "stages": [
     {
       "id": "foundation",
@@ -37,8 +37,8 @@
         "Construction cannot start without documents showing the right to use the property, reviewed agreements and a complete budget."
       ],
       "schedule": [
-        "Após conferir os documentos do imóvel, o orçamento e os contratos, com os responsáveis escolhidos. Ainda não há data.",
-        "After checking the property documents, budget and agreements, with the responsible people chosen. No date is set."
+        "Após conferir os documentos do imóvel, o orçamento e os contratos, com os responsáveis escolhidos. O trabalho já está em andamento.",
+        "After checking the property documents, budget and agreements, with the responsible people chosen. The work is under way."
       ],
       "overview_owner": [
         "Rafael; assessoria jurídica e responsável pelo orçamento ainda por nomear.",
@@ -64,8 +64,8 @@
         "Residents would help decide how shared spaces are used, which repairs come first and who represents them. The budget would include repairs, the amounts counting towards home purchases and the cost of keeping those promises to families."
       ],
       "gate": [
-        "As regras propostas separam os direitos da família, a participação dos moradores e os direitos de investidores. Os acordos incluem revisão de decisões, troca de representantes e limites de gasto. O orçamento considera períodos com pouca ou nenhuma receita de negociação de tokens.",
-        "The proposed rules distinguish the household’s agreement, resident participation and investor rights. They include ways to question decisions, replace representatives and limit spending. The budget accounts for periods with little or no token-trading income."
+        "As regras separariam os direitos da família, a participação dos moradores e os direitos de investidores. Os acordos incluem revisão de decisões, troca de representantes e limites de gasto. O orçamento considera períodos com pouca ou nenhuma receita de negociação de tokens.",
+        "The rules would distinguish the household’s agreement, resident participation and investor rights. They include ways to question decisions, replace representatives and limit spending. The budget accounts for periods with little or no token-trading income."
       ],
       "web": [
         "As regras de participação, os limites de decisão e o canal de reclamações ficariam disponíveis para consulta. Os acordos ainda em discussão seriam identificados como propostas.",
@@ -99,7 +99,7 @@
     {
       "id": "funded-pilot",
       "title": [
-        "Primeiras moradias",
+        "Primeiras casas",
         "First homes"
       ],
       "window": [
@@ -131,12 +131,12 @@
         "Missing funding, permissions or safe conditions prevents construction or occupancy from proceeding."
       ],
       "schedule": [
-        "Após financiamento, autorizações e conferência das condições de segurança. Ainda não há data de obra ou mudança.",
-        "After funding, permissions and safety checks. No construction or move-in date is set."
+        "Após financiamento, autorizações e conferência das condições de segurança. A obra e a mudança dependem do financiamento e das licenças.",
+        "After funding, permissions and safety checks. Construction and move-in follow funding and permits."
       ],
       "overview_owner": [
-        "IMOBX; construtora e profissional independente para conferir a obra ainda por contratar.",
-        "IMOBX; builder and independent inspector not yet appointed."
+        "IMOBX; a construtora dos fundadores como construtora proposta, sem contrato assinado; profissional independente para conferir a obra ainda por contratar.",
+        "IMOBX; the founders’ company as proposed builder, no contract signed; independent inspector not yet appointed."
       ],
       "overview_needs": [
         "Financiamento, autorizações, contratos e condições seguras para morar.",
@@ -240,16 +240,16 @@
     {
       "id": "replication",
       "title": [
-        "Mais moradias e parcerias com proprietários",
-        "More homes and owner partnerships"
+        "Mais imóveis",
+        "More properties"
       ],
       "window": [
         "Expansão após avaliação da primeira operação",
         "Expansion following review of the first operation"
       ],
       "work": [
-        "A expansão proposta compartilha projetos, compras, administração e relatórios, mantendo as decisões locais perto dos moradores. Uma segunda frente em estudo oferece apoio a proprietários que queiram disponibilizar imóveis por contratos de moradia com opção de compra.",
-        "The proposed expansion shares designs, purchasing, administration and reporting while keeping local decisions close to residents. A second service under consideration would support owners offering properties through rent-to-own agreements."
+        "A expansão compartilharia projetos, compras, administração e relatórios, mantendo as decisões locais perto dos moradores. Com registros de custos e pagamentos, o projeto atrai financiamento e convida donos de imóveis adequados a participar.",
+        "Expansion would share designs, purchasing, administration and reporting while keeping local decisions close to residents. With records of costs and payments, the project draws in funding and invites owners of suitable properties to join."
       ],
       "gate": [
         "A expansão depende de custos demonstrados, compromissos existentes cobertos e financiamento para o próximo projeto. Outra equipe precisaria conseguir manter a operação. A avaliação de um novo país incluiria parceiros locais, contratos e regras próprios.",
@@ -260,8 +260,8 @@
         "Project reports would show homes planned, contracted, delivered and transferred to households, alongside costs and unresolved issues. New partnerships would be described according to their actual stage."
       ],
       "summary": [
-        "Novos projetos com equipes locais e possíveis serviços de moradia com opção de compra para proprietários parceiros.",
-        "Further projects with local teams and potential rent-to-own services for participating property owners."
+        "Novos projetos com equipes locais e donos de imóveis que queiram participar.",
+        "Further projects with local teams and property owners who want to take part."
       ],
       "responsible": [
         "IMOBX e nova equipe local, com participação dos moradores. Parcerias e recursos para expansão ainda não confirmados.",
@@ -282,6 +282,53 @@
       "overview_needs": [
         "Avaliação das primeiras moradias, recursos para os compromissos existentes e para o próximo projeto.",
         "A review of the first homes, money for existing promises and funding for the next project."
+      ]
+    },
+    {
+      "id": "owner-platform",
+      "title": [
+        "Uma plataforma para proprietários",
+        "A platform for owners"
+      ],
+      "window": [
+        "Só depois de resultados nas fases anteriores",
+        "Only after the earlier phases have shown results"
+      ],
+      "work": [
+        "Oferecer a proprietários um caminho para vender pelo aluguel com compra, além de moradia compartilhada. Exige uma organização maior, com histórico, que dê garantias e seguros. Preços e garantias viriam depois; nenhum custo menor que o aluguel é prometido.",
+        "Offer property owners a way to sell through rent-to-own, as well as co-housing. It needs a larger organisation with a track record that gives guarantees and insurance. Prices and guarantees would come later; no cost lower than renting is promised."
+      ],
+      "gate": [
+        "Preços e garantias viriam depois; nenhum custo menor que o aluguel é prometido.",
+        "Prices and guarantees would come later; no cost lower than renting is promised."
+      ],
+      "web": [
+        "Oferecer a proprietários um caminho para vender pelo aluguel com compra e oferecer moradia compartilhada.",
+        "Offer property owners a way to sell through rent-to-own, as well as co-housing."
+      ],
+      "summary": [
+        "Um serviço para proprietários que queiram vender pelo aluguel com compra.",
+        "A service for owners who want to sell through rent-to-own."
+      ],
+      "responsible": [
+        "IMOBX e futuros parceiros.",
+        "IMOBX and future partners."
+      ],
+      "pause": [
+        "Sem registros que comprovem as fases anteriores, a plataforma não é oferecida.",
+        "Without records proving the earlier phases, the platform is not offered."
+      ],
+      "schedule": [
+        "Depois de registros de custos e pagamentos das fases anteriores. Nenhuma data está definida.",
+        "After records of costs and payments from the earlier phases. Dates follow from them."
+      ],
+      "overview_owner": [
+        "IMOBX e futuros parceiros.",
+        "IMOBX and future partners."
+      ],
+      "overview_needs": [
+        "Registros das fases anteriores.",
+        "Records from the earlier phases."
       ]
     }
   ],
@@ -327,8 +374,8 @@
           "A resident reports a leak to the person responsible for maintenance. That person assesses the problem, gets a quote and follows the agreed spending limit. Someone else checks the repair before the final payment is approved."
         ],
         [
-          "O contrato precisa distinguir os reparos pagos pela organização daqueles que cabem à família. Ainda faltam a divisão desses custos, os prazos de atendimento, o contato responsável e a forma de revisar uma cobrança ou um serviço contestado.",
-          "The agreement needs to distinguish repairs paid for by the organization from those the household pays for. Who pays, how quickly repairs are handled, who to contact and how to question a charge or repair have not yet been agreed."
+          "O contrato definiria quais reparos a organização paga e quais cabem à família. Também diria os prazos de atendimento, o contato responsável e como contestar uma cobrança.",
+          "The agreement would set out which repairs the organization pays for and which the household pays for. It would also say how quickly repairs are handled, who to contact and how to question a charge."
         ]
       ],
       "sources": [
@@ -337,8 +384,8 @@
       "detail_url": "rent-to-own.html#repairs",
       "short": [
         [
-          "O contrato precisa distinguir os reparos pagos pela organização daqueles que cabem à família. Ainda faltam a divisão desses custos, os prazos de atendimento, o contato responsável e a forma de revisar uma cobrança ou um serviço contestado.",
-          "The agreement needs to distinguish repairs paid for by the organization from those the household pays for. Who pays, how quickly repairs are handled, who to contact and how to question a charge or repair have not yet been agreed."
+          "O contrato definiria quais reparos a organização paga e quais cabem à família. Também diria os prazos de atendimento, o contato responsável e como contestar uma cobrança.",
+          "The agreement would set out which repairs the organization pays for and which the household pays for. It would also say how quickly repairs are handled, who to contact and how to question a charge."
         ]
       ]
     },
@@ -351,8 +398,8 @@
       ],
       "a": [
         [
-          "Essas condições ainda não estão definidas. O acordo precisa dizer como tratar uma dificuldade temporária, como registrar valores já creditados e o que acontece se a família sair ou a IMOBX não puder continuar. Não estamos anunciando devolução automática, prazo de tolerância ou desconto já aprovado.",
-          "Those terms have not been defined. The agreement needs to address temporary hardship, amounts already credited, leaving the arrangement and IMOBX being unable to continue. No automatic refund, grace period or approved discount is being announced."
+          "O acordo diria como tratar uma dificuldade temporária, como ficam os valores já creditados e o que acontece se a família sair ou a IMOBX não puder continuar. Devolução, prazo de tolerância ou desconto só valem quando estiverem escritos no acordo.",
+          "The agreement would say how to handle temporary hardship, how amounts already credited are kept and what happens if the family leaves or IMOBX cannot continue. A refund, grace period or discount applies only once it is written into the agreement."
         ]
       ],
       "sources": [
@@ -401,8 +448,8 @@
       ],
       "a": [
         [
-          "A página de participação permite escolher moradia, imóvel, trabalho profissional, organização, financiamento ou colaboração com a comunidade. Os contatos para receber mensagens ainda não estão disponíveis: por enquanto, é possível preparar e copiar uma apresentação, mas o site não a envia.",
-          "The participation page offers routes for housing, property, professional work, organisations, funding and community contributions. Contact details are not available yet: for now, visitors can prepare and copy an introduction, but the website does not send it."
+          "A página de participação permite escolher moradia, imóvel, trabalho profissional, organização, financiamento ou colaboração com a comunidade. Ali você prepara uma apresentação e a envia à equipe pelo Telegram; o site não envia nada sozinho.",
+          "The participation page offers routes for housing, property, professional work, organisations, funding and community contributions. You prepare an introduction there and send it to the team on Telegram; the website sends nothing itself."
         ]
       ],
       "sources": [],
@@ -440,8 +487,8 @@
           "Under the proposal, the accounts show who paid each amount received and what it may be used for. Budgets and agreements show permitted spending and amounts reserved for a required use."
         ],
         [
-          "Os relatórios propostos distinguem valores previstos, contratados, recebidos e gastos. A conferência liga o pagamento ao documento e à entrega correspondente.",
-          "Proposed reports distinguish forecast, contracted, received and spent amounts. Review links a payment to its document and the corresponding delivery."
+          "Os relatórios distinguiriam valores previstos, contratados, recebidos e gastos. A conferência liga o pagamento ao documento e à entrega correspondente.",
+          "Reports would distinguish forecast, contracted, received and spent amounts. Review links a payment to its document and the corresponding delivery."
         ]
       ],
       "sources": [
@@ -521,8 +568,8 @@
           "A payment can be recorded; building quality needs an on-site check. Personal documents stay private. We will test whether a shared record reduces work or improves checking."
         ],
         [
-          "Arctide e Argus são exemplos de exchanges, ou plataformas de negociação, na rede Arc. Essas plataformas existem de forma independente; não há uso nem parceria com a IMOBX.",
-          "Arctide and Argus are examples of exchanges, or trading platforms, on the Arc network. These platforms exist independently; there is no IMOBX use or partnership."
+          "Arctide e Argus são exchanges independentes na rede Arc. A IMOBX usa apenas a central The Flock, ligada à Arctide, para apresentações pelo Telegram, sem vínculo de pagamento ou negociação.",
+          "Arctide and Argus are independent exchanges on the Arc network. IMOBX uses only The Flock help desk, linked to Arctide, for introductions on Telegram, with no payment or trading link."
         ]
       ],
       "sources": [
@@ -562,8 +609,8 @@
       ],
       "a": [
         [
-          "A proposta reúne quem disponibiliza o imóvel, a equipe de construção e quem financia o projeto. Um imóvel pode ser doado, vendido ou alugado à organização; cada caso exige um acordo próprio. Antes da obra, o orçamento precisa identificar de onde vem o dinheiro para o trabalho contratado e para os compromissos com as famílias.",
-          "The proposal brings together property contributors, a building team and project funders. A property can be donated, sold or leased to the organization; each arrangement needs its own agreement. Before construction, the budget needs to show where the money for the contracted work and promises to families comes from."
+          "A IMOBX reuniria quem disponibiliza o imóvel, a equipe de construção e quem financia o projeto. Um imóvel pode ser doado, vendido ou alugado à organização; cada caso exige um acordo próprio. Antes da obra, o orçamento precisa identificar de onde vem o dinheiro para o trabalho contratado e para os compromissos com as famílias.",
+          "IMOBX would bring together property contributors, a building team and project funders. A property can be donated, sold or leased to the organization; each arrangement needs its own agreement. Before construction, the budget needs to show where the money for the contracted work and promises to families comes from."
         ],
         [
           "As fontes possíveis são doações, editais, receitas de serviços e um investimento que a organização escolhida possa oferecer legalmente. Também estudamos um token para financiar a operação e a divulgação. Quem compra tokens novos paga à organização que os cria e vende. Quem compra de outro investidor paga a esse vendedor. Uma taxa recebida pela IMOBX é registrada separadamente.",
@@ -588,12 +635,12 @@
       ],
       "a": [
         [
-          "Queremos que a família possa se tornar dona da casa inteira. A proposta é organizar a construção e a administração de várias casas, sem criar um grupo separado de investidores para decidir sobre cada imóvel. Compras em conjunto e uma administração compartilhada podem reduzir trabalho e custos.",
-          "We want each family to be able to own its whole home. The proposal is to organize building and managing several homes, without a separate group of investors making decisions about each property. Buying together and sharing administration may reduce work and costs."
+          "Queremos que a família possa se tornar dona da casa inteira. A IMOBX organizaria a construção e a administração de várias casas, sem criar um grupo separado de investidores para decidir sobre cada imóvel. Compras em conjunto e uma administração compartilhada podem reduzir trabalho e custos.",
+          "We want each family to be able to own its whole home. IMOBX would organise building and managing several homes, without a separate group of investors making decisions about each property. Buying together and sharing administration may reduce work and costs."
         ],
         [
-          "Se houver um token ligado à IMOBX ou a um grupo de projetos, o contrato terá de explicar o que ele dá ao comprador: quais bens e receitas entram, quais dívidas existem e quais riscos são compartilhados. Hoje, nenhum token da IMOBX dá propriedade de uma casa ou direito a uma parte dela.",
-          "If a future token is linked to IMOBX or a group of projects, its agreement must explain what buyers receive: which properties and income are included, what debts exist and which risks they share. Today, no IMOBX token gives ownership of a home or a share of one."
+          "Se houver um token ligado à IMOBX ou a um grupo de projetos, o contrato terá de explicar o que ele dá ao comprador. Isso inclui quais bens e receitas entram, quais dívidas existem e quais riscos são compartilhados. Hoje, nenhum token da IMOBX dá propriedade de uma casa ou direito a uma parte dela.",
+          "If a future token is linked to IMOBX or a group of projects, its agreement must explain what buyers receive. That means which properties and income are included, what debts exist and which risks they share. Today, no IMOBX token gives ownership of a home or a share of one."
         ]
       ],
       "sources": [
@@ -613,8 +660,8 @@
           "We want the money to serve housing: maintain homes, fulfill agreements and build more. We are still choosing the legal form; we do not claim IMOBX is already registered as a nonprofit. Receiving income and hiring a builder are different from paying profits to investors."
         ],
         [
-          "A Lei 13.019, que trata de parcerias com o poder público, define entidades sem fins lucrativos que usam os resultados na finalidade social. Precisamos decidir com assessores brasileiros se a participação será sem direito a lucro ou se um investimento que a organização escolhida possa oferecer legalmente exigirá outro acordo, possivelmente separado. Doações com destino definido não viram dividendos.",
-          "Law 13.019, covering public-sector partnerships, defines nonprofits that use their results for their social purpose. With Brazilian advisers, we need to decide whether participation carries no profit rights or whether investment that the chosen organisation is legally allowed to offer needs another arrangement, possibly separate. Donations given for a specific purpose do not become dividends."
+          "A Lei 13.019, que trata de parcerias com o poder público, define entidades sem fins lucrativos que usam os resultados na finalidade social. Precisamos decidir com assessores brasileiros se a participação será sem direito a lucro ou se um investimento que a organização escolhida possa oferecer legalmente exigirá outro acordo, possivelmente separado. Doações com destino definido mantêm esse destino.",
+          "Law 13.019, covering public-sector partnerships, defines nonprofits that use their results for their social purpose. With Brazilian advisers, we need to decide whether participation carries no profit rights or whether investment that the chosen organisation is legally allowed to offer needs another arrangement, possibly separate. Donations given for a specific purpose keep that purpose."
         ]
       ],
       "sources": [
@@ -754,16 +801,16 @@
           "For example, a resident reports a leak. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. After the repair, someone else checks the work. The payment and receipt go into the accounts. If something is wrong, the resident can ask for review."
         ],
         [
-          "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas. O projeto precisa conseguir seguir sem depender de uma pessoa específica.",
-          "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
+          "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas.",
+          "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private."
         ],
         [
           "O canal de atendimento digital serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continuaria definido pelas regras acordadas, não pelo bot. Nada disso funciona ainda.",
           "The digital support channel would let people submit requests, follow progress and read decisions. Software assistants could organise documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, would determine who may decide and spend. None of this is working yet."
         ],
         [
-          "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
-          "This is the proposed method for the pilot. We still need to agree it with participants and demonstrate it, including when an invoice is disputed or a responsible person is replaced."
+          "Esse método seria combinado com os participantes e testado no piloto, inclusive em caso de cobrança contestada ou troca de responsável.",
+          "This method would be agreed with participants and tested in the pilot, including when an invoice is disputed or a responsible person is replaced."
         ]
       ],
       "sources": [
@@ -1196,12 +1243,12 @@
       },
       {
         "title": [
-          "Prestador: ainda não confirmado",
-          "Provider: not yet confirmed"
+          "Prestador: opções em comparação",
+          "Provider: options being compared"
         ],
         "body": [
-          "Há opções técnicas. Ainda precisamos de uma empresa que aceite a IMOBX e suas atividades, informe todos os custos e permita trazer o dinheiro de volta para reais.",
-          "Technical options exist. We still need a company that accepts IMOBX and its activities, quotes all costs and lets money return to reais."
+          "O prestador precisa aceitar a IMOBX e suas atividades, informar todos os custos e permitir trazer o dinheiro de volta para reais.",
+          "The provider must accept IMOBX and its activities, quote all costs and let money return to reais."
         ]
       },
       {
@@ -1210,8 +1257,8 @@
           "Payments: not yet demonstrated"
         ],
         "body": [
-          "Esta página explica o plano. Não mostra um caixa digital funcionando nem extratos da operação. A falta desses dados aqui não significa saldo zero.",
-          "This page explains the plan. It does not show a working digital treasury or operating statements. Missing figures here do not mean a zero balance."
+          "Esta página explica o plano. O site ainda não mostra caixa digital em operação nem extratos.",
+          "This page explains the plan. The site does not yet show a working digital treasury or statements."
         ]
       }
     ],
@@ -1451,16 +1498,16 @@
             "For example, a resident reports a leak. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. After the repair, someone else checks the work. The payment and receipt go into the accounts. If something is wrong, the resident can ask for review."
           ],
           [
-            "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas. O projeto precisa conseguir seguir sem depender de uma pessoa específica.",
-            "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
+            "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas.",
+            "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private."
           ],
           [
             "O canal de atendimento digital serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
             "The digital support channel would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
           ],
           [
-            "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
-            "This is the proposed method for the pilot. We still need to agree it with participants and demonstrate it, including when an invoice is disputed or a responsible person is replaced."
+            "Esse método seria combinado com os participantes e testado no piloto, inclusive em caso de cobrança contestada ou troca de responsável.",
+            "This method would be agreed with participants and tested in the pilot, including when an invoice is disputed or a responsible person is replaced."
           ]
         ],
         "sources": [
@@ -1526,16 +1573,16 @@
       "For example, a resident reports a leak. The person handling maintenance assesses it, gets a quote and follows the agreed spending rule. After the repair, someone else checks the work. The payment and receipt go into the accounts. If something is wrong, the resident can ask for review."
     ],
     "continuity": [
-      "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas. O projeto precisa conseguir seguir sem depender de uma pessoa específica.",
-      "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private. The project needs to keep working without depending on one particular person."
+      "Se alguém sair de uma função, quem assumir encontra as tarefas abertas, os valores aprovados e os documentos necessários. Informações pessoais continuam privadas.",
+      "If someone leaves a role, their replacement can find the open tasks, approved amounts and necessary documents. Personal information stays private."
     ],
     "tools": [
       "O canal de atendimento digital serviria para registrar pedidos, mostrar o andamento e consultar decisões. Assistentes de software poderiam organizar documentos e lembrar pendências. Pagamentos na blockchain permitiriam conferir valores e destinos. Quem pode decidir e gastar continua definido pelas regras acordadas, não pelo bot.",
       "The digital support channel would let people submit requests, follow progress and read decisions. Software assistants could organize documents and remind people about unfinished tasks. Blockchain payments would let people check amounts and destinations. Agreed rules, not the bot, determine who may decide and spend."
     ],
     "status": [
-      "Esse é o método proposto para o piloto. Ainda precisamos combiná-lo com os participantes e demonstrar que funciona, inclusive numa cobrança contestada ou troca de responsável.",
-      "This is the proposed method for the pilot. We still need to agree it with participants and demonstrate it, including when an invoice is disputed or a responsible person is replaced."
+      "Esse método seria combinado com os participantes e testado no piloto, inclusive em caso de cobrança contestada ou troca de responsável.",
+      "This method would be agreed with participants and tested in the pilot, including when an invoice is disputed or a responsible person is replaced."
     ]
   },
   "participation": {
@@ -1575,8 +1622,8 @@
         "What they need from the project"
       ],
       [
-        "O que falta combinar",
-        "What remains to be agreed"
+        "O que o contrato cobriria",
+        "What the agreement would cover"
       ]
     ],
     "roles": [
@@ -1592,7 +1639,8 @@
         "decision": [
           "Preço final, reajustes, quanto conta para a compra, atrasos, saída e como escolher representantes.",
           "Final price, price changes, what counts toward purchase, late payments, leaving and how representatives are chosen."
-        ]
+        ],
+        "id": "families"
       },
       {
         "who": [
@@ -1606,7 +1654,8 @@
         "decision": [
           "Documentos, dívidas, impostos, registro e condições da entrega.",
           "Documents, debts, taxes, registration and handover conditions."
-        ]
+        ],
+        "id": "owners"
       },
       {
         "who": [
@@ -1620,7 +1669,8 @@
         "decision": [
           "Alterações de custo, garantia, defeitos e quem aprova uma cobrança ligada a um fundador.",
           "Cost changes, warranties, defects and who approves an invoice linked to a founder."
-        ]
+        ],
+        "id": "builders"
       },
       {
         "who": [
@@ -1634,7 +1684,8 @@
         "decision": [
           "Escolha e troca dos responsáveis, urgências, prestação de contas e reclamações.",
           "Choosing and replacing responsible people, emergencies, reporting and complaints."
-        ]
+        ],
+        "id": "staff"
       },
       {
         "who": [
@@ -1648,7 +1699,8 @@
         "decision": [
           "Uso permitido, relatórios e o que acontece se a obra atrasar ou não puder seguir.",
           "Permitted uses, reports and what happens if the build is delayed or cannot proceed."
-        ]
+        ],
+        "id": "funders"
       },
       {
         "who": [
@@ -1662,7 +1714,8 @@
         "decision": [
           "Direitos, fonte de pagamentos, custos, perdas, limites de voto e regras de venda. Não há garantia de comprador futuro.",
           "Rights, payment source, costs, losses, voting limits and sale rules. There is no guaranteed future buyer."
-        ]
+        ],
+        "id": "token-buyers"
       },
       {
         "who": [
@@ -1676,7 +1729,8 @@
         "decision": [
           "Efeitos da obra, acesso a trabalho e escola e um canal para resolver problemas.",
           "Construction effects, access to work and school and a way to resolve problems."
-        ]
+        ],
+        "id": "neighbours"
       },
       {
         "who": [
@@ -1690,7 +1744,8 @@
         "decision": [
           "Responsáveis por segurança, registro, contabilidade e análise jurídica, com custos no orçamento.",
           "Responsibility for safety, registration, accounting and legal review, with costs in the budget."
-        ]
+        ],
+        "id": "checkers"
       }
     ],
     "rights_title": [
@@ -1762,12 +1817,12 @@
       "From renting to buying the home"
     ],
     "intro": [
-      "A proposta da IMOBX é que a família more de aluguel enquanto paga pela compra da casa inteira. Na proposta, o contrato registra quanto de cada pagamento conta para a compra. Cumpridas as condições combinadas, a propriedade passa para a família por meio da transferência do imóvel.",
-      "IMOBX proposes that a household rent a home while paying towards buying the whole property. In the proposal, the agreement records how much of each payment counts towards the purchase. Once the agreed purchase conditions are met, ownership passes to the household through the property transfer."
+      "A proposta da IMOBX é que a família more de aluguel enquanto paga pela compra da casa inteira. O contrato registra quanto de cada pagamento conta para a compra. Cumpridas as condições combinadas, a propriedade passa para a família por meio da transferência do imóvel.",
+      "IMOBX proposes that a household rent a home while paying towards buying the whole property. The agreement records how much of each payment counts towards the purchase. Once the agreed purchase conditions are met, ownership passes to the household through the property transfer."
     ],
     "status": [
-      "O primeiro projeto está em preparação. Ainda não há preço de compra, pagamento mensal, parcela destinada à compra ou prazo de pagamento definidos para uma família. Esta página explica o modelo proposto; não é uma oferta de moradia disponível.",
-      "The first project is in preparation. No price, monthly payment or time to pay has been set for a household, and how much of each payment counts towards buying the home is not yet agreed. This page explains the proposed model. It is not an offer of an available home."
+      "O primeiro projeto está em preparação. Pela proposta, o preço e o pagamento mensal de cada casa partem do custo da obra e do que a família pode pagar. A proposta não prevê entrada, e os dois são combinados por escrito antes da mudança. Esta página explica o modelo proposto; não é uma oferta de moradia disponível.",
+      "The first project is in preparation. Under the proposal, each home’s price and monthly payment start from what it costs to build and what the family can pay. The proposal has no down payment, and both are agreed in writing before the family moves in. This page explains the proposed model. It is not an offer of an available home."
     ],
     "steps_title": [
       "Como os pagamentos levam à compra",
@@ -1833,8 +1888,8 @@
         "A resident reports a leak to the person responsible for maintenance. That person assesses the problem, gets a quote and follows the agreed spending limit. Someone else checks the repair before the final payment is approved."
       ],
       [
-        "O contrato precisa distinguir os reparos pagos pela organização daqueles que cabem à família. Ainda faltam a divisão desses custos, os prazos de atendimento, o contato responsável e a forma de revisar uma cobrança ou um serviço contestado.",
-        "The agreement needs to distinguish repairs paid for by the organization from those the household pays for. Who pays, how quickly repairs are handled, who to contact and how to question a charge or repair have not yet been agreed."
+        "O contrato definiria quais reparos a organização paga e quais cabem à família. Também diria os prazos de atendimento, o contato responsável e como contestar uma cobrança.",
+        "The agreement would set out which repairs the organization pays for and which the household pays for. It would also say how quickly repairs are handled, who to contact and how to question a charge."
       ]
     ],
     "decisions_title": [
@@ -1861,8 +1916,8 @@
     ],
     "hardship": [
       [
-        "Essas condições ainda não estão definidas. O acordo precisa dizer como tratar uma dificuldade temporária, como registrar valores já creditados e o que acontece se a família sair ou a IMOBX não puder continuar. Não estamos anunciando devolução automática, prazo de tolerância ou desconto já aprovado.",
-        "Those terms have not been defined. The agreement needs to address temporary hardship, amounts already credited, leaving the arrangement and IMOBX being unable to continue. No automatic refund, grace period or approved discount is being announced."
+        "O acordo diria como tratar uma dificuldade temporária, como ficam os valores já creditados e o que acontece se a família sair ou a IMOBX não puder continuar. Devolução, prazo de tolerância ou desconto só valem quando estiverem escritos no acordo.",
+        "The agreement would say how to handle temporary hardship, how amounts already credited are kept and what happens if the family leaves or IMOBX cannot continue. A refund, grace period or discount applies only once it is written into the agreement."
       ]
     ],
     "funding_title": [
@@ -1871,8 +1926,8 @@
     ],
     "funding": [
       [
-        "A proposta reúne quem disponibiliza o imóvel, a equipe de construção e quem financia o projeto. Um imóvel pode ser doado, vendido ou alugado à organização; cada caso exige um acordo próprio. Antes da obra, o orçamento precisa mostrar de onde vem o dinheiro para o trabalho contratado e para os compromissos com as famílias.",
-        "The proposal brings together property contributors, a building team and project funders. A property can be donated, sold or leased to the organization; each arrangement needs its own agreement. Before construction, the budget has to show where the money for the contracted work and promises to families comes from."
+        "A IMOBX reuniria quem disponibiliza o imóvel, a equipe de construção e quem financia o projeto. Um imóvel pode ser doado, vendido ou alugado à organização; cada caso exige um acordo próprio. Antes da obra, o orçamento precisa mostrar de onde vem o dinheiro para o trabalho contratado e para os compromissos com as famílias.",
+        "IMOBX would bring together property contributors, a building team and project funders. A property can be donated, sold or leased to the organization; each arrangement needs its own agreement. Before construction, the budget has to show where the money for the contracted work and promises to families comes from."
       ],
       [
         "Doações, editais, receitas de serviços e um investimento que a organização escolhida possa oferecer legalmente são fontes possíveis. Os pagamentos da família são em reais e não dependem de investimento.",
@@ -1889,8 +1944,8 @@
     ],
     "property": [
       [
-        "Um proprietário pode apresentar o imóvel, seu estado e se considera doação, venda ou locação. Uma construtora pode apresentar o trabalho e o orçamento. Uma associação pode trazer necessidades locais e possíveis participantes. Essas apresentações permitem avaliar um projeto; não confirmam transferência, contratação ou parceria.",
-        "An owner can introduce a property, its condition and whether donation, sale or lease is being considered. A builder can describe the work and quote a price. An association can bring local needs and prospective participants. These introductions allow a project to be assessed; they do not confirm a transfer, appointment or partnership."
+        "Um proprietário pode apresentar o imóvel, descrever seu estado e dizer se pensa em doar, vender ou alugar. Uma construtora pode apresentar o trabalho e o orçamento. Uma associação pode trazer necessidades locais e possíveis participantes. Essas apresentações permitem avaliar um projeto; não confirmam transferência, contratação ou parceria.",
+        "An owner can introduce a property, describe its condition and say whether they are considering donating, selling or leasing it. A builder can describe the work and quote a price. An association can bring local needs and prospective participants. These introductions allow a project to be assessed; they do not confirm a transfer, appointment or partnership."
       ]
     ],
     "next_title": [
@@ -1899,15 +1954,15 @@
     ],
     "next": [
       [
-        "A página de participação permite escolher moradia, imóvel, trabalho profissional, organização, financiamento ou colaboração com a comunidade. Os contatos para receber mensagens ainda não estão disponíveis: por enquanto, é possível preparar e copiar uma apresentação, mas o site não a envia.",
-        "The participation page offers routes for housing, property, professional work, organizations, funding and community contributions. Contact details are not available yet: for now, visitors can prepare and copy an introduction, but the website does not send it."
+        "A página de participação permite escolher moradia, imóvel, trabalho profissional, organização, financiamento ou colaboração com a comunidade. Ali você prepara uma apresentação e a envia à equipe pelo Telegram; o site não envia nada sozinho.",
+        "The participation page offers routes for housing, property, professional work, organizations, funding and community contributions. You prepare an introduction there and send it to the team on Telegram; the website sends nothing itself."
       ]
     ]
   },
   "home_overview": {
     "title": [
-      "Como o aluguel leva à casa própria",
-      "How renting leads to owning the home"
+      "O que o contrato da família garantiria",
+      "What the family’s agreement would protect"
     ],
     "intro": [
       "A família mora na casa enquanto parte de cada pagamento conta para a compra.",
@@ -1950,16 +2005,16 @@
       "Repairs, missed payments and leaving"
     ],
     "terms_status": [
-      "Quem paga pelos reparos, o que acontece se a família não conseguir pagar e como tratar os valores já pagos pela compra se ela sair ainda não estão combinados.",
-      "Who pays for repairs, what happens if a family cannot pay and what happens to money already paid towards the purchase if it leaves are not agreed yet."
+      "O contrato definiria quem paga os reparos, o que acontece se a família não puder pagar por um tempo e como ficam os valores já pagos se ela sair.",
+      "The agreement would set out who pays for repairs, what happens if a family cannot pay for a while and what happens to money already paid if it leaves."
     ],
     "link": [
       "Leia sobre pagamentos, reparos e compra",
       "Read about payments, repairs and buying"
     ],
     "vision_title": [
-      "Uma vila com espaços compartilhados",
-      "A village with shared spaces"
+      "Um bairro para viver e cooperar",
+      "A neighbourhood for living and cooperating"
     ],
     "vision_intro": [
       "Rafael Britto, fundador da IMOBX, imaginou casas de 45 m² em torno de um pátio, com energia solar, pomar, espaço para brincar e salas de estudo.",
@@ -1976,6 +2031,673 @@
     "vision_link": [
       "O que os moradores poderiam decidir",
       "What residents could decide"
+    ],
+    "vision_way": [
+      "O desenho é uma forma de viver e cooperar: visa despesas menores, cuidado conjunto dos espaços comuns, aprendizagem e ajuda entre vizinhos.",
+      "The design is a way of living and cooperating: it aims at lower running costs, shared care of common spaces, learning and help between neighbours."
+    ],
+    "ambition": [
+      "A ambição mais ampla são bairros onde as pessoas sejam donas de suas casas e sustentem seu dia a dia. Produção de alimentos, energia renovável e serviços comunitários são possibilidades a desenvolver com moradores e parceiros; nada disso está organizado ainda.",
+      "The wider ambition is neighbourhoods where people own their homes and sustain their livelihoods. Food growing, renewable energy and community services are possibilities to develop with residents and partners; none of this is organised yet."
+    ]
+  },
+  "budgets_html": "<h2 data-pt=\"Dois valores iguais, dois casos diferentes\" data-en=\"The same figure, two different cases\">Dois valores iguais, dois casos diferentes</h2><p data-pt=\"Estes valores são custos de construção em dólares. Não são o preço nem o pagamento mensal de uma família; o preço é definido em reais. O orçamento da vila e o contrato dos dois lofts são casos separados, e os dois valores são de US$27.777: nos lofts, é o total dos dois; na vila, é o orçamento por casa. Rafael usou CUB e SINAPI, referências brasileiras de custos de construção, para preparar o orçamento da vila. Cada obra precisa registrar o que inclui, os preços em reais e o que foi gasto.\" data-en=\"These figures are construction costs in US dollars. They are not a family’s price or monthly payment; each home’s price is set in reais. The village budget and the two-loft contract are separate cases, and both figures are US$27,777: for the lofts it is the total for both; for the village it is the budget per home. Rafael used CUB and SINAPI, Brazilian building-cost references, to prepare the village budget. Each build needs to record what it includes, prices in reais and actual spending.\">Estes valores são custos de construção em dólares. Não são o preço nem o pagamento mensal de uma família; o preço de cada casa é definido em reais. O orçamento da vila e o contrato dos dois lofts são casos separados, e os dois valores são de US$27.777: nos lofts, é o total dos dois; na vila, é o orçamento por casa. Rafael usou CUB e SINAPI, referências brasileiras de custos de construção, para preparar o orçamento da vila. Cada obra precisa registrar o que inclui, os preços em reais e o que foi gasto.</p><div class=\"cost-comparison\"><article><h3 data-pt=\"Dois lofts · janeiro 2026\" data-en=\"Two lofts · January 2026\">Dois lofts · janeiro 2026</h3><p class=\"cost-number\" data-pt=\"US$27.777 no total\" data-en=\"US$27,777 combined\">US$27.777 no total</p><p data-pt=\"Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.\" data-en=\"Construction figure for both lofts together: US$13,888.50 per loft by simple division. Rafael reported a contract awaiting the first deposit at that time.\">Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.</p><p data-pt=\"Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.\" data-en=\"We still need to record what the contract includes, the lofts’ floor areas and the final cost.\">Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.</p></article><article><h3 data-pt=\"Vila de 36 casas · novembro 2025\" data-en=\"36-home village · November 2025\">Vila de 36 casas · novembro 2025</h3><p class=\"cost-number\" data-pt=\"US$27.777 por casa\" data-en=\"US$27,777 per home\">US$27.777 por casa</p><p data-pt=\"Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.\" data-en=\"Rafael’s budget for each 45 m² home uses CUB/SINAPI references, direct purchasing and shared costs. It includes land, construction, solar and shared works. The plan is to build at least 36 homes together: US$999,972 over 12 months.\">Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.</p><p data-pt=\"O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.\" data-en=\"The budget and timing need to fit the selected site and available money.\">O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.</p></article></div><details class=\"disclosure\"><summary><span data-pt=\"Ver os itens do orçamento da vila\" data-en=\"View the village budget’s cost items\">Ver os itens do orçamento da vila</span></summary><div class=\"disclosure-body\"><div class=\"budget-table\"><table><thead><tr><th data-pt=\"Item por casa\" data-en=\"Per-home item\">Item por casa</th><th data-pt=\"Orçamento de 2025 em US$\" data-en=\"2025 budget in US$\">Orçamento de 2025 em US$</th></tr></thead><tbody><tr><td data-pt=\"Terreno\" data-en=\"Land\">Terreno</td><td data-pt=\"5.550\" data-en=\"5,550\">5.550</td></tr><tr><td data-pt=\"Construção · 45 m²\" data-en=\"Construction · 45 m²\">Construção · 45 m²</td><td data-pt=\"18.600\" data-en=\"18,600\">18.600</td></tr><tr><td data-pt=\"Energia solar\" data-en=\"Solar\">Energia solar</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Infraestrutura e espaços compartilhados\" data-en=\"Infrastructure and shared spaces\">Infraestrutura e espaços compartilhados</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Legal e projeto\" data-en=\"Legal and design\">Legal e projeto</td><td data-pt=\"627\" data-en=\"627\">627</td></tr><tr><th data-pt=\"Total\" data-en=\"Total\">Total</th><th data-pt=\"27.777\" data-en=\"27,777\">27.777</th></tr></tbody></table></div><p data-pt=\"O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.\" data-en=\"The plan aims to save by building together and sharing common costs across homes. Quotes and maintenance bills need to show whether those savings happen.\">O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.</p></div></details>",
+  "definitions": [
+    "Blockchain é um registro digital compartilhado que mostra quem aprovou um pagamento. Arc é a rede de blockchain em consideração para pagamentos em USDC, uma moeda digital atrelada ao dólar.",
+    "A blockchain is a shared digital record that shows who approved a payment. Arc is the blockchain network under consideration for payments in USDC, a digital currency tied to the US dollar."
+  ],
+  "money_order": {
+    "title": [
+      "Como o dinheiro seria usado",
+      "How money would be used"
+    ],
+    "intro": [
+      "Esta é a direção de trabalho para a ordem dos pagamentos. Nenhum contrato define essas regras ainda.",
+      "This is the working direction for the order of payments. No contract sets these rules yet."
+    ],
+    "steps": [
+      [
+        "Registrar o dinheiro de fato recebido.",
+        "Record the money actually received."
+      ],
+      [
+        "Separar impostos e valores prometidos para um uso específico.",
+        "Set aside taxes and amounts promised for a specific purpose."
+      ],
+      [
+        "Pagar as contas combinadas do imóvel, da manutenção e da administração.",
+        "Pay agreed property, maintenance and administration bills."
+      ],
+      [
+        "Guardar dinheiro para reparos, casas vazias, promessas feitas às famílias e imprevistos.",
+        "Keep money for repairs, empty homes, promises made to families and unexpected costs."
+      ],
+      [
+        "Construir novas casas dentro do orçamento combinado.",
+        "Fund new homes under the agreed budget."
+      ],
+      [
+        "Pagar investidores somente se sobrar dinheiro e um acordo válido permitir.",
+        "Pay investors only if money remains and a valid agreement allows it."
+      ]
+    ],
+    "transfer": [
+      "Quando uma família se torna dona da casa, o aluguel dessa casa termina. Cada casa transferida reduz a renda da IMOBX; por isso, uma renda futura para investidores precisaria de outra fonte documentada. O valor já creditado à compra de uma família não pode ser usado de um jeito que impeça a transferência prometida.",
+      "When a household becomes the owner, the rent from that home ends. Each transferred home reduces IMOBX’s income, so any future income for investors would need another documented source. Money credited towards a family’s purchase cannot be used in a way that prevents the promised transfer."
+    ],
+    "kinds_title": [
+      "Os cinco tipos de dinheiro",
+      "The five kinds of money"
+    ],
+    "headings": [
+      [
+        "Dinheiro",
+        "Money"
+      ],
+      [
+        "Quem paga",
+        "Who pays"
+      ],
+      [
+        "Para que pode servir",
+        "What it may pay for"
+      ]
+    ],
+    "kinds": [
+      [
+        [
+          "Investimento novo, se for oferecido",
+          "New investment, if offered"
+        ],
+        [
+          "Investidores, à organização que emite",
+          "Investors, to the issuing organisation"
+        ],
+        [
+          "Um orçamento publicado, com linhas separadas para as casas e para a operação, a marca e a divulgação",
+          "A published budget, with separate lines for homes and for operations, branding and outreach"
+        ]
+      ],
+      [
+        [
+          "Taxas de negociação",
+          "Trading fees"
+        ],
+        [
+          "Quem compra ou vende, só se um acordo destinar a taxa à IMOBX",
+          "Buyers or sellers, only if an agreement assigns the fee to IMOBX"
+        ],
+        [
+          "Um uso combinado, como a operação e o pagamento de quem faz o trabalho; uma venda entre detentores paga ao vendedor",
+          "An agreed use, such as operations and paying the people who do the work; a sale between holders pays the seller"
+        ]
+      ],
+      [
+        [
+          "Aluguel (receita da operação)",
+          "Rent (operating income)"
+        ],
+        [
+          "As famílias",
+          "Households"
+        ],
+        [
+          "As obrigações das casas, as reservas e depois novas casas; termina quando a casa é transferida",
+          "The homes’ obligations, reserves and then further homes; it ends when a home transfers"
+        ]
+      ],
+      [
+        [
+          "Pagamento por trabalho de divulgação",
+          "Payment for promotional work"
+        ],
+        [
+          "A IMOBX, pelo orçamento de divulgação",
+          "IMOBX, from the outreach budget"
+        ],
+        [
+          "Tarefas combinadas e conferidas; quem recebe informa o público",
+          "Agreed, checked tasks; whoever is paid tells the public"
+        ]
+      ],
+      [
+        [
+          "Possíveis distribuições a investidores",
+          "Possible investor distributions"
+        ],
+        [
+          "A IMOBX, se sobrar dinheiro e um acordo escrito permitir",
+          "IMOBX, if money remains and a written agreement allows it"
+        ],
+        [
+          "Definido em acordo escrito; nenhum pagamento é prometido",
+          "Set by a written agreement; no payment is promised"
+        ]
+      ]
+    ]
+  },
+  "token_budget": [
+    "Se um token for oferecido, o dinheiro arrecadado seguiria um orçamento publicado. Uma linha pagaria a construção e a expansão das casas. Linhas separadas pagariam a operação, incluindo quem faz o trabalho, e a marca e a divulgação. A obra não pode depender do volume de negociação.",
+    "If a token is offered, the money raised would follow a published budget. One line would pay for building and expanding homes. Separate lines would pay for operations, including the people who do the work, and for branding and outreach. Construction must not depend on trading volume."
+  ],
+  "cases": {
+    "title": [
+      "Os três casos",
+      "The three cases"
+    ],
+    "intro": [
+      "Um imóvel oferecido é proposto por um dono. Um piloto proposto é o que a IMOBX pretende usar. Um piloto confirmado tem direito de uso do imóvel, orçamento e contratos assinados documentados. Nenhum piloto está confirmado.",
+      "An offered property is one an owner has proposed. A proposed pilot is one IMOBX intends to use. A confirmed pilot has its property right, budget and signed agreements documented. No pilot is confirmed."
+    ],
+    "headings": [
+      [
+        "Caso",
+        "Case"
+      ],
+      [
+        "O que existe",
+        "What exists"
+      ],
+      [
+        "Situação",
+        "Status"
+      ]
+    ],
+    "rows": [
+      [
+        [
+          "Uma casa existente",
+          "An existing home"
+        ],
+        [
+          "Um apartamento do cofundador, alugado a uma família que o banco recusa por falta de entrada, relatado nas conversas dos fundadores",
+          "A co-founder’s flat, rented to a household the bank refuses for lack of a down payment, reported in the founders’ discussions"
+        ],
+        [
+          "Piloto proposto; a confirmar: propriedade, contrato escrito e consentimento da família",
+          "Proposed pilot; to confirm: ownership, a written agreement and the household’s consent"
+        ]
+      ],
+      [
+        [
+          "Dois lofts",
+          "Two lofts"
+        ],
+        [
+          "Relato de Rafael de 20 de janeiro de 2026: contrato aguardando o primeiro depósito",
+          "Rafael’s report of 20 January 2026: a contract awaiting the first deposit"
+        ],
+        [
+          "Caso de obra relatado; não é o piloto; situação atual não documentada",
+          "Reported construction case; not the pilot; current status not documented"
+        ]
+      ],
+      [
+        [
+          "Vila de pelo menos 36 casas",
+          "Village of at least 36 homes"
+        ],
+        [
+          "Orçamento de Rafael de 30 de novembro de 2025",
+          "Rafael’s budget of 30 November 2025"
+        ],
+        [
+          "Conceito; depende de terreno, financiamento e escala",
+          "Concept; depends on land, funding and scale"
+        ]
+      ]
+    ]
+  },
+  "phases": {
+    "title": [
+      "Três fases de crescimento",
+      "Three phases of growth"
+    ],
+    "intro": [
+      "A prova gera confiança, e a confiança atrai financiamento e escala. Cada fase começa só quando a anterior mostrou resultados: casas construídas dentro do orçamento e pagamentos registrados. O aluguel paga primeiro as obrigações das casas e as reservas; o que sobrar paga novas casas.",
+      "Proof builds trust, and trust draws in funding and scale. Each phase starts only when the one before has shown results: homes built within budget and payments recorded. Rent pays the homes’ obligations and reserves first; what is left pays for more homes."
+    ],
+    "steps": [
+      [
+        [
+          "1. Primeiras casas",
+          "1. First homes"
+        ],
+        [
+          "Começar pelo piloto proposto, num apartamento existente, e construir as primeiras casas novas com a construtora dos fundadores, com custos conferidos por terceiros e relatórios públicos.",
+          "Start with the proposed pilot in an existing flat, and build the first new homes with the founders’ construction company, with costs checked by someone else and public reports."
+        ]
+      ],
+      [
+        [
+          "2. Mais imóveis",
+          "2. More properties"
+        ],
+        [
+          "Com registros de custos e pagamentos, atrair financiamento e convidar donos de imóveis adequados a participar.",
+          "With records of costs and payments, draw in funding and invite owners of suitable properties to join."
+        ]
+      ],
+      [
+        [
+          "3. Uma plataforma para proprietários",
+          "3. A platform for owners"
+        ],
+        [
+          "Oferecer a proprietários um caminho para vender pelo aluguel com compra, além de moradia compartilhada. Os proprietários precisariam de garantias e seguros, que uma organização maior e com histórico tem mais condições de dar.",
+          "Offer property owners a way to sell through rent-to-own, as well as co-housing. Owners would need guarantees and insurance, which a larger organisation with a track record is better placed to give."
+        ]
+      ]
+    ],
+    "note": [
+      "Esta é a ordem pretendida; não há datas definidas.",
+      "This is the intended order; no dates are set."
+    ]
+  },
+  "why": {
+    "title": [
+      "Por que moradia",
+      "Why housing"
+    ],
+    "lead": [
+      "No Brasil, a maior parte do déficit habitacional vem do peso do aluguel, e os aluguéis sobem mais que a inflação. Milhões de famílias, inclusive de classe média, pagam aluguel por anos sem chegar mais perto da casa própria.",
+      "In Brazil, the largest part of the housing deficit comes from the cost of rent, and rents are rising faster than inflation. Millions of families, middle-class ones included, pay rent for years without getting closer to owning a home."
+    ],
+    "facts_title": [
+      "O problema em quatro números",
+      "The problem in four figures"
+    ],
+    "facts": [
+      {
+        "text": [
+          "Em 2022, o déficit habitacional era de cerca de 6 milhões de moradias. Mais da metade (52,2%, cerca de 3,24 milhões) eram famílias com renda de até três salários mínimos que gastam mais de 30% da renda com aluguel.",
+          "In 2022 the housing deficit was about 6 million homes. More than half of it (52.2%, about 3.24 million) were households earning up to three minimum wages that spend more than 30% of their income on rent."
+        ],
+        "source": [
+          "Fundação João Pinheiro, via Poder360",
+          "Fundação João Pinheiro, via Poder360"
+        ],
+        "url": "https://www.poder360.com.br/brasil/brasil-teve-deficit-habitacional-de-6-milhoes-de-domicilios-em-2022/",
+        "limit": [
+          "Números nacionais; cada cidade precisa dos seus.",
+          "National figures; each city needs its own."
+        ]
+      },
+      {
+        "text": [
+          "O Censo de 2022 contou cerca de 11,4 milhões de casas e apartamentos vagos.",
+          "The 2022 Census counted about 11.4 million vacant houses and flats."
+        ],
+        "source": [
+          "IBGE, Censo 2022, via Agência Pública",
+          "IBGE, 2022 Census, via Agência Pública"
+        ],
+        "url": "https://apublica.org/2023/06/censo-2022-brasil-tem-11-milhoes-de-casas-e-apartamentos-vagos/",
+        "limit": [
+          "Um imóvel vago nem sempre está no lugar ou no estado certo para uma família.",
+          "A vacant home is not always in the right place or condition for a family."
+        ]
+      },
+      {
+        "text": [
+          "Os aluguéis residenciais subiram 9,13% nos 12 meses até setembro de 2026, contra 4,58% da inflação oficial.",
+          "Residential rents rose 9.13% in the 12 months to September 2026, against 4.58% official inflation."
+        ],
+        "source": [
+          "Índice FipeZap, via Diário do Comércio",
+          "FipeZap index, via Diário do Comércio"
+        ],
+        "url": "https://diariodocomercio.com.br/economia/aluguel-sobe-dobro-inflacao-2026/",
+        "limit": [
+          "Mede novos contratos em cidades acompanhadas pelo índice.",
+          "Measures new contracts in the cities the index covers."
+        ]
+      },
+      {
+        "text": [
+          "A Aneel projetou para 2025 um aumento médio de 6,3% nas tarifas de energia, acima da inflação esperada (5,1%).",
+          "Aneel projected an average 6.3% rise in electricity tariffs for 2025, above expected inflation (5.1%)."
+        ],
+        "source": [
+          "Aneel (InfoTARIFA), via Movimento Econômico, 12/08/2025",
+          "Aneel (InfoTARIFA), via Movimento Econômico, 12 August 2025"
+        ],
+        "url": "https://movimentoeconomico.com.br/?p=98604",
+        "limit": [
+          "É uma projeção média; cada distribuidora tem seu reajuste.",
+          "An average projection; each distributor sets its own rise."
+        ]
+      }
+    ],
+    "causes_title": [
+      "Por que a moradia encarece",
+      "Why housing costs rise"
+    ],
+    "causes": [
+      "A moradia fica mais cara quando as obras não acompanham a demanda, quando há mais famílias e menores, e quando construção, juros e energia sobem. Imóveis mantidos como investimento também pesam, e o crescimento da população, inclusive pela migração, aumenta a demanda. A IMOBX trabalha sobre os custos que pode mudar: obra a custo conhecido, um pagamento que leva à compra e contas de energia menores.",
+      "Housing gets dearer when building does not keep up with demand, when there are more and smaller households, and when construction, interest rates and energy rise. Homes held as investments add to it, and population growth, including migration, adds demand. IMOBX works on the costs it can change: building at a known cost, a payment that leads to ownership and lower energy bills."
+    ],
+    "answer_title": [
+      "O que a IMOBX faria",
+      "What IMOBX would do"
+    ],
+    "answer": [
+      [
+        "Transformar o aluguel em compra: parte de cada pagamento mensal conta para a compra da casa.",
+        "Turn rent into a purchase: part of each monthly payment counts towards buying the home."
+      ],
+      [
+        "Construir a custo conhecido, com a construtora dos fundadores e conferência independente.",
+        "Build at a known cost, with the founders’ construction company and independent checks."
+      ],
+      [
+        "Reduzir as despesas da casa, com energia solar onde o local permitir.",
+        "Lower running costs, with solar power where the site allows."
+      ],
+      [
+        "Reinvestir o que sobra em novas casas, para a próxima família.",
+        "Reinvest what is left in new homes, for the next family."
+      ]
+    ],
+    "loop_title": [
+      "Como o dinheiro circula",
+      "How the money circulates"
+    ],
+    "loop": [
+      [
+        "O aluguel entra",
+        "Rent comes in"
+      ],
+      [
+        "Uma parte vai para a compra da família",
+        "A share goes to the family’s purchase"
+      ],
+      [
+        "O restante paga as obrigações e as reservas",
+        "The rest pays obligations and reserves"
+      ],
+      [
+        "O que sobra constrói novas casas",
+        "What is left builds new homes"
+      ],
+      [
+        "Com a compra concluída, a família se torna dona",
+        "When the purchase is complete, the family becomes the owner"
+      ]
+    ],
+    "fleet_title": [
+      "Por que não manter as casas para alugar?",
+      "Why not keep the homes and rent them out?"
+    ],
+    "fleet": [
+      "Casas mantidas para aluguel rendem enquanto pertencem ao dono. No aluguel com compra, a renda de uma casa termina quando a família conclui a compra. Por isso o dinheiro que volta com as compras precisa pagar novas casas. A cooperativa também precisa de uma base que gere renda duradoura, como espaços e serviços compartilhados. Isso ainda não foi testado.",
+      "Homes kept for rent earn income for as long as they are owned. With rent-to-own, the income from a home ends when the family finishes buying it. So the money that comes back through purchases has to pay for new homes. The cooperative also needs a base that earns lasting income, such as shared spaces and services. This has not been tested yet."
+    ],
+    "context_html": "<details class=\"disclosure\"><summary><span data-pt=\"O que são favelas? Um desafio local e mundial\" data-en=\"What are favelas? The local and global context\">O que são favelas? Um desafio local e mundial</span></summary><div class=\"disclosure-body documentary-context\">\n<p data-pt=\"O Censo 2022 registrou cerca de 16,4 milhões de pessoas em favelas e comunidades urbanas no Brasil, 8,1% da população. É um dado nacional de 2022; as condições de cada local precisam ser conhecidas de perto.\" data-en=\"Brazil’s 2022 Census recorded about 16.4 million people in favelas and urban communities, 8.1% of the population. This is a national figure for 2022; conditions in each place need to be understood locally.\">O Censo 2022 registrou cerca de 16,4 milhões de pessoas em favelas e comunidades urbanas no Brasil, 8,1% da população. É um dado nacional de 2022; as condições de cada local precisam ser conhecidas de perto.</p><p><a href=\"https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas\">IBGE · Censo 2022</a></p>\n<p data-pt=\"Moradia inadequada é um problema mundial. Relatórios internacionais usam termos como “slums” e assentamentos informais para acompanhar problemas de habitação, serviços e direito de moradia. No Brasil, “favela” também expressa a história e a identidade de cada comunidade. As palavras não significam sempre a mesma coisa.\" data-en=\"Inadequate housing is a worldwide problem. International reports use terms such as “slums” and informal settlements to track problems with homes, services and housing rights. In Brazil, “favela” also expresses each community’s history and identity. These words do not always mean the same thing.\">Moradia inadequada é um problema mundial. Relatórios internacionais usam termos como “slums” e assentamentos informais para acompanhar problemas de habitação, serviços e direito de moradia. No Brasil, “favela” também expressa a história e a identidade de cada comunidade. As palavras não significam sempre a mesma coisa.</p><p><a href=\"https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15788-favelas-ecomunidades-urbanas.html?edicao=38944&amp;t=o-que-e\">IBGE · Favelas e Comunidades Urbanas</a> · <a href=\"https://unhabitat.org/11-1-adequate-housing\">UN-Habitat · Adequate housing</a></p>\n<p data-pt=\"Um bairro também é o trabalho, o comércio e as redes de apoio das pessoas. Um piloto deve começar perguntando a cada família sobre suas escolhas, sua renda e seu acesso a transporte, escola e serviços.\" data-en=\"A neighbourhood is also people’s work, shops and support networks. A pilot should start by asking each household about its preferences, income and access to transport, schools and services.\">Um bairro também é o trabalho, o comércio e as redes de apoio das pessoas. Um piloto deve começar perguntando a cada família sobre suas escolhas, sua renda e seu acesso a transporte, escola e serviços.</p></div></details>",
+    "context_title": [
+      "Favelas e moradia no Rio",
+      "Favelas and housing in Rio"
+    ],
+    "causes_source": [
+      "Oxford Economics, cidades europeias",
+      "Oxford Economics, European cities"
+    ],
+    "causes_url": "https://www.oxfordeconomics.com/resource/what-is-driving-european-cities-housing-affordability-challenge/",
+    "causes_limit": [
+      "Estudo de cidades europeias; não mede o Rio. A energia está no número da Aneel acima.",
+      "A study of European cities; it does not measure Rio. Energy is covered by the Aneel figure above."
+    ]
+  },
+  "token_page": {
+    "title": [
+      "Para que serve o token da IMOBX?",
+      "What is the IMOBX token for?"
+    ],
+    "lead": [
+      "Nenhum token da IMOBX foi emitido ou vendido. Esta página explica o que os fundadores querem que o token faça, por que ele fica separado da cooperativa de moradia e o que precisa acontecer antes que ele possa existir.",
+      "No IMOBX token has been issued or sold. This page explains what the founders want the token to do, why it is kept apart from the housing cooperative, and what has to happen before it can exist."
+    ],
+    "purpose_title": [
+      "O que o token faria",
+      "What the token would do"
+    ],
+    "purpose": [
+      [
+        [
+          "Financiar o trabalho",
+          "Fund the work"
+        ],
+        [
+          "O dinheiro arrecadado seguiria um orçamento publicado: construir e ampliar casas; a operação, incluindo quem faz o trabalho; a marca e a divulgação.",
+          "Money raised would follow a published budget: building and expanding homes; operations, including the people who do the work; branding and outreach."
+        ]
+      ],
+      [
+        [
+          "Pagar a divulgação",
+          "Pay for promotion"
+        ],
+        [
+          "As taxas de negociação pagariam quem faz um trabalho de divulgação verificado, em vez de pedir que trabalhe de graça.",
+          "Trading fees would pay people for promotion work that has been checked, instead of asking them to work for free."
+        ]
+      ],
+      [
+        [
+          "Construir mais casas",
+          "Build more homes"
+        ],
+        [
+          "Parte das taxas de negociação iria para um fundo usado apenas para construir casas.",
+          "Part of the trading fees would go into a fund that is used only to build homes."
+        ]
+      ]
+    ],
+    "not": [
+      "O token não é uma parte de uma casa. Nenhuma votação, nem mesmo de quem tem tokens, muda sozinha o contrato de moradia de uma família nem o preço de compra combinado.",
+      "The token is not a share of a home. No vote, including a token vote, can on its own change a family’s housing agreement or its agreed purchase price."
+    ],
+    "separate_title": [
+      "Por que o token e a cooperativa ficam separados?",
+      "Why are the token and the cooperative separate?"
+    ],
+    "table_head": [
+      [
+        "Item",
+        "Item"
+      ],
+      [
+        "A cooperativa",
+        "The cooperative"
+      ],
+      [
+        "O token",
+        "The token"
+      ]
+    ],
+    "table": [
+      [
+        [
+          "Quem participa",
+          "Who takes part"
+        ],
+        [
+          "Moradores e membros fundadores",
+          "Residents and founding members"
+        ],
+        [
+          "Quem tem o token",
+          "Whoever holds the token"
+        ]
+      ],
+      [
+        [
+          "O que guarda",
+          "What it holds"
+        ],
+        [
+          "As casas, o fundo para novas casas e as reservas",
+          "The homes, the fund for new homes and the reserves"
+        ],
+        [
+          "Sua negociação em uma corretora descentralizada, ainda não escolhida, e as taxas dessas negociações",
+          "Its trading on a decentralised exchange, not yet chosen, and the fees from that trading"
+        ]
+      ],
+      [
+        [
+          "Como o dinheiro circula",
+          "How money moves"
+        ],
+        [
+          "As famílias pagam em reais, por Pix ou transferência, a uma entidade jurídica. Nenhuma família precisa de criptomoedas.",
+          "Families pay in reais, by Pix or bank transfer, to a legal entity. No family needs crypto."
+        ],
+        [
+          "As taxas ficam com um conselho de várias assinaturas, nunca com uma só pessoa.",
+          "Fees are held by a council of several signers, never by one person."
+        ]
+      ],
+      [
+        [
+          "O que decide",
+          "What it decides"
+        ],
+        [
+          "Espaços comuns, reparos, representantes e novas casas",
+          "Shared spaces, repairs, representatives and new homes"
+        ],
+        [
+          "Só o que suas próprias regras permitem; nunca o acordo ou o preço de uma família",
+          "Only what its own rules allow; never a family’s agreement or price"
+        ]
+      ]
+    ],
+    "reasons_title": [
+      "As razões dos fundadores",
+      "The founders’ reasons"
+    ],
+    "reasons": [
+      [
+        "Os pagamentos de uma família e o retorno de um investidor puxam para lados diferentes. Investidores donos de partes das casas precisariam de aluguéis e preços mais altos; as famílias precisam de um preço fixo. Manter os dois separados protege a família.",
+        "A family’s payments and an investor’s return pull in different directions. Investors who owned parts of the homes would need higher rents and prices; families need a fixed price. Keeping the two apart protects the family."
+      ],
+      [
+        "As famílias ficam fora das criptomoedas. Os pagamentos delas são pagamentos comuns em reais.",
+        "Families stay outside crypto. Their payments are ordinary payments in reais."
+      ],
+      [
+        "Leis diferentes se aplicam. Um token oferecido como investimento pode cair sob a CVM, que regula o mercado de valores do Brasil; uma cooperativa de moradia e os acordos de seus membros seguem as leis de moradia e de cooperativas. A separação deixa as casas das famílias fora dessa questão.",
+        "Different laws apply. A token offered as an investment can fall under the CVM, Brazil’s securities regulator; a housing cooperative and its members’ agreements follow housing and cooperative law. Keeping them apart keeps families’ homes out of that question."
+      ]
+    ],
+    "when_title": [
+      "Quando o token poderia ser lançado?",
+      "When could the token launch?"
+    ],
+    "when": [
+      [
+        [
+          "Preparar",
+          "Prepare"
+        ],
+        [
+          "A forma jurídica da cooperativa, um orçamento de obra em reais e o acordo com as famílias.",
+          "The cooperative’s legal form, a building budget in reais and the agreement with families."
+        ]
+      ],
+      [
+        [
+          "Provar",
+          "Prove"
+        ],
+        [
+          "O piloto proposto: uma família paga pela própria casa, com as contas em público.",
+          "The proposed pilot: a family pays towards its home, with the accounts in public."
+        ]
+      ],
+      [
+        [
+          "Lançar",
+          "Launch"
+        ],
+        [
+          "Só depois que o piloto mostrar resultados e se o mercado tiver negociação suficiente.",
+          "Only after the pilot has shown results, and if the market has enough trading."
+        ]
+      ],
+      [
+        [
+          "Crescer",
+          "Build up"
+        ],
+        [
+          "As taxas pagariam primeiro a operação do projeto e novas casas. Qualquer pagamento a quem tem o token viria depois, só com dinheiro já recebido e só quando a renda das casas cobrisse os custos de operação.",
+          "Fees would first pay for running the project and for new homes. Any payment to holders would come later, only from money already collected, and only once the homes’ income covered the running costs."
+        ]
+      ]
+    ],
+    "legal": [
+      "O que o token daria a quem o adquirisse ainda não foi definido. Pagar para ter o token de volta paga quem vende; queimar tokens não paga automaticamente os demais. Um advogado vai conferir isso com as regras da CVM antes de qualquer venda. Se não houver um caminho legal, a IMOBX segue sem token.",
+      "What a buyer would receive has not been decided. A buyback pays sellers; burning tokens does not automatically pay the others. A lawyer will check it against the CVM’s rules before anything is sold. If there is no lawful way, IMOBX goes ahead without a token."
+    ],
+    "never_title": [
+      "O que não faremos",
+      "What we will not do"
+    ],
+    "never": [
+      [
+        "Fazer a obra depender do volume de negociação.",
+        "Make building depend on trading volume."
+      ],
+      [
+        "Usar os pagamentos das famílias para pagar quem tem o token.",
+        "Use families’ payments to pay token holders."
+      ],
+      [
+        "Pagar quem tem o token com dinheiro de novos compradores.",
+        "Pay holders with money from new buyers."
+      ],
+      [
+        "Prometer um preço, um retorno ou uma data.",
+        "Promise a price, a return or a date."
+      ],
+      [
+        "Vender antes que a cooperativa exista e seus fundadores aprovem as regras.",
+        "Sell before the cooperative exists and its founders agree its rules."
+      ]
+    ],
+    "accounts": [
+      "As contas do dinheiro arrecadado e do fundo de novas casas seriam publicadas.",
+      "The accounts for the money raised and for the fund for new homes would be published."
+    ],
+    "more_title": [
+      "Para ler mais",
+      "Read more"
+    ],
+    "more": [
+      [
+        [
+          "Financiamento e gasto: o dinheiro e os caminhos em estudo",
+          "Funding and spending: the money and the paths under study"
+        ],
+        "transparency.html#token-options"
+      ],
+      [
+        [
+          "Whitepaper, seção 8: o que um token poderia representar",
+          "Whitepaper, section 8: what a token could represent"
+        ],
+        "whitepaper.html#8-what-a-token-could-represent"
+      ]
+    ],
+    "bridge_yes": [
+      "As taxas de negociação podem ir para o fundo de novas casas.",
+      "Trading fees can flow into the fund for new homes."
+    ],
+    "bridge_no": [
+      "Os pagamentos das famílias nunca vão para quem tem o token.",
+      "Families’ payments never flow to token holders."
     ]
   }
 }

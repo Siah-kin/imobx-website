@@ -314,3 +314,25 @@ section.archive-section>h2{font-size:clamp(26px,3vw,32px)}
 .stage-toggle .less,.roadmap-stage[open] .stage-toggle .more{display:none}
 .roadmap-stage[open] .stage-toggle .less{display:inline}
 .roadmap-stage>summary:focus-visible{outline:3px solid #276578;outline-offset:3px}
+/* Homepage "Read more": the same row of underlined links as the other link rows. */
+.read-more{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:4px 28px}
+.read-more li{min-height:44px;display:flex;align-items:center}
+.partner-line{margin-top:28px}
+/* Homepage: who we are looking for (a definition list, one row per partner). */
+.partner-list{display:grid;grid-template-columns:minmax(10em,14em) 1fr;gap:10px 28px;margin:20px 0}
+.partner-list dt{font-weight:700}.partner-list dd{margin:0;max-width:62ch}
+@media(max-width:700px){.partner-list{grid-template-columns:1fr;gap:2px}.partner-list dd{margin-bottom:12px}}
+.ambition{font-style:normal;border-top:1px solid var(--line);padding-top:12px}
+/* Connected steps: the loop and the phases. Numbers come from the list; the line between boxes is drawn in CSS. */
+.flow{list-style:none;counter-reset:flow;display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:16px;padding:0;margin:20px 0}
+.flow>li{counter-increment:flow;position:relative;border:1px solid var(--line);background:var(--pale);padding:16px 18px 18px}
+.flow>li::before{content:counter(flow);display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#276578;color:#fff;font-weight:700;margin-bottom:10px}
+.flow>li:not(:last-child)::after{content:"";position:absolute;top:30px;right:-17px;width:16px;height:2px;background:#4A90A4}
+.flow strong{display:block;margin-bottom:6px}
+.flow-phases>li::before{display:none}
+@media(max-width:700px){.flow{grid-template-columns:1fr}.flow>li:not(:last-child)::after{top:auto;bottom:-17px;right:auto;left:30px;width:2px;height:16px}}
+
+/* The phases are a plain numbered list: the names carry the order, no boxes. */
+.flow-phases{display:block;margin:16px 0}.flow-phases>li{border:0;background:none;padding:0 0 14px}.flow-phases>li::after{display:none}
+@media(min-width:701px){.why-page .flow{grid-template-columns:repeat(5,1fr)}}
+main>.partner-line{width:min(1200px,90%);margin-left:auto;margin-right:auto}

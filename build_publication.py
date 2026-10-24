@@ -6,7 +6,8 @@ import re
 import xml.etree.ElementTree as ET
 import zipfile
 from urllib.parse import urljoin
-from model_guide import build_guide, redirect_stub, new_faq_location
+from model_guide import build_guide, redirect_stub, new_faq_location, partner_line_html
+from archive_gateway import build_gateway, pages_from_pdf
 from contact_page import build_contact
 from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE, DATE_PT, DATE_EN, LABEL_EN, LABEL_PT
 from copy_review import require_review
@@ -40,7 +41,7 @@ def esc(value):
 
 
 def version_label(item, lang):
-    """'Version 0.7, 21 October 2026'. Items that were not revised on that date show only their version."""
+    """'Version 0.8, 24 October 2026'. Items that were not revised on that date show only their version."""
     word, date = ('Versão', DATE_PT) if lang == 'pt' else ('Version', DATE_EN)
     return f"{word} {item['version']}" + (f', {date}' if item['version'] == VERSION else '')
 
@@ -69,6 +70,7 @@ def site_header(lang='pt-BR', current=''):
         ('transparency.html', 'Financiamento e gastos', 'Funding & spending'),
         ('properties.html', 'Desenhos e fotos', 'Drawings and photos'),
         ('resources.html', 'Documentos', 'Documents'),
+        ('contact.html', 'Participar', 'Take part'),
     ]
     links = ''
     for target, pt, en in items:
@@ -120,19 +122,19 @@ RESOURCE_CATALOG = [
      'description_pt': 'Modelo de moradia, custos, contratos, fluxo de caixa e decisões em aberto.',
      'description_en': 'Housing model, costs, agreements, cash flow and open decisions.',
      'meta_pt': 'Inglês · rascunho de referência', 'meta_en': 'English · reference draft',
-     'links': [('whitepaper.html','Ler','Read'), ('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
+     'archive': True, 'links': [('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
     {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': VERSION,
      'description_pt': 'Apresentação para parceiros, com notas para quem apresenta.',
      'description_en': 'Partner presentation with presenter notes.',
      'meta_pt': '12 slides · inglês · rascunho', 'meta_en': '12 slides · English · draft',
-     'links': [('pitchdeck.html','Ver slides','View slides'), ('pitchdeck.pdf','PDF','PDF'),
+     'archive': True, 'links': [('pitchdeck.pdf','PDF','PDF'),
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes'),
                ('pitchdeck.json','Dados dos slides (JSON)','Slide content (JSON)')]},
     {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': VERSION,
      'description_pt': 'Planos de moradia, participação dos moradores e etapas de desenvolvimento propostas.',
      'description_en': 'Housing plans, resident participation and proposed development stages.',
      'meta_pt': 'Inglês · processo proposto', 'meta_en': 'English · proposed process',
-     'links': [('devsheet.html','Ler','Read'), ('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
+     'archive': True, 'links': [('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
     {'id': 'transparency', 'pt': 'Financiamento e gastos', 'en': 'Funding and spending', 'version': '0.1',
      'description_pt': 'Fontes de financiamento, despesas previstas e como os participantes poderiam conferir as contas.',
      'description_en': 'Funding sources, planned spending and how participants could check the accounts.',
@@ -215,7 +217,6 @@ def resource_section(standalone=False):
         body += f'<span id="title-{key}">' + translated(item['pt'], item['en'], 'a', f'id="resource-{key}" href="{esc(target)}"') + '</span>'
     body += translated('Roteiro e decisões compartilhadas', 'Roadmap and shared decisions', 'a', 'href="roadmap.html"')
     body += translated('Perguntas das famílias', 'Questions families ask', 'a', 'href="rent-to-own.html#questions"')
-    body += translated('Perguntas sobre financiamento, tokens e governança', 'Questions about funding, tokens and governance', 'a', 'href="transparency.html#funding-questions"')
     body += translated('Participar', 'Take part', 'a', 'href="contact.html"') + '</div>'
     body += '<nav class="archive-nav" aria-label="Contexto do projeto" data-aria-pt="Contexto do projeto" data-aria-en="Project background">'
     body += translated('Por que a IMOBX existe', 'Why IMOBX exists', 'a', 'href="index.html#missao"')
@@ -245,21 +246,21 @@ for name in ['index.html', 'properties.html']:
     source, count = re.subn(r'<footer class="footer(?: site-footer)?">.*?</footer>', lambda _: SITE_FOOTER, source, count=1, flags=re.S)
     if count != 1:
         raise ValueError(f'Expected one footer in {name}.')
+    source, count = re.subn(r'<p class="partner-line">.*?</p>',
+                           lambda _: partner_line_html(name, lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)),
+                           source, count=1, flags=re.S)
+    if count != 1:
+        raise ValueError(f'Expected one partner line in {name}.')
     target.write_text(source)
 
 
-home = ROOT / 'index.html'
-home_source, replaced = re.subn(r' <section class="content wrap" id="documentos">.*?(?= <div class="faq"(?: id="faq")?>)',
-                              lambda _: ' ' + resource_section() + '\n', home.read_text(), count=1, flags=re.S)
-if replaced != 1:
-    raise ValueError('Expected one home resource section before the FAQ.')
-home.write_text(home_source)
 language_controls = ''  # The shared header contains the single language control.
 build_guide(ROOT, page, translated, esc, language_controls)
 build_reference(ROOT, page, translated, esc)
 build_contact(ROOT, page, translated, esc, VERSION)
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
-    '<main id="main">' + language_controls + resource_section(standalone=True) + '</section></main>',
+    '<main id="main">' + language_controls + resource_section(standalone=True) + '</section>'
+    + partner_line_html('resources.html', lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)) + '</main>',
     '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
 kit_html = markdown.markdown((ROOT / 'media-kit.md').read_text(), extensions=['tables', 'toc'])
 logo_previews = '''<div class="media-logo-grid"><figure class="media-logo light">
@@ -282,37 +283,21 @@ brand_section = ('<section id="brand-guide"><h2>Brand guide</h2>'
     'IMOBX | Design guidelines', 'Design guidelines', 'media-kit.html#brand-guide', 'Open the current version'))
 
 
-paper_source = (ROOT / 'whitepaper.md').read_text()
-paper_html = markdown.markdown(paper_source, extensions=['tables', 'toc'])
-(ROOT / 'whitepaper.html').write_text(page('IMOBX | Project paper v' + VERSION,
-    '<main class="paper"><p><a href="whitepaper.pdf" download>Download PDF</a> · '
-    '<a href="whitepaper.md" download>Editable text</a> · <a href="reference.html">Project reference · PT/EN</a></p>' + paper_html + '</main>', version=VERSION))
+# The whitepaper, pilot guide and deck are English downloads. Their web addresses are download pages that keep every
+# old section link; a full build rebuilds the documents and points each section at its page in the new PDF.
+paper_html = markdown.markdown((ROOT / 'whitepaper.md').read_text(), extensions=['tables', 'toc'])
 devsheet_html = markdown.markdown((ROOT / 'devsheet.md').read_text(), extensions=['tables', 'toc'])
-(ROOT / 'devsheet.html').write_text(page('IMOBX | Pilot and building guide v' + VERSION,
-    f'<main class="paper"><p><strong>Pilot and building guide · {LABEL_EN}</strong><br>'
-    '<a href="devsheet.pdf" download>Download PDF</a> · '
-    '<a href="devsheet.md" download>Editable text</a> · <a href="reference.html">Project reference · PT/EN</a></p>' + devsheet_html + '</main>', version=VERSION))
-
 deck = json.loads((ROOT / 'pitchdeck.json').read_text())
-slides_html = []
 deck_md = [f"# {deck['title']}", deck['subtitle'], f"**{deck['status']}**", '']
 for number, item in enumerate(deck['slides'], 1):
-    slides_html.append(f'''<section class="slide" aria-labelledby="slide-{number}">
-<h1 id="slide-{number}">{esc(item['title'])}</h1>
-<p class="lead">{esc(item['lead'])}</p><ul>{''.join('<li>'+esc(x)+'</li>' for x in item['bullets'])}</ul>
-{''.join('<p class="source-note">Source: <a href="'+esc(x['url'])+'">'+esc(x['label'])+'</a>. '+esc(x['effect'])+'</p>' for x in item.get('sources', []))}
-<div class="slide-foot"><span>IMOBX / PARTNER DISCUSSION DRAFT</span><span>{number:02d} / {len(deck['slides']):02d}</span></div>
-<aside class="notes"><strong>Presenter notes</strong><p>{esc(item['notes'])}</p></aside></section>''')
     deck_md += [f"## {number}. {item['title']}", item['lead'], '', *('- '+b for b in item['bullets']), '',
                 *(f"Source: [{x['label']}]({x['url']}). {x['effect']}" for x in item.get('sources', [])),
                 '**Presenter notes:** '+item['notes'], '']
-body = '''<main class="deck"><div class="deck-controls" hidden>
-<button type="button" data-previous aria-label="Previous slide"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Previous</button><output data-counter aria-live="polite"></output>
-<button type="button" data-next aria-label="Next slide">Next<svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><button type="button" data-notes aria-pressed="false">Presenter notes</button>
-<a href="pitchdeck.pptx" download>PowerPoint</a><a href="pitchdeck.pdf" download>PDF</a></div>'''
-body += ''.join(slides_html) + '</main>'
-(ROOT / 'pitchdeck.html').write_text(page('IMOBX | Partner deck v' + VERSION, body, '<script src="assets/deck.js" defer></script>', version=VERSION))
 (ROOT / 'pitchdeck.md').write_text('\n\n'.join(deck_md) + '\n')
+catalog = {item['id']: item for item in RESOURCE_CATALOG}
+GATEWAYS = [('whitepaper', 'IMOBX | Whitepaper'), ('devsheet', 'IMOBX | Pilot and building guide'), ('pitchdeck', 'IMOBX | Pitch deck')]
+for doc, doc_title in GATEWAYS:
+    build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title)
 
 if PREVIEW_ONLY:
     print('Rendered local HTML for editorial and browser review. Existing exports are unchanged.')
@@ -479,6 +464,9 @@ for number, item in enumerate(deck['slides'],1):
     pdf.showPage()
 presentation.save(ROOT / 'pitchdeck.pptx')
 pdf.save()
+# Each old section address now points at its page in the rebuilt PDF.
+for doc, doc_title in GATEWAYS:
+    build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title, pages_from_pdf(ROOT, doc))
 write_manifest(ROOT)
 
 

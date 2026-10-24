@@ -36,6 +36,21 @@ def redirect_stub(title, heading, target, open_label, per_question=None):
             f'<p><a id="moved-link" href="{target}">Abrir a versão atual / {open_label}</a></p></main>{script}</body></html>')
 
 
+PARTNER_LINKS = [('transparency.html', ('de onde viria o dinheiro', 'where the money would come from')),
+                 ('reference.html', ('quem responde pelo projeto', 'who is responsible')),
+                 ('resources.html', ('documentos para baixar', 'documents to download'))]
+
+
+def partner_line_html(here, text):
+    """'For partners and funders: <link>, <link> and <link>.' in both languages, skipping the current page."""
+    links = [text(label, 'a', f'href="{target}"') for target, label in PARTNER_LINKS if target != here]
+    joined = links[0] if len(links) == 1 else ''.join(
+        link + (text((', ', ', '), 'span') if i < len(links) - 2 else text((' e ', ' and '), 'span') if i == len(links) - 2 else '')
+        for i, link in enumerate(links))
+    return ('<p class="partner-line">' + text(('Para parceiros e financiadores: ', 'For partners and funders: '), 'span')
+            + joined + '.</p>')
+
+
 def build_guide(root, page, tr, esc, language_controls):
     guide = json.loads((root / 'model-guide.json').read_text())
 
@@ -171,7 +186,7 @@ def build_guide(root, page, tr, esc, language_controls):
             pending.append(sentence)
             if index in by_sentence or index == len(sentences(pair)) - 1:
                 out += text((' '.join(x[0] for x in pending), ' '.join(x[1] for x in pending)))
-                out += ''.join(source_line(key) for key in by_sentence.get(index, []))
+                out += ''.join(short_source(key) for key in by_sentence.get(index, []))
                 pending = []
         return out
 
@@ -179,6 +194,22 @@ def build_guide(root, page, tr, esc, language_controls):
         source = guide['sources'][key]
         return ('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span')
                 + f'<a href="{esc(source["url"])}">{label_text(key)}</a>. ' + text(source_effect[key], 'span') + '</p>')
+
+    def source_links(*keys):
+        """'Sources: <label> · <label>.' when the paragraph above already states what they do not show."""
+        return ('<p class="source-note">' + text(('Fontes: ', 'Sources: '), 'span')
+                + ' · '.join(f'<a href="{esc(guide["sources"][k]["url"])}">{label_text(k)}</a>' for k in keys) + '.</p>')
+
+    def full_source(key):
+        """A source line with both what it says and what it does not establish."""
+        return ('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span')
+                + f'<a href="{esc(guide["sources"][key]["url"])}">{label_text(key)}</a>. ' + text(source_effect[key], 'span') + '</p>')
+
+    def short_source(*keys):
+        """'Source: <label>. <what it does not establish>' for one or more sources, one line each."""
+        return ''.join('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span')
+                       + f'<a href="{esc(guide["sources"][k]["url"])}">{label_text(k)}</a>. '
+                       + text(pick(source_effect[k], [-1]), 'span') + '</p>' for k in keys)
 
     def label_text(key):
         if key in own_source_labels:
@@ -233,25 +264,26 @@ def build_guide(root, page, tr, esc, language_controls):
                                               f'data-aria-pt="{esc(named[0])}" data-aria-en="{esc(named[1])}"')
         return body + '</details>'
 
-    def faq(home=True):
-        """The homepage subset. Its anchors are home-faq-<id>: each faq-<id> anchor exists once, on the page that holds the full item."""
-        body = '<div class="faq" id="faq">' + text(
-            ('Perguntas sobre o projeto', 'Questions about the project'), 'h2')
-        body += text(('Como o projeto funcionaria e o que ainda falta decidir.', 'How the project would work and what remains undecided.'))
-        body += ''.join(faq_item(x, 'home-faq-') for x in guide['questions'] if x['home'])
-        body += text(('Mais perguntas das famílias', 'More questions families ask'),
-                     'a', 'class="guide-more" href="rent-to-own.html#questions"')
-        return body + '</div>'
-
     family_questions = [x for x in guide['questions'] if x['id'] in HOUSEHOLD_FAQ]
     funding_questions = [x for x in guide['questions'] if x['id'] not in HOUSEHOLD_FAQ]
 
+    def risk_row(index):
+        reference = json.loads((root / 'project-reference.json').read_text())
+        return next(x for x in reference['sections'] if x['id'] == 'risks')['rows'][index]
+
+    def participation_decisions_title():
+        return guide['participation']['decision_title']
+
+    def guide_question(ident):
+        return next(x for x in guide['questions'] if x['id'] == ident)
+
     def family_faq_section():
-        body = '<section class="faq" id="questions">' + text(('Perguntas das famílias', 'Questions families ask'), 'h2')
-        body += ''.join(faq_item(x, 'faq-', 'rent-to-own.html', short=True) for x in family_questions)
-        body += text(('Mais perguntas, sobre financiamento e governança', 'More questions, about funding and governance'),
-                     'a', 'class="guide-more" href="transparency.html#funding-questions"')
-        return body + '</section>'
+        """An index of the families' questions; each answer lives in its section above."""
+        body = '<section id="questions">' + text(('Perguntas das famílias', 'Questions families ask'), 'h2') + '<ul class="question-index">'
+        for ident, target in [('home-purchase', 'payments'), ('home-repairs', 'repairs'), ('home-decisions', 'decisions'),
+                              ('tenant-access', 'decisions'), ('home-exit', 'hardship'), ('home-participate', 'next')]:
+            body += '<li>' + text(guide_question(ident)['q'], 'a', f'href="#{target}"') + '</li>'
+        return body + '</ul></section>'
 
     def funding_faq_section():
         body = '<section class="faq" id="funding-questions">' + text(
@@ -266,69 +298,84 @@ def build_guide(root, page, tr, esc, language_controls):
         return body + '</section>'
 
     journey = guide['resident_journey']
+    def pick(pair, keep):
+        """Only the listed sentences of a PT/EN pair, in order."""
+        chosen = [sentences(pair)[i] for i in keep]
+        return (' '.join(x[0] for x in chosen), ' '.join(x[1] for x in chosen))
+
+    def partner_line(here=''):
+        """The one line on each page that sends partners and funders to their pages (never to the page itself)."""
+        return partner_line_html(here, text)
+
+    # The family page is the home of the household's own questions: payments, repairs, decisions, hardship.
+    # Old question anchors (faq-<id>) sit on the section that now answers them.
+    anchors = {'payments': ['faq-home-purchase'], 'repairs': ['faq-home-repairs'],
+               'decisions': ['faq-home-decisions', 'faq-tenant-access'],
+               'hardship': ['faq-home-exit'], 'next': ['faq-home-participate']}
     resident = '<main class="paper guide-paper resident-page" id="main">'
     resident += text(journey['title'], 'h1') + text(journey['intro'], 'p', 'class="guide-lead"')
-    resident += '<aside class="guide-status">' + text(journey['status']) + '</aside>'
+    resident += '<aside class="guide-status">' + text(journey['status'])
+    # The real homes being prepared, as illustration (owner, 24 Oct: general, illustrated with the properties involved).
+    resident += '<p>' + text(('Os imóveis em estudo e a situação de cada um: ', 'The homes being considered, and where each one stands: '), 'span')
+    resident += text(('Roteiro, três casos', 'Roadmap, three cases'), 'a', 'href="roadmap.html#cases"') + '.</p></aside>'
     resident += '<nav class="guide-jump" aria-label="Sections">'
     for ident, label in [('payments', ('Pagamentos e compra', 'Payments and purchase')),
                          ('repairs', ('Reparos', 'Repairs')), ('decisions', ('Decisões', 'Decisions')),
                          ('hardship', ('Dificuldade de pagamento e saída', 'Hardship and leaving')),
-                         ('funding', ('Financiamento', 'Funding')), ('property', ('Imóveis e parceiros', 'Property and partners')),
                          ('questions', ('Perguntas', 'Questions'))]:
         resident += text(label, 'a', f'href="#{ident}"')
-    resident += '</nav><section id="payments">' + text(journey['steps_title'], 'h2') + '<ol>'
+    resident += '</nav><section id="payments">' + ''.join(f'<span id="{a}"></span>' for a in anchors['payments'])
+    resident += text(journey['steps_title'], 'h2') + '<ol>'
     for step in journey['steps']:
         resident += '<li>' + text(step['title'], 'h3') + text(step['body']) + '</li>'
     resident += '</ol>' + text(journey['payments_title'], 'h3')
-    resident += ''.join(text(pair) for pair in journey['payments'])
-    resident += text(('Veja os dois orçamentos de construção', 'Read the two construction budgets'),
-                     'a', 'href="index.html#custos"') + '</section>'
-    for ident in ('repairs', 'decisions', 'hardship', 'funding', 'property', 'next'):
-        resident += f'<section id="{ident}">' + text(journey[ident + '_title'], 'h2')
-        resident += ''.join(text(pair) for pair in journey[ident])
+    # The status line above already says no price or payment is set; keep only what the payment is.
+    resident += text(pick(journey['payments'][0], [0, 1])) + text(pick(journey['payments'][1], [1]))
+    resident += text(('Os orçamentos de construção não são preço nem pagamento mensal; veja os dois orçamentos',
+                      'The construction budgets are not a price or a monthly payment; read the two budgets'),
+                     'a', 'href="transparency.html#budgets"') + '</section>'
+    for ident in ('repairs', 'decisions', 'hardship', 'next'):
+        resident += f'<section id="{ident}">' + ''.join(f'<span id="{a}"></span>' for a in anchors[ident])
+        resident += text(journey[ident + '_title'], 'h2')
+        paragraphs = journey[ident][:2] if ident == 'decisions' else journey[ident]
+        resident += ''.join(text(pair) for pair in paragraphs)
+        if ident == 'decisions':
+            # The household's own question about money: no investment, payments in reais.
+            resident += text(guide_question('tenant-access')['q'], 'h3') + text(guide_question('tenant-access')['a'][0])
         target, label = {
             'repairs': ('roadmap.html#governance', ('Quem cuida do trabalho e como questionar uma decisão', 'Who handles the work and how to question a decision')),
-            'decisions': ('roadmap.html#participation', ('Como os papéis se relacionam', 'How participant roles fit together')),
-            'hardship': ('reference.html#status', ('Situação atual e documentos disponíveis', 'Current status and available documents')),
-            'funding': ('transparency.html#faq-funding', ('De onde viria o dinheiro para as casas', 'Where the money for the homes would come from')),
-            'property': ('contact.html?role=property', ('Preparar uma apresentação do imóvel', 'Prepare a property introduction')),
+            'decisions': ('roadmap.html#governance', ('Quem decide o quê', 'Who decides what')),
+            'hardship': ('roadmap.html#open-terms', ('Tudo o que está em aberto', 'Everything still open')),
             'next': ('contact.html?role=resident', ('Preparar uma conversa sobre moradia', 'Prepare a housing conversation')),
         }[ident]
         resident += text(label, 'a', f'href="{target}"') + '</section>'
-    resident += family_faq_section() + '</main>'
+    resident += family_faq_section() + '<span id="funding"></span><span id="property"></span>' + partner_line('rent-to-own.html') + '</main>'
     (root / 'rent-to-own.html').write_text(page('IMOBX | Renting and buying a home', resident,
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | Aluguel e compra da casa'))
-
-    summary = '<section class="content wrap scale-section" id="etapas"><span id="dinheiro"></span>'
-    summary += text(('Etapas do projeto', 'Project stages'), 'h2')
-    summary += text(('O caminho da IMOBX reúne moradia com opção de compra, participação dos moradores e contas transparentes. A estrutura jurídica, as regras de participação e as ferramentas digitais estão em desenvolvimento.', 'IMOBX’s roadmap brings together rent-to-own housing, resident participation and transparent accounts. The legal structure, participation rules and digital tools are under development.'))
-    for label, ordered, members in grouped_stages():
-        summary += text(label, 'p', 'class="stage-group"')
-        summary += '<ol class="roadmap-overview">' if ordered else '<ul class="roadmap-overview">'
-        for number, stage in members:
-            summary += '<li><div>'
-            summary += text(numbered(number, stage['title']) if number else stage['title'], 'h3') + text(stage['summary'], 'p')
-            summary += '</div></li>'
-        summary += '</ol>' if ordered else '</ul>'
-    summary += text(('Conheça as etapas do projeto',
-                              'Explore the project roadmap'),
-                             'a', 'class="button" href="roadmap.html"') + '</section>'
 
     roadmap = '<main class="paper guide-paper" id="main">' + language_controls
     roadmap += text(('Roteiro IMOBX', 'IMOBX roadmap'), 'h1')
     roadmap += text(('As etapas do projeto, quem participa de cada uma e o que precisa estar pronto.', 'The project stages, who takes part in each and what needs to be ready.'), 'p', 'class="guide-lead"')
-    roadmap += text(('O plano reúne as primeiras moradias no Rio, as decisões dos moradores e o financiamento. A preparação jurídica, as conversas sobre como os moradores decidem os assuntos comuns e os testes digitais podem acontecer ao mesmo tempo. As datas de obra dependem do projeto escolhido, dos recursos e das permissões.', 'The plan brings together the first homes in Rio, resident decisions and funding. Legal work, discussions about how residents decide shared matters, and digital tests can happen at the same time. Construction dates depend on the chosen project, funding and permissions.'))
     roadmap += '<div class="guide-status">' + text(('Onde estamos', 'Where we stand'), 'h2')
-    roadmap += text(('O projeto está em preparação. O site, os documentos, os desenhos e o orçamento de Rafael estão publicados. A forma jurídica está em definição; ainda falta demonstrar o funcionamento das moradias e o uso de blockchain para guardar e pagar recursos do projeto. O modelo do token permanece em pesquisa.', 'The project is in preparation. The website, documents, drawings and Rafael’s budget are published. The legal form is being defined. Running the homes and using blockchain to hold and pay project funds still need to be demonstrated. The token model remains under research.')) + '</div>'
+    roadmap += text(('O projeto está em preparação. A forma jurídica está em definição; ainda falta demonstrar o funcionamento das moradias e o uso de blockchain para guardar e pagar recursos do projeto. O modelo do token permanece em pesquisa.', 'The project is in preparation. The legal form is being defined. Running the homes and using blockchain to hold and pay project funds still need to be demonstrated. The token model remains under research.')) + '</div>'
     roadmap += '<nav class="guide-jump" aria-label="Sections">' + text(('Etapas', 'Stages'), 'a', 'href="#stages"')
     roadmap += text(('Quem participa', 'Who takes part'), 'a', 'href="#participation"')
-    roadmap += text(('Decisões compartilhadas', 'Shared decisions'), 'a', 'href="#governance"')
-    roadmap += text(('Financiamento e gastos', 'Funding and spending'), 'a', 'href="transparency.html"')
-    roadmap += text(('Referência e fontes', 'Reference and sources'), 'a', 'href="reference.html"')
-    roadmap += text(('Relatórios do projeto', 'Project reports'), 'a', 'href="#ico-comparison"')
-    roadmap += text(('Perguntas', 'Questions'), 'a', 'href="transparency.html#funding-questions"') + '</nav>'
+    roadmap += text(('Quem decide o quê', 'Who decides what'), 'a', 'href="#governance"')
+    roadmap += text(('Em aberto', 'Open terms'), 'a', 'href="#open-terms"') + '</nav>'
     roadmap += '<section id="stages">' + text(('Etapas de desenvolvimento', 'Development stages'), 'h2')
-    roadmap += text(('Use “Mais informações” em cada etapa para ver os prazos, o trabalho previsto, o que precisa estar pronto e o que impede o avanço.', 'Use “More information” on a stage to see its timing, planned work, what needs to be ready and what stops it.'))
+    # Only the details a stage's summary does not already say. Who does the work is in the summary;
+    # what people could follow is on the funding page's reporting section.
+    stage_detail = {
+        'foundation': {'schedule': [1], 'work': [0, 1]},
+        'cash-and-charter': {'gate': [0, 1], 'pause': [0]},
+        'funded-pilot': {'schedule': [1], 'work': [0], 'gate': [1]},
+        'digital-trial': {'work': [0], 'gate': [1], 'pause': [0]},
+        'token-decision': {'pause': [0]},
+        'replication': {'work': [0, 1], 'gate': [1], 'pause': [0]},
+        'owner-platform': {'work': [0, 1, 2]},
+    }
+    detail_labels = [(('Quando', 'When'), 'schedule'), (('Trabalho', 'Work'), 'work'),
+                     (('Antes de avançar', 'Before it moves on'), 'gate'), (('O que impediria', 'What would stop it'), 'pause')]
     for label, ordered, members in grouped_stages():
       roadmap += text(label, 'p', 'class="stage-group"')
       for number, stage in members:
@@ -338,139 +385,135 @@ def build_guide(root, page, tr, esc, language_controls):
         roadmap += '<span class="stage-needs">' + text(('Precisa de: ', 'Needs: '), 'strong') + text(stage['overview_needs'], 'span') + '</span>'
         # A quiet link-styled cue; the whole summary row is the control and the browser keeps it keyboard-operable.
         roadmap += '<span class="stage-toggle">' + text(('Mais informações', 'More information'), 'span', 'class="more"') + text(('Menos informações', 'Less information'), 'span', 'class="less"') + '</span></summary><dl>'
-        for label, key in [(('Quem faria o trabalho', 'Who would do the work'), 'responsible'),
-                           (('Quando poderia acontecer', 'When it could happen'), 'schedule'),
-                           (('O trabalho previsto', 'The planned work'), 'work'),
-                           (('O que precisa estar pronto', 'What needs to be ready'), 'gate'),
-                           (('O que impediria esta etapa', 'What would stop this stage'), 'pause'),
-                           (('O que as pessoas poderiam acompanhar', 'What people could follow'), 'web')]:
-            roadmap += text(label, 'dt') + text(stage[key], 'dd')
+        for label, key in detail_labels:
+            if key in stage_detail[stage['id']]:
+                body = pick(stage[key], stage_detail[stage['id']][key])
+                if stage['id'] == 'replication' and key == 'gate':
+                    body = tuple(f'{a} {b}' for a, b in zip(body, pick(guide_question('scale')['a'][1], [2])))
+                roadmap += text(label, 'dt') + text(body, 'dd')
         roadmap += '</dl></details>'
     roadmap += '</section>'
 
+    cases = guide['cases']
+    roadmap += '<section id="cases">' + text(cases['title'], 'h2') + text(cases['intro'])
+    roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in cases['headings'])
+    roadmap += '</tr></thead><tbody>' + ''.join('<tr>' + text(r[0], 'th', 'scope="row"') + text(r[1], 'td') + text(r[2], 'td') + '</tr>'
+                                              for r in cases['rows']) + '</tbody></table></div></section>'
     participation = guide['participation']
     roadmap += '<section id="participation">' + text(participation['title'], 'h2')
-    roadmap += text(participation['intro'])
-    roadmap += ''.join(text(p) for p in participation['scenario'])
-    roadmap += text(participation['roles_title'], 'h3')
-    for role in participation['roles']:
-        roadmap += '<details class="participant-role">' + text(role['who'], 'summary')
-        for label, key in zip(participation['headings'][1:], ['need', 'decision']):
-            roadmap += text(label, 'h4') + text(role[key])
-        roadmap += '</details>'
-    for title, key in [('rights_title', 'rights'), ('token_title', 'token'), ('decision_title', 'decisions')]:
-        roadmap += text(participation[title], 'h3')
-        roadmap += '<ul>' + ''.join(text(p, 'li') for p in participation[key]) + '</ul>'
+    # One table instead of eight fold-outs with the same two headings repeated.
+    roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in participation['headings'])
+    roadmap += '</tr></thead><tbody>' + ''.join(f'<tr id="role-{role["id"]}">' + text(role['who'], 'th', 'scope="row"') + text(role['need'], 'td')
+                                              + text(role['decision'], 'td') + '</tr>' for role in participation['roles'])
+    roadmap += '</tbody></table></div>'
     roadmap += text(('Veja como isso funcionaria para uma família: pagamentos, reparos e decisões',
-                     'See how this would work for a household: payments, repairs and decisions'),
-                    'a', 'href="rent-to-own.html"')
-    roadmap += source_notes(['ica', 'token-study', 'cvm'])
-    roadmap += text(('Essas fontes orientam a proposta. Nenhuma delas revisou ou endossou a IMOBX.',
-                     'These sources inform the proposal. None of them has reviewed or endorsed IMOBX.'), 'p', 'class="source-note"') + '</section>'
-
-    # Keep old shared anchors usable while linking the single detailed reading page.
-    roadmap += '<section id="settlement"><span id="ramp-options"></span>' + text(
-        ('Financiamento e gastos', 'Funding and spending'), 'h2')
-    roadmap += text(('Veja o fluxo de caixa proposto, as despesas previstas e o que conferir antes de usar pagamentos na blockchain.', 'See the proposed cash flow, planned spending and checks needed before using blockchain payments.'))
-    roadmap += text(('Ver fluxos, fontes e decisões', 'View flows, sources and decisions'),
-                    'a', 'class="button" href="transparency.html"') + '</section>'
-
-    # These diagrams describe proposed money/contract paths, not a payment API.
-    settlement = guide['settlement']
-    settlement_html = ''
-    settlement_html += '<section id="settlement">' + text(settlement['title'], 'h2')
-    settlement_html += text(settlement['intro'])
-    settlement_html += '<div class="settlement-history">' + text(settlement['historical_title'], 'h3')
-    settlement_html += text(settlement['historical_route'], 'p', 'class="settlement-chain"')
-    settlement_html += text(settlement['historical_note']) + '</div>'
-    for route in settlement['routes']:
-        settlement_html += f'<article class="settlement-route" id="{esc(route["id"])}">' + text(route['title'], 'h3')
-        settlement_html += text(route['intro']) + '<ol class="settlement-steps">'
-        for step in route['steps']:
-            settlement_html += '<li><div>' + text(step['title'], 'strong') + text(step['body']) + '</div></li>'
-        settlement_html += '</ol>' + text(route['note'], 'p', 'class="fine"') + '</article>'
-    settlement_html += text(settlement['relationships_title'], 'h3')
-    settlement_html += '<div class="settlement-relationships">'
-    for relationship in settlement['relationships']:
-        settlement_html += '<article>' + text(relationship['title'], 'h3') + text(relationship['body']) + '</article>'
-    settlement_html += '</div>' + cited_paragraph(settlement['registration'], {0: ['cnpj'], 2: ['title']})
-    settlement_html += cited_paragraph(settlement['network_note'], {0: ['bcb']})
-    research = settlement['provider_research']
-    settlement_html += '<section id="ramp-options">' + text(research['title'], 'h3')
-    settlement_html += text(research['conclusion'])
-    settlement_html += '<ul>' + ''.join(text(p, 'li') for p in research['acceptance']) + '</ul>'
-    settlement_html += text(research['status'], 'p', 'class="fine"') + '</section>'
-    settlement_html += text(settlement['evidence_title'], 'h3')
-    settlement_html += '<ul>' + ''.join(text(x, 'li') for x in settlement['evidence']) + '</ul>'
-    settlement_html += cited_paragraph(settlement['limits'], {0: ['cash'], 1: ['nonprofit']}) + '</section>'
+                     'See how this would work for a household: payments, repairs and decisions'), 'a', 'href="rent-to-own.html"')
+    roadmap += short_source('ica') + '</section>'
 
     public = guide['transparency']
+    Q = {item['id']: item for item in guide['questions']}
+    ans = lambda ident, i, keep=None: Q[ident]['a'][i] if keep is None else pick(Q[ident]['a'][i], keep)
+    spans = lambda *ids: ''.join(f'<span id="{i}"></span>' for i in ids)
+
+    # The funding page is the home of money: budgets, sources of money, the token, the payment route,
+    # the legal limits and reporting. Household, governance and people sections live on their own pages.
     transparency = '<main class="paper guide-paper transparency-page" id="main">' + language_controls
-    transparency += text(public['title'], 'h1') + text(public['lead'], 'p', 'class="guide-lead"')
-    transparency += text(public['intro'])
-    transparency += '<section id="status">' + text(public['status_title'], 'h2')
-    transparency += '<div class="transparency-status">'
-    for item in public['statuses']:
-        transparency += '<article>' + text(item['title'], 'h3') + text(item['body']) + '</article>'
+    transparency += text(public['title'], 'h1')
+    transparency += text(pick(public['intro'], [1]))
+    transparency += text(('O próximo trabalho a financiar é preparar o primeiro projeto: forma jurídica, documentos do imóvel e orçamento em reais.',
+                          'The next work to fund is preparing the first project: the legal form, the property documents and a building budget in reais.'), 'p', 'class="guide-lead"')
+    transparency += '<section id="status">' + text(public['status_title'], 'h2') + '<div class="transparency-status">'
+    for n, item in enumerate(public['statuses']):
+        # The first card's detail is the payment route below; the second's is the provider section.
+        body = '' if n in (0, 1) else text(pick(item['body'], [1]))   # the provider's requirements are listed in their own section below
+        transparency += '<article>' + text(item['title'], 'h3') + body + '</article>'
     transparency += '</div></section><nav class="guide-jump" aria-label="Sections">'
-    for label, target in [(('Participação', 'Participation'), 'community-economy'),
-                          (('Fluxos', 'Flows'), 'settlement'),
-                          (('Serviço de pagamento', 'Payment service'), 'ramp-options'),
-                          (('Próximos passos', 'Next steps'), 'next-steps'),
-                          (('Relatórios', 'Reports'), 'reporting'),
-                          (('Fontes', 'Sources'), 'sources'),
-                          (('Atualizações', 'Updates'), 'updates'),
-                          (('Perguntas', 'Questions'), 'funding-questions')]:
+    for label, target in [(('De onde vem o dinheiro', 'Where money comes from'), 'funding'), (('Orçamentos', 'Budgets'), 'budgets'),
+                          (('Como seria usado', 'How it would be used'), 'money-order'),
+                          (('Forma jurídica', 'Legal form'), 'legal'), (('Relatórios', 'Reports'), 'reporting'),
+                          (('Token', 'Token'), 'token-options'), (('Divulgação', 'Outreach'), 'outreach'),
+                          (('Caminho do dinheiro', 'Money route'), 'settlement'), (('Serviço de pagamento', 'Payment service'), 'ramp-options')]:
         transparency += text(label, 'a', f'href="#{target}"')
     transparency += '</nav>'
-    transparency += '<section id="household-payments">' + text(
-        ('O pagamento da família e a compra da casa', 'The household payment and home purchase'), 'h2')
-    transparency += text(journey['steps'][1]['body']) + text(journey['payments'][0])
-    transparency += text(('Como seriam os pagamentos e a transferência do imóvel',
-                         'How payments and the property transfer would work'),
-                        'a', 'href="rent-to-own.html#payments"') + '</section>'
-    economy = guide['community_economy']
-    transparency += '<section id="community-economy">' + text(economy['title'], 'h2')
-    transparency += text(economy['intro']) + text(economy['status'], 'p', 'class="guide-status"')
-    for topic in economy['topics']:
-        transparency += f'<details class="community-topic" id="{esc(topic["id"])}">' + text(topic['title'], 'summary')
-        transparency += with_sources(topic['id'], topic['body']) + '</details>'
-    transparency += '<span id="thanks-zeal-lets"></span></section>'
-    transparency += settlement_html
-    transparency += '<section id="next-steps">' + text(public['followup_title'], 'h2')
-    transparency += text(public['followup_intro']) + '<dl class="transparency-followups">'
-    for item in public['followups']:
-        transparency += text(item['title'], 'dt') + text(item['body'], 'dd')
-    transparency += '</dl></section>'
-    transparency += '<section id="reporting">' + text(public['reporting_title'], 'h2')
-    transparency += text(public['reporting_intro']) + '<ul>'
-    transparency += ''.join(text(item, 'li') for item in public['reporting']) + '</ul></section>'
-    transparency += '<section id="sources">' + text(public['evidence_title'], 'h2')
-    for item in public['evidence']:
-        transparency += '<article>' + text(item['title'], 'h3') + text(item['body']) + '</article>'
-    transparency += text(public['sources_title'], 'h3') + text(public['sources_intro'])
-    for group in public['source_groups']:
-        transparency += '<details class="transparency-source-group"><summary>' + text(group['title'])
-        transparency += '</summary><ul>'
-        for key in group['keys']:
-            source = guide['sources'][key]
-            transparency += f'<li><a href="{esc(source["url"])}">{label_text(key)}</a></li>'
-        transparency += '</ul></details>'
-    transparency += '</section><section id="updates">' + text(public['changes_title'], 'h2')
-    transparency += '<ol class="transparency-updates">'
-    for change in public['changes']:
-        transparency += '<li><time datetime="' + esc(change['date']) + '">' + esc(change['date']) + '</time>'
-        transparency += text(change['title'], 'h3') + text(change['body']) + '</li>'
-    transparency += '</ol>' + text(public['maintenance']) + '</section>' + funding_faq_section() + '<div class="guide-jump">'
-    transparency += text(('Para desenvolvedores: conteúdo da página (JSON)', 'For developers: page content (JSON)'),
-                         'a', 'href="model-guide.json" download')
-    transparency += text(('Roteiro do projeto', 'Project roadmap'), 'a', 'href="roadmap.html"')
-    transparency += text(('Todos os documentos', 'All documents'), 'a', 'href="resources.html"') + '</div></main>'
+
+    transparency += '<section id="funding">' + spans('faq-funding', 'community-economy', 'household-payments', 'thanks-zeal-lets')
+    transparency += text(Q['funding']['q'], 'h2') + text(ans('funding', 0, [0, 2])) + text(ans('funding', 1, [0]))
+    transparency += short_source('cash') + '</section>'
+
+    transparency += '<section id="budgets">' + spans('faq-cost-basis', 'custos') + guide['budgets_html']
+    transparency += text(ans('cost-basis', 0, [1])) + short_source('sinapi', 'cub', 'cost') + '</section>'
+
+    order = guide['money_order']
+    transparency += '<section id="money-order">' + text(order['title'], 'h2') + text(order['intro'])
+    transparency += '<ol>' + ''.join(text(step, 'li') for step in order['steps']) + '</ol>' + text(order['transfer'])
+    transparency += text(order['kinds_title'], 'h3') + '<div class="guide-table"><table><thead><tr>'
+    transparency += ''.join(text(h, 'th', 'scope="col"') for h in order['headings']) + '</tr></thead><tbody>'
+    transparency += ''.join('<tr>' + text(row[0], 'th', 'scope="row"') + text(row[1], 'td') + text(row[2], 'td') + '</tr>'
+                            for row in order['kinds']) + '</tbody></table></div></section>'
+    settlement = guide['settlement']
+    transparency += '<section id="legal">' + spans('faq-nonprofit') + text(('Registro, imóvel e forma jurídica', 'Registration, property and legal form'), 'h2')
+    transparency += text(settlement['registration']) + source_links('cnpj', 'title')
+    transparency += text(Q['nonprofit']['q'], 'h3') + text(ans('nonprofit', 0)) + text(ans('nonprofit', 1))
+    transparency += short_source('nonprofit') + text(settlement['limits']) + '</section>'
+
+    transparency += '<section id="reporting">' + spans('faq-ico', 'ico-comparison') + text(public['reporting_title'], 'h2')
+    stage_web = {st['id']: st['web'] for st in guide['stages']}
+    transparency += '<ul>' + ''.join(text(item, 'li') for item in public['reporting'])
+    transparency += text(pick(stage_web['funded-pilot'], [1]), 'li') + text(pick(stage_web['digital-trial'], [0]), 'li')
+    transparency += '</ul>' + text(ans('ico', 1, [0])) + '</section>'
+
+    # Research comes after what a funder needs first (critique 23 Oct): a possible token and the payment route.
+    transparency += '<details class="disclosure research-fold"><summary>' + text(('Em estudo: token e pagamentos', 'Under study: the token and payments'), 'span') + '</summary><div class="disclosure-body">'
+    transparency += '<section id="token-options">' + spans('faq-yield', 'funding-questions', 'faq-thanks-zeal-lets', 'faq-euler')
+    transparency += text(Q['yield']['q'], 'h2') + text(guide['token_budget'])
+    transparency += '<p>' + text(('Para que serve o token?', 'What is the token for?'), 'a', 'href="token.html"') + '</p>'
+    transparency += text(ans('yield', 0, [1, 2, 3])) + text(ans('yield', 1, [0, 3]))  # buyback sentence moved to token.html
+    transparency += text(ans('governance', 1)) + short_source('reference-token') + full_source('cvm')
+    transparency += spans('faq-exchanges') + text(Q['exchanges']['q'], 'h3') + text(ans('exchanges', 0)) + text(ans('exchanges', 1))
+    transparency += spans('faq-property', 'faq-rwa') + text(Q['property']['q'], 'h3') + text(ans('property', 0, [0, 1]))
+    transparency += text(ans('property', 1)) + short_source('rights', 'token-study')
+    transparency += text(participation_decisions_title(), 'h3')
+    transparency += '<ul>' + ''.join(text(p, 'li') for p in guide['participation']['decisions']) + '</ul>'
+    transparency += text(risk_row(3)[1]) + '</section>'
+
+    economy = {t['id']: t for t in guide['community_economy']['topics']}
+    transparency += '<section id="outreach">' + spans('campaign-work')
+    transparency += text(economy['campaign-work']['title'], 'h2') + text(pick(economy['campaign-work']['body'][0], [1, 2]))
+    transparency += text(pick(economy['campaign-work']['body'][1], [3])) + '</section>'
+
+    settlement = guide['settlement']
+    transparency += '<section id="settlement">' + spans('faq-on-off-ramp') + text(settlement['title'], 'h2')
+    keep_step = {'rent-onramp': [[0], [0], [1], [0], [1], [1]], 'construction-offramp': [[1], [1], [1], [0], [0]]}
+    for route in settlement['routes']:
+        transparency += f'<article class="settlement-route" id="{esc(route["id"])}">' + text(route['title'], 'h3')
+        transparency += (text(pick(route['intro'], [0])) if route['id'] == 'rent-onramp' else '') + '<ol class="settlement-steps">'
+        for step, keep in zip(route['steps'], keep_step[route['id']]):
+            transparency += '<li><div>' + text(step['title'], 'strong') + text(pick(step['body'], keep)) + '</div></li>'
+        transparency += '</ol>' + (text(route['note']) if route['id'] == 'construction-offramp' else '') + '</article>'
+    transparency += text(pick(settlement['network_note'], [0])) + short_source('bcb')
+    transparency += '<div id="digital-records">' + spans('faq-arc-arctide', 'treasury-demonstration')
+    transparency += text(Q['arc-arctide']['q'], 'h3') + text(guide['definitions']) + text(ans('arc-arctide', 0)) + text(ans('arc-arctide', 1, [0, 1]))
+    transparency += text(ans('arc-arctide', 2)) + source_links('arctide', 'argus') + short_source('digital')
+    transparency += text(settlement['evidence_title'], 'h3') + text(economy['treasury-demonstration']['body'][0])
+    transparency += '<ul>' + ''.join(text(x, 'li') for x in settlement['evidence']) + '</ul></div></section>'
+
+    research = settlement['provider_research']
+    transparency += '<section id="ramp-options">' + text(research['title'], 'h2') + text(pick(research['conclusion'], [1]))
+    transparency += '<ul>' + ''.join(text(p, 'li') for p in research['acceptance']) + '</ul></section></div></details>'
+
+    # Old anchors whose answers now live elsewhere: one line each, pointing to the answer.
+    transparency += '<section id="elsewhere">' + spans('sources', 'updates', 'next-steps')
+    transparency += '<p>' + spans('faq-governance', 'faq-merit', 'faq-dao', 'faq-flock-siah', 'faq-scale', 'community-rights', 'community-tools')
+    transparency += text(('Quem decide, como o trabalho segue e como a IMOBX cresceria: ', 'Who decides, how work moves forward and how IMOBX would grow: '), 'span')
+    transparency += text(('Roteiro, quem decide o quê', 'Roadmap, who decides what'), 'a', 'href="roadmap.html#governance"') + '.</p>'
+    transparency += '<p>' + text(('Fontes, pessoas responsáveis e registro de atualizações: ', 'Sources, responsible people and the update record: '), 'span')
+    transparency += text(('Referência do projeto', 'Project reference'), 'a', 'href="reference.html#sources"') + '.</p></section>'
+    transparency += partner_line('transparency.html') + '</main>'
     (root / 'transparency.html').write_text(page('IMOBX | Funding and spending', transparency,
         '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
 
-    roadmap += '<section id="governance">' + text(('Quem decide o quê?', 'Who decides what?'), 'h2')
-    roadmap += text(('Uma pessoa pode morar numa casa, trabalhar para a IMOBX e investir no projeto. Cada relação tem seus próprios direitos e responsabilidades.', 'One person can live in a home, work for IMOBX and invest in the project. Each relationship has its own rights and responsibilities.'))
+    roadmap += '<section id="governance">' + spans('faq-governance', 'faq-merit', 'faq-dao', 'faq-flock-siah', 'faq-scale')
+    roadmap += text(('Quem decide o quê?', 'Who decides what?'), 'h2')
     headings = [('Decisão', 'Decision'), ('Quem decidiria', 'Who would decide'), ('Limites e conferências', 'Limits and checks')]
     rows = [
         [('Moradia e compra', 'Occupancy and purchase'),
@@ -484,54 +527,104 @@ def build_guide(root, page, tr, esc, language_controls):
          ('A construtora não aprova a própria cobrança. Aprovar o gasto, conferir a entrega e pagar são tarefas com conferências separadas.', 'The builder does not approve its own invoice. Approving spending, checking delivery and paying need separate checks.')],
         [('Investimento e possíveis pagamentos', 'Investment and possible payments'),
          ('Quem investe recebe somente os direitos escritos no seu acordo.', 'Investors receive only the rights written in their agreement.'),
-         ('Comprar tokens não dá controle automático sobre moradores. Os contratos e o uso combinado das doações continuam valendo.', 'Buying tokens does not give automatic control over residents. Agreements and the stated purpose of donations still apply.')],
-        [('Expansão e regras da rede', 'Expansion and network rules'),
-         ('Grupos definidos nas regras da organização, com representantes locais e contas abertas à conferência.', 'Groups defined in the organization’s rules, with local representatives and accounts people can check.'),
-         ('Regras de votação, competências, resolução de conflitos e substituição dos responsáveis previstas nos acordos da organização.', 'Voting requirements, decision powers, dispute resolution and replacement of responsible people set out in the organisation’s agreements.')]
+         ('Comprar tokens não dá controle automático sobre moradores. Os contratos e o uso combinado das doações continuam valendo.', 'Buying tokens does not give automatic control over residents. Agreements and the stated purpose of donations still apply.')]
     ]
     roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in headings)
     roadmap += '</tr></thead><tbody>'
     for row in rows:
         roadmap += '<tr>' + ''.join(text(cell, 'td') for cell in row) + '</tr>'
     roadmap += '</tbody></table></div>'
-    roadmap += text(('A experiência e o trabalho realizado podem orientar a escolha de responsáveis. A proposta combina funções com prazo definido, revisão das decisões e participação de novos moradores, sem vincular a voz dos moradores ao saldo de tokens.', 'Experience and completed work can inform appointments. People would hold roles for an agreed period. Residents could question decisions, replace representatives and let newcomers take on responsibilities. A resident’s voice would not depend on how many tokens they hold.'))
-    roadmap += source_notes(['ostrom'])
-    roadmap += text(('Aplicando Ostrom ao piloto', 'Applying Ostrom to the pilot'), 'h3')
+    # Ostrom's eight design principles, in plain words; her name stays only in the source credit (owner, 24 Oct: low jargon).
+    roadmap += text(('Regras para o que é comum', 'Rules for what residents share'), 'h3')
+    roadmap += text(('Cada família seria dona da casa; espaços comuns, reservas e o dinheiro para novas casas teriam regras comuns.',
+                     'Each family would own its home; shared spaces, reserves and the money for more homes would follow rules agreed together.'))
     principles = [
-        ('Membros, imóveis, recursos compartilhados e direitos de cada família claramente identificados.', 'Clearly identified members, properties, shared resources and household rights.'),
-        ('Custos e responsabilidades adequados às condições locais e à capacidade das famílias.', 'Costs and responsibilities suited to local conditions and household circumstances.'),
-        ('Participação das pessoas afetadas nas decisões sobre suas regras comuns.', 'Participation by affected people in decisions about their shared rules.'),
-        ('Conferência de dinheiro e trabalho por pessoas que prestam contas aos participantes e declaram seus interesses.', 'Checks on money and work by people accountable to participants who disclose their interests.'),
-        ('Respostas proporcionais ao descumprimento de regras, com oportunidade de defesa.', 'Proportionate responses to rule violations, with an opportunity to be heard.'),
-        ('Mediação e revisão acessíveis, com proteção aos direitos de moradia.', 'Accessible mediation and review, with protection for housing rights.'),
-        ('Base jurídica para as responsabilidades e decisões da organização.', 'A legal basis for the organisation’s responsibilities and decisions.'),
-        ('Decisões locais próximas dos moradores e serviços compartilhados entre projetos.', 'Local decisions close to residents, with services shared across projects.')
+        ('Quem participa, quais imóveis e o que é comum, bem definidos.', 'Who takes part, which properties and what is shared, clearly defined.'),
+        ('Custos justos ao que cada família recebe e pode pagar.', 'Costs fair to what each household receives and can afford.'),
+        ('Os afetados ajudam a decidir as regras comuns.', 'The people affected help decide the shared rules.'),
+        ('Dinheiro e obra conferidos por pessoas que prestam contas aos participantes e declaram seus interesses.', 'Money and work checked by people who answer to the participants and declare their interests.'),
+        ('Respostas graduais a regras descumpridas, com defesa.', 'Responses to broken rules that start small, with a right to be heard.'),
+        ('Mediação e revisão acessíveis, protegendo o direito de moradia.', 'Accessible mediation and review, with protection for housing rights.'),
+        ('O direito dos moradores de fazer suas regras.', 'Residents’ right to make their own rules.'),
+        ('Decisões locais com os moradores; serviços compartilhados entre projetos.', 'Local decisions close to residents, with services shared across projects.')
     ]
-    roadmap += '<ol class="ostrom-application">' + ''.join(text(p, 'li') for p in principles) + '</ol>'
-    roadmap += text(('Estes princípios adaptam o trabalho de Ostrom sobre recursos comuns à governança proposta para a IMOBX. Sua aplicação abrange manutenção, urgências, cobranças contestadas e novas obras, com responsabilidades identificáveis em cada decisão.', 'These principles adapt Ostrom’s work on shared resources to IMOBX’s proposed governance. Their application covers maintenance, emergencies, disputed invoices and new construction, with identifiable responsibility for each decision.'))
+    roadmap += '<ol class="ostrom-application">' + ''.join(text(p, 'li') for p in principles) + '</ol>' + short_source('ostrom')
     roadmap += text(('Como o trabalho segue no dia a dia', 'How everyday work moves forward'), 'h3')
-    for key in ['work', 'example', 'continuity', 'status']:
-        roadmap += text(guide['dao_operations'][key])
-    roadmap += source_notes(['digital']) + '</section>'
+    roadmap += text(pick(guide['dao_operations']['work'], [0, 1])) + text(guide['dao_operations']['continuity'])
+    roadmap += text(guide['dao_operations']['status']) + text(pick(guide_question('flock-siah')['a'][4], [0, 3, 4]))
+    roadmap += short_source('digital') + '</section>'
 
-    roadmap += '<section id="ico-comparison">' + text(('Relatórios do projeto', 'Project reports'), 'h2')
-    roadmap += text(('Quando a obra começar, a proposta é publicar um relatório para cada projeto. Cada relatório lista:', 'Once building starts, the plan is to publish a report for each project. Each report lists:'))
-    report_items = [
-        (('Imóvel e contratos', 'Property and agreements'),
-         ('os documentos que mostram que a IMOBX pode usar o imóvel e as condições de moradia.', 'the documents showing IMOBX may use the property, and the housing terms.')),
-        (('Dinheiro que entra e sai', 'Money in and out'),
-         ('de onde veio cada pagamento, para que serviu, o comprovante e quem conferiu.', 'where each payment came from, what it paid for, its receipt and who checked it.')),
-        (('Decisões', 'Decisions'),
-         ('quem decidiu, dentro de qual limite de gasto, e como pedir revisão.', 'who decided, within what spending limit, and how to ask for a review.')),
-        (('As casas', 'The homes'),
-         ('custos reais, reparos ainda abertos e quanto cada família já avançou na compra.', 'actual costs, repairs still open and how far each family is towards owning its home.')),
+    hj, rp = guide['resident_journey'], guide['transparency']
+    open_terms = [
+        ('Qual imóvel o primeiro projeto vai usar.', 'Which property the first project will use.'),
+        ('O preço, o pagamento mensal e quanto de cada pagamento conta para a compra.', 'The price, the monthly payment and how much of each payment counts towards buying the home.'),
+        ('A divisão dos custos de reparo, os prazos de atendimento, o contato responsável e a forma de revisar uma cobrança ou um serviço contestado.',
+         'Who pays for repairs, how quickly they are handled, who to contact and how to question a charge or repair.'),
+        pick(hj['hardship'][0], [1]),
+        ('Os procedimentos de votação, os limites de gasto e a maneira de resolver uma discordância.',
+         'Voting procedures, spending limits and ways to resolve disagreements.'),
+        ('A forma jurídica da organização.', 'The organisation’s legal form.'),
+        ('O financiamento e o que receberia quem financiar o projeto.', 'The funding, and what people who fund the project would receive.'),
+        ('Os direitos de quem compra um token.', 'The rights of token buyers.'), ('O prestador do serviço de pagamento.', 'The payment provider.'),
     ]
-    roadmap += '<ul class="report-list">' + ''.join(
-        '<li>' + text(head, 'strong') + ': ' + text(body, 'span') + '</li>' for head, body in report_items) + '</ul>'
-    roadmap += text(('Valores previstos, recebidos e gastos aparecem separados.', 'Planned, received and spent amounts are shown separately.'))
-    roadmap += source_notes(['cash', 'cost']) + '</section></main>'
+    roadmap += '<section id="open-terms">' + text(('O que os fundadores vão definir primeiro', 'What the founders will settle first'), 'h2')
+    roadmap += '<ul>' + ''.join(text(item, 'li') for item in open_terms) + '</ul></section>'
+    roadmap += '<p>' + spans('settlement', 'ramp-options', 'ico-comparison')
+    roadmap += text(('Dinheiro, pagamentos e relatórios: ', 'Money, payments and reports: '), 'span')
+    roadmap += text(('Financiamento e gastos', 'Funding and spending'), 'a', 'href="transparency.html"') + '.</p>'
+    roadmap += partner_line('roadmap.html') + '</main>'
     (root / 'roadmap.html').write_text(page('IMOBX | Roadmap', roadmap,
         '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Roteiro'))
+
+    def flow(items, cls='flow'):
+        """A short sequence drawn as connected steps (numbers from the list, no arrow glyphs)."""
+        return f'<ol class="{cls}">' + ''.join('<li>' + (text(i[0], 'strong') + text(i[1], 'span') if isinstance(i[0], list) else text(i, 'span')) + '</li>'
+                                              for i in items) + '</ol>'
+
+    # Why housing: the wider problem in figures, each with its source and what it does not show.
+    why = guide['why']
+    page_why = '<main class="paper guide-paper why-page" id="main">' + text(why['title'], 'h1') + text(why['lead'], 'p', 'class="guide-lead"')
+    page_why += '<section id="figures">' + text(why['facts_title'], 'h2')
+    for fact in why['facts']:
+        page_why += text(fact['text']) + '<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span')
+        page_why += text(fact['source'], 'a', f'href="{esc(fact["url"])}"') + '. ' + text(fact['limit'], 'span') + '</p>'
+    page_why += '</section><section id="context">' + text(why['context_title'], 'h2') + why['context_html']
+    page_why += '</section><section id="causes">' + text(why['causes_title'], 'h2') + text(why['causes'])
+    page_why += '<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span') + text(why['causes_source'], 'a', f'href="{esc(why["causes_url"])}"') + '. ' + text(why['causes_limit'], 'span') + '</p></section>'
+    page_why += '<section id="answer">' + text(why['answer_title'], 'h2') + '<ul>' + ''.join(text(a, 'li') for a in why['answer']) + '</ul>'
+    page_why += text(why['loop_title'], 'h3') + flow(why['loop']) + '</section>'
+    page_why += '<section id="rent-to-own-or-rent">' + text(why['fleet_title'], 'h2') + text(why['fleet'])
+    page_why += text(('As três fases de crescimento', 'The three phases of growth'), 'a', 'href="index.html#como-chegamos"') + '</section>'
+    page_why += partner_line('why.html') + '</main>'
+    (root / 'why.html').write_text(page('IMOBX | Why housing', page_why, '<script src="assets/site.js" defer></script>',
+        version=guide['version'], lang='pt-BR', title_pt='IMOBX | Por que moradia'))
+
+    # The token: what it is for, why it is kept apart from the cooperative, and the conditions before it exists
+    # (owner, 24 Oct). No percentages or payouts here: allocations stay proposals until a lawyer has seen them.
+    tk = guide['token_page']
+    page_tk = '<main class="paper guide-paper token-page" id="main">' + text(tk['title'], 'h1') + text(tk['lead'], 'p', 'class="guide-lead"')
+    page_tk += '<section id="purpose">' + text(tk['purpose_title'], 'h2') + flow(tk['purpose']) + text(tk['not']) + '</section>'
+    # Two panels with the one-way rule drawn between them (redesign 24 Oct), instead of a table.
+    def panel(cls, title, col):
+        rows = ''.join('<div>' + text(row[0], 'dt') + text(row[col], 'dd') + '</div>' for row in tk['table'])
+        return f'<div class="ct-panel {cls}">' + text(title, 'h3') + '<dl>' + rows + '</dl></div>'
+    arrow = ('<svg class="ct-arrow" viewBox="0 0 120 24" aria-hidden="true"><path d="M116 12H6"/><path d="M16 4 6 12l10 8"/></svg>')
+    blocked = ('<svg class="ct-arrow ct-blocked" viewBox="0 0 120 24" aria-hidden="true"><path d="M4 12h104"/><path d="M98 4l10 8-10 8"/>'
+               '<path class="x" d="M48 2l20 20M68 2 48 22"/></svg>')
+    page_tk += '<section id="separate">' + text(tk['separate_title'], 'h2') + '<div class="coop-token">'
+    page_tk += panel('ct-coop', tk['table_head'][1], 1)
+    page_tk += '<div class="ct-bridge"><p class="ct-yes">' + arrow + text(tk['bridge_yes'], 'span') + '</p>'
+    page_tk += '<p class="ct-no">' + blocked + text(tk['bridge_no'], 'span') + '</p></div>'
+    page_tk += panel('ct-token', tk['table_head'][2], 2) + '</div>'
+    page_tk += text(tk['reasons_title'], 'h3') + '<ul>' + ''.join(text(r, 'li') for r in tk['reasons']) + '</ul></section>'
+    page_tk += '<section id="when">' + text(tk['when_title'], 'h2') + flow(tk['when'], 'launch-steps') + text(tk['legal']) + '</section>'
+    page_tk += '<section id="never">' + text(tk['never_title'], 'h2') + '<ul>' + ''.join(text(n, 'li') for n in tk['never']) + '</ul>'
+    page_tk += text(tk['accounts']) + '</section>'
+    page_tk += '<section id="more">' + text(tk['more_title'], 'h2') + '<ul>'
+    page_tk += ''.join('<li>' + text(label, 'a', f'href="{esc(href)}"') + '</li>' for label, href in tk['more']) + '</ul></section>'
+    page_tk += partner_line('token.html') + '</main>'
+    (root / 'token.html').write_text(page('IMOBX | The token', page_tk, '<link rel="stylesheet" href="assets/token.css"><script src="assets/site.js" defer></script>',
+        version=guide['version'], lang='pt-BR', title_pt='IMOBX | O token'))
 
     stub_targets = {item['id']: ('rent-to-own.html' if item['id'] in HOUSEHOLD_FAQ else 'transparency.html')
                     for item in guide['questions']}
@@ -544,32 +637,27 @@ def build_guide(root, page, tr, esc, language_controls):
     overview = guide['home_overview']
     housing = '<section class="content wrap solution-section" id="modelo" aria-labelledby="home-purchase-title">'
     housing += '<header class="home-model-heading">'
-    housing += text(overview['title'], 'h2', 'id="home-purchase-title"') + text(overview['intro']) + '</header>'
-    housing += '<div class="home-model-layout"><div class="home-purchase"><ol class="home-purchase-steps">'
-    for step in overview['steps']:
-        housing += '<li>' + text(step['title'], 'h3') + text(step['body']) + '</li>'
-    housing += '</ol><aside class="home-purchase-terms" id="participation-summary">'
+    housing += text(overview['title'], 'h2', 'id="home-purchase-title"') + '</header>'
+    # Redesign 24 Oct: the three purchase steps live on rent-to-own.html; the homepage shows the mechanism in
+    # 'Three ways to house a family' and keeps the terms, the residents' say and the investor protection here.
+    housing += '<div class="home-model-layout"><div class="home-purchase">'
+    housing += '<aside class="home-purchase-terms" id="participation-summary">'
     housing += text(overview['terms_title'], 'h3') + text(overview['terms_status'])
     housing += '</aside>'
+    # Redesign 24 Oct: the village drawing now opens the homepage (hand-edited hero), so this section keeps
+    # only the residents' say and the investor protection, after the family's three steps.
+    housing += '<div class="home-residents">' + text(overview['vision_decisions'])
+    housing += text(overview['vision_link'], 'a', 'href="rent-to-own.html#decisions"') + '</div>'
     housing += text(overview['link'], 'a', 'class="button" href="rent-to-own.html"') + '</div>'
-    housing += '<aside class="home-village-vision" id="visao-rafael">' + text(overview['vision_title'], 'h3') + text(overview['vision_intro'])
-    housing += '<figure class="village-illustration"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" '
-    housing += 'alt="Ilustração conceitual da vila imaginada por Rafael, com casas e espaços compartilhados." '
-    housing += 'data-alt-pt="Ilustração conceitual da vila imaginada por Rafael, com casas e espaços compartilhados." '
-    housing += 'data-alt-en="Concept illustration of Rafael’s village vision, with homes and shared spaces.">'
-    housing += '<figcaption>' + text(overview['vision_caption']) + '</figcaption></figure>'
-    housing += text(overview['vision_decisions']) + text(overview['vision_link'], 'a', 'href="rent-to-own.html#decisions"')
-    housing += '</aside></div></section>'
+    housing += '</div></section>'
     home_source, count = re.subn(r'<section class="content wrap solution-section" id="modelo"[^>]*>.*?</section>',
                                 lambda _: housing, home.read_text(), count=1, flags=re.S)
     if count != 1:
         raise ValueError('Expected one homepage housing explanation.')
-    source, count = re.subn(r'<section class="content wrap scale-section" id="etapas">.*?</section>(?=<section class="content tint" id="gastos">)',
-                            lambda _: summary, home_source, count=1, flags=re.S)
+    phases = guide['phases']
+    phases_html = ('<section class="content wrap" id="como-chegamos">' + text(phases['title'], 'h2') + text(phases['intro'])
+                   + flow(phases['steps'], 'flow flow-phases') + text(phases['note'], 'p', 'class="fine"') + '</section>')
+    source, count = re.subn(r'<section class="content wrap" id="como-chegamos">.*?</section>', lambda _: phases_html, home_source, count=1, flags=re.S)
     if count != 1:
-        raise ValueError('Expected one homepage roadmap before the spending section.')
-    source, count = re.subn(r'<div class="faq"(?: id="faq")?>.*?</div>\s*</section>',
-                            lambda _: faq(home=True) + '\n </section>', source, count=1, flags=re.S)
-    if count != 1:
-        raise ValueError('Expected one homepage FAQ at the end of resources.')
+        raise ValueError('Expected one homepage section for how we get there.')
     home.write_text(source)

@@ -1,116 +1,116 @@
 {
-  "version": "0.7",
-  "reviewed": "2026-10-21",
+  "version": "0.8",
+  "reviewed": "2026-10-24",
   "status": "Project proposal; no investment offer",
   "reference": "reference.html",
   "files": [
     {
       "path": "index.html",
-      "sha256": "cdb0b99c8c28afb9b42d74180d59111a195097db714dafa6bb0941ad13dbf8be"
+      "sha256": "3e183423eb8fedf7f7e8d84da0af5ce573c083c771f3ef67b09b4c0b842eb48e"
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "39f7e541bc1d1688a5b7c2533ca1b03c8ef6fcf11813207c891c16b661bb1027"
+      "sha256": "a65e1e869b4e94a29ef77232cc1030399be161fc02f1d737f794696f2bf6d8eb"
     },
     {
       "path": "properties.html",
-      "sha256": "e2bbf283543be0aa293b913248af415118c8dde163878ded4c5a3e7c2d942c7c"
+      "sha256": "b80e41a6cc0fa981a42c4cba8a7fad53c8e93944189d4212ab95b0ce04849d55"
     },
     {
       "path": "project-reference.json",
-      "sha256": "14fe4eb9950ffe8bfbdc6b140ce386f67b90dcb4eb221df7696770c96782570c"
+      "sha256": "876507971de04110874c0e941bfce32e52c1d3f6a1d72100281b653c4a6b4e93"
     },
     {
       "path": "project-reference-pt.md",
-      "sha256": "7b16e8b37f826ae78e157aaea827a8a6ef9c4adb41118b2da68b8e42807f7172"
+      "sha256": "682a167087c7af45aced32c46697f0a4f89edddd27c54c3a6ae83fe32293ac28"
     },
     {
       "path": "project-reference-en.md",
-      "sha256": "0c6bd33af5e9cb3d1b2f267fe7b424ed9fd1901233dbb6997aa4dbbe9ac5eb1d"
+      "sha256": "6b30109938ce5e5db04a34469ad36767a1c0039ac36efd3e387ec7520c5b3fe3"
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "b4ddadb5ff9f1a6b58ce5abc281eb5110715307bc848ce02ebc2547eb732b1be"
+      "sha256": "6fbe8b0e13066b843bda7d79fe8db1f491634f9f6e33bb70d9a594280abed8d1"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "38aeb454f15a077ebbd1f7b7a18c83e84635612e47ffb31d1bdd14e019b92762"
+      "sha256": "7c1c303020dc463a8cd8d30e8cb0a34f84593ab2006072c89b8387f2e4346a9e"
     },
     {
       "path": "reference.html",
-      "sha256": "956d83b41b6795e7007a4ecfffc22a7e713b7203ed03fda0d9e9c90b59aceb1b"
+      "sha256": "4ebdf45cb80a57daa80ee456b9923603c4705f0798ce2a52c428e10efe8ebf6f"
     },
     {
       "path": "whitepaper.md",
-      "sha256": "0d59e6d0a2d2ee41ab4ecda949c912c42feabf69d2f4ff95f635b50a207c1e19"
+      "sha256": "9e471019b3df00ab06429c9215c00355103c6ad7da197027e65f8b3037a5a0d6"
     },
     {
       "path": "whitepaper.html",
-      "sha256": "1db87fe7ed275e8b4e569d5cd155ec2accf85204fafef38f25fc5b0072c3e179"
+      "sha256": "a007629d65e4e4bf41edbbedc2939606499ce0311fd3f56ac9b631141fe53e3b"
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "0450501ccf9f3cea7aad67f65dfb214368fdd5782ab51e9f15b1fa99b48e7e00"
+      "sha256": "6d7d2b96373bf780245888482e1e83613c9cc8dd92b4f0871e939c067ebf99d5"
     },
     {
       "path": "devsheet.md",
-      "sha256": "88f8fa4d3485025b54dee0561f6539328da4b174f230f94fd99e9eecf921756f"
+      "sha256": "85c8908cdf7547100f9f5e9467a32a1418b6affd22dbb95b18083a19d4e81d39"
     },
     {
       "path": "devsheet.html",
-      "sha256": "462ec63f4fe28c04296f359f5999ce4b21b03f816e95bed466e927ff6297d327"
+      "sha256": "23ded0d3657ef6ea6b8a711da23dafa794797a2a38d520f0c10c78b08c3ddfb7"
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "19cf3de67b02fabde55f19e35c9f34104bc1bb38cc662ec5f19d78fcd3cb40ec"
+      "sha256": "69554f59c8fe76f63350ed6b9730941d6cc11f46822dc8dbb3f9f2dc9b31b4a7"
     },
     {
       "path": "pitchdeck.json",
-      "sha256": "ca66227f9c7c1ba0d7b1e0e3ead4442abefa8bd90c61f5ca5c1facafb509a410"
+      "sha256": "5914643eca4386d8dfc3a8399d1ac1d8be606a9f4fec9d9508878da1ece04286"
     },
     {
       "path": "pitchdeck.md",
-      "sha256": "91b0f1bf43bfdf30e01d5540e104d5d0d9d6eee0abc73330c7861933fe7dbf5d"
+      "sha256": "62f719cf7c2db795dce53921d092c6cbc8ab23303fa64bbdfaffb5c95b9087f7"
     },
     {
       "path": "pitchdeck.html",
-      "sha256": "ae88c912dca6c2d91270a727a6382e18db85ec269830e2dc8713d46d8eda57a7"
+      "sha256": "a61cbc3efd92c6c2506f30041d2ce10a5b87f05c2b088fffae8368bcb27ad494"
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "cedaf43ad89c0c9df7f0d3578151c7c739486f94e89911cc1ce2ad4731cba291"
+      "sha256": "7524d39ed7c010e5c966737abc798564f31168ca1abfeb6f6269cfb6444a08dd"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "eee11de458dc7ff8a79e188a19c3bc6719ebf5c8e1381702f1bc4fe9f827eafd"
+      "sha256": "420e751ee358f31cab27dcc75da6cc4b2fcab46f94f0236014aff20dfb99d221"
     },
     {
       "path": "roadmap.html",
-      "sha256": "4a4a0522af7983cbb29943060e2a650359d5fe13d635f4862a52cfb9aa00411b"
+      "sha256": "f5305e6d7c002fa5c2229d9cb57efc76203f739d262a70a7d3dbc458ac4e2f46"
     },
     {
       "path": "transparency.html",
-      "sha256": "3bc72d2c82259f3f8e2f22fda84a3b9a8dd29b7af7bf4e0a45a343d923a89dcb"
+      "sha256": "db17bc96dae5c9eda069df4b66ce7360d00d2f22247e36ee99c7e1bb8411be45"
     },
     {
       "path": "resources.html",
-      "sha256": "a01bf966e2cf758753f75ed64b6cc47fa53404d036cd1522a8470e68c895b373"
+      "sha256": "2948f77e6e87a7dd885ecbab51a1dbfd823d2a88f1990a6a64941d6efa658a7a"
     },
     {
       "path": "model-guide.json",
-      "sha256": "2a12393206a78c93072c682472f74fb803f21d3ad174ec36fd74e611cb588566"
+      "sha256": "93fb15c33c09a8ec8aa3a9be1adf73fec4a002f5372d93099e9d5e9bc506b97d"
     },
     {
       "path": "contact.html",
-      "sha256": "034369362c732e60850125a1ec684deed363a13401493785cf96bf9b6cd853d4"
+      "sha256": "0618b4be19789429bdd0ee7422c0d8f7188cd7658115a00db46461a236b994a2"
     },
     {
       "path": "contact-routes.json",
-      "sha256": "b343ff8356dc2e4e5599cac4526cc3e2fc5b13191d813461a072a906f2fcc0cf"
+      "sha256": "2e73a47badb9d1897da25e2058f5b6290902f76e19324b09166f1b9a6cb90d67"
     },
     {
       "path": "assets/contact.js",
-      "sha256": "0fb018b7cf10b37039f21561911483cfa1f7aeb1455b080965a953405284989a"
+      "sha256": "18e8365111479d2408b989ca063b1ec7b7d04d83ed24485782066287df31e322"
     },
     {
       "path": "assets/contact.css",

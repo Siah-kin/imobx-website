@@ -2,7 +2,7 @@
 
 A documented rent-to-own housing model for Rio
 
-**Partner discussion draft · Version 0.7, 21 October 2026**
+**Partner discussion draft · Version 0.8, 24 October 2026**
 
 
 
@@ -160,7 +160,7 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 
 
-## 9. A possible token could fund operations and outreach
+## 9. A possible token could fund homes, operations and outreach
 
 Buyers of new tokens would pay the organisation that creates and sells them. Their rights are still undecided.
 
