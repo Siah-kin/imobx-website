@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "222732eb7c51dd69eb06fe7752bba9a1531830293b30eaab2ab8490e59f161d8"
+      "sha256": "dbb910596144571c357f9c9bb923c272ecbd94b7feb7b8eab07bbfffe7db8526"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "3908da92c41655787654c1513c1f3b7d90f51243e0518bd21179bae8338d73b1"
+      "sha256": "9ad9d76b394fbd46cb72241d539cf8a78732e83115c917bc434a1a8ba0df7b50"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "b9e7b44aac96d1797cfddf03a1edadf961fb7ae8e580a65822d2a3691a08dd62"
+      "sha256": "0ac086781979a814ad13c40cae04549baf2f89a7d892b125875d50eea1b2a426"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "b48ebd34b5a72a4412b6de29384dbd733f5fb627211b8afa07cb8ae8364fe560"
+      "sha256": "02a4ea9566fa86b09580a0b0f3af60c196241e9318249072be499fa9a6f4e1ae"
     },
     {
       "path": "pitchdeck.json",
@@ -78,11 +78,11 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "2ae390ce6a953eb1fc7849d856932db79a74aa41dd043d390f206cec0a17399a"
+      "sha256": "82c8ecc32f702e1ea60b641c987dbdf295a603d5dd84806e2a974f6cec5e01d8"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "667953ee5d376bf28d414526aaa13744ebbf1f28e0714ed253670f395b726a47"
+      "sha256": "9be2dd1800b509c42f71847092231b47afe263c3f1c4fa7f72dc21d24bb18997"
     },
     {
       "path": "roadmap.html",
@@ -90,7 +90,7 @@
     },
     {
       "path": "transparency.html",
-      "sha256": "db17bc96dae5c9eda069df4b66ce7360d00d2f22247e36ee99c7e1bb8411be45"
+      "sha256": "659e15ebe24b8d36876cd5c50cd443c788867d2e1babc27795e6f2ad16463053"
     },
     {
       "path": "resources.html",
@@ -98,7 +98,7 @@
     },
     {
       "path": "model-guide.json",
-      "sha256": "a82454ef595e21c033f250fba13fdafc59548ba91e91d7be8873dbcd1bb83fdc"
+      "sha256": "32747cba890949972e76f01f72371bb68955c1480712d41330c986aabbd75f58"
     },
     {
       "path": "contact.html",

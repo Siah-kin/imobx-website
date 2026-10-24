@@ -1,7 +1,7 @@
 """Public roadmap and model explanation. Content only; no governance execution."""
 import json
 import re
-from money_flow import money_flow_html, SCRIPT as MF_SCRIPT
+from money_flow import money_flow_html, cascade_html, route_html, FUNDING_SCRIPT, SCRIPT as MF_SCRIPT
 
 # FAQ items that moved into rent-to-own.html; the other questions moved into transparency.html.
 HOUSEHOLD_FAQ = ('home-purchase', 'home-repairs', 'home-exit', 'home-decisions', 'home-participate', 'tenant-access')
@@ -419,100 +419,48 @@ def build_guide(root, page, tr, esc, language_controls):
 
     # The funding page is the home of money: budgets, sources of money, the token, the payment route,
     # the legal limits and reporting. Household, governance and people sections live on their own pages.
+    # Funding page, distilled 25 Oct 2026 (owner: keep it simple; drawings instead of lists; no string of headed sections).
+    # Five sections: what needs money now, the first homes' cost, where money comes from and its order (cascade),
+    # how a payment travels (route), legal form and reports. Token questions live on token.html.
+    fp = guide['funding_page']
     transparency = '<main class="paper guide-paper transparency-page" id="main">' + language_controls
-    transparency += text(public['title'], 'h1')
-    transparency += text(pick(public['intro'], [1]))
-    transparency += text(('O próximo trabalho a financiar é preparar o primeiro projeto: forma jurídica, documentos do imóvel e orçamento em reais.',
-                          'The next work to fund is preparing the first project: the legal form, the property documents and a building budget in reais.'), 'p', 'class="guide-lead"')
-    transparency += '<section id="status">' + text(public['status_title'], 'h2') + '<div class="transparency-status">'
-    for n, item in enumerate(public['statuses']):
-        # The first card's detail is the payment route below; the second's is the provider section.
-        body = '' if n in (0, 1) else text(pick(item['body'], [1]))   # the provider's requirements are listed in their own section below
-        transparency += '<article>' + text(item['title'], 'h3') + body + '</article>'
-    transparency += '</div></section><nav class="guide-jump" aria-label="Sections">'
-    for label, target in [(('De onde vem o dinheiro', 'Where money comes from'), 'funding'), (('Orçamentos', 'Budgets'), 'budgets'),
-                          (('Como seria usado', 'How it would be used'), 'money-order'),
-                          (('Forma jurídica', 'Legal form'), 'legal'), (('Relatórios', 'Reports'), 'reporting'),
-                          (('Token', 'Token'), 'token-options'), (('Divulgação', 'Outreach'), 'outreach'),
-                          (('Caminho do dinheiro', 'Money route'), 'settlement'), (('Serviço de pagamento', 'Payment service'), 'ramp-options')]:
-        transparency += text(label, 'a', f'href="#{target}"')
-    transparency += '</nav>'
-
-    transparency += '<section id="funding">' + spans('faq-funding', 'community-economy', 'household-payments', 'thanks-zeal-lets')
-    transparency += text(Q['funding']['q'], 'h2') + text(ans('funding', 0, [0, 2])) + text(ans('funding', 1, [0]))
-    transparency += short_source('cash') + '</section>'
+    transparency += text(public['title'], 'h1') + text(fp['lead'], 'p', 'class="guide-lead"') + text(fp['now'])
+    transparency += '<section id="status"><ul class="funding-status">'
+    transparency += ''.join(text(item, 'li', 'class="is-open"' if n else '') for n, item in enumerate(fp['status'])) + '</ul></section>'
 
     transparency += '<section id="budgets">' + spans('faq-cost-basis', 'custos') + guide['budgets_html']
-    transparency += text(ans('cost-basis', 0, [1])) + short_source('sinapi', 'cub', 'cost') + '</section>'
+    transparency += short_source('sinapi', 'cub', 'cost') + '</section>'
 
     order = guide['money_order']
-    transparency += '<section id="money-order">' + text(order['title'], 'h2') + text(order['intro'])
-    transparency += '<ol>' + ''.join(text(step, 'li') for step in order['steps']) + '</ol>' + text(order['transfer'])
-    transparency += text(order['kinds_title'], 'h3') + '<div class="guide-table"><table><thead><tr>'
+    transparency += ('<section id="money-order">' + spans('funding', 'funding-sources', 'faq-funding', 'community-economy', 'household-payments', 'thanks-zeal-lets')
+                     + text(fp['order_title'], 'h2') + text(fp['order_intro']) + cascade_html(text) + text(order['transfer']))
+    transparency += '<details class="kinds-fold"><summary>' + text(fp['kinds_summary'], 'span') + '</summary><div class="guide-table"><table><thead><tr>'
     transparency += ''.join(text(h, 'th', 'scope="col"') for h in order['headings']) + '</tr></thead><tbody>'
     transparency += ''.join('<tr>' + text(row[0], 'th', 'scope="row"') + text(row[1], 'td') + text(row[2], 'td') + '</tr>'
-                            for row in order['kinds']) + '</tbody></table></div></section>'
-    settlement = guide['settlement']
-    transparency += '<section id="legal">' + spans('faq-nonprofit') + text(('Registro, imóvel e forma jurídica', 'Registration, property and legal form'), 'h2')
-    transparency += text(settlement['registration']) + source_links('cnpj', 'title')
-    transparency += text(Q['nonprofit']['q'], 'h3') + text(ans('nonprofit', 0)) + text(ans('nonprofit', 1))
-    transparency += short_source('nonprofit') + text(settlement['limits']) + '</section>'
+                            for row in order['kinds']) + '</tbody></table></div></details>' + short_source('cash') + '</section>'
+
+    transparency += ('<section id="settlement">' + spans('faq-on-off-ramp', 'rent-onramp', 'construction-offramp', 'digital-records', 'faq-arc-arctide',
+                                                         'treasury-demonstration', 'ramp-options')
+                     + text(fp['route_title'], 'h2') + route_html(text) + text(fp['route_after']) + text(ans('arc-arctide', 2))
+                     + short_source('bcb', 'digital') + '</section>')
+
+    transparency += '<section id="legal">' + spans('faq-nonprofit') + text(fp['legal_title'], 'h2') + text(fp['legal'])
+    transparency += source_links('cnpj', 'title') + short_source('nonprofit') + '</section>'
 
     transparency += '<section id="reporting">' + spans('faq-ico', 'ico-comparison') + text(public['reporting_title'], 'h2')
-    stage_web = {st['id']: st['web'] for st in guide['stages']}
-    transparency += '<ul>' + ''.join(text(item, 'li') for item in public['reporting'])
-    transparency += text(pick(stage_web['funded-pilot'], [1]), 'li') + text(pick(stage_web['digital-trial'], [0]), 'li')
-    transparency += '</ul>' + text(ans('ico', 1, [0])) + '</section>'
-
-    # Research comes after what a funder needs first (critique 23 Oct): a possible token and the payment route.
-    transparency += '<details class="disclosure research-fold"><summary>' + text(('Em estudo: token e pagamentos', 'Under study: the token and payments'), 'span') + '</summary><div class="disclosure-body">'
-    transparency += '<section id="token-options">' + spans('faq-yield', 'funding-questions', 'faq-thanks-zeal-lets', 'faq-euler')
-    transparency += text(Q['yield']['q'], 'h2') + text(guide['token_budget'])
-    transparency += '<p>' + text(('Para que serve o token?', 'What is the token for?'), 'a', 'href="token.html"') + '</p>'
-    transparency += text(ans('yield', 0, [1, 2, 3])) + text(ans('yield', 1, [0, 3]))  # buyback sentence moved to token.html
-    transparency += text(ans('governance', 1)) + short_source('reference-token') + full_source('cvm')
-    transparency += spans('faq-exchanges') + text(Q['exchanges']['q'], 'h3') + text(ans('exchanges', 0)) + text(ans('exchanges', 1))
-    transparency += spans('faq-property', 'faq-rwa') + text(Q['property']['q'], 'h3') + text(ans('property', 0, [0, 1]))
-    transparency += text(ans('property', 1)) + short_source('rights', 'token-study')
-    transparency += text(participation_decisions_title(), 'h3')
-    transparency += '<ul>' + ''.join(text(p, 'li') for p in guide['participation']['decisions']) + '</ul>'
-    transparency += text(risk_row(3)[1]) + '</section>'
-
-    economy = {t['id']: t for t in guide['community_economy']['topics']}
-    transparency += '<section id="outreach">' + spans('campaign-work')
-    transparency += text(economy['campaign-work']['title'], 'h2') + text(pick(economy['campaign-work']['body'][0], [1, 2]))
-    transparency += text(pick(economy['campaign-work']['body'][1], [3])) + '</section>'
-
-    settlement = guide['settlement']
-    transparency += '<section id="settlement">' + spans('faq-on-off-ramp') + text(settlement['title'], 'h2')
-    keep_step = {'rent-onramp': [[0], [0], [1], [0], [1], [1]], 'construction-offramp': [[1], [1], [1], [0], [0]]}
-    for route in settlement['routes']:
-        transparency += f'<article class="settlement-route" id="{esc(route["id"])}">' + text(route['title'], 'h3')
-        transparency += (text(pick(route['intro'], [0])) if route['id'] == 'rent-onramp' else '') + '<ol class="settlement-steps">'
-        for step, keep in zip(route['steps'], keep_step[route['id']]):
-            transparency += '<li><div>' + text(step['title'], 'strong') + text(pick(step['body'], keep)) + '</div></li>'
-        transparency += '</ol>' + (text(route['note']) if route['id'] == 'construction-offramp' else '') + '</article>'
-    transparency += text(pick(settlement['network_note'], [0])) + short_source('bcb')
-    transparency += '<div id="digital-records">' + spans('faq-arc-arctide', 'treasury-demonstration')
-    transparency += text(Q['arc-arctide']['q'], 'h3') + text(guide['definitions']) + text(ans('arc-arctide', 0)) + text(ans('arc-arctide', 1, [0, 1]))
-    transparency += text(ans('arc-arctide', 2)) + source_links('arctide', 'argus') + short_source('digital')
-    transparency += text(settlement['evidence_title'], 'h3') + text(economy['treasury-demonstration']['body'][0])
-    transparency += '<ul>' + ''.join(text(x, 'li') for x in settlement['evidence']) + '</ul></div></section>'
-
-    research = settlement['provider_research']
-    transparency += '<section id="ramp-options">' + text(research['title'], 'h2') + text(pick(research['conclusion'], [1]))
-    transparency += '<ul>' + ''.join(text(p, 'li') for p in research['acceptance']) + '</ul></section></div></details>'
+    transparency += '<ul>' + ''.join(text(public['reporting'][i], 'li') for i in (0, 1, 2, 4)) + '</ul>' + text(ans('ico', 1, [0]))
+    transparency += ('<p id="token-options">' + spans('faq-yield', 'funding-questions', 'faq-thanks-zeal-lets', 'faq-euler', 'faq-exchanges',
+                                                      'faq-property', 'faq-rwa', 'outreach', 'campaign-work')
+                     + text(fp['token'], 'span') + text(fp['token_link'], 'a', 'href="token.html"') + '.</p></section>')
 
     # Old anchors whose answers now live elsewhere: one line each, pointing to the answer.
     transparency += '<section id="elsewhere">' + spans('sources', 'updates', 'next-steps')
     transparency += '<p>' + spans('faq-governance', 'faq-merit', 'faq-dao', 'faq-flock-siah', 'faq-scale', 'community-rights', 'community-tools')
     transparency += text(('Quem decide, como o trabalho segue e como a IMOBX cresceria: ', 'Who decides, how work moves forward and how IMOBX would grow: '), 'span')
-    transparency += text(('Roteiro, quem decide o quê', 'Roadmap, who decides what'), 'a', 'href="roadmap.html#governance"') + '.</p>'
-    transparency += '<p>' + text(('Fontes, pessoas responsáveis e registro de atualizações: ', 'Sources, responsible people and the update record: '), 'span')
-    transparency += text(('Referência do projeto', 'Project reference'), 'a', 'href="reference.html#sources"') + '.</p></section>'
+    transparency += text(('Roteiro, quem decide o quê', 'Roadmap, who decides what'), 'a', 'href="roadmap.html#governance"') + '.</p></section>'
     transparency += partner_line('transparency.html') + '</main>'
     (root / 'transparency.html').write_text(page('IMOBX | Funding and spending', transparency,
-        '<script src="assets/site.js" defer></script>', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
+        '<link rel="stylesheet" href="assets/flow.css">' + FUNDING_SCRIPT, version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
 
     roadmap += '<section id="governance">' + spans('faq-governance', 'faq-merit', 'faq-dao', 'faq-flock-siah', 'faq-scale')
     roadmap += text(('Quem decide o quê?', 'Who decides what?'), 'h2')
@@ -619,7 +567,7 @@ def build_guide(root, page, tr, esc, language_controls):
     page_tk += '<p class="ct-no">' + blocked + text(tk['bridge_no'], 'span') + '</p></div>'
     page_tk += panel('ct-token', tk['table_head'][2], 2) + '</div>'
     page_tk += text(tk['reasons_title'], 'h3') + '<ul>' + ''.join(text(r, 'li') for r in tk['reasons']) + '</ul></section>'
-    page_tk += '<section id="when">' + text(tk['when_title'], 'h2') + flow(tk['when'], 'launch-steps') + text(tk['legal']) + '</section>'
+    page_tk += '<section id="when">' + text(tk['when_title'], 'h2') + flow(tk['when'], 'launch-steps') + text(tk['buyers']) + text(tk['legal']) + full_source('cvm') + '</section>'
     page_tk += '<section id="never">' + text(tk['never_title'], 'h2') + '<ul>' + ''.join(text(n, 'li') for n in tk['never']) + '</ul>'
     page_tk += text(tk['accounts']) + '</section>'
     page_tk += '<section id="more">' + text(tk['more_title'], 'h2') + '<ul>'

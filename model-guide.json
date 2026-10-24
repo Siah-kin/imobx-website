@@ -2041,7 +2041,7 @@
       "The wider ambition is neighbourhoods where people own their homes and sustain their livelihoods. Food growing, renewable energy and community services are possibilities to develop with residents and partners; none of this is organised yet."
     ]
   },
-  "budgets_html": "<h2 data-pt=\"Dois valores iguais, dois casos diferentes\" data-en=\"The same figure, two different cases\">Dois valores iguais, dois casos diferentes</h2><p data-pt=\"Estes valores são custos de construção em dólares. Não são o preço nem o pagamento mensal de uma família; o preço é definido em reais. O orçamento da vila e o contrato dos dois lofts são casos separados, e os dois valores são de US$27.777: nos lofts, é o total dos dois; na vila, é o orçamento por casa. Rafael usou CUB e SINAPI, referências brasileiras de custos de construção, para preparar o orçamento da vila. Cada obra precisa registrar o que inclui, os preços em reais e o que foi gasto.\" data-en=\"These figures are construction costs in US dollars. They are not a family’s price or monthly payment; each home’s price is set in reais. The village budget and the two-loft contract are separate cases, and both figures are US$27,777: for the lofts it is the total for both; for the village it is the budget per home. Rafael used CUB and SINAPI, Brazilian building-cost references, to prepare the village budget. Each build needs to record what it includes, prices in reais and actual spending.\">Estes valores são custos de construção em dólares. Não são o preço nem o pagamento mensal de uma família; o preço de cada casa é definido em reais. O orçamento da vila e o contrato dos dois lofts são casos separados, e os dois valores são de US$27.777: nos lofts, é o total dos dois; na vila, é o orçamento por casa. Rafael usou CUB e SINAPI, referências brasileiras de custos de construção, para preparar o orçamento da vila. Cada obra precisa registrar o que inclui, os preços em reais e o que foi gasto.</p><div class=\"cost-comparison\"><article><h3 data-pt=\"Dois lofts · janeiro 2026\" data-en=\"Two lofts · January 2026\">Dois lofts · janeiro 2026</h3><p class=\"cost-number\" data-pt=\"US$27.777 no total\" data-en=\"US$27,777 combined\">US$27.777 no total</p><p data-pt=\"Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.\" data-en=\"Construction figure for both lofts together: US$13,888.50 per loft by simple division. Rafael reported a contract awaiting the first deposit at that time.\">Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.</p><p data-pt=\"Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.\" data-en=\"We still need to record what the contract includes, the lofts’ floor areas and the final cost.\">Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.</p></article><article><h3 data-pt=\"Vila de 36 casas · novembro 2025\" data-en=\"36-home village · November 2025\">Vila de 36 casas · novembro 2025</h3><p class=\"cost-number\" data-pt=\"US$27.777 por casa\" data-en=\"US$27,777 per home\">US$27.777 por casa</p><p data-pt=\"Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.\" data-en=\"Rafael’s budget for each 45 m² home uses CUB/SINAPI references, direct purchasing and shared costs. It includes land, construction, solar and shared works. The plan is to build at least 36 homes together: US$999,972 over 12 months.\">Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.</p><p data-pt=\"O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.\" data-en=\"The budget and timing need to fit the selected site and available money.\">O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.</p></article></div><details class=\"disclosure\"><summary><span data-pt=\"Ver os itens do orçamento da vila\" data-en=\"View the village budget’s cost items\">Ver os itens do orçamento da vila</span></summary><div class=\"disclosure-body\"><div class=\"budget-table\"><table><thead><tr><th data-pt=\"Item por casa\" data-en=\"Per-home item\">Item por casa</th><th data-pt=\"Orçamento de 2025 em US$\" data-en=\"2025 budget in US$\">Orçamento de 2025 em US$</th></tr></thead><tbody><tr><td data-pt=\"Terreno\" data-en=\"Land\">Terreno</td><td data-pt=\"5.550\" data-en=\"5,550\">5.550</td></tr><tr><td data-pt=\"Construção · 45 m²\" data-en=\"Construction · 45 m²\">Construção · 45 m²</td><td data-pt=\"18.600\" data-en=\"18,600\">18.600</td></tr><tr><td data-pt=\"Energia solar\" data-en=\"Solar\">Energia solar</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Infraestrutura e espaços compartilhados\" data-en=\"Infrastructure and shared spaces\">Infraestrutura e espaços compartilhados</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Legal e projeto\" data-en=\"Legal and design\">Legal e projeto</td><td data-pt=\"627\" data-en=\"627\">627</td></tr><tr><th data-pt=\"Total\" data-en=\"Total\">Total</th><th data-pt=\"27.777\" data-en=\"27,777\">27.777</th></tr></tbody></table></div><p data-pt=\"O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.\" data-en=\"The plan aims to save by building together and sharing common costs across homes. Quotes and maintenance bills need to show whether those savings happen.\">O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.</p></div></details>",
+  "budgets_html": "<h2 data-pt=\"O que as primeiras casas custariam\" data-en=\"What the first homes would cost\">O que as primeiras casas custariam</h2><p data-pt=\"São custos de construção em dólares, não o preço nem o pagamento mensal de uma família; o preço de cada casa é definido em reais. Os dois valores são de US$27.777: nos lofts, é o total dos dois; na vila, é o custo por casa.\" data-en=\"These are construction costs in US dollars, not a family’s price or monthly payment; each home’s price is set in reais. Both figures are US$27,777: for the two lofts it is the total; for the village it is the cost per home.\">São custos de construção em dólares, não o preço nem o pagamento mensal de uma família; o preço de cada casa é definido em reais. Os dois valores são de US$27.777: nos lofts, é o total dos dois; na vila, é o custo por casa.</p><div class=\"cost-comparison\"><article><h3 data-pt=\"Dois lofts · janeiro 2026\" data-en=\"Two lofts · January 2026\">Dois lofts · janeiro 2026</h3><p class=\"cost-number\" data-pt=\"US$27.777 no total\" data-en=\"US$27,777 combined\">US$27.777 no total</p><p data-pt=\"Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.\" data-en=\"Construction figure for both lofts together: US$13,888.50 per loft by simple division. Rafael reported a contract awaiting the first deposit at that time.\">Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.</p><p data-pt=\"Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.\" data-en=\"We still need to record what the contract includes, the lofts’ floor areas and the final cost.\">Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.</p></article><article><h3 data-pt=\"Vila de 36 casas · novembro 2025\" data-en=\"36-home village · November 2025\">Vila de 36 casas · novembro 2025</h3><p class=\"cost-number\" data-pt=\"US$27.777 por casa\" data-en=\"US$27,777 per home\">US$27.777 por casa</p><p data-pt=\"Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.\" data-en=\"Rafael’s budget for each 45 m² home uses CUB/SINAPI references, direct purchasing and shared costs. It includes land, construction, solar and shared works. The plan is to build at least 36 homes together: US$999,972 over 12 months.\">Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.</p><p data-pt=\"O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.\" data-en=\"The budget and timing need to fit the selected site and available money.\">O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.</p></article></div><details class=\"disclosure\"><summary><span data-pt=\"Ver os itens do orçamento da vila\" data-en=\"View the village budget’s cost items\">Ver os itens do orçamento da vila</span></summary><div class=\"disclosure-body\"><div class=\"budget-table\"><table><thead><tr><th data-pt=\"Item por casa\" data-en=\"Per-home item\">Item por casa</th><th data-pt=\"Orçamento de 2025 em US$\" data-en=\"2025 budget in US$\">Orçamento de 2025 em US$</th></tr></thead><tbody><tr><td data-pt=\"Terreno\" data-en=\"Land\">Terreno</td><td data-pt=\"5.550\" data-en=\"5,550\">5.550</td></tr><tr><td data-pt=\"Construção · 45 m²\" data-en=\"Construction · 45 m²\">Construção · 45 m²</td><td data-pt=\"18.600\" data-en=\"18,600\">18.600</td></tr><tr><td data-pt=\"Energia solar\" data-en=\"Solar\">Energia solar</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Infraestrutura e espaços compartilhados\" data-en=\"Infrastructure and shared spaces\">Infraestrutura e espaços compartilhados</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Legal e projeto\" data-en=\"Legal and design\">Legal e projeto</td><td data-pt=\"627\" data-en=\"627\">627</td></tr><tr><th data-pt=\"Total\" data-en=\"Total\">Total</th><th data-pt=\"27.777\" data-en=\"27,777\">27.777</th></tr></tbody></table></div><p data-pt=\"O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.\" data-en=\"The plan aims to save by building together and sharing common costs across homes. Quotes and maintenance bills need to show whether those savings happen.\">O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.</p></div></details>",
   "definitions": [
     "Blockchain é um registro digital compartilhado que mostra quem aprovou um pagamento. Arc é a rede de blockchain em consideração para pagamentos em USDC, uma moeda digital atrelada ao dólar.",
     "A blockchain is a shared digital record that shows who approved a payment. Arc is the blockchain network under consideration for payments in USDC, a digital currency tied to the US dollar."
@@ -2478,8 +2478,8 @@
           "Pay for promotion"
         ],
         [
-          "As taxas de negociação pagariam quem faz um trabalho de divulgação verificado, em vez de pedir que trabalhe de graça.",
-          "Trading fees would pay people for promotion work that has been checked, instead of asking them to work for free."
+          "As taxas de negociação pagariam a divulgação: cada trabalho pago teria um orçamento próprio e um resultado conferido, em vez de pedir trabalho de graça. Quem recebe para divulgar o projeto deve informar isso ao público.",
+          "Trading fees would fund paid work promoting the project, each task with its own budget and a checked result, instead of asking people to work for free. Paid participants must tell the public that they are being paid."
         ]
       ],
       [
@@ -2488,14 +2488,14 @@
           "Build more homes"
         ],
         [
-          "Parte das taxas de negociação iria para um fundo usado apenas para construir casas.",
-          "Part of the trading fees would go into a fund that is used only to build homes."
+          "Parte das taxas de negociação iria para um fundo usado apenas para construir casas. O preço do token e o dinheiro preso num mercado de negociação não pagam a obra.",
+          "Part of the trading fees would go into a fund used only to build homes. A token’s price and money locked in a trading market do not pay building bills."
         ]
       ]
     ],
     "not": [
-      "O token não é uma parte de uma casa. Nenhuma votação, nem mesmo de quem tem tokens, muda sozinha o contrato de moradia de uma família nem o preço de compra combinado.",
-      "The token is not a share of a home. No vote, including a token vote, can on its own change a family’s housing agreement or its agreed purchase price."
+      "O token não é uma parte de uma casa. Quem investe recebe somente os direitos escritos no seu acordo, e nenhuma votação, nem mesmo de quem tem tokens, muda sozinha o contrato de moradia de uma família nem o preço de compra combinado.",
+      "The token is not a share of a home. Investors receive only the rights written in their agreement, and no vote, including a token vote, can on its own change a family’s housing agreement or its agreed purchase price."
     ],
     "separate_title": [
       "Por que o token e a cooperativa ficam separados?",
@@ -2698,6 +2698,70 @@
     "bridge_no": [
       "Os pagamentos das famílias nunca vão para quem tem o token.",
       "Families’ payments never flow to token holders."
+    ],
+    "buyers": [
+      "Compradores de tokens novos pagariam à organização que os cria e vende; uma revenda normalmente paga ao vendedor, e só uma taxa cobrada à parte chegaria ao projeto. Há quatro caminhos em estudo: seguir sem token próprio, oferecer um serviço ou desconto, participar de taxas recebidas ou investir na operação.",
+      "Buyers of new tokens would pay the organisation that creates and sells them; a resale normally pays the seller, and only a separately collected fee could reach the project. Four paths are under study: proceed without an IMOBX token, offer a service or discount, receive part of the fees actually collected, or invest in the operation."
+    ]
+  },
+  "funding_page": {
+    "lead": [
+      "Cada tipo de dinheiro vem com um compromisso: o contrato de uma família, o destino de uma doação, o contrato de uma obra, os direitos escritos de um investidor. Esta página mostra o que precisa de dinheiro agora, quanto custariam as primeiras casas e em que ordem esses compromissos são cumpridos.",
+      "Every kind of money comes with a promise: a family’s agreement, a donor’s purpose, a builder’s contract, an investor’s written rights. This page shows what needs money now, what the first homes would cost and the order in which those promises are kept."
+    ],
+    "now": [
+      "O próximo trabalho a financiar é preparar o primeiro projeto: forma jurídica, documentos do imóvel e orçamento em reais.",
+      "The next work to fund is preparing the first project: the legal form, the property documents and a building budget in reais."
+    ],
+    "status": [
+      [
+        "Proposta: pagamentos e reservas em reais",
+        "Proposal: payments and reserves held in reais"
+      ],
+      [
+        "Prestador de pagamento: opções em comparação",
+        "Payment provider: options being compared"
+      ],
+      [
+        "Caminho dos pagamentos: ainda não demonstrado",
+        "Payment route: not yet demonstrated"
+      ]
+    ],
+    "order_title": [
+      "De onde vem o dinheiro e em que ordem ele é usado",
+      "Where money comes from, and the order it is used in"
+    ],
+    "order_intro": [
+      "O dinheiro viria de doações, editais, receita de serviços e de investimento que a organização escolhida possa oferecer legalmente. Esta é a direção de trabalho: todo valor recebido é registrado, e os baldes se enchem da esquerda para a direita. Nenhum contrato define essas regras ainda.",
+      "Money would come from donations, grants, service income and investment that the chosen organisation is legally allowed to offer. This is the working direction: every amount received is recorded, then the buckets fill from left to right. No contract sets these rules yet."
+    ],
+    "kinds_summary": [
+      "Ver os cinco tipos de dinheiro, mantidos separados",
+      "See the five kinds of money, kept apart"
+    ],
+    "route_title": [
+      "Como um pagamento viaja",
+      "How a payment travels"
+    ],
+    "route_after": [
+      "Um primeiro teste acompanharia um pequeno valor aprovado do começo ao fim, separado do dinheiro das famílias e das obras. O site não movimenta dinheiro. Mudar a forma do dinheiro não muda suas obrigações.",
+      "A first test would follow one small approved amount from start to finish, kept apart from families’ and building money. The site moves no money. Changing the form of money does not change its obligations."
+    ],
+    "legal_title": [
+      "Forma jurídica",
+      "Legal form"
+    ],
+    "legal": [
+      "A forma jurídica da IMOBX ainda está sendo escolhida com assessores brasileiros; não afirmamos que ela já seja uma organização sem fins lucrativos. Uma organização estrangeira com imóveis no Brasil precisa de CNPJ, e a transferência de uma casa precisa do registro do imóvel. A Lei 13.019 define organizações sem fins lucrativos que usam seus resultados na finalidade social; se a IMOBX segue esse caminho, e como um investimento caberia, os assessores vão decidir.",
+      "IMOBX’s legal form is still being chosen with Brazilian advisers; we do not claim it is already a nonprofit. A foreign organisation holding Brazilian property needs a CNPJ, Brazil’s tax registration, and a home’s transfer needs title registration. Law 13.019 defines nonprofits that use their results for their social purpose; whether IMOBX takes that route, and how any investment would fit, is for the advisers to decide."
+    ],
+    "token": [
+      "Um token está em estudo para financiar o trabalho e pagar a divulgação, separado da cooperativa; nenhuma votação, nem mesmo de quem tem tokens, muda sozinha o contrato de uma família. O que ele faria e o que precisa acontecer antes: ",
+      "A token is under study to fund the work and pay for promotion, kept apart from the cooperative; no vote, including a token vote, can on its own change a family’s agreement. What it would do and what has to happen first: "
+    ],
+    "token_link": [
+      "O token",
+      "The token"
     ]
   }
 }

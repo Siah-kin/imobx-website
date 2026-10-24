@@ -68,3 +68,104 @@ def money_flow_html(text):
 SCRIPT = ('<script>document.addEventListener("DOMContentLoaded",function(){var f=document.querySelector(".money-flow");if(!f||!("IntersectionObserver" in window))return;'
           'document.documentElement.classList.add("js-flow");new IntersectionObserver(function(e,o){e.forEach(function(x){'
           'if(x.isIntersecting){f.classList.add("is-flowing");o.disconnect();}});},{threshold:.35}).observe(f);});</script>')
+
+
+# ---------- Funding page (25 Oct 2026): the order money is used, drawn as a cascade ----------
+CASCADE_STEPS = [
+    (('Impostos e dinheiro com destino', 'Taxes and money with a set purpose'),
+     ('Saem primeiro: impostos e o dinheiro dado para um uso definido.', 'Come off first: taxes and money given for a stated use.')),
+    (('Contas', 'Bills'),
+     ('As contas combinadas do imóvel, da manutenção e da administração.', 'The agreed property, upkeep and administration bills.')),
+    (('Reservas', 'Reserves'),
+     ('Reparos, casas vazias, promessas feitas às famílias e imprevistos.', 'Repairs, empty homes, promises made to families and the unexpected.')),
+    (('Novas casas', 'New homes'),
+     ('Só dentro do orçamento combinado.', 'Only within the agreed budget.')),
+    (('Investidores, por último', 'Investors, last'),
+     ('Só se sobrar dinheiro e um acordo escrito válido permitir.', 'Only if money remains and a valid written agreement allows it.')),
+]
+
+
+def _cascade_svg():
+    cx = [100, 300, 500, 700, 900]
+    top = [60, 95, 130, 165, 200]
+    level = [14, 14, 14, 38, None]
+    parts = ['<svg class="money-flow-art" viewBox="0 0 1000 300" aria-hidden="true"><defs>']
+    for i, (x, t) in enumerate(zip(cx, top)):
+        parts.append(f'<clipPath id="cc{i}"><path d="M{x-65} {t}H{x+65}L{x+53} {t+70}H{x-53}Z"/></clipPath>')
+    parts.append('</defs><path class="mf-ground" d="M10 285H990"/>')
+    parts.append(f'<path class="mf-stream cc-in" d="M66 0V{top[0]+22}"/>')
+    for i, (x, t) in enumerate(zip(cx, top)):
+        body = f'M{x-65} {t}H{x+65}L{x+53} {t+70}H{x-53}Z'
+        parts.append(f'<path class="mf-vessel" d="{body}"/>')
+        if level[i] is not None:
+            parts.append(f'<g clip-path="url(#cc{i})"><rect class="mf-water cc-water cc-w{i}" x="{x-75}" y="{t+level[i]}" width="150" height="90"/></g>')
+        cls = 'mf-line mf-dashed' if i == 4 else 'mf-line'
+        parts.append(f'<path class="{cls}" d="{body}"/><path class="{cls}" d="M{x-73} {t}h146"/>')
+        if i < 4:
+            spill = 'mf-stream cc-spill cc-s%d' % i + (' mf-trickle' if i == 3 else '')
+            parts.append(f'<path class="{spill}" d="M{x+65} {t+2}C{x+110} {t+2} {x+135} {t+15} {x+170} {t+47}"/>')
+        parts.append(f'<g class="mf-badges"><rect x="{x-12}" y="{t-34}" width="24" height="24"/><text x="{x}" y="{t-17}">{i+1}</text></g>')
+    parts.append('</svg>')
+    return ''.join(parts)
+
+
+def cascade_html(text):
+    steps = ''.join('<li>' + text(title, 'strong') + text(body, 'span') + '</li>' for title, body in CASCADE_STEPS)
+    return ('<figure class="money-flow money-cascade">'
+            + '<div class="money-flow-frame">' + _cascade_svg() + '</div>'
+            + '<ol class="money-flow-steps">' + steps + '</ol></figure>')
+
+
+# ---------- Funding page: how a payment travels, drawn as one pipe with check points ----------
+ROUTE_STEPS = [
+    (('A família paga em reais', 'The family pays in reais'),
+     ('Por Pix ou transferência. Nenhuma família precisa de criptomoedas.', 'By Pix or bank transfer. No family needs crypto.')),
+    (('A conta da IMOBX', 'IMOBX’s bank account'),
+     ('Impostos, manutenção e reservas saem primeiro.', 'Taxes, upkeep and reserves come off first.')),
+    (('Um prestador aceito converte', 'An accepted provider converts'),
+     ('O prestador precisa aceitar a organização, mostrar todas as taxas e permitir a volta ao banco.', 'It must accept the organisation, show every fee and allow money back to the bank.')),
+    (('Um registro digital comum', 'A shared digital record'),
+     ('USDC na rede Arc está em estudo; mostra quem aprovou cada pagamento.', 'USDC on the Arc network is under consideration; it shows who approved each payment.')),
+    (('O gasto é aprovado', 'Spending is approved'),
+     ('A construtora nunca aprova a própria cobrança.', 'The builder never approves its own invoice.')),
+    (('A construtora recebe em reais', 'The builder is paid in reais'),
+     ('Depois que alguém confere a etapa da obra.', 'After someone checks the building stage.')),
+]
+
+
+def _route_svg():
+    cx = [85, 250, 415, 585, 750, 915]
+    y = 100
+    icon = {
+        0: lambda x: f'<path class="mf-line" d="M{x-16} {y}L{x} {y-14}L{x+16} {y}M{x-12} {y-3}v18h24v-18"/><text class="mf-glyph" x="{x}" y="{y+12}">R$</text>',
+        1: lambda x: f'<path class="mf-line" d="M{x-18} {y-8}L{x} {y-20}L{x+18} {y-8}ZM{x-12} {y-5}v16M{x} {y-5}v16M{x+12} {y-5}v16M{x-18} {y+14}h36"/>',
+        2: lambda x: f'<path class="mf-line" d="M{x-16} {y-8}h28M{x+6} {y-14}l6 6-6 6M{x+16} {y+8}h-28M{x-6} {y+2}l-6 6 6 6"/>',
+        3: lambda x: f'<path class="mf-line" d="M{x-20} {y-6}h10v10h-10zM{x-5} {y-6}h10v10h-10zM{x+10} {y-6}h10v10h-10zM{x-10} {y-1}h5M{x+5} {y-1}h5M{x-20} {y+13}h40"/>',
+        4: lambda x: f'<path class="mf-line" d="M{x-12} {y-18}h24v34h-24zM{x-6} {y+1}l5 5 9-11"/>',
+        5: lambda x: f'<path class="mf-line mf-dashed" d="M{x-16} {y}L{x} {y-14}L{x+16} {y}M{x-12} {y-3}v18h24v-18"/><text class="mf-glyph" x="{x}" y="{y+12}">R$</text>',
+    }
+    parts = ['<svg class="money-flow-art money-route-art" viewBox="0 0 1000 175" aria-hidden="true">']
+    for i in range(5):
+        cls = 'mf-stream rt-pipe rt-p%d' % i + (' rt-digital' if i in (2, 3) else '')
+        parts.append(f'<path class="{cls}" d="M{cx[i]+35} {y}H{cx[i+1]-35}"/>')
+    for i, x in enumerate(cx):
+        parts.append(f'<rect class="mf-vessel" x="{x-35}" y="{y-35}" width="70" height="70"/><rect class="rt-box" x="{x-35}" y="{y-35}" width="70" height="70"/>')
+        parts.append(icon[i](x))
+        parts.append(f'<g class="mf-badges"><rect x="{x-12}" y="22" width="24" height="24"/><text x="{x}" y="39">{i+1}</text></g>')
+        if i in (1, 4):  # the check points: the hint of orange
+            parts.append(f'<path class="rt-check" d="M{x+35} {y-45}l10 10-10 10-10-10z"/>')
+    parts.append('</svg>')
+    return ''.join(parts)
+
+
+def route_html(text):
+    steps = ''.join('<li>' + text(title, 'strong') + text(body, 'span') + '</li>' for title, body in ROUTE_STEPS)
+    return ('<figure class="money-flow money-route">'
+            + '<div class="money-flow-frame">' + _route_svg() + '</div>'
+            + '<ol class="money-flow-steps money-route-steps">' + steps + '</ol></figure>')
+
+
+FUNDING_SCRIPT = ('<script>document.addEventListener("DOMContentLoaded",function(){var fs=document.querySelectorAll(".money-flow");'
+                  'if(!fs.length||!("IntersectionObserver" in window))return;document.documentElement.classList.add("js-flow");'
+                  'var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("is-flowing");'
+                  'o.unobserve(x.target);}});},{threshold:.35});fs.forEach(function(f){o.observe(f);});});</script>')
