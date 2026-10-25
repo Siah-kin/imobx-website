@@ -1,6 +1,7 @@
 """Public roadmap and model explanation. Content only; no governance execution."""
 import json
 import re
+import hashlib as _hashlib
 from money_flow import money_flow_html, cascade_html, route_html, FUNDING_SCRIPT, SCRIPT as MF_SCRIPT
 
 # FAQ items that moved into rent-to-own.html; the other questions moved into transparency.html.
@@ -53,6 +54,9 @@ def partner_line_html(here, text):
 
 
 def build_guide(root, page, tr, esc, language_controls):
+    def asset_v(name):
+        """assets/<name>?v=<hash>: a changed stylesheet is fetched again instead of served from the browser's cache."""
+        return f'assets/{name}?v=' + _hashlib.sha256((root / 'assets' / name).read_bytes()).hexdigest()[:10]
     guide = json.loads((root / 'model-guide.json').read_text())
 
     def text(pair, tag='p', attrs=''):
@@ -313,46 +317,43 @@ def build_guide(root, page, tr, esc, language_controls):
     anchors = {'payments': ['faq-home-purchase'], 'repairs': ['faq-home-repairs'],
                'decisions': ['faq-home-decisions', 'faq-tenant-access'],
                'hardship': ['faq-home-exit'], 'next': ['faq-home-participate']}
+    # Rent-to-own, distilled 25 Oct 2026 (owner: integrated and varied, not a string of headed sections):
+    # one lead, the drawing with one paragraph, a repair step strip, two columns for decisions, a panel for
+    # hardship and a closing band. The old FAQ index is gone; its anchors stay on the sections that answer them.
+    rp = guide['rent_page']
+    span_ids = lambda ids: ''.join(f'<span id="{a}"></span>' for a in ids)
     resident = '<main class="paper guide-paper resident-page" id="main">'
-    resident += text(journey['title'], 'h1') + text(journey['intro'], 'p', 'class="guide-lead"')
-    resident += '<aside class="guide-status">' + text(journey['status'])
-    # The real homes being prepared, as illustration (owner, 24 Oct: general, illustrated with the properties involved).
-    resident += '<p>' + text(('Os imóveis em estudo e a situação de cada um: ', 'The homes being considered, and where each one stands: '), 'span')
-    resident += text(('Roteiro, três casos', 'Roadmap, three cases'), 'a', 'href="roadmap.html#cases"') + '.</p></aside>'
-    resident += '<nav class="guide-jump" aria-label="Sections">'
-    for ident, label in [('payments', ('Pagamentos e compra', 'Payments and purchase')),
-                         ('repairs', ('Reparos', 'Repairs')), ('decisions', ('Decisões', 'Decisions')),
-                         ('hardship', ('Dificuldade de pagamento e saída', 'Hardship and leaving')),
-                         ('questions', ('Perguntas', 'Questions'))]:
-        resident += text(label, 'a', f'href="#{ident}"')
-    resident += '</nav><section id="payments">' + ''.join(f'<span id="{a}"></span>' for a in anchors['payments'])
-    resident += text(journey['steps_title'], 'h2') + money_flow_html(text) + '<ol>'
-    for step in journey['steps']:
-        resident += '<li>' + text(step['title'], 'h3') + text(step['body']) + '</li>'
-    resident += '</ol>' + text(journey['payments_title'], 'h3')
-    # The status line above already says no price or payment is set; keep only what the payment is.
-    resident += text(pick(journey['payments'][0], [0, 1])) + text(pick(journey['payments'][1], [1]))
+    resident += text(journey['title'], 'h1') + text(rp['lead'], 'p', 'class="guide-lead"')
+    resident += '<p class="rent-cases">' + text(('Os imóveis em estudo e a situação de cada um: ', 'The homes being considered, and where each one stands: '), 'span')
+    resident += text(('Roteiro, três casos', 'Roadmap, three cases'), 'a', 'href="roadmap.html#cases"') + '.</p>'
+
+    resident += '<section id="payments">' + span_ids(anchors['payments'] + ['questions'])
+    resident += text(journey['steps_title'], 'h2') + money_flow_html(text) + text(rp['record'])
     resident += text(('Os orçamentos de construção não são preço nem pagamento mensal; veja os dois orçamentos',
                       'The construction budgets are not a price or a monthly payment; read the two budgets'),
                      'a', 'href="transparency.html#budgets"') + '</section>'
-    for ident in ('repairs', 'decisions', 'hardship', 'next'):
-        resident += f'<section id="{ident}">' + ''.join(f'<span id="{a}"></span>' for a in anchors[ident])
-        resident += text(journey[ident + '_title'], 'h2')
-        paragraphs = journey[ident][:2] if ident == 'decisions' else journey[ident]
-        resident += ''.join(text(pair) for pair in paragraphs)
-        if ident == 'decisions':
-            # The household's own question about money: no investment, payments in reais.
-            resident += text(guide_question('tenant-access')['q'], 'h3') + text(guide_question('tenant-access')['a'][0])
-        target, label = {
-            'repairs': ('roadmap.html#governance', ('Quem cuida do trabalho e como questionar uma decisão', 'Who handles the work and how to question a decision')),
-            'decisions': ('roadmap.html#governance', ('Quem decide o quê', 'Who decides what')),
-            'hardship': ('roadmap.html#open-terms', ('Tudo o que está em aberto', 'Everything still open')),
-            'next': ('contact.html?role=resident', ('Preparar uma conversa sobre moradia', 'Prepare a housing conversation')),
-        }[ident]
-        resident += text(label, 'a', f'href="{target}"') + '</section>'
-    resident += family_faq_section() + '<span id="funding"></span><span id="property"></span>' + partner_line('rent-to-own.html') + '</main>'
+
+    resident += '<section id="repairs">' + span_ids(anchors['repairs']) + text(journey['repairs_title'], 'h2')
+    resident += '<ol class="step-strip">' + ''.join(text(st, 'li', 'class="is-check"' if n == 3 else '') for n, st in enumerate(rp['repair_steps'])) + '</ol>'
+    resident += text(rp['repair_note']) + text(('Quem cuida do trabalho e como questionar uma decisão', 'Who handles the work and how to question a decision'),
+                                                'a', 'href="roadmap.html#governance"') + '</section>'
+
+    resident += '<section id="decisions">' + span_ids(anchors['decisions']) + text(journey['decisions_title'], 'h2')
+    resident += '<div class="two-sides"><div>' + text(rp['decide_title'], 'strong', 'class="side-title"') + '<ul>'
+    resident += ''.join(text(x, 'li') for x in rp['decide']) + '</ul>' + text(rp['decide_note']) + '</div>'
+    resident += '<div class="side-protect">' + text(rp['protect_title'], 'strong', 'class="side-title"') + '<ul>'
+    resident += ''.join(text(x, 'li') for x in rp['protect']) + '</ul></div></div>'
+    resident += text(rp['invest'], 'p', 'class="invest-line"') + text(('Quem decide o quê', 'Who decides what'), 'a', 'href="roadmap.html#governance"') + '</section>'
+
+    resident += '<section id="hardship" class="soft-panel">' + span_ids(anchors['hardship']) + text(journey['hardship_title'], 'h2')
+    resident += ''.join(text(pair) for pair in journey['hardship'])
+    resident += text(('Tudo o que está em aberto', 'Everything still open'), 'a', 'href="roadmap.html#open-terms"') + '</section>'
+
+    resident += '<section id="next" class="closing-band">' + span_ids(anchors['next']) + text(rp['interest'])
+    resident += text(('Preparar uma conversa sobre moradia', 'Prepare a housing conversation'), 'a', 'class="button" href="contact.html?role=resident"') + '</section>'
+    resident += '<span id="funding"></span><span id="property"></span>' + partner_line('rent-to-own.html') + '</main>'
     (root / 'rent-to-own.html').write_text(page('IMOBX | Renting and buying a home', resident,
-        '<link rel="stylesheet" href="assets/flow.css">' + MF_SCRIPT,
+        f'<link rel="stylesheet" href="{asset_v("flow.css")}">' + MF_SCRIPT,
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | Aluguel e compra da casa'))
 
     roadmap = '<main class="paper guide-paper" id="main">' + language_controls
@@ -424,7 +425,7 @@ def build_guide(root, page, tr, esc, language_controls):
     # how a payment travels (route), legal form and reports. Token questions live on token.html.
     fp = guide['funding_page']
     transparency = '<main class="paper guide-paper transparency-page" id="main">' + language_controls
-    transparency += text(public['title'], 'h1') + text(fp['lead'], 'p', 'class="guide-lead"') + text(fp['now'])
+    transparency += text(public['title'], 'h1') + text(fp['lead'], 'p', 'class="guide-lead"')
     transparency += '<section id="status"><ul class="funding-status">'
     transparency += ''.join(text(item, 'li', 'class="is-open"' if n else '') for n, item in enumerate(fp['status'])) + '</ul></section>'
 
@@ -444,14 +445,14 @@ def build_guide(root, page, tr, esc, language_controls):
                      + text(fp['route_title'], 'h2') + route_html(text) + text(fp['route_after']) + text(ans('arc-arctide', 2))
                      + short_source('bcb', 'digital') + '</section>')
 
-    transparency += '<section id="legal">' + spans('faq-nonprofit') + text(fp['legal_title'], 'h2') + text(fp['legal'])
+    transparency += '<div class="duo"><section id="legal">' + spans('faq-nonprofit') + text(fp['legal_title'], 'h2') + text(fp['legal'])
     transparency += source_links('cnpj', 'title') + short_source('nonprofit') + '</section>'
 
     transparency += '<section id="reporting">' + spans('faq-ico', 'ico-comparison') + text(public['reporting_title'], 'h2')
-    transparency += '<ul>' + ''.join(text(public['reporting'][i], 'li') for i in (0, 1, 2, 4)) + '</ul>' + text(ans('ico', 1, [0]))
-    transparency += ('<p id="token-options">' + spans('faq-yield', 'funding-questions', 'faq-thanks-zeal-lets', 'faq-euler', 'faq-exchanges',
+    transparency += '<ul>' + ''.join(text(public['reporting'][i], 'li') for i in (0, 1, 2, 4)) + '</ul>' + text(ans('ico', 1, [0])) + '</section></div>'
+    transparency += ('<p id="token-options" class="token-line">' + spans('faq-yield', 'funding-questions', 'faq-thanks-zeal-lets', 'faq-euler', 'faq-exchanges',
                                                       'faq-property', 'faq-rwa', 'outreach', 'campaign-work')
-                     + text(fp['token'], 'span') + text(fp['token_link'], 'a', 'href="token.html"') + '.</p></section>')
+                     + text(fp['token'], 'span') + text(fp['token_link'], 'a', 'href="token.html"') + '.</p>')
 
     # Old anchors whose answers now live elsewhere: one line each, pointing to the answer.
     transparency += '<section id="elsewhere">' + spans('sources', 'updates', 'next-steps')
@@ -460,7 +461,7 @@ def build_guide(root, page, tr, esc, language_controls):
     transparency += text(('Roteiro, quem decide o quê', 'Roadmap, who decides what'), 'a', 'href="roadmap.html#governance"') + '.</p></section>'
     transparency += partner_line('transparency.html') + '</main>'
     (root / 'transparency.html').write_text(page('IMOBX | Funding and spending', transparency,
-        '<link rel="stylesheet" href="assets/flow.css">' + FUNDING_SCRIPT, version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
+        f'<link rel="stylesheet" href="{asset_v("flow.css")}">' + FUNDING_SCRIPT, version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
 
     roadmap += '<section id="governance">' + spans('faq-governance', 'faq-merit', 'faq-dao', 'faq-flock-siah', 'faq-scale')
     roadmap += text(('Quem decide o quê?', 'Who decides what?'), 'h2')
@@ -573,7 +574,7 @@ def build_guide(root, page, tr, esc, language_controls):
     page_tk += '<section id="more">' + text(tk['more_title'], 'h2') + '<ul>'
     page_tk += ''.join('<li>' + text(label, 'a', f'href="{esc(href)}"') + '</li>' for label, href in tk['more']) + '</ul></section>'
     page_tk += partner_line('token.html') + '</main>'
-    (root / 'token.html').write_text(page('IMOBX | The token', page_tk, '<link rel="stylesheet" href="assets/token.css"><script src="assets/site.js" defer></script>',
+    (root / 'token.html').write_text(page('IMOBX | The token', page_tk, f'<link rel="stylesheet" href="{asset_v("token.css")}"><script src="assets/site.js" defer></script>',
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | O token'))
 
     stub_targets = {item['id']: ('rent-to-own.html' if item['id'] in HOUSEHOLD_FAQ else 'transparency.html')

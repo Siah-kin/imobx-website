@@ -2454,8 +2454,8 @@
       "What is the IMOBX token for?"
     ],
     "lead": [
-      "Nenhum token da IMOBX foi emitido ou vendido. Esta página explica o que os fundadores querem que o token faça, por que ele fica separado da cooperativa de moradia e o que precisa acontecer antes que ele possa existir.",
-      "No IMOBX token has been issued or sold. This page explains what the founders want the token to do, why it is kept apart from the housing cooperative, and what has to happen before it can exist."
+      "Nenhum token da IMOBX foi emitido ou vendido. Se um for criado, ele financiaria o trabalho e pagaria a divulgação, e ficaria separado da cooperativa de moradia.",
+      "No IMOBX token has been issued or sold. If one is created, it would fund the work and pay for promotion, and it would stay apart from the housing cooperative."
     ],
     "purpose_title": [
       "O que o token faria",
@@ -2579,16 +2579,16 @@
     ],
     "reasons": [
       [
-        "Os pagamentos de uma família e o retorno de um investidor puxam para lados diferentes. Investidores donos de partes das casas precisariam de aluguéis e preços mais altos; as famílias precisam de um preço fixo. Manter os dois separados protege a família.",
-        "A family’s payments and an investor’s return pull in different directions. Investors who owned parts of the homes would need higher rents and prices; families need a fixed price. Keeping the two apart protects the family."
+        "Os pagamentos de uma família e o retorno de um investidor puxam para lados diferentes. Investidores donos de partes das casas precisariam de aluguéis e preços mais altos; as famílias precisam de um preço fixo, por isso os dois ficam separados.",
+        "A family’s payments and an investor’s return pull in different directions. Investors who owned parts of the homes would need higher rents and prices, while families need a fixed price, so the two stay apart."
       ],
       [
         "As famílias ficam fora das criptomoedas. Os pagamentos delas são pagamentos comuns em reais.",
         "Families stay outside crypto. Their payments are ordinary payments in reais."
       ],
       [
-        "Leis diferentes se aplicam. Um token oferecido como investimento pode cair sob a CVM, que regula o mercado de valores do Brasil; uma cooperativa de moradia e os acordos de seus membros seguem as leis de moradia e de cooperativas. A separação deixa as casas das famílias fora dessa questão.",
-        "Different laws apply. A token offered as an investment can fall under the CVM, Brazil’s securities regulator; a housing cooperative and its members’ agreements follow housing and cooperative law. Keeping them apart keeps families’ homes out of that question."
+        "Leis diferentes se aplicam. Um token oferecido como investimento pode cair sob a CVM, que regula o mercado de valores do Brasil; a cooperativa de moradia e os acordos de seus membros seguem as leis de moradia e de cooperativas, e as casas das famílias ficam fora da primeira.",
+        "Different laws apply. A token offered as an investment can fall under the CVM, Brazil’s securities regulator, while the housing cooperative and its members’ agreements follow housing and cooperative law, which keeps families’ homes outside securities rules."
       ]
     ],
     "when_title": [
@@ -2706,8 +2706,8 @@
   },
   "funding_page": {
     "lead": [
-      "Cada tipo de dinheiro vem com um compromisso: o contrato de uma família, o destino de uma doação, o contrato de uma obra, os direitos escritos de um investidor. Esta página mostra o que precisa de dinheiro agora, quanto custariam as primeiras casas e em que ordem esses compromissos são cumpridos.",
-      "Every kind of money comes with a promise: a family’s agreement, a donor’s purpose, a builder’s contract, an investor’s written rights. This page shows what needs money now, what the first homes would cost and the order in which those promises are kept."
+      "Famílias, doadores, construtoras e investidores chegam, cada um, com compromissos escritos, e o dinheiro é gasto numa ordem que os cumpre. O próximo trabalho a financiar é preparar o primeiro projeto: forma jurídica, documentos do imóvel e orçamento em reais.",
+      "Families, donors, builders and investors each come with written commitments, and money is spent in an order that keeps them. The next work to fund is preparing the first project: the legal form, the property documents and a building budget in reais."
     ],
     "now": [
       "O próximo trabalho a financiar é preparar o primeiro projeto: forma jurídica, documentos do imóvel e orçamento em reais.",
@@ -2732,28 +2732,28 @@
       "Where money comes from, and the order it is used in"
     ],
     "order_intro": [
-      "O dinheiro viria de doações, editais, receita de serviços e de investimento que a organização escolhida possa oferecer legalmente. Esta é a direção de trabalho: todo valor recebido é registrado, e os baldes se enchem da esquerda para a direita. Nenhum contrato define essas regras ainda.",
-      "Money would come from donations, grants, service income and investment that the chosen organisation is legally allowed to offer. This is the working direction: every amount received is recorded, then the buckets fill from left to right. No contract sets these rules yet."
+      "O dinheiro viria de doações, editais, receita de serviços e de investimento que a organização escolhida possa oferecer legalmente. A direção de trabalho é registrar cada valor recebido e gastá-lo na ordem abaixo. Nenhum contrato define isso ainda.",
+      "Money would come from donations, grants, service income and investment that the chosen organisation is legally allowed to offer. The working direction is to record every amount received and spend it in the order below. No contract sets this yet."
     ],
     "kinds_summary": [
-      "Ver os cinco tipos de dinheiro, mantidos separados",
-      "See the five kinds of money, kept apart"
+      "Os cinco tipos de dinheiro e para que cada um pode servir",
+      "The five kinds of money and what each may pay for"
     ],
     "route_title": [
       "Como um pagamento viaja",
       "How a payment travels"
     ],
     "route_after": [
-      "Um primeiro teste acompanharia um pequeno valor aprovado do começo ao fim, separado do dinheiro das famílias e das obras. O site não movimenta dinheiro. Mudar a forma do dinheiro não muda suas obrigações.",
-      "A first test would follow one small approved amount from start to finish, kept apart from families’ and building money. The site moves no money. Changing the form of money does not change its obligations."
+      "Um primeiro teste acompanharia um pequeno valor aprovado do começo ao fim, separado do dinheiro das famílias e das obras. O site não movimenta dinheiro. Converter o dinheiro em moeda digital, ou de volta, não muda aquilo para que ele foi prometido.",
+      "A first test would follow one small approved amount from start to finish, kept apart from families’ and building money. The site moves no money. Converting money to digital currency, or back, does not change what it was promised for."
     ],
     "legal_title": [
       "Forma jurídica",
       "Legal form"
     ],
     "legal": [
-      "A forma jurídica da IMOBX ainda está sendo escolhida com assessores brasileiros; não afirmamos que ela já seja uma organização sem fins lucrativos. Uma organização estrangeira com imóveis no Brasil precisa de CNPJ, e a transferência de uma casa precisa do registro do imóvel. A Lei 13.019 define organizações sem fins lucrativos que usam seus resultados na finalidade social; se a IMOBX segue esse caminho, e como um investimento caberia, os assessores vão decidir.",
-      "IMOBX’s legal form is still being chosen with Brazilian advisers; we do not claim it is already a nonprofit. A foreign organisation holding Brazilian property needs a CNPJ, Brazil’s tax registration, and a home’s transfer needs title registration. Law 13.019 defines nonprofits that use their results for their social purpose; whether IMOBX takes that route, and how any investment would fit, is for the advisers to decide."
+      "A IMOBX ainda não tem forma jurídica; ela está sendo escolhida com assessores brasileiros. Uma organização estrangeira com imóveis no Brasil precisa de CNPJ, e a transferência de uma casa precisa do registro do imóvel. A Lei 13.019 define organizações sem fins lucrativos que usam seus resultados na finalidade social. Os assessores vão dizer se a IMOBX segue esse caminho e como um investimento caberia nele.",
+      "IMOBX has no legal form yet; it is being chosen with Brazilian advisers. A foreign organisation holding Brazilian property needs a CNPJ, Brazil’s tax registration, and a home’s transfer needs title registration. Law 13.019 defines nonprofits that use their results for their social purpose. The advisers will say whether IMOBX takes that route and how any investment would fit."
     ],
     "token": [
       "Um token está em estudo para financiar o trabalho e pagar a divulgação, separado da cooperativa; nenhuma votação, nem mesmo de quem tem tokens, muda sozinha o contrato de uma família. O que ele faria e o que precisa acontecer antes: ",
@@ -2762,6 +2762,90 @@
     "token_link": [
       "O token",
       "The token"
+    ]
+  },
+  "rent_page": {
+    "lead": [
+      "Pela proposta, a família mora de aluguel enquanto parte de cada pagamento conta para a compra da casa. O preço e o pagamento mensal partem do custo da obra e do que a família pode pagar; não há entrada, e os dois são combinados por escrito antes da mudança. Cumpridas as condições combinadas, a casa inteira é transferida e registrada em nome da família. O primeiro projeto está em preparação; esta página não é uma oferta de moradia disponível.",
+      "Under the proposal, a family rents a home while part of each payment counts towards buying it. The price and monthly payment start from what the home costs to build and what the family can pay; there is no down payment, and both are agreed in writing before the family moves in. Once the agreed conditions are met, the whole home is transferred and registered in the family’s name. The first project is in preparation; this page is not an offer of an available home."
+    ],
+    "record": [
+      "Antes de entrar, a família conhece o preço, o pagamento em reais e quanto de cada pagamento conta para a compra. A cada mês, há um pagamento: parte é aluguel, parte compra a casa. O registro mostra quanto já foi pago e quanto do preço combinado ainda falta. Preço, prazo e reajustes precisam caber no orçamento da família e nos custos do projeto. Quando a casa é da família, a IMOBX deixa de cobrar aluguel por ela.",
+      "Before moving in, the family knows the price, the payment in reais and how much of each payment counts towards buying. Each month there is one payment: part is rent, part buys the home. The record shows how much has been paid and how much of the agreed price remains. Price, time to pay and any price changes have to fit the family’s budget and the project’s costs. Once the home is the family’s, IMOBX stops charging rent for it."
+    ],
+    "repair_steps": [
+      [
+        "Comunicar uma infiltração",
+        "Report a leak"
+      ],
+      [
+        "Avaliar e orçar",
+        "Assess and quote"
+      ],
+      [
+        "Dentro do limite combinado",
+        "Within the agreed limit"
+      ],
+      [
+        "Outra pessoa confere",
+        "Someone else checks"
+      ],
+      [
+        "Pagar",
+        "Pay"
+      ]
+    ],
+    "repair_note": [
+      "O contrato diria quais reparos a organização paga e quais cabem à família, em quanto tempo são feitos, a quem avisar e como contestar uma cobrança. Quem confere o conserto não é quem o pediu.",
+      "The agreement would say which repairs the organisation pays for and which the family pays for, how quickly they are done, who to tell and how to question a charge. The person who checks a repair is not the one who ordered it."
+    ],
+    "decide_title": [
+      "Os moradores decidem",
+      "Residents decide"
+    ],
+    "decide": [
+      [
+        "Horários da sala de estudos",
+        "Study-room hours"
+      ],
+      [
+        "Uso do pátio",
+        "Courtyard use"
+      ],
+      [
+        "Prioridades de reparo dos espaços comuns",
+        "Shared-space repair priorities"
+      ],
+      [
+        "A escolha de representantes, que podem ser substituídos",
+        "Choosing representatives, who can be replaced"
+      ]
+    ],
+    "decide_note": [
+      "Uma opção em discussão: um voto por membro nesses assuntos. As regras ainda estão em discussão com os participantes.",
+      "One option under discussion: one vote per member on these matters. The rules are still being discussed with participants."
+    ],
+    "protect_title": [
+      "O contrato da família protege",
+      "The family’s agreement protects"
+    ],
+    "protect": [
+      [
+        "Nenhuma votação muda sozinha o contrato de moradia de uma família ou o preço de compra combinado, nem mesmo de quem tem tokens.",
+        "No vote can on its own change a family’s housing agreement or its agreed purchase price, not even a token vote."
+      ],
+      [
+        "Quem investe recebe somente os direitos escritos no seu acordo.",
+        "Investors receive only the rights written in their agreement."
+      ]
+    ],
+    "invest": [
+      "Preciso investir ou comprar algo para participar? Não. A voz dos moradores não depende de investir dinheiro, e os pagamentos são em reais.",
+      "Do I need to invest or buy anything to take part? No. Residents’ say does not depend on investing money, and payments are in reais."
+    ],
+    "interest": [
+      "Quer conversar sobre uma casa? Prepare sua apresentação e envie à equipe pelo Telegram; o site não envia nada sozinho.",
+      "Want to talk about a home? Prepare your introduction and send it to the team on Telegram; the website sends nothing itself."
     ]
   }
 }

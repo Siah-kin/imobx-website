@@ -73,7 +73,7 @@ SCRIPT = ('<script>document.addEventListener("DOMContentLoaded",function(){var f
 # ---------- Funding page (25 Oct 2026): the order money is used, drawn as a cascade ----------
 CASCADE_STEPS = [
     (('Impostos e dinheiro com destino', 'Taxes and money with a set purpose'),
-     ('Saem primeiro: impostos e o dinheiro dado para um uso definido.', 'Come off first: taxes and money given for a stated use.')),
+     ('Pagos ou separados antes de qualquer outra coisa.', 'Paid or set aside before anything else.')),
     (('Contas', 'Bills'),
      ('As contas combinadas do imóvel, da manutenção e da administração.', 'The agreed property, upkeep and administration bills.')),
     (('Reservas', 'Reserves'),
@@ -137,23 +137,23 @@ def _route_svg():
     cx = [85, 250, 415, 585, 750, 915]
     y = 100
     icon = {
-        0: lambda x: f'<path class="mf-line" d="M{x-16} {y}L{x} {y-14}L{x+16} {y}M{x-12} {y-3}v18h24v-18"/><text class="mf-glyph" x="{x}" y="{y+12}">R$</text>',
-        1: lambda x: f'<path class="mf-line" d="M{x-18} {y-8}L{x} {y-20}L{x+18} {y-8}ZM{x-12} {y-5}v16M{x} {y-5}v16M{x+12} {y-5}v16M{x-18} {y+14}h36"/>',
-        2: lambda x: f'<path class="mf-line" d="M{x-16} {y-8}h28M{x+6} {y-14}l6 6-6 6M{x+16} {y+8}h-28M{x-6} {y+2}l-6 6 6 6"/>',
-        3: lambda x: f'<path class="mf-line" d="M{x-20} {y-6}h10v10h-10zM{x-5} {y-6}h10v10h-10zM{x+10} {y-6}h10v10h-10zM{x-10} {y-1}h5M{x+5} {y-1}h5M{x-20} {y+13}h40"/>',
-        4: lambda x: f'<path class="mf-line" d="M{x-12} {y-18}h24v34h-24zM{x-6} {y+1}l5 5 9-11"/>',
-        5: lambda x: f'<path class="mf-line mf-dashed" d="M{x-16} {y}L{x} {y-14}L{x+16} {y}M{x-12} {y-3}v18h24v-18"/><text class="mf-glyph" x="{x}" y="{y+12}">R$</text>',
+        0: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-16} {y}L{x} {y-14}L{x+16} {y}M{x-12} {y-3}v18h24v-18"/><text class="mf-glyph" fill="#276578" text-anchor="middle" font-size="11" font-weight="700" x="{x}" y="{y+12}">R$</text>',
+        1: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-18} {y-8}L{x} {y-20}L{x+18} {y-8}ZM{x-12} {y-5}v16M{x} {y-5}v16M{x+12} {y-5}v16M{x-18} {y+14}h36"/>',
+        2: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-16} {y-8}h28M{x+6} {y-14}l6 6-6 6M{x+16} {y+8}h-28M{x-6} {y+2}l-6 6 6 6"/>',
+        3: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-20} {y-6}h10v10h-10zM{x-5} {y-6}h10v10h-10zM{x+10} {y-6}h10v10h-10zM{x-10} {y-1}h5M{x+5} {y-1}h5M{x-20} {y+13}h40"/>',
+        4: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-12} {y-18}h24v34h-24zM{x-6} {y+1}l5 5 9-11"/>',
+        5: lambda x: f'<path class="rt-icon mf-dashed" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-16} {y}L{x} {y-14}L{x+16} {y}M{x-12} {y-3}v18h24v-18"/><text class="mf-glyph" fill="#276578" text-anchor="middle" font-size="11" font-weight="700" x="{x}" y="{y+12}">R$</text>',
     }
     parts = ['<svg class="money-flow-art money-route-art" viewBox="0 0 1000 175" aria-hidden="true">']
     for i in range(5):
         cls = 'mf-stream rt-pipe rt-p%d' % i + (' rt-digital' if i in (2, 3) else '')
-        parts.append(f'<path class="{cls}" d="M{cx[i]+35} {y}H{cx[i+1]-35}"/>')
+        parts.append(f'<path class="{cls}" fill="none" stroke="#4A90A4" stroke-width="6" d="M{cx[i]+35} {y}H{cx[i+1]-35}"/>')
     for i, x in enumerate(cx):
-        parts.append(f'<rect class="mf-vessel" x="{x-35}" y="{y-35}" width="70" height="70"/><rect class="rt-box" x="{x-35}" y="{y-35}" width="70" height="70"/>')
+        parts.append(f'<rect class="rt-box" x="{x-35}" y="{y-35}" width="70" height="70" fill="#fff" stroke="#9DC3CF" stroke-width="2"/>')
         parts.append(icon[i](x))
-        parts.append(f'<g class="mf-badges"><rect x="{x-12}" y="22" width="24" height="24"/><text x="{x}" y="39">{i+1}</text></g>')
+        parts.append(f'<g class="mf-badges"><rect x="{x-12}" y="22" width="24" height="24" fill="#276578"/><text x="{x}" y="39" fill="#fff" text-anchor="middle">{i+1}</text></g>')
         if i in (1, 4):  # the check points: the hint of orange
-            parts.append(f'<path class="rt-check" d="M{x+35} {y-45}l10 10-10 10-10-10z"/>')
+            parts.append(f'<path class="rt-check" d="M{x+35} {y-45}l10 10-10 10-10-10z" fill="#FF8C00" stroke="#193D4E" stroke-width="1.5"/>')
     parts.append('</svg>')
     return ''.join(parts)
 
