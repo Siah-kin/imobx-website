@@ -1,39 +1,71 @@
-/* Bands (owner, 25 Oct 2026): pages built from clearly separate pieces, not a slur of headed sections.
-   Each top-level block is a band with an alternating background that runs to the window edges; inside, content
-   keeps a 1,080px column with real inner spacing. On large screens the heading sits left and the content right;
-   drawings, comparisons and panels span both columns. */
-.band-page{width:100%;max-width:1128px;margin:0 auto;padding:0}
+/* Bands, second version (owner, 25 Oct 2026: 'fully track layout symmetry'; Impeccable layout pass).
+   Spatial thesis: reading pages need one predictable structure. Every element shares one left edge, the same edge
+   as the header logo and the footer (.wrap: min(1200px, 90%)). Headings sit above their content, never beside it.
+   Text keeps a reading measure from that edge; drawings and paired columns use the full content width.
+   Each topic is a band whose background alternates and runs to the window edges, so pieces stay distinct. */
+.band-page{width:min(1248px,calc(90% + 48px));max-width:none;margin:0 auto;padding:0}
 .band-page>*{padding-left:24px;padding-right:24px;box-sizing:border-box}
-.band-page>h1{margin:0;padding-top:56px}
-.band-page>.guide-lead{font-size:20px;line-height:1.55;max-width:none;margin:0;padding-top:16px;padding-bottom:44px}
+.band-page>h1{margin:0;padding-top:56px;max-width:none}
+.band-page>.guide-lead{font-size:20px;line-height:1.55;max-width:none;margin:0;padding-top:16px;padding-bottom:40px;padding-right:calc(24px + max(0px,100% - 48px - 780px))}
 .band-page>p:not(.guide-lead){max-width:none;margin:0;padding-top:12px;padding-bottom:12px}
 .band-page>section,.band-page>.duo{position:relative;padding-top:56px;padding-bottom:56px;margin:0}
 .band-page>section:nth-of-type(odd),.band-page>.duo{background:#F7FAFB;box-shadow:0 0 0 100vmax #F7FAFB;clip-path:inset(0 -100vmax)}
 .band-page>section:nth-of-type(even){background:#fff}
 .band-page>section>span:empty{position:absolute}
+.band-page>section>h2{margin:0 0 20px;font-size:30px;line-height:1.2;max-width:none}
+/* one reading measure for text, starting at the shared edge */
+.band-page>section>p,.band-page>section>ul:not(.funding-status),.band-page>section>ol:not(.step-strip):not(.launch-steps):not(.purpose-list),
+.band-page>section>.source-note{max-width:720px;margin-left:0}
+.band-page>section>p,.band-page>section>ul{margin-top:0}
+.band-page .money-flow{width:auto;margin:8px 0 24px}
 .band-page>.soft-panel{border:0;margin-top:0}
-.band-page>.closing-band{margin-top:0;padding-top:32px;padding-bottom:32px;border-top:3px solid #276578}
+.band-page>.closing-band{margin-top:0;padding-top:36px;padding-bottom:36px;border:0;background:#E8F4F8;box-shadow:0 0 0 100vmax #E8F4F8;clip-path:inset(0 -100vmax)}
 .band-page>.partner-line{padding-top:28px;padding-bottom:40px;text-align:left}
-.band-page .money-flow{width:auto;margin:24px 0 8px}
-.band-page>.token-line{margin:0;border:0;background:#fff;padding-top:28px;padding-bottom:28px}
+.band-page>.token-line{margin:0;padding-top:28px;padding-bottom:28px}
 .band-page>#status{padding-top:0;padding-bottom:36px;background:#fff;box-shadow:none;clip-path:none}
 .band-page>#elsewhere{padding-top:20px;padding-bottom:20px;background:#fff;box-shadow:none;clip-path:none}
-@media (min-width:980px){
-  .band-page>p:not(.guide-lead){padding-right:324px}
-  .band-page>section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);column-gap:48px;align-content:start}
-  .band-page>#status,.band-page>#elsewhere{display:block}
-  .band-page>section>h2{grid-column:1;grid-row:1;margin:0;font-size:28px;line-height:1.2;align-self:start}
-  .band-page>section>*:not(h2){grid-column:2}
-  .band-page>section>.money-flow,.band-page>section>.two-sides,.band-page>section>.guide-table,
-  .band-page>section>.coop-token,.band-page>section>.launch-steps,.band-page>section>.step-strip,
-  .band-page>section>.funding-status{grid-column:1 / -1}
-  .band-page>section>.money-flow,.band-page>section>.two-sides,.band-page>section>.coop-token{margin-top:28px}
-  .band-page>section>p,.band-page>section>ul{margin-top:0}
+.band-page>#elsewhere>p{margin:0}
+/* the repair line ends at the last step */
+.band-page .step-strip::before{right:calc(20% - 12px)}
+@media (min-width:900px){
   .band-page>.duo{display:grid;grid-template-columns:1fr 1fr;gap:48px}
   .band-page>.closing-band{display:flex}
 }
 @media (max-width:600px){
+  .band-page{width:calc(90% + 32px)}
   .band-page>*{padding-left:16px;padding-right:16px}
-  .band-page>.guide-lead{font-size:18px}
+  .band-page>.guide-lead{font-size:18px;padding-right:16px}
   .band-page>h1{padding-top:32px}
+  .band-page>section>h2{font-size:24px}
+}
+
+/* Section-by-section pass (25 Oct) */
+/* body text: one size everywhere in a band */
+.band-page>section p,.band-page>section li,.band-page>.duo p,.band-page>.duo li{font-size:16px;line-height:1.65}
+/* lists start close to the text edge */
+.band-page ul{padding-left:20px}
+/* loose lines between bands keep the same reading width as band text */
+@media (min-width:900px){.band-page>p:not(.guide-lead){padding-right:calc(100% - 744px)}}
+/* the band already separates the piece: drawings lose their own top rule */
+/* full-width blocks: fold-outs belong with the cards above them */
+.band-page>section>details{max-width:none}
+/* status: one even row */
+.band-page .funding-status{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 32px;margin:0}
+/* purposes of the token: three even columns, no boxes, no numbers */
+.purpose-list{list-style:none;padding:0;margin:0 0 24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.purpose-list>li{padding-top:16px;border-top:2px solid #4A90A4}
+.purpose-list strong{display:block;font-size:18px;margin-bottom:6px;color:#193D4E}
+.purpose-list span{display:block}
+.band-page>section>.purpose-list{max-width:none}
+/* the cooperative and the token: same top, same height */
+.band-page .coop-token{align-items:stretch}
+.band-page .ct-bridge{align-self:center}
+@media (max-width:899px){
+  .band-page .funding-status,.purpose-list{grid-template-columns:1fr}
+}
+/* phone: the two money rules between the panels read as text, without sideways arrows */
+@media (max-width:899px){
+  .band-page .ct-arrow{display:none}
+  .band-page .ct-bridge{display:grid;gap:10px;margin:4px 0}
+  .band-page .ct-bridge p{margin:0;text-align:left;padding-left:12px;border-left:0;font-size:15px}
 }

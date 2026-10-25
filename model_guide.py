@@ -554,7 +554,7 @@ def build_guide(root, page, tr, esc, language_controls):
     # (owner, 24 Oct). No percentages or payouts here: allocations stay proposals until a lawyer has seen them.
     tk = guide['token_page']
     page_tk = '<main class="paper guide-paper token-page band-page" id="main">' + text(tk['title'], 'h1') + text(tk['lead'], 'p', 'class="guide-lead"')
-    page_tk += '<section id="purpose">' + text(tk['purpose_title'], 'h2') + flow(tk['purpose']) + text(tk['not']) + '</section>'
+    page_tk += '<section id="purpose">' + text(tk['purpose_title'], 'h2') + flow(tk['purpose'], 'purpose-list') + text(tk['not']) + '</section>'
     # Two panels with the one-way rule drawn between them (redesign 24 Oct), instead of a table.
     def panel(cls, title, col):
         rows = ''.join('<div>' + text(row[0], 'dt') + text(row[col], 'dd') + '</div>' for row in tk['table'])

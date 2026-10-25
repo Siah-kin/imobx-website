@@ -2,7 +2,7 @@
    three ways to house a family. Square corners, teal water, navy lines; one authored motion when it comes into view. */
 .money-flow{margin:28px 0 36px;padding:0}
 .money-flow-title{font-size:20px;font-weight:700;color:#193D4E;margin:0 0 14px}
-.money-flow-frame{border-top:3px solid #276578;padding-top:12px}
+.money-flow-frame{padding:0}
 .money-flow-art{display:block;width:100%;height:auto}
 .mf-ground{fill:none;stroke:#D9E3E8;stroke-width:2}
 .mf-vessel{fill:#fff}
@@ -113,7 +113,7 @@
 .duo section{border-top:3px solid #D9E3E8;padding-top:14px}
 .duo h2{font-size:24px;margin-top:0}
 .duo ul{padding-left:18px}
-.token-line{margin-top:40px;padding:18px 22px;background:#F7FAFB;border:1px solid #D9E3E8}
+.token-line{margin-top:40px}
 @media (max-width:900px){.duo{grid-template-columns:1fr;gap:28px}}
 
 /* Numbers only where they are needed (owner, 25 Oct: 'the numbering is too repetitive'). On a large screen each label
