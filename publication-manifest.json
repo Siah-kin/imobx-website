@@ -10,7 +10,7 @@
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "1c2efdc87e01038d0d1969b449118a90f3101b57eead27d2d2eba35ef9ff464a"
+      "sha256": "77ae725514116606e08184bf5cc28c96e1b56475ccfad2fb72ae71a21eb3930f"
     },
     {
       "path": "properties.html",
@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "b862615020fd8733452ca2a3979e7f3c559159546868fd2355dbe69f7b50227d"
+      "sha256": "eb23463773e52b6c21377541a05db88266cb0843c8f0dd936f78d26dc34acff7"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "57606bd0a6c6c2004ffbacd2e86f27fd1d5f53083462cbf3361fdbb3c13dcbb1"
+      "sha256": "bfd788097ae1cec9b0ea2af1b1e3481ec884f070f187f80dcf6682f3b21979bf"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "cde068b8efa5ef33010a09e8158addd6b4cab9745ac1b18481c2f46d4be1a853"
+      "sha256": "8415d6b3e56f9c11e52aa01d81d8a08eaca0677bff5154773e70142d8f588c80"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "f9c777c9f69a9627c6c90100201673027f91b7adfcebea96422bc8ebeb6db985"
+      "sha256": "adf3b781e333d672467447b0412d564e687e70e47fcd6455aeb98ce453b01816"
     },
     {
       "path": "pitchdeck.json",
@@ -78,11 +78,11 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "f060a69e13979265cf2eb9a64c218607e71d391b302d797604547d394767ffb4"
+      "sha256": "cf95f015140d7dd7e81785c366a4ba2c16c3653a20d43869f96fb7c7f1b08fe6"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "2442f2cb44c50d8d5a7188794678803ca09a65d1fc80b64e5d0ea08c35238b41"
+      "sha256": "586b271227ea76f6609e7cdb36b3470e2894aac11b801dfe3c0fbf0e1dbdcef4"
     },
     {
       "path": "roadmap.html",
@@ -90,7 +90,7 @@
     },
     {
       "path": "transparency.html",
-      "sha256": "66293e33bf54a78faa6f3b7e13d98e7365f49d6d25d5e84ded088e050ebfa44d"
+      "sha256": "b062ce318749d53769cce2c3310fc24b2452d7082b9b63f1bf86617a53d0fdf3"
     },
     {
       "path": "resources.html",

@@ -322,7 +322,7 @@ def build_guide(root, page, tr, esc, language_controls):
     # hardship and a closing band. The old FAQ index is gone; its anchors stay on the sections that answer them.
     rp = guide['rent_page']
     span_ids = lambda ids: ''.join(f'<span id="{a}"></span>' for a in ids)
-    resident = '<main class="paper guide-paper resident-page" id="main">'
+    resident = '<main class="paper guide-paper resident-page band-page" id="main">'
     resident += text(journey['title'], 'h1') + text(rp['lead'], 'p', 'class="guide-lead"')
     resident += '<p class="rent-cases">' + text(('Os imóveis em estudo e a situação de cada um: ', 'The homes being considered, and where each one stands: '), 'span')
     resident += text(('Roteiro, três casos', 'Roadmap, three cases'), 'a', 'href="roadmap.html#cases"') + '.</p>'
@@ -353,7 +353,7 @@ def build_guide(root, page, tr, esc, language_controls):
     resident += text(('Preparar uma conversa sobre moradia', 'Prepare a housing conversation'), 'a', 'class="button" href="contact.html?role=resident"') + '</section>'
     resident += '<span id="funding"></span><span id="property"></span>' + partner_line('rent-to-own.html') + '</main>'
     (root / 'rent-to-own.html').write_text(page('IMOBX | Renting and buying a home', resident,
-        f'<link rel="stylesheet" href="{asset_v("flow.css")}">' + MF_SCRIPT,
+        f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">' + MF_SCRIPT,
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | Aluguel e compra da casa'))
 
     roadmap = '<main class="paper guide-paper" id="main">' + language_controls
@@ -424,7 +424,7 @@ def build_guide(root, page, tr, esc, language_controls):
     # Five sections: what needs money now, the first homes' cost, where money comes from and its order (cascade),
     # how a payment travels (route), legal form and reports. Token questions live on token.html.
     fp = guide['funding_page']
-    transparency = '<main class="paper guide-paper transparency-page" id="main">' + language_controls
+    transparency = '<main class="paper guide-paper transparency-page band-page" id="main">' + language_controls
     transparency += text(public['title'], 'h1') + text(fp['lead'], 'p', 'class="guide-lead"')
     transparency += '<section id="status"><ul class="funding-status">'
     transparency += ''.join(text(item, 'li', 'class="is-open"' if n else '') for n, item in enumerate(fp['status'])) + '</ul></section>'
@@ -461,7 +461,7 @@ def build_guide(root, page, tr, esc, language_controls):
     transparency += text(('Roteiro, quem decide o quê', 'Roadmap, who decides what'), 'a', 'href="roadmap.html#governance"') + '.</p></section>'
     transparency += partner_line('transparency.html') + '</main>'
     (root / 'transparency.html').write_text(page('IMOBX | Funding and spending', transparency,
-        f'<link rel="stylesheet" href="{asset_v("flow.css")}">' + FUNDING_SCRIPT, version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
+        f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">' + FUNDING_SCRIPT, version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
 
     roadmap += '<section id="governance">' + spans('faq-governance', 'faq-merit', 'faq-dao', 'faq-flock-siah', 'faq-scale')
     roadmap += text(('Quem decide o quê?', 'Who decides what?'), 'h2')
@@ -553,7 +553,7 @@ def build_guide(root, page, tr, esc, language_controls):
     # The token: what it is for, why it is kept apart from the cooperative, and the conditions before it exists
     # (owner, 24 Oct). No percentages or payouts here: allocations stay proposals until a lawyer has seen them.
     tk = guide['token_page']
-    page_tk = '<main class="paper guide-paper token-page" id="main">' + text(tk['title'], 'h1') + text(tk['lead'], 'p', 'class="guide-lead"')
+    page_tk = '<main class="paper guide-paper token-page band-page" id="main">' + text(tk['title'], 'h1') + text(tk['lead'], 'p', 'class="guide-lead"')
     page_tk += '<section id="purpose">' + text(tk['purpose_title'], 'h2') + flow(tk['purpose']) + text(tk['not']) + '</section>'
     # Two panels with the one-way rule drawn between them (redesign 24 Oct), instead of a table.
     def panel(cls, title, col):
@@ -574,7 +574,7 @@ def build_guide(root, page, tr, esc, language_controls):
     page_tk += '<section id="more">' + text(tk['more_title'], 'h2') + '<ul>'
     page_tk += ''.join('<li>' + text(label, 'a', f'href="{esc(href)}"') + '</li>' for label, href in tk['more']) + '</ul></section>'
     page_tk += partner_line('token.html') + '</main>'
-    (root / 'token.html').write_text(page('IMOBX | The token', page_tk, f'<link rel="stylesheet" href="{asset_v("token.css")}"><script src="assets/site.js" defer></script>',
+    (root / 'token.html').write_text(page('IMOBX | The token', page_tk, f'<link rel="stylesheet" href="{asset_v("token.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}"><script src="assets/site.js" defer></script>',
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | O token'))
 
     stub_targets = {item['id']: ('rent-to-own.html' if item['id'] in HOUSEHOLD_FAQ else 'transparency.html')

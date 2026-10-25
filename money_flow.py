@@ -60,7 +60,6 @@ def money_flow_html(text):
     """The figure: drawing, then the five numbered steps as text (PT first, EN in data-en)."""
     steps = ''.join('<li>' + text(title, 'strong') + text(body, 'span') + '</li>' for title, body in STEPS)
     return ('<figure class="money-flow" id="como-o-dinheiro-circula">'
-            + text(('Como o dinheiro circula numa casa', 'How the money moves through one home'), 'figcaption', 'class="money-flow-title"')
             + '<div class="money-flow-frame">' + SVG + '</div>'
             + '<ol class="money-flow-steps">' + steps + '</ol></figure>')
 

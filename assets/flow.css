@@ -115,3 +115,13 @@
 .duo ul{padding-left:18px}
 .token-line{margin-top:40px;padding:18px 22px;background:#F7FAFB;border:1px solid #D9E3E8}
 @media (max-width:900px){.duo{grid-template-columns:1fr;gap:28px}}
+
+/* Numbers only where they are needed (owner, 25 Oct: 'the numbering is too repetitive'). On a large screen each label
+   sits under its station, so neither the drawing nor the labels carry numbers; on a phone the labels stack under a
+   small drawing, so both keep them to link the two. */
+@media (min-width:821px){
+  .money-flow .mf-badges{display:none}
+  .money-flow-steps li{text-align:center;padding:0 6px}
+  .money-flow-steps li::before{display:none}
+}
+.closing-band .button,.closing-band a.button{background:#276578;color:#fff}

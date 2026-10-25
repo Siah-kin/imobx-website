@@ -1,0 +1,39 @@
+/* Bands (owner, 25 Oct 2026): pages built from clearly separate pieces, not a slur of headed sections.
+   Each top-level block is a band with an alternating background that runs to the window edges; inside, content
+   keeps a 1,080px column with real inner spacing. On large screens the heading sits left and the content right;
+   drawings, comparisons and panels span both columns. */
+.band-page{width:100%;max-width:1128px;margin:0 auto;padding:0}
+.band-page>*{padding-left:24px;padding-right:24px;box-sizing:border-box}
+.band-page>h1{margin:0;padding-top:56px}
+.band-page>.guide-lead{font-size:20px;line-height:1.55;max-width:none;margin:0;padding-top:16px;padding-bottom:44px}
+.band-page>p:not(.guide-lead){max-width:none;margin:0;padding-top:12px;padding-bottom:12px}
+.band-page>section,.band-page>.duo{position:relative;padding-top:56px;padding-bottom:56px;margin:0}
+.band-page>section:nth-of-type(odd),.band-page>.duo{background:#F7FAFB;box-shadow:0 0 0 100vmax #F7FAFB;clip-path:inset(0 -100vmax)}
+.band-page>section:nth-of-type(even){background:#fff}
+.band-page>section>span:empty{position:absolute}
+.band-page>.soft-panel{border:0;margin-top:0}
+.band-page>.closing-band{margin-top:0;padding-top:32px;padding-bottom:32px;border-top:3px solid #276578}
+.band-page>.partner-line{padding-top:28px;padding-bottom:40px;text-align:left}
+.band-page .money-flow{width:auto;margin:24px 0 8px}
+.band-page>.token-line{margin:0;border:0;background:#fff;padding-top:28px;padding-bottom:28px}
+.band-page>#status{padding-top:0;padding-bottom:36px;background:#fff;box-shadow:none;clip-path:none}
+.band-page>#elsewhere{padding-top:20px;padding-bottom:20px;background:#fff;box-shadow:none;clip-path:none}
+@media (min-width:980px){
+  .band-page>p:not(.guide-lead){padding-right:324px}
+  .band-page>section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);column-gap:48px;align-content:start}
+  .band-page>#status,.band-page>#elsewhere{display:block}
+  .band-page>section>h2{grid-column:1;grid-row:1;margin:0;font-size:28px;line-height:1.2;align-self:start}
+  .band-page>section>*:not(h2){grid-column:2}
+  .band-page>section>.money-flow,.band-page>section>.two-sides,.band-page>section>.guide-table,
+  .band-page>section>.coop-token,.band-page>section>.launch-steps,.band-page>section>.step-strip,
+  .band-page>section>.funding-status{grid-column:1 / -1}
+  .band-page>section>.money-flow,.band-page>section>.two-sides,.band-page>section>.coop-token{margin-top:28px}
+  .band-page>section>p,.band-page>section>ul{margin-top:0}
+  .band-page>.duo{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .band-page>.closing-band{display:flex}
+}
+@media (max-width:600px){
+  .band-page>*{padding-left:16px;padding-right:16px}
+  .band-page>.guide-lead{font-size:18px}
+  .band-page>h1{padding-top:32px}
+}
