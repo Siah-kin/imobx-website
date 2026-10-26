@@ -81,7 +81,7 @@ Rafael’s budget, the different building work covered by each case and the plan
 
 [Costs and origin](https://siah-kin.github.io/imobx-website/reference.html#costs)
 
-[Order for using money](https://siah-kin.github.io/imobx-website/whitepaper.html#4-how-the-money-would-work)
+[The order money would be used in](https://siah-kin.github.io/imobx-website/whitepaper.html#4-how-the-money-would-work)
 
 [Scenarios and risks](https://siah-kin.github.io/imobx-website/reference.html#risks)
 
@@ -89,9 +89,9 @@ Rafael’s budget, the different building work covered by each case and the plan
 
 Comparison of social-purpose activity and investment with financial rights. The legal form, advisers and process for offering any investment are part of the legal work under way.
 
-[CVM and token rights](https://siah-kin.github.io/imobx-website/reference.html#source-cvm40)
+[Token rules and the regulator](https://siah-kin.github.io/imobx-website/reference.html#source-cvm40)
 
-[CVM 249 experimental programme](https://siah-kin.github.io/imobx-website/reference.html#source-cvm249)
+[The regulator’s test programme](https://siah-kin.github.io/imobx-website/reference.html#source-cvm249)
 
 [Social purpose and legal form](https://siah-kin.github.io/imobx-website/transparency.html#faq-nonprofit)
 
@@ -107,7 +107,7 @@ Token purpose and rights are under research. Payment for work and investment rig
 
 Resident voice, roles, review and conflicts when a builder is connected to one of IMOBX’s founders. Final rules depend on participation and approval.
 
-[Ostrom and decisions](https://siah-kin.github.io/imobx-website/roadmap.html#governance)
+[How shared decisions would work](https://siah-kin.github.io/imobx-website/roadmap.html#governance)
 
 [Responsibilities](https://siah-kin.github.io/imobx-website/reference.html#people)
 
@@ -175,7 +175,7 @@ Democratic member control and autonomy. Does not establish that IMOBX is already
 
 CVM, Brazil’s securities-market regulator, examines token characteristics and rights. Utility or governance labels do not authorise an offer.
 
-[CVM: Resolution 249 of 13 October 2026](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm)
+[The regulator’s test programme for shared digital records (CVM, 13 October 2026)](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm)
 
 The experimental programme under article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in its tests. It does not authorise public offerings or other regulated activities.
 
@@ -195,11 +195,11 @@ An example of a trading platform on the Arc network. It does not establish IMOBX
 
 An estimated 5,773,983 homes in the 2024 deficit. This measures housing needs under its own criteria. It differs from the 2022 Census count of people living in favelas.
 
-[FTC: disclosing brand relationships](https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers)
+[US rules on saying when promotion is paid (FTC)](https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers)
 
 US guidance on disclosing paid relationships. It does not authorise investment offers or replace rules in other countries reached.
 
-[X: paid-partnerships policy](https://help.x.com/en/rules-and-policies/paid-partnerships-policy)
+[X’s rules for paid partnerships](https://help.x.com/en/rules-and-policies/paid-partnerships-policy)
 
 Requires paid-partnership disclosure and prohibits content categories. Country rules include crypto and financial products in the EU, UK and Australia. A disclosure does not make prohibited content permissible.
 

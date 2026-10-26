@@ -81,7 +81,7 @@ Orçamento de Rafael, trabalhos diferentes e uso previsto do dinheiro. A previs�
 
 [Custos e origem](https://siah-kin.github.io/imobx-website/reference.html#costs)
 
-[Ordem de uso do dinheiro](https://siah-kin.github.io/imobx-website/whitepaper.html#4-how-the-money-would-work)
+[A ordem em que o dinheiro seria usado](https://siah-kin.github.io/imobx-website/whitepaper.html#4-how-the-money-would-work)
 
 [Cenários e riscos](https://siah-kin.github.io/imobx-website/reference.html#risks)
 
@@ -89,9 +89,9 @@ Orçamento de Rafael, trabalhos diferentes e uso previsto do dinheiro. A previs�
 
 Comparação entre finalidade social e investimento com direitos financeiros. Entidade, assessoria e forma legal de oferecer o investimento fazem parte do trabalho jurídico em andamento.
 
-[CVM e direitos do token](https://siah-kin.github.io/imobx-website/reference.html#source-cvm40)
+[As regras do token e o regulador](https://siah-kin.github.io/imobx-website/reference.html#source-cvm40)
 
-[Programa experimental CVM 249](https://siah-kin.github.io/imobx-website/reference.html#source-cvm249)
+[O programa de testes do regulador](https://siah-kin.github.io/imobx-website/reference.html#source-cvm249)
 
 [Finalidade social e forma jurídica](https://siah-kin.github.io/imobx-website/transparency.html#faq-nonprofit)
 
@@ -107,7 +107,7 @@ Finalidade e direitos do token estão em pesquisa. Pagamentos por trabalho e dir
 
 Voz dos moradores, funções, revisão e conflito com uma construtora ligada ao fundador. As regras finais dependem de participação e aprovação.
 
-[Ostrom e decisões](https://siah-kin.github.io/imobx-website/roadmap.html#governance)
+[Como funcionariam as decisões compartilhadas](https://siah-kin.github.io/imobx-website/roadmap.html#governance)
 
 [Responsabilidades](https://siah-kin.github.io/imobx-website/reference.html#people)
 
@@ -175,7 +175,7 @@ Controle democrático dos membros e autonomia. Não estabelece que a IMOBX já s
 
 A CVM, reguladora brasileira do mercado de valores mobiliários, analisa as características e os direitos dos tokens. Rótulos de utilidade ou governança não autorizam uma oferta.
 
-[CVM: Resolução 249 de 13/10/2026](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm)
+[O programa de testes do regulador para registros digitais compartilhados (CVM, 13/10/2026)](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm)
 
 O programa experimental do artigo 1º, §3º não permite investidores reais, valores mobiliários efetivamente emitidos ou movimentação de dinheiro real nos testes. Não concede autorização para oferta pública ou outras atividades reguladas.
 
@@ -195,11 +195,11 @@ Exemplo de plataforma de negociação na rede Arc. Não comprova uso pela IMOBX.
 
 Estimativa de 5.773.983 domicílios no déficit de 2024. Mede necessidades habitacionais por critérios próprios. É diferente da contagem de pessoas em favelas do Censo 2022.
 
-[FTC: divulgação de relações comerciais](https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers)
+[Regras dos EUA sobre avisar quando a divulgação é paga (FTC)](https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers)
 
 Orientação dos Estados Unidos sobre informar relações remuneradas. Não autoriza ofertas de investimento e não substitui regras dos outros países alcançados.
 
-[X: política de parcerias pagas](https://help.x.com/en/rules-and-policies/paid-partnerships-policy)
+[As regras do X para parcerias pagas](https://help.x.com/en/rules-and-policies/paid-partnerships-policy)
 
 Exige divulgação de parcerias pagas e proíbe categorias de conteúdo. As restrições variam por país e incluem cripto e produtos financeiros na União Europeia, no Reino Unido e na Austrália. Um aviso de publicidade não torna permitido um conteúdo proibido.
 

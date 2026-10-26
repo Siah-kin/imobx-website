@@ -132,8 +132,7 @@ RESOURCE_CATALOG = [
      'description_en': 'Partner presentation with presenter notes.',
      'meta_pt': '12 slides · inglês · rascunho', 'meta_en': '12 slides · English · draft',
      'archive': True, 'links': [('pitchdeck.pdf','PDF','PDF'),
-               ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes'),
-               ('pitchdeck.json','Dados dos slides (JSON)','Slide content (JSON)')]},
+               ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes')]},
     {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': VERSION,
      'description_pt': 'Planos de moradia, participação dos moradores e etapas de desenvolvimento propostas.',
      'description_en': 'Housing plans, resident participation and proposed development stages.',
@@ -235,7 +234,7 @@ def resource_section(standalone=False):
     body += translated('Fontes da proposta', 'Sources behind the proposal', 'a', 'href="reference.html#sources"') + '</nav></section>'
     body += '<div class="resource-more">'
     body += translated('Fontes e mapa de capítulos do documento do projeto', 'Sources and chapter map for the project paper', 'a', 'href="reference.html#chapters"')
-    body += translated('Para desenvolvedores: conteúdo das páginas (JSON)', 'For developers: page content (JSON)', 'a', 'href="model-guide.json" download')
+    body += translated('Para desenvolvedores: o texto do site como dados (JSON)', 'For developers: the site’s text as data (JSON)', 'a', 'href="model-guide.json" download')
     body += translated('Baixar documentos e logos (ZIP)', 'Download documents and logos (ZIP)', 'a', 'href="imobx-documents.zip" download')
     return body + '</div>'
 

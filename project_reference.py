@@ -104,8 +104,7 @@ def build_reference(root, page, tr, esc):
     body += '<p><a href="project-reference-pt.pdf" download>Português · PDF</a> · '
     body += '<a href="project-reference-pt.md" download>Português · Markdown</a> · '
     body += '<a href="project-reference-en.pdf" download>English · PDF</a> · '
-    body += '<a href="project-reference-en.md" download>English · Markdown</a> · '
-    body += '<a href="project-reference.json" download>PT/EN · JSON</a></p></section></main>'
+    body += '<a href="project-reference-en.md" download>English · Markdown</a></p></section></main>'  # the JSON link is on Documents, for developers
     (root / 'reference.html').write_text(page('IMOBX | Project reference', body, version=VERSION,
                                             lang='pt-BR', title_pt='IMOBX | Referência do projeto'))
     for i, lang in enumerate(['pt', 'en']):

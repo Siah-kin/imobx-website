@@ -101,26 +101,26 @@ def build_guide(root, page, tr, esc, language_controls):
     }
 
     own_source_labels = {
-        'cvm': ('CVM · Parecer de Orientação 40', 'CVM · Guidance Opinion 40'),
-        'nonprofit': ('Lei 13.019 · art. 2º, I, a', 'Law 13.019 · article 2, I, a'),
-        'ica': ('ICA · Identidade cooperativa', 'ICA · Cooperative identity'),
-        'ostrom': ('Elinor Ostrom · Palestra do Nobel', 'Elinor Ostrom · Nobel lecture'),
+        'cvm': ('Como o regulador do mercado de capitais avalia tokens (CVM)', 'How Brazil’s market regulator looks at tokens (CVM)'),
+        'nonprofit': ('Regras para parcerias entre o poder público e organizações da sociedade civil (Lei 13.019)', 'Rules for partnerships between government and civil-society organisations (Law 13.019)'),
+        'ica': ('O que faz uma cooperativa (Aliança Cooperativa Internacional)', 'What makes a cooperative (International Cooperative Alliance)'),
+        'ostrom': ('A palestra de Elinor Ostrom no Nobel sobre recursos compartilhados', 'Elinor Ostrom’s Nobel lecture on shared resources'),
         'arc': ('Arc · Litepaper', 'Arc · Litepaper'),
         'arctide': ('Arctide · exchange na Arc', 'Arctide · exchange on Arc'),
         'argus': ('Argus · exchange na Arc', 'Argus · exchange on Arc'),
-        'cash': ('Whitepaper, seção 4: a política de caixa (em inglês)', 'Whitepaper, section 4: the cash policy'),
+        'cash': ('Nosso whitepaper sobre como o dinheiro seria administrado (em inglês)', 'Our whitepaper on how money would be handled (in English)'),
         'rights': ('Whitepaper, seção 8: o que um token poderia representar (em inglês)', 'Whitepaper, section 8: what a token could represent'),
-        'digital': ('Whitepaper, seção 9: o que passa a ser digital (em inglês)', 'Whitepaper, section 9: what becomes digital'),
+        'digital': ('Nosso whitepaper sobre o que passaria a ser digital (em inglês)', 'Our whitepaper on what would become digital (in English)'),
         'technical': ('Guia do piloto, seção 6: escopo e aceitação (em inglês)', 'Pilot guide, section 6: scope and acceptance'),
         'roadmap': ('Etapas do projeto', 'Project stages'),
         'charter': ('Etapas do projeto: quem decide o quê', 'Project stages: who decides what'),
-        'cost': ('Whitepaper, seção 3: os custos (em inglês)', 'Whitepaper, section 3: the costs'),
-        'sinapi': ('CAIXA · SINAPI', 'CAIXA · SINAPI'),
-        'cub': ('Sinduscon · escopo do CUB', 'Sinduscon · CUB scope'),
-        'cnpj': ('Receita Federal · entidades estrangeiras e CNPJ', 'Receita Federal · foreign entities and CNPJ'),
-        'title': ('Código Civil · art. 1.245', 'Civil Code · article 1,245'),
+        'cost': ('Nosso whitepaper sobre os custos (em inglês)', 'Our whitepaper on the costs (in English)'),
+        'sinapi': ('O índice oficial de custos de construção (Caixa, SINAPI)', 'The official building cost index (Caixa, SINAPI)'),
+        'cub': ('O que o custo padrão de construção inclui (Sinduscon)', 'What the standard building cost covers (Sinduscon)'),
+        'cnpj': ('Registro de organizações estrangeiras na Receita Federal (CNPJ)', 'Tax registration for foreign organisations (Receita Federal)'),
+        'title': ('Quando a propriedade de um imóvel passa a outra pessoa (Código Civil)', 'When ownership of a property passes (Civil Code)'),
         'mb': ('Mercado Bitcoin · elegibilidade de contas', 'Mercado Bitcoin · account eligibility'),
-        'bcb': ('Banco Central · Resolução 521', 'Central Bank · Resolution 521'),
+        'bcb': ('As regras do Banco Central para serviços com criptoativos', 'Brazil’s Central Bank rules for crypto services'),
         'settlement': ('Fluxo reais ↔ moeda digital', 'Reais ↔ digital money flow'),
         'ramp-options': ('Opções de conversão e elegibilidade', 'Conversion options and eligibility'),
         'community-economy': ('Economia comunitária proposta', 'Proposed community economy'),
@@ -667,11 +667,11 @@ def build_guide(root, page, tr, esc, language_controls):
         return ('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span') + f'<a href="{esc(url)}">' + text(label, 'span') + '</a>. ' + text(effect, 'span') + '</p>')
     page_tk += '<details class="disclosure" id="venues"><summary>' + text(tk['venues_title'], 'span') + '</summary><div class="disclosure-body">'
     page_tk += ''.join(text(v) for v in tk['venues'])
-    page_tk += tk_source(('Arctide · documentação para integração (em inglês)', 'Arctide · integration documentation'), 'https://github.com/0xRustyDev/arctide-docs/blob/main/README.md',
+    page_tk += tk_source(('As notas técnicas da Arctide (em inglês)', 'Arctide’s technical notes (in English)'), 'https://github.com/0xRustyDev/arctide-docs/blob/main/README.md',
                          ('Descreve as taxas por fundo, cobradas em USDC. Não mostra uso pela IMOBX.', 'Describes per-pool fees charged in USDC. It does not show any IMOBX use.'))
-    page_tk += tk_source(('Grupo da Ethervista no Telegram · anúncio de 16 de setembro de 2026', 'Ethervista Telegram group · announcement of 16 September 2026'), 'https://t.me/etherfun_trenches/90445',
+    page_tk += tk_source(('O anúncio da Ethervista de 16 de setembro de 2026', 'Ethervista’s announcement of 16 September 2026'), 'https://t.me/etherfun_trenches/90445',
                          ('É o anúncio da própria empresa. Não foi verificado de forma independente.', 'The company’s own announcement. It has not been independently verified.'))
-    page_tk += tk_source(('Circle · riscos do USDC', 'Circle · USDC risk factors'), 'https://www.circle.com/legal/usdc-risk-factors',
+    page_tk += tk_source(('A lista de riscos do USDC feita pela própria Circle', 'Circle’s own list of USDC risks'), 'https://www.circle.com/legal/usdc-risk-factors',
                          ('Os riscos descritos pela própria emissora.', 'The risks as described by the issuer.'))
     page_tk += '</div></details></section>'
     page_tk += '<section id="never">' + text(tk['never_title'], 'h2') + '<ul>' + ''.join(text(n, 'li') for n in tk['never']) + '</ul>'
@@ -704,9 +704,9 @@ def build_guide(root, page, tr, esc, language_controls):
     chain += '<details class="disclosure"><summary>' + text(ch['glossary_title'], 'span') + '</summary><div class="disclosure-body"><dl class="glossary">'
     chain += ''.join(text(term, 'dt') + text(meaning, 'dd') for term, meaning in ch['glossary']) + '</dl></div></details>'
     chain += '<details class="disclosure"><summary>' + text(('Fontes', 'Sources'), 'span') + '</summary><div class="disclosure-body">'
-    chain += chain_source(('Arc · documentação técnica (em inglês)', 'Arc · technical documentation'), 'https://docs.arc.io/arc/concepts/system-overview.md',
+    chain += chain_source(('As notas técnicas da Arc (em inglês)', 'Arc’s technical notes (in English)'), 'https://docs.arc.io/arc/concepts/system-overview.md',
                           ('Diz que a privacidade ainda não está disponível. Não analisa a IMOBX.', 'Says privacy is not yet available. It does not review IMOBX.'))
-    chain += chain_source(('Lei 13.709 (LGPD), art. 18', 'Law 13.709 (LGPD), article 18'), 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm',
+    chain += chain_source(('Seus direitos pela lei brasileira de proteção de dados (LGPD)', 'Your rights under Brazil’s data protection law (LGPD)'), 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm',
                           ('Direitos de quem tem dados pessoais tratados. Não trata de blockchain.', 'The rights of people whose personal data is processed. It does not mention blockchains.')) + '</div></details></section>'
     chain += '<section id="request">' + text(ch['request_title'], 'h2') + text(ch['request_answer'], 'p', 'class="answer"')
     chain += '<ol class="step-strip">' + ''.join(text(st, 'li') for st in ch['request_steps']) + '</ol>'
@@ -728,15 +728,15 @@ def build_guide(root, page, tr, esc, language_controls):
     chain += '<section id="limits">' + text(ch['limits_title'], 'h2') + marked(*ch['limits_answer_marked'])
     chain += '<ul>' + ''.join(text(o, 'li') for o in ch['limits']) + '</ul>'
     chain += '<details class="disclosure"><summary>' + text(('Fontes', 'Sources'), 'span') + '</summary><div class="disclosure-body">'
-    chain += chain_source(('Circle · lançamento da rede principal da Arc, 16 de setembro de 2026', 'Circle · Arc mainnet launch, 16 September 2026'),
+    chain += chain_source(('O anúncio da Circle de que a Arc entrou em funcionamento (16 de setembro de 2026)', 'Circle’s announcement that Arc went live (16 September 2026)'),
                           'https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet',
                           ('Anuncia a rede e diz que nenhum regulador a aprovou. Não analisa a IMOBX.', 'Announces the network and says no regulator has approved it. It does not review IMOBX.'))
-    chain += chain_source(('Arc · empresas que validam a rede', 'Arc · the companies that validate the network'),
+    chain += chain_source(('As empresas que operam a rede Arc', 'The companies that run the Arc network'),
                           'https://www.arc.io/pressroom/circle-announces-founding-validator-cohort-and-major-integrations-for-arc-ahead-of-september-16-mainnet-launch',
                           ('Lista as empresas fundadoras. Não analisa a IMOBX.', 'Lists the founding companies. It does not review IMOBX.'))
-    chain += chain_source(('Circle · riscos do USDC', 'Circle · USDC risk factors'), 'https://www.circle.com/legal/usdc-risk-factors',
+    chain += chain_source(('A lista de riscos do USDC feita pela própria Circle', 'Circle’s own list of USDC risks'), 'https://www.circle.com/legal/usdc-risk-factors',
                           ('Diz que a Circle pode bloquear USDC. Não analisa a IMOBX.', 'Says Circle can freeze USDC. It does not review IMOBX.'))
-    chain += short_source('digital') + '</div></details></section>'
+    chain += '</div></details></section>'  # 'does not show that any of it works yet' is already beside the request steps
     chain += '<section class="closing-band" id="help">' + text(ch['closing']) + text(ch['button'], 'a', 'class="button act" href="contact.html"') + '</section>'
     chain += partner_line('blockchain.html') + '</main>'
     (root / 'blockchain.html').write_text(page('IMOBX | Shared records', chain, f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">',

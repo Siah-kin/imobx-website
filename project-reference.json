@@ -864,8 +864,8 @@
         {
           "url": "whitepaper.html#4-how-the-money-would-work",
           "label": [
-            "Ordem de uso do dinheiro",
-            "Order for using money"
+            "A ordem em que o dinheiro seria usado",
+            "The order money would be used in"
           ]
         },
         {
@@ -891,15 +891,15 @@
         {
           "url": "reference.html#source-cvm40",
           "label": [
-            "CVM e direitos do token",
-            "CVM and token rights"
+            "As regras do token e o regulador",
+            "Token rules and the regulator"
           ]
         },
         {
           "url": "reference.html#source-cvm249",
           "label": [
-            "Programa experimental CVM 249",
-            "CVM 249 experimental programme"
+            "O programa de testes do regulador",
+            "The regulator’s test programme"
           ]
         },
         {
@@ -952,8 +952,8 @@
         {
           "url": "roadmap.html#governance",
           "label": [
-            "Ostrom e decisões",
-            "Ostrom and decisions"
+            "Como funcionariam as decisões compartilhadas",
+            "How shared decisions would work"
           ]
         },
         {
@@ -1171,8 +1171,8 @@
     {
       "id": "cvm249",
       "label": [
-        "CVM: Resolução 249 de 13/10/2026",
-        "CVM: Resolution 249 of 13 October 2026"
+        "O programa de testes do regulador para registros digitais compartilhados (CVM, 13/10/2026)",
+        "The regulator’s test programme for shared digital records (CVM, 13 October 2026)"
       ],
       "url": "https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm",
       "scope": [
@@ -1231,8 +1231,8 @@
     {
       "id": "paid-outreach",
       "label": [
-        "FTC: divulgação de relações comerciais",
-        "FTC: disclosing brand relationships"
+        "Regras dos EUA sobre avisar quando a divulgação é paga (FTC)",
+        "US rules on saying when promotion is paid (FTC)"
       ],
       "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
       "scope": [
@@ -1243,8 +1243,8 @@
     {
       "id": "x-policy",
       "label": [
-        "X: política de parcerias pagas",
-        "X: paid-partnerships policy"
+        "As regras do X para parcerias pagas",
+        "X’s rules for paid partnerships"
       ],
       "url": "https://help.x.com/en/rules-and-policies/paid-partnerships-policy",
       "scope": [
