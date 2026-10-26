@@ -6,53 +6,57 @@ STEPS = [
     (('Fundo para casas', 'Fund for homes'),
      ('O dinheiro para construir, incluindo o que volta das compras.', 'Money for building, including what comes back from purchases.')),
     (('Obra', 'Building'),
-     ('Terreno e construção, com custos conferidos por alguém de fora.', 'Land and building, with costs checked by someone outside.')),
+     ('Terreno e construção a um custo conhecido.', 'Land and building at a known cost.')),
     (('A família entra', 'The family moves in'),
-     ('O contrato vem antes da mudança. Sem entrada.', 'The agreement comes before moving in. No down payment.')),
+     ('O contrato é assinado antes da mudança.', 'The agreement is signed before moving in.')),
     (('O pagamento de cada mês', 'Each month’s payment'),
      ('Parte compra a casa; outra parte paga manutenção e consertos.', 'Part buys the home; another part pays for upkeep and repairs.')),
     (('A casa é da família', 'The home is the family’s'),
-     ('Cumpridas as condições combinadas, a casa é registrada em nome da família, e o dinheiro volta ao fundo para a próxima casa.',
-      'Once the agreed conditions are met, the home is registered in the family’s name, and the money goes back to the fund for the next home.')),
+     ('Cumpridas as condições combinadas, a casa é registrada em nome da família.',
+      'Once the agreed conditions are met, the home is registered in the family’s name.')),
 ]
 
-SVG = '''<svg class="money-flow-art" viewBox="0 0 1000 285" aria-hidden="true">
+SVG = '''<svg class="money-flow-art" viewBox="0 0 1000 240" aria-hidden="true">
 <defs>
-<marker id="mf-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#193D4E"/></marker>
 <marker id="mf-head-water" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#4A90A4"/></marker>
-<clipPath id="mf-tank"><path d="M30 110H170V215H30Z"/></clipPath>
-<clipPath id="mf-home"><path d="M440 95H560L548 215H452Z"/></clipPath>
-<clipPath id="mf-reserve"><path d="M690 130H742L737 200H695Z"/></clipPath>
+<clipPath id="mf-tank"><path d="M40 70H160L150 175H50Z"/></clipPath>
+<clipPath id="mf-home"><path d="M440 70H560L550 175H450Z"/></clipPath>
+<clipPath id="mf-reserve"><path d="M690 100H750L745 165H695Z"/></clipPath>
+<clipPath id="mf-owned"><path d="M840 70H960L950 175H850Z"/></clipPath>
 </defs>
-<path class="mf-ground" d="M10 215H990"/>
-<path class="mf-vessel" d="M30 110H170V215H30Z"/>
-<g clip-path="url(#mf-tank)"><rect class="mf-water mf-tank-water" x="20" y="140" width="160" height="90"/></g>
-<path class="mf-line" d="M30 110H170V215H30Z"/>
-<path class="mf-stream mf-pipe-out" d="M170 195H245"/>
-<path class="mf-line mf-dashed" d="M250 150 305 110l55 40M260 145v70h90v-70"/>
-<path class="mf-line" d="M392 192H428" marker-end="url(#mf-head)"/>
-<path class="mf-vessel" d="M440 95H560L548 215H452Z"/>
-<g clip-path="url(#mf-home)"><rect class="mf-water mf-home-water" x="430" y="122" width="140" height="110"/></g>
-<path class="mf-line" d="M440 95H560L548 215H452Z"/><path class="mf-line" d="M432 95h136"/>
-<path class="mf-mark" d="M482 186 500 170l18 16M486 183v20h28v-20"/>
-<path class="mf-stream mf-pay" d="M640 0v40"/>
-<circle class="mf-valve" cx="640" cy="50" r="9"/>
-<path class="mf-stream mf-pay-home" d="M631 50c-36 0-70 6-82 40"/>
-<path class="mf-stream mf-pay-reserve" d="M649 50c32 0 62 12 67 75"/>
-<path class="mf-vessel" d="M690 130H742L737 200H695Z"/>
-<g clip-path="url(#mf-reserve)"><rect class="mf-water mf-reserve-water" x="684" y="168" width="64" height="40"/></g>
-<path class="mf-line" d="M690 130H742L737 200H695Z"/><path class="mf-line" d="M684 130h64"/>
-<path class="mf-thin" d="M704 152h24M716 140v24"/>
-<path class="mf-line" d="M550 205C620 238 790 238 852 192" marker-end="url(#mf-head)"/>
-<path class="mf-vessel" d="M860 105H925L940 120V205H860Z"/>
-<path class="mf-line" d="M860 105H925L940 120V205H860ZM925 105V120H940M875 132H925M875 147H915"/>
-<path class="mf-mark" d="M880 177l12 12 22-26"/>
-<path class="mf-stream mf-return" d="M900 205V258H100V222" marker-end="url(#mf-head-water)"/>
-<g class="mf-badges"><rect x="88" y="16" width="24" height="24"/><text x="100" y="33">1</text>
-<rect x="288" y="16" width="24" height="24"/><text x="300" y="33">2</text>
-<rect x="488" y="16" width="24" height="24"/><text x="500" y="33">3</text>
-<rect x="748" y="16" width="24" height="24"/><text x="760" y="33">4</text>
-<rect x="888" y="16" width="24" height="24"/><text x="900" y="33">5</text></g>
+<path class="mf-ground" d="M10 178H990" fill="none" stroke="#D9E3E8" stroke-width="2"/>
+<!-- the fund: a bucket -->
+<path d="M40 70H160L150 175H50Z" fill="#fff"/>
+<g clip-path="url(#mf-tank)"><rect class="mf-water mf-tank-water" x="30" y="100" width="140" height="90" fill="#4A90A4" fill-opacity=".55"/></g>
+<path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M40 70H160L150 175H50Z"/><path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M32 70h136"/>
+<!-- money for building runs to the building site -->
+<path class="mf-stream mf-pipe-out" fill="none" stroke="#4A90A4" stroke-width="6" stroke-linecap="round" d="M154 140H246"/>
+<!-- building: a bucket still being made -->
+<path d="M240 70H360L350 175H250Z" fill="#fff"/>
+<path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" d="M240 70H360L350 175H250Z"/>
+<path fill="none" stroke="#276578" stroke-width="2.2" stroke-dasharray="4 4" d="M282 150 300 134l18 16M286 147v18h28v-18"/>
+<path class="mf-stream" fill="none" stroke="#4A90A4" stroke-width="6" stroke-linecap="round" d="M354 140H446"/>
+<!-- the family's home: a bucket that fills with each month's payment -->
+<path d="M440 70H560L550 175H450Z" fill="#fff"/>
+<g clip-path="url(#mf-home)"><rect class="mf-water mf-home-water" x="430" y="112" width="140" height="80" fill="#4A90A4" fill-opacity=".55"/></g>
+<path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M440 70H560L550 175H450Z"/><path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M432 70h136"/>
+<path fill="none" stroke="#276578" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M482 156 500 140l18 16M486 153v18h28v-18"/>
+<!-- each month's payment splits: part buys the home, part goes to upkeep and repairs -->
+<path class="mf-stream mf-pay" fill="none" stroke="#4A90A4" stroke-width="6" stroke-linecap="round" d="M640 0v26"/>
+<circle class="mf-valve" cx="640" cy="36" r="9" fill="#fff" stroke="#193D4E" stroke-width="2.5"/>
+<path class="mf-stream mf-pay-home" fill="none" stroke="#4A90A4" stroke-width="6" stroke-linecap="round" d="M631 36c-40 0-70 6-80 34"/>
+<path class="mf-stream mf-pay-reserve" fill="none" stroke="#4A90A4" stroke-width="6" stroke-linecap="round" d="M649 36c34 0 70 14 72 62"/>
+<path d="M690 100H750L745 165H695Z" fill="#fff"/>
+<g clip-path="url(#mf-reserve)"><rect class="mf-water mf-reserve-water" x="684" y="135" width="72" height="40" fill="#4A90A4" fill-opacity=".55"/></g>
+<path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M690 100H750L745 165H695Z"/><path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M684 100h72"/>
+<path fill="none" stroke="#526571" stroke-width="2" stroke-linecap="round" d="M708 122h24M720 110v24"/>
+<!-- the home is the family's: the same bucket, full -->
+<path d="M840 70H960L950 175H850Z" fill="#fff"/>
+<g clip-path="url(#mf-owned)"><rect x="830" y="76" width="140" height="110" fill="#4A90A4" fill-opacity=".55"/></g>
+<path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M840 70H960L950 175H850Z"/><path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M832 70h136"/>
+<path fill="none" stroke="#276578" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M882 156 900 140l18 16M886 153v18h28v-18"/>
+<!-- what the family pays towards the purchase goes back to the fund for the next home -->
+<path class="mf-stream mf-return" fill="none" stroke="#4A90A4" stroke-width="5" stroke-linecap="round" stroke-dasharray="14 10" d="M500 178V222H100V184" marker-end="url(#mf-head-water)"/>
 </svg>'''
 
 
@@ -103,7 +107,6 @@ def _cascade_svg():
         if i < 4:
             spill = 'mf-stream cc-spill cc-s%d' % i + (' mf-trickle' if i == 3 else '')
             parts.append(f'<path class="{spill}" d="M{x+65} {t+2}C{x+110} {t+2} {x+135} {t+15} {x+170} {t+47}"/>')
-        parts.append(f'<g class="mf-badges"><rect x="{x-12}" y="{t-34}" width="24" height="24"/><text x="{x}" y="{t-17}">{i+1}</text></g>')
     parts.append('</svg>')
     return ''.join(parts)
 
@@ -133,26 +136,43 @@ ROUTE_STEPS = [
 
 
 def _route_svg():
-    cx = [85, 250, 415, 585, 750, 915]
-    y = 100
-    icon = {
-        0: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-16} {y}L{x} {y-14}L{x+16} {y}M{x-12} {y-3}v18h24v-18"/><text class="mf-glyph" fill="#276578" text-anchor="middle" font-size="11" font-weight="700" x="{x}" y="{y+12}">R$</text>',
-        1: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-18} {y-8}L{x} {y-20}L{x+18} {y-8}ZM{x-12} {y-5}v16M{x} {y-5}v16M{x+12} {y-5}v16M{x-18} {y+14}h36"/>',
-        2: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-16} {y-8}h28M{x+6} {y-14}l6 6-6 6M{x+16} {y+8}h-28M{x-6} {y+2}l-6 6 6 6"/>',
-        3: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-20} {y-6}h10v10h-10zM{x-5} {y-6}h10v10h-10zM{x+10} {y-6}h10v10h-10zM{x-10} {y-1}h5M{x+5} {y-1}h5M{x-20} {y+13}h40"/>',
-        4: lambda x: f'<path class="rt-icon" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-12} {y-18}h24v34h-24zM{x-6} {y+1}l5 5 9-11"/>',
-        5: lambda x: f'<path class="rt-icon mf-dashed" fill="none" stroke="#276578" stroke-width="2.2" d="M{x-16} {y}L{x} {y-14}L{x+16} {y}M{x-12} {y-3}v18h24v-18"/><text class="mf-glyph" fill="#276578" text-anchor="middle" font-size="11" font-weight="700" x="{x}" y="{y+12}">R$</text>',
-    }
-    parts = ['<svg class="money-flow-art money-route-art" viewBox="0 0 1000 175" aria-hidden="true">']
-    for i in range(5):
-        cls = 'mf-stream rt-pipe rt-p%d' % i + (' rt-digital' if i in (2, 3) else '')
-        parts.append(f'<path class="{cls}" fill="none" stroke="#4A90A4" stroke-width="6" d="M{cx[i]+35} {y}H{cx[i+1]-35}"/>')
-    for i, x in enumerate(cx):
-        parts.append(f'<rect class="rt-box" x="{x-35}" y="{y-35}" width="70" height="70" fill="#fff" stroke="#9DC3CF" stroke-width="2"/>')
-        parts.append(icon[i](x))
-        parts.append(f'<g class="mf-badges"><rect x="{x-12}" y="22" width="24" height="24" fill="#276578"/><text x="{x}" y="39" fill="#fff" text-anchor="middle">{i+1}</text></g>')
-        if i in (1, 4):  # the check points: the hint of orange
-            parts.append(f'<path class="rt-check" d="M{x+35} {y-45}l10 10-10 10-10-10z" fill="#FF8C00" stroke="#193D4E" stroke-width="1.5"/>')
+    """The payment as water in one pipe, drawn only with buckets, pipe parts and a valve (25 Oct, second review):
+    the family's bucket, IMOBX's bucket, a coupling where reais become a digital record, a window in the pipe that
+    everyone can see through, the approval valve and the builder's bucket. The digital stretch is dashed."""
+    N = 'fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"'
+    T = 'fill="none" stroke="#276578" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"'
+    W = 'fill="#4A90A4" fill-opacity=".55"'
+    P = 'fill="none" stroke="#4A90A4" stroke-width="6" stroke-linecap="round"'
+    D = P + ' stroke-dasharray="12 9"'
+    y = 112
+    def bucket(cx, level, mark=''):
+        b = f'M{cx-40} 64H{cx+40}L{cx+33} 150H{cx-33}Z'
+        return (f'<path d="{b}" fill="#fff"/><clipPath id="rb{cx}"><path d="{b}"/></clipPath>'
+                f'<g clip-path="url(#rb{cx})"><rect x="{cx-45}" y="{level}" width="90" height="100" {W}/></g>'
+                f'<path {N} d="{b}"/><path {N} d="M{cx-46} 64h92"/>{mark}')
+    parts = ['<svg class="money-flow-art money-route-art" viewBox="0 40 1000 120" aria-hidden="true">',
+             '<path d="M10 153H990" fill="none" stroke="#D9E3E8" stroke-width="2"/>']
+    parts.append(f'<path class="rt-pipe rt-p0" {P} d="M120 {y}H210"/>')
+    parts.append(f'<path class="rt-pipe rt-p1" {P} d="M290 {y}H395"/>')
+    parts.append(f'<path class="rt-pipe rt-p2 rt-digital" {D} d="M435 {y}H548"/>')
+    parts.append(f'<path class="rt-pipe rt-p3 rt-digital" {D} d="M622 {y}H728"/>')
+    parts.append(f'<path class="rt-pipe rt-p4" {P} d="M772 {y}H880"/>')
+    # 1 the family pays in reais
+    parts.append(bucket(85, 96, f'<path {T} d="M72 134 85 122l13 12M76 131v13h18v-13"/>'))
+    # 2 IMOBX's account: the same bucket, taxes, upkeep and reserves settle first
+    parts.append(bucket(250, 104))
+    # 3 the coupling where reais become a digital record: a sleeve on the pipe
+    parts.append(f'<rect x="395" y="{y-14}" width="40" height="28" fill="#fff"/><rect x="395" y="{y-14}" width="40" height="28" {N}/>'
+                 f'<path {N} d="M405 {y-14}v28M425 {y-14}v28"/>')
+    # 4 the shared record: a window in the pipe that everyone can see through
+    parts.append(f'<rect x="548" y="{y-18}" width="74" height="36" fill="#fff"/><rect x="548" y="{y-6}" width="74" height="12" {W}/>'
+                 f'<rect x="548" y="{y-18}" width="74" height="36" {N}/><path {T} d="M560 {y-12}h12M560 {y+12}h12"/>')
+    # 5 the approval valve the builder cannot open alone
+    parts.append(f'<path d="M728 {y-16}L750 {y}L728 {y+16}ZM772 {y-16}L750 {y}L772 {y+16}Z" fill="#fff"/>'
+                 f'<path {N} d="M728 {y-16}L750 {y}L728 {y+16}ZM772 {y-16}L750 {y}L772 {y+16}Z"/>'
+                 f'<path {N} d="M750 {y}V{y-34}M738 {y-34}h24"/>')
+    # 6 the builder is paid in reais: a bucket filling, with the building under way
+    parts.append(bucket(915, 118, '<path fill="none" stroke="#276578" stroke-width="2.2" stroke-dasharray="4 4" d="M902 134 915 122l13 12M906 131v13h18v-13"/>'))
     parts.append('</svg>')
     return ''.join(parts)
 

@@ -12,8 +12,9 @@ def build_contact(root, page, tr, esc, version):
     body = '<main class="paper contact-page" id="main">'
     if contact['telegram']:
         body += t(('Apresente-se à IMOBX', 'Introduce yourself to IMOBX'), 'h1')
-        body += t(('Prepare aqui sua apresentação, copie e envie à equipe pelo Telegram. O site não envia nada sozinho. Escolha o assunto mais próximo do que procura; as perguntas mudam conforme sua escolha.',
-                   'Prepare your introduction here, copy it and send it to the team on Telegram. The website sends nothing itself. Choose the subject closest to what you need; the questions change with your choice.'))
+        body += '<div class="key-card">' + t(('Prepare aqui sua apresentação, copie e envie à equipe pelo Telegram. O site não envia nada sozinho.',
+                   'Prepare your introduction here, copy it and send it to the team on Telegram. The website sends nothing itself.')) + '</div>'
+        body += t(('Escolha o assunto mais próximo do que procura; as perguntas mudam conforme sua escolha.', 'Choose the subject closest to what you need; the questions change with your choice.'))
     else:
       body += t(('Prepare sua mensagem para a IMOBX', 'Prepare your message to IMOBX'), 'h1')
       body += t(('Ainda não há como enviar mensagens à equipe por este site. Você pode preparar e guardar sua mensagem para quando houver um contato. Escolha o assunto mais próximo do que procura; as perguntas mudam conforme sua escolha.', 'There is not yet a way to send messages to the team through this site. You can prepare and keep your message for when a contact exists. Choose the subject closest to what you need; the questions change with your choice.'))
@@ -51,7 +52,7 @@ def build_contact(root, page, tr, esc, version):
     if contact['email']:
         body += t(('Abrir no e-mail', 'Open in email'), 'a', f'id="email-enquiry" class="button" href="mailto:{esc(contact["email"])}"')
     if contact['telegram']:
-        body += t(('Abrir contato no Telegram', 'Open Telegram contact'), 'a', f'class="button" href="{esc(contact["telegram"])}" target="_blank" rel="noopener noreferrer"')
+        body += t(('Abrir contato no Telegram', 'Open Telegram contact'), 'a', f'class="button act" href="{esc(contact["telegram"])}" target="_blank" rel="noopener noreferrer"')
     body += t(('Editar respostas', 'Edit answers'), 'button', 'type="button" id="edit-enquiry"') + '</div>'
     if contact['telegram']:
         body += t(('No Telegram, a central aparece como The Flock ou Arctide.', 'On Telegram the help desk shows as The Flock or Arctide.'), 'p', 'class="fine"')

@@ -1,23 +1,26 @@
 'use strict';
+// Three languages (owner, 26 Oct 2026): Portuguese first, English, Dutch. A string without Dutch falls back to English.
+const LANGS = { pt: 'pt-BR', en: 'en', nl: 'nl' };
+const cap = language => language.charAt(0).toUpperCase() + language.slice(1);
 function setLanguage(language) {
-  document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en';
+  if (!LANGS[language]) language = 'pt';
+  document.documentElement.lang = LANGS[language];
   document.querySelectorAll('[data-pt][data-en]').forEach(element => {
-    element.textContent = element.dataset[language];
+    element.textContent = element.dataset[language] || element.dataset.en;
   });
   document.querySelectorAll('img[data-alt-pt][data-alt-en]').forEach(element => {
-    element.alt = language === 'pt' ? element.dataset.altPt : element.dataset.altEn;
+    element.alt = element.dataset['alt' + cap(language)] || element.dataset.altEn;
   });
   document.querySelectorAll('[data-aria-pt][data-aria-en]').forEach(element => {
-    element.setAttribute('aria-label', language === 'pt' ? element.dataset.ariaPt : element.dataset.ariaEn);
+    element.setAttribute('aria-label', element.dataset['aria' + cap(language)] || element.dataset.ariaEn);
   });
   document.querySelectorAll('[data-language]').forEach(control => {
     control.setAttribute('aria-pressed', String(control.dataset.language === language));
   });
-  const titleKey = language === 'pt' ? 'titlePt' : 'titleEn';
-  document.title = document.body.dataset[titleKey] || (language === 'pt'
-    ? 'IMOBX | Proposta de piloto no Rio' : 'IMOBX | Proposed Rio housing pilot');
+  document.title = document.body.dataset['title' + cap(language)] || document.body.dataset.titleEn
+    || { pt: 'IMOBX | Proposta de piloto no Rio', en: 'IMOBX | Proposed Rio housing pilot', nl: 'IMOBX | Voorgestelde woonpilot in Rio' }[language];
   const navigation = document.querySelector('nav');
-  if (navigation) navigation.setAttribute('aria-label', language === 'pt' ? 'Principal' : 'Main');
+  if (navigation) navigation.setAttribute('aria-label', { pt: 'Principal', en: 'Main', nl: 'Hoofdmenu' }[language]);
   // Tables: each cell carries its column name so rows can stack on a phone.
   document.querySelectorAll('.guide-table table').forEach(table => {
     const names = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
@@ -31,10 +34,10 @@ function setLanguage(language) {
 document.querySelectorAll('[data-language]').forEach(button => {
   button.addEventListener('click', () => setLanguage(button.dataset.language));
 });
-let preferredLanguage = document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
+let preferredLanguage = document.documentElement.lang.startsWith('pt') ? 'pt' : (document.documentElement.lang.startsWith('nl') ? 'nl' : 'en');
 try {
   const savedLanguage = localStorage.getItem('imobx-language');
-  if (savedLanguage === 'pt' || savedLanguage === 'en') preferredLanguage = savedLanguage;
+  if (LANGS[savedLanguage]) preferredLanguage = savedLanguage;
 } catch (_) {}
 setLanguage(preferredLanguage);
 
@@ -163,3 +166,21 @@ function initImageViewer() {
 }
 initCarousels();
 initImageViewer();
+
+// Phone menu (25 Oct 2026): one button opens the main links as a list; without JavaScript the links stay visible.
+(function () {
+  var nav = document.querySelector('[data-site-nav]');
+  var button = nav && nav.querySelector('.menu-toggle');
+  if (!nav || !button) return;
+  document.documentElement.classList.add('js-menu');
+  button.addEventListener('click', function () {
+    var open = nav.classList.toggle('menu-open');
+    button.setAttribute('aria-expanded', String(open));
+    var lang = (document.documentElement.lang || 'pt').slice(0, 2);
+    button.dataset.pt = open ? 'Fechar' : 'Menu'; button.dataset.en = open ? 'Close' : 'Menu'; button.dataset.nl = open ? 'Sluiten' : 'Menu';
+    button.textContent = open ? ({ pt: 'Fechar', en: 'Close', nl: 'Sluiten' }[lang] || 'Close') : 'Menu';
+  });
+  nav.querySelectorAll('.site-links a').forEach(function (link) {
+    link.addEventListener('click', function () { nav.classList.remove('menu-open'); button.setAttribute('aria-expanded', 'false'); });
+  });
+})();

@@ -3,7 +3,7 @@
 .roadmap-overview{list-style:none;padding:0;margin:30px 0;display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
 .roadmap-overview li{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
 .roadmap-overview h3{margin:0 0 6px}.roadmap-overview p{margin:0}
-.guide-paper .resource-language{padding:0;margin-bottom:28px}.guide-lead{font-size:21px!important;line-height:1.5;max-width:720px}
+.guide-paper .resource-language{padding:0;margin-bottom:28px}.guide-lead{font-size:21px;line-height:1.5;max-width:720px}
 .guide-status{padding:4px 22px;background:var(--pale);margin:32px 0}
 .guide-status h2{font-size:22px;margin:16px 0}.guide-jump{display:flex;flex-wrap:wrap;gap:10px 22px;margin:24px 0;padding:12px 0;border-block:1px solid var(--line)}
 .guide-jump a,.guide-more{display:inline-flex;align-items:center;min-height:44px}.guide-more{margin-top:20px}
@@ -156,7 +156,7 @@ section.content>p,.section-head p,.money p,.two p{max-width:72ch}
 .home-village-vision .village-illustration{max-width:100%;margin:24px 0}
 .home-village-vision>a{display:inline-flex;align-items:center;min-height:44px;font-size:16px}
 @media(max-width:900px){.home-model-layout{grid-template-columns:1fr;gap:56px}.home-model-heading{margin-bottom:36px}.home-village-vision{max-width:650px;padding-top:32px}}
-.cost-comparison{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin:32px 0}.cost-comparison article{border-top:1px solid var(--line);padding-top:20px}.cost-comparison h3{font-size:20px;margin:0 0 20px}.cost-comparison p{max-width:60ch}.cost-number{font-size:clamp(26px,3vw,37px);line-height:1.2;font-weight:600;color:var(--ink);letter-spacing:-1px;margin:0 0 20px}
+.cost-comparison{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin:32px 0}.cost-comparison article{border-top:1px solid var(--line);padding-top:20px}.cost-comparison h3{font-size:20px;margin:0 0 20px}.cost-comparison p{max-width:60ch}.cost-number{font-size:clamp(26px,3vw,37px);line-height:1.2;font-weight:600;color:var(--ink);letter-spacing:-0.02em;margin:0 0 20px}
 .budget-table{max-width:760px;overflow-x:auto}.budget-table table{border-collapse:collapse;width:100%;font-size:15px}.budget-table th,.budget-table td{border-bottom:1px solid var(--line);padding:12px 16px 12px 0;text-align:left}.budget-table th:last-child,.budget-table td:last-child{text-align:right;white-space:nowrap}
 .model-carousel{margin:32px 0 44px;max-width:100%;min-width:0}.gallery-hint{margin-bottom:18px}
 .carousel-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:auto;overscroll-behavior-x:contain;scrollbar-width:thin;min-width:0;border:1px solid var(--line);background:#fff}
@@ -336,3 +336,34 @@ section.archive-section>h2{font-size:clamp(26px,3vw,32px)}
 .flow-phases{display:block;margin:16px 0}.flow-phases>li{border:0;background:none;padding:0 0 14px}.flow-phases>li::after{display:none}
 @media(min-width:701px){.why-page .flow{grid-template-columns:repeat(5,1fr)}}
 main>.partner-line{width:min(1200px,90%);margin-left:auto;margin-right:auto}
+/* Phone menu (25 Oct 2026) */
+.menu-toggle{display:none}
+@media (max-width:700px){
+  .js-menu .menu-toggle{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid #276578;background:#fff;color:#276578;font:700 15px Arial,Helvetica,sans-serif;grid-column:2;grid-row:1;justify-self:end}
+  .js-menu .site-nav{grid-template-columns:1fr auto auto}
+  .js-menu .site-nav .lang{grid-column:3;grid-row:1}
+  .js-menu .site-nav .site-links{display:none}
+  .js-menu .site-nav.menu-open .site-links{display:flex;flex-direction:column;align-items:flex-start;gap:0;grid-column:1 / -1;grid-row:2;padding:8px 0 12px}
+  .js-menu .site-nav.menu-open .site-links a{display:block;width:100%;padding:12px 0;border-top:1px solid #D9E3E8;text-align:left}
+  .review{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+
+/* Attention parts on every page (owner, 25 Oct): one orange card and one orange action per page.
+   Pastel #FDF1E4 for areas, dark #A84B00 / #B85500 for text and the button (both pass contrast), bright #E07A00 only as a thin mark. */
+.key-card{max-width:36em;margin:0 0 28px;padding:20px 24px;background:#FDF1E4;box-sizing:border-box}
+.key-card p{margin:0;font-size:19px;line-height:1.5;font-weight:700;color:#A84B00}
+.key-card p+p{margin-top:8px}
+.button.act,a.button.act{background:#B85500;border-color:#B85500;color:#fff}
+.button.act:hover,a.button.act:hover{background:#A84B00;border-color:#A84B00;color:#fff}
+.page-action{margin:0 0 32px}
+mark.hint{background:#FDF1E4;color:inherit;padding:2px 4px;box-shadow:inset 0 -2px 0 #E07A00;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@media (max-width:600px){.key-card{padding:16px}}
+/* Three languages (26 Oct 2026): a little less space between menu items so the longer Dutch labels fit on one line
+   on wide screens; where they still would not, Dutch uses the same tidy two-row header as tablets (menu on its own row). */
+@media (min-width:1001px){.site-links{gap:4px 16px}}
+@media (min-width:1001px) and (max-width:1320px){
+  html[lang="nl"] .site-nav{grid-template-columns:1fr auto;gap:4px 20px;padding-block:10px}
+  html[lang="nl"] .site-nav .wordmark{grid-column:1;grid-row:1}
+  html[lang="nl"] .site-nav .lang{grid-column:2;grid-row:1}
+  html[lang="nl"] .site-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:0 22px}
+}

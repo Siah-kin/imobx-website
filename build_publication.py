@@ -55,8 +55,8 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
 def status_bar_text():
     """Visitor-facing status bar: the project status and the date, without a version number."""
     year, month, day = (int(part) for part in REVIEW_DATE.split('-'))
-    pt = f'Projeto em preparação · atualizado em {day} de {MONTHS_PT[month - 1]} de {year}'
-    en = f'Project in preparation · updated {day} {MONTHS_EN[month - 1]} {year}'
+    pt = f'Em preparação · atualizado em {day:02d}/{month:02d}/{year}'
+    en = f'In preparation · updated {day} {MONTHS_EN[month - 1][:3]} {year}'
     return pt, en
 
 
@@ -67,7 +67,8 @@ def site_header(lang='pt-BR', current=''):
         ('index.html', 'O projeto', 'The project'),
         ('rent-to-own.html', 'Como funciona', 'How it works'),
         ('roadmap.html', 'Etapas do projeto', 'Project stages'),
-        ('transparency.html', 'Financiamento e gastos', 'Funding & spending'),
+        ('transparency.html', 'Financiamento e gastos', 'Funding and spending'),
+        ('blockchain.html', 'Registros compartilhados', 'Shared records'),
         ('properties.html', 'Desenhos e fotos', 'Drawings and photos'),
         ('resources.html', 'Documentos', 'Documents'),
         ('contact.html', 'Participar', 'Take part'),
@@ -80,14 +81,17 @@ def site_header(lang='pt-BR', current=''):
             'aria-label="Principal" data-aria-pt="Principal" data-aria-en="Main">'
             '<a class="wordmark" href="index.html" aria-label="IMOBX"><img class="brand-logo" '
             'src="assets/imobx-logo-light.png" width="94" height="94" alt="IMOBX"></a>'
-            '<div class="site-links">' + links + '</div>'
-            '<div class="lang" role="group" aria-label="Idioma / Language">'
+            '<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-links" '
+            'data-pt="Menu" data-en="Menu">Menu</button>'
+            '<div class="site-links" id="site-links">' + links + '</div>'
+            '<div class="lang" role="group" aria-label="Idioma / Language / Taal">'
             f'<button type="button" data-language="pt" aria-pressed="{str(portuguese).lower()}" aria-label="Português brasileiro">PT</button>'
             f'<button type="button" data-language="en" aria-pressed="{str(not portuguese).lower()}" aria-label="English">EN</button>'
+            '<button type="button" data-language="nl" aria-pressed="false" aria-label="Nederlands">NL</button>'
             '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, founder, and John (communication and digital tools). The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida.</p><p><a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a> · <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, founder, and John (communication and digital tools). The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida.</p><p><a href="transparency.html" data-pt="Financiamento e gastos" data-en="Funding and spending">Financiamento e gastos</a>&nbsp;· <a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a>&nbsp;· <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a>&nbsp;· <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None):
@@ -96,9 +100,9 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None):
     if 'assets/site.js' not in script:
         script += '<script src="assets/site.js" defer></script>'
     current = {'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
-               'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html',
+               'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html',
                'IMOBX | Renting and buying a home': 'rent-to-own.html',
-               'IMOBX | Take part': 'contact.html'}.get(title, '')
+               'IMOBX | Take part': 'contact.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
     document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="IMOBX housing pilot: model, roadmap and project resources.">
@@ -186,7 +190,13 @@ def resource_section(standalone=False):
     intro_en = 'The whitepaper explains the housing proposal and its funding. The pitch deck presents the project to partners. The pilot and building guide covers the work and responsibilities. All three documents are English drafts.'
     body = '<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>'
     body += translated('Documentos do projeto', 'Project documents', 'h1' if standalone else 'h2')
-    body += translated(intro_pt, intro_en, 'p')
+    if standalone:
+        # attention pass (owner-approved package, 25 Oct): the first sentence as the card, one orange action
+        first_pt, rest_pt = intro_pt.split('. ', 1); first_en, rest_en = intro_en.split('. ', 1)
+        body += '<div class="key-card">' + translated(first_pt + '.', first_en + '.', 'p') + '</div>' + translated(rest_pt, rest_en, 'p')
+        body += '<p class="page-action">' + translated('Ir para o download do whitepaper', 'Go to the whitepaper download', 'a', 'class="button act" href="whitepaper.html"') + '</p>'
+    else:
+        body += translated(intro_pt, intro_en, 'p')
     if not standalone:
         rows = []
         for key in document_ids:
@@ -249,8 +259,7 @@ for name in ['index.html', 'properties.html']:
     source, count = re.subn(r'<p class="partner-line">.*?</p>',
                            lambda _: partner_line_html(name, lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)),
                            source, count=1, flags=re.S)
-    if count != 1:
-        raise ValueError(f'Expected one partner line in {name}.')
+    # 25 Oct 2026: the partner links live once, in the footer; pages no longer carry their own partner line.
     target.write_text(source)
 
 
@@ -300,6 +309,8 @@ for doc, doc_title in GATEWAYS:
     build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title)
 
 if PREVIEW_ONLY:
+    from add_dutch import add_dutch  # the preview gets its Dutch too; a full build adds it again after the exports
+    add_dutch(ROOT)
     print('Rendered local HTML for editorial and browser review. Existing exports are unchanged.')
     raise SystemExit(0)
 
@@ -467,6 +478,9 @@ pdf.save()
 # Each old section address now points at its page in the rebuilt PDF.
 for doc, doc_title in GATEWAYS:
     build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title, pages_from_pdf(ROOT, doc))
+# Dutch beside Portuguese and English (owner, 26 Oct 2026); the gate fails while any string lacks Dutch.
+from add_dutch import add_dutch
+add_dutch(ROOT)
 write_manifest(ROOT)
 
 

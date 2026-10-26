@@ -25,7 +25,10 @@ def build_reference(root, page, tr, esc):
         return tr(*pair, tag, attrs)
 
     body = '<main class="paper guide-paper reference-page" id="main">'
-    body += text(data['title'], 'h1') + text(data['intro'])
+    body += text(data['title'], 'h1')
+    body += '<div class="key-card">' + text(('Ainda faltam pessoas para algumas funções, entre elas assessoria jurídica, contabilidade e a responsabilidade pelo orçamento.',
+                                             'Some roles are still open, including legal adviser, accountant and budget lead.')) + '</div>'
+    body += text(data['intro']) + '<p class="page-action">' + text(('Oferecer ajuda', 'Offer your help'), 'a', 'class="button act" href="contact.html"') + '</p>'
     body += text((LABEL_PT, LABEL_EN), 'p', 'class="resource-meta"')
     body += '<nav class="guide-jump" aria-label="Sections">'
     body += text(('Onde está cada assunto', 'Where each subject is'), 'a', 'href="#subjects"')

@@ -1303,8 +1303,8 @@
       }
     ],
     "reporting_title": [
-      "O que publicar quando houver operação",
-      "What to publish once operations exist"
+      "O que será publicado?",
+      "What will be reported?"
     ],
     "reporting_intro": [
       "Quando a operação existir, queremos publicar um resumo das contas, com o período e quem preparou e conferiu os números. A lista abaixo mostra o que esse relatório deve incluir. Queremos que moradores consultem acordos, acompanhem pedidos e vejam decisões, e que quem financia o projeto possa conferir as contas. Pagamentos na blockchain poderiam ajudar nessa conferência; os direitos de cada pessoa precisam estar escritos antes.",
@@ -1825,8 +1825,8 @@
       "The first project is in preparation. Under the proposal, each home’s price and monthly payment start from what it costs to build and what the family can pay. The proposal has no down payment, and both are agreed in writing before the family moves in. This page explains the proposed model. It is not an offer of an available home."
     ],
     "steps_title": [
-      "Como os pagamentos levam à compra",
-      "How payments lead to ownership"
+      "Como o dinheiro circula?",
+      "How does the money move?"
     ],
     "steps": [
       {
@@ -1879,8 +1879,8 @@
       ]
     ],
     "repairs_title": [
-      "Quem cuida de um reparo",
-      "Who handles a repair"
+      "Quem cuida de um reparo?",
+      "Who handles a repair?"
     ],
     "repairs": [
       [
@@ -1893,8 +1893,8 @@
       ]
     ],
     "decisions_title": [
-      "O que os moradores decidem",
-      "What residents decide"
+      "Quem decide o quê?",
+      "Who decides what?"
     ],
     "decisions": [
       [
@@ -1916,7 +1916,7 @@
     ],
     "hardship": [
       [
-        "O acordo diria como tratar uma dificuldade temporária, como ficam os valores já creditados e o que acontece se a família sair ou a IMOBX não puder continuar. Devolução, prazo de tolerância ou desconto só valem quando estiverem escritos no acordo.",
+        "O contrato diria como tratar uma dificuldade temporária, como ficam os valores já creditados e o que acontece se a família sair ou a IMOBX não puder continuar. Devolução, prazo de tolerância ou desconto só valem quando estiverem escritos no contrato.",
         "The agreement would say how to handle temporary hardship, how amounts already credited are kept and what happens if the family leaves or IMOBX cannot continue. A refund, grace period or discount applies only once it is written into the agreement."
       ]
     ],
@@ -2041,7 +2041,7 @@
       "The wider ambition is neighbourhoods where people own their homes and sustain their livelihoods. Food growing, renewable energy and community services are possibilities to develop with residents and partners; none of this is organised yet."
     ]
   },
-  "budgets_html": "<h2 data-pt=\"O que as primeiras casas custariam\" data-en=\"What the first homes would cost\">O que as primeiras casas custariam</h2><p data-pt=\"São custos de construção em dólares, não o preço nem o pagamento mensal de uma família; o preço de cada casa é definido em reais. Os dois valores são de US$27.777: nos lofts, é o total dos dois; na vila, é o custo por casa.\" data-en=\"These are construction costs in US dollars, not a family’s price or monthly payment; each home’s price is set in reais. Both figures are US$27,777: for the two lofts it is the total; for the village it is the cost per home.\">São custos de construção em dólares, não o preço nem o pagamento mensal de uma família; o preço de cada casa é definido em reais. Os dois valores são de US$27.777: nos lofts, é o total dos dois; na vila, é o custo por casa.</p><div class=\"cost-comparison\"><article><h3 data-pt=\"Dois lofts · janeiro 2026\" data-en=\"Two lofts · January 2026\">Dois lofts · janeiro 2026</h3><p class=\"cost-number\" data-pt=\"US$27.777 no total\" data-en=\"US$27,777 combined\">US$27.777 no total</p><p data-pt=\"Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.\" data-en=\"Construction figure for both lofts together: US$13,888.50 per loft by simple division. Rafael reported a contract awaiting the first deposit at that time.\">Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.</p><p data-pt=\"Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.\" data-en=\"We still need to record what the contract includes, the lofts’ floor areas and the final cost.\">Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.</p></article><article><h3 data-pt=\"Vila de 36 casas · novembro 2025\" data-en=\"36-home village · November 2025\">Vila de 36 casas · novembro 2025</h3><p class=\"cost-number\" data-pt=\"US$27.777 por casa\" data-en=\"US$27,777 per home\">US$27.777 por casa</p><p data-pt=\"Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.\" data-en=\"Rafael’s budget for each 45 m² home uses CUB/SINAPI references, direct purchasing and shared costs. It includes land, construction, solar and shared works. The plan is to build at least 36 homes together: US$999,972 over 12 months.\">Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.</p><p data-pt=\"O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.\" data-en=\"The budget and timing need to fit the selected site and available money.\">O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.</p></article></div><details class=\"disclosure\"><summary><span data-pt=\"Ver os itens do orçamento da vila\" data-en=\"View the village budget’s cost items\">Ver os itens do orçamento da vila</span></summary><div class=\"disclosure-body\"><div class=\"budget-table\"><table><thead><tr><th data-pt=\"Item por casa\" data-en=\"Per-home item\">Item por casa</th><th data-pt=\"Orçamento de 2025 em US$\" data-en=\"2025 budget in US$\">Orçamento de 2025 em US$</th></tr></thead><tbody><tr><td data-pt=\"Terreno\" data-en=\"Land\">Terreno</td><td data-pt=\"5.550\" data-en=\"5,550\">5.550</td></tr><tr><td data-pt=\"Construção · 45 m²\" data-en=\"Construction · 45 m²\">Construção · 45 m²</td><td data-pt=\"18.600\" data-en=\"18,600\">18.600</td></tr><tr><td data-pt=\"Energia solar\" data-en=\"Solar\">Energia solar</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Infraestrutura e espaços compartilhados\" data-en=\"Infrastructure and shared spaces\">Infraestrutura e espaços compartilhados</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Legal e projeto\" data-en=\"Legal and design\">Legal e projeto</td><td data-pt=\"627\" data-en=\"627\">627</td></tr><tr><th data-pt=\"Total\" data-en=\"Total\">Total</th><th data-pt=\"27.777\" data-en=\"27,777\">27.777</th></tr></tbody></table></div><p data-pt=\"O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.\" data-en=\"The plan aims to save by building together and sharing common costs across homes. Quotes and maintenance bills need to show whether those savings happen.\">O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.</p></div></details>",
+  "budgets_html": "<h2 data-pt=\"Quanto custariam as primeiras casas?\" data-en=\"What would the first homes cost?\">Quanto custariam as primeiras casas?</h2><p data-pt=\"São custos de construção em dólares, não o preço nem o pagamento mensal de uma família; o preço de cada casa é definido em reais.\" data-en=\"These are construction costs in US dollars, not a family’s price or monthly payment; each home’s price is set in reais.\">São custos de construção em dólares, não o preço nem o pagamento mensal de uma família; o preço de cada casa é definido em reais.</p><div class=\"cost-comparison\"><article><h3 data-pt=\"Dois lofts · janeiro 2026\" data-en=\"Two lofts · January 2026\">Dois lofts · janeiro 2026</h3><p class=\"cost-number\" data-pt=\"US$13.888,50 por loft, US$27.777 pelos dois lofts\" data-en=\"US$13,888.50 per loft, US$27,777 for both lofts\">US$13.888,50 por loft, US$27.777 pelos dois lofts</p><p data-pt=\"Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.\" data-en=\"Construction figure for both lofts together: US$13,888.50 per loft by simple division. Rafael reported a contract awaiting the first deposit at that time.\">Valor de construção para os dois lofts juntos: US$13.888,50 por loft por divisão simples. Rafael relatou um contrato, aguardando o primeiro depósito naquele momento.</p><p data-pt=\"Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.\" data-en=\"We still need to record what the contract includes, the lofts’ floor areas and the final cost.\">Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.</p></article><article><h3 data-pt=\"Vila de 36 casas · novembro 2025\" data-en=\"36-home village · November 2025\">Vila de 36 casas · novembro 2025</h3><p class=\"cost-number\" data-pt=\"US$27.777 por casa\" data-en=\"US$27,777 per home\">US$27.777 por casa</p><p data-pt=\"Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.\" data-en=\"Rafael’s budget for each 45 m² home uses CUB/SINAPI references, direct purchasing and shared costs. It includes land, construction, solar and shared works. The plan is to build at least 36 homes together: US$999,972 over 12 months.\">Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.</p><p data-pt=\"O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.\" data-en=\"The budget and timing need to fit the selected site and available money.\">O orçamento e o prazo precisam ser ajustados ao terreno escolhido e ao dinheiro disponível.</p></article></div><details class=\"disclosure\"><summary><span data-pt=\"Ver os itens do orçamento da vila\" data-en=\"View the village budget’s cost items\">Ver os itens do orçamento da vila</span></summary><div class=\"disclosure-body\"><div class=\"budget-table\"><table><thead><tr><th data-pt=\"Item por casa\" data-en=\"Per-home item\">Item por casa</th><th data-pt=\"Orçamento de 2025 em US$\" data-en=\"2025 budget in US$\">Orçamento de 2025 em US$</th></tr></thead><tbody><tr><td data-pt=\"Terreno\" data-en=\"Land\">Terreno</td><td data-pt=\"5.550\" data-en=\"5,550\">5.550</td></tr><tr><td data-pt=\"Construção · 45 m²\" data-en=\"Construction · 45 m²\">Construção · 45 m²</td><td data-pt=\"18.600\" data-en=\"18,600\">18.600</td></tr><tr><td data-pt=\"Energia solar\" data-en=\"Solar\">Energia solar</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Infraestrutura e espaços compartilhados\" data-en=\"Infrastructure and shared spaces\">Infraestrutura e espaços compartilhados</td><td data-pt=\"1.500\" data-en=\"1,500\">1.500</td></tr><tr><td data-pt=\"Legal e projeto\" data-en=\"Legal and design\">Legal e projeto</td><td data-pt=\"627\" data-en=\"627\">627</td></tr><tr><th data-pt=\"Total\" data-en=\"Total\">Total</th><th data-pt=\"27.777\" data-en=\"27,777\">27.777</th></tr></tbody></table></div><p data-pt=\"O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.\" data-en=\"The plan aims to save by building together and sharing common costs across homes. Quotes and maintenance bills need to show whether those savings happen.\">O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.</p></div></details>",
   "definitions": [
     "Blockchain é um registro digital compartilhado que mostra quem aprovou um pagamento. Arc é a rede de blockchain em consideração para pagamentos em USDC, uma moeda digital atrelada ao dólar.",
     "A blockchain is a shared digital record that shows who approved a payment. Arc is the blockchain network under consideration for payments in USDC, a digital currency tied to the US dollar."
@@ -2260,18 +2260,18 @@
     "steps": [
       [
         [
-          "1. Primeiras casas",
-          "1. First homes"
+          "Primeiras casas",
+          "First homes"
         ],
         [
-          "Começar pelo piloto proposto, num apartamento existente, e construir as primeiras casas novas com a construtora dos fundadores, com custos conferidos por terceiros e relatórios públicos.",
-          "Start with the proposed pilot in an existing flat, and build the first new homes with the founders’ construction company, with costs checked by someone else and public reports."
+          "Começar pelo piloto proposto, num apartamento existente, e construir as primeiras casas novas com a construtora dos fundadores, com relatórios públicos.",
+          "Start with the proposed pilot in an existing flat, and build the first new homes with the founders’ construction company, with public reports."
         ]
       ],
       [
         [
-          "2. Mais imóveis",
-          "2. More properties"
+          "Mais imóveis",
+          "More properties"
         ],
         [
           "Com registros de custos e pagamentos, atrair financiamento e convidar donos de imóveis adequados a participar.",
@@ -2280,8 +2280,8 @@
       ],
       [
         [
-          "3. Uma plataforma para proprietários",
-          "3. A platform for owners"
+          "Uma plataforma para proprietários",
+          "A platform for owners"
         ],
         [
           "Oferecer a proprietários um caminho para vender pelo aluguel com compra, além de moradia compartilhada. Os proprietários precisariam de garantias e seguros, que uma organização maior e com histórico tem mais condições de dar.",
@@ -2446,6 +2446,68 @@
     "causes_limit": [
       "Estudo de cidades europeias; não mede o Rio. A energia está no número da Aneel acima.",
       "A study of European cities; it does not measure Rio. Energy is covered by the Aneel figure above."
+    ],
+    "org_title": [
+      "Como as decisões seriam divididas entre os bairros?",
+      "How would decisions be shared between neighbourhoods?"
+    ],
+    "org_answer": [
+      "Cada bairro decidiria seus próprios assuntos, os projetos dividiriam ferramentas, e pessoas identificadas responderiam pelo dinheiro e pelo trabalho.",
+      "Each neighbourhood would decide its own matters, the projects would share tools, and named people would answer for money and work."
+    ],
+    "org_cols": [
+      [
+        [
+          "Decidido em cada bairro",
+          "Decided in each neighbourhood"
+        ],
+        [
+          "O uso dos espaços comuns e as prioridades de reparo.",
+          "How shared spaces are used and which repairs come first."
+        ]
+      ],
+      [
+        [
+          "Dividido entre os projetos",
+          "Shared across projects"
+        ],
+        [
+          "Projetos de casa, compras, contas e relatórios.",
+          "Home designs, purchasing, accounts and reports."
+        ]
+      ],
+      [
+        [
+          "Quem responde",
+          "Who answers for it"
+        ],
+        [
+          "Pessoas identificadas, com limites de gasto, conferidas por outra pessoa e prestando contas a moradores e financiadores.",
+          "Named people with spending limits, checked by someone else and accountable to residents and funders."
+        ]
+      ]
+    ],
+    "org_note": [
+      "Esta é a organização proposta pela IMOBX. Ela se inspira em pesquisas sobre recursos compartilhados e em textos sobre governo local; nenhum deles mostra que ela já funciona aqui.",
+      "This is IMOBX’s proposed organisation. It draws on research about shared resources and on writing about local governance; none of it shows that it already works here."
+    ],
+    "figures_big": [
+      [
+        "6 milhões",
+        "6 million"
+      ],
+      [
+        "11,4 milhões",
+        "11.4 million"
+      ],
+      [
+        "+9,13%",
+        "+9.13%"
+      ],
+      [
+        "+6,3%",
+        "+6.3%"
+      ]
     ]
   },
   "token_page": {
@@ -2458,8 +2520,8 @@
       "No IMOBX token has been issued or sold. If one is created, it would fund the work and pay for promotion, and it would stay apart from the housing cooperative."
     ],
     "purpose_title": [
-      "O que o token faria",
-      "What the token would do"
+      "Para onde iria o dinheiro?",
+      "Where would its money go?"
     ],
     "purpose": [
       [
@@ -2550,8 +2612,8 @@
           "How money moves"
         ],
         [
-          "As famílias pagam em reais, por Pix ou transferência, a uma entidade jurídica. Nenhuma família precisa de criptomoedas.",
-          "Families pay in reais, by Pix or bank transfer, to a legal entity. No family needs crypto."
+          "As famílias pagam em reais a uma entidade jurídica.",
+          "Families pay in reais to a legal entity."
         ],
         [
           "As taxas ficam com um conselho de várias assinaturas, nunca com uma só pessoa.",
@@ -2568,8 +2630,8 @@
           "Shared spaces, repairs, representatives and new homes"
         ],
         [
-          "Só o que suas próprias regras permitem; nunca o acordo ou o preço de uma família",
-          "Only what its own rules allow; never a family’s agreement or price"
+          "Só o que suas próprias regras permitem",
+          "Only what its own rules allow"
         ]
       ]
     ],
@@ -2581,10 +2643,6 @@
       [
         "Os pagamentos de uma família e o retorno de um investidor puxam para lados diferentes. Investidores donos de partes das casas precisariam de aluguéis e preços mais altos; as famílias precisam de um preço fixo, por isso os dois ficam separados.",
         "A family’s payments and an investor’s return pull in different directions. Investors who owned parts of the homes would need higher rents and prices, while families need a fixed price, so the two stay apart."
-      ],
-      [
-        "As famílias ficam fora das criptomoedas. Os pagamentos delas são pagamentos comuns em reais.",
-        "Families stay outside crypto. Their payments are ordinary payments in reais."
       ],
       [
         "Leis diferentes se aplicam. Um token oferecido como investimento pode cair sob a CVM, que regula o mercado de valores do Brasil; a cooperativa de moradia e os acordos de seus membros seguem as leis de moradia e de cooperativas, e as casas das famílias ficam fora da primeira.",
@@ -2602,8 +2660,8 @@
           "Prepare"
         ],
         [
-          "A forma jurídica da cooperativa, um orçamento de obra em reais e o acordo com as famílias.",
-          "The cooperative’s legal form, a building budget in reais and the agreement with families."
+          "A forma jurídica da cooperativa e os documentos do primeiro projeto.",
+          "The cooperative’s legal form and the first project’s documents."
         ]
       ],
       [
@@ -2642,17 +2700,13 @@
       "What a buyer would receive has not been decided. A buyback pays sellers; burning tokens does not automatically pay the others. A lawyer will check it against the CVM’s rules before anything is sold. If there is no lawful way, IMOBX goes ahead without a token."
     ],
     "never_title": [
-      "O que não faremos",
-      "What we will not do"
+      "O que a IMOBX não fará?",
+      "What will IMOBX not do?"
     ],
     "never": [
       [
         "Fazer a obra depender do volume de negociação.",
         "Make building depend on trading volume."
-      ],
-      [
-        "Usar os pagamentos das famílias para pagar quem tem o token.",
-        "Use families’ payments to pay token holders."
       ],
       [
         "Pagar quem tem o token com dinheiro de novos compradores.",
@@ -2702,6 +2756,40 @@
     "buyers": [
       "Compradores de tokens novos pagariam à organização que os cria e vende; uma revenda normalmente paga ao vendedor, e só uma taxa cobrada à parte chegaria ao projeto. Há quatro caminhos em estudo: seguir sem token próprio, oferecer um serviço ou desconto, participar de taxas recebidas ou investir na operação.",
       "Buyers of new tokens would pay the organisation that creates and sells them; a resale normally pays the seller, and only a separately collected fee could reach the project. Four paths are under study: proceed without an IMOBX token, offer a service or discount, receive part of the fees actually collected, or invest in the operation."
+    ],
+    "venues_title": [
+      "Onde o token seria negociado?",
+      "Where would the token trade?"
+    ],
+    "venues": [
+      [
+        "As primeiras casas não dependem de um token, mas ainda precisam de uma forma de financiamento confirmada. Se um token for criado, ele financiaria as linhas do orçamento descritas acima.",
+        "The first homes do not depend on a token, but they still need a confirmed way to be funded. If a token is created, it would fund the budget lines described above."
+      ],
+      [
+        "A primeira escolha dos fundadores para lançá-lo é a Arctide, uma plataforma na rede Arc onde tokens são lançados e negociados. A documentação publicada dela mostra que cada fundo de negociação tem suas próprias taxas e um destinatário das taxas, e que as taxas são cobradas em USDC, um dólar digital. Isso evita pagar taxas numa segunda criptomoeda, de preço mais instável; o risco de câmbio entre dólar e real, e os riscos do próprio USDC, continuam.",
+        "The founders’ first choice for launching it is Arctide, a platform on Arc where tokens are launched and traded. Its published documentation shows that each trading pool has its own fee settings and fee recipient, and that fees are charged in USDC, a digital dollar. That avoids paying fees in a second, more volatile crypto coin; the exchange risk between dollars and reais, and the risks of USDC itself, remain."
+      ],
+      [
+        "Em setembro de 2026, a Ethervista, uma plataforma de negociação anterior, anunciou que a Arctide comprou sua tecnologia, site, nome e direitos associados.",
+        "In September 2026, Ethervista, an earlier trading platform, announced that Arctide had acquired its technology, website, name and associated rights."
+      ],
+      [
+        "Oferecer o token em outras plataformas da Arc, como Argus e Tolly, é algo a estudar depois, onde funcionar e onde for possível mostrar que a parte das taxas do projeto chega ao orçamento publicado.",
+        "Offering the token on other Arc platforms, such as Argus and Tolly, is something to investigate later, where it works and where the project’s share of fees can be shown to reach the published budget."
+      ],
+      [
+        "No lançamento padrão da Arctide, examinado na pesquisa dos fundadores, o dinheiro arrecadado vai para o fundo de negociação, não para a obra. Outros formatos de lançamento podem usar o dinheiro de outro jeito e precisariam de verificação própria.",
+        "In Arctide’s standard launch, as examined in the founders’ research, the money raised goes into the trading pool, not into building. Other launch arrangements can use the money differently and would need their own check."
+      ],
+      [
+        "John, que cuida da comunicação e das ferramentas digitais da IMOBX, também administra o The Flock, a central de atendimento da comunidade Arctide no Telegram.",
+        "John, who leads IMOBX’s communication and digital tools, also runs The Flock, the Arctide community’s help desk on Telegram."
+      ]
+    ],
+    "closing": [
+      "Tem uma pergunta sobre o token? Escreva para a equipe.",
+      "A question about the token? Write to the team."
     ]
   },
   "funding_page": {
@@ -2728,8 +2816,8 @@
       ]
     ],
     "order_title": [
-      "De onde vem o dinheiro e em que ordem ele é usado",
-      "Where money comes from, and the order it is used in"
+      "De onde vem o dinheiro, e em que ordem ele é usado?",
+      "Where does money come from, and in what order is it used?"
     ],
     "order_intro": [
       "O dinheiro viria de doações, editais, receita de serviços e de investimento que a organização escolhida possa oferecer legalmente. A direção de trabalho é registrar cada valor recebido e gastá-lo na ordem abaixo. Nenhum contrato define isso ainda.",
@@ -2740,16 +2828,16 @@
       "The five kinds of money and what each may pay for"
     ],
     "route_title": [
-      "Como um pagamento viaja",
-      "How a payment travels"
+      "Como um pagamento viaja?",
+      "How does a payment travel?"
     ],
     "route_after": [
       "Um primeiro teste acompanharia um pequeno valor aprovado do começo ao fim, separado do dinheiro das famílias e das obras. O site não movimenta dinheiro. Converter o dinheiro em moeda digital, ou de volta, não muda aquilo para que ele foi prometido.",
       "A first test would follow one small approved amount from start to finish, kept apart from families’ and building money. The site moves no money. Converting money to digital currency, or back, does not change what it was promised for."
     ],
     "legal_title": [
-      "Forma jurídica",
-      "Legal form"
+      "Qual forma jurídica?",
+      "Which legal form?"
     ],
     "legal": [
       "A IMOBX ainda não tem forma jurídica; ela está sendo escolhida com assessores brasileiros. Uma organização estrangeira com imóveis no Brasil precisa de CNPJ, e a transferência de uma casa precisa do registro do imóvel. A Lei 13.019 define organizações sem fins lucrativos que usam seus resultados na finalidade social. Os assessores vão dizer se a IMOBX segue esse caminho e como um investimento caberia nele.",
@@ -2762,6 +2850,10 @@
     "token_link": [
       "O token",
       "The token"
+    ],
+    "key": [
+      "Cada valor recebido seria registrado, e o dinheiro dado para uma finalidade definida manteria essa finalidade. O restante pagaria impostos e contas, depois reservas e compromissos com as famílias, depois novas casas; investidores só receberiam se sobrasse dinheiro e um acordo permitisse.",
+      "Every amount received would be recorded, and money given for a set purpose would keep that purpose. The rest would pay taxes and bills, then reserves and promises to families, then new homes; investors would be paid only if money remains and an agreement allows it."
     ]
   },
   "rent_page": {
@@ -2791,13 +2883,13 @@
         "Someone else checks"
       ],
       [
-        "Pagar",
-        "Pay"
+        "Pagar e registrar",
+        "Pay and record"
       ]
     ],
     "repair_note": [
-      "O contrato diria quais reparos a organização paga e quais cabem à família, em quanto tempo são feitos, a quem avisar e como contestar uma cobrança. Quem confere o conserto não é quem o pediu.",
-      "The agreement would say which repairs the organisation pays for and which the family pays for, how quickly they are done, who to tell and how to question a charge. The person who checks a repair is not the one who ordered it."
+      "O contrato diria quais reparos a organização paga e quais cabem à família, em quanto tempo são feitos, a quem avisar e como contestar uma cobrança.",
+      "The agreement would say which repairs the organisation pays for and which the family pays for, how quickly they are done, who to tell and how to question a charge."
     ],
     "decide_title": [
       "Os moradores decidem",
@@ -2826,17 +2918,13 @@
       "One option under discussion: one vote per member on these matters. The rules are still being discussed with participants."
     ],
     "protect_title": [
-      "O contrato da família protege",
-      "The family’s agreement protects"
+      "Garantido a cada família",
+      "Protected for each family"
     ],
     "protect": [
       [
         "Nenhuma votação muda sozinha o contrato de moradia de uma família ou o preço de compra combinado, nem mesmo de quem tem tokens.",
         "No vote can on its own change a family’s housing agreement or its agreed purchase price, not even a token vote."
-      ],
-      [
-        "Quem investe recebe somente os direitos escritos no seu acordo.",
-        "Investors receive only the rights written in their agreement."
       ]
     ],
     "invest": [
@@ -2846,6 +2934,512 @@
     "interest": [
       "Quer conversar sobre uma casa? Prepare sua apresentação e envie à equipe pelo Telegram; o site não envia nada sozinho.",
       "Want to talk about a home? Prepare your introduction and send it to the team on Telegram; the website sends nothing itself."
+    ],
+    "decisions_heading": [
+      "O que os moradores decidem?",
+      "What do residents decide?"
+    ]
+  },
+  "chain_page": {
+    "title": [
+      "Como funcionariam os registros compartilhados numa blockchain?",
+      "How would shared records work on a blockchain?"
+    ],
+    "lead": [
+      "Cada pagamento da IMOBX, e quem o aprovou, ficaria registrado na Arc, uma blockchain pública, para que qualquer pessoa possa conferir. Nada disto funciona ainda: o primeiro projeto vai testar.",
+      "Each IMOBX payment, and who approved it, would be recorded on Arc, a public blockchain, so anyone can check it. None of this runs yet: the first project will test it."
+    ],
+    "key": [
+      "As famílias pagariam em reais e não precisariam de criptomoeda nem de carteira digital. Dados pessoais e o contrato de cada família ficariam fora da blockchain.",
+      "Families would pay in reais and would need no crypto or digital wallet. Personal data and each family’s contract would stay off the blockchain."
+    ],
+    "toc": [
+      [
+        [
+          "O que fica onde",
+          "What goes where"
+        ],
+        "layers"
+      ],
+      [
+        [
+          "Um pedido, do início ao fim",
+          "One request, start to finish"
+        ],
+        "request"
+      ],
+      [
+        [
+          "Os seis registros",
+          "The six records"
+        ],
+        "records"
+      ],
+      [
+        [
+          "Onde entra um token",
+          "Where a token fits"
+        ],
+        "token"
+      ],
+      [
+        [
+          "O que falta decidir",
+          "Not decided yet"
+        ],
+        "open"
+      ],
+      [
+        [
+          "O que ela não faz",
+          "What it cannot do"
+        ],
+        "limits"
+      ]
+    ],
+    "layers_title": [
+      "O que ficaria na blockchain, e o que nunca ficaria?",
+      "What would be on the blockchain, and what never would?"
+    ],
+    "layers_answer": [
+      "Três camadas: o que é privado, o que é compartilhado dentro da IMOBX e o que é público na Arc.",
+      "Three layers: what is private, what is shared inside IMOBX, and what is public on Arc."
+    ],
+    "layers": [
+      [
+        [
+          "Privado",
+          "Private"
+        ],
+        [
+          "O contrato de cada família, dados pessoais e o conteúdo de uma reclamação.",
+          "Each family’s contract, personal data and what a complaint says."
+        ],
+        [
+          "A família e quem cuida do caso.",
+          "The family and the people handling the case."
+        ]
+      ],
+      [
+        [
+          "Compartilhado na IMOBX",
+          "Shared inside IMOBX"
+        ],
+        [
+          "Pedidos, tarefas, decisões e atas.",
+          "Requests, tasks, decisions and meeting notes."
+        ],
+        [
+          "Moradores e responsáveis.",
+          "Residents and the people responsible."
+        ]
+      ],
+      [
+        [
+          "Público na Arc",
+          "Public on Arc"
+        ],
+        [
+          "Valor e destino de cada pagamento, quem aprovou e quando, linhas do orçamento e taxas recebidas.",
+          "The amount and destination of each payment, who approved it and when, budget lines and fees received."
+        ],
+        [
+          "Qualquer pessoa.",
+          "Anyone."
+        ]
+      ]
+    ],
+    "layers_who": [
+      "Quem vê:",
+      "Who sees it:"
+    ],
+    "layers_why": [
+      "Os recursos de privacidade da Arc ainda não estão disponíveis, então tudo o que é gravado nela é público. A lei brasileira de proteção de dados (LGPD) dá o direito de pedir a eliminação de dados pessoais, e um registro em blockchain não pode ser apagado. Por isso os dados pessoais ficam na camada privada.",
+      "Arc’s privacy features are not available yet, so everything written there is public. Brazil’s data protection law (LGPD) gives people the right to ask for their personal data to be deleted, and a blockchain record cannot be deleted. That is why personal data stays in the private layer."
+    ],
+    "request_title": [
+      "Como um pedido vira trabalho feito e conferido?",
+      "How does a request become checked work?"
+    ],
+    "request_answer": [
+      "Cada pedido tem um responsável, um prazo e um orçamento, e outra pessoa confere o resultado.",
+      "Every request has a person responsible, a deadline and a budget, and someone else checks the result."
+    ],
+    "request_steps": [
+      [
+        "O pedido é registrado na central de atendimento, com um responsável e um prazo.",
+        "The request is logged at the help desk, with a person responsible and a deadline."
+      ],
+      [
+        "Um orçamento dentro do limite de gasto é aprovado, e a aprovação fica registrada.",
+        "A quote within the spending limit is approved, and the approval is logged."
+      ],
+      [
+        "Outra pessoa, que não aprovou o gasto, confere o serviço e registra a conferência.",
+        "Someone other than the approver checks the work and logs the check."
+      ],
+      [
+        "Cada pagamento fica registrado na Arc, e o recibo vai para as contas.",
+        "The payment is recorded on Arc, and the receipt goes into the accounts."
+      ],
+      [
+        "Se o morador pedir revisão, a revisão e o resultado também ficam registrados.",
+        "If the resident asks for a review, the review and its outcome are logged too."
+      ]
+    ],
+    "request_fold": [
+      "A central de atendimento e quem decide",
+      "The help desk and who decides"
+    ],
+    "records_title": [
+      "Quais registros a IMOBX manteria?",
+      "Which records would IMOBX keep?"
+    ],
+    "records_answer": [
+      "São seis tipos, cada um guardado no seu lugar, para os seus leitores.",
+      "There are six kinds, each kept in its own place for its own readers."
+    ],
+    "records_head": [
+      [
+        "Registro",
+        "Record"
+      ],
+      [
+        "O que guarda",
+        "What it holds"
+      ],
+      [
+        "Onde fica",
+        "Where it lives"
+      ],
+      [
+        "Quem vê",
+        "Who sees it"
+      ]
+    ],
+    "records": [
+      [
+        [
+          "Pedidos",
+          "Requests"
+        ],
+        [
+          "Reparos e serviços pedidos pelos moradores",
+          "Repairs and services residents ask for"
+        ],
+        [
+          "Compartilhado na IMOBX",
+          "Shared inside IMOBX"
+        ],
+        [
+          "Moradores e responsáveis",
+          "Residents and the people responsible"
+        ]
+      ],
+      [
+        [
+          "Perguntas",
+          "Inquiries"
+        ],
+        [
+          "Perguntas de famílias, proprietários e parceiros",
+          "Questions from families, owners and partners"
+        ],
+        [
+          "Central de atendimento",
+          "Help desk"
+        ],
+        [
+          "Quem perguntou e a equipe",
+          "The person asking and the team"
+        ]
+      ],
+      [
+        [
+          "Reclamações",
+          "Complaints"
+        ],
+        [
+          "Um problema com uma cobrança, um reparo ou uma decisão",
+          "A problem with a charge, a repair or a decision"
+        ],
+        [
+          "Privado",
+          "Private"
+        ],
+        [
+          "Quem reclamou e quem revisa",
+          "The person complaining and the reviewers"
+        ]
+      ],
+      [
+        [
+          "Contas",
+          "Accounting"
+        ],
+        [
+          "Dinheiro que entra e sai, por pagador e finalidade",
+          "Money in and out, by payer and purpose"
+        ],
+        [
+          "Contas comuns; pagamentos também na Arc",
+          "Ordinary accounts; payments also on Arc"
+        ],
+        [
+          "Moradores, financiadores e quem confere; os pagamentos, qualquer pessoa",
+          "Residents, funders and checkers; the payments, anyone"
+        ]
+      ],
+      [
+        [
+          "Gestão",
+          "Management"
+        ],
+        [
+          "Tarefas, aprovações, limites de gasto e quem ocupa cada função",
+          "Tasks, approvals, spending limits and who holds each role"
+        ],
+        [
+          "Compartilhado na IMOBX",
+          "Shared inside IMOBX"
+        ],
+        [
+          "Moradores e responsáveis",
+          "Residents and the people responsible"
+        ]
+      ],
+      [
+        [
+          "Dados",
+          "Data"
+        ],
+        [
+          "Dados pessoais e da família",
+          "Personal and household data"
+        ],
+        [
+          "Privado",
+          "Private"
+        ],
+        [
+          "A família e quem cuida do seu caso",
+          "The family and the people handling its case"
+        ]
+      ]
+    ],
+    "token_title": [
+      "Como um token se ligaria a esses registros?",
+      "How would a token connect to these records?"
+    ],
+    "token_body": [
+      "As taxas ficariam com um conselho de várias assinaturas, nunca com uma só pessoa. Cada uso seria um pagamento registrado contra uma linha do orçamento publicado: divulgação, operação ou o fundo para novas casas.",
+      "The fees would be held by a council of several signers, never one person. Each use would be a recorded payment against a line of the published budget: outreach, operations or the fund for new homes."
+    ],
+    "token_link": [
+      "Para que serve o token",
+      "What the token is for"
+    ],
+    "open_title": [
+      "O que ainda não foi decidido?",
+      "What has not been decided?"
+    ],
+    "open_answer": [
+      "Quanto passa pela Arc, e o que um token daria a quem o compra.",
+      "How much runs on Arc, and what a token would give its buyers."
+    ],
+    "open_runs_title": [
+      "Quanto passa pela Arc",
+      "How much runs on Arc"
+    ],
+    "open_runs": [
+      [
+        "Só contas bancárias comuns e contratos assinados.",
+        "Ordinary bank accounts and signed agreements only."
+      ],
+      [
+        "Contas comuns, com cada pagamento também registrado na Arc.",
+        "Ordinary accounts, with each payment also recorded on Arc."
+      ],
+      [
+        "Pagamentos e aprovações feitos pela Arc, com várias assinaturas para cada pagamento.",
+        "Payments and approvals run through Arc, with several signers for each payment."
+      ]
+    ],
+    "open_token_title": [
+      "O que um comprador de token receberia",
+      "What a token buyer would receive"
+    ],
+    "open_token": [
+      [
+        "Um serviço ou benefício definido.",
+        "A stated service or benefit."
+      ],
+      [
+        "Uma parte das taxas realmente recebidas, se a lei permitir.",
+        "A share of fees actually collected, if the law allows it."
+      ],
+      [
+        "Um investimento na operação, com direitos escritos.",
+        "An investment in the operation, with written rights."
+      ]
+    ],
+    "open_note": [
+      "Cada caminho precisa de revisão jurídica própria. O primeiro projeto pode seguir com contratos comuns.",
+      "Each path needs its own legal review. The first project can go ahead with ordinary agreements."
+    ],
+    "same_title": [
+      "O que não muda em nenhum caso",
+      "What stays the same in every case"
+    ],
+    "same": [
+      [
+        "As famílias pagam em reais.",
+        "Families pay in reais."
+      ],
+      [
+        "Os dados pessoais ficam privados.",
+        "Personal data stays private."
+      ],
+      [
+        "Uma votação, inclusive de quem tem tokens, não muda sozinha o contrato de moradia de uma família.",
+        "A vote, including a token vote, cannot on its own change a family’s housing agreement."
+      ],
+      [
+        "As contas da obra são pagas com recursos já garantidos, nunca com a negociação de tokens.",
+        "Building bills are paid from committed funding, never from token trading."
+      ]
+    ],
+    "limits_title": [
+      "O que uma blockchain não faz?",
+      "What can a blockchain not do?"
+    ],
+    "limits": [
+      [
+        "Não julga se um trabalho foi bem feito. Pessoas continuam conferindo o reparo.",
+        "It cannot judge whether work was done well. People still check the repair."
+      ],
+      [
+        "Um registro não pode ser apagado, só corrigido por um novo registro.",
+        "A record cannot be erased, only corrected by a new entry."
+      ],
+      [
+        "O USDC, o dólar digital usado na Arc, é emitido pela Circle, que pode bloqueá-lo, inclusive por ordem de um governo.",
+        "USDC, the digital dollar used on Arc, is issued by Circle, which can freeze it, including on a government order."
+      ],
+      [
+        "A Arc é operada por um grupo fechado de empresas escolhidas pela Circle, a empresa que a criou, e nenhum regulador a aprovou.",
+        "Arc is run by a closed group of companies chosen by Circle, the company that built it, and no regulator has approved it."
+      ],
+      [
+        "O Banco Central agora regula prestadores de serviços com criptoativos. Um advogado confere como isso se aplica antes de qualquer pagamento passar pela Arc.",
+        "Brazil’s Central Bank now regulates crypto service providers. A lawyer checks how this applies before any payment runs on Arc."
+      ]
+    ],
+    "closing": [
+      "Ajude a desenhar e testar esses registros no primeiro projeto.",
+      "Help design and test these records in the first project."
+    ],
+    "button": [
+      "Apresente-se",
+      "Introduce yourself"
+    ],
+    "token_answer_marked": [
+      [
+        "O dinheiro de um token e as taxas de negociação seriam linhas próprias no mesmo registro público, ",
+        "Token money and trading fees would be their own lines in the same public record, "
+      ],
+      [
+        "mantidas à parte dos pagamentos das famílias",
+        "kept apart from families’ payments"
+      ],
+      [
+        ".",
+        "."
+      ]
+    ],
+    "limits_answer_marked": [
+      [
+        "Ela registra pagamentos. ",
+        "It records payments. "
+      ],
+      [
+        "Não confere uma obra nem substitui um contrato",
+        "It does not check work or replace a contract"
+      ],
+      [
+        ".",
+        "."
+      ]
+    ],
+    "glossary_title": [
+      "Palavras usadas nesta página",
+      "Words used on this page"
+    ],
+    "glossary": [
+      [
+        [
+          "Blockchain",
+          "Blockchain"
+        ],
+        [
+          "Um registro digital compartilhado que mostra quem aprovou um pagamento e quando.",
+          "A shared digital record that shows who approved a payment and when."
+        ]
+      ],
+      [
+        [
+          "Arc",
+          "Arc"
+        ],
+        [
+          "Uma blockchain pública criada pela Circle, onde as taxas são pagas em USDC.",
+          "A public blockchain built by Circle, where fees are paid in USDC."
+        ]
+      ],
+      [
+        [
+          "USDC",
+          "USDC"
+        ],
+        [
+          "Um dólar digital emitido pela Circle.",
+          "A digital dollar issued by Circle."
+        ]
+      ],
+      [
+        [
+          "Token",
+          "Token"
+        ],
+        [
+          "Um registro digital de um direito que pode ser comprado e vendido.",
+          "A digital record of a right that can be bought and sold."
+        ]
+      ],
+      [
+        [
+          "Taxa de negociação",
+          "Trading fee"
+        ],
+        [
+          "Uma taxa cobrada quando alguém compra ou vende um token.",
+          "A fee charged when someone buys or sells a token."
+        ]
+      ],
+      [
+        [
+          "Várias assinaturas",
+          "Several signers"
+        ],
+        [
+          "O dinheiro só sai quando mais de uma pessoa aprova.",
+          "Money moves only when more than one person approves."
+        ]
+      ]
+    ],
+    "request_more": [
+      "Como funcionam as tarefas do dia a dia: etapas do projeto",
+      "How everyday tasks work: project stages"
     ]
   }
 }

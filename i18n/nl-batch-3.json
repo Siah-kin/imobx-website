@@ -1,0 +1,1852 @@
+[
+ {
+  "en": "A quote within the spending limit is approved, and the approval is logged.",
+  "pt": "Um orçamento dentro do limite de gasto é aprovado, e a aprovação fica registrada.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "A vote, including a token vote, cannot on its own change a family’s housing agreement.",
+  "pt": "Uma votação, inclusive de quem tem tokens, não muda sozinha o contrato de moradia de uma família.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Arc",
+  "pt": "Arc",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Arc’s privacy features are not available yet, so everything written there is public. Brazil’s data protection law (LGPD) gives people the right to ask for their personal data to be deleted, and a blockchain record cannot be deleted. That is why personal data stays in the private layer.",
+  "pt": "Os recursos de privacidade da Arc ainda não estão disponíveis, então tudo o que é gravado nela é público. A lei brasileira de proteção de dados (LGPD) dá o direito de pedir a eliminação de dados pessoais, e um registro em blockchain não pode ser apagado. Por isso os dados pessoais ficam na camada privada.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Documents",
+  "pt": "Documentos",
+  "pages": [
+   "blockchain.html",
+   "contact.html",
+   "devsheet.html",
+   "index.html",
+   "media-kit.html",
+   "pitchdeck.html",
+   "properties.html",
+   "reference.html",
+   "rent-to-own.html",
+   "resources.html",
+   "roadmap.html",
+   "token.html",
+   "transparency.html",
+   "whitepaper.html",
+   "why.html"
+  ]
+ },
+ {
+  "en": "Documents to download",
+  "pt": "Documentos para baixar",
+  "pages": [
+   "blockchain.html",
+   "contact.html",
+   "devsheet.html",
+   "index.html",
+   "media-kit.html",
+   "pitchdeck.html",
+   "properties.html",
+   "reference.html",
+   "rent-to-own.html",
+   "resources.html",
+   "roadmap.html",
+   "token.html",
+   "transparency.html",
+   "whitepaper.html",
+   "why.html"
+  ]
+ },
+ {
+  "en": "Every request has a person responsible, a deadline and a budget, and someone else checks the result.",
+  "pt": "Cada pedido tem um responsável, um prazo e um orçamento, e outra pessoa confere o resultado.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Families pay in reais.",
+  "pt": "As famílias pagam em reais.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Help design and test these records in the first project.",
+  "pt": "Ajude a desenhar e testar esses registros no primeiro projeto.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "How it works",
+  "pt": "Como funciona",
+  "pages": [
+   "blockchain.html",
+   "contact.html",
+   "devsheet.html",
+   "index.html",
+   "media-kit.html",
+   "pitchdeck.html",
+   "properties.html",
+   "reference.html",
+   "rent-to-own.html",
+   "resources.html",
+   "roadmap.html",
+   "token.html",
+   "transparency.html",
+   "whitepaper.html",
+   "why.html"
+  ]
+ },
+ {
+  "en": "How much runs on Arc",
+  "pt": "Quanto passa pela Arc",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "How would a token connect to these records?",
+  "pt": "Como um token se ligaria a esses registros?",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, founder, and John (communication and digital tools). The organisation’s legal form is still being defined.",
+  "pt": "IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida.",
+  "pages": [
+   "blockchain.html",
+   "contact.html",
+   "devsheet.html",
+   "index.html",
+   "media-kit.html",
+   "pitchdeck.html",
+   "properties.html",
+   "reference.html",
+   "rent-to-own.html",
+   "resources.html",
+   "roadmap.html",
+   "token.html",
+   "transparency.html",
+   "whitepaper.html",
+   "why.html"
+  ]
+ },
+ {
+  "en": "If the resident asks for a review, the review and its outcome are logged too.",
+  "pt": "Se o morador pedir revisão, a revisão e o resultado também ficam registrados.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "It cannot judge whether work was done well. People still check the repair.",
+  "pt": "Não julga se um trabalho foi bem feito. Pessoas continuam conferindo o reparo.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Menu",
+  "pt": "Menu",
+  "pages": [
+   "blockchain.html",
+   "contact.html",
+   "devsheet.html",
+   "index.html",
+   "media-kit.html",
+   "pitchdeck.html",
+   "properties.html",
+   "reference.html",
+   "rent-to-own.html",
+   "resources.html",
+   "roadmap.html",
+   "token.html",
+   "transparency.html",
+   "whitepaper.html",
+   "why.html",
+   "site.js"
+  ]
+ },
+ {
+  "en": "Ordinary accounts, with each payment also recorded on Arc.",
+  "pt": "Contas comuns, com cada pagamento também registrado na Arc.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "People and responsibilities",
+  "pt": "Pessoas e responsabilidades",
+  "pages": [
+   "blockchain.html",
+   "contact.html",
+   "devsheet.html",
+   "index.html",
+   "media-kit.html",
+   "pitchdeck.html",
+   "properties.html",
+   "reference.html",
+   "rent-to-own.html",
+   "resources.html",
+   "roadmap.html",
+   "token.html",
+   "transparency.html",
+   "whitepaper.html",
+   "why.html"
+  ]
+ },
+ {
+  "en": "Personal data stays private.",
+  "pt": "Os dados pessoais ficam privados.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Questions from families, owners and partners",
+  "pt": "Perguntas de famílias, proprietários e parceiros",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Residents and the people responsible",
+  "pt": "Moradores e responsáveis",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Residents, funders and checkers; the payments, anyone",
+  "pt": "Moradores, financiadores e quem confere; os pagamentos, qualquer pessoa",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Says privacy is not yet available. It does not review IMOBX.",
+  "pt": "Diz que a privacidade ainda não está disponível. Não analisa a IMOBX.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Source:",
+  "pt": "Fonte: ",
+  "pages": [
+   "blockchain.html",
+   "index.html",
+   "roadmap.html",
+   "token.html",
+   "transparency.html",
+   "why.html"
+  ]
+ },
+ {
+  "en": "The amount and destination of each payment, who approved it and when, budget lines and fees received.",
+  "pt": "Valor e destino de cada pagamento, quem aprovou e quando, linhas do orçamento e taxas recebidas.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "The family and the people handling the case.",
+  "pt": "A família e quem cuida do caso.",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "The person asking and the team",
+  "pt": "Quem perguntou e a equipe",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "The project",
+  "pt": "O projeto",
+  "pages": [
+   "blockchain.html",
+   "contact.html",
+   "devsheet.html",
+   "index.html",
+   "media-kit.html",
+   "pitchdeck.html",
+   "properties.html",
+   "reference.html",
+   "rent-to-own.html",
+   "resources.html",
+   "roadmap.html",
+   "token.html",
+   "transparency.html",
+   "whitepaper.html",
+   "why.html"
+  ]
+ },
+ {
+  "en": "The six records",
+  "pt": "Os seis registros",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Which records would IMOBX keep?",
+  "pt": "Quais registros a IMOBX manteria?",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Whitepaper, section 9: what becomes digital",
+  "pt": "Whitepaper, seção 9: o que passa a ser digital (em inglês)",
+  "pages": [
+   "blockchain.html",
+   "roadmap.html",
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Who sees it",
+  "pt": "Quem vê",
+  "pages": [
+   "blockchain.html"
+  ]
+ },
+ {
+  "en": "Associations, charities and local groups.",
+  "pt": "Associações, entidades beneficentes e grupos locais.",
+  "pages": [
+   "contact.html",
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "Current project status",
+  "pt": "Situação atual do projeto",
+  "pages": [
+   "contact.html"
+  ]
+ },
+ {
+  "en": "I want to help the community",
+  "pt": "Quero contribuir com a comunidade",
+  "pages": [
+   "contact.html",
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "IMOBX | Take part",
+  "pt": "IMOBX | Participar",
+  "pages": [
+   "contact.html"
+  ]
+ },
+ {
+  "en": "Organisation, location and your role",
+  "pt": "Organização, local de atuação e sua função",
+  "pages": [
+   "contact.html",
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "Prepared message",
+  "pt": "Mensagem preparada",
+  "pages": [
+   "contact.html"
+  ]
+ },
+ {
+  "en": "What does a home need to provide for your household?",
+  "pt": "O que a moradia precisa oferecer à sua família?",
+  "pages": [
+   "contact.html",
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "What need or opportunity to work together do you want to discuss?",
+  "pt": "Que necessidade ou oportunidade de colaboração você quer discutir?",
+  "pages": [
+   "contact.html",
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "What service do you offer, and in which area?",
+  "pt": "Qual serviço você oferece e em qual região?",
+  "pages": [
+   "contact.html",
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "Describe your service, area and experience. Construction, legal review or accounting work needs an agreement on the work, price, deadline and who checks its completion. This introduction does not confirm an appointment.",
+  "pt": "Descreva seu serviço, região e experiência. Antes de contratar, a IMOBX combina os serviços, o preço, o prazo e quem confere o trabalho. Esta apresentação não confirma contratação.",
+  "pages": [
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "Designs and construction process · English guide",
+  "pt": "Projetos e processo de construção · guia em inglês",
+  "pages": [
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "What an organisation could bring",
+  "pt": "O que uma organização pode trazer",
+  "pages": [
+   "contact.html (route data)"
+  ]
+ },
+ {
+  "en": "Name:",
+  "pt": "Nome: ",
+  "pages": [
+   "contact.js"
+  ]
+ },
+ {
+  "en": "Please complete this field.",
+  "pt": "Preencha este campo.",
+  "pages": [
+   "contact.js"
+  ]
+ },
+ {
+  "en": "Reply to:",
+  "pt": "Responder por: ",
+  "pages": [
+   "contact.js"
+  ]
+ },
+ {
+  "en": "Select and copy the text above.",
+  "pt": "Selecione e copie o texto acima.",
+  "pages": [
+   "contact.js"
+  ]
+ },
+ {
+  "en": "PDF, page 1",
+  "pt": "PDF, página 1",
+  "pages": [
+   "devsheet.html",
+   "pitchdeck.html",
+   "whitepaper.html"
+  ]
+ },
+ {
+  "en": "PDF, page 5",
+  "pt": "PDF, página 5",
+  "pages": [
+   "devsheet.html",
+   "pitchdeck.html",
+   "whitepaper.html"
+  ]
+ },
+ {
+  "en": "Version 0.8, 24 October 2026 · English document",
+  "pt": "Versão 0.8, 24 de outubro de 2026 · documento em inglês",
+  "pages": [
+   "devsheet.html",
+   "pitchdeck.html",
+   "whitepaper.html"
+  ]
+ },
+ {
+  "en": "A bank loan",
+  "pt": "Financiar no banco",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "A home",
+  "pt": "Um lar",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "A way of living and cooperating: residents decide together how the green, the orchard and the study rooms are used.",
+  "pt": "Uma forma de viver e cooperar: os moradores decidem juntos o uso do pátio, do pomar e das salas de estudo.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Enlarge: Lower-level plan",
+  "pt": "Ampliar: Planta do nível inferior",
+  "pages": [
+   "index.html",
+   "properties.html"
+  ]
+ },
+ {
+  "en": "First homes",
+  "pt": "Primeiras casas",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "From a house to a resilient neighbourhood",
+  "pt": "De uma casa a um bairro resiliente",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Homes face the green: parents can see their children play",
+  "pt": "Casas voltadas para o pátio: os pais veem os filhos brincarem",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "How to join today",
+  "pt": "Como entrar hoje",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Introduce yourself on Telegram, in the team’s help desk.",
+  "pt": "Apresente-se pelo Telegram, na central de atendimento da equipe.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Lawyers, accountants and engineers can check agreements, accounts and building work; these roles are still open.",
+  "pt": "Advogados, contadores e engenheiros podem conferir contratos, contas e obras; essas funções ainda estão vagas.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Model section",
+  "pt": "Corte do modelo",
+  "pages": [
+   "index.html",
+   "properties.html"
+  ]
+ },
+ {
+  "en": "Our prototype: the two lofts",
+  "pt": "Nosso protótipo: os dois lofts",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Part of each monthly payment buys the home. No down payment.",
+  "pt": "Parte de cada pagamento mensal compra a casa. Sem entrada.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Playgrounds",
+  "pt": "Parquinhos",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Rafael Britto’s design for the first village. Illustration made with an image generator; not a listing of available homes. The garden, orchard and solar power depend on the site and budget.",
+  "pt": "Projeto de Rafael Britto para a primeira vila. Ilustração feita com um gerador de imagens; não é um anúncio de casas disponíveis. Horta, pomar e energia solar dependem do terreno e do orçamento.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Rent is rising faster than inflation, and after years of paying the family owns nothing.",
+  "pt": "O aluguel sobe mais que a inflação e, depois de anos pagando, a família não é dona de nada.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Rent-to-own with IMOBX",
+  "pt": "Aluguel com compra na IMOBX",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Start with the proposed pilot in an existing flat, and build the first new homes with the founders’ construction company, with public reports.",
+  "pt": "Começar pelo piloto proposto, num apartamento existente, e construir as primeiras casas novas com a construtora dos fundadores, com relatórios públicos.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Upper-level plan",
+  "pt": "Planta do nível superior",
+  "pages": [
+   "index.html",
+   "properties.html"
+  ]
+ },
+ {
+  "en": "We are looking for people and organisations who share this vision, understand the problem and have the means or the dedication to help found the cooperative.",
+  "pt": "Procuramos pessoas e organizações que compartilhem esta visão, entendam o problema e tenham meios ou dedicação para ajudar a fundar a cooperativa.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "When the cooperative is formed, its founders agree its rules. Until then, no membership, share or investment is offered.",
+  "pt": "Quando a cooperativa for constituída, os fundadores combinam suas regras. Antes disso, não se oferece filiação, cota nem investimento.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "Where each month’s payment ends up.",
+  "pt": "Para onde vai o pagamento de cada mês.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "en": "IMOBX | Media kit",
+  "pt": "IMOBX | Media kit",
+  "pages": [
+   "media-kit.html"
+  ]
+ },
+ {
+  "en": "PDF, page 10",
+  "pt": "PDF, página 10",
+  "pages": [
+   "pitchdeck.html",
+   "whitepaper.html"
+  ]
+ },
+ {
+  "en": "PowerPoint",
+  "pt": "PowerPoint",
+  "pages": [
+   "pitchdeck.html",
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Slide content (JSON)",
+  "pt": "Dados dos slides (JSON)",
+  "pages": [
+   "pitchdeck.html",
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Construction photos",
+  "pt": "Fotos da construção",
+  "pages": [
+   "properties.html"
+  ]
+ },
+ {
+  "en": "Favelas on the hillsides around the bay.",
+  "pt": "Favelas nas encostas ao redor da baía.",
+  "pages": [
+   "properties.html"
+  ]
+ },
+ {
+  "en": "Favelas on the hillsides at dusk.",
+  "pt": "Favelas nas encostas ao entardecer.",
+  "pages": [
+   "properties.html"
+  ]
+ },
+ {
+  "en": "IMOBX | Studies and records",
+  "pt": "IMOBX | Estudos e registros",
+  "pages": [
+   "properties.html"
+  ]
+ },
+ {
+  "en": "Illustration of the village Rafael imagined, made with an image generator: homes, solar panels, an orchard, play spaces and shared buildings.",
+  "pt": "Ilustração da vila imaginada por Rafael, feita com um gerador de imagens: casas, painéis solares, pomar, espaços de brincar e edifícios compartilhados.",
+  "pages": [
+   "properties.html"
+  ]
+ },
+ {
+  "en": "In his development report of 20 January 2026, Rafael reported a contract to build two lofts and was waiting for the first deposit. The construction figure was US$27,777 for both: US$13,888.50 per loft when divided by two. We still need to record what is included, the floor area, current progress and final cost.",
+  "pt": "No relato de 20 de janeiro de 2026, Rafael contou que tinha contrato para construir dois lofts e aguardava o primeiro depósito. O valor de construção era US$27.777 para os dois juntos: US$13.888,50 por loft, dividindo por dois. Ainda precisamos registrar o que está incluído, a área, o andamento atual e o custo final.",
+  "pages": [
+   "properties.html"
+  ]
+ },
+ {
+  "en": "Our mission",
+  "pt": "Nossa missão",
+  "pages": [
+   "properties.html"
+  ]
+ },
+ {
+  "en": "Two lofts",
+  "pt": "Dois lofts",
+  "pages": [
+   "properties.html",
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "An example of a trading platform on the Arc network. It does not establish IMOBX use.",
+  "pt": "Exemplo de plataforma de negociação na rede Arc. Não comprova uso pela IMOBX.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Arc: official documentation",
+  "pt": "Arc: documentação oficial",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Arctide · Arc-based exchange",
+  "pt": "Arctide · exchange na Arc",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "CVM, Brazil’s securities-market regulator, examines token characteristics and rights. Utility or governance labels do not authorise an offer.",
+  "pt": "A CVM, reguladora brasileira do mercado de valores mobiliários, analisa as características e os direitos dos tokens. Rótulos de utilidade ou governança não autorizam uma oferta.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "CVM: Guidance Opinion 40",
+  "pt": "CVM: Parecer de Orientação 40",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Communication, documentation and coordination of digital tools.",
+  "pt": "Comunicação, documentação e coordenação das ferramentas digitais.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Costs and origin",
+  "pt": "Custos e origem",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Current involvement and planned roles. Professional references, appointments and partner agreements need documentation.",
+  "pt": "Participação atual e funções previstas. Referências profissionais, nomeações e acordos com parceiros precisam ser documentados.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "File versions and identifiers",
+  "pt": "Versões e identificação dos arquivos",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Fundação João Pinheiro: 2024 housing deficit",
+  "pt": "Fundação João Pinheiro: déficit habitacional de 2024",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Governance",
+  "pt": "Governança",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Household pathway",
+  "pt": "Caminho da família",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "How to cite this reference",
+  "pt": "Como citar esta referência",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "IBGE: 2022 Census, favelas and urban communities",
+  "pt": "IBGE: Censo 2022, favelas e comunidades urbanas",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "ICA: cooperative identity",
+  "pt": "ICA: identidade cooperativa",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Legal form and legal representatives are being defined.",
+  "pt": "A forma jurídica e os representantes legais estão em definição.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Manual review: prices, provider rules and balances are not monitored automatically. We will update this page with dated confirmations, tests and reports when available.",
+  "pt": "Revisão manual: preços, regras dos prestadores e saldos não são acompanhados automaticamente. Vamos atualizar a página com confirmações, testes e relatórios datados quando existirem.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Money in and out",
+  "pt": "Entradas e saídas",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Network features and tools for digital payments. Does not establish IMOBX use, partnership or regulatory approval.",
+  "pt": "Características da rede e ferramentas para pagamentos digitais. Não comprova uso pela IMOBX, parceria ou aprovação regulatória.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "OLYMPUS",
+  "pt": "OLYMPUS",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Participants and context",
+  "pt": "Público e contexto",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "People, sources and versions",
+  "pt": "Pessoas, fontes e versões",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Project organisation, agreements and account reporting.",
+  "pt": "Organização do projeto, contratos e acompanhamento das contas.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Property, entity, use or transfer agreement and household agreement. A community partnership is a possibility under discussion.",
+  "pt": "Imóvel, entidade, contrato de uso ou transferência e acordo com a família. A parceria comunitária é uma possibilidade em discussão.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Rafael Britto",
+  "pt": "Rafael Britto",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Rafael is a founder. His formal duties have not been put in writing, and his professional credentials need sources readers can consult.",
+  "pt": "Fundador. Suas responsabilidades formais não foram registradas por escrito, e suas qualificações profissionais precisam de referências que o leitor possa consultar.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Requires paid-partnership disclosure and prohibits content categories. Country rules include crypto and financial products in the EU, UK and Australia. A disclosure does not make prohibited content permissible.",
+  "pt": "Exige divulgação de parcerias pagas e proíbe categorias de conteúdo. As restrições variam por país e incluem cripto e produtos financeiros na União Europeia, no Reino Unido e na Austrália. Um aviso de publicidade não torna permitido um conteúdo proibido.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Research basis for shared-resource governance principles. Their application to IMOBX is the project’s proposal.",
+  "pt": "Base de pesquisa para os princípios de gestão de recursos comuns. A aplicação à IMOBX é uma proposta do projeto.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Resident voice, roles, review and conflicts when a builder is connected to one of IMOBX’s founders. Final rules depend on participation and approval.",
+  "pt": "Voz dos moradores, funções, revisão e conflito com uma construtora ligada ao fundador. As regras finais dependem de participação e aprovação.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Reviewed on 17 October 2026. Official sources explain rules and data. They do not approve IMOBX. A provider’s documentation describes its product, without establishing an IMOBX integration. Founder-supplied figures retain that attribution.",
+  "pt": "Revisão em 17/10/2026. Fontes oficiais explicam normas e dados. Não aprovam a IMOBX. Documentação de um fornecedor descreve seu produto, sem comprovar uma integração IMOBX. Números fornecidos pelo fundador mantêm essa atribuição.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Scenarios and risks",
+  "pt": "Cenários e riscos",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Some roles are still open, including legal adviser, accountant and budget lead.",
+  "pt": "Ainda faltam pessoas para algumas funções, entre elas assessoria jurídica, contabilidade e a responsabilidade pelo orçamento.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Team, founder and partners",
+  "pt": "Equipe, fundador e parceiros",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Technology",
+  "pt": "Tecnologia",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "The experimental programme under article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in its tests. It does not authorise public offerings or other regulated activities.",
+  "pt": "O programa experimental do artigo 1º, §3º não permite investidores reais, valores mobiliários efetivamente emitidos ou movimentação de dinheiro real nos testes. Não concede autorização para oferta pública ou outras atividades reguladas.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Token and outreach",
+  "pt": "Token e divulgação",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "US guidance on disclosing paid relationships. It does not authorise investment offers or replace rules in other countries reached.",
+  "pt": "Orientação dos Estados Unidos sobre informar relações remuneradas. Não autoriza ofertas de investimento e não substitui regras dos outros países alcançados.",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "Version 0.8, 24 October 2026",
+  "pt": "Versão 0.8, 24 de outubro de 2026",
+  "pages": [
+   "reference.html"
+  ]
+ },
+ {
+  "en": "What exists",
+  "pt": "O que existe",
+  "pages": [
+   "reference.html",
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Who takes part",
+  "pt": "Quem participa",
+  "pages": [
+   "reference.html",
+   "roadmap.html",
+   "token.html"
+  ]
+ },
+ {
+  "en": "Before moving in, the family knows the price, the payment in reais and how much of each payment counts towards buying.",
+  "pt": "Antes de entrar, a família conhece o preço, o pagamento em reais e quanto de cada pagamento conta para a compra.",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "Everything still open",
+  "pt": "Tudo o que está em aberto",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "From renting to buying the home",
+  "pt": "Do aluguel à compra da casa",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "Money for building, including what comes back from purchases.",
+  "pt": "O dinheiro para construir, incluindo o que volta das compras.",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "Part buys the home; another part pays for upkeep and repairs.",
+  "pt": "Parte compra a casa; outra parte paga manutenção e consertos.",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "Protected for each family",
+  "pt": "Garantido a cada família",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "Repairs",
+  "pt": "Reparos",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "Roadmap, three cases",
+  "pt": "Roteiro, três casos",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "The home is the family’s",
+  "pt": "A casa é da família",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "The money",
+  "pt": "O dinheiro",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "Within the agreed limit",
+  "pt": "Dentro do limite combinado",
+  "pages": [
+   "rent-to-own.html"
+  ]
+ },
+ {
+  "en": "Current project reference",
+  "pt": "Referência atual do projeto",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "For developers: page content (JSON)",
+  "pt": "Para desenvolvedores: conteúdo das páginas (JSON)",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "IMOBX media kit",
+  "pt": "Media kit IMOBX",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "IMOBX media kit: Download kit (ZIP)",
+  "pt": "Media kit IMOBX: Baixar kit (ZIP)",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Pitch deck: PowerPoint",
+  "pt": "Pitch deck: PowerPoint",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Pitch deck: Slide content (JSON)",
+  "pt": "Pitch deck: Dados dos slides (JSON)",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Project background",
+  "pt": "Contexto do projeto",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Version 0.2 · English guide · PT/EN descriptions",
+  "pt": "Versão 0.2 · Guia em inglês · descrições PT/EN",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Version 0.8, 24 October 2026 · English · proposed process",
+  "pt": "Versão 0.8, 24 de outubro de 2026 · Inglês · processo proposto",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Version 0.8, 24 October 2026 · Portuguese and English",
+  "pt": "Versão 0.8, 24 de outubro de 2026 · Português e inglês",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "Whitepaper: Editable text",
+  "pt": "Whitepaper: Texto editável",
+  "pages": [
+   "resources.html"
+  ]
+ },
+ {
+  "en": "2. More properties",
+  "pt": "2. Mais imóveis",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "A new local team would need to show it can keep the homes and services running. Having a blockchain, tokens or a thousand homes does not by itself show that the income covers the bills.",
+  "pt": "Outra equipe precisaria conseguir manter a operação. Ter blockchain, tokens ou mil casas não mostra, por si só, que as contas fecham.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "A refund, grace period or discount applies only once it is written into the agreement.",
+  "pt": "Devolução, prazo de tolerância ou desconto só valem quando estiverem escritos no contrato.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Concept; depends on land, funding and scale",
+  "pt": "Conceito; depende de terreno, financiamento e escala",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Cost changes, warranties, defects and who approves an invoice linked to a founder.",
+  "pt": "Alterações de custo, garantia, defeitos e quem aprova uma cobrança ligada a um fundador.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Defined work, price, deadlines and payment stages, checked by someone else.",
+  "pt": "Trabalho, preço, prazo e etapas de pagamento definidos, com conferência por outra pessoa.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Donors and social funders",
+  "pt": "Doadores e financiadores sociais",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Each family would own its home; shared spaces, reserves and the money for more homes would follow rules agreed together.",
+  "pt": "Cada família seria dona da casa; espaços comuns, reservas e o dinheiro para novas casas teriam regras comuns.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Elinor Ostrom · Nobel lecture",
+  "pt": "Elinor Ostrom · Palestra do Nobel",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Expansion following review of the first operation",
+  "pt": "Expansão após avaliação da primeira operação",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Expansion would share designs, purchasing, administration and reporting while keeping local decisions close to residents. With records of costs and payments, the project draws in funding and invites owners of suitable properties to join.",
+  "pt": "A expansão compartilharia projetos, compras, administração e relatórios, mantendo as decisões locais perto dos moradores. Com registros de custos e pagamentos, o projeto atrai financiamento e convida donos de imóveis adequados a participar.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Final price, price changes, what counts toward purchase, late payments, leaving and how representatives are chosen.",
+  "pt": "Preço final, reajustes, quanto conta para a compra, atrasos, saída e como escolher representantes.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "IMOBX | Project stages",
+  "pt": "IMOBX | Etapas do projeto",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "In development alongside project preparation",
+  "pt": "Em desenvolvimento com a preparação do projeto",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "John; payment, accounting and technical review roles still unfilled.",
+  "pt": "John; responsáveis por pagamentos, contabilidade e revisão técnica ainda por nomear.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Less information",
+  "pt": "Menos informações",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Local decisions close to residents, with services shared across projects.",
+  "pt": "Decisões locais com os moradores; serviços compartilhados entre projetos.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Money for bills and promises already made, including periods of low income.",
+  "pt": "Dinheiro para as contas e compromissos assumidos, inclusive quando há pouca receita.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "No pilot is confirmed.",
+  "pt": "Nenhum piloto está confirmado.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Occupancy and purchase",
+  "pt": "Moradia e compra",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Offer property owners a way to sell through rent-to-own, as well as co-housing. It needs a larger organisation with a track record that gives guarantees and insurance. Prices and guarantees would come later; no cost lower than renting is promised.",
+  "pt": "Oferecer a proprietários um caminho para vender pelo aluguel com compra, além de moradia compartilhada. Exige uma organização maior, com histórico, que dê garantias e seguros. Preços e garantias viriam depois; nenhum custo menor que o aluguel é prometido.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "People checking documents, buildings and accounts",
+  "pt": "Quem confere documentos, obras e contas",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Records from the earlier phases.",
+  "pt": "Registros das fases anteriores.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Residents would still be able to use services without a crypto wallet.",
+  "pt": "O atendimento aos moradores não depende de carteira de criptoativos.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Responsibility for safety, registration, accounting and legal review, with costs in the budget.",
+  "pt": "Responsáveis por segurança, registro, contabilidade e análise jurídica, com custos no orçamento.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "See the eight groups and what each needs",
+  "pt": "Ver os oito grupos e o que cada um precisa",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Stages",
+  "pt": "Etapas",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "The Arc payment test would show how USDC arrives, who approves spending and who is paid.",
+  "pt": "O teste previsto na Arc acompanha uma entrada de USDC, a aprovação de uma despesa e seu pagamento.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "The first project’s foundations cover the legal organisation, property documents, a construction budget in reais, and housing and purchase terms. Discussions with prospective households are part of this preparation.",
+  "pt": "A base do primeiro projeto reúne a organização jurídica, os documentos do imóvel, o orçamento da obra em reais e as condições de moradia e compra. As conversas com as famílias fazem parte dessa preparação.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "The payment provider.",
+  "pt": "O prestador do serviço de pagamento.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "The resident and the organisation, under their agreement and the law.",
+  "pt": "O morador e a organização, conforme o contrato e a lei.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "The rights of token buyers.",
+  "pt": "Os direitos de quem compra um token.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "The rules",
+  "pt": "As regras",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "The rules would distinguish the household’s agreement, resident participation and investor rights. They include ways to question decisions, replace representatives and limit spending.",
+  "pt": "As regras separariam os direitos da família, a participação dos moradores e os direitos de investidores. Os acordos incluem revisão de decisões, troca de representantes e limites de gasto.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "There are seven stages: four run side by side, and three follow one after another.",
+  "pt": "São sete etapas: quatro andam lado a lado, e três vêm uma depois da outra.",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "What are the stages?",
+  "pt": "Quais são as etapas?",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "What the agreement would cover",
+  "pt": "O que o contrato cobriria",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "What will the founders settle first?",
+  "pt": "O que os fundadores vão definir primeiro?",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Who would decide",
+  "pt": "Quem decidiria",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "Work",
+  "pt": "Trabalho",
+  "pages": [
+   "roadmap.html"
+  ]
+ },
+ {
+  "en": "A question about the token? Write to the team.",
+  "pt": "Tem uma pergunta sobre o token? Escreva para a equipe.",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "Families’ payments never flow to token holders.",
+  "pt": "Os pagamentos das famílias nunca vão para quem tem o token.",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "How money moves",
+  "pt": "Como o dinheiro circula",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "If one is created, it would fund the work and pay for promotion, and it would stay apart from the housing cooperative.",
+  "pt": "Se um for criado, ele financiaria o trabalho e pagaria a divulgação, e ficaria separado da cooperativa de moradia.",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "In Arctide’s standard launch, as examined in the founders’ research, the money raised goes into the trading pool, not into building. Other launch arrangements can use the money differently and would need their own check.",
+  "pt": "No lançamento padrão da Arctide, examinado na pesquisa dos fundadores, o dinheiro arrecadado vai para o fundo de negociação, não para a obra. Outros formatos de lançamento podem usar o dinheiro de outro jeito e precisariam de verificação própria.",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "In September 2026, Ethervista, an earlier trading platform, announced that Arctide had acquired its technology, website, name and associated rights.",
+  "pt": "Em setembro de 2026, a Ethervista, uma plataforma de negociação anterior, anunciou que a Arctide comprou sua tecnologia, site, nome e direitos associados.",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "Only what its own rules allow",
+  "pt": "Só o que suas próprias regras permitem",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "Residents and founding members",
+  "pt": "Moradores e membros fundadores",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "The proposed pilot: a family pays towards its home, with the accounts in public.",
+  "pt": "O piloto proposto: uma família paga pela própria casa, com as contas em público.",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "The token is not a share of a home. Investors receive only the rights written in their agreement, and no vote, including a token vote, can on its own change a family’s housing agreement or its agreed purchase price.",
+  "pt": "O token não é uma parte de uma casa. Quem investe recebe somente os direitos escritos no seu acordo, e nenhuma votação, nem mesmo de quem tem tokens, muda sozinha o contrato de moradia de uma família nem o preço de compra combinado.",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "Trading fees can flow into the fund for new homes.",
+  "pt": "As taxas de negociação podem ir para o fundo de novas casas.",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "When could the token launch?",
+  "pt": "Quando o token poderia ser lançado?",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "Why are the token and the cooperative separate?",
+  "pt": "Por que o token e a cooperativa ficam separados?",
+  "pages": [
+   "token.html"
+  ]
+ },
+ {
+  "en": "1,500",
+  "pt": "1.500",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "2025 budget in US$",
+  "pt": "Orçamento de 2025 em US$",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "36-home village · November 2025",
+  "pt": "Vila de 36 casas · novembro 2025",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "627",
+  "pt": "627",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "An agreed use, such as operations and paying the people who do the work; a sale between holders pays the seller",
+  "pt": "Um uso combinado, como a operação e o pagamento de quem faz o trabalho; uma venda entre detentores paga ao vendedor",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "By Pix or bank transfer. No family needs crypto.",
+  "pt": "Por Pix ou transferência. Nenhuma família precisa de criptomoedas.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "CAIXA · SINAPI",
+  "pt": "CAIXA · SINAPI",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Families, donors, builders and investors each come with written commitments, and money is spent in an order that keeps them. The next work to fund is preparing the first project: the legal form, the property documents and a building budget in reais.",
+  "pt": "Famílias, doadores, construtoras e investidores chegam, cada um, com compromissos escritos, e o dinheiro é gasto numa ordem que os cumpre. O próximo trabalho a financiar é preparar o primeiro projeto: forma jurídica, documentos do imóvel e orçamento em reais.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "For each conversion: amount sent, exchange rate, fees and amount received. Publish bank references and transactions only where safe.",
+  "pt": "Em cada conversão: valor enviado, câmbio, taxas e valor recebido. Publicar referências bancárias e transações apenas quando for seguro.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "How a payment travels",
+  "pt": "O caminho de um pagamento",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "IMOBX | Funding and spending",
+  "pt": "IMOBX | Financiamento e gastos",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Investors, last",
+  "pt": "Investidores, por último",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Land",
+  "pt": "Terreno",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Law 13.019 · article 2, I, a",
+  "pt": "Lei 13.019 · art. 2º, I, a",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Only if money remains and a valid written agreement allows it.",
+  "pt": "Só se sobrar dinheiro e um acordo escrito válido permitir.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Payment for promotional work",
+  "pt": "Pagamento por trabalho de divulgação",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Payment provider: options being compared",
+  "pt": "Prestador de pagamento: opções em comparação",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Personal details, identity documents and residents’ private agreements stay off the public site and blockchain.",
+  "pt": "Dados pessoais, documentos de identidade e contratos privados dos moradores ficam fora do site público e da blockchain.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Rafael’s budget for each 45 m² home uses CUB/SINAPI references, direct purchasing and shared costs. It includes land, construction, solar and shared works. The plan is to build at least 36 homes together: US$999,972 over 12 months.",
+  "pt": "Orçamento de Rafael para cada casa de 45 m², usando referências CUB/SINAPI, compras diretas e custos compartilhados. Inclui terreno, construção, energia solar e obras comuns. O plano é construir pelo menos 36 casas juntas: US$999.972 em 12 meses.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Receita Federal · foreign entities and CNPJ",
+  "pt": "Receita Federal · entidades estrangeiras e CNPJ",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Rent (operating income)",
+  "pt": "Aluguel (receita da operação)",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Set by a written agreement; no payment is promised",
+  "pt": "Definido em acordo escrito; nenhum pagamento é prometido",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Sources:",
+  "pt": "Fontes: ",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "The builder never approves its own invoice.",
+  "pt": "A construtora nunca aprova a própria cobrança.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "The plan aims to save by building together and sharing common costs across homes. Quotes and maintenance bills need to show whether those savings happen.",
+  "pt": "O plano busca economizar construindo em conjunto e dividindo custos comuns entre as casas. Orçamentos e contas de manutenção precisam mostrar se a economia acontece.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "View the village budget’s cost items",
+  "pt": "Ver os itens do orçamento da vila",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "We still need to record what the contract includes, the lofts’ floor areas and the final cost.",
+  "pt": "Ainda precisamos registrar o que o contrato inclui, a área dos lofts e o custo final.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "What it may pay for",
+  "pt": "Para que pode servir",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "What will be reported?",
+  "pt": "O que será publicado?",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "When a household becomes the owner, the rent from that home ends. Each transferred home reduces IMOBX’s income, so any future income for investors would need another documented source. Money credited towards a family’s purchase cannot be used in a way that prevents the promised transfer.",
+  "pt": "Quando uma família se torna dona da casa, o aluguel dessa casa termina. Cada casa transferida reduz a renda da IMOBX; por isso, uma renda futura para investidores precisaria de outra fonte documentada. O valor já creditado à compra de uma família não pode ser usado de um jeito que impeça a transferência prometida.",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Where does money come from, and in what order is it used?",
+  "pt": "De onde vem o dinheiro, e em que ordem ele é usado?",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Which legal form?",
+  "pt": "Qual forma jurídica?",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Who pays",
+  "pt": "Quem paga",
+  "pages": [
+   "transparency.html"
+  ]
+ },
+ {
+  "en": "Build at a known cost, with the founders’ construction company and independent checks.",
+  "pt": "Construir a custo conhecido, com a construtora dos fundadores e conferência independente.",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "Home designs, purchasing, accounts and reports.",
+  "pt": "Projetos de casa, compras, contas e relatórios.",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "Housing gets dearer when building does not keep up with demand, when there are more and smaller households, and when construction, interest rates and energy rise. Homes held as investments add to it, and population growth, including migration, adds demand. IMOBX works on the costs it can change: building at a known cost, a payment that leads to ownership and lower energy bills.",
+  "pt": "A moradia fica mais cara quando as obras não acompanham a demanda, quando há mais famílias e menores, e quando construção, juros e energia sobem. Imóveis mantidos como investimento também pesam, e o crescimento da população, inclusive pela migração, aumenta a demanda. A IMOBX trabalha sobre os custos que pode mudar: obra a custo conhecido, um pagamento que leva à compra e contas de energia menores.",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "How decisions would be shared",
+  "pt": "Como as decisões seriam divididas",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "Lower running costs, with solar power where the site allows.",
+  "pt": "Reduzir as despesas da casa, com energia solar onde o local permitir.",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "Residential rents rose 9.13% in the 12 months to September 2026, against 4.58% official inflation.",
+  "pt": "Os aluguéis residenciais subiram 9,13% nos 12 meses até setembro de 2026, contra 4,58% da inflação oficial.",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "See how it works",
+  "pt": "Ver como funciona",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "The 2022 Census counted about 11.4 million vacant houses and flats.",
+  "pt": "O Censo de 2022 contou cerca de 11,4 milhões de casas e apartamentos vagos.",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "What are favelas? The local and global context",
+  "pt": "O que são favelas? Um desafio local e mundial",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "Why costs rise",
+  "pt": "Por que o custo sobe",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "Why housing",
+  "pt": "Por que moradia",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "Why not keep the homes and rent them out?",
+  "pt": "Por que não manter as casas para alugar?",
+  "pages": [
+   "why.html"
+  ]
+ },
+ {
+  "en": "Will Ruddick on commitment pooling (P2P Foundation)",
+  "pt": "Will Ruddick, sobre compromissos compartilhados (P2P Foundation)",
+  "pages": [
+   "why.html"
+  ]
+ }
+]

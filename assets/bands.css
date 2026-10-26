@@ -1,71 +1,175 @@
-/* Bands, second version (owner, 25 Oct 2026: 'fully track layout symmetry'; Impeccable layout pass).
-   Spatial thesis: reading pages need one predictable structure. Every element shares one left edge, the same edge
-   as the header logo and the footer (.wrap: min(1200px, 90%)). Headings sit above their content, never beside it.
-   Text keeps a reading measure from that edge; drawings and paired columns use the full content width.
-   Each topic is a band whose background alternates and runs to the window edges, so pieces stay distinct. */
+/* Bands: the page system for the reading pages (rewritten 25 Oct 2026 after the third review).
+   One rule per thing, no patch layers: the colours, rules and weights of components live in their own files
+   (home.css, flow.css, token.css); this file sets the frame they sit in.
+   - One left edge, the same as the header logo: the frame is the header's width plus its 24px padding.
+   - Headings sit above their content. Text keeps a reading measure of about 66 characters.
+   - Each topic is a band; bands alternate white and a light tint that runs to the window edges.
+   - One rhythm: 64px above and below every band (48px on phones). One lead size, one h2 size,
+     one subheading style, one top rule (2px #4A90A4), one 24px gutter.
+   Checked in the rendered page by interactive_check.py ("design rules in the render"). */
+
+/* Frame */
 .band-page{width:min(1248px,calc(90% + 48px));max-width:none;margin:0 auto;padding:0}
 .band-page>*{padding-left:24px;padding-right:24px;box-sizing:border-box}
 .band-page>h1{margin:0;padding-top:56px;max-width:none}
-.band-page>.guide-lead{font-size:20px;line-height:1.55;max-width:none;margin:0;padding-top:16px;padding-bottom:40px;padding-right:calc(24px + max(0px,100% - 48px - 780px))}
+.band-page>.guide-lead{font-size:18px;line-height:1.55;max-width:none;margin:0;padding-top:16px;padding-bottom:40px;
+  padding-right:calc(24px + max(0px,100% - 48px - 560px))}
+.band-page>section>span:empty,.band-page>span:empty{position:absolute;padding:0}
+
+/* Bands and their rhythm */
+.band-page>section,.band-page>.duo,.band-page>.closing-band{position:relative;margin:0;padding-top:64px;padding-bottom:64px}
+.band-page>section:nth-of-type(odd){background:#EDF5F7;box-shadow:0 0 0 100vmax #EDF5F7;clip-path:inset(0 -100vmax)}
+.band-page>section:nth-of-type(even),.band-page>.duo{background:#fff}
+.band-page>section[data-anchor-only]{padding:0;background:none;box-shadow:none;clip-path:none;min-height:0}
+.band-page>#status{padding-top:0;padding-bottom:40px;background:#fff;box-shadow:none;clip-path:none}
+
+/* Loose lines between bands get the room of a band edge and the same reading measure */
 .band-page>p:not(.guide-lead){max-width:none;margin:0;padding-top:12px;padding-bottom:12px}
-.band-page>section,.band-page>.duo{position:relative;padding-top:56px;padding-bottom:56px;margin:0}
-.band-page>section:nth-of-type(odd),.band-page>.duo{background:#F7FAFB;box-shadow:0 0 0 100vmax #F7FAFB;clip-path:inset(0 -100vmax)}
-.band-page>section:nth-of-type(even){background:#fff}
-.band-page>section>span:empty{position:absolute}
-.band-page>section>h2{margin:0 0 20px;font-size:30px;line-height:1.2;max-width:none}
-/* one reading measure for text, starting at the shared edge */
-.band-page>section>p,.band-page>section>ul:not(.funding-status),.band-page>section>ol:not(.step-strip):not(.launch-steps):not(.purpose-list),
-.band-page>section>.source-note{max-width:720px;margin-left:0}
-.band-page>section>p,.band-page>section>ul{margin-top:0}
-.band-page .money-flow{width:auto;margin:8px 0 24px}
-.band-page>.soft-panel{border:0;margin-top:0}
-.band-page>.closing-band{margin-top:0;padding-top:36px;padding-bottom:36px;border:0;background:#E8F4F8;box-shadow:0 0 0 100vmax #E8F4F8;clip-path:inset(0 -100vmax)}
+.band-page>section+p,.band-page>.duo+p{padding-top:28px;padding-bottom:28px}
+.band-page>p.rent-cases{padding-bottom:40px}
 .band-page>.partner-line{padding-top:28px;padding-bottom:40px;text-align:left}
-.band-page>.token-line{margin:0;padding-top:28px;padding-bottom:28px}
-.band-page>#status{padding-top:0;padding-bottom:36px;background:#fff;box-shadow:none;clip-path:none}
-.band-page>#elsewhere{padding-top:20px;padding-bottom:20px;background:#fff;box-shadow:none;clip-path:none}
-.band-page>#elsewhere>p{margin:0}
-/* the repair line ends at the last step */
+
+/* Type: one h2, one lead, one body size, one subheading style */
+.band-page h2{margin:0 0 20px;font-size:30px;line-height:1.2;max-width:none}
+.band-page section p,.band-page section li,.band-page .duo p,.band-page .duo li{font-size:16px;line-height:1.65}
+.band-page h3,.vision-path h3,.three-ways h3,.partner-list dt,.side-title,.purpose-list strong,.launch-steps strong,
+.ct-panel h3,.flow-phases strong,.money-flow-steps strong,.band-page .guide-cards h3{font-size:18px;font-weight:700;color:#193D4E;letter-spacing:0;line-height:1.35}
+.band-page .cost-number{font-size:18px;font-weight:400;letter-spacing:0;color:#193D4E}
+
+/* Reading measure: about 66 characters, starting at the shared edge; drawings and rows use the full width */
+.band-page section p,.band-page>section>ul:not(.funding-status),.band-page>section>.source-note,.band-page .duo p,
+.band-page>section>ol:not(.step-strip):not(.launch-steps):not(.purpose-list):not(.three-ways):not(.vision-path):not(.join-steps):not(.flow-phases):not(.layer-list):not(.figure-row){max-width:32em;margin-left:0}
+.band-page>section>p,.band-page>section>ul{margin-top:0}
+.band-page ul{padding-left:20px}
+.band-page>section>details{max-width:none}
+@media (min-width:900px){.band-page>p:not(.guide-lead){padding-right:calc(100% - 24px - 32em)}}
+
+/* Components inside bands */
+.band-page .money-flow{width:auto;margin:8px 0 24px}
 .band-page .step-strip::before{right:calc(20% - 12px)}
-@media (min-width:900px){
-  .band-page>.duo{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-  .band-page>.closing-band{display:flex}
+.band-page .funding-status{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0;padding-left:0}
+.purpose-list{list-style:none;padding:0;margin:0 0 24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.purpose-list>li{padding-top:16px;border-top:2px solid #4A90A4}
+.purpose-list strong{display:block;margin-bottom:6px}
+.purpose-list span{display:block}
+.band-page>section>.purpose-list{max-width:none}
+.band-page .coop-token{align-items:stretch;gap:24px}
+.band-page .ct-bridge{align-self:center}
+.band-page .two-sides,.band-page .launch-steps,.band-page .money-flow-steps,.band-page .cost-comparison{gap:24px}
+
+/* Two topics side by side, each under the one top rule */
+.band-page .duo>section{border-top:2px solid #4A90A4;padding-top:16px}
+@media (min-width:900px){.band-page>.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}}
+
+/* The closing band: text, then its button underneath, on the shared edge */
+.band-page>.closing-band{display:block;border:0}
+.band-page>.closing-band p{margin:0 0 16px}
+
+/* Phones */
+@media (max-width:900px){
+  .band-page>section,.band-page>.duo,.band-page>.closing-band{padding-top:48px;padding-bottom:48px}
+  .band-page .funding-status,.purpose-list{grid-template-columns:1fr}
+  .band-page .ct-arrow{display:none}
+  .band-page .ct-bridge{display:grid;gap:10px;margin:4px 0}
+  .band-page .ct-bridge p{margin:0;text-align:left;padding-left:0;border-left:0;font-size:15px}
 }
 @media (max-width:600px){
   .band-page{width:calc(90% + 32px)}
   .band-page>*{padding-left:16px;padding-right:16px}
-  .band-page>.guide-lead{font-size:18px;padding-right:16px}
+  .band-page>.guide-lead{padding-right:16px}
   .band-page>h1{padding-top:32px}
-  .band-page>section>h2{font-size:24px}
+  .band-page h2{font-size:24px}
 }
 
-/* Section-by-section pass (25 Oct) */
-/* body text: one size everywhere in a band */
-.band-page>section p,.band-page>section li,.band-page>.duo p,.band-page>.duo li{font-size:16px;line-height:1.65}
-/* lists start close to the text edge */
-.band-page ul{padding-left:20px}
-/* loose lines between bands keep the same reading width as band text */
-@media (min-width:900px){.band-page>p:not(.guide-lead){padding-right:calc(100% - 744px)}}
-/* the band already separates the piece: drawings lose their own top rule */
-/* full-width blocks: fold-outs belong with the cards above them */
-.band-page>section>details{max-width:none}
-/* status: one even row */
-.band-page .funding-status{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 32px;margin:0}
-/* purposes of the token: three even columns, no boxes, no numbers */
-.purpose-list{list-style:none;padding:0;margin:0 0 24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
-.purpose-list>li{padding-top:16px;border-top:2px solid #4A90A4}
-.purpose-list strong{display:block;font-size:18px;margin-bottom:6px;color:#193D4E}
-.purpose-list span{display:block}
-.band-page>section>.purpose-list{max-width:none}
-/* the cooperative and the token: same top, same height */
-.band-page .coop-token{align-items:stretch}
-.band-page .ct-bridge{align-self:center}
-@media (max-width:899px){
-  .band-page .funding-status,.purpose-list{grid-template-columns:1fr}
-}
-/* phone: the two money rules between the panels read as text, without sideways arrows */
-@media (max-width:899px){
-  .band-page .ct-arrow{display:none}
-  .band-page .ct-bridge{display:grid;gap:10px;margin:4px 0}
-  .band-page .ct-bridge p{margin:0;text-align:left;padding-left:12px;border-left:0;font-size:15px}
-}
+/* Attention parts (owner, 25 Oct: one orange hint per page; skimmers; "on this page"; quiet folds).
+   Orange means "look here" or "do this", nothing else: one key card and one action button per page.
+   Tones pass contrast: #B85500 behind white button text (4.8:1); #A84B00 text on #FDF1E4 (5.1:1). */
+.band-page>.on-this-page{padding-top:0;padding-bottom:40px;margin:0}
+.on-this-page p{margin:0 0 8px;font-size:15px;font-weight:700;color:#526571}
+.on-this-page ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px}
+.on-this-page li{margin:0;font-size:16px;line-height:1.5}
+.band-page>section>p.answer,.band-page .duo p.answer{font-size:18px;line-height:1.5;font-weight:700;color:#193D4E;margin:0 0 20px;max-width:30em}
+.band-page .key-card{max-width:36em;margin:0 0 24px;padding:20px 24px;background:#FDF1E4}
+.band-page>.key-card{max-width:none;margin:0 24px 40px;padding:20px 24px;box-sizing:border-box}
+@media (max-width:600px){.band-page>.key-card{margin:0 16px 32px;padding:16px}}
+/* folds are quiet: their mark is teal, not orange */
+.band-page .disclosure>summary:after{color:#276578}
+
+/* Still to settle (roadmap): three groups side by side, each item with an empty box until it is settled */
+.settle-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 0 24px}
+.settle-groups>div{border-top:2px solid #4A90A4;padding-top:16px}
+.settle-groups h3{margin:0 0 10px}
+.band-page .settle-list{list-style:none;padding:0;margin:0}
+.settle-list li{position:relative;padding-left:28px;margin:0 0 10px}
+.settle-list li::before{content:"";position:absolute;left:0;top:.3em;width:14px;height:14px;border:2px solid #4A90A4;background:#fff}
+.settle-list li.is-settled::before{background:#4A90A4}
+@media (max-width:900px){.settle-groups{grid-template-columns:1fr}}
+/* folds inside a band keep the reading measure for their text, full width for tables */
+.band-page section>details.disclosure{margin-top:16px}
+/* group labels (roadmap stages) read as small grey labels, not as a second heading */
+.band-page p.stage-group{font-size:15px;font-weight:700;color:#526571;margin:28px 0 0;padding-bottom:8px}
+
+/* Blockchain page: the three layers as three even columns under the one top rule */
+.band-page .layer-list{list-style:none;padding:0;margin:0 0 24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:none}
+.layer-list>li{border-top:2px solid #4A90A4;padding-top:16px}
+.layer-list h3{display:flex;align-items:center;gap:10px;margin:0 0 8px}
+.layer-list .vision-glyph{width:26px;height:26px;flex:none;fill:none;stroke:#276578;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.band-page .layer-list p{margin:0 0 8px}
+.open-paths{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:0 0 16px}
+.open-paths>div{border-top:2px solid #4A90A4;padding-top:16px}
+.open-paths h3{margin:0 0 10px}
+.band-page .path-list{list-style:disc;padding-left:20px;margin:0}
+.band-page .path-list li{margin:0 0 8px}
+@media (max-width:900px){.band-page .layer-list,.open-paths{grid-template-columns:1fr}}
+
+/* The importance ladder (owner, 25 Oct: variable accent by importance, not symmetry everywhere).
+   1 must not miss (one per page) ........ .key-card: pastel orange area, dark orange bold text
+   2 the point of a section (one each) ... p.answer under the question heading; at most one phrase in it
+                                           may carry the pastel marker (mark.hint) with a thin bright orange underline
+   3 worth stopping for (max two) ........ .window: a framed box for a worked example or a rule that never changes
+   4 normal reading ...................... 16px body, paragraphs of 50 words or fewer, lists of 3 to 5
+   5 voice and asides .................... p.aside in italics: people's own words, "for example", status notes; short only
+   6 on request .......................... details.disclosure: background, method, sources; never money, risk or promises
+   Orange in three strengths: pastel #FDF1E4 for areas (card, marker), dark #A84B00/#B85500 for text and the one
+   button, bright #E07A00 only for thin marks (the marker underline), never for text or areas. */
+.band-page .window{max-width:36em;margin:8px 0 24px;padding:20px 24px;background:#fff;border:1px solid #9DC3CF}
+.band-page>section:nth-of-type(even) .window{background:#F4F9FA}
+.band-page .window h3{margin:0 0 10px}
+.band-page .window ul{margin:0}
+.band-page p.aside{font-style:italic;color:#3C5560;max-width:32em;margin:0 0 16px}
+
+/* roadmap stages as compact rows: title and status; who and needs open on request */
+.band-page .roadmap-stage{padding:16px 0}
+.band-page .roadmap-stage>summary>h3{font-size:18px}
+.band-page .roadmap-stage>summary>.guide-window{margin-top:4px;font-size:15px}
+/* glossary: term and meaning side by side */
+.band-page dl.glossary{display:grid;grid-template-columns:160px 1fr;gap:8px 24px;margin:0;max-width:40em}
+.band-page dl.glossary dt{font-weight:700;color:#193D4E}
+.band-page dl.glossary dd{margin:0}
+@media (max-width:600px){.band-page dl.glossary{grid-template-columns:1fr;gap:2px}.band-page dl.glossary dd{margin-bottom:10px}}
+
+/* Why housing: the four figures as a row, each with its date and limit visible */
+.band-page .figure-row{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;max-width:none}
+.figure-row>li{border-top:2px solid #4A90A4;padding-top:16px}
+.figure-row .figure-big{display:block;font-size:34px;line-height:1.1;color:#193D4E;margin:0 0 10px;letter-spacing:0}
+.band-page .figure-row p{max-width:none}
+@media (max-width:900px){.band-page .figure-row{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.band-page .figure-row{grid-template-columns:1fr}}
+/* Why housing: the proposed organisation drawing (line style of the money drawings, no text inside) */
+.org-art{display:block;width:100%;max-width:900px;height:auto;margin:8px 0 16px}
+.org-art .og-area{fill:#F4F9FA;stroke:#4A90A4;stroke-width:2}
+.org-art .og-line{fill:none;stroke:#193D4E;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.org-art .og-link{fill:none;stroke:#4A90A4;stroke-width:6;stroke-linecap:round}
+.org-art .og-person{fill:#fff;stroke:#193D4E;stroke-width:2}
+.org-art .og-base{fill:#E8F4F8;stroke:#193D4E;stroke-width:2}
+
+/* a card straight under the title gets the same gap as a lead */
+.band-page>h1+.key-card{margin-top:16px}
+/* Why housing: one picture per column, above its own label */
+.org-list .org-pic{display:block;width:100%;max-width:220px;height:auto;margin:0 0 12px}
+.org-pic .og-area{fill:#F4F9FA;stroke:#4A90A4;stroke-width:2}
+.org-pic .og-line{fill:none;stroke:#193D4E;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.org-pic .og-link{fill:none;stroke:#4A90A4;stroke-width:6;stroke-linecap:round}
+.org-pic .og-person{fill:#fff;stroke:#193D4E;stroke-width:2}
+.org-pic .og-base{fill:#E8F4F8;stroke:#193D4E;stroke-width:2}
+.org-pic .og-check{fill:none;stroke:#276578;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}

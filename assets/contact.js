@@ -8,8 +8,10 @@
   const message = document.getElementById('enquiry-message');
   const status = document.getElementById('enquiry-status');
   const common = ['contact-name', 'contact-reply', 'contact-consent'].map(id => document.getElementById(id));
-  const language = () => document.documentElement.lang.startsWith('pt') ? 0 : 1;
-  const say = (pt, en) => language() === 0 ? pt : en;
+  // 0 Portuguese, 1 English, 2 Dutch (owner, 26 Oct 2026); route data holds [pt, en, nl].
+  const language = () => { const l = document.documentElement.lang; return l.startsWith('pt') ? 0 : (l.startsWith('nl') ? 2 : 1); };
+  const NL_SAY = {"IMOBX enquiry": "Bericht aan IMOBX", "Name: ": "Naam: ", "Reply to: ": "Antwoorden via: ", "Please complete this field.": "Vul dit veld in.", "Message prepared. It has not been sent.": "Bericht voorbereid. Het is nog niet verstuurd.", "Message copied. It has not been sent.": "Bericht gekopieerd. Het is nog niet verstuurd.", "Select and copy the text above.": "Selecteer en kopieer de tekst hierboven."};  /* filled from i18n/nl.json at build time */
+  const say = (pt, en) => [pt, en, NL_SAY[en] || en][language()];
   let selected = null;
 
   function showContext() {
