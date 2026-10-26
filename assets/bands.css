@@ -32,13 +32,13 @@
 /* Type: one h2, one lead, one body size, one subheading style */
 .band-page h2{margin:0 0 20px;font-size:30px;line-height:1.2;max-width:none}
 .band-page section p,.band-page section li,.band-page .duo p,.band-page .duo li{font-size:16px;line-height:1.65}
-.band-page h3,.vision-path h3,.three-ways h3,.partner-list dt,.side-title,.purpose-list strong,.launch-steps strong,
+.band-page h3,.side-title,.purpose-list strong,.launch-steps strong,
 .ct-panel h3,.flow-phases strong,.money-flow-steps strong,.band-page .guide-cards h3{font-size:18px;font-weight:700;color:#193D4E;letter-spacing:0;line-height:1.35}
 .band-page .cost-number{font-size:18px;font-weight:400;letter-spacing:0;color:#193D4E}
 
 /* Reading measure: about 66 characters, starting at the shared edge; drawings and rows use the full width */
-.band-page section p,.band-page>section>ul:not(.funding-status),.band-page>section>.source-note,.band-page .duo p,
-.band-page>section>ol:not(.step-strip):not(.launch-steps):not(.purpose-list):not(.three-ways):not(.vision-path):not(.join-steps):not(.flow-phases):not(.layer-list):not(.figure-row){max-width:32em;margin-left:0}
+.band-page section p,.band-page>section>ul:not(.funding-status):not(.roles),.band-page>section>.source-note,.band-page .duo p,
+.band-page>section>ol:not(.step-strip):not(.launch-steps):not(.purpose-list):not(.path):not(.ways):not(.layer-list):not(.figure-row){max-width:32em;margin-left:0}
 .band-page>section>p,.band-page>section>ul{margin-top:0}
 .band-page ul{padding-left:20px}
 .band-page>section>details{max-width:none}

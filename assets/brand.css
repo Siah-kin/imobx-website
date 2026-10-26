@@ -361,6 +361,8 @@ mark.hint{background:#FDF1E4;color:inherit;padding:2px 4px;box-shadow:inset 0 -2
 /* Three languages (26 Oct 2026): a little less space between menu items so the longer Dutch labels fit on one line
    on wide screens; where they still would not, Dutch uses the same tidy two-row header as tablets (menu on its own row). */
 @media (min-width:1001px){.site-links{gap:4px 16px}}
+/* the Portuguese and Dutch menus are longer: a touch tighter so each stays on one row at desktop width (homepage mock, 26 Oct) */
+@media (min-width:1001px){html[lang="nl"] .site-links,html[lang="pt-BR"] .site-links{gap:4px 12px}}
 @media (min-width:1001px) and (max-width:1320px){
   html[lang="nl"] .site-nav{grid-template-columns:1fr auto;gap:4px 20px;padding-block:10px}
   html[lang="nl"] .site-nav .wordmark{grid-column:1;grid-row:1}

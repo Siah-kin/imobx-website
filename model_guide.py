@@ -620,7 +620,7 @@ def build_guide(root, page, tr, esc, language_controls):
     page_why += '<section id="answer">' + text(why['answer_title'], 'h2') + '<ul>' + ''.join(text(a, 'li') for a in why['answer']) + '</ul>'
     page_why += '<p>' + text(('Como o dinheiro circula: veja como funciona', 'How the money moves: see how it works'), 'a', 'href="rent-to-own.html#payments"') + '</p></section>'
     page_why += '<section id="rent-to-own-or-rent">' + text(why['fleet_title'], 'h2') + text(why['fleet'])
-    page_why += text(('As três fases de crescimento', 'The three phases of growth'), 'a', 'href="index.html#como-chegamos"') + '</section>'
+    page_why += text(('As três fases de crescimento', 'The three phases of growth'), 'a', 'href="roadmap.html#stages"') + '</section>'  # the phases live on the roadmap (homepage brief, 26 Oct)
     # Bounded context section (owner, 25 Oct): what each neighbourhood decides, what projects share, who answers for it.
     page_why += '<section id="organisation">' + text(why['org_title'], 'h2') + text(why['org_answer'], 'p', 'class="answer"')
     page_why += '<ol class="layer-list org-list">' + ''.join('<li>' + pic + '<h3>' + text(t_, 'span') + '</h3>' + text(b_) + '</li>' for pic, (t_, b_) in zip(ORG_PICS, why['org_cols'])) + '</ol>'
@@ -749,19 +749,4 @@ def build_guide(root, page, tr, esc, language_controls):
         'IMOBX | Perguntas sobre o modelo', 'Perguntas sobre o modelo', 'rent-to-own.html#questions',
         'Open the current version', per_question=stub_targets))
 
-    home = root / 'index.html'
-    overview = guide['home_overview']
-    # Second review, 25 Oct: the homepage's agreement section repeated rent-to-own; only its link targets remain.
-    housing = ('<section class="content wrap solution-section" id="modelo" data-anchor-only>'
-               '<span id="participation-summary"></span><span id="home-purchase-title"></span><span id="visao-rafael-old"></span></section>')
-    home_source, count = re.subn(r'<section class="content wrap solution-section" id="modelo"[^>]*>.*?</section>',
-                                lambda _: housing, home.read_text(), count=1, flags=re.S)
-    if count != 1:
-        raise ValueError('Expected one homepage housing explanation.')
-    phases = guide['phases']
-    phases_html = ('<section class="content wrap" id="como-chegamos">' + text(phases['title'], 'h2') + text(phases['intro'])
-                   + flow(phases['steps'], 'flow flow-phases') + text(phases['note'], 'p', 'class="fine"') + '</section>')
-    source, count = re.subn(r'<section class="content wrap" id="como-chegamos">.*?</section>', lambda _: phases_html, home_source, count=1, flags=re.S)
-    if count != 1:
-        raise ValueError('Expected one homepage section for how we get there.')
-    home.write_text(source)
+    # The homepage is built whole by home_page.py (owner-approved mock, 26 Oct 2026); its three phases live on the roadmap.

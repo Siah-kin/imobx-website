@@ -52,9 +52,13 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
              'September', 'October', 'November', 'December']
 
 
+# The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
+SITE_UPDATED = '2026-10-26'
+
+
 def status_bar_text():
-    """Visitor-facing status bar: the project status and the date, without a version number."""
-    year, month, day = (int(part) for part in REVIEW_DATE.split('-'))
+    """Visitor-facing status bar: the project status and the date the site last changed, without a version number."""
+    year, month, day = (int(part) for part in SITE_UPDATED.split('-'))
     pt = f'Em preparação · atualizado em {day:02d}/{month:02d}/{year}'
     en = f'In preparation · updated {day} {MONTHS_EN[month - 1][:3]} {year}'
     return pt, en
@@ -94,19 +98,21 @@ def site_header(lang='pt-BR', current=''):
 SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, founder, and John (communication and digital tools). The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida.</p><p><a href="transparency.html" data-pt="Financiamento e gastos" data-en="Funding and spending">Financiamento e gastos</a>&nbsp;· <a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a>&nbsp;· <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a>&nbsp;· <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
 
 
-def page(title, body, script='', version='0.1', lang='en', title_pt=None):
+def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):
     if 'id="main"' not in body:
         body = re.sub(r'<main(?![^>]*\bid=)', '<main id="main"', body, count=1)
     if 'assets/site.js' not in script:
         script += '<script src="assets/site.js" defer></script>'
-    current = {'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
+    description = description or 'IMOBX housing pilot: model, roadmap and project resources.'
+    current = {'IMOBX | Proposed Rio housing pilot': 'index.html',
+               'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
                'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html',
                'IMOBX | Renting and buying a home': 'rent-to-own.html',
                'IMOBX | Take part': 'contact.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
     document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="IMOBX housing pilot: model, roadmap and project resources.">
-<title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}</head>
+<meta name="description" content="{esc(description)}">
+<title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}{head}</head>
 <body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review" data-pt="{esc(status_bar_text()[0])}" data-en="{esc(status_bar_text()[1])}">{esc(status_bar_text()[0] if lang.startswith('pt') else status_bar_text()[1])}</div>
 <a href="#main" class="skip" data-pt="Pular para o conteúdo" data-en="Skip to content">{'Pular para o conteúdo' if lang.startswith('pt') else 'Skip to content'}</a>
 {site_header(lang, current)}
@@ -238,6 +244,11 @@ def resource_section(standalone=False):
     body += translated('Baixar documentos e logos (ZIP)', 'Download documents and logos (ZIP)', 'a', 'href="imobx-documents.zip" download')
     return body + '</div>'
 
+
+# The homepage is built whole from its copy table (owner-approved mock, 26 Oct 2026): home_page.py.
+import hashlib as _hashlib
+from home_page import build_home
+build_home(ROOT, page, lambda name: f'assets/{name}?v=' + _hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:10])
 
 for name in ['index.html', 'properties.html']:
     target = ROOT / name
