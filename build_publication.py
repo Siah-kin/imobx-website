@@ -245,10 +245,11 @@ def resource_section(standalone=False):
     return body + '</div>'
 
 
-# The homepage is built whole from its copy table (owner-approved mock, 26 Oct 2026): home_page.py.
+# The homepage is the 25 Oct version (release 2199cf5) restored as the base (owner, 27 Oct), reordered as
+# attention, interest, desire, action: home_b.htmlsrc. home_page.py (26–27 Oct) is kept for history only.
 import hashlib as _hashlib
-from home_page import build_home
-build_home(ROOT, page, lambda name: f'assets/{name}?v=' + _hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:10])
+_home_css = 'assets/home-b.css?v=' + _hashlib.sha256((ROOT / 'assets' / 'home-b.css').read_bytes()).hexdigest()[:10]
+(ROOT / 'index.html').write_text((ROOT / 'home_b.htmlsrc').read_text().replace('assets/home-b.css', _home_css))
 
 for name in ['index.html', 'properties.html']:
     target = ROOT / name
