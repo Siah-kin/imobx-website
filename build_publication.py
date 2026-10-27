@@ -53,7 +53,7 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
 
 
 # The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
-SITE_UPDATED = '2026-10-26'
+SITE_UPDATED = '2026-10-27'
 
 
 def status_bar_text():

@@ -369,3 +369,6 @@ mark.hint{background:#FDF1E4;color:inherit;padding:2px 4px;box-shadow:inset 0 -2
   html[lang="nl"] .site-nav .lang{grid-column:2;grid-row:1}
   html[lang="nl"] .site-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:0 22px}
 }
+
+/* small laptops (27 Oct): Portuguese keeps one menu row at 1280 so the homepage button stays on the first screen */
+@media (min-width:1001px) and (max-width:1320px){html[lang="pt-BR"] .site-links{gap:4px 9px;font-size:13.5px}}
