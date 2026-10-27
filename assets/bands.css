@@ -89,7 +89,7 @@
 .on-this-page ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px}
 .on-this-page li{margin:0;font-size:16px;line-height:1.5}
 .band-page>section>p.answer,.band-page .duo p.answer{font-size:18px;line-height:1.5;font-weight:700;color:#193D4E;margin:0 0 20px;max-width:30em}
-.band-page .key-card{max-width:36em;margin:0 0 24px;padding:20px 24px;background:#FDF1E4}
+.band-page .key-card{max-width:36em;margin:0 0 24px;padding:0;background:none}
 .band-page>.key-card{max-width:none;margin:0 24px 40px;padding:20px 24px;box-sizing:border-box}
 @media (max-width:600px){.band-page>.key-card{margin:0 16px 32px;padding:16px}}
 /* folds are quiet: their mark is teal, not orange */

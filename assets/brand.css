@@ -298,8 +298,8 @@ body{line-height:1.5}
 .guide-table td::before{content:attr(data-label);display:block;font-weight:700;font-size:14px;color:var(--ink);margin-bottom:4px}}
 
 /* Links in the text and footer are blue and underlined, so a visitor can see what is clickable. Buttons and the menu keep their own look. */
-main a:not(.button),.site-footer a{color:#1b5e8f;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-main a:not(.button):hover,.site-footer a:hover{color:#123f60;text-decoration-thickness:2px}
+main a:not(.button),.site-footer a{color:#A84B00;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+main a:not(.button):hover,.site-footer a:hover{color:#7F3A00;text-decoration-thickness:2px}
 
 .icon{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.carousel-controls button,.viewer-toolbar button,.deck-controls button{display:inline-flex;align-items:center;gap:8px}
 .stage-group{font-weight:700;margin:28px 0 0}
@@ -350,14 +350,14 @@ main>.partner-line{width:min(1200px,90%);margin-left:auto;margin-right:auto}
 
 /* Attention parts on every page (owner, 25 Oct): one orange card and one orange action per page.
    Pastel #FDF1E4 for areas, dark #A84B00 / #B85500 for text and the button (both pass contrast), bright #E07A00 only as a thin mark. */
-.key-card{max-width:36em;margin:0 0 28px;padding:20px 24px;background:#FDF1E4;box-sizing:border-box}
-.key-card p{margin:0;font-size:19px;line-height:1.5;font-weight:700;color:#A84B00}
+.key-card{max-width:36em;margin:0 0 28px;padding:0;background:none;box-sizing:border-box}
+.key-card p{margin:0;font-size:19px;line-height:1.5;font-weight:700;color:#193D4E}
 .key-card p+p{margin-top:8px}
-.button.act,a.button.act{background:#B85500;border-color:#B85500;color:#fff}
-.button.act:hover,a.button.act:hover{background:#A84B00;border-color:#A84B00;color:#fff}
+.button.act,a.button.act{background:#276578;border-color:#276578;color:#fff}
+.button.act:hover,a.button.act:hover{background:#193D4E;border-color:#193D4E;color:#fff}
 .page-action{margin:0 0 32px}
-mark.hint{background:#FDF1E4;color:inherit;padding:2px 4px;box-shadow:inset 0 -2px 0 #E07A00;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-@media (max-width:600px){.key-card{padding:16px}}
+mark.hint{background:none;color:inherit;padding:0;box-shadow:none;font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@media (max-width:600px){.key-card{padding:0}}
 /* Three languages (26 Oct 2026): a little less space between menu items so the longer Dutch labels fit on one line
    on wide screens; where they still would not, Dutch uses the same tidy two-row header as tablets (menu on its own row). */
 @media (min-width:1001px){.site-links{gap:4px 16px}}
@@ -372,3 +372,9 @@ mark.hint{background:#FDF1E4;color:inherit;padding:2px 4px;box-shadow:inset 0 -2
 
 /* small laptops (27 Oct): Portuguese keeps one menu row at 1280 so the homepage button stays on the first screen */
 @media (min-width:1001px) and (max-width:1320px){html[lang="pt-BR"] .site-links{gap:4px 9px;font-size:13.5px}}
+
+/* Owner, 27 Oct 2026: orange removed from the whole site ("remove the entire unless it becomes useful and elegant"). Cards, buttons, marks and drawings use the site's own teal and ink. */
+/* Owner, 27 Oct 2026: orange returns in three places only: text links (#A84B00, 5.7:1 on white, 5.2:1 on pale teal),
+   the drawings, and the Telegram button (#B85500 behind white text, 4.8:1). */
+a.button[href^="https://t.me/"]{background:#B85500;border-color:#B85500;color:#fff}
+a.button[href^="https://t.me/"]:hover{background:#A84B00;border-color:#A84B00;color:#fff}

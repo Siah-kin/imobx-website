@@ -6,11 +6,11 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "5f35ae829bfb84e678eae4f4ce88f0ed0c36ad0234be259129cbd808bb9c3890"
+      "sha256": "eaec11c47c212532c1f711bbb53247967ae907340064c637864c78dab15d15f5"
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "e4b2c506c94c5dbbbbfc65dacf43f18830ff6880f9aa834102748c1a75959c3b"
+      "sha256": "bb9af1f770bfe03aaad1422d01838a7eba25e61b5dc5235dd16692a22e0583cf"
     },
     {
       "path": "properties.html",
@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "b0596317931aad8d8eb131d7fc353bc47a026f1800f3093355190b78a1a5d613"
+      "sha256": "f84cad2233db2f7ad24fe517312db0e7e39a15cfcdbb29e6d60093aed080d2b1"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "97c640a979e70f2df576826ca4e6796820c645bdf00c713f93b563df6b0d89b2"
+      "sha256": "0247d27b007c8301cd1459423e3a1a2d286e331a267f1f05e0d91260a500c11d"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "0ecf103cda5de42e90421c086d9549274ec00ced59b21f7a689622cdbd013981"
+      "sha256": "034ccaabc435c24e97fe4f8d5a4713cd419f9531650b973726344d4aa177fa73"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "7241b34155bbecc81c9f6c06ab6bff61c6c2e0916a3618d2986a5a3299be24a3"
+      "sha256": "97c65abe57aad17bdc95abd8cb99d5bb476f4d72c03c1ab9d785631413db7f10"
     },
     {
       "path": "pitchdeck.json",
@@ -78,19 +78,19 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "39dcdf2218e6577c67ad05d68028b5702c6a6dee1fe18b9efe5a3a08f5031843"
+      "sha256": "bc65a6e62b0a0bba8ab98d9325496aa83a77f499155c9342d246d7cea5c30521"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "4e03db732b1ff0b062a0427d8499c90197f747901a89f39783c0625e746c7246"
+      "sha256": "0a7cb937fe60e98d6bbb7c001f9519e77f5222d01e3545408dea012ffda46530"
     },
     {
       "path": "roadmap.html",
-      "sha256": "0c77508a3321b0a32839dcd180c86ac86fa697b8b6fca7ec356d105af0c01c4c"
+      "sha256": "eae09e05bdaf979ad6074a80abe937db540d84c80d19ec2871fdc6834a0c76fd"
     },
     {
       "path": "transparency.html",
-      "sha256": "deb7a4a257037145d28f634f5a2d3583d7f6be96032a6fec28a511ce0a58d20e"
+      "sha256": "e4bbebae79b4a5bbfc76efe606ad9ebaeebc485495872165650f27cfbe1b757a"
     },
     {
       "path": "resources.html",

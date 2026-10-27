@@ -17,8 +17,8 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
 .hero-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:32px 56px;align-items:start}
 .home-page h1{font-size:clamp(36px,3.5vw,50px);line-height:1.08;letter-spacing:-.02em;margin:8px 0 18px;color:#193D4E;text-wrap:balance}
 .hero-text .section-lead{margin-bottom:24px}
-.home-page .key-card{margin:0;padding:22px 24px 24px;max-width:36em}
-.home-page .key-card p{font-size:18px;line-height:1.5;font-weight:700;color:#A84B00;margin:0 0 18px}
+.home-page .key-card{margin:0;padding:0;max-width:36em}
+.home-page .key-card p{font-size:18px;line-height:1.5;font-weight:700;color:#193D4E;margin:0 0 18px}
 .home-page .key-card .card-note{font-size:15px;line-height:1.45;font-weight:400;color:#526571;margin:12px 0 0}
 .home-page .button{font-size:15px;line-height:1.3}
 .home-page .after-card{margin:16px 0 0;font-size:15px}
@@ -55,7 +55,7 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
 .fig-label{position:absolute;font-size:14px;line-height:1.2;color:#193D4E;white-space:nowrap}
 .ways h3{margin:0 0 12px}
 .home-page .verdict{font-size:18px;font-weight:700;margin:0 0 8px}
-.way-loss .verdict{color:#A84B00}
+.way-loss .verdict{color:#193D4E}
 .way-imobx .verdict{color:#276578}
 .home-page .ways p{margin:0 0 8px}
 .home-page .way-source{font-size:15px;line-height:1.45;color:#526571;margin:4px 0 0}
@@ -90,7 +90,7 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
 .home-page .roles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px;max-width:none}
 .roles li{border-top:2px solid #4A90A4;padding-top:16px}
 .roles h3{margin:0 0 6px}
-.home-page .roles h3 a{color:#193D4E}
+.home-page .roles h3 a{color:#A84B00}
 .home-page .roles p{margin:0;max-width:none}
 .home-page .roles .next{color:#526571;margin-top:4px}
 .home-page .join-line{margin:40px 0 20px}
@@ -122,7 +122,7 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
   .hero-text .key-card{order:1}
   .hero-text .after-card{order:2;margin-bottom:20px}
   .hero-text .section-lead{order:3;margin-bottom:0}
-  .home-page .key-card{padding:16px 16px 18px}
+  .home-page .key-card{padding:0}
   .home-page .key-card p{font-size:16px;margin-bottom:14px}
   .pin{width:24px;height:24px;font-size:12px;line-height:24px}
   .pin-legend{grid-template-columns:1fr}
