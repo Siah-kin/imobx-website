@@ -85,8 +85,7 @@ MENU = [
     ('roadmap.html', 'Desenvolvimento do projeto', 'Project development', [
         ('roadmap.html', 'stages', 'Onde estamos agora', 'Where we are now', 'What happens now, and what comes next?'),
         ('roadmap.html', 'homes', 'Casas em estudo', 'Homes being considered', 'Which homes are being considered?'),
-        ('roadmap.html', 'who-decides', 'Quem decide', 'Who decides', 'Who decides what?'),
-        ('roadmap.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
+        ('roadmap.html', 'terms', 'O que está decidido', 'What is decided', 'What is decided, and what is not yet'),
     ]),
     ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
         # the rebuilt ledger page (28 Oct) carries its section ids, so these reuse them
@@ -94,9 +93,16 @@ MENU = [
         ('blockchain.html', 'request', 'Pedidos e reclamações', 'Requests and complaints',
          'What happens when I ask for a repair or make a complaint?'),
         ('blockchain.html', 'records', 'Quem vê o quê', 'Who sees what', 'Who sees what?'),  # owner, 28 Oct: 'records' is too abstract
-        ('blockchain.html', 'open', 'Decisões em aberto', 'Open decisions', 'What are we still deciding?'),
+        ('blockchain.html', 'open', 'Banco ou registro distribuído', 'Bank or ledger', 'How much would run on the blockchain?'),
     ]),
-    ('resources.html', 'Documentos', 'Documents', [
+    # Owner, 28 Oct: Local governance is its own page, ordered from now to later (team, token holders, residents).
+    ('governance.html', 'Governança local', 'Local governance', [
+        ('governance.html', 'now', 'Quem decide agora', 'Who decides now', 'Who decides now?'),
+        ('governance.html', 'token-rules', 'Regras dos detentores', 'Rules for holders', 'Who decides about the token?'),
+        ('governance.html', 'residents', 'Os moradores', 'Residents', 'Who decides once families live in the homes?'),
+        ('governance.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
+    ]),
+    ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
         ('resources.html', 'title-reference', 'Pessoas e fontes', 'People and sources', 'Who is behind IMOBX, and where our figures come from'),
         ('resources.html', 'title-whitepaper', 'Proposta completa', 'Full proposal', 'The full proposal (whitepaper)'),
         ('resources.html', 'title-pitchdeck', 'Apresentação para parceiros', 'Partner presentation', 'Presentation for partners'),
@@ -189,7 +195,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
                'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
                'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html', 'IMOBX | Distributed ledger': 'blockchain.html', 'IMOBX | Project reference': 'reference.html',
                'IMOBX | Renting and buying a home': 'rent-to-own.html',
-               'IMOBX | Take part': 'contact.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
+               'IMOBX | Take part': 'contact.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
     document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{esc(description)}">

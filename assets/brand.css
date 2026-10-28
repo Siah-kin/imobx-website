@@ -448,3 +448,18 @@ button.term-near{display:inline-flex;align-items:center;justify-content:center;m
 .roadmap-stage summary .stage-toggle{display:block;width:fit-content}
 /* The lofts page opens with its first section: no line under the header. */
 main>.archive-section:first-child{border-top:0}
+/* Six menu items (owner, 28 Oct: Local governance added): the menu gets its own full-width row under the logo up to
+   1439px in every language, as below 1200px; from 1440px it shares the logo row. */
+@media (min-width:1201px) and (max-width:1439px){
+  .site-nav,html[lang="nl"] .site-nav,html[lang="pt-BR"] .site-nav{grid-template-columns:1fr auto;gap:4px 20px;padding-block:10px}
+  .site-nav .wordmark,html[lang="nl"] .site-nav .wordmark{grid-column:1;grid-row:1}
+  .site-nav .lang,html[lang="nl"] .site-nav .lang{grid-column:2;grid-row:1}
+  .site-links,html[lang="nl"] .site-links,html[lang="pt-BR"] .site-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:0 18px}
+}
+/* Portuguese, the longest labels, keeps the menu on its own row at every desktop width. */
+@media (min-width:1440px){
+  html[lang="pt-BR"] .site-nav{grid-template-columns:1fr auto;gap:4px 20px;padding-block:10px}
+  html[lang="pt-BR"] .site-nav .wordmark{grid-column:1;grid-row:1}
+  html[lang="pt-BR"] .site-nav .lang{grid-column:2;grid-row:1}
+  html[lang="pt-BR"] .site-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:0 18px}
+}

@@ -2699,8 +2699,8 @@
       ],
       [
         [
-          "Ainda em decisão",
-          "Still to decide"
+          "Quanto vai para a blockchain",
+          "How much runs on-chain"
         ],
         "open"
       ]
@@ -2932,12 +2932,12 @@
       ]
     ],
     "token_body": [
-      "Quem faz staking dos seus tokens recebe uma parte das taxas de negociação, paga em USDC, e colocar liquidez na Arctide também rende parte dessas taxas. Parte da oferta é queimada com o tempo. O desenho busca manter a maior parte da oferta em staking ou queimada, para que o token recompense quem fica com o projeto. Mercados mudam, então publicamos a parcela real à medida que ela muda.",
-      "Holders who stake their tokens receive a share of the trading fees, paid in USDC, and adding liquidity on Arctide earns part of those fees too. Part of the supply is burned over time. The design aims to keep most of the supply staked or burned, so the token rewards the people who stay with the project. Markets move, so we publish the actual share as it changes."
+      "Quem tem o token pode fazer staking, travando os tokens como um compromisso com o projeto, e parte da oferta é queimada com o tempo. Mercados mudam, então publicamos a parcela em staking e queimada à medida que ela muda.",
+      "Holders can stake their tokens, locking them as a commitment to the project, and part of the supply is burned over time. Markets move, so we publish the staked and burned share as it changes."
     ],
     "open_title": [
-      "O que ainda estamos decidindo?",
-      "What are we still deciding?"
+      "Quanto vai rodar na blockchain?",
+      "How much would run on the blockchain?"
     ],
     "open_runs_title": [
       "Quanto passaria pela blockchain?",
@@ -2993,8 +2993,8 @@
         "Votes, including token votes, guide shared decisions; what can change a family’s housing agreement is set out in the terms that family signed and in Brazilian law."
       ],
       [
-        "As contas da obra são pagas com recursos já garantidos; a negociação sustenta o trabalho em volta das casas.",
-        "Building bills are paid from funding already secured; trading supports the work around the homes."
+        "As contas da obra só são pagas com recursos já garantidos; a negociação sustenta o trabalho em volta das casas.",
+        "Building bills are paid only from funding that is already secured; trading supports the work around the homes."
       ]
     ],
     "limits_title": [
@@ -3110,8 +3110,8 @@
       "What is the IMOBX token for?"
     ],
     "token_intro": [
-      "Estamos estudando como introduzir o token da IMOBX de acordo com a lei brasileira. Um bairro precisa de anos de trabalho antes do primeiro aluguel: projeto, parte jurídica, divulgação e as primeiras casas. O token é como planejamos pagar esse trabalho. Ele leva a marca da IMOBX ao mercado, e seu valor acompanha o que o projeto entrega.",
-      "We are examining how to introduce the IMOBX token in line with Brazilian law. A neighbourhood needs years of work before the first rent comes in: design, legal work, outreach and the first homes. The token is how we plan to pay for that work. It carries the IMOBX brand on the market, and its value follows what the project delivers."
+      "Estamos estudando como introduzir o token da IMOBX de acordo com a lei brasileira. Um bairro precisa de anos de trabalho antes do primeiro aluguel: projeto, parte jurídica, divulgação e as primeiras casas. O token é como planejamos pagar esse trabalho, e ele leva a marca da IMOBX.",
+      "We are examining how to introduce the IMOBX token in line with Brazilian law. A neighbourhood needs years of work before the first rent comes in: design, legal work, outreach and the first homes. The token is how we plan to pay for that work, and it carries the IMOBX brand."
     ],
     "never_title": [
       "Nossos compromissos",
@@ -3119,12 +3119,8 @@
     ],
     "never": [
       [
-        "As casas são construídas com recursos já garantidos; a negociação sustenta o trabalho em volta delas.",
-        "The homes are built with funding already secured; trading supports the work around them."
-      ],
-      [
-        "Toda recompensa a quem tem o token vem de renda que o projeto realmente ganhou e publicou.",
-        "Every reward to holders comes from income the project has actually earned and published."
+        "Começamos a construir uma casa só quando o financiamento dela estiver garantido; a negociação sustenta o trabalho em volta dela.",
+        "We start building a home only when its funding is secured; trading supports the work around it."
       ],
       [
         "Mostramos o avanço com provas e deixamos o preço para o mercado.",
@@ -3213,17 +3209,21 @@
         "Veto, the safeguards: a family’s housing agreement follows the terms that family signed, and the council of several signers stops any payment outside the published budget."
       ],
       [
-        "Voto de compromisso, a sua promessa: o staking trava seus tokens como um compromisso com o projeto. O token recompensa esse compromisso, e um compromisso mais longo vale mais.",
-        "Vow, your pledge: staking locks your tokens as a commitment to the project. The token rewards that commitment, and a longer commitment counts for more."
+        "Voto de compromisso, a sua promessa: o staking trava seus tokens como um compromisso com o projeto; quanto mais longo o prazo, mais forte o compromisso.",
+        "Vow, your pledge: staking locks your tokens as a commitment to the project; the longer the lock, the stronger the commitment."
       ]
     ],
     "receives_text": [
-      "Ter o token dá a você uma participação na marca IMOBX desde os primeiros anos, o que chamamos de equity de marca tokenizada. Ele também coloca você na lista de acesso aos serviços e benefícios da comunidade, faz de você parte da história dos bairros que a IMOBX constrói e abre uma conta que mostra a ajuda que você dá e o Zeal que você conquista.",
-      "Holding the token gives you a stake in the IMOBX brand from its early years, which we call tokenised brand equity. It also whitelists you for the community’s services and benefits, makes you part of the story of the neighbourhoods IMOBX builds, and opens an account that shows the help you give and the Zeal you earn."
+      "Ter o token coloca você na lista de acesso aos serviços e benefícios da comunidade, faz de você parte da história dos bairros que a IMOBX constrói e abre uma conta que mostra a ajuda que você dá e o Zeal que você conquista.",
+      "Holding the token whitelists you for the community’s services and benefits, makes you part of the story of the neighbourhoods IMOBX builds, and opens an account that shows the help you give and the Zeal you earn."
     ],
     "utilities_text": [
       "Quem faz staking dos seus tokens recebe uma parte das taxas de negociação, paga em USDC, e colocar liquidez na Arctide também rende parte dessas taxas. Quando as regras do token mudam, quem tem o token vota, e o trabalho comprovado dos membros conta junto com o que têm em staking. Embaixadores e corretores recebem das mesmas taxas pelo trabalho de divulgação conferido. A compra funciona pelo site, por QR code ou pelo Telegram, direto do mercado.",
       "Holders who stake their tokens receive a share of the trading fees, paid in USDC, and adding liquidity on Arctide earns part of those fees too. When the token’s rules change, holders vote, and members’ proven work counts alongside their stake. Ambassadors and brokers are paid from the same fees for promotion work that has been checked. Buying works through the website, a QR code or Telegram, straight from the market."
+    ],
+    "review_note": [
+      "Um advogado brasileiro está analisando o desenho do token. O que quem tem o token recebe é definido depois dessa análise, conforme as regras da CVM.",
+      "A Brazilian lawyer is reviewing the token’s design. What holders receive is set after that review, under the rules of Brazil’s market regulator (CVM)."
     ]
   },
   "token_stub": {

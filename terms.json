@@ -125,21 +125,21 @@
      "tokens",
      "token"
     ],
-    "meaning": "Uma unidade digital numa blockchain, que se pode comprar, vender, guardar ou fazer staking. O token da IMOBX leva a marca do projeto e financia o seu começo."
+    "meaning": "Uma unidade digital numa blockchain, que se pode comprar, vender, guardar ou fazer staking. O token da IMOBX leva a marca do projeto e ajuda a pagar o seu começo."
    },
    "en": {
     "forms": [
      "tokens",
      "token"
     ],
-    "meaning": "A digital unit on a blockchain that people can buy, sell, keep or stake. The IMOBX token carries the project’s brand and funds its start."
+    "meaning": "A digital unit on a blockchain that people can buy, sell, keep or stake. The IMOBX token carries the project’s brand and helps pay for its start."
    },
    "nl": {
     "forms": [
      "tokens",
      "token"
     ],
-    "meaning": "Een digitale eenheid op een blockchain die je kunt kopen, verkopen, houden of staken. De IMOBX-token draagt het merk van het project en financiert het begin."
+    "meaning": "Een digitale eenheid op een blockchain die je kunt kopen, verkopen, houden of staken. De IMOBX-token draagt het merk van het project en helpt het begin te betalen."
    }
   },
   {
@@ -404,53 +404,6 @@
      "verbranden"
     ],
     "meaning": "Tokens die naar een adres gaan dat niemand beheert. Ze verdwijnen voorgoed uit omloop, dus er blijven er minder over voor iedereen."
-   }
-  },
-  {
-   "id": "rwa",
-   "status": "draft",
-   "pt": {
-    "forms": [
-     "ativo real tokenizado",
-     "ativo real"
-    ],
-    "meaning": "Um token ligado a algo do mundo físico, aqui as casas do bairro e a renda delas. No Brasil, ele segue as regras da CVM para investimentos."
-   },
-   "en": {
-    "forms": [
-     "tokenised real-world asset",
-     "real-world asset"
-    ],
-    "meaning": "A token tied to something in the physical world, here the neighbourhood’s homes and their income. In Brazil it follows the CVM’s rules for investments."
-   },
-   "nl": {
-    "forms": [
-     "getokeniseerde real-world asset",
-     "real-world asset"
-    ],
-    "meaning": "Een token die verbonden is met iets in de fysieke wereld, hier de woningen van de buurt en hun inkomen. In Brazilië volgt hij de regels van de CVM voor beleggingen."
-   }
-  },
-  {
-   "id": "brand-equity",
-   "status": "draft",
-   "pt": {
-    "forms": [
-     "equity de marca tokenizada"
-    ],
-    "meaning": "A marca IMOBX em forma de token: quem tem o token participa da história e do crescimento da marca enquanto as casas são construídas. Depois, o token evolui para um ativo real."
-   },
-   "en": {
-    "forms": [
-     "tokenised brand equity"
-    ],
-    "meaning": "The IMOBX brand in token form: holders share in the brand’s story and growth while the homes are being built. Later the token grows into a real-world asset."
-   },
-   "nl": {
-    "forms": [
-     "getokeniseerd merkaandeel"
-    ],
-    "meaning": "Het merk IMOBX in tokenvorm: houders delen in het verhaal en de groei van het merk terwijl de woningen worden gebouwd. Later groeit de token uit tot een real-world asset."
    }
   },
   {
