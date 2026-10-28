@@ -139,3 +139,30 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
 #onde-estamos h3{font-size:20px;margin:24px 0 8px}
 #onde-estamos .stage-next{max-width:40em;padding-left:22px}
 #onde-estamos .stage-next li{margin:6px 0}
+
+/* Owner, 28 Oct (decision 26): one sentence per column; the numbers open on tap */
+.three-ways .numbers-btn{margin:8px 0 0;padding:6px 0;min-height:44px;background:none;border:0;color:#A84B00;text-decoration:underline;text-underline-offset:3px;font:inherit;font-size:15px;cursor:pointer}
+.numbers-pop{max-width:min(28em,calc(100vw - 32px));padding:18px 20px;border:1px solid #D9E3E8;border-radius:4px;background:#fff;color:#193D4E;box-shadow:0 8px 24px rgba(25,61,78,.18)}
+.numbers-pop p{margin:0 0 8px;font-size:16px;line-height:1.5}
+.numbers-pop .source-note{font-size:14px;margin:0}
+
+/* Iceberg window (decisions 16, 26; owner "proceed" on option A, 28 Oct; from the menu session) */
+/* The IMOBX Iceberg (owner, 26-28 Oct, decisions 16 and 26): one window, opened from "Who is preparing this".
+   Above the waterline: what anyone can check today. Below: what drives the founders, in their own words. */
+.iceberg-window{max-height:90vh;overflow:auto;max-width:min(760px,92vw);padding:0;border:1px solid #D9E3E8;box-shadow:0 16px 48px rgba(25,61,78,.18);color:#193D4E}
+.iceberg-window::backdrop{background:rgba(25,61,78,.35)}
+.iceberg-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px 0}
+.iceberg-head h2{margin:0;font-size:24px}
+.iceberg-close{min-width:44px;min-height:44px;border:0;background:none;font:inherit;font-size:26px;line-height:1;color:#193D4E;cursor:pointer}
+.iceberg-close:focus-visible{outline:3px solid #276578;outline-offset:2px}
+.iceberg{display:grid;grid-template-columns:140px 1fr;gap:0 24px;padding:16px 22px 22px}
+.iceberg-peak{align-self:end;width:140px;height:70px}
+.iceberg-body{align-self:stretch;width:140px;height:100%;min-height:160px;border-top:2px dashed #276578}
+.iceberg-peak,.iceberg-body{display:block}
+.iceberg-above,.iceberg-below{padding:14px 0}
+.iceberg-above h3,.iceberg-below h3{margin:0 0 8px;font-size:16px;text-transform:none}
+.iceberg-above ul{margin:0;padding-left:18px}.iceberg-above li{margin:4px 0}
+.iceberg-below{border-top:2px solid #276578}
+.iceberg-below blockquote{margin:0 0 10px;font-size:17px;line-height:1.45}
+.iceberg-below cite{display:block;font-style:normal;font-size:14px;color:#596772;margin-top:2px}
+@media (max-width:600px){.iceberg{grid-template-columns:72px 1fr;gap:0 14px;padding:12px 16px 18px}.iceberg-peak{width:72px;height:36px}.iceberg-body{width:72px;min-height:90px}}

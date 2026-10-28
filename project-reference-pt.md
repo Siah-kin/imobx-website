@@ -22,7 +22,7 @@ Esta página reúne as pessoas e os papéis no projeto, as fontes e o histórico
 
 | Pessoa ou grupo | Papel no plano | Autoridade e situação |
 | --- | --- | --- |
-| Rafael Britto | Conhecimento da obra, orçamento e articulação local. | Fundador. Suas responsabilidades formais não foram registradas por escrito, e suas qualificações profissionais precisam de referências que o leitor possa consultar. |
+| Rafael Britto | Conhecimento da obra, orçamento e articulação local. | Fundador. Suas responsabilidades formais ainda não estão registradas por escrito. |
 | John | Comunicação, documentação e coordenação das ferramentas digitais. | Participação na preparação. Poderes de gasto ou representação ainda não atribuídos nesta referência. |
 | IMOBX | Organização do projeto, contratos e acompanhamento das contas. | A forma jurídica e os representantes legais estão em definição. |
 | OLYMPUS | Construtora proposta, ligada a Rafael; nenhum contrato assinado. | Contratação depende dos serviços combinados, da comparação de preços e da aprovação por alguém independente da construtora. |

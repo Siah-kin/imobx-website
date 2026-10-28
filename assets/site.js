@@ -204,6 +204,8 @@ initImageViewer();
     toggle.addEventListener('click', function (event) {
       event.stopPropagation();
       var open = toggle.getAttribute('aria-expanded') !== 'true';
+      // a click right after the hover opened the list keeps it open instead of closing it again
+      if (!open && Date.now() - (Number(toggle.dataset.hoverAt) || 0) < 800) return;
       close(toggle);
       toggle.setAttribute('aria-expanded', String(open));
       var list = document.getElementById(toggle.getAttribute('aria-controls'));
@@ -212,6 +214,22 @@ initImageViewer();
   });
   document.addEventListener('click', function (event) {
     if (!event.target.closest('.site-links .nav-item') || event.target.closest('.site-links .sub a')) close();
+  });
+  // Owner, 28 Oct: on a desktop with a mouse, a list also opens on hover and closes shortly after the pointer leaves.
+  var hoverable = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 701px)');
+  toggles.forEach(function (toggle) {
+    var item = toggle.closest('.nav-item'), timer = null;
+    var list = document.getElementById(toggle.getAttribute('aria-controls'));
+    item.addEventListener('mouseenter', function () {
+      if (!hoverable.matches || !list) return;
+      clearTimeout(timer); close(toggle);
+      if (toggle.getAttribute('aria-expanded') !== 'true') toggle.dataset.hoverAt = String(Date.now());
+      toggle.setAttribute('aria-expanded', 'true'); list.hidden = false;
+    });
+    item.addEventListener('mouseleave', function () {
+      if (!hoverable.matches || !list) return;
+      timer = setTimeout(function () { toggle.setAttribute('aria-expanded', 'false'); list.hidden = true; }, 200);
+    });
   });
   document.addEventListener('keydown', function (event) {
     if (event.key !== 'Escape') return;

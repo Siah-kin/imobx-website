@@ -90,17 +90,21 @@ MENU = [
         ('properties.html', 'lofts', 'Lofts e terreno', 'Lofts and site', 'Two lofts'),
     ]),
     ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
-        ('blockchain.html', 'privacy', 'Privacidade e acesso', 'Privacy and access',
-         'What would be on the blockchain, and what never would?'),
-        ('blockchain.html', 'requests', 'Pedidos e reclamações', 'Requests and complaints',
-         'How does a request become checked work?'),
-        ('blockchain.html', 'records', 'Tipos de registro', 'Types of records',
-         'Which records would IMOBX keep?'),
-        ('blockchain.html', 'open-decisions', 'Decisões em aberto', 'Open decisions', 'What has not been decided?'),
+        # the rebuilt ledger page (28 Oct) carries its section ids, so these reuse them
+        ('blockchain.html', 'layers', 'Privacidade e acesso', 'Privacy and access', 'Do I need crypto, and what stays private?'),
+        ('blockchain.html', 'request', 'Pedidos e reclamações', 'Requests and complaints',
+         'What happens when I ask for a repair or make a complaint?'),
+        ('blockchain.html', 'records', 'Tipos de registro', 'Types of records', 'Who sees which records?'),
+        ('blockchain.html', 'open', 'Decisões em aberto', 'Open decisions', 'What has not been decided?'),
     ]),
-    ('resources.html', 'Documentos', 'Documents', []),
+    # Documents opens a short list too (owner, 28 Oct: the sources page was hard to find).
+    ('resources.html', 'Documentos', 'Documents', [
+        ('reference.html', 'sources', 'Fontes de cada afirmação', 'Sources for each claim', 'Sources support specific claims'),
+        ('reference.html', 'people', 'Pessoas e funções', 'People and roles', 'Who is contributing and which roles remain unfilled?'),
+        ('reference.html', '', 'Referência do projeto', 'Project reference', ''),
+    ]),
 ]
-MENU_PARENT = {'roadmap.html': 'properties.html'}  # the stages page sits under Project development
+MENU_PARENT = {'roadmap.html': 'properties.html', 'reference.html': 'resources.html'}  # stages under Project development; the reference under Documents
 
 
 def add_menu_anchors(root):
@@ -108,7 +112,8 @@ def add_menu_anchors(root):
     wanted = {}
     for _, _, _, entries in MENU:
         for target, anchor, _, _, heading_en in entries:
-            wanted.setdefault(target, {})[esc(heading_en)] = anchor
+            if anchor:  # an entry without an anchor opens the page at the top
+                wanted.setdefault(target, {})[esc(heading_en)] = anchor
     for target, headings in wanted.items():
         path = Path(root) / target
         if not path.exists():
@@ -139,7 +144,7 @@ def site_header(lang='pt-BR', current=''):
         here = ' aria-current="page"' if target == current else ''
         overview = (f'<li class="sub-overview"><a href="{target}"{here}>'
                     f'<span data-pt="Visão geral" data-en="Overview">{"Visão geral" if portuguese else "Overview"}</span></a></li>')
-        sub = overview + ''.join(f'<li><a href="{page}#{anchor}" data-pt="{esc(spt)}" data-en="{esc(sen)}">{esc(spt if portuguese else sen)}</a></li>'
+        sub = overview + ''.join(f'<li><a href="{page}{"#" + anchor if anchor else ""}" data-pt="{esc(spt)}" data-en="{esc(sen)}">{esc(spt if portuguese else sen)}</a></li>'
                                  for page, anchor, spt, sen, _ in entries)
         links += (f'<div class="nav-item"><button type="button" class="sub-toggle{is_current}" aria-expanded="false" '
                   f'aria-controls="{menu_id}"><span data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt if portuguese else en)}</span>'
@@ -173,7 +178,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
     description = description or 'IMOBX housing pilot: model, roadmap and project resources.'
     current = {'IMOBX | Proposed Rio housing pilot': 'index.html',
                'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
-               'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html',
+               'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html', 'IMOBX | Distributed ledger': 'blockchain.html', 'IMOBX | Project reference': 'reference.html',
                'IMOBX | Renting and buying a home': 'rent-to-own.html',
                'IMOBX | Take part': 'contact.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
     document = f'''<!doctype html>

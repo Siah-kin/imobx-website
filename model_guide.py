@@ -138,8 +138,8 @@ def build_guide(root, page, tr, esc, language_controls):
                  'Describes the proposed cash policy. It is a proposal, not an approved rule.'),
         'rights': ('Descreve o que um token poderia representar. Nenhum token foi emitido.',
                    'Describes what a token could represent. No token has been issued.'),
-        'charter': ('Mostra quem decidiria o quê. As regras ainda estão em discussão com os participantes.',
-                    'Shows who would decide what. The rules are still being discussed with participants.'),
+        'charter': ('Mostra quem decidiria o quê. As regras ainda não estão decididas.',
+                    'Shows who would decide what. The rules are not decided yet.'),
         'roadmap': ('Mostra as etapas e o que precisa estar pronto em cada uma. Não define datas.',
                     'Shows the stages and what must be ready in each. It sets no dates.'),
         'sinapi': ('É a referência pública de custos que Rafael diz ter usado. Não dá o preço deste projeto.',
@@ -639,48 +639,16 @@ def build_guide(root, page, tr, esc, language_controls):
 
     # The token: what it is for, why it is kept apart from the cooperative, and the conditions before it exists
     # (owner, 24 Oct). No percentages or payouts here: allocations stay proposals until a lawyer has seen them.
-    tk = guide['token_page']
-    tl = [x.split('. ', 1) for x in tk['lead']]
-    page_tk = '<main class="paper guide-paper token-page band-page" id="main">' + text(tk['title'], 'h1')
-    page_tk += '<div class="key-card">' + text((tl[0][0] + '. ' + tk['bridge_no'][0], tl[1][0] + '. ' + tk['bridge_no'][1])) + '</div>'
-    page_tk += text((tl[0][1], tl[1][1]), 'p', 'class="guide-lead"')
-    page_tk += on_this_page([(('Para onde iria o dinheiro', 'Where its money would go'), 'purpose'), (('Por que fica separado', 'Why it is separate'), 'separate'),
-                             (('Quando poderia ser lançado', 'When it could launch'), 'when'), (('O que a IMOBX não fará', 'What IMOBX will not do'), 'never')])
-    page_tk += '<section id="purpose">' + text(tk['purpose_title'], 'h2') + flow(tk['purpose'], 'purpose-list') + text(tk['not']) + '</section>'
-    # Two panels with the one-way rule drawn between them (redesign 24 Oct), instead of a table.
-    def panel(cls, title, col):
-        rows = ''.join('<div>' + text(row[0], 'dt') + text(row[col], 'dd') + '</div>' for row in tk['table'])
-        return f'<div class="ct-panel {cls}">' + text(title, 'h3') + '<dl>' + rows + '</dl></div>'
-    arrow = ('<svg class="ct-arrow" viewBox="0 0 120 24" aria-hidden="true"><path d="M116 12H6"/><path d="M16 4 6 12l10 8"/></svg>')
-    blocked = ('<svg class="ct-arrow ct-blocked" viewBox="0 0 120 24" aria-hidden="true"><path d="M4 12h104"/><path d="M98 4l10 8-10 8"/>'
-               '<path class="x" d="M48 2l20 20M68 2 48 22"/></svg>')
-    page_tk += '<section id="separate">' + text(tk['separate_title'], 'h2') + '<div class="coop-token">'
-    page_tk += panel('ct-coop', tk['table_head'][1], 1)
-    page_tk += '<div class="ct-bridge"><p class="ct-yes">' + arrow + text(tk['bridge_yes'], 'span') + '</p>'
-    page_tk += '<p class="ct-no">' + blocked + text(tk['bridge_no'], 'span') + '</p></div>'
-    page_tk += panel('ct-token', tk['table_head'][2], 2) + '</div>'
-    page_tk += text(tk['reasons_title'], 'h3') + '<ul>' + ''.join(text(r, 'li') for r in tk['reasons']) + '</ul></section>'
-    page_tk += '<section id="when">' + text(tk['when_title'], 'h2') + flow(tk['when'], 'launch-steps') + text(tk['buyers']) + text(tk['legal']) + full_source('cvm')
-    # Names ladder (owner, 25 Oct): platform names only here, with the why, the limits and the founders' link.
-    # 'Where would the token trade?': wording approved by the owner on 25 Oct after two revisions (preview only).
-    def tk_source(label, url, effect):
-        return ('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span') + f'<a href="{esc(url)}">' + text(label, 'span') + '</a>. ' + text(effect, 'span') + '</p>')
-    page_tk += '<details class="disclosure" id="venues"><summary>' + text(tk['venues_title'], 'span') + '</summary><div class="disclosure-body">'
-    page_tk += ''.join(text(v) for v in tk['venues'])
-    page_tk += tk_source(('As notas técnicas da Arctide (em inglês)', 'Arctide’s technical notes (in English)'), 'https://github.com/0xRustyDev/arctide-docs/blob/main/README.md',
-                         ('Descreve as taxas por fundo, cobradas em USDC. Não mostra uso pela IMOBX.', 'Describes per-pool fees charged in USDC. It does not show any IMOBX use.'))
-    page_tk += tk_source(('O anúncio da Ethervista de 16 de setembro de 2026', 'Ethervista’s announcement of 16 September 2026'), 'https://t.me/etherfun_trenches/90445',
-                         ('É o anúncio da própria empresa. Não foi verificado de forma independente.', 'The company’s own announcement. It has not been independently verified.'))
-    page_tk += tk_source(('A lista de riscos do USDC feita pela própria Circle', 'Circle’s own list of USDC risks'), 'https://www.circle.com/legal/usdc-risk-factors',
-                         ('Os riscos descritos pela própria emissora.', 'The risks as described by the issuer.'))
-    page_tk += '</div></details></section>'
-    page_tk += '<section id="never">' + text(tk['never_title'], 'h2') + '<ul>' + ''.join(text(n, 'li') for n in tk['never']) + '</ul>'
-    page_tk += text(tk['accounts']) + '</section>'
-    page_tk += '<section class="closing-band" id="ask">' + text(tk['closing']) + text(('Fazer uma pergunta', 'Ask a question'), 'a', 'class="button act" href="contact.html"') + '</section>'
-    page_tk += '<span id="more"></span>'  # 'Read more' band removed 25 Oct: the menu and the funding page link already lead there
+    # The token page is a stub until a token is active (owner decision 13; review-C §2, 28 Oct). Its earlier text stays
+    # in model-guide.json under token_page, unpublished; the parts that still apply live in the ledger page's token fold.
+    ts = guide['token_stub']
+    page_tk = '<main class="paper guide-paper token-page band-page" id="main">' + text(ts['title'], 'h1')
+    page_tk += text(ts['text'], 'p', 'class="guide-lead"')
+    page_tk += text(ts['protection'])  # the owner's vote protection goes with any mention of a token (gate rule)
+    page_tk += '<p>' + text(ts['link'], 'a', 'class="button act" href="blockchain.html#token"') + '</p>'
     page_tk += partner_line('token.html') + '</main>'
-    (root / 'token.html').write_text(page('IMOBX | The token', page_tk, f'<link rel="stylesheet" href="{asset_v("token.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}"><script src="assets/site.js" defer></script>',
-        version=guide['version'], lang='pt-BR', title_pt='IMOBX | O token'))
+    (root / 'token.html').write_text(page('IMOBX | Is there an IMOBX token?', page_tk, f'<link rel="stylesheet" href="{asset_v("bands.css")}"><script src="assets/site.js" defer></script>',
+        version=guide['version'], lang='pt-BR', title_pt='IMOBX | Existe um token da IMOBX?'))
 
     # The blockchain page (owner, 25 Oct): how IMOBX would use Arc for its records and money, how a token would
     # connect, what is not decided and what a blockchain cannot do. Plan: BLOCKCHAIN_PAGE_SHAPE_2026-10-25.md.
@@ -693,6 +661,10 @@ def build_guide(root, page, tr, esc, language_controls):
         '<svg class="vision-glyph" viewBox="0 0 26 26" aria-hidden="true"><rect x="6" y="11" width="14" height="11"/><path d="M9 11V8a4 4 0 0 1 8 0v3"/></svg>',
         '<svg class="vision-glyph" viewBox="0 0 26 26" aria-hidden="true"><circle cx="9" cy="9" r="3.2"/><circle cx="17.5" cy="9" r="3.2"/><path d="M3 21c.8-4 3.2-6 6-6s5.2 2 6 6M13 16.5c1.2-1 2.7-1.5 4.5-1.5 2.8 0 5.2 2 6 6"/></svg>',
         '<svg class="vision-glyph" viewBox="0 0 26 26" aria-hidden="true"><path d="M2 13s4-7 11-7 11 7 11 7-4 7-11 7S2 13 2 13Z"/><circle cx="13" cy="13" r="3.5"/></svg>']
+    # Rebuilt 28 Oct (owner decisions 25 and 27, review-C §1): the reader's picture first, then privacy, requests and
+    # complaints, the records, and what is not decided; the token and the blockchain's limits sit in folds.
+    def fold(summary, body):
+        return '<details class="disclosure"><summary>' + text(summary, 'span') + '</summary><div class="disclosure-body">' + body + '</div></details>'
     chain = '<main class="paper guide-paper band-page chain-page" id="main">' + language_controls
     chain += text(ch['title'], 'h1') + '<div class="key-card">' + text(ch['key']) + '</div>'
     chain += text(ch['lead'], 'p', 'class="guide-lead"')
@@ -701,46 +673,42 @@ def build_guide(root, page, tr, esc, language_controls):
     chain += '<ol class="layer-list">' + ''.join('<li>' + '<h3>' + g + text(name, 'span') + '</h3>' + text(what) + '<p class="layer-who">' + text(ch['layers_who'], 'strong') + ' ' + text(who, 'span') + '</p></li>'
                                                 for g, (name, what, who) in zip(glyphs, ch['layers'])) + '</ol>'
     chain += text(ch['layers_why'])
-    chain += '<details class="disclosure"><summary>' + text(ch['glossary_title'], 'span') + '</summary><div class="disclosure-body"><dl class="glossary">'
-    chain += ''.join(text(term, 'dt') + text(meaning, 'dd') for term, meaning in ch['glossary']) + '</dl></div></details>'
-    chain += '<details class="disclosure"><summary>' + text(('Fontes', 'Sources'), 'span') + '</summary><div class="disclosure-body">'
-    chain += chain_source(('As notas técnicas da Arc (em inglês)', 'Arc’s technical notes (in English)'), 'https://docs.arc.io/arc/concepts/system-overview.md',
-                          ('Diz que a privacidade ainda não está disponível. Não analisa a IMOBX.', 'Says privacy is not yet available. It does not review IMOBX.'))
-    chain += chain_source(('Seus direitos pela lei brasileira de proteção de dados (LGPD)', 'Your rights under Brazil’s data protection law (LGPD)'), 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm',
-                          ('Direitos de quem tem dados pessoais tratados. Não trata de blockchain.', 'The rights of people whose personal data is processed. It does not mention blockchains.')) + '</div></details></section>'
+    chain += fold(ch['glossary_title'], '<dl class="glossary">' + ''.join(text(term, 'dt') + text(meaning, 'dd') for term, meaning in ch['glossary']) + '</dl>')
+    chain += fold(ch['sources_title'],
+                  chain_source(('As notas técnicas da Arc (em inglês)', 'Arc’s technical notes (in English)'), 'https://docs.arc.io/arc/concepts/system-overview.md',
+                               ('Diz que a privacidade ainda não está disponível.', 'Says privacy is not yet available.'))
+                  + chain_source(('Seus direitos pela lei brasileira de proteção de dados (LGPD)', 'Your rights under Brazil’s data protection law (LGPD)'), 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm',
+                                 ('Seus direitos sobre seus dados pessoais, inclusive o de pedir que sejam apagados.', 'Your rights over your personal data, including deletion.'))) + '</section>'
     chain += '<section id="request">' + text(ch['request_title'], 'h2') + text(ch['request_answer'], 'p', 'class="answer"')
     chain += '<ol class="step-strip">' + ''.join(text(st, 'li') for st in ch['request_steps']) + '</ol>'
-    chain += text(guide['dao_operations']['status'], 'p', 'class="aside"')
-    chain += '<details class="disclosure"><summary>' + text(ch['request_fold'], 'span') + '</summary><div class="disclosure-body">'
-    # Tasks and handovers have their home on the roadmap (facts F09, F10); the help-desk paragraph lives here.
-    chain += text(pick(guide_question('flock-siah')['a'][4], [0, 3, 4]))
-    chain += '<p>' + text(ch['request_more'], 'a', 'href="roadmap.html#governance"') + '</p>'
-    chain += short_source('digital') + '</div></details></section>'
-    chain += '<section id="records">' + text(ch['records_title'], 'h2') + text(ch['records_answer'], 'p', 'class="answer"')
+    chain += fold(ch['request_fold'], text(ch['request_fold_body'])
+                  + '<p>' + text(ch['request_more'], 'a', 'href="roadmap.html#governance"') + '</p>'
+                  + '<p>' + text(ch['whitepaper_link'], 'a', f'href="{esc(guide["sources"]["digital"]["url"])}"') + '</p>') + '</section>'
+    chain += '<section id="records">' + text(ch['records_title'], 'h2')
     chain += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in ch['records_head']) + '</tr></thead><tbody>'
     chain += ''.join('<tr>' + text(r[0], 'th', 'scope="row"') + ''.join(text(c, 'td') for c in r[1:]) + '</tr>' for r in ch['records']) + '</tbody></table></div></section>'
-    chain += '<section id="token">' + text(ch['token_title'], 'h2') + marked(*ch['token_answer_marked']) + text(ch['token_body'])
-    chain += '<p>' + text(ch['token_link'], 'a', 'href="token.html"') + '</p></section>'
-    chain += '<section id="open">' + text(ch['open_title'], 'h2') + text(ch['open_answer'], 'p', 'class="answer"')
-    chain += '<div class="open-paths"><div>' + text(ch['open_runs_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_runs']) + '</ol></div>'
-    chain += '<div>' + text(ch['open_token_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_token']) + '</ol></div></div>'
-    chain += text(ch['open_note']) + '<div class="window">' + text(ch['same_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['same']) + '</ul></div></section>'
-    chain += '<section id="limits">' + text(ch['limits_title'], 'h2') + marked(*ch['limits_answer_marked'])
-    chain += '<ul>' + ''.join(text(o, 'li') for o in ch['limits']) + '</ul>'
-    chain += '<details class="disclosure"><summary>' + text(('Fontes', 'Sources'), 'span') + '</summary><div class="disclosure-body">'
-    chain += chain_source(('O anúncio da Circle de que a Arc entrou em funcionamento (16 de setembro de 2026)', 'Circle’s announcement that Arc went live (16 September 2026)'),
-                          'https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet',
-                          ('Anuncia a rede e diz que nenhum regulador a aprovou. Não analisa a IMOBX.', 'Announces the network and says no regulator has approved it. It does not review IMOBX.'))
-    chain += chain_source(('As empresas que operam a rede Arc', 'The companies that run the Arc network'),
-                          'https://www.arc.io/pressroom/circle-announces-founding-validator-cohort-and-major-integrations-for-arc-ahead-of-september-16-mainnet-launch',
-                          ('Lista as empresas fundadoras. Não analisa a IMOBX.', 'Lists the founding companies. It does not review IMOBX.'))
-    chain += chain_source(('A lista de riscos do USDC feita pela própria Circle', 'Circle’s own list of USDC risks'), 'https://www.circle.com/legal/usdc-risk-factors',
-                          ('Diz que a Circle pode bloquear USDC. Não analisa a IMOBX.', 'Says Circle can freeze USDC. It does not review IMOBX.'))
-    chain += '</div></details></section>'  # 'does not show that any of it works yet' is already beside the request steps
+    chain += '<section id="open">' + text(ch['open_title'], 'h2')
+    chain += text(ch['open_runs_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_runs']) + '</ol>'
+    chain += '<div class="window">' + text(ch['same_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['same']) + '</ul></div>'
+    chain += '<span id="token"></span>' + fold(ch['token_fold'], text(ch['token_intro']) + text(ch['token_purpose']) + text(ch['token_body'])
+                  + text(ch['open_token_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_token']) + '</ol>'
+                  + text(ch['open_note'])
+                  + chain_source(('Como o regulador do mercado de capitais avalia tokens (CVM)', 'How Brazil’s market regulator looks at tokens (CVM)'), guide['sources']['cvm']['url'],
+                                 ('Diz que o regulador brasileiro olha o que um investimento realmente dá, não o nome.', 'Says Brazil’s regulator looks at what an investment actually gives, not its name.'))
+                  + text(ch['never_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['never']) + '</ul>')
+    chain += '<span id="limits"></span>' + fold(ch['limits_title'], '<ul>' + ''.join(text(o, 'li') for o in ch['limits']) + '</ul>'
+                  + chain_source(('O anúncio da Circle de que a Arc entrou em funcionamento (16 de setembro de 2026)', 'Circle’s announcement that Arc went live (16 September 2026)'),
+                                 'https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet',
+                                 ('Anuncia a rede e diz que nenhum regulador a aprovou.', 'Announces the network and says no regulator has approved it.'))
+                  + chain_source(('As empresas que operam a rede Arc', 'The companies that run the Arc network'),
+                                 'https://www.arc.io/pressroom/circle-announces-founding-validator-cohort-and-major-integrations-for-arc-ahead-of-september-16-mainnet-launch',
+                                 ('Lista as empresas fundadoras.', 'Lists the founding companies.'))
+                  + chain_source(('A lista de riscos do USDC feita pela própria Circle', 'Circle’s own list of USDC risks'), 'https://www.circle.com/legal/usdc-risk-factors',
+                                 ('Diz que a Circle pode bloquear USDC.', 'Says Circle can freeze USDC.'))) + '</section>'
     chain += '<section class="closing-band" id="help">' + text(ch['closing']) + text(ch['button'], 'a', 'class="button act" href="contact.html"') + '</section>'
     chain += partner_line('blockchain.html') + '</main>'
-    (root / 'blockchain.html').write_text(page('IMOBX | Shared records', chain, f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">',
-        version=guide['version'], lang='pt-BR', title_pt='IMOBX | Registros compartilhados'))
+    (root / 'blockchain.html').write_text(page('IMOBX | Distributed ledger', chain, f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">',
+        version=guide['version'], lang='pt-BR', title_pt='IMOBX | Registro distribuído'))
 
     stub_targets = {item['id']: ('rent-to-own.html' if item['id'] in HOUSEHOLD_FAQ else 'transparency.html')
                     for item in guide['questions']}

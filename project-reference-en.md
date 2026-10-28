@@ -22,7 +22,7 @@ This page lists the people and roles in the project, the sources and the version
 
 | Person or group | Role in the plan | Authority and status |
 | --- | --- | --- |
-| Rafael Britto | Construction knowledge, budgets and local relationships. | Rafael is a founder. His formal duties have not been put in writing, and his professional credentials need sources readers can consult. |
+| Rafael Britto | Construction knowledge, budgets and local relationships. | Rafael is a founder. His formal duties are not yet written down. |
 | John | Communication, documentation and coordination of digital tools. | John helps prepare the project. This reference assigns him no right to spend money or sign for IMOBX; that needs a written appointment. |
 | IMOBX | Project organisation, agreements and account reporting. | Legal form and legal representatives are being defined. |
 | OLYMPUS | Proposed builder, linked to Rafael; no contract signed. | Appointment depends on the agreed work, price comparison and approval by someone independent of the builder. |
