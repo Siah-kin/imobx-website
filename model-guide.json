@@ -2661,12 +2661,12 @@
       "How would a neighbourhood work on a blockchain?"
     ],
     "lead": [
-      "Queremos que cada pagamento da IMOBX, e quem o aprovou, fique numa blockchain pública, também chamada de registro distribuído. Assim qualquer morador ou financiador confere para onde foi o dinheiro, e ninguém consegue apagar depois. Nada disso funciona ainda; o primeiro projeto seria o teste.",
-      "We want every payment IMOBX makes, and who approved it, on a public blockchain, also called a distributed ledger. Then any resident or funder can check where the money went, and no one can erase it later. None of this runs yet; the first project would test it."
+      "Para a sua família, o dia a dia continua igual: você paga em reais, como paga o aluguel hoje. Um pedido de reparo ou uma reclamação segue um caminho claro, que você acompanha, e seu contrato e seus dados pessoais continuam privados. O primeiro projeto vai testar isso.",
+      "For your family, daily life stays the same: you pay in reais, as you pay rent today. A repair request or a complaint follows a clear path you can track, and your contract and personal data stay private. The first project will test this."
     ],
     "key": [
-      "Num bairro da IMOBX, você pagaria em reais, como paga o aluguel hoje. Não precisa de criptomoeda nem de carteira digital. Quando você pede um reparo ou faz uma reclamação, fica tudo registrado e você acompanha. Seu contrato e seus dados pessoais continuam privados.",
-      "In an IMOBX neighbourhood, you would pay in reais, as you pay rent today. You need no crypto and no digital wallet. When you ask for a repair or make a complaint, it is recorded and you can follow it. Your contract and your personal data stay private."
+      "Quando vizinhos juntam dinheiro para construir casas, a primeira pergunta é sempre: para onde vai o dinheiro? A IMOBX quer que a resposta fique aberta a todos. Cada pagamento do projeto, e quem o aprovou, ficaria numa blockchain pública, também chamada de registro distribuído, onde qualquer morador ou financiador pode conferir.",
+      "When neighbours put money together for homes, the first question is always: where does the money go? IMOBX wants the answer open to everyone. Every payment the project makes, and who approved it, would be written on a public blockchain, also called a distributed ledger, where any resident or funder can check it."
     ],
     "toc": [
       [
@@ -2685,8 +2685,8 @@
       ],
       [
         [
-          "Tipos de registro",
-          "Types of records"
+          "Quem vê o quê",
+          "Who sees what"
         ],
         "records"
       ],
@@ -2699,19 +2699,19 @@
       ],
       [
         [
-          "O que falta decidir",
-          "Not decided yet"
+          "Ainda em decisão",
+          "Still to decide"
         ],
         "open"
       ]
     ],
     "layers_title": [
-      "Preciso de criptomoeda? E o que continua privado?",
-      "Do I need crypto, and what stays private?"
+      "O que muda para a minha família, e o que continua privado?",
+      "What changes for my family, and what stays private?"
     ],
     "layers_answer": [
-      "Criptomoeda, não: você paga em reais. Seu contrato, seus pagamentos, seus dados e o que você escreve numa reclamação ficam privados. Só os pagamentos que a IMOBX faz são públicos.",
-      "No crypto: you pay in reais. Your contract, your payments, your personal data and what you write in a complaint stay private. Only the payments IMOBX makes are public."
+      "Você paga em reais, do jeito que paga o aluguel hoje. Seu contrato, seus pagamentos, seus dados pessoais e o que você escreve numa reclamação continuam privados. O que fica público é o dinheiro que a própria IMOBX paga.",
+      "You pay in reais, the way you pay rent today. Your contract, your payments, your personal data and anything you write in a complaint stay private. What becomes public is the money IMOBX itself pays out."
     ],
     "layers": [
       [
@@ -2744,8 +2744,8 @@
       ],
       [
         [
-          "Público, na blockchain",
-          "Public, on the blockchain"
+          "A prestação de contas da IMOBX: pública, na blockchain",
+          "IMOBX’s accounting: public, on the blockchain"
         ],
         [
           "Para que foi cada pagamento da IMOBX, o valor, quem aprovou e quando, e de qual parte do orçamento saiu.",
@@ -2762,8 +2762,8 @@
       "Who sees it:"
     ],
     "layers_why": [
-      "Por que os dados pessoais ficam fora? Tudo o que vai para a Arc, por enquanto, é público e não pode ser apagado, e a LGPD garante o direito de pedir que seus dados pessoais sejam apagados.",
-      "Why keep personal data off it? Whatever is written on Arc is public for now and can never be deleted, while Brazil’s data law (LGPD) gives you the right to have your personal data deleted."
+      "Por que os dados pessoais ficam fora da blockchain? O que vai para a Arc hoje é público e fica lá, e a LGPD garante o seu direito de pedir que seus dados pessoais sejam apagados.",
+      "Why does personal data stay off the blockchain? Whatever is written on Arc today is public and stays there, while Brazil’s data law (LGPD) gives you the right to have your personal data deleted."
     ],
     "request_title": [
       "O que acontece quando eu peço um reparo ou faço uma reclamação?",
@@ -2783,16 +2783,16 @@
         "The person responsible gets a quote. If it is within the spending limit, it is approved, and the approval is recorded."
       ],
       [
-        "Outra pessoa, que não aprovou o gasto, confere o serviço e registra a conferência.",
+        "Outra pessoa, diferente de quem aprovou o gasto, confere o serviço e registra a conferência.",
         "Someone other than the approver checks the work and logs the check."
       ],
       [
-        "O pagamento vai para a blockchain, onde qualquer pessoa pode ver, e o recibo entra nas contas.",
-        "The payment goes on the blockchain, where anyone can see it, and the receipt goes into the accounts."
+        "O pagamento vai para a blockchain, onde qualquer pessoa pode ver, e o recibo entra na prestação de contas.",
+        "The payment goes on the blockchain, where anyone can see it, and the receipt goes into IMOBX’s accounting."
       ],
       [
-        "Não ficou satisfeito? Peça uma revisão. A revisão e o resultado também ficam registrados.",
-        "Not happy with the result? Ask for a review. The review and its outcome are recorded too."
+        "Quer um segundo olhar sobre o resultado? Peça uma revisão; a revisão e o resultado também ficam anotados.",
+        "Want a second look at the result? Ask for a review; the review and its outcome are written down too."
       ]
     ],
     "request_fold": [
@@ -2800,13 +2800,13 @@
       "Who decides who can spend?"
     ],
     "records_title": [
-      "Quem vê cada registro?",
-      "Who sees which records?"
+      "Quem vê o quê?",
+      "Who sees what?"
     ],
     "records_head": [
       [
-        "Registro",
-        "Record"
+        "O quê",
+        "What"
       ],
       [
         "O que guarda",
@@ -2878,8 +2878,8 @@
       ],
       [
         [
-          "Contas",
-          "Accounts"
+          "Prestação de contas",
+          "Accounting"
         ],
         [
           "Dinheiro que entra e sai, por pagador e finalidade",
@@ -2932,12 +2932,12 @@
       ]
     ],
     "token_body": [
-      "As taxas ficariam com um conselho de várias assinaturas, nunca com uma só pessoa. Cada uso seria um pagamento registrado contra uma linha do orçamento publicado: divulgação, operação ou o fundo para novas casas.",
-      "The fees would be held by a council of several signers, never one person. Each use would be a recorded payment against a line of the published budget: outreach, operations or the fund for new homes."
+      "Quem faz staking dos seus tokens recebe uma parte das taxas de negociação, paga em USDC, e colocar liquidez na Arctide também rende parte dessas taxas. Parte da oferta é queimada com o tempo. O desenho busca manter a maior parte da oferta em staking ou queimada, para que o token recompense quem fica com o projeto. Mercados mudam, então publicamos a parcela real à medida que ela muda.",
+      "Holders who stake their tokens receive a share of the trading fees, paid in USDC, and adding liquidity on Arctide earns part of those fees too. Part of the supply is burned over time. The design aims to keep most of the supply staked or burned, so the token rewards the people who stay with the project. Markets move, so we publish the actual share as it changes."
     ],
     "open_title": [
-      "O que ainda não foi decidido?",
-      "What has not been decided?"
+      "O que ainda estamos decidindo?",
+      "What are we still deciding?"
     ],
     "open_runs_title": [
       "Quanto passaria pela blockchain?",
@@ -2945,8 +2945,8 @@
     ],
     "open_runs": [
       [
-        "Nada: só contas bancárias e contratos assinados.",
-        "None: bank accounts and signed agreements only."
+        "Só contas bancárias e contratos assinados.",
+        "Bank accounts and signed agreements only."
       ],
       [
         "Contas bancárias, com cada pagamento também copiado na blockchain.",
@@ -2958,30 +2958,26 @@
       ]
     ],
     "open_token_title": [
-      "O que um comprador de token receberia",
-      "What a token buyer would receive"
+      "Duas fases: equity de marca, depois ativo real",
+      "Two stages: brand equity, then real-world asset"
     ],
     "open_token": [
       [
-        "Sem token: a IMOBX segue sem um.",
-        "No token: IMOBX goes ahead without one."
+        "Na fase de início, o token funciona como equity de marca tokenizada. Ele leva a marca da IMOBX, abre os serviços e benefícios da comunidade para quem o tem e financia o trabalho, a divulgação e as primeiras casas.",
+        "During the startup stage, the token works as tokenised brand equity. It carries the IMOBX brand, opens the community’s services and benefits to holders, and funds the work, the outreach and the first homes."
       ],
       [
-        "Um serviço ou benefício definido.",
-        "A stated service or benefit."
+        "A virada chega quando as casas ficam prontas e as famílias se mudam. O aluguel passa a ser a renda fixa do projeto, e as taxas de negociação, o extra.",
+        "The turning point comes when homes are finished and families move in. Rent then becomes the project’s steady income, and trading fees the extra."
       ],
       [
-        "Uma parte das taxas realmente recebidas, se a lei permitir.",
-        "A share of fees actually collected, if the law allows it."
-      ],
-      [
-        "Um investimento na operação, com direitos escritos.",
-        "An investment in the operation, with written rights."
+        "Quando as casas sustentarem o projeto, o token cresce até virar um ativo real tokenizado, ligado às casas e à renda do bairro, por um caminho que um advogado conferiu com as regras da CVM.",
+        "Once the homes carry the project, the token grows into a tokenised real-world asset tied to the neighbourhood’s homes and income, through a route a lawyer has checked against the rules of Brazil’s market regulator (CVM)."
       ]
     ],
     "open_note": [
-      "Um advogado confere cada caminho com as regras da CVM antes de qualquer venda. Se não houver caminho legal, a IMOBX segue sem token. O primeiro projeto não depende de token.",
-      "A lawyer checks each option against the CVM’s rules before anything is sold. If there is no lawful way, IMOBX goes ahead without a token. The first project needs no token."
+      "Divulgamos com prova de entrega: contamos cada passo com honestidade, com seus riscos e suas oportunidades.",
+      "We market with proof of delivery: we report each step honestly, with its risks and its opportunities."
     ],
     "same_title": [
       "Seja qual for a decisão",
@@ -2989,43 +2985,43 @@
     ],
     "same": [
       [
-        "Os pagamentos das famílias nunca vão para quem tem token.",
-        "Families’ payments never go to token holders."
+        "O pagamento de cada família vai primeiro para a própria casa: a parte da compra, os reparos e a reserva.",
+        "Each family’s payments go first to its own home: its share of the purchase, repairs and reserves."
       ],
       [
-        "Uma votação, inclusive de quem tem tokens, não muda sozinha o contrato de moradia de uma família.",
-        "A vote, including a token vote, cannot on its own change a family’s housing agreement."
+        "Votações, inclusive de quem tem tokens, orientam as decisões comuns; o que pode mudar o contrato de moradia de uma família está nos termos que a família assinou e na lei brasileira.",
+        "Votes, including token votes, guide shared decisions; what can change a family’s housing agreement is set out in the terms that family signed and in Brazilian law."
       ],
       [
-        "As contas da obra são pagas com recursos já garantidos, nunca com a negociação de tokens.",
-        "Building bills are paid from committed funding, never from token trading."
+        "As contas da obra são pagas com recursos já garantidos; a negociação sustenta o trabalho em volta das casas.",
+        "Building bills are paid from funding already secured; trading supports the work around the homes."
       ]
     ],
     "limits_title": [
-      "O que uma blockchain não faz?",
-      "What can a blockchain not do?"
+      "O que continua nas mãos das pessoas?",
+      "What stays in people’s hands?"
     ],
     "limits": [
       [
-        "Não julga se um trabalho foi bem feito. Pessoas continuam conferindo o reparo.",
-        "It cannot judge whether work was done well. People still check the repair."
+        "Se um reparo ficou bem feito, quem julga são pessoas: alguém confere o serviço no local.",
+        "Whether a repair was done well is judged by people: someone checks the work on site."
       ],
       [
-        "Um registro não pode ser apagado, só corrigido por um novo registro.",
-        "A record cannot be erased, only corrected by a new entry."
+        "Cada anotação fica; um erro é corrigido com uma nova anotação.",
+        "Every entry stays; a mistake is corrected by adding a new entry."
       ],
       [
         "O USDC, o dólar digital usado na Arc, é emitido pela Circle, que pode bloqueá-lo, inclusive por ordem de um governo.",
         "USDC, the digital dollar used on Arc, is issued by Circle, which can freeze it, including on a government order."
       ],
       [
-        "A Arc é operada por um grupo fechado de empresas escolhidas pela Circle, a empresa que a criou, e nenhum regulador a aprovou.",
-        "Arc is run by a closed group of companies chosen by Circle, the company that built it, and no regulator has approved it."
+        "Sabemos que a Arc é operada por um grupo de empresas escolhidas pela Circle, a empresa que a criou, e que os reguladores ainda vão avaliá-la.",
+        "We are aware that Arc is run by a group of companies chosen by Circle, the company that built it, and that regulators have yet to approve it."
       ]
     ],
     "closing": [
       "Você trabalha com contabilidade, direito ou blockchain? Ajude a montar isso para o primeiro projeto.",
-      "Do you work with accounts, law or blockchains? Help us set this up for the first project."
+      "Do you work in accounting, law or blockchains? Help us set this up for the first project."
     ],
     "button": [
       "Participar",
@@ -3042,8 +3038,8 @@
           "Blockchain (distributed ledger)"
         ],
         [
-          "Um registro digital público, guardado em muitas cópias. Dá para acrescentar, mas não para apagar.",
-          "A public digital record kept in many copies. New entries can be added; old ones cannot be erased."
+          "Uma lista digital e pública, guardada em muitas cópias, onde dá para acrescentar anotações e todas ficam.",
+          "A public digital list kept in many copies, where entries can be added and all of them stay."
         ]
       ],
       [
@@ -3072,8 +3068,8 @@
           "Token"
         ],
         [
-          "Um registro digital de um direito que pode ser comprado e vendido.",
-          "A digital record of a right that can be bought and sold."
+          "Uma unidade digital numa blockchain, que se pode comprar, vender, guardar ou fazer staking.",
+          "A digital unit on a blockchain that people can buy, sell, keep or stake."
         ]
       ],
       [
@@ -3110,42 +3106,124 @@
       "Our whitepaper (in English)"
     ],
     "token_fold": [
-      "Onde um token poderia entrar no futuro?",
-      "Where could a token fit later?"
+      "Para que serve o token da IMOBX?",
+      "What is the IMOBX token for?"
     ],
     "token_intro": [
-      "Não existe token da IMOBX. Se um for criado, o dinheiro arrecadado e as taxas de negociação apareceriam em linhas próprias nas contas públicas.",
-      "No IMOBX token exists. If one is created later, the money it raises and its trading fees would show as their own lines in the public accounts."
+      "Estamos estudando como introduzir o token da IMOBX de acordo com a lei brasileira. Um bairro precisa de anos de trabalho antes do primeiro aluguel: projeto, parte jurídica, divulgação e as primeiras casas. O token é como planejamos pagar esse trabalho. Ele leva a marca da IMOBX ao mercado, e seu valor acompanha o que o projeto entrega.",
+      "We are examining how to introduce the IMOBX token in line with Brazilian law. A neighbourhood needs years of work before the first rent comes in: design, legal work, outreach and the first homes. The token is how we plan to pay for that work. It carries the IMOBX brand on the market, and its value follows what the project delivers."
     ],
     "never_title": [
-      "O que a IMOBX não fará?",
-      "What will IMOBX not do?"
+      "Nossos compromissos",
+      "Our commitments"
     ],
     "never": [
       [
-        "Fazer a obra depender do volume de negociação.",
-        "Make building depend on trading volume."
+        "As casas são construídas com recursos já garantidos; a negociação sustenta o trabalho em volta delas.",
+        "The homes are built with funding already secured; trading supports the work around them."
       ],
       [
-        "Pagar quem tem o token com dinheiro de novos compradores.",
-        "Pay holders with money from new buyers."
+        "Toda recompensa a quem tem o token vem de renda que o projeto realmente ganhou e publicou.",
+        "Every reward to holders comes from income the project has actually earned and published."
       ],
       [
-        "Prometer um preço, um retorno ou uma data.",
-        "Promise a price, a return or a date."
+        "Mostramos o avanço com provas e deixamos o preço para o mercado.",
+        "We show progress with proof and leave the price to the market."
       ],
       [
-        "Vender antes que a cooperativa exista e seus fundadores aprovem as regras.",
-        "Sell before the cooperative exists and its founders agree its rules."
+        "Os membros da cooperativa aprovam as regras do token antes do lançamento.",
+        "The cooperative’s members agree the token’s rules before it launches."
       ]
     ],
     "sources_title": [
-      "Fontes (nenhuma delas analisa ou aprova a IMOBX)",
-      "Sources (none of them reviews or approves IMOBX)"
+      "Fontes independentes sobre as regras e as ferramentas",
+      "Independent sources on the rules and the tools"
     ],
     "token_purpose": [
-      "Se um for criado, ele financiaria o trabalho e pagaria a divulgação, e ficaria separado da cooperativa de moradia.",
-      "If one is created, it would fund the work and pay for promotion, and it would stay apart from the housing cooperative."
+      "O lançamento do token está planejado na Arctide, um mercado na blockchain Arc, com lançamento aberto: todos compram no mercado, nas mesmas condições, desde o primeiro dia. A compra funciona pelo site, por QR code ou pelo Telegram. Cada negociação paga uma pequena taxa de negociação em USDC. Essas taxas pagam quem faz o trabalho, inclusive embaixadores e corretores pelo trabalho de divulgação conferido, e uma parte vai para o fundo de novas casas, cada uma numa linha própria da prestação de contas da IMOBX.",
+      "The token is planned to launch on Arctide, a marketplace on the Arc blockchain, with an open launch: everyone buys on the market, on the same terms, from the first day. Buying works through the website, a QR code or Telegram. Every trade pays a small trading fee in USDC. Those fees pay the people who do the work, among them ambassadors and brokers for promotion work that has been checked, and part goes to the fund for new homes, each as its own line in IMOBX’s accounting."
+    ],
+    "utilities_title": [
+      "Como quem tem o token participa",
+      "How holders take part"
+    ],
+    "utilities": [
+      [
+        "Quem faz staking dos seus tokens recebe uma parte das taxas de negociação, paga em USDC.",
+        "Holders who stake their tokens receive a share of the trading fees, paid in USDC."
+      ],
+      [
+        "Colocar liquidez na Arctide também rende parte das taxas de negociação.",
+        "Adding liquidity on Arctide earns part of the trading fees too."
+      ],
+      [
+        "Quando as regras do token mudam, quem tem o token vota, e o trabalho comprovado dos membros conta junto com o que têm em staking.",
+        "When the token’s rules change, holders vote, and members’ proven work counts alongside their stake."
+      ],
+      [
+        "Embaixadores e corretores recebem das taxas de negociação pelo trabalho de divulgação conferido.",
+        "Ambassadors and brokers are paid from trading fees for promotion work that has been checked."
+      ],
+      [
+        "Dá para comprar pelo site, por QR code ou pelo Telegram, direto do mercado.",
+        "You can buy through the website, a QR code or Telegram, straight from the market."
+      ]
+    ],
+    "receives_title": [
+      "O que recebe quem tem o token",
+      "What a token holder receives"
+    ],
+    "receives": [
+      [
+        "Seu token é uma participação na marca IMOBX desde os primeiros anos, o que chamamos de equity de marca tokenizada.",
+        "Your token is a stake in the IMOBX brand from its early years, which we call tokenised brand equity."
+      ],
+      [
+        "Ele coloca você na lista de acesso aos serviços e benefícios da comunidade.",
+        "It whitelists you for the community’s services and benefits."
+      ],
+      [
+        "Você passa a fazer parte da IMOBX e da história dos bairros que ela constrói.",
+        "You become part of IMOBX and of the story of the neighbourhoods it builds."
+      ],
+      [
+        "Sua conta mostra a ajuda que você dá e o Zeal que você conquista.",
+        "Your account shows the help you give and the Zeal you earn."
+      ]
+    ],
+    "bridge_title": [
+      "Volume, votação, veto e voto de compromisso",
+      "Volume, voting, veto and vow"
+    ],
+    "bridge_intro": [
+      "O token é a ponte entre você e a DAO da comunidade.",
+      "The token is the bridge between you and the community’s DAO."
+    ],
+    "bridge": [
+      [
+        "Volume: a negociação mantém o token líquido, e suas taxas pagam o trabalho e as novas casas.",
+        "Volume: trading keeps the token liquid, and its fees pay for the work and the new homes."
+      ],
+      [
+        "Votação: quem tem o token e os membros decidem juntos as escolhas comuns e as regras do token, e o trabalho comprovado dos membros conta junto com o que têm em staking.",
+        "Voting: holders and members decide together on shared choices and the token’s rules, and members’ proven work counts alongside their stake."
+      ],
+      [
+        "Veto, as salvaguardas: o contrato de moradia de uma família segue os termos que a família assinou, e o conselho de várias assinaturas barra qualquer pagamento fora do orçamento publicado.",
+        "Veto, the safeguards: a family’s housing agreement follows the terms that family signed, and the council of several signers stops any payment outside the published budget."
+      ],
+      [
+        "Voto de compromisso, a sua promessa: o staking trava seus tokens como um compromisso com o projeto. O token recompensa esse compromisso, e um compromisso mais longo vale mais.",
+        "Vow, your pledge: staking locks your tokens as a commitment to the project. The token rewards that commitment, and a longer commitment counts for more."
+      ]
+    ],
+    "receives_text": [
+      "Ter o token dá a você uma participação na marca IMOBX desde os primeiros anos, o que chamamos de equity de marca tokenizada. Ele também coloca você na lista de acesso aos serviços e benefícios da comunidade, faz de você parte da história dos bairros que a IMOBX constrói e abre uma conta que mostra a ajuda que você dá e o Zeal que você conquista.",
+      "Holding the token gives you a stake in the IMOBX brand from its early years, which we call tokenised brand equity. It also whitelists you for the community’s services and benefits, makes you part of the story of the neighbourhoods IMOBX builds, and opens an account that shows the help you give and the Zeal you earn."
+    ],
+    "utilities_text": [
+      "Quem faz staking dos seus tokens recebe uma parte das taxas de negociação, paga em USDC, e colocar liquidez na Arctide também rende parte dessas taxas. Quando as regras do token mudam, quem tem o token vota, e o trabalho comprovado dos membros conta junto com o que têm em staking. Embaixadores e corretores recebem das mesmas taxas pelo trabalho de divulgação conferido. A compra funciona pelo site, por QR code ou pelo Telegram, direto do mercado.",
+      "Holders who stake their tokens receive a share of the trading fees, paid in USDC, and adding liquidity on Arctide earns part of those fees too. When the token’s rules change, holders vote, and members’ proven work counts alongside their stake. Ambassadors and brokers are paid from the same fees for promotion work that has been checked. Buying works through the website, a QR code or Telegram, straight from the market."
     ]
   },
   "token_stub": {
@@ -3162,8 +3240,8 @@
       "Read the Distributed ledger page"
     ],
     "protection": [
-      "Uma votação, inclusive de quem tem tokens, não muda sozinha o contrato de moradia de uma família.",
-      "A vote, including a token vote, cannot on its own change a family’s housing agreement."
+      "Votações, inclusive de quem tem tokens, orientam as decisões comuns; o que pode mudar o contrato de moradia de uma família está nos termos que a família assinou e na lei brasileira.",
+      "Votes, including token votes, guide shared decisions; what can change a family’s housing agreement is set out in the terms that family signed and in Brazilian law."
     ]
   }
 }

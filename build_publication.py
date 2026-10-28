@@ -90,11 +90,11 @@ MENU = [
     ]),
     ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
         # the rebuilt ledger page (28 Oct) carries its section ids, so these reuse them
-        ('blockchain.html', 'layers', 'Privacidade e acesso', 'Privacy and access', 'Do I need crypto, and what stays private?'),
+        ('blockchain.html', 'layers', 'Privacidade e acesso', 'Privacy and access', 'What changes for my family, and what stays private?'),
         ('blockchain.html', 'request', 'Pedidos e reclamações', 'Requests and complaints',
          'What happens when I ask for a repair or make a complaint?'),
-        ('blockchain.html', 'records', 'Tipos de registro', 'Types of records', 'Who sees which records?'),
-        ('blockchain.html', 'open', 'Decisões em aberto', 'Open decisions', 'What has not been decided?'),
+        ('blockchain.html', 'records', 'Quem vê o quê', 'Who sees what', 'Who sees what?'),  # owner, 28 Oct: 'records' is too abstract
+        ('blockchain.html', 'open', 'Decisões em aberto', 'Open decisions', 'What are we still deciding?'),
     ]),
     # Documents opens a short list too (owner, 28 Oct: the sources page was hard to find).
     ('resources.html', 'Documentos', 'Documents', [

@@ -433,3 +433,13 @@ a.button[href^="https://t.me/"]:hover{background:#A84B00;border-color:#A84B00;co
 .group-dialog p{margin:0 0 20px;line-height:1.5}
 .group-dialog-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .group-dialog-actions button{min-height:44px;padding:0 16px;background:none;border:1px solid #276578;color:#276578;font:inherit;cursor:pointer}
+/* Jargon popups (owner, 28 Oct 2026): the word looks like a text link, dotted, and explains itself on hover or tap. */
+button.term{all:unset;color:#A84B00;text-decoration:underline dotted;text-decoration-thickness:1.5px;text-underline-offset:3px;cursor:help;font:inherit;line-height:inherit;border-radius:2px}
+button.term:hover{color:#7F3A00;text-decoration-style:solid}
+button.term:focus-visible{outline:2px solid #A84B00;outline-offset:2px}
+button.term-near{display:inline-flex;align-items:center;justify-content:center;min-width:24px;min-height:24px;margin-left:4px;text-decoration:none;font-weight:700;font-size:.85em}
+.term-pop{position:fixed;inset:auto;margin:0;max-width:min(26em,calc(100vw - 32px));max-height:min(60vh,22em);overflow:auto;padding:16px 18px 12px;border:1px solid #D9E3E8;border-radius:4px;background:#fff;color:#193D4E;box-shadow:0 8px 24px rgba(25,61,78,.18)}
+.term-pop-word{margin:0 0 6px;font-weight:700;font-size:16px}
+.term-pop-meaning{margin:0 0 10px;font-size:16px;line-height:1.5}
+.term-pop-close{font:inherit;font-size:14px;min-height:32px;padding:4px 12px;border:1px solid #D9E3E8;border-radius:4px;background:#fff;color:#193D4E;cursor:pointer}
+.term-pop-close:hover{border-color:#193D4E}

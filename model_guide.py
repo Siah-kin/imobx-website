@@ -687,7 +687,7 @@ def build_guide(root, page, tr, esc, language_controls):
     chain += fold(ch['glossary_title'], '<dl class="glossary">' + ''.join(text(term, 'dt') + text(meaning, 'dd') for term, meaning in ch['glossary']) + '</dl>')
     chain += fold(ch['sources_title'],
                   chain_source(('As notas técnicas da Arc (em inglês)', 'Arc’s technical notes (in English)'), 'https://docs.arc.io/arc/concepts/system-overview.md',
-                               ('Diz que a privacidade ainda não está disponível.', 'Says privacy is not yet available.'))
+                               ('Diz que os recursos de privacidade ainda vão chegar.', 'Says privacy features are still to come.'))
                   + chain_source(('Seus direitos pela lei brasileira de proteção de dados (LGPD)', 'Your rights under Brazil’s data protection law (LGPD)'), 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm',
                                  ('Seus direitos sobre seus dados pessoais, inclusive o de pedir que sejam apagados.', 'Your rights over your personal data, including deletion.'))) + '</section>'
     chain += '<section id="request">' + text(ch['request_title'], 'h2') + text(ch['request_answer'], 'p', 'class="answer"')
@@ -699,11 +699,14 @@ def build_guide(root, page, tr, esc, language_controls):
     chain += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in ch['records_head']) + '</tr></thead><tbody>'
     chain += ''.join('<tr>' + text(r[0], 'th', 'scope="row"') + ''.join(text(c, 'td') for c in r[1:]) + '</tr>' for r in ch['records']) + '</tbody></table></div></section>'
     # the token as its own section (owner, 28 Oct), before what is not decided
-    chain += ('<section id="token">' + text(ch['token_fold'], 'h2') + text(ch['token_intro']) + text(ch['token_purpose']) + text(ch['token_body'])
+    chain += ('<section id="token">' + text(ch['token_fold'], 'h2') + text(ch['token_intro'])
+                  + text(ch['receives_text'])
+                  + text(ch['bridge_title'], 'h3') + text(ch['bridge_intro']) + '<ul>' + ''.join(text(o, 'li') for o in ch['bridge']) + '</ul>'
+                  + text(ch['token_purpose']) + text(ch['token_body'])
                   + text(ch['open_token_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_token']) + '</ol>'
                   + text(ch['open_note'])
                   + chain_source(('Como o regulador do mercado de capitais avalia tokens (CVM)', 'How Brazil’s market regulator looks at tokens (CVM)'), guide['sources']['cvm']['url'],
-                                 ('Diz que o regulador brasileiro olha o que um investimento realmente dá, não o nome.', 'Says Brazil’s regulator looks at what an investment actually gives, not its name.'))
+                                 ('Explica como a CVM decide quais regras valem para um token.', 'Explains how the CVM decides which rules apply to a token.'))
                   + text(ch['never_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['never']) + '</ul>' + '</section>')
     chain += '<section id="open">' + text(ch['open_title'], 'h2')
     chain += text(ch['open_runs_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_runs']) + '</ol>'
@@ -711,7 +714,7 @@ def build_guide(root, page, tr, esc, language_controls):
     chain += '<span id="limits"></span>' + fold(ch['limits_title'], '<ul>' + ''.join(text(o, 'li') for o in ch['limits']) + '</ul>'
                   + chain_source(('O anúncio da Circle de que a Arc entrou em funcionamento (16 de setembro de 2026)', 'Circle’s announcement that Arc went live (16 September 2026)'),
                                  'https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet',
-                                 ('Anuncia a rede e diz que nenhum regulador a aprovou.', 'Announces the network and says no regulator has approved it.'))
+                                 ('Anuncia a rede e observa que os reguladores ainda vão avaliá-la.', 'Announces the network and notes that regulators have yet to approve it.'))
                   + chain_source(('As empresas que operam a rede Arc', 'The companies that run the Arc network'),
                                  'https://www.arc.io/pressroom/circle-announces-founding-validator-cohort-and-major-integrations-for-arc-ahead-of-september-16-mainnet-launch',
                                  ('Lista as empresas fundadoras.', 'Lists the founding companies.'))
@@ -719,7 +722,11 @@ def build_guide(root, page, tr, esc, language_controls):
                                  ('Diz que a Circle pode bloquear USDC.', 'Says Circle can freeze USDC.'))) + '</section>'
     chain += '<section class="closing-band" id="help">' + text(ch['closing']) + text(ch['button'], 'a', 'class="button act" href="contact.html"') + '</section>'
     chain += partner_line('blockchain.html') + '</main>'
-    (root / 'blockchain.html').write_text(page('IMOBX | Distributed ledger', chain, f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">' + MF_SCRIPT,
+    # Jargon popups (owner, 28 Oct): the meanings travel inside the page; terms.js runs after site.js.
+    terms_data = json.dumps(json.loads((root / 'terms.json').read_text()), ensure_ascii=False).replace('</', '<\\/')
+    terms_script = ('<script type="application/json" id="imobx-terms">' + terms_data + '</script>'
+                    '<script src="assets/site.js" defer></script>' + f'<script src="{asset_v("terms.js")}" defer></script>')
+    (root / 'blockchain.html').write_text(page('IMOBX | Distributed ledger', chain, f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">' + MF_SCRIPT + terms_script,
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | Registro distribuído'))
 
     stub_targets = {item['id']: ('rent-to-own.html' if item['id'] in HOUSEHOLD_FAQ else 'transparency.html')
