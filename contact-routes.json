@@ -11,12 +11,12 @@
         "I am looking for a home"
       ],
       "description": [
-        "Converse sobre suas necessidades e o caminho até a compra.",
-        "Discuss your needs and a path to home ownership."
+        "Conte onde você precisa morar e do que sua família precisa.",
+        "Tell us where you need to live and what your family needs."
       ],
       "context": [
-        "Conte onde precisa morar e quais condições de aluguel e compra procura. O preço, o pagamento mensal e o prazo da primeira moradia ainda não estão definidos. Esta mensagem é só uma apresentação; não reserva uma casa nem aprova um cadastro.",
-        "Tell us where you need to live and what rental and purchase terms you are looking for. The first home’s price, monthly payment and purchase period have not been set. This message is only an introduction; it does not reserve a home or approve an application."
+        "Conte onde precisa morar e quais condições de aluguel e compra procura.",
+        "Tell us where you need to live and what rental and purchase terms you are looking for."
       ],
       "fields": [
         {
@@ -30,8 +30,8 @@
         {
           "id": "needs",
           "label": [
-            "O que a moradia precisa oferecer à sua família?",
-            "What does a home need to provide for your household?"
+            "Do que sua família precisa numa casa?",
+            "What does your family need from a home?"
           ],
           "multiline": true,
           "required": true
@@ -50,27 +50,27 @@
         "I have a property or land"
       ],
       "description": [
-        "Apresente um imóvel e a forma de participação que você considera.",
-        "Introduce a property and the arrangement you are considering."
+        "Conte sobre o imóvel e se pensa em vender, alugar ou doar.",
+        "Tell us about it, and whether you would sell it, rent it out or give it."
       ],
       "context": [
-        "Informe a região, o estado do imóvel e se considera doação, locação ou venda. Isso permite discutir uma avaliação do local e um orçamento. Um acordo posterior define uso, obras, despesas e eventual transferência.",
-        "Describe the area, property condition and whether donation, lease or sale is being considered. This allows a site assessment and budget to be discussed. A later agreement defines use, works, expenses and any transfer."
+        "Informe a região, o estado do imóvel e se considera doação, locação ou venda. Isso permite discutir uma avaliação do local e um orçamento.",
+        "Describe the area, property condition and whether donation, lease or sale is being considered. This allows a site assessment and budget to be discussed."
       ],
       "fields": [
         {
           "id": "area",
           "label": [
-            "Cidade, tipo de imóvel e sua relação com ele",
-            "City, property type and your relationship to it"
+            "Onde fica, que tipo de imóvel é e qual a sua ligação com ele?",
+            "Where is it, what kind of property is it, and how are you connected to it?"
           ],
           "required": true
         },
         {
           "id": "arrangement",
           "label": [
-            "Qual acordo você considera: aluguel, venda, doação ou moradia com opção de compra?",
-            "Which arrangement are you considering: lease, sale, donation or rent-to-own?"
+            "Você pensa em vender, alugar, doar ou vender pelo aluguel com compra?",
+            "Would you sell it, rent it out, give it, or sell it through rent-to-own?"
           ],
           "multiline": true,
           "required": true
@@ -93,8 +93,8 @@
         "Construction, materials, legal advice, accounting or technical support."
       ],
       "context": [
-        "Descreva seu serviço, região e experiência. Antes de contratar, a IMOBX combina os serviços, o preço, o prazo e quem confere o trabalho. Esta apresentação não confirma contratação.",
-        "Describe your service, area and experience. Construction, legal review or accounting work needs an agreement on the work, price, deadline and who checks its completion. This introduction does not confirm an appointment."
+        "Descreva seu serviço, região e experiência.",
+        "Describe your service, area and experience."
       ],
       "fields": [
         {
@@ -108,8 +108,8 @@
         {
           "id": "experience",
           "label": [
-            "Experiência relevante e referências públicas, se houver",
-            "Relevant experience and public references, if available"
+            "Que trabalhos você já fez? Um link ajuda.",
+            "What work have you done before? A link to it helps."
           ],
           "multiline": true,
           "required": true
@@ -132,23 +132,23 @@
         "Associations, charities and local groups."
       ],
       "context": [
-        "Uma associação pode apresentar necessidades de moradia, um imóvel ou uma rede de participantes. A conversa pode resultar na avaliação de um projeto específico, com responsabilidades e financiamento próprios. Nenhuma parceria é confirmada por esta apresentação.",
-        "An association can introduce housing needs, a property or a participant network. A conversation can lead to assessing a specific project with its own responsibilities and funding. This introduction does not confirm a partnership."
+        "Uma associação pode apresentar necessidades de moradia, um imóvel ou uma rede de participantes. A conversa pode resultar na avaliação de um projeto específico, com responsabilidades e financiamento próprios.",
+        "An association can introduce housing needs, a property or a participant network. A conversation can lead to assessing a specific project with its own responsibilities and funding."
       ],
       "fields": [
         {
           "id": "organisation",
           "label": [
-            "Organização, local de atuação e sua função",
-            "Organisation, location and your role"
+            "De qual organização você é, onde ela atua e qual é a sua função?",
+            "Which organisation are you with, where does it work, and what is your role?"
           ],
           "required": true
         },
         {
           "id": "proposal",
           "label": [
-            "Que necessidade ou oportunidade de colaboração você quer discutir?",
-            "What need or opportunity to work together do you want to discuss?"
+            "O que vocês gostariam de fazer junto com a IMOBX?",
+            "What would you like to do together?"
           ],
           "multiline": true,
           "required": true
@@ -163,31 +163,31 @@
     {
       "id": "funding",
       "title": [
-        "Quero apoiar o financiamento",
-        "I want to discuss funding"
+        "Quero falar sobre financiamento",
+        "I want to talk about funding"
       ],
       "description": [
-        "Doações, editais, crédito ou uma conversa sobre investimento.",
-        "Donations, grants, lending or an investment conversation."
+        "Doações, editais, empréstimos ou investimento.",
+        "Donations, grants, loans or investment."
       ],
       "context": [
-        "Diga se considera doação, edital, empréstimo ou investimento e quais documentos precisa analisar. Construção, manutenção e divulgação têm finalidades e orçamentos distintos. O modelo do token ainda não foi escolhido; esta página não recebe dinheiro nem aceita compras.",
-        "Say whether you are considering a donation, grant, loan or investment and what documents you need to review. Construction, maintenance and outreach have distinct purposes and budgets. The token model has not been chosen; this page receives no money and accepts no purchases."
+        "Diga se considera doação, edital, empréstimo ou investimento e quais documentos precisa analisar. Construção, manutenção e divulgação têm finalidades e orçamentos distintos.",
+        "Say whether you are considering a donation, grant, loan or investment and what documents you need to review. Construction, maintenance and outreach have distinct purposes and budgets."
       ],
       "fields": [
         {
           "id": "support",
           "label": [
-            "Que tipo de apoio você quer discutir?",
-            "What type of support do you want to discuss?"
+            "Em que tipo de apoio você está pensando?",
+            "What kind of funding do you have in mind?"
           ],
           "required": true
         },
         {
           "id": "purpose",
           "label": [
-            "Qual parte do projeto interessa a você e quais informações precisa conhecer?",
-            "Which part of the project interests you, and what information do you need?"
+            "O que você quer saber primeiro?",
+            "What would you like to know first?"
           ],
           "multiline": true,
           "required": true
@@ -202,16 +202,16 @@
     {
       "id": "community",
       "title": [
-        "Quero contribuir com a comunidade",
-        "I want to help the community"
+        "Quero ajudar",
+        "I want to help"
       ],
       "description": [
-        "Divulgação, moderação, tradução e apoio aos participantes.",
-        "Outreach, moderation, translation and participant support."
+        "Divulgar a IMOBX, traduzir ou ajudar a cuidar do grupo.",
+        "Telling people about IMOBX, translating, or helping look after the group."
       ],
       "context": [
-        "Explique como quer ajudar: tradução, moderação, comunicação ou apoio a participantes. Uma tarefa remunerada tem uma entrega combinada, orçamento e revisão antes do pagamento. Ainda não há uma oferta de trabalho ou de recompensas nesta página.",
-        "Explain how you want to help: translation, moderation, communication or participant support. A paid task has an agreed result, a budget and a check before payment. This page does not yet offer a job or rewards."
+        "Explique como quer ajudar: tradução, moderação, comunicação ou apoio a participantes.",
+        "Explain how you want to help: translation, moderation, communication or participant support."
       ],
       "fields": [
         {
@@ -225,8 +225,8 @@
         {
           "id": "availability",
           "label": [
-            "Idiomas, experiência e disponibilidade",
-            "Languages, experience and availability"
+            "Quais idiomas você fala e quanto tempo pode dedicar?",
+            "Which languages do you speak, and how much time can you give?"
           ],
           "multiline": true,
           "required": true

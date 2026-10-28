@@ -2,7 +2,7 @@
 import json
 import re
 import hashlib as _hashlib
-from money_flow import money_flow_html, cascade_html, route_html, FUNDING_SCRIPT, SCRIPT as MF_SCRIPT
+from money_flow import money_flow_html, cascade_html, route_html, ledger_flow_html, FUNDING_SCRIPT, SCRIPT as MF_SCRIPT
 
 # FAQ items that moved into rent-to-own.html; the other questions moved into transparency.html.
 HOUSEHOLD_FAQ = ('home-purchase', 'home-repairs', 'home-exit', 'home-decisions', 'home-participate', 'tenant-access')
@@ -71,6 +71,57 @@ ORG_PICS = [
     # who answers for it: one person keeps the accounts, another checks them
     '<svg class="org-pic" viewBox="0 0 200 120" aria-hidden="true">' + _person(62, 40) + '<path class="og-line" d="M84 56h24v30H84ZM89 64h14M89 71h14M89 78h9"/>'
     + _person(146, 40) + '<path class="og-check" d="M132 92l9 9 17-20"/></svg>',
+]
+
+
+# Terms (decision 21): the status and conditions the copy sweep of 28 Oct moved out of the pages, said once at the end
+# of Project stages. Text from TERMS_PAGE_DRAFT_2026-10-28.md, sections 1 to 6, with the coordinator's defaults for its
+# three flagged lines ('service income' and the foreign-organisation CNPJ line left out; no Central Bank claim).
+TERMS_TITLE = ('O que está decidido, e o que ainda não', 'What is decided, and what is not yet')
+TERMS = [
+    (('Onde a IMOBX está hoje', 'Where IMOBX stands today'), [
+        ('A IMOBX é uma proposta em preparação no Rio de Janeiro. Nada está à venda nem para alugar, e nenhuma casa está sendo oferecida.',
+         'IMOBX is a proposal being prepared in Rio de Janeiro. Nothing is for sale or rent, and no home is on offer.'),
+        ('A IMOBX ainda não tem forma jurídica. Ela está sendo escolhida com assessores brasileiros.',
+         'IMOBX has no legal form yet. It is being chosen with Brazilian advisers.'),
+        ('Nenhum contrato foi assinado: nem com famílias, nem com construtoras, proprietários ou financiadores.',
+         'No contract has been signed: not with families, builders, owners or funders.'),
+        ('Nenhum órgão regulador aprovou nada, e o site não afirma ter nenhuma aprovação.',
+         'No regulator has approved anything, and the site claims no approval.'),
+        (('O plano completo e as suas etapas: ', 'The full plan and its stages: '), ('Etapas do projeto', 'Project stages'), '#stages'),
+    ]),
+    (('Casas e famílias', 'Homes and families'), [
+        ('Os desenhos e as fotos mostram a proposta. Não são anúncios de casas disponíveis, e o modelo dos lofts é um estudo de projeto.',
+         'The drawings and photos show the proposal. They are not listings of available homes, and the lofts model is a design study.'),
+        ('O preço, o valor mensal, o prazo e quem pode participar são definidos para cada projeto, num contrato escrito, antes de qualquer mudança.',
+         'The price, the monthly amount, the term and who can join are set for each project, in a written agreement, before anyone moves in.'),
+        ('Devolução, prazo de tolerância ou desconto só valem quando estiverem escritos nesse contrato.',
+         'A refund, grace period or discount applies only once it is written into that agreement.'),
+        ('Entrar no grupo do Telegram, ou apresentar um imóvel, um serviço ou a si mesmo, não confirma nenhum acordo, nenhum trabalho e nenhuma casa reservada.',
+         'Joining the Telegram group, or introducing a property, a service or yourself, confirms no agreement, no job and no reserved home.'),
+    ]),
+    (('Dinheiro', 'Money'), [
+        ('O dinheiro viria de doações, editais e investimento, na medida em que a forma jurídica escolhida permitir.',
+         'The money would come from donations, grants and investment, as far as the chosen legal form allows.'),
+        ('Investimento só é oferecido por um caminho legal e com direitos escritos. Nenhum retorno é prometido.',
+         'Investment is offered only through a lawful route and with written rights. No return is promised.'),
+        ('As contas da obra são pagas com dinheiro já garantido.', 'Building bills are paid with money already secured.'),
+    ]),
+    (('Leis e conferências', 'Law and checks'), [
+        ('O cadastro fiscal (Receita Federal), o momento em que a propriedade passa a outra pessoa (Código Civil) e as regras para parcerias com o poder público (Lei 13.019) fazem parte do trabalho jurídico em andamento.',
+         'Tax registration (Receita Federal), when ownership passes (Civil Code), and the rules for partnerships with public bodies (Law 13.019) are part of the legal work under way.'),
+        ('Um advogado confere as regras antes de qualquer pagamento passar por uma blockchain.',
+         'A lawyer checks the rules before any payment runs on a blockchain.'),
+        ('As revisões jurídica e de segurança ainda vão ser feitas.', 'Legal and security reviews are still to come.'),
+    ]),
+    (('Pessoas', 'People'), [
+        ('Os direitos e deveres de cada pessoa dependem de contratos assinados e de registros oficiais. Hoje, os deveres formais dos fundadores ainda não estão escritos.',
+         'Each person’s rights and duties depend on signed agreements and official records. Today, the founders’ formal duties are not yet written down.'),
+    ]),
+    (('O grupo do Telegram', 'The Telegram group'), [
+        ('O grupo da IMOBX é aberto: todos nele veem o que você publica. Não inclua telefone, endereço nem documentos. As orientações completas estão na mensagem de boas-vindas do grupo.',
+         'The IMOBX group is open: everyone in it sees what you post. Leave out phone numbers, addresses and documents. The detailed guidance is in the group’s welcome message.'),
+    ]),
 ]
 
 
@@ -264,7 +315,7 @@ def build_guide(root, page, tr, esc, language_controls):
     # Four kinds of work run side by side; the last two stages depend on the ones before them.
     parallel_ids = ('foundation', 'cash-and-charter', 'digital-trial', 'token-decision')
     stage_groups = [
-        (('Quatro frentes de trabalho ao mesmo tempo', 'Four kinds of work at the same time'), False),
+        (('Agora: em preparação', 'Now: preparing'), False),
         (('Depois, uma etapa de cada vez', 'Then, one stage after another'), True)]
 
     def grouped_stages():
@@ -360,42 +411,42 @@ def build_guide(root, page, tr, esc, language_controls):
     rp = guide['rent_page']
     span_ids = lambda ids: ''.join(f'<span id="{a}"></span>' for a in ids)
     resident = '<main class="paper guide-paper resident-page band-page" id="main">'
-    # Attention pass (owner-approved package, 25 Oct): the card holds the lead's first and third sentences unchanged.
-    lead_s = [x.split('. ') for x in rp['lead']]
+    # Copy sweep, 28 Oct (review A, owner 'proceed'): the card says how rent-to-own works once, the lead gives the
+    # price rule, and one pointer line sends status to 'Where we are now' (decision 21).
     resident += text(journey['title'], 'h1')
-    resident += '<div class="key-card">' + text((lead_s[0][0] + '. ' + lead_s[0][2] + '.', lead_s[1][0] + '. ' + lead_s[1][2] + '.')) + '</div>'
-    # the lead keeps 'agreed in writing before the family moves in': a required qualification (facts register Q01)
-    resident += text((lead_s[0][1] + '. ' + '. '.join(lead_s[0][3:]), lead_s[1][1] + '. ' + '. '.join(lead_s[1][3:])), 'p', 'class="guide-lead"')
-    resident += on_this_page([(('O dinheiro', 'The money'), 'payments'), (('Reparos', 'Repairs'), 'repairs'),
-                              (('O que os moradores decidem', 'What residents decide'), 'decisions'), (('Se a família não puder pagar', 'If a family cannot pay'), 'hardship')])
-    resident += '<p class="rent-cases">' + text(('Os imóveis em estudo e a situação de cada um: ', 'The homes being considered, and where each one stands: '), 'span')
-    resident += text(('Roteiro, três casos', 'Roadmap, three cases'), 'a', 'href="roadmap.html#cases"') + '.</p>'
+    resident += '<div class="key-card">' + text(rp['key']) + '</div>'
+    resident += text(rp['lead'], 'p', 'class="guide-lead"')
+    resident += ('<p>' + text(rp['status_line'], 'span') + ' '
+                 + text(rp['status_link'], 'a', 'href="index.html#onde-estamos"') + '</p>')
+    resident += on_this_page([(('Pagamentos mensais', 'Monthly payments'), 'payments'), (('Reparos', 'Repairs'), 'repairs'),
+                              (('Decisões dos moradores', 'Residents’ decisions'), 'decisions'),
+                              (('Saída ou atraso no pagamento', 'Leaving or missed payments'), 'hardship')])
 
     resident += '<section id="payments">' + span_ids(anchors['payments'] + ['questions'])
     rec = [x.split('. ', 1) for x in rp['record']]
-    resident += text(journey['steps_title'], 'h2') + text((rec[0][0] + '.', rec[1][0] + '.'), 'p', 'class="answer"')
+    resident += text(journey['steps_title'], 'h2', 'id="money"') + text((rec[0][0] + '.', rec[1][0] + '.'), 'p', 'class="answer"')
     resident += money_flow_html(text) + text((rec[0][1], rec[1][1]))
-    resident += text(('Veja os dois orçamentos de obra', 'Read the two construction budgets'),
+    resident += text(('Quanto custa construir as primeiras casas', 'What the first homes cost to build'),
                      'a', 'href="transparency.html#budgets"') + '</section>'
 
     resident += '<section id="repairs">' + span_ids(anchors['repairs']) + text(journey['repairs_title'], 'h2')
     resident += '<ol class="step-strip">' + ''.join(text(st, 'li') for st in rp['repair_steps']) + '</ol>'
-    resident += text(rp['repair_note']) + text(('Quem cuida do trabalho e como questionar uma decisão', 'Who handles the work and how to question a decision'),
+    resident += text(rp['repair_note']) + text(('Como contestar uma decisão', 'How to question a decision'),
                                                 'a', 'href="roadmap.html#governance"') + '</section>'
 
     resident += '<section id="decisions">' + span_ids(anchors['decisions']) + text(rp['decisions_heading'], 'h2')
-    resident += '<div class="two-sides"><div>' + text(rp['decide_title'], 'strong', 'class="side-title"') + '<ul>'
-    resident += ''.join(text(x, 'li') for x in rp['decide']) + '</ul>' + text(rp['decide_note']) + '</div>'
+    resident += '<div class="two-sides"><div><ul>'
+    resident += ''.join(text(x, 'li') for x in rp['decide']) + '</ul></div>'
     resident += '<div class="side-protect">' + text(rp['protect_title'], 'strong', 'class="side-title"') + '<ul>'
     resident += ''.join(text(x, 'li') for x in rp['protect']) + '</ul></div></div>'
-    resident += text(rp['invest'], 'p', 'class="invest-line"') + text(('Mais no roteiro', 'More in the roadmap'), 'a', 'href="roadmap.html#governance"') + '</section>'
+    resident += text(rp['invest'], 'p', 'class="invest-line"') + '</section>'
 
-    resident += '<section id="hardship" class="soft-panel">' + span_ids(anchors['hardship']) + text(journey['hardship_title'], 'h2')
+    resident += '<section id="hardship" class="soft-panel">' + span_ids(anchors['hardship']) + text(journey['hardship_title'], 'h2', 'id="leaving"')
     resident += ''.join(text(pair) for pair in journey['hardship'])
-    resident += text(('Tudo o que está em aberto', 'Everything still open'), 'a', 'href="roadmap.html#open-terms"') + '</section>'
+    resident += text(('O que ainda não foi decidido', 'What is still undecided'), 'a', 'href="roadmap.html#open-terms"') + '</section>'
 
     resident += '<section id="next" class="closing-band">' + span_ids(anchors['next']) + text(rp['interest'])
-    resident += text(('Preparar uma conversa sobre moradia', 'Prepare a housing conversation'), 'a', 'class="button act" href="contact.html?role=resident"') + '</section>'
+    resident += text(('Conte do que a sua família precisa', 'Tell us what your family needs'), 'a', 'class="button act" href="contact.html?role=resident"') + '</section>'
     resident += '<span id="funding"></span><span id="property"></span>' + partner_line('rent-to-own.html') + '</main>'
     (root / 'rent-to-own.html').write_text(page('IMOBX | Renting and buying a home', resident,
         f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">' + MF_SCRIPT,
@@ -405,119 +456,96 @@ def build_guide(root, page, tr, esc, language_controls):
     # an "on this page" list, an answer line under each question, background in quiet folds, commitments visible,
     # one orange action at the end. See ATTENTION_ANALYSIS_2026-10-25.md.
     roadmap = '<main class="paper guide-paper band-page roadmap-page" id="main">' + language_controls
-    roadmap += text(('Quais são as etapas do projeto?', 'What are the project stages?'), 'h1')
-    roadmap += '<div class="key-card" id="where-we-stand">' + text(('O projeto está em preparação. A forma jurídica está em definição; ainda falta demonstrar o funcionamento das moradias e o uso de blockchain para guardar e pagar recursos do projeto.',
-                     'The project is in preparation. The legal form is being defined. Running the homes and using blockchain to hold and pay project funds still need to be demonstrated.')) + '</div>'
-    roadmap += text(('Cada etapa mostra quem participa e o que precisa estar pronto antes de começar. Ainda não há datas.',
-                     'Each stage lists who takes part and what has to be ready before it starts. No dates are set yet.'), 'p', 'class="guide-lead"')
-    roadmap += on_this_page([(('Etapas', 'Stages'), 'stages'), (('Os imóveis', 'The properties'), 'cases'), (('Quem participa', 'Who takes part'), 'participation'),
-                             (('Quem decide o quê', 'Who decides what'), 'governance'), (('O que falta definir', 'Still to settle'), 'open-terms')])
-    roadmap += '<section id="stages">' + text(('Quais são as etapas?', 'What are the stages?'), 'h2')
-    roadmap += text(('São sete etapas: quatro andam lado a lado, e três vêm uma depois da outra.',
-                     'There are seven stages: four run side by side, and three follow one after another.'), 'p', 'class="answer"')
-    # Only the details a stage's summary does not already say. Who does the work is in the summary;
-    # what people could follow is on the funding page's reporting section.
-    stage_detail = {
-        'foundation': {'schedule': [1], 'work': [0, 1]},
-        'cash-and-charter': {'gate': [0, 1], 'pause': [0]},
-        'funded-pilot': {'schedule': [1], 'work': [0], 'gate': [1]},
-        'digital-trial': {'work': [0], 'gate': [1], 'pause': [0]},
-        'token-decision': {'pause': [0]},
-        'replication': {'work': [0, 1], 'gate': [1], 'pause': [0]},
-        'owner-platform': {'work': [0, 1, 2]},
-    }
-    detail_labels = [(('Quando', 'When'), 'schedule'), (('Trabalho', 'Work'), 'work'),
-                     (('Antes de avançar', 'Before it moves on'), 'gate'), (('O que impediria', 'What would stop it'), 'pause')]
+    # Copy sweep, 28 Oct (review B, owner 'proceed'): status said once in the card; each stage is two or three
+    # plain sentences instead of a labelled form; 'Who takes part' moves to Take part (its anchors stay here).
+    roadmap += text(('Etapas do projeto: onde estamos e o que vem depois', 'Project stages: where we are and what comes next'), 'h1')
+    roadmap += '<div class="key-card" id="where-we-stand">' + text(('Estamos preparando o primeiro projeto. Nada está à venda ainda, e não há datas definidas.',
+                     'We are preparing the first project. Nothing is for sale yet, and no dates are set.')) + '</div>'
+    roadmap += on_this_page([(('Etapas', 'Stages'), 'stages'), (('Os imóveis', 'The properties'), 'cases'),
+                             (('Quem decide o quê', 'Who decides what'), 'governance'), (('O que falta definir', 'Still to settle'), 'open-terms'),
+                             (TERMS_TITLE, 'terms')])
+    roadmap += '<section id="stages">' + text(('O que acontece agora e o que vem depois?', 'What happens now, and what comes next?'), 'h2')
+    roadmap += text(('Agora, quatro frentes de preparação ao mesmo tempo. Depois, três etapas, uma de cada vez: primeiras casas, mais imóveis e uma plataforma para proprietários.',
+                     'Now, four kinds of preparation at once. Then three stages, one after another: first homes, more properties, and a platform for owners.'), 'p', 'class="answer"')
     for label, ordered, members in grouped_stages():
       roadmap += text(label, 'p', 'class="stage-group"')
       for number, stage in members:
         roadmap += f'<details class="roadmap-stage" id="{esc(stage["id"])}"><summary>'
-        roadmap += text(numbered(number, stage['title']) if number else stage['title'], 'h3') + text(stage['window'], 'span', 'class="guide-window"')
+        roadmap += text(numbered(number, stage['title']) if number else stage['title'], 'h3')
+        if stage.get('window'):
+            roadmap += text(stage['window'], 'span', 'class="guide-window"')
         # A quiet link-styled cue; the whole summary row is the control and the browser keeps it keyboard-operable.
-        roadmap += '<span class="stage-toggle">' + text(('Mais informações', 'More information'), 'span', 'class="more"') + text(('Menos informações', 'Less information'), 'span', 'class="less"') + '</span></summary><dl>'
-        roadmap += text(('Quem', 'Who'), 'dt') + text(stage['overview_owner'], 'dd') + text(('Precisa de', 'Needs'), 'dt') + text(stage['overview_needs'], 'dd')
-        for label, key in detail_labels:
-            if key in stage_detail[stage['id']]:
-                body = pick(stage[key], stage_detail[stage['id']][key])
-                if stage['id'] == 'replication' and key == 'gate':
-                    body = tuple(f'{a} {b}' for a, b in zip(body, pick(guide_question('scale')['a'][1], [2])))
-                roadmap += text(label, 'dt') + text(body, 'dd')
-        roadmap += '</dl></details>'
+        roadmap += '<span class="stage-toggle">' + text(('Mostrar detalhes', 'Show details'), 'span', 'class="more"') + text(('Esconder detalhes', 'Hide details'), 'span', 'class="less"') + '</span></summary>'
+        roadmap += ''.join(text(pair) for pair in stage['card']) + '</details>'
     roadmap += '</section>'
 
     cases = guide['cases']
-    # The answer first (no pilot is confirmed), then what the three words mean.
+    # The answer first (no pilot is confirmed), then what a proposed and a confirmed pilot mean.
     intro_lines = tuple(t.rsplit('. ', 1) for t in cases['intro'])
-    roadmap += '<section id="cases">' + text(('De quais imóveis estamos falando?', 'Which properties are we talking about?'), 'h2')
+    roadmap += '<section id="cases">' + text(('Quais imóveis estão em estudo?', 'Which homes are being considered?'), 'h2')
     roadmap += text(tuple(t[1] for t in intro_lines), 'p', 'class="answer"') + text(tuple(t[0] + '.' for t in intro_lines))
     roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in cases['headings'])
     roadmap += '</tr></thead><tbody>' + ''.join('<tr>' + text(r[0], 'th', 'scope="row"') + text(r[1], 'td') + text(r[2], 'td') + '</tr>'
-                                              for r in cases['rows']) + '</tbody></table></div></section>'
-    participation = guide['participation']
-    roadmap += '<section id="participation">' + text(('Quem participa?', 'Who takes part?'), 'h2')
-    roadmap += text(('Oito grupos participam, cada um com suas necessidades e decisões.',
-                     'Eight groups take part, each with its own needs and decisions to make.'), 'p', 'class="answer"')
-    # One table instead of eight fold-outs, inside one quiet fold: background, not a commitment.
-    roadmap += '<details class="disclosure"><summary>' + text(('Ver os oito grupos e o que cada um precisa', 'See the eight groups and what each needs'), 'span') + '</summary><div class="disclosure-body">'
-    roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in participation['headings'])
-    roadmap += '</tr></thead><tbody>' + ''.join(f'<tr id="role-{role["id"]}">' + text(role['who'], 'th', 'scope="row"') + text(role['need'], 'td')
-                                              + text(role['decision'], 'td') + '</tr>' for role in participation['roles'])
-    roadmap += '</tbody></table></div></div></details>'
-    roadmap += text(('Veja como isso funcionaria para uma família: pagamentos, reparos e decisões',
-                     'See how this would work for a household: payments, repairs and decisions'), 'a', 'href="rent-to-own.html"')
-    roadmap += short_source('ica') + '</section>'
+                                              for r in cases['rows']) + '</tbody></table></div>'
+    # 'Who takes part' (the eight groups) moves to Take part (review B 80-108); its old anchors stay so links still land here.
+    roadmap += '<span id="participation"></span>' + ''.join(f'<span id="role-{role["id"]}"></span>' for role in guide['participation']['roles'])
+    roadmap += text(('Como funciona o aluguel com compra para uma família', 'How rent-to-own works for a family'), 'a', 'href="rent-to-own.html"') + '</section>'
 
     public = guide['transparency']
     Q = {item['id']: item for item in guide['questions']}
     ans = lambda ident, i, keep=None: Q[ident]['a'][i] if keep is None else pick(Q[ident]['a'][i], keep)
     spans = lambda *ids: ''.join(f'<span id="{i}"></span>' for i in ids)
 
-    # The funding page is the home of money: budgets, sources of money, the token, the payment route,
-    # the legal limits and reporting. Household, governance and people sections live on their own pages.
-    # Funding page, distilled 25 Oct 2026 (owner: keep it simple; drawings instead of lists; no string of headed sections).
-    # Five sections: what needs money now, the first homes' cost, where money comes from and its order (cascade),
-    # how a payment travels (route), legal form and reports. Token questions live on token.html.
+    # The funding page is the home of money: budgets, sources of money and their order, who checks a payment and
+    # what will be published. Copy sweep, 28 Oct (review B, owner 'proceed'): the status chips, the conversion steps,
+    # the token paragraph and the legal-form essay moved to the roadmap, the Distributed ledger page and Terms
+    # (decisions 13, 21); their old anchors stay so links still land here.
+    def plain_source(key):
+        """'Source: <label>.' when the page itself no longer needs to say what the source does not show."""
+        return ('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span')
+                + f'<a href="{esc(guide["sources"][key]["url"])}">{label_text(key)}</a>.</p>')
+
     fp = guide['funding_page']
     transparency = '<main class="paper guide-paper transparency-page band-page" id="main">' + language_controls
     transparency += text(public['title'], 'h1') + '<div class="key-card">' + text(fp['key']) + '</div>'
     transparency += text(fp['lead'], 'p', 'class="guide-lead"')
-    transparency += on_this_page([(('Custos', 'Costs'), 'budgets'), (('A ordem do dinheiro', 'The order of money'), 'money-order'),
-                                  (('O caminho de um pagamento', 'How a payment travels'), 'settlement'), (('Forma jurídica e relatórios', 'Legal form and reports'), 'legal')])
-    transparency += '<div id="status"><ul class="funding-status">'
-    transparency += ''.join(text(item, 'li', 'class="is-open"' if n else '') for n, item in enumerate(fp['status'])) + '</ul></div>'
+    transparency += on_this_page([(('Custos', 'Costs'), 'budgets'), (('De onde vem o dinheiro', 'Where the money comes from'), 'money-order'),
+                                  (('Quem confere cada pagamento', 'Who checks each payment'), 'settlement'), (('O que vamos publicar', 'What we will publish'), 'reporting')])
+    transparency += spans('status')
 
-    transparency += '<section id="budgets">' + spans('faq-cost-basis', 'custos') + guide['budgets_html'].replace('<p data-pt="São custos de construção', '<p class="answer" data-pt="São custos de construção', 1)
-    transparency += grouped_sources(('Nenhuma delas define o preço para uma família.', 'None of them sets a family’s price.'), 'sinapi', 'cub', 'cost') + '</section>'
+    # Menu anchors (first-homes, money-sources, payment-route, reports; money and leaving on rent-to-own) sit on the
+    # headings, since the sweep changed the English heading text that build_publication.add_menu_anchors matches.
+    transparency += '<section id="budgets">' + spans('faq-cost-basis', 'custos') + guide['budgets_html']
+    transparency += source_links('sinapi', 'cub', 'cost') + '</section>'
 
     order = guide['money_order']
     transparency += ('<section id="money-order">' + spans('funding', 'funding-sources', 'faq-funding', 'community-economy', 'household-payments', 'thanks-zeal-lets')
-                     + text(fp['order_title'], 'h2') + text(fp['order_intro']) + cascade_html(text) + text(order['transfer']))
-    # The five kinds of money are shown openly (owner, 26 Oct): their sources and permitted uses are the model.
+                     + text(fp['order_title'], 'h2', 'id="money-sources"') + text(fp['order_intro']) + cascade_html(text) + text(order['transfer']))
+    # The kinds of money are shown openly (owner, 26 Oct): their sources and permitted uses are the model.
     transparency += text(fp['kinds_summary'], 'h3') + '<div class="guide-table"><table><thead><tr>'
     transparency += ''.join(text(h, 'th', 'scope="col"') for h in order['headings']) + '</tr></thead><tbody>'
     transparency += ''.join('<tr>' + text(row[0], 'th', 'scope="row"') + text(row[1], 'td') + text(row[2], 'td') + '</tr>'
-                            for row in order['kinds']) + '</tbody></table></div>' + short_source('cash') + '</section>'
+                            for row in order['kinds']) + '</tbody></table></div>' + plain_source('cash') + '</section>'
+
+    # Funding economics moved here from why.html (review C, why 45-47).
+    why_moved = guide['why']
+    transparency += ('<section id="rent-to-own-or-rent">' + text(why_moved['fleet_title'], 'h2') + text(why_moved['fleet'])
+                     + text(('As três fases de crescimento', 'The three phases of growth'), 'a', 'href="roadmap.html#stages"') + '</section>')
 
     transparency += ('<section id="settlement">' + spans('faq-on-off-ramp', 'rent-onramp', 'construction-offramp', 'digital-records', 'faq-arc-arctide',
                                                          'treasury-demonstration', 'ramp-options')
-                     + text(fp['route_title'], 'h2') + text(tuple(x.split('. ', 1)[0] + '.' for x in fp['route_after']), 'p', 'class="answer"') + route_html(text) + text(tuple(x.split('. ', 1)[1] for x in fp['route_after']))
-                     + short_source('bcb', 'digital') + '</section>')
+                     + text(fp['route_title'], 'h2', 'id="payment-route"') + route_html(text) + '</section>')
 
-    transparency += '<div class="duo"><section id="legal">' + spans('faq-nonprofit') + text(fp['legal_title'], 'h2') + text(fp['legal'])
-    transparency += grouped_sources(('Nenhuma delas diz qual forma a IMOBX terá.', 'None of them says which form IMOBX will take.'), 'cnpj', 'title', 'nonprofit') + '</section>'
-
-    transparency += '<section id="reporting">' + spans('faq-ico', 'ico-comparison') + text(public['reporting_title'], 'h2')
-    transparency += '<ul>' + ''.join(text(public['reporting'][i], 'li') for i in (0, 1, 2, 4)) + '</ul>' + text(ans('ico', 1, [0])) + '</section></div>'
+    transparency += ('<section id="reporting">' + spans('legal', 'faq-nonprofit', 'faq-ico', 'ico-comparison') + text(public['reporting_title'], 'h2', 'id="reports"')
+                     + '<ul>' + ''.join(text(public['reporting'][i], 'li') for i in (0, 1, 2, 4)) + '</ul>' + text(public['reporting_note']) + '</section>')
     transparency += '<section class="closing-band" id="elsewhere">' + spans('sources', 'updates', 'next-steps')
-    transparency += ('<p id="token-options" class="token-line">' + spans('faq-yield', 'funding-questions', 'faq-thanks-zeal-lets', 'faq-euler', 'faq-exchanges',
-                                                      'faq-property', 'faq-rwa', 'outreach', 'campaign-work')
-                     + text(fp['token'], 'span') + text(fp['token_link'], 'a', 'href="token.html"') + '.</p>')
+    transparency += spans('token-options', 'faq-yield', 'funding-questions', 'faq-thanks-zeal-lets', 'faq-euler', 'faq-exchanges',
+                          'faq-property', 'faq-rwa', 'outreach', 'campaign-work')
 
-    # Old anchors whose answers now live elsewhere: one line each, pointing to the answer; then the one orange action.
+    # Old anchors whose answers now live elsewhere, one link to where decisions are described, then the one orange action.
     transparency += '<p>' + spans('faq-governance', 'faq-merit', 'faq-dao', 'faq-flock-siah', 'faq-scale', 'community-rights', 'community-tools')
-    transparency += text(('Quem decide, como o trabalho segue e como a IMOBX cresceria: ', 'Who decides, how work moves forward and how IMOBX would grow: '), 'span')
-    transparency += text(('Roteiro, quem decide o quê', 'Roadmap, who decides what'), 'a', 'href="roadmap.html#governance"') + '.</p>'
-    transparency += text(('Ver os documentos', 'See the documents'), 'a', 'class="button act" href="resources.html"') + '</section>'
+    transparency += text(('Quem decide o quê', 'Who decides what'), 'a', 'href="roadmap.html#governance"') + '</p>'
+    transparency += text(('Conversar sobre financiamento', 'Talk to us about funding'), 'a', 'class="button act" href="contact.html?role=funding"') + '</section>'
     transparency += partner_line('transparency.html') + '</main>'
     (root / 'transparency.html').write_text(page('IMOBX | Funding and spending', transparency,
         f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">' + FUNDING_SCRIPT, version=guide['version'], lang='pt-BR', title_pt='IMOBX | Financiamento e gastos'))
@@ -526,68 +554,66 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += text(('Quem decide o quê?', 'Who decides what?'), 'h2')
     roadmap += text(('O contrato de cada família protege a sua casa. Os moradores decidem o que é comum, e outra pessoa confere cada pagamento.',
                      'Each family’s agreement protects its home. Residents decide shared matters, and a different person checks each payment.'), 'p', 'class="answer"')
-    headings = [('Decisão', 'Decision'), ('Quem decidiria', 'Who would decide'), ('Limites e conferências', 'Limits and checks')]
+    headings = [('Decisão', 'Decision'), ('Quem decide', 'Who decides'), ('Limites e conferências', 'Limits and checks')]
     rows = [
-        [('Moradia e compra', 'Occupancy and purchase'),
-         ('O morador e a organização, conforme o contrato e a lei.', 'The resident and the organisation, under their agreement and the law.'),
-         ('Uma votação de tokens não muda sozinha o contrato da família. É preciso poder questionar e pedir revisão.', 'A token vote cannot change a family’s agreement on its own. People need a way to question a decision and ask for review.')],
+        [('Morar na casa e comprá-la', 'Living in the home and buying it'),
+         ('A família e a IMOBX, conforme o contrato e a lei.', 'The family and IMOBX, under their agreement and the law.'),
+         ('Nenhuma votação muda sozinha o contrato de uma família. A família pode pedir que qualquer decisão seja revista.', 'No vote can change a family’s agreement on its own. The family can ask for any decision to be reviewed.')],
         [('Uso de espaços e manutenção local', 'Shared spaces and local maintenance'),
-         ('Uma opção para discutir: voz igual para cada membro do grupo de moradores.', 'One option to discuss: equal voice for each member of the resident group.'),
-         ('Decisões dentro do orçamento e das regras de segurança, com apoio à participação e possibilidade de substituir representantes.', 'Decisions within the budget and safety rules, with support for participation and a way to replace representatives.')],
-        [('Execução e compras', 'Delivery and purchasing'),
-         ('Pessoas escolhidas pela experiência, com função e prazo claros.', 'People chosen for their experience, with a clear job and time limit.'),
-         ('A construtora não aprova a própria cobrança. Aprovar o gasto, conferir a entrega e pagar são tarefas com conferências separadas.', 'The builder does not approve its own invoice. Approving spending, checking delivery and paying need separate checks.')],
-    ]  # investor rights live on the token page (one home per idea)
+         ('Os moradores juntos. Uma opção em discussão: um voto por membro.', 'The residents together. One option under discussion: one vote per member.'),
+         ('Dentro do orçamento e das regras de segurança. Os moradores podem trocar seus representantes.', 'Within the budget and the safety rules. Residents can replace their representatives.')],
+        [('Obras e compras', 'Building work and purchases'),
+         ('Pessoas escolhidas pela experiência, para uma função e um prazo definidos.', 'People chosen for their experience, for a set job and a set time.'),
+         ('A construtora nunca aprova a própria cobrança. Uma pessoa aprova, outra confere o serviço, e só então se paga.', 'The builder never approves its own invoice. One person approves, another checks the work, and only then is it paid.')],
+    ]  # investor rights live on the Distributed ledger page (one home per idea)
     roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in headings)
     roadmap += '</tr></thead><tbody>'
     for row in rows:
         roadmap += '<tr>' + ''.join(text(cell, 'td') for cell in row) + '</tr>'
     roadmap += '</tbody></table></div>'
-    # Ostrom's eight design principles, in plain words; her name stays only in the source credit (owner, 24 Oct: low jargon).
-    roadmap += '<details class="disclosure"><summary>' + text(('Regras para o que é comum', 'Rules for what residents share'), 'span') + '</summary><div class="disclosure-body">'
-    roadmap += text(('Cada família seria dona da casa; espaços comuns, reservas e o dinheiro para novas casas teriam regras comuns.',
-                     'Each family would own its home; shared spaces, reserves and the money for more homes would follow rules agreed together.'))
-    principles = [
-        ('Quem participa, quais imóveis e o que é comum, bem definidos.', 'Who takes part, which properties and what is shared, clearly defined.'),
-        ('Custos justos ao que cada família recebe e pode pagar.', 'Costs fair to what each household receives and can afford.'),
-        ('Os afetados ajudam a decidir as regras comuns.', 'The people affected help decide the shared rules.'),
-        ('Dinheiro e obra conferidos por pessoas que prestam contas aos participantes e declaram seus interesses.', 'Money and work checked by people who answer to the participants and declare their interests.'),
-        ('Respostas graduais a regras descumpridas, com defesa.', 'Responses to broken rules that start small, with a right to be heard.'),
-        ('Mediação e revisão acessíveis, protegendo o direito de moradia.', 'Accessible mediation and review, with protection for housing rights.'),
-        ('O direito dos moradores de fazer suas regras.', 'Residents’ right to make their own rules.'),
-        ('Decisões locais com os moradores; serviços compartilhados entre projetos.', 'Local decisions close to residents, with services shared across projects.')
-    ]
-    roadmap += '<ol class="ostrom-application">' + ''.join(text(p, 'li') for p in principles) + '</ol>' + short_source('ostrom') + '</div></details>'
-    roadmap += '<details class="disclosure"><summary>' + text(('Como o trabalho segue no dia a dia', 'How everyday work moves forward'), 'span') + '</summary><div class="disclosure-body">'
-    roadmap += text(pick(guide['dao_operations']['work'], [0, 1])) + text(guide['dao_operations']['continuity'])
-    roadmap += text(guide['dao_operations']['status'])  # the help-desk paragraph moves to the blockchain page
-    roadmap += short_source('digital') + '</div></details></section>'
+    # How decisions would be shared between neighbourhoods: moved here from why.html (review C, why 48-55), with its pictures.
+    why_org = guide['why']
+    roadmap += text(why_org['org_title'], 'h3') + text(why_org['org_answer'])
+    roadmap += '<ol class="layer-list org-list">' + ''.join('<li>' + pic + '<h3>' + text(t_, 'span') + '</h3>' + text(b_) + '</li>'
+                                                          for pic, (t_, b_) in zip(ORG_PICS, why_org['org_cols'])) + '</ol>'
+    # The close of 'Who decides what?' (review B 128). Ostrom's list and the ICA source wait for the Ideas page (decision 15).
+    roadmap += text(('No plano, cada família é dona da sua casa, e os espaços comuns, as reservas e o dinheiro para novas casas seguem regras combinadas entre os moradores.',
+                     'In the plan, each family owns its home, and the shared spaces, the reserves and the money for new homes follow rules the residents agree together.'))
+    roadmap += '<details class="disclosure"><summary>' + text(('Como o trabalho segue no dia a dia', 'How work carries on day to day'), 'span') + '</summary><div class="disclosure-body">'
+    roadmap += text(guide['dao_operations']['work']) + '</div></details></section>'
 
-    hj, rp = guide['resident_journey'], guide['transparency']
     open_terms = [
         ('Qual imóvel o primeiro projeto vai usar.', 'Which property the first project will use.'),
         ('O preço, o pagamento mensal e quanto de cada pagamento conta para a compra.', 'The price, the monthly payment and how much of each payment counts towards buying the home.'),
-        ('A divisão dos custos de reparo, os prazos de atendimento, o contato responsável e a forma de revisar uma cobrança ou um serviço contestado.',
-         'Who pays for repairs, how quickly they are handled, who to contact and how to question a charge or repair.'),
-        pick(hj['hardship'][0], [1]),
-        ('Os procedimentos de votação, os limites de gasto e a maneira de resolver uma discordância.',
-         'Voting procedures, spending limits and ways to resolve disagreements.'),
+        ('Quem paga os reparos, em quanto tempo são feitos e como contestar uma cobrança.', 'Who pays for repairs, how fast they are done and how to question a charge.'),
+        ('Como os moradores votam, quanto se pode gastar sem consultar e como resolver uma discordância.',
+         'How residents vote, how much can be spent without asking, and how disagreements are settled.'),
         ('A forma jurídica da organização.', 'The organisation’s legal form.'),
         ('O financiamento e o que receberia quem financiar o projeto.', 'The funding, and what people who fund the project would receive.'),
-        ('Os direitos de quem compra um token.', 'The rights of token buyers.'), ('O prestador do serviço de pagamento.', 'The payment provider.'),
-    ]
-    # Commitments stay visible (research, 25 Oct): a checklist in three groups, with how many are settled.
-    groups = [(('A casa e o preço', 'The home and its price'), open_terms[0:4]), (('As regras', 'The rules'), open_terms[4:5]),
-              (('Dinheiro e forma jurídica', 'Money and legal form'), open_terms[5:9])]
-    roadmap += '<section id="open-terms">' + text(('O que os fundadores vão definir primeiro?', 'What will the founders settle first?'), 'h2')
-    roadmap += marked(('Definidos até agora: ', 'Settled so far: '), ('0 de 9', '0 of 9'), ('.', '.'))
+        ('O prestador do serviço de pagamento.', 'The payment provider.'),
+    ]  # the refund condition moved to Terms; token buyers' rights moved to the Distributed ledger page
+    # Commitments stay visible (research, 25 Oct): a checklist in three groups.
+    groups = [(('A casa e o preço', 'The home and its price'), open_terms[0:3]), (('As regras', 'The rules'), open_terms[3:4]),
+              (('Dinheiro e forma jurídica', 'Money and legal form'), open_terms[4:7])]
+    roadmap += '<section id="open-terms">' + text(('O que estamos decidindo agora?', 'What are we deciding now?'), 'h2')
     roadmap += '<div class="settle-groups">' + ''.join('<div>' + text(label, 'h3') + '<ul class="settle-list">' + ''.join(text(item, 'li') for item in items) + '</ul></div>'
                                                       for label, items in groups) + '</div>'
     roadmap += '<p>' + spans('settlement', 'ramp-options', 'ico-comparison')
-    roadmap += text(('Dinheiro, pagamentos e relatórios: ', 'Money, payments and reports: '), 'span')
-    roadmap += text(('Financiamento e gastos', 'Funding and spending'), 'a', 'href="transparency.html"') + '.</p></section>'
-    roadmap += '<section class="closing-band" id="help">' + text(('Esses pontos são definidos com quem participa. Se você pode ajudar, apresente-se.',
-                                                                   'These are worked out with the people who take part. If you can help, introduce yourself.'))
+    roadmap += text(('Custos e financiamento', 'Costs and funding'), 'a', 'href="transparency.html"') + '</p></section>'
+    # Terms (decision 21; owner 'proceed', 28 Oct): status and conditions said once, here, from TERMS_PAGE_DRAFT_2026-10-28.md.
+    # It sits before the closing band, so the page still ends on the one invitation.
+    roadmap += '<section id="terms">' + text(TERMS_TITLE, 'h2')
+    for heading, items in TERMS:
+        roadmap += text(heading, 'h3') + '<ul>'
+        for item in items:
+            if len(item) == 3:  # (lead-in, link label, anchor)
+                roadmap += '<li>' + text(item[0], 'span') + text(item[1], 'a', f'href="{item[2]}"') + '.</li>'
+            else:
+                roadmap += text(item, 'li')
+        roadmap += '</ul>'
+    roadmap += '</section>'
+    roadmap += '<section class="closing-band" id="help">' + text(('Definimos esses pontos com quem participa. Se você pode ajudar em algum deles, apresente-se no grupo.',
+                                                                   'We settle these with the people who join us. If you can help with one of them, introduce yourself in the group.'))
     roadmap += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
     roadmap += partner_line('roadmap.html') + '</main>'
     (root / 'roadmap.html').write_text(page('IMOBX | Project stages', roadmap,
@@ -598,41 +624,26 @@ def build_guide(root, page, tr, esc, language_controls):
         return f'<ol class="{cls}">' + ''.join('<li>' + (text(i[0], 'strong') + text(i[1], 'span') if isinstance(i[0], list) else text(i, 'span')) + '</li>'
                                               for i in items) + '</ol>'
 
-    # Why housing: the wider problem in figures, each with its source and what it does not show.
+    # Why housing: the wider problem in figures, each with its source, and what IMOBX works on.
     why = guide['why']
-    # Why housing in the attention pattern (owner-approved package, 25 Oct): the lead's first sentence as the card,
-    # the four figures as a row of numbers with their dates and limits kept visible, one home for the money loop
-    # (How it works), and a bounded section on how decisions would be shared, marked as a proposal.
+    # Copy sweep, 28 Oct (review C, owner 'proceed'): the problem stays; the rent-or-sell economics moved to
+    # Costs and funding, how decisions are shared moved to Project stages, and the sources wait for the Ideas page.
     wl = [x.split('. ', 1) for x in why['lead']]
     page_why = '<main class="paper guide-paper why-page band-page" id="main">' + text(why['title'], 'h1')
     page_why += '<div class="key-card">' + text((wl[0][0] + '.', wl[1][0] + '.')) + '</div>'
     page_why += text((wl[0][1], wl[1][1]), 'p', 'class="guide-lead"')
-    page_why += on_this_page([(('Os números', 'The figures'), 'figures'), (('Favelas no Rio', 'Favelas in Rio'), 'context'),
-                              (('Por que o custo sobe', 'Why costs rise'), 'causes'), (('O que a IMOBX faria', 'What IMOBX would do'), 'answer'),
-                              (('Como as decisões seriam divididas', 'How decisions would be shared'), 'organisation')])
+    page_why += on_this_page([(('Os números', 'The figures'), 'figures'), (('Favelas', 'Favelas'), 'context'),
+                              (('Por que o aluguel sobe', 'Why rents rise'), 'causes'), (('O que a IMOBX faria', 'What IMOBX would do'), 'answer')])
     page_why += '<section id="figures">' + text(why['facts_title'], 'h2') + '<ol class="figure-row">'
     for big, fact in zip(why['figures_big'], why['facts']):
         page_why += '<li>' + text(big, 'strong', 'class="figure-big"') + text(fact['text']) + '<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span')
-        page_why += text(fact['source'], 'a', f'href="{esc(fact["url"])}"') + '. ' + text(fact['limit'], 'span') + '</p></li>'
+        page_why += text(fact['source'], 'a', f'href="{esc(fact["url"])}"') + ('. ' + text(fact['limit'], 'span') if fact.get('limit') else '.') + '</p></li>'
     page_why += '</ol></section><section id="context">' + text(why['context_title'], 'h2') + why['context_html']
     page_why += '</section><section id="causes">' + text(why['causes_title'], 'h2') + text(why['causes'])
-    page_why += '<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span') + text(why['causes_source'], 'a', f'href="{esc(why["causes_url"])}"') + '. ' + text(why['causes_limit'], 'span') + '</p></section>'
-    page_why += '<section id="answer">' + text(why['answer_title'], 'h2') + '<ul>' + ''.join(text(a, 'li') for a in why['answer']) + '</ul>'
-    page_why += '<p>' + text(('Como o dinheiro circula: veja como funciona', 'How the money moves: see how it works'), 'a', 'href="rent-to-own.html#payments"') + '</p></section>'
-    page_why += '<section id="rent-to-own-or-rent">' + text(why['fleet_title'], 'h2') + text(why['fleet'])
-    page_why += text(('As três fases de crescimento', 'The three phases of growth'), 'a', 'href="roadmap.html#stages"') + '</section>'  # the phases live on the roadmap (homepage brief, 26 Oct)
-    # Bounded context section (owner, 25 Oct): what each neighbourhood decides, what projects share, who answers for it.
-    page_why += '<section id="organisation">' + text(why['org_title'], 'h2') + text(why['org_answer'], 'p', 'class="answer"')
-    page_why += '<ol class="layer-list org-list">' + ''.join('<li>' + pic + '<h3>' + text(t_, 'span') + '</h3>' + text(b_) + '</li>' for pic, (t_, b_) in zip(ORG_PICS, why['org_cols'])) + '</ol>'
-    page_why += text(why['org_note'], 'p', 'class="aside"')
-    page_why += '<details class="disclosure"><summary>' + text(('Fontes', 'Sources'), 'span') + '</summary><div class="disclosure-body">'
-    page_why += ('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span') + '<a href="https://wiki.p2pfoundation.net/Will_Ruddick_on_Commitment_Pooling">'
-                 + text(('Will Ruddick, sobre compromissos compartilhados (P2P Foundation)', 'Will Ruddick on commitment pooling (P2P Foundation)'), 'span') + '</a>.</p>')
-    page_why += ('<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span') + '<a href="https://ixian.pro/the-300-year-anomaly">'
-                 + text(("Ramona Tudorancea, 'The 300-Year Anomaly' (Ixian, 28 de setembro de 2026)", "Ramona Tudorancea, 'The 300-Year Anomaly' (Ixian, 28 September 2026)"), 'span') + '</a>.</p>')
-    page_why += '</div></details></section>'  # Ostrom's source line has its home on the roadmap (F44)
+    page_why += '<ul id="answer">' + ''.join(text(a, 'li') for a in why['answer']) + '</ul></section>'
+    page_why += '<span id="rent-to-own-or-rent"></span><span id="organisation"></span>'  # sections moved to transparency.html and roadmap.html#governance
     page_why += '<section class="closing-band" id="next">'
-    page_why += text(('Ver como funciona', 'See how it works'), 'a', 'class="button act" href="rent-to-own.html"') + '</section>'
+    page_why += text(('Como funcionaria o aluguel com compra', 'How rent-to-own would work'), 'a', 'class="button act" href="rent-to-own.html"') + '</section>'
     page_why += partner_line('why.html') + '</main>'
     (root / 'why.html').write_text(page('IMOBX | Why housing', page_why, f'<link rel="stylesheet" href="{asset_v("bands.css")}"><script src="assets/site.js" defer></script>',
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | Por que moradia'))
@@ -680,22 +691,23 @@ def build_guide(root, page, tr, esc, language_controls):
                   + chain_source(('Seus direitos pela lei brasileira de proteção de dados (LGPD)', 'Your rights under Brazil’s data protection law (LGPD)'), 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm',
                                  ('Seus direitos sobre seus dados pessoais, inclusive o de pedir que sejam apagados.', 'Your rights over your personal data, including deletion.'))) + '</section>'
     chain += '<section id="request">' + text(ch['request_title'], 'h2') + text(ch['request_answer'], 'p', 'class="answer"')
-    chain += '<ol class="step-strip">' + ''.join(text(st, 'li') for st in ch['request_steps']) + '</ol>'
+    chain += ledger_flow_html(text, ch['request_steps'])  # the drawing replaces the step strip (owner, 28 Oct)
     chain += fold(ch['request_fold'], text(ch['request_fold_body'])
                   + '<p>' + text(ch['request_more'], 'a', 'href="roadmap.html#governance"') + '</p>'
                   + '<p>' + text(ch['whitepaper_link'], 'a', f'href="{esc(guide["sources"]["digital"]["url"])}"') + '</p>') + '</section>'
     chain += '<section id="records">' + text(ch['records_title'], 'h2')
     chain += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in ch['records_head']) + '</tr></thead><tbody>'
     chain += ''.join('<tr>' + text(r[0], 'th', 'scope="row"') + ''.join(text(c, 'td') for c in r[1:]) + '</tr>' for r in ch['records']) + '</tbody></table></div></section>'
-    chain += '<section id="open">' + text(ch['open_title'], 'h2')
-    chain += text(ch['open_runs_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_runs']) + '</ol>'
-    chain += '<div class="window">' + text(ch['same_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['same']) + '</ul></div>'
-    chain += '<span id="token"></span>' + fold(ch['token_fold'], text(ch['token_intro']) + text(ch['token_purpose']) + text(ch['token_body'])
+    # the token as its own section (owner, 28 Oct), before what is not decided
+    chain += ('<section id="token">' + text(ch['token_fold'], 'h2') + text(ch['token_intro']) + text(ch['token_purpose']) + text(ch['token_body'])
                   + text(ch['open_token_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_token']) + '</ol>'
                   + text(ch['open_note'])
                   + chain_source(('Como o regulador do mercado de capitais avalia tokens (CVM)', 'How Brazil’s market regulator looks at tokens (CVM)'), guide['sources']['cvm']['url'],
                                  ('Diz que o regulador brasileiro olha o que um investimento realmente dá, não o nome.', 'Says Brazil’s regulator looks at what an investment actually gives, not its name.'))
-                  + text(ch['never_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['never']) + '</ul>')
+                  + text(ch['never_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['never']) + '</ul>' + '</section>')
+    chain += '<section id="open">' + text(ch['open_title'], 'h2')
+    chain += text(ch['open_runs_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_runs']) + '</ol>'
+    chain += '<div class="window">' + text(ch['same_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['same']) + '</ul></div>'
     chain += '<span id="limits"></span>' + fold(ch['limits_title'], '<ul>' + ''.join(text(o, 'li') for o in ch['limits']) + '</ul>'
                   + chain_source(('O anúncio da Circle de que a Arc entrou em funcionamento (16 de setembro de 2026)', 'Circle’s announcement that Arc went live (16 September 2026)'),
                                  'https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet',
@@ -707,7 +719,7 @@ def build_guide(root, page, tr, esc, language_controls):
                                  ('Diz que a Circle pode bloquear USDC.', 'Says Circle can freeze USDC.'))) + '</section>'
     chain += '<section class="closing-band" id="help">' + text(ch['closing']) + text(ch['button'], 'a', 'class="button act" href="contact.html"') + '</section>'
     chain += partner_line('blockchain.html') + '</main>'
-    (root / 'blockchain.html').write_text(page('IMOBX | Distributed ledger', chain, f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">',
+    (root / 'blockchain.html').write_text(page('IMOBX | Distributed ledger', chain, f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">' + MF_SCRIPT,
         version=guide['version'], lang='pt-BR', title_pt='IMOBX | Registro distribuído'))
 
     stub_targets = {item['id']: ('rent-to-own.html' if item['id'] in HOUSEHOLD_FAQ else 'transparency.html')

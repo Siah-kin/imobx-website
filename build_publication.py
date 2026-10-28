@@ -9,6 +9,7 @@ from urllib.parse import urljoin
 from model_guide import build_guide, redirect_stub, new_faq_location, partner_line_html
 from archive_gateway import build_gateway, pages_from_pdf
 from contact_page import build_contact
+from seo import add_seo
 from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE, DATE_PT, DATE_EN, LABEL_EN, LABEL_PT
 from copy_review import require_review
 
@@ -69,25 +70,23 @@ def status_bar_text():
 # Each item has at most four section links, matched to a page heading by its exact English text.
 MENU = [
     ('rent-to-own.html', 'Aluguel com compra', 'Rent-to-own', [
-        ('rent-to-own.html', 'money', 'Pagamentos mensais', 'Monthly payments', 'How does the money move?'),
+        ('rent-to-own.html', 'money', 'Pagamentos mensais', 'Monthly payments', 'What does your monthly payment pay for?'),
         ('rent-to-own.html', 'repairs', 'Reparos', 'Repairs', 'Who handles a repair?'),
         ('rent-to-own.html', 'decisions', 'Decisões dos moradores', "Residents' decisions", 'What do residents decide?'),
-        ('rent-to-own.html', 'leaving', 'Saída ou atraso no pagamento', 'Leaving or missed payments',
-         'What if a household cannot pay or wants to leave?'),
+        ('rent-to-own.html', 'leaving', 'Saída ou atraso no pagamento', 'Leaving or missed payments', 'What if you can’t pay for a while, or want to leave?'),
     ]),
     ('transparency.html', 'Custos e financiamento', 'Costs and funding', [
-        ('transparency.html', 'first-homes', 'Primeiras casas', 'First homes', 'What would the first homes cost?'),
-        ('transparency.html', 'money-sources', 'Origem do dinheiro', 'Sources of money',
-         'Where does money come from, and in what order is it used?'),
-        ('transparency.html', 'payment-route', 'Caminho do pagamento', 'Payment route', 'How does a payment travel?'),
-        ('transparency.html', 'reports', 'Relatórios', 'Reports', 'What will be reported?'),
+        ('transparency.html', 'first-homes', 'Custo da obra', 'Building costs', 'What does it cost to build a home?'),
+        ('transparency.html', 'money-sources', 'Origem do dinheiro', 'Sources of money', 'Funding and spending: where the money comes from, and what it pays first'),
+        ('transparency.html', 'payment-route', 'Conferência dos pagamentos', 'Payment checks', 'Who checks each payment?'),
+        ('transparency.html', 'reports', 'Relatórios publicados', 'Published reports', 'What will we publish?'),
     ]),
     ('properties.html', 'Desenvolvimento do projeto', 'Project development', [
         # Owner, 28 Oct (decision 23): partners find the current stage and the people first.
         ('index.html', 'onde-estamos', 'Onde estamos agora', 'Where we are now', 'Where we are now'),
         ('index.html', 'quem-prepara', 'Quem está preparando', 'Who is preparing this', 'Who is preparing this'),
-        ('roadmap.html', 'stages', 'Etapas do projeto', 'Project stages', 'What are the stages?'),
-        ('properties.html', 'lofts', 'Lofts e terreno', 'Lofts and site', 'Two lofts'),
+        ('roadmap.html', 'stages', 'Etapas do projeto', 'Project stages', 'What happens now, and what comes next?'),
+        ('properties.html', 'lofts', 'Os dois lofts', 'The two lofts', 'The two lofts: our first experiment'),
     ]),
     ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
         # the rebuilt ledger page (28 Oct) carries its section ids, so these reuse them
@@ -99,8 +98,8 @@ MENU = [
     ]),
     # Documents opens a short list too (owner, 28 Oct: the sources page was hard to find).
     ('resources.html', 'Documentos', 'Documents', [
-        ('reference.html', 'sources', 'Fontes de cada afirmação', 'Sources for each claim', 'Sources support specific claims'),
-        ('reference.html', 'people', 'Pessoas e funções', 'People and roles', 'Who is contributing and which roles remain unfilled?'),
+        ('reference.html', 'sources', 'Fontes de cada afirmação', 'Sources for each claim', 'Where do the facts come from?'),
+        ('reference.html', 'people', 'Pessoas e funções', 'People and roles', 'Who does what, and which roles are still open?'),
         ('reference.html', '', 'Referência do projeto', 'Project reference', ''),
     ]),
 ]
@@ -194,27 +193,37 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
     return re.sub(r'href="(faq\.html[^"]*)"', lambda m: 'href="' + new_faq_location(m.group(1)) + '"', document)
 
 
+# The documents shelf (resources.html). Sweep of 28 Oct 2026 (review A, owner's go-ahead): plain names, no version
+# numbers, no editable-text links. 'shelf_*' keys change the shelf only; the gateway pages still use 'pt', 'en' and
+# 'description_*'. A 'shelf_description_*' of None leaves the shelf card without a description.
 RESOURCE_CATALOG = [
-    {'id': 'media-kit', 'pt': 'Media kit IMOBX', 'en': 'IMOBX media kit', 'version': '0.2',
-     'description_pt': 'Logos para fundos claros e escuros, cores e guia de uso da marca.',
-     'description_en': 'Logos for light and dark backgrounds, colours and brand usage guide.',
-     'meta_pt': 'Guia em inglês · descrições PT/EN', 'meta_en': 'English guide · PT/EN descriptions',
+    {'id': 'media-kit', 'pt': 'Media kit IMOBX', 'en': 'IMOBX media kit', 'version': '0.2', 'shelf_title': False,
+     'description_pt': 'Logos para fundos claros e escuros, as cores e como usá-los.',
+     'description_en': 'Logos for light and dark backgrounds, the colours, and how to use them.',
+     'meta_pt': 'Guia em inglês', 'meta_en': 'Guide in English',
      'links': [('media-kit.html','Ver o kit','View kit'), ('media-kit.zip','Baixar kit (ZIP)','Download kit (ZIP)')]},
     {'id': 'whitepaper', 'pt': 'Whitepaper', 'en': 'Whitepaper', 'version': VERSION,
+     'shelf_pt': 'A proposta completa (whitepaper)', 'shelf_en': 'The full proposal (whitepaper)',
      'description_pt': 'Modelo de moradia, custos, contratos, fluxo de caixa e decisões em aberto.',
      'description_en': 'Housing model, costs, agreements, cash flow and open decisions.',
-     'meta_pt': 'Inglês · rascunho de referência', 'meta_en': 'English · reference draft',
+     'meta_pt': f'Inglês · rascunho · {DATE_PT}', 'meta_en': f'English · draft · {DATE_EN}',
      'archive': True, 'links': [('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
     {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': VERSION,
+     'shelf_pt': 'Apresentação para parceiros', 'shelf_en': 'Presentation for partners',
+     'shelf_description_pt': None, 'shelf_description_en': None,
      'description_pt': 'Apresentação para parceiros, com notas para quem apresenta.',
      'description_en': 'Partner presentation with presenter notes.',
-     'meta_pt': '12 slides · inglês · rascunho', 'meta_en': '12 slides · English · draft',
+     'meta_pt': f'12 slides com notas para quem apresenta · inglês · rascunho · {DATE_PT}',
+     'meta_en': f'12 slides with speaker notes · English · draft · {DATE_EN}',
      'archive': True, 'links': [('pitchdeck.pdf','PDF','PDF'),
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes')]},
     {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': VERSION,
+     'shelf_pt': 'Guia para construir as primeiras casas', 'shelf_en': 'Guide to building the first homes',
+     'shelf_description_pt': 'Plantas das casas, como os moradores participam e as etapas de obra que propomos.',
+     'shelf_description_en': 'House plans, how residents take part, and the building stages we propose.',
      'description_pt': 'Planos de moradia, participação dos moradores e etapas de desenvolvimento propostas.',
      'description_en': 'Housing plans, resident participation and proposed development stages.',
-     'meta_pt': 'Inglês · processo proposto', 'meta_en': 'English · proposed process',
+     'meta_pt': f'Inglês · rascunho · {DATE_PT}', 'meta_en': f'English · draft · {DATE_EN}',
      'archive': True, 'links': [('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
     {'id': 'transparency', 'pt': 'Financiamento e gastos', 'en': 'Funding and spending', 'version': '0.1',
      'description_pt': 'Fontes de financiamento, despesas previstas e como os participantes poderiam conferir as contas.',
@@ -232,15 +241,14 @@ RESOURCE_CATALOG.insert(0, {
     'links': [('rent-to-own.html', 'Ler a explicação', 'Read the explanation')]
 })
 RESOURCE_CATALOG.append({
-    'id': 'reference', 'pt': 'Referência atual do projeto', 'en': 'Current project reference', 'version': VERSION,
-    'description_pt': 'Situação, responsabilidades, fontes e mapa dos capítulos do documento de Rafael.',
-    'description_en': 'Status, responsibilities, sources and a chapter map for Rafael’s manuscript.',
-    'meta_pt': 'Português e inglês', 'meta_en': 'Portuguese and English',
-    'links': [('reference.html', 'Ler a referência', 'Read the reference'),
+    'id': 'reference', 'pt': 'Quem está por trás da IMOBX e de onde vêm os números',
+    'en': 'Who is behind IMOBX, and where our figures come from', 'version': VERSION,
+    'description_pt': 'Quem faz o quê, de onde vem cada número e em que pé está o projeto.',
+    'description_en': 'Who does what, where each figure comes from, and where the project stands.',
+    'meta_pt': f'Português e inglês · {DATE_PT}', 'meta_en': f'Portuguese and English · {DATE_EN}',
+    'links': [('reference.html', 'Ler no site', 'Read on this site'),
               ('project-reference-pt.pdf', 'PDF em português', 'Portuguese PDF'),
-              ('project-reference-en.pdf', 'PDF em inglês', 'English PDF'),
-              ('project-reference-pt.md', 'Texto editável PT', 'Editable text PT'),
-              ('project-reference-en.md', 'Texto editável EN', 'Editable text EN')]
+              ('project-reference-en.pdf', 'PDF em inglês', 'English PDF')]
 })
 
 
@@ -248,73 +256,50 @@ def translated(pt, en, tag='span', attributes=''):
     return f'<{tag} data-pt="{esc(pt)}" data-en="{esc(en)}" {attributes}>{esc(pt)}</{tag}>'
 
 
-def resource_section(standalone=False):
+def resource_section(standalone=True):
+    """The Documents page (resources.html). Its one caller passes standalone=True."""
     catalog = {item['id']: item for item in RESOURCE_CATALOG}
     document_ids = ('whitepaper', 'pitchdeck', 'devsheet')
 
-    def card(item, level='h3'):
+    def card(item, level='h3', labelled_by=None):
+        name_pt, name_en = item.get('shelf_pt', item['pt']), item.get('shelf_en', item['en'])
         actions = []
         for target, pt, en in item['links']:
+            if target.endswith('.md'):
+                continue  # editable text: the ZIP below has it
             download = ' download' if '#' not in target and not target.endswith('.html') else ''
-            actions.append(translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["pt"] + ": " + pt)}" data-aria-pt="{esc(item["pt"] + ": " + pt)}" data-aria-en="{esc(item["en"] + ": " + en)}"{download}'))
-        return f'''<article class="resource-card" id="resource-{esc(item['id'])}" aria-labelledby="title-{esc(item['id'])}">
-{translated(item['pt'], item['en'], level, f'id="title-{item["id"]}"')}
-{translated(item['description_pt'], item['description_en'], 'p')}
-<p class="resource-meta">{translated(version_label(item, 'pt') + ' · ' + item['meta_pt'], version_label(item, 'en') + ' · ' + item['meta_en'])}</p>
+            actions.append(translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(name_pt + ": " + pt)}" data-aria-pt="{esc(name_pt + ": " + pt)}" data-aria-en="{esc(name_en + ": " + en)}"{download}'))
+        title = translated(name_pt, name_en, level, f'id="title-{item["id"]}"') if item.get('shelf_title', True) else f'<span id="title-{esc(item["id"])}"></span>'
+        description = (item.get('shelf_description_pt', item['description_pt']), item.get('shelf_description_en', item['description_en']))
+        return f'''<article class="resource-card" id="resource-{esc(item['id'])}" aria-labelledby="{esc(labelled_by or 'title-' + item['id'])}">
+{title}
+{translated(*description, 'p') if description[0] else ''}
+<p class="resource-meta">{translated(item['meta_pt'], item['meta_en'])}</p>
 <div class="resource-actions">{''.join(actions)}</div></article>'''
 
-    intro_pt = 'O whitepaper apresenta a proposta de moradia e seu financiamento. O pitch deck resume o projeto para parceiros. O guia do piloto detalha o trabalho e as responsabilidades. Os três documentos são rascunhos em inglês.'
-    intro_en = 'The whitepaper explains the housing proposal and its funding. The pitch deck presents the project to partners. The pilot and building guide covers the work and responsibilities. All three documents are English drafts.'
     body = '<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>'
-    body += translated('Documentos do projeto', 'Project documents', 'h1' if standalone else 'h2')
-    if standalone:
-        # attention pass (owner-approved package, 25 Oct): the first sentence as the card, one orange action
-        first_pt, rest_pt = intro_pt.split('. ', 1); first_en, rest_en = intro_en.split('. ', 1)
-        body += '<div class="key-card">' + translated(first_pt + '.', first_en + '.', 'p') + '</div>' + translated(rest_pt, rest_en, 'p')
-        body += '<p class="page-action">' + translated('Ir para o download do whitepaper', 'Go to the whitepaper download', 'a', 'class="button act" href="whitepaper.html"') + '</p>'
-    else:
-        body += translated(intro_pt, intro_en, 'p')
-    if not standalone:
-        rows = []
-        for key in document_ids:
-            item = catalog[key]
-            target, pt, en = item['links'][0]
-            rows.append(f'''<article class="resource-row" id="resource-{esc(key)}">
-<div>{translated(item['pt'], item['en'], 'h3')}{translated(item['description_pt'], item['description_en'], 'p')}</div>
-{translated(pt, en, 'a', f'href="{esc(target)}" aria-label="{esc(item["pt"])}" data-aria-pt="{esc(item["pt"])}" data-aria-en="{esc(item["en"])}"')}</article>''')
-        body += '<div class="resource-rows">' + ''.join(rows) + '</div><div class="resource-more">'
-        body += translated('Todos os documentos e downloads', 'All documents and downloads', 'a', 'href="resources.html"')
-        body += translated('Aluguel e compra da casa', 'Renting and buying the home', 'a', 'id="resource-housing" href="rent-to-own.html"')
-        body += translated('Financiamento e gastos', 'Funding and spending', 'a', 'href="transparency.html"')
-        body += translated('Referência atual do projeto', 'Current project reference', 'a', 'href="reference.html"')
-        body += translated('Roteiro e decisões compartilhadas', 'Roadmap and shared decisions', 'a', 'href="roadmap.html"')
-        body += translated('Perguntas das famílias', 'Questions families ask', 'a', 'href="rent-to-own.html#questions"')
-        return body + '</div>'
-
+    body += translated('Documentos do projeto', 'Project documents', 'h1')
+    body += '<div class="key-card">' + translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p') + '</div>'
     body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h2') for key in ('reference',) + document_ids) + '</div>'
+    # moved from the project reference (review C #49), as one status line beside the documents
+    body += translated('O documento do projeto de Rafael (cerca de 30 páginas) está em preparação.',
+                       'Rafael’s project paper (about 30 pages) is in preparation.', 'p')
     body += '<section id="media-resources" aria-labelledby="media-resources-title">'
-    body += translated('Materiais para divulgação', 'Media resources', 'h2', 'id="media-resources-title"')
-    body += '<div class="resource-grid">' + card(catalog['media-kit']) + '</div></section>'
-    body += '<section id="website-pages" aria-labelledby="website-pages-title">'
-    body += translated('No site', 'On the website', 'h2', 'id="website-pages-title"')
-    body += '<div class="resource-more">'
-    for key in ('housing', 'transparency'):
-        item = catalog[key]
-        target = item['links'][0][0]
-        body += f'<span id="title-{key}">' + translated(item['pt'], item['en'], 'a', f'id="resource-{key}" href="{esc(target)}"') + '</span>'
-    body += translated('Roteiro e decisões compartilhadas', 'Roadmap and shared decisions', 'a', 'href="roadmap.html"')
-    body += translated('Perguntas das famílias', 'Questions families ask', 'a', 'href="rent-to-own.html#questions"')
-    body += translated('Participar', 'Take part', 'a', 'href="contact.html"') + '</div>'
-    body += '<nav class="archive-nav" aria-label="Contexto do projeto" data-aria-pt="Contexto do projeto" data-aria-en="Project background">'
-    body += translated('Por que a IMOBX existe', 'Why IMOBX exists', 'a', 'href="index.html#missao"')
-    body += translated('A visão de Rafael para a vila', 'Rafael’s village vision', 'a', 'href="properties.html#visao-rafael"')
-    body += translated('Pessoas e responsabilidades', 'People and responsibilities', 'a', 'href="reference.html#people"')
-    body += translated('Fontes da proposta', 'Sources behind the proposal', 'a', 'href="reference.html#sources"') + '</nav></section>'
-    body += '<div class="resource-more">'
-    body += translated('Fontes e mapa de capítulos do documento do projeto', 'Sources and chapter map for the project paper', 'a', 'href="reference.html#chapters"')
-    body += translated('Para desenvolvedores: o texto do site como dados (JSON)', 'For developers: the site’s text as data (JSON)', 'a', 'href="model-guide.json" download')
-    body += translated('Baixar documentos e logos (ZIP)', 'Download documents and logos (ZIP)', 'a', 'href="imobx-documents.zip" download')
-    return body + '</div>'
+    body += translated('Logos e marca', 'Logos and brand', 'h2', 'id="media-resources-title"')
+    body += '<div class="resource-grid">' + card(catalog['media-kit'], labelled_by='media-resources-title') + '</div></section>'
+    # citing the reference, and the file versions (moved from the project reference, review C #131, #132, #142)
+    body += '<section id="cite" aria-labelledby="cite-title">'
+    body += translated('Como citar esta referência', 'How to cite this reference', 'h2', 'id="cite-title"')
+    date_numeric = '/'.join(reversed(REVIEW_DATE.split('-')))
+    body += translated(f'Para citar: IMOBX, Referência do projeto, v{VERSION}, {date_numeric}, seguido do título da seção e do link.',
+                       f'To cite: IMOBX, Project reference, v{VERSION}, {DATE_EN}, then the section title and link.', 'p')
+    body += '<p>' + translated('Versões e identificação dos arquivos', 'File versions and identifiers', 'a', 'href="publication-manifest.json"') + '</p></section>'
+    # the "On the website" list copied the menu (review A #32–42): only the page's one action stays; old ids kept
+    body += '<section id="website-pages"><span id="website-pages-title"></span>'
+    body += '<span id="title-housing"></span><span id="resource-housing"></span><span id="title-transparency"></span><span id="resource-transparency"></span>'
+    body += '<div class="resource-more">' + translated('Participar', 'Take part', 'a', 'href="contact.html"')
+    body += translated('Baixar tudo (ZIP)', 'Download everything (ZIP)', 'a', 'href="imobx-documents.zip" download')
+    return body + '</div></section>'
 
 
 # The homepage is the 25 Oct version (release 2199cf5) restored as the base (owner, 27 Oct), reordered as
@@ -394,6 +379,7 @@ for doc, doc_title in GATEWAYS:
 if PREVIEW_ONLY:
     from add_dutch import add_dutch  # the preview gets its Dutch too; a full build adds it again after the exports
     add_menu_anchors(ROOT)
+    add_seo(ROOT)
     add_dutch(ROOT)
     print('Rendered local HTML for editorial and browser review. Existing exports are unchanged.')
     raise SystemExit(0)
@@ -565,6 +551,7 @@ for doc, doc_title in GATEWAYS:
 # Dutch beside Portuguese and English (owner, 26 Oct 2026); the gate fails while any string lacks Dutch.
 from add_dutch import add_dutch
 add_menu_anchors(ROOT)
+add_seo(ROOT)
 add_dutch(ROOT)
 write_manifest(ROOT)
 

@@ -24,33 +24,26 @@ def build_reference(root, page, tr, esc):
     def text(pair, tag='p', attrs=''):
         return tr(*pair, tag, attrs)
 
+    def spans(ids):
+        return ''.join(f'<span id="{esc(i)}"></span>' for i in ids)
+
+    # Sweep of 28 Oct 2026 (review C, owner's go-ahead): who does what, and where the facts come from.
+    # The chapter map, the citation rules and the change log left this page; their ids stay as empty spans.
+    retired = data['retired_anchors']['ids']
     body = '<main class="paper guide-paper reference-page" id="main">'
     body += text(data['title'], 'h1')
-    body += '<div class="key-card">' + text(('Ainda faltam pessoas para algumas funções, entre elas assessoria jurídica, contabilidade e a responsabilidade pelo orçamento.',
-                                             'Some roles are still open, including legal adviser, accountant and budget lead.')) + '</div>'
-    body += text(data['intro']) + '<p class="page-action">' + text(('Oferecer ajuda', 'Offer your help'), 'a', 'class="button act" href="contact.html"') + '</p>'
-    body += text((LABEL_PT, LABEL_EN), 'p', 'class="resource-meta"')
+    body += '<div class="key-card">' + text(('Ainda precisamos de assessoria jurídica, de um contador e de alguém para cuidar do orçamento.',
+                                             'We still need a legal adviser, an accountant and someone to lead the budget.')) + '</div>'
+    body += '<p class="page-action">' + text(('Oferecer ajuda', 'Offer your help'), 'a', 'class="button act" href="contact.html"') + '</p>'
     body += '<nav class="guide-jump" aria-label="Sections">'
-    body += text(('Onde está cada assunto', 'Where each subject is'), 'a', 'href="#subjects"')
     for section in [x for x in data['sections'] if x.get('keep')]:
         body += text(section['nav'], 'a', f'href="#{esc(section["id"])}"')
-    for label, target in [(('Mapa de capítulos', 'Chapter map'), 'chapters'),
-                          (('Fontes', 'Sources'), 'sources'), (('Versões e downloads', 'Versions and downloads'), 'versions')]:
+    for label, target in [(('Fontes', 'Sources'), 'sources'), (('Versões e downloads', 'Versions and downloads'), 'versions')]:
         body += text(label, 'a', f'href="#{target}"')
-    body += '</nav>'
+    body += '</nav>' + spans(i for i in retired if not i.startswith('source-'))
     exports = [[], []]
     for i in range(2):
-        exports[i] = ['# ' + data['title'][i], f'**{(LABEL_PT, LABEL_EN)[i]}**', data['intro'][i]]
-    elsewhere = {'status': 'roadmap.html#open-terms', 'costs': 'transparency.html#budgets', 'work': 'roadmap.html#governance',
-                 'token': 'transparency.html#token-options', 'governance': 'rent-to-own.html#decisions',
-                 'technology': 'transparency.html#digital-records', 'risks': 'roadmap.html#stages'}
-    body += '<section id="subjects">' + text(('Onde está cada assunto', 'Where each subject is'), 'h2') + '<ul>'
-    for section in data['sections']:
-        if not section.get('keep'):
-            body += f'<li id="{esc(section["id"])}">' + text(section['nav'], 'a', f'href="{elsewhere[section["id"]]}"') + '</li>'
-            for i in range(2):
-                exports[i].append(f'- [{section["nav"][i]}]({elsewhere[section["id"]]})')
-    body += '</ul></section>'
+        exports[i] = ['# ' + data['title'][i], f'**{(LABEL_PT, LABEL_EN)[i]}**']
     for section in [x for x in data['sections'] if x.get('keep')]:
         body += f'<section id="{esc(section["id"])}">' + text(section['title'], 'h2')
         for i in range(2):
@@ -80,44 +73,27 @@ def build_reference(root, page, tr, esc):
             for i in range(2):
                 exports[i].append(f'[{item["label"][i]}]({item["url"]})')
         body += '</section>'
-    body += '<section id="chapters">' + text(data['chapters_title'], 'h2')
-    body += text(data['chapters_intro']) + '<ol class="reference-chapters">'
-    for chapter in data['chapters']:
-        body += f'<li id="chapter-{chapter["id"]}">' + text(chapter['title'], 'h3')
-        body += text(chapter['scope']) + '<p>'
-        for link in chapter['links']:
-            body += text(link['label'], 'a', f'href="{esc(link["url"])}"') + ' · '
-        body += '</p></li>'
-    body += '</ol></section><section id="sources">' + text(data['sources_title'], 'h2')
+    body += '<section id="sources">' + text(data['sources_title'], 'h2')
     body += text(data['sources_intro']) + '<ol>'
     for source in data['sources']:
         body += f'<li id="source-{esc(source["id"])}">' + text(source['label'], 'a', f'href="{esc(source["url"])}"')
         body += text(source['scope']) + '</li>'
-    body += '</ol></section><section id="versions">' + text(data['versions_title'], 'h2')
-    body += ''.join(text(p) for p in data['versions'])
-    body += text(data['changes_title'], 'h3') + '<ol class="transparency-updates">'
-    for change in data['changes'][:2]:   # the page shows the two latest updates; the downloadable reference keeps all
-        body += '<li><time datetime="' + esc(change['date']) + '">' + esc(change['date']) + '</time>'
-        body += text(change['title'], 'h4') + text(change['body']) + '</li>'
-    body += '</ol>' + text(('Atualizações anteriores estão na referência para baixar.', 'Earlier updates are in the downloadable reference.')) + text(data['maintenance'])
-    body += '<p><a href="publication-manifest.json">' + text(('Versões e identificação dos arquivos', 'File versions and identifiers'), 'span') + '</a></p>'
+    body += '</ol>' + spans(i for i in retired if i.startswith('source-'))
+    # for due diligence, beside the sources (moved here from Documents, review A resources #43)
+    body += '<p>' + text(('Para desenvolvedores: o texto do site como dados (JSON)', 'For developers: the site’s text as data (JSON)'),
+                         'a', 'href="model-guide.json" download') + '</p>'
+    body += '</section><section id="versions">' + text(data['versions_title'], 'h2')
+    body += text((LABEL_PT, LABEL_EN), 'p', 'class="resource-meta"')
     body += '<p><a href="project-reference-pt.pdf" download>Português · PDF</a> · '
     body += '<a href="project-reference-pt.md" download>Português · Markdown</a> · '
     body += '<a href="project-reference-en.pdf" download>English · PDF</a> · '
-    body += '<a href="project-reference-en.md" download>English · Markdown</a></p></section></main>'  # the JSON link is on Documents, for developers
+    body += '<a href="project-reference-en.md" download>English · Markdown</a></p></section></main>'  # citing and file versions are on Documents
     (root / 'reference.html').write_text(page('IMOBX | Project reference', body, version=VERSION,
                                             lang='pt-BR', title_pt='IMOBX | Referência do projeto'))
     for i, lang in enumerate(['pt', 'en']):
-        exports[i] += ['## ' + data['chapters_title'][i], data['chapters_intro'][i]]
-        for chapter in data['chapters']:
-            exports[i] += ['### ' + chapter['title'][i], chapter['scope'][i]]
-            exports[i] += [f'[{link["label"][i]}]({link["url"]})' for link in chapter['links']]
         exports[i] += ['## ' + data['sources_title'][i], data['sources_intro'][i]]
         for source in data['sources']:
             exports[i].append(f'[{source["label"][i]}]({source["url"]})\n\n{source["scope"][i]}')
-        exports[i] += ['## ' + data['versions_title'][i], *[p[i] for p in data['versions']]]
-        exports[i] += ['### ' + data['changes_title'][i], *[f"**{c['date']}** {c['title'][i]}. {c['body'][i]}" for c in data['changes']],
-                       data['maintenance'][i]]
         # Editable exports retain working links when shared away from the site.
         source = '\n\n'.join(exports[i]) + '\n'
         source = re.sub(r'\]\(([^)]+)\)', lambda m: '](' + urljoin('https://siah-kin.github.io/imobx-website/', m[1]) + ')', source)
