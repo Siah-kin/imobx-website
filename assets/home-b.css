@@ -124,3 +124,18 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
   .vision-path li::before{display:none}
   .home-section .section-lead{font-size:17px;margin-bottom:28px}
 }
+
+/* 28 Oct (owner decisions 18 and 19): the short note before each group button, what happens after joining, who is preparing this */
+.home-hero .group-note{margin:16px 0 0;font-size:15px;color:#526571}
+.circle-band .group-note{margin:8px 0 0;font-size:15px;color:#526571}
+.who-prepares{margin:32px 0 0;padding-top:20px;border-top:1px solid #D9E3E8;max-width:40em}
+.who-prepares h3{font-size:20px;margin:0 0 8px}
+.who-prepares ul{margin:0 0 8px;padding-left:20px}
+.who-prepares li{margin:4px 0}
+.after-join{margin:24px 0 0;max-width:40em}
+
+/* Owner, 28 Oct (decision 21): where we are now, low on the page */
+#onde-estamos .stage-now{max-width:40em;font-size:18px;line-height:1.55}
+#onde-estamos h3{font-size:20px;margin:24px 0 8px}
+#onde-estamos .stage-next{max-width:40em;padding-left:22px}
+#onde-estamos .stage-next li{margin:6px 0}

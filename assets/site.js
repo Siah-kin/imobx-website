@@ -181,6 +181,42 @@ initImageViewer();
     button.textContent = open ? ({ pt: 'Fechar', en: 'Close', nl: 'Sluiten' }[lang] || 'Close') : 'Menu';
   });
   nav.querySelectorAll('.site-links a').forEach(function (link) {
-    link.addEventListener('click', function () { nav.classList.remove('menu-open'); button.setAttribute('aria-expanded', 'false'); });
+    link.addEventListener('click', function () {
+      nav.classList.remove('menu-open'); button.setAttribute('aria-expanded', 'false');
+      button.dataset.pt = 'Menu'; button.dataset.en = 'Menu'; button.dataset.nl = 'Menu'; button.textContent = 'Menu';
+    });
+  });
+})();
+
+// Section dropdowns in the main menu (27 Oct 2026): one open at a time; Escape or a click outside closes it.
+(function () {
+  var toggles = Array.prototype.slice.call(document.querySelectorAll('.site-links .sub-toggle'));
+  if (!toggles.length) return;
+  function close(except) {
+    toggles.forEach(function (t) {
+      if (t === except) return;
+      t.setAttribute('aria-expanded', 'false');
+      var list = document.getElementById(t.getAttribute('aria-controls'));
+      if (list) list.hidden = true;
+    });
+  }
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      var open = toggle.getAttribute('aria-expanded') !== 'true';
+      close(toggle);
+      toggle.setAttribute('aria-expanded', String(open));
+      var list = document.getElementById(toggle.getAttribute('aria-controls'));
+      if (list) list.hidden = !open;
+    });
+  });
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('.site-links .nav-item') || event.target.closest('.site-links .sub a')) close();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    var openToggle = toggles.filter(function (t) { return t.getAttribute('aria-expanded') === 'true'; })[0];
+    close();
+    if (openToggle && openToggle.offsetParent !== null) openToggle.focus();
   });
 })();

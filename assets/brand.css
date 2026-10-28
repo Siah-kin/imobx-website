@@ -378,3 +378,50 @@ mark.hint{background:none;color:inherit;padding:0;box-shadow:none;font-weight:70
    the drawings, and the Telegram button (#B85500 behind white text, 4.8:1). */
 a.button[href^="https://t.me/"]{background:#B85500;border-color:#B85500;color:#fff}
 a.button[href^="https://t.me/"]:hover{background:#A84B00;border-color:#A84B00;color:#fff}
+
+/* Main menu (owner, 27 Oct 2026, decisions 9-17): five nouns; each label is a button that opens a short list (the page,
+   then up to four sections); the only orange is the "Take part" text link. Targets are at least 44px (gate rule). */
+.site-links .nav-item{position:relative;display:inline-flex;align-items:center}
+.site-links .nav-item>a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;line-height:1.4}
+.site-links .nav-item>a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;font-weight:700}
+.site-links .sub-toggle{display:inline-flex;align-items:center;gap:4px;min-width:44px;min-height:44px;padding:0 2px;border:0;background:none;color:inherit;font:inherit;line-height:1.4;white-space:nowrap;cursor:pointer}
+.site-links .sub-toggle:focus-visible{outline:3px solid #276578;outline-offset:2px}
+.site-links .sub-toggle.is-current>span:first-child{text-decoration:underline;text-underline-offset:6px;font-weight:700}
+.site-links .sub-arrow{display:inline-block;font-size:.85em;transition:transform .15s}
+.site-links .sub-toggle[aria-expanded="true"] .sub-arrow{transform:rotate(180deg)}
+.site-links .sub{position:absolute;top:100%;left:0;z-index:30;min-width:230px;margin:0;padding:6px 0;list-style:none;background:#fff;border:1px solid #D9E3E8;box-shadow:0 8px 24px rgba(25,61,78,.12)}
+.site-links .sub a{display:block;padding:10px 16px;text-decoration:none;white-space:nowrap;line-height:1.3}
+.site-links .sub a{transition:background-color .15s,color .15s}
+.site-links .sub a:hover,.site-links .sub a:focus-visible{background:#FDF1E4;color:#A84B00}
+/* Owner, 28 Oct: the list drops down smoothly; the item under the pointer is highlighted in orange. */
+@keyframes sub-drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.site-links .sub:not([hidden]){animation:sub-drop .2s ease-out;transform-origin:top}
+@media (prefers-reduced-motion:reduce){.site-links .sub:not([hidden]){animation:none}.site-links .sub a{transition:none}}
+.site-links .sub .sub-overview a{font-weight:700;border-bottom:1px solid #D9E3E8}
+.site-links .nav-item>a.nav-action{color:#A84B00;font-weight:700;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.site-links .nav-item>a.nav-action:hover{color:#7F3A00;text-decoration-thickness:2px}
+/* Fit: Portuguese, the longest menu, is a little tighter so the menu keeps one row from 1201px; below 1200 every
+   language uses the two-row header Dutch already used; Dutch is back on one row from 1201px. */
+@media (min-width:1001px){html[lang="pt-BR"] .site-links{gap:4px 8px;font-size:13.5px}}
+@media (min-width:1001px) and (max-width:1320px){html[lang="pt-BR"] .site-links{gap:4px 6px;font-size:13px}}
+@media (min-width:1001px) and (max-width:1200px){
+  .site-nav{grid-template-columns:1fr auto;gap:4px 20px;padding-block:10px}
+  .site-nav .wordmark{grid-column:1;grid-row:1}
+  .site-nav .lang{grid-column:2;grid-row:1}
+  .site-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:0 18px}
+}
+@media (min-width:1201px) and (max-width:1320px){
+  html[lang="nl"] .site-nav{grid-template-columns:auto minmax(0,1fr) auto;gap:24px;padding-block:8px}
+  html[lang="nl"] .site-nav .wordmark,html[lang="nl"] .site-nav .site-links,html[lang="nl"] .site-nav .lang{grid-row:auto;grid-column:auto}
+  html[lang="nl"] .site-links{justify-content:flex-end;gap:4px 12px}
+}
+/* Phone: the open menu is a list; each label expands its sections in place. */
+@media (max-width:700px){
+  .js-menu .site-nav.menu-open .site-links .nav-item{display:flex;flex-wrap:wrap;width:100%;border-top:1px solid #D9E3E8}
+  .js-menu .site-nav.menu-open .site-links .nav-item>a{flex:1;border-top:0;padding:12px 0}
+  .js-menu .site-nav.menu-open .site-links .sub-toggle{flex:1;justify-content:space-between;padding:12px 0;text-align:left}
+  .js-menu .site-nav.menu-open .site-links .sub{position:static;flex-basis:100%;min-width:0;border:0;box-shadow:none;padding:0 0 8px 16px}
+  .js-menu .site-nav.menu-open .site-links .sub a{border-top:0;padding:10px 0;white-space:normal}
+}
+/* Owner, 28 Oct (decision 21): footer links one per line, no middle dots */
+.site-footer .wrap p+p a{display:block;margin:6px 0}

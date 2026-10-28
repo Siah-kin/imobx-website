@@ -12,8 +12,8 @@ def build_contact(root, page, tr, esc, version):
     body = '<main class="paper contact-page" id="main">'
     if contact['telegram']:
         body += t(('Apresente-se à IMOBX', 'Introduce yourself to IMOBX'), 'h1')
-        body += '<div class="key-card">' + t(('Prepare aqui sua apresentação, copie e envie à equipe pelo Telegram. O site não envia nada sozinho.',
-                   'Prepare your introduction here, copy it and send it to the team on Telegram. The website sends nothing itself.')) + '</div>'
+        body += '<div class="key-card">' + t(('Prepare aqui sua apresentação, copie e publique no grupo da IMOBX no Telegram. O site não envia nada sozinho.',
+                   'Prepare your introduction here, copy it and post it in the IMOBX group on Telegram. The website sends nothing itself.')) + '</div>'
         body += t(('Escolha o assunto mais próximo do que procura; as perguntas mudam conforme sua escolha.', 'Choose the subject closest to what you need; the questions change with your choice.'))
     else:
       body += t(('Prepare sua mensagem para a IMOBX', 'Prepare your message to IMOBX'), 'h1')
@@ -21,7 +21,9 @@ def build_contact(root, page, tr, esc, version):
     if not contact['email'] and not contact['telegram']:
         body += '<aside class="guide-status">' + t(('Os contatos para receber mensagens ainda não estão disponíveis. Nesta página você pode preparar e copiar uma mensagem; o site não a envia.', 'Contact details for receiving messages are not available yet. On this page you can prepare and copy a message; the website does not send it.')) + '</aside>'
     if contact['telegram']:   # straight to Telegram for anyone who already knows what to say (critique 24 Oct)
-        body += '<p>' + t(('Já sabe o que dizer? ', 'Already know what to say? '), 'span') + t(('Abrir o Telegram agora', 'Open Telegram now'), 'a', f'href="{esc(contact["telegram"])}" target="_blank" rel="noopener noreferrer"') + '</p>'
+        # the open-group note before every group link (owner, 28 Oct, decision 19)
+        body += t(('É um grupo aberto: todos nele veem o que você publica. Não inclua telefone, endereço nem documentos.', 'This is an open group: everyone in it sees what you post. Leave out phone numbers, addresses and documents.'), 'p', 'class="fine group-note"')
+        body += '<p>' + t(('Já sabe o que dizer? ', 'Already know what to say? '), 'span') + t(('Entrar no grupo da IMOBX no Telegram', 'Join the IMOBX group on Telegram'), 'a', f'href="{esc(contact["telegram"])}" target="_blank" rel="noopener noreferrer"') + '</p>'
     body += '<noscript>' + t(('Para preparar uma mensagem nesta página, ative JavaScript no navegador.', 'Enable JavaScript in your browser to prepare a message on this page.')) + '</noscript>'
     body += '<form id="enquiry-form" novalidate><fieldset class="contact-route-picker" id="contact-routes" tabindex="-1"><legend>'
     body += t(('Sobre o que gostaria de conversar?', 'What would you like to discuss?'), 'span') + '</legend><div class="contact-routes">'
@@ -34,7 +36,8 @@ def build_contact(root, page, tr, esc, version):
     body += t(('Escolher outro assunto', 'Choose another route'), 'a', 'href="#contact-routes"')
     body += '<div id="route-context" class="contact-context"></div>'
     body += '<div class="contact-field"><label for="contact-name">' + t(('Como podemos chamar você?', 'What should we call you?'), 'span') + '</label><input id="contact-name" name="name" autocomplete="name" maxlength="100" required disabled></div>'
-    body += '<div class="contact-field"><label for="contact-reply">' + t(('E-mail ou telefone, se quiser (aparece só na mensagem que você copia)', 'Email or phone number, if you like (it appears only in the message you copy)'), 'span') + '</label><input id="contact-reply" name="reply" autocomplete="email" maxlength="160" disabled></div>'
+    # The group is open (owner, 28 Oct): no field for an email or phone number, so nothing private is pasted into it.
+    body += '<input id="contact-reply" name="reply" type="hidden" value="" disabled>'
     for route in data['routes']:
         body += f'<fieldset class="route-fields" data-route-fields="{route["id"]}" hidden disabled><legend class="visually-hidden">' + t(route['title'], 'span') + '</legend>'
         for field in route['fields']:
@@ -52,19 +55,18 @@ def build_contact(root, page, tr, esc, version):
     if contact['email']:
         body += t(('Abrir no e-mail', 'Open in email'), 'a', f'id="email-enquiry" class="button" href="mailto:{esc(contact["email"])}"')
     if contact['telegram']:
-        body += t(('Abrir contato no Telegram', 'Open Telegram contact'), 'a', f'class="button act" href="{esc(contact["telegram"])}" target="_blank" rel="noopener noreferrer"')
+        body += t(('É um grupo aberto: todos nele veem o que você publica. Não inclua telefone, endereço nem documentos.', 'This is an open group: everyone in it sees what you post. Leave out phone numbers, addresses and documents.'), 'p', 'class="fine group-note"')
+        body += t(('Entrar no grupo da IMOBX no Telegram', 'Join the IMOBX group on Telegram'), 'a', f'class="button act" href="{esc(contact["telegram"])}" target="_blank" rel="noopener noreferrer"')
     body += t(('Editar respostas', 'Edit answers'), 'button', 'type="button" id="edit-enquiry"') + '</div>'
-    if contact['telegram']:
-        body += t(('No Telegram, a central aparece como The Flock ou Arctide.', 'On Telegram the help desk shows as The Flock or Arctide.'), 'p', 'class="fine"')
     body += '<p id="enquiry-status" role="status" aria-live="polite"></p>'
     if contact['telegram']:
-        body += t(('Preparar ou copiar a mensagem não a envia. Cole a mensagem no Telegram, na central de atendimento da equipe.', 'Preparing or copying the message does not send it. Paste it into Telegram, in the team’s help desk.'), 'p', 'class="fine"')
+        body += t(('Preparar ou copiar a mensagem não a envia. Cole a mensagem no grupo da IMOBX no Telegram.', 'Preparing or copying the message does not send it. Paste it into the IMOBX group on Telegram.'), 'p', 'class="fine"')
         body += '</section><section class="contact-next">' + t(('Depois da sua mensagem', 'After your message'), 'h2')
     else:
         body += t(('Preparar ou copiar a mensagem não a envia. Guarde uma cópia até ter um contato da equipe para recebê-la.', 'Preparing or copying the message does not send it. Keep a copy until you have a team contact to receive it.'), 'p', 'class="fine"')
         body += '</section><section class="contact-next">' + t(('Quando houver um contato', 'When a contact exists'), 'h2')
     if contact['telegram']:
-        body += t(('A equipe responde pelo Telegram. O assunto e a região ajudam a encaminhar a conversa. A equipe pode fazer perguntas ou combinar com você uma avaliação, uma reunião ou a análise da sua proposta. Moradia, contratação e financiamento dependem de acordos próprios.', 'The team replies on Telegram. The subject and location help direct the conversation. The team may ask questions, or agree with you on an assessment, a meeting or a review of your proposal. Housing, appointments and funding depend on their own agreements.'))
+        body += t(('Os fundadores leem o grupo e respondem lá. Podem fazer perguntas ou combinar com você uma conversa, uma reunião ou a análise da sua proposta. Moradia, contratação e financiamento dependem de acordos escritos próprios.', 'The founders read the group and reply there. They may ask questions, or agree with you on a call, a meeting or a review of your proposal. Housing, appointments and funding depend on their own written agreements.'))
     else:
         body += t(('O assunto e a região ajudam a encaminhar a conversa. Quando houver um contato, a equipe poderá esclarecer necessidades e combinar uma avaliação, uma reunião ou a análise de uma proposta. Moradia, contratação e financiamento dependem de acordos próprios.', 'The subject and location help direct the conversation. When a contact exists, the team can clarify needs and agree an assessment, meeting or proposal review. Housing, appointments and funding depend on their own agreements.'))
     body += '<p><a href="roadmap.html#participation">' + t(('Conheça os papéis de cada participante', 'Read about each participant’s role'), 'span') + '</a> · <a href="roadmap.html">' + t(('Situação atual do projeto', 'Current project status'), 'span') + '</a></p></section>'

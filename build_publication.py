@@ -53,34 +53,101 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
 
 
 # The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
-SITE_UPDATED = '2026-10-27'
+SITE_UPDATED = '2026-10-28'
 
 
 def status_bar_text():
     """Visitor-facing status bar: the project status and the date the site last changed, without a version number."""
     year, month, day = (int(part) for part in SITE_UPDATED.split('-'))
-    pt = f'Em preparação · atualizado em {day:02d}/{month:02d}/{year}'
-    en = f'In preparation · updated {day} {MONTHS_EN[month - 1][:3]} {year}'
+    pt = f'Em preparação, atualizado em {day:02d}/{month:02d}/{year}'
+    en = f'In preparation, updated {day} {MONTHS_EN[month - 1][:3]} {year}'
     return pt, en
 
 
+# Main menu (owner, 26-28 Oct 2026, decisions 9-17): nouns name what is there; the one action is "Take part", which leads
+# to the contact page, where the safety note sits before the Telegram group button (owner, 28 Oct).
+# Each item has at most four section links, matched to a page heading by its exact English text.
+MENU = [
+    ('rent-to-own.html', 'Aluguel com compra', 'Rent-to-own', [
+        ('rent-to-own.html', 'money', 'Pagamentos mensais', 'Monthly payments', 'How does the money move?'),
+        ('rent-to-own.html', 'repairs', 'Reparos', 'Repairs', 'Who handles a repair?'),
+        ('rent-to-own.html', 'decisions', 'Decisões dos moradores', "Residents' decisions", 'What do residents decide?'),
+        ('rent-to-own.html', 'leaving', 'Saída ou atraso no pagamento', 'Leaving or missed payments',
+         'What if a household cannot pay or wants to leave?'),
+    ]),
+    ('transparency.html', 'Custos e financiamento', 'Costs and funding', [
+        ('transparency.html', 'first-homes', 'Primeiras casas', 'First homes', 'What would the first homes cost?'),
+        ('transparency.html', 'money-sources', 'Origem do dinheiro', 'Sources of money',
+         'Where does money come from, and in what order is it used?'),
+        ('transparency.html', 'payment-route', 'Caminho do pagamento', 'Payment route', 'How does a payment travel?'),
+        ('transparency.html', 'reports', 'Relatórios', 'Reports', 'What will be reported?'),
+    ]),
+    ('properties.html', 'Desenvolvimento do projeto', 'Project development', [
+        # Owner, 28 Oct (decision 23): partners find the current stage and the people first.
+        ('index.html', 'onde-estamos', 'Onde estamos agora', 'Where we are now', 'Where we are now'),
+        ('index.html', 'quem-prepara', 'Quem está preparando', 'Who is preparing this', 'Who is preparing this'),
+        ('roadmap.html', 'stages', 'Etapas do projeto', 'Project stages', 'What are the stages?'),
+        ('properties.html', 'lofts', 'Lofts e terreno', 'Lofts and site', 'Two lofts'),
+    ]),
+    ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
+        ('blockchain.html', 'privacy', 'Privacidade e acesso', 'Privacy and access',
+         'What would be on the blockchain, and what never would?'),
+        ('blockchain.html', 'requests', 'Pedidos e reclamações', 'Requests and complaints',
+         'How does a request become checked work?'),
+        ('blockchain.html', 'records', 'Tipos de registro', 'Types of records',
+         'Which records would IMOBX keep?'),
+        ('blockchain.html', 'open-decisions', 'Decisões em aberto', 'Open decisions', 'What has not been decided?'),
+    ]),
+    ('resources.html', 'Documentos', 'Documents', []),
+]
+MENU_PARENT = {'roadmap.html': 'properties.html'}  # the stages page sits under Project development
+
+
+def add_menu_anchors(root):
+    """Give each heading a menu entry points to its id, matched by its exact English text."""
+    wanted = {}
+    for _, _, _, entries in MENU:
+        for target, anchor, _, _, heading_en in entries:
+            wanted.setdefault(target, {})[esc(heading_en)] = anchor
+    for target, headings in wanted.items():
+        path = Path(root) / target
+        if not path.exists():
+            continue
+        text = path.read_text(encoding='utf-8')
+        for heading_en, anchor in headings.items():
+            if f'id="{anchor}"' in text:
+                continue  # the page already has this address (often the section around the heading): reuse it, never duplicate
+            text, count = re.subn(r'<h2((?![^>]*\bid=)[^>]*data-en="' + re.escape(heading_en) + r'")',
+                                  lambda m: f'<h2 id="{anchor}"' + m.group(1), text, count=1)
+        path.write_text(text, encoding='utf-8')
+
+
 def site_header(lang='pt-BR', current=''):
-    """One main menu; local section links belong inside each page."""
+    """One main menu; each label opens a short list: its page, then up to four sections."""
     portuguese = lang.startswith('pt')
-    items = [
-        ('index.html', 'O projeto', 'The project'),
-        ('rent-to-own.html', 'Como funciona', 'How it works'),
-        ('roadmap.html', 'Etapas do projeto', 'Project stages'),
-        ('transparency.html', 'Financiamento e gastos', 'Funding and spending'),
-        ('blockchain.html', 'Registros compartilhados', 'Shared records'),
-        ('properties.html', 'Desenhos e fotos', 'Drawings and photos'),
-        ('resources.html', 'Documentos', 'Documents'),
-        ('contact.html', 'Participar', 'Take part'),
-    ]
+    section = MENU_PARENT.get(current, current)  # the stages page highlights Project development
     links = ''
-    for target, pt, en in items:
-        active = ' aria-current="page"' if target == current else ''
-        links += f'<a href="{target}" data-pt="{esc(pt)}" data-en="{esc(en)}"{active}>{esc(pt if portuguese else en)}</a>'
+    for target, pt, en, entries in MENU:
+        if not entries:
+            active = ' aria-current="page"' if target == current else ''
+            links += (f'<div class="nav-item"><a href="{target}" data-pt="{esc(pt)}" data-en="{esc(en)}"{active}>'
+                      f'{esc(pt if portuguese else en)}</a></div>')
+            continue
+        # The label is the button (44px targets, gate rule); its list starts with the page itself, then up to four sections.
+        is_current = ' is-current' if target == section else ''
+        menu_id = 'sub-' + target.split('.')[0]
+        here = ' aria-current="page"' if target == current else ''
+        overview = (f'<li class="sub-overview"><a href="{target}"{here}>'
+                    f'<span data-pt="Visão geral" data-en="Overview">{"Visão geral" if portuguese else "Overview"}</span></a></li>')
+        sub = overview + ''.join(f'<li><a href="{page}#{anchor}" data-pt="{esc(spt)}" data-en="{esc(sen)}">{esc(spt if portuguese else sen)}</a></li>'
+                                 for page, anchor, spt, sen, _ in entries)
+        links += (f'<div class="nav-item"><button type="button" class="sub-toggle{is_current}" aria-expanded="false" '
+                  f'aria-controls="{menu_id}"><span data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt if portuguese else en)}</span>'
+                  f'<span class="sub-arrow" aria-hidden="true">▾</span></button>'
+                  f'<ul class="sub" id="{menu_id}" hidden>{sub}</ul></div>')
+    here = ' aria-current="page"' if current == 'contact.html' else ''
+    links += (f'<div class="nav-item"><a class="nav-action" href="contact.html" data-pt="Participar" data-en="Take part"{here}>'
+              f'{"Participar" if portuguese else "Take part"}</a></div>')
     return ('<header class="top site-header"><nav class="wrap site-nav" data-site-nav '
             'aria-label="Principal" data-aria-pt="Principal" data-aria-en="Main">'
             '<a class="wordmark" href="index.html" aria-label="IMOBX"><img class="brand-logo" '
@@ -95,7 +162,7 @@ def site_header(lang='pt-BR', current=''):
             '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida." data-en="IMOBX · Rio de Janeiro. A housing project being prepared by Rafael Britto, founder, and John (communication and digital tools). The organisation’s legal form is still being defined.">IMOBX · Rio de Janeiro. Projeto de moradia em preparação por Rafael Britto, fundador, e John (comunicação e ferramentas digitais). A forma jurídica da organização ainda está sendo definida.</p><p><a href="transparency.html" data-pt="Financiamento e gastos" data-en="Funding and spending">Financiamento e gastos</a>&nbsp;· <a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a>&nbsp;· <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a>&nbsp;· <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX, Rio de Janeiro. Um projeto de moradia preparado por Rafael Britto (fundador) e John (comunicação e ferramentas digitais)." data-en="IMOBX, Rio de Janeiro. A housing project prepared by Rafael Britto (founder) and John (communication and digital tools).">IMOBX, Rio de Janeiro. Um projeto de moradia preparado por Rafael Britto (fundador) e John (comunicação e ferramentas digitais).</p><p><a href="transparency.html" data-pt="Custos e financiamento" data-en="Costs and funding">Custos e financiamento</a> <a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a> <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a> <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):
@@ -321,6 +388,7 @@ for doc, doc_title in GATEWAYS:
 
 if PREVIEW_ONLY:
     from add_dutch import add_dutch  # the preview gets its Dutch too; a full build adds it again after the exports
+    add_menu_anchors(ROOT)
     add_dutch(ROOT)
     print('Rendered local HTML for editorial and browser review. Existing exports are unchanged.')
     raise SystemExit(0)
@@ -491,6 +559,7 @@ for doc, doc_title in GATEWAYS:
     build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title, pages_from_pdf(ROOT, doc))
 # Dutch beside Portuguese and English (owner, 26 Oct 2026); the gate fails while any string lacks Dutch.
 from add_dutch import add_dutch
+add_menu_anchors(ROOT)
 add_dutch(ROOT)
 write_manifest(ROOT)
 
