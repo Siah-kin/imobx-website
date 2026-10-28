@@ -81,12 +81,12 @@ MENU = [
         ('transparency.html', 'payment-route', 'Conferência dos pagamentos', 'Payment checks', 'Who checks each payment?'),
         ('transparency.html', 'reports', 'Relatórios publicados', 'Published reports', 'What will we publish?'),
     ]),
-    ('properties.html', 'Desenvolvimento do projeto', 'Project development', [
-        # Owner, 28 Oct (decision 23): partners find the current stage and the people first.
-        ('index.html', 'onde-estamos', 'Onde estamos agora', 'Where we are now', 'Where we are now'),
-        ('index.html', 'quem-prepara', 'Quem está preparando', 'Who is preparing this', 'Who is preparing this'),
-        ('roadmap.html', 'stages', 'Etapas do projeto', 'Project stages', 'What happens now, and what comes next?'),
-        ('properties.html', 'lofts', 'Os dois lofts', 'The two lofts', 'The two lofts: our first experiment'),
+    # Owner, 28 Oct: a menu item is a page, and each entry in its list is a section of that page.
+    ('roadmap.html', 'Desenvolvimento do projeto', 'Project development', [
+        ('roadmap.html', 'stages', 'Onde estamos agora', 'Where we are now', 'What happens now, and what comes next?'),
+        ('roadmap.html', 'homes', 'Casas em estudo', 'Homes being considered', 'Which homes are being considered?'),
+        ('roadmap.html', 'who-decides', 'Quem decide', 'Who decides', 'Who decides what?'),
+        ('roadmap.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
     ]),
     ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
         # the rebuilt ledger page (28 Oct) carries its section ids, so these reuse them
@@ -96,14 +96,22 @@ MENU = [
         ('blockchain.html', 'records', 'Quem vê o quê', 'Who sees what', 'Who sees what?'),  # owner, 28 Oct: 'records' is too abstract
         ('blockchain.html', 'open', 'Decisões em aberto', 'Open decisions', 'What are we still deciding?'),
     ]),
-    # Documents opens a short list too (owner, 28 Oct: the sources page was hard to find).
     ('resources.html', 'Documentos', 'Documents', [
-        ('reference.html', 'sources', 'Fontes de cada afirmação', 'Sources for each claim', 'Where do the facts come from?'),
-        ('reference.html', 'people', 'Pessoas e funções', 'People and roles', 'Who does what, and which roles are still open?'),
-        ('reference.html', '', 'Referência do projeto', 'Project reference', ''),
+        ('resources.html', 'title-reference', 'Pessoas e fontes', 'People and sources', 'Who is behind IMOBX, and where our figures come from'),
+        ('resources.html', 'title-whitepaper', 'Proposta completa', 'Full proposal', 'The full proposal (whitepaper)'),
+        ('resources.html', 'title-pitchdeck', 'Apresentação para parceiros', 'Partner presentation', 'Presentation for partners'),
+        ('resources.html', 'title-devsheet', 'Guia de construção', 'Building guide', 'Guide to building the first homes'),
     ]),
 ]
-MENU_PARENT = {'roadmap.html': 'properties.html', 'reference.html': 'resources.html'}  # stages under Project development; the reference under Documents
+# Pages without their own menu item light up their parent; the lofts page belongs to Project development.
+MENU_PARENT = {'properties.html': 'roadmap.html', 'reference.html': 'resources.html'}
+# Section addresses other pages link to, kept although they left the menu.
+EXTRA_ANCHORS = [
+    ('index.html', 'onde-estamos', 'Where we are now'),
+    ('index.html', 'quem-prepara', 'Who is preparing this'),
+    ('reference.html', 'sources', 'Where do the facts come from?'),
+    ('reference.html', 'people', 'Who does what, and which roles are still open?'),
+]
 
 
 def add_menu_anchors(root):
@@ -113,6 +121,8 @@ def add_menu_anchors(root):
         for target, anchor, _, _, heading_en in entries:
             if anchor:  # an entry without an anchor opens the page at the top
                 wanted.setdefault(target, {})[esc(heading_en)] = anchor
+    for target, anchor, heading_en in EXTRA_ANCHORS:
+        wanted.setdefault(target, {})[esc(heading_en)] = anchor
     for target, headings in wanted.items():
         path = Path(root) / target
         if not path.exists():
@@ -129,7 +139,7 @@ def add_menu_anchors(root):
 def site_header(lang='pt-BR', current=''):
     """One main menu; each label opens a short list: its page, then up to four sections."""
     portuguese = lang.startswith('pt')
-    section = MENU_PARENT.get(current, current)  # the stages page highlights Project development
+    section = MENU_PARENT.get(current, current)  # the lofts page highlights Project development
     links = ''
     for target, pt, en, entries in MENU:
         if not entries:

@@ -98,8 +98,8 @@
     {
       "id": "replication",
       "title": [
-        "Mais imóveis",
-        "More properties"
+        "Mais bairros",
+        "More neighbourhoods"
       ],
       "window": [
         "Depois de avaliar as primeiras casas",
@@ -107,12 +107,12 @@
       ],
       "card": [
         [
-          "A prova gera confiança, e a confiança atrai financiamento e escala. Com registros reais de custos e pagamentos, podemos convidar mais financiadores, e donos de imóveis adequados, a participar. Cada novo lugar aproveita os mesmos projetos e compras, e os moradores continuam decidindo as questões locais.",
-          "Proof builds trust, and trust draws in funding and scale. With records of real costs and payments, we can invite more funders, and owners of suitable properties, to join. Each new place shares designs and purchasing, and its residents still decide local matters."
+          "Quando as primeiras famílias estiverem instaladas e as casas se mostrarem sólidas, mais bairros podem vir. Cada custo e pagamento das primeiras casas fica aberto para conferir, para que novos financiadores e donos de imóveis adequados possam avaliar por conta própria antes de participar. Cada novo lugar compartilha projetos e compras com os outros, e os moradores decidem as próprias questões locais.",
+          "When the first families are settled and their homes hold up, more neighbourhoods can follow. Every cost and payment of the first homes stays open to see, so new funders and owners of suitable properties can judge for themselves before they join. Each new place shares designs and purchasing with the others, and its residents decide their own local matters."
         ],
         [
-          "Só crescemos quando as primeiras casas funcionam e todo compromisso já assumido está coberto.",
-          "We only grow when the first homes work and every promise already made is covered."
+          "Damos o próximo passo quando as primeiras casas funcionam e todo compromisso já assumido está coberto.",
+          "We take the next step once the first homes work and every promise already made is covered."
         ]
       ]
     },
@@ -2024,12 +2024,12 @@
   },
   "phases": {
     "title": [
-      "Três fases de crescimento",
-      "Three phases of growth"
+      "Três etapas",
+      "Three stages"
     ],
     "intro": [
-      "A prova gera confiança, e a confiança atrai financiamento e escala. Cada fase começa só quando a anterior mostrou resultados: casas construídas dentro do orçamento e pagamentos registrados.",
-      "Proof builds trust, and trust draws in funding and scale. Each phase starts only when the one before has shown results: homes built within budget and payments recorded."
+      "Cada etapa começa quando a anterior mostrou resultados para as famílias que moram ali: casas construídas dentro do orçamento e cada pagamento aberto para conferir.",
+      "Each stage begins once the one before has shown results for the families living in it: homes built within budget and every payment open to check."
     ],
     "steps": [
       [
@@ -2044,12 +2044,12 @@
       ],
       [
         [
-          "Mais imóveis",
-          "More properties"
+          "Mais bairros",
+          "More neighbourhoods"
         ],
         [
-          "Com registros de custos e pagamentos, atrair financiamento e convidar donos de imóveis adequados a participar.",
-          "With records of costs and payments, draw in funding and invite owners of suitable properties to join."
+          "Com os custos e pagamentos das primeiras casas abertos para conferir, convidar financiadores e donos de imóveis adequados a participar.",
+          "With the first homes’ costs and payments open to see, invite funders and owners of suitable properties to take part."
         ]
       ],
       [
@@ -3205,8 +3205,8 @@
         "Volume: trading keeps the token liquid, and its fees pay for the work and the new homes."
       ],
       [
-        "Votação: quem tem o token e os membros decidem juntos as escolhas comuns e as regras do token, e o trabalho comprovado dos membros conta junto com o que têm em staking.",
-        "Voting: holders and members decide together on shared choices and the token’s rules, and members’ proven work counts alongside their stake."
+        "Votação: quem tem o token vota nas regras do token, e o trabalho comprovado dos membros conta junto com o que têm em staking. As decisões da cooperativa seguem a regra da cooperativa: um membro, um voto.",
+        "Voting: holders vote on the token’s rules, and members’ proven work counts alongside their stake. The cooperative’s own decisions follow its rule of one member, one vote."
       ],
       [
         "Veto, as salvaguardas: o contrato de moradia de uma família segue os termos que a família assinou, e o conselho de várias assinaturas barra qualquer pagamento fora do orçamento publicado.",

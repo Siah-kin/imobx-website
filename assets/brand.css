@@ -443,3 +443,8 @@ button.term-near{display:inline-flex;align-items:center;justify-content:center;m
 .term-pop-meaning{margin:0 0 10px;font-size:16px;line-height:1.5}
 .term-pop-close{font:inherit;font-size:14px;min-height:32px;padding:4px 12px;border:1px solid #D9E3E8;border-radius:4px;background:#fff;color:#193D4E;cursor:pointer}
 .term-pop-close:hover{border-color:#193D4E}
+
+/* Stage toggle on its own line under the heading (owner screenshot, 28 Oct: 'checkShow details') */
+.roadmap-stage summary .stage-toggle{display:block;width:fit-content}
+/* The lofts page opens with its first section: no line under the header. */
+main>.archive-section:first-child{border-top:0}
