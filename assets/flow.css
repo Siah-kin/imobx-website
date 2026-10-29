@@ -247,3 +247,39 @@
 @media (max-width:700px){.gov-stages{grid-template-columns:1fr;gap:32px}.gov-panel .gv-arrow{display:none}.gov-panel{max-width:260px}}
 .gov-flow.is-flowing .gv-arrow{opacity:1;transition:opacity .4s ease .5s}
 .gov-panel .gv-label-outer{font-size:14px}
+/* The token's loop (owner, 29 Oct): use → people join → fees → checked work → more services → use */
+.token-loop{margin:18px 0 34px;max-width:720px}
+.loop-svg{display:block;width:100%;height:auto;overflow:visible}
+.loop-track{fill:none;stroke:#E3EEF2;stroke-width:16}
+.loop-arc{fill:none;stroke:#4A90A4;stroke-width:3}
+.loop-headpath{fill:#4A90A4}
+.loop-node{fill:#fff;stroke:#276578;stroke-width:3}
+.loop-node.loop-start{fill:#B85500;stroke:#B85500}
+.loop-label{font:700 17px/1 Arial,Helvetica,sans-serif;fill:#193D4E}
+.loop-centre{font:600 18px/1 Arial,Helvetica,sans-serif;fill:#526571}
+.loop-dot{fill:#B85500;opacity:0}
+.loop-steps{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.js-loop .loop-arc{stroke-dasharray:1;stroke-dashoffset:1;opacity:0}
+.js-loop .loop-node,.js-loop .loop-label{opacity:0}
+.js-loop.is-looping .loop-node,.js-loop.is-looping .loop-label{opacity:1;transition:opacity .4s ease calc(var(--i) * .4s)}
+.js-loop.is-looping .loop-arc{stroke-dashoffset:0;opacity:1;transition:stroke-dashoffset .5s ease calc(var(--i) * .4s + .2s),opacity .1s linear calc(var(--i) * .4s + .2s)}
+.js-loop.is-looping .loop-dot{opacity:1;transition:opacity .3s ease 2.2s}
+@media (max-width:600px){
+  .loop-svg{display:none}
+  .loop-steps{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;list-style:none;margin:0;padding:0 0 0 22px;border-left:3px solid #4A90A4;counter-reset:loop}
+  .loop-steps li{position:relative;margin:0 0 14px;line-height:1.5}
+  .loop-steps li::before{content:"";position:absolute;left:-31px;top:4px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #276578}
+  .loop-steps li:first-child::before{background:#B85500;border-color:#B85500}
+  .loop-steps strong{display:block;color:#193D4E}
+}
+/* Decision 33: the four V's as plain lines (Volume, Voting, Verify), each with the More info drop-down */
+.v-lines{margin:14px 0 8px;border-top:1px solid #D9E3E8;max-width:760px}
+.v-line-item{border-bottom:1px solid #D9E3E8;padding:14px 0 6px}
+.v-line-item>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.v-line-item>summary::-webkit-details-marker{display:none}
+.v-line-item .v-title{font-weight:700;color:#193D4E;font-size:18px}
+.v-line-item .v-line{color:#405866;line-height:1.55}
+.v-line-item .v-link{justify-self:start;margin:6px 0 4px;color:#A84B00;font-weight:700;text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;gap:6px;min-height:32px}
+.v-line-item .v-link::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s ease}
+.v-line-item[open] .v-link::after{transform:rotate(-135deg) translateY(-2px)}
+.v-line-item .v-body p{margin:6px 0 10px;line-height:1.6;max-width:62ch}

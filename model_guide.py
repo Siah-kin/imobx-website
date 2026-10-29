@@ -1,5 +1,6 @@
 """Public roadmap and model explanation. Content only; no governance execution."""
 import json
+import math
 import re
 import hashlib as _hashlib
 from money_flow import money_flow_html, cascade_html, route_html, ledger_flow_html, gov_flow_html, FUNDING_SCRIPT, SCRIPT as MF_SCRIPT
@@ -921,19 +922,54 @@ def build_guide(root, page, tr, esc, language_controls):
         return ('<details class="v-cell"><summary>' + g
                 + text((o[0][0].rstrip('.'), o[0][1].rstrip('.')), 'span', 'class="v-title"')
                 + text(short, 'span', 'class="v-line"') + text(ch['more_info'], 'span', 'class="v-link"') + '</summary>'
-                + '<div class="v-body">' + text(o[1]) + '</div></details>')
-    # Owner, 29 Oct: a matrix. Rows: funding, people. Columns: moves forward, keeps steady.
-    cells = ('<div class="v-axis v-corner"></div>' + text(ax['cols'][0], 'div', 'class="v-axis v-col"') + text(ax['cols'][1], 'div', 'class="v-axis v-col"')
-             + text(ax['rows'][0], 'div', 'class="v-axis v-row"') + v_cell(0) + v_cell(2)
-             + text(ax['rows'][1], 'div', 'class="v-axis v-row"') + v_cell(1) + v_cell(3))
+                + '<div class="v-body">' + text(o[1]) + text(ch['bridge_more'][i]) + '</div></details>')
+    # Decision 33 (owner, 29 Oct, after Codex and DeepSeek): the loop is the one drawing; Volume, Voting and Verify are
+    # plain lines with More info; Vow waits in the fold until a lock has a purpose.
+    def v_line(i):
+        o, short = ch['bridge'][i], ch['bridge_short'][i]
+        return ('<details class="v-line-item"><summary>' + text((o[0][0].rstrip('.'), o[0][1].rstrip('.')), 'span', 'class="v-title"')
+                + text(short, 'span', 'class="v-line"') + text(ch['more_info'], 'span', 'class="v-link"') + '</summary>'
+                + '<div class="v-body">' + text(o[1]) + text(ch['bridge_more'][i]) + '</div></details>')
+    cells = v_line(0) + v_line(1) + v_line(2)
+    # The token's loop (owner, 29 Oct: "you can make such animation"). It starts with use, which is why the token
+    # launches only once it gives access (decision 32). The drawing is for sighted readers; the list carries the meaning.
+    def loop_figure():
+        cx, cy, r = 320, 190, 140
+        steps = ch['loop_steps']
+        angles = [-90, -18, 54, 126, 198]
+        pt = lambda deg: (cx + r * math.cos(math.radians(deg)), cy + r * math.sin(math.radians(deg)))
+        arcs, nodes, labels = '', '', ''
+        anchors = [('middle', 0, -44), ('start', 40, 6), ('start', 34, 40), ('end', -34, 40), ('end', -40, 6)]
+        for i, deg in enumerate(angles):
+            nxt = angles[(i + 1) % 5] + (360 if i == 4 else 0)
+            x1, y1 = pt(deg + 14); x2, y2 = pt(nxt - 14)
+            arcs += f'<path class="loop-arc" style="--i:{i}" pathLength="1" marker-end="url(#loop-head)" d="M{x1:.1f},{y1:.1f} A{r},{r} 0 0 1 {x2:.1f},{y2:.1f}"/>'
+            x, y = pt(deg)
+            nodes += f'<circle class="loop-node{" loop-start" if i == 0 else ""}" style="--i:{i}" cx="{x:.1f}" cy="{y:.1f}" r="22"/>'
+            anc, dx, dy = anchors[i]
+            pair = steps[i][0]
+            nl_ = NL_LOOKUP.get(pair[1], pair[1])
+            labels += (f'<text class="loop-label" style="--i:{i}" x="{x + dx:.1f}" y="{y + dy:.1f}" text-anchor="{anc}" data-pt="{esc(pair[0])}" data-en="{esc(pair[1])}" data-nl="{esc(nl_)}">{esc(pair[0])}</text>')
+        svg = ('<svg class="loop-svg" viewBox="0 -30 640 420" aria-hidden="true"><defs><marker id="loop-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
+               '<path d="M0,0 L10,5 L0,10 Z" class="loop-headpath"/></marker></defs>'
+               + f'<circle class="loop-track" cx="{cx}" cy="{cy}" r="{r}"/>' + arcs + nodes + labels
+               + f'<circle class="loop-dot" r="7"><animateMotion dur="5s" repeatCount="2" fill="freeze" begin="indefinite" rotate="auto" path="M{cx},{cy - r} A{r},{r} 0 0 1 {cx},{cy + r} A{r},{r} 0 0 1 {cx},{cy - r}"/></circle></svg>')
+        steps_list = '<ol class="loop-steps">' + ''.join('<li>' + text(st[0], 'strong') + ' ' + text(st[1], 'span') + '</li>' for st in steps) + '</ol>'
+        return '<figure class="token-loop">' + svg + steps_list + '</figure>'
+
     chain += ('<section id="token">' + text(ch['token_fold'], 'h2') + text(ch['token_answer'], 'p', 'class="answer"')
-              + text(ch['bridge_title'], 'h3') + text(ch['matrix_intro']) + '<div class="v-matrix">' + cells + '</div>'
+              + text(ch['loop_title'], 'h3') + text(ch['loop_intro']) + loop_figure()
+              + text(ch['bridge_title'], 'h3') + text(ch['matrix_intro']) + '<div class="v-lines">' + cells + '</div>'
               + fold(ch['token_more'],
-                     text(ch['bridge_intro']) + text(ch['token_intro']) + text(ch['receives_text'])
-                     + text(ch['token_purpose']) + text(ch['token_body']) + text(ch['review_note']) + text(ch['open_note'])
+                     text(ch['token_intro']) + text(ch['receives_text']) + text(ch['token_purpose']) + text(ch['review_note'])
+                     + text(ch['lock_title'], 'h3') + text(ch['bridge'][3][1]) + text(ch['bridge_more'][3])
                      + chain_source(('Como o regulador do mercado de capitais avalia tokens (CVM)', 'How Brazil’s market regulator looks at tokens (CVM)'), guide['sources']['cvm']['url'],
                                     ('Explica como a CVM decide quais regras valem para um token.', 'Explains how the CVM decides which rules apply to a token.'))
-                     + text(ch['never_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['never']) + '</ul>')
+                     + text(ch['never_title'], 'h3') + text(ch['never_intro']) + '<ul>' + ''.join(text(o, 'li') for o in ch['never']) + '</ul>')
+              + '<script>document.addEventListener("DOMContentLoaded",function(){var l=document.querySelector(".token-loop");'
+                'if(!l||!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;l.classList.add("js-loop");'
+                'new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){l.classList.add("is-looping");'
+                'var a=l.querySelector("animateMotion");setTimeout(function(){try{a.beginElement()}catch(_){}} ,2200);o.disconnect();}});},{threshold:.35}).observe(l);});</script>'
               + '<script>document.addEventListener("DOMContentLoaded",function(){var m=document.querySelector(".v-matrix");'
                 'if(!m||!("IntersectionObserver" in window))return;document.documentElement.classList.add("js-flow");'
                 'new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){m.classList.add("is-flowing");o.disconnect();}});},{threshold:.3}).observe(m);});</script>'

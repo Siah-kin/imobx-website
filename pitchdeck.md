@@ -20,7 +20,7 @@ IMOBX is preparing a first rent-to-own housing project in Rio.
 
 
 
-Source: [IMOBX project reference](reference.html). Lists what exists and what is not decided, with a review date. It is the project's own record.
+Source: [IMOBX resources and sources](https://siah-kin.github.io/imobx-website/resources.html#sources). Lists what exists and what is not decided, with a review date. It is the project's own record.
 
 **Presenter notes:** Rafael brings construction and local experience; John handles community and digital work. Their roles, the legal organization and the right to use each property need written agreements. This draft explains the plan and asks for partners; it does not offer an investment.
 
@@ -48,7 +48,7 @@ Source: [UN-Habitat: adequate housing](https://unhabitat.org/11-1-adequate-housi
 
 ## 3. Rafael has supplied a building budget
 
-His US$27,777 per-home plan uses CUB and SINAPI, Brazilian building-cost references.
+His US$27,777 per-house plan uses CUB and SINAPI, Brazilian building-cost references.
 
 
 
@@ -76,11 +76,11 @@ The household could see what it has paid towards the purchase and how much remai
 
 - The household can follow the amount paid and the remaining price.
 
-- The whole home transfers to the household once the purchase terms are met.
+- The whole house transfers to the household once the purchase terms are met.
 
 
 
-**Presenter notes:** The first houses are still being planned. This slide does not offer a home. The first home’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
+**Presenter notes:** The first houses are still being planned. The first house’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
 
 
 
@@ -126,7 +126,7 @@ Courtyard use, study-room hours, repair priorities and representatives are resid
 
 
 
-- One vote per member is an option under discussion.
+- One member, one vote, as Brazil’s cooperative law sets out.
 
 - No investment purchase or promotional work would be required for a voice.
 
@@ -138,7 +138,7 @@ Source: [ICA: cooperative identity](https://ica.coop/en/cooperatives/cooperative
 
 Source: [Elinor Ostrom: Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/). Is research on how communities manage shared resources. It does not test IMOBX's rules.
 
-**Presenter notes:** The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Buying tokens would not give control over another household’s contracted purchase price. See rent-to-own.html#decisions and roadmap.html#governance. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX.
+**Presenter notes:** The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Whatever a token vote decides, only the family and IMOBX together, under the law, can change a family’s housing agreement. See rent-to-own.html#decisions and governance.html. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX.
 
 
 
@@ -160,25 +160,25 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 
 
-## 9. A possible token could fund houses, operations and outreach
+## 9. The token launches once it can be used
 
-Buyers of new tokens would pay the organisation that creates and sells them. Their rights are still undecided.
+We are examining how to introduce the IMOBX token in line with Brazilian law. It launches when holders can use it to reach the community’s services and goods.
 
 
 
-- A later resale normally pays the seller; any project fee is separate.
+- Volume: trading fees, paid in USDC, pay for checked work.
 
-- Paid outreach needs a funded task, a check of the completed work and disclosure of payment.
+- Voting: holders vote on the token’s own rules; the cooperative keeps one member, one vote.
 
-- No dividend, discount or token voting model has been selected.
+- Verify: in the plan, anyone can check each payment and who approved it.
 
 
 
 Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). Says Brazil's regulator looks at what an investment actually gives, not its name. It does not say whether an IMOBX token would comply.
 
-Source: [IMOBX: questions about funding, tokens and governance](https://siah-kin.github.io/imobx-website/transparency.html#funding-questions). Holds the project's own answers on the token. Nothing there is decided.
+Source: [IMOBX: the token, on the distributed ledger page](https://siah-kin.github.io/imobx-website/blockchain.html#token). Sets out the token’s four functions as the project describes them. A Brazilian lawyer is reviewing the design.
 
-**Presenter notes:** Four scenarios remain: no IMOBX token, a service or membership benefit, a share of collected fees, or an investment in the operation. These are alternatives, not combined promised rights. Capital for construction, outreach payments and investor income have different budgets and commitments. Residents’ participation would not depend on investment or promotion. Reference.html#token compares what a buyer might receive and the decisions still open.
+**Presenter notes:** A Brazilian lawyer is reviewing the token’s design; what holders receive is set after that review, under the CVM’s rules. We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens. Paid outreach needs a funded task, a check of the completed work and disclosure of payment.
 
 
 
@@ -216,7 +216,7 @@ Follow actual costs, accounts and families’ experience.
 
 
 
-**Presenter notes:** Agree response times and affordability targets with local participants. Report houses as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. The published records do not yet document completed home transfers or committed capital.
+**Presenter notes:** Agree response times and affordability targets with local participants. Report houses as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. The published records do not yet document completed house transfers or committed capital.
 
 
 

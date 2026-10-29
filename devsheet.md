@@ -46,9 +46,9 @@ This guide explains how a request leads to completed work, a check that it meets
 
 Rafael’s plan brings together 45 m² two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [illustration](properties.html#visao-rafael) shows the intended community, rather than a completed development, and it was made with an image generator.
 
-On 30 November 2025, Rafael supplied building calculations using CUB and SINAPI, Brazilian cost references. His revised per-home budget is:
+On 30 November 2025, Rafael supplied building calculations using CUB and SINAPI, Brazilian cost references. His revised per-house budget is:
 
-| Item | USD per home |
+| Item | USD per house |
 |---|---:|
 | Land | 5,550 |
 | House construction, 45 square metres | 18,600 |
@@ -57,7 +57,7 @@ On 30 November 2025, Rafael supplied building calculations using CUB and SINAPI,
 | Legal and design | 627 |
 | **Total** | **27,777** |
 
-The plan covers at least 36 houses built together over 12 months: **36 × US$27,777 = US$999,972**. These are Rafael’s dated project figures, not a finished-home price published by the indexes. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs, and the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains what CUB covers; neither gives a price for these houses. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs.
+The plan covers at least 36 houses built together over 12 months: **36 × US$27,777 = US$999,972**. These are Rafael’s dated project figures, not a finished-house price published by the indexes. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs, and the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains what CUB covers; neither gives a price for these houses. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs.
 
 ### The separate two-loft case
 

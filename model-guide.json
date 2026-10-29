@@ -2096,21 +2096,6 @@
           "Mede novos contratos em cidades acompanhadas pelo índice.",
           "Measures new contracts in the cities the index covers."
         ]
-      },
-      {
-        "text": [
-          "A Aneel projetou para 2025 um aumento médio de 6,3% nas tarifas de energia, acima da inflação esperada (5,1%).",
-          "Aneel projected an average 6.3% rise in electricity tariffs for 2025, above expected inflation (5.1%)."
-        ],
-        "source": [
-          "Aneel (InfoTARIFA), via Movimento Econômico, 12/08/2025",
-          "Aneel (InfoTARIFA), via Movimento Econômico, 12 August 2025"
-        ],
-        "url": "https://movimentoeconomico.com.br/?p=98604",
-        "limit": [
-          "É uma projeção média; cada distribuidora tem seu reajuste.",
-          "An average projection; each distributor sets its own rise."
-        ]
       }
     ],
     "causes_title": [
@@ -2627,10 +2612,6 @@
         ]
       ]
     ],
-    "token_body": [
-      "Quem tem o token pode fazer staking, travando os tokens como um compromisso com o projeto, e parte da oferta é queimada com o tempo. Mercados mudam, então publicamos a parcela em staking e queimada à medida que ela muda.",
-      "Holders can stake their tokens, locking them as a commitment to the project, and part of the supply is burned over time. Markets move, so we publish the staked and burned share as it changes."
-    ],
     "open_title": [
       "Quanto vai rodar na blockchain?",
       "How much would run on the blockchain?"
@@ -2652,10 +2633,6 @@
         "Pagamentos e aprovações feitos na própria blockchain, cada um com várias assinaturas.",
         "Payments and approvals made on the blockchain itself, each needing several signers."
       ]
-    ],
-    "open_note": [
-      "Divulgamos com prova de entrega: contamos cada passo com honestidade, com seus riscos e suas oportunidades.",
-      "We market with proof of delivery: we report each step honestly, with its risks and its opportunities."
     ],
     "same_title": [
       "Seja qual for a decisão",
@@ -2814,16 +2791,12 @@
       "Independent sources on the rules and the tools"
     ],
     "token_purpose": [
-      "Quando o token já puder ser usado, o lançamento está planejado na Arctide, um mercado na blockchain Arc, com lançamento aberto: todos compram no mercado, nas mesmas condições, desde o primeiro dia. A compra funciona pelo site, por QR code ou pelo Telegram. Cada negociação paga uma pequena taxa de negociação em USDC. Essas taxas pagam quem faz o trabalho, inclusive embaixadores e corretores pelo trabalho de divulgação conferido, e uma parte vai para o fundo de novas casas, cada uma numa linha própria da prestação de contas da IMOBX.",
-      "Once the token can be used, it is planned to launch on Arctide, a marketplace on the Arc blockchain, with an open launch: everyone buys on the market, on the same terms, from the first day. Buying works through the website, a QR code or Telegram. Every trade pays a small trading fee in USDC. Those fees pay the people who do the work, among them ambassadors and brokers for promotion work that has been checked, and part goes to the fund for new houses, each as its own line in IMOBX’s accounting."
+      "Quando o token já puder ser usado, ele será lançado num mercado público na blockchain Arc, aberto a qualquer pessoa desde o primeiro dia.",
+      "Once the token can be used, it launches on a public market on the Arc blockchain, open to anyone from the first day."
     ],
     "bridge_title": [
-      "Volume, votação, verificação e voto de compromisso",
-      "Volume, voting, verify and vow"
-    ],
-    "bridge_intro": [
-      "Pense numa assembleia de condomínio. Os moradores votam o que é de todos, o síndico paga as contas e um pagamento grande precisa de duas assinaturas. O token da IMOBX acrescenta um círculo maior em volta dessa assembleia: as pessoas que têm o token. Esse círculo é a DAO da comunidade, um grupo que guarda suas regras e suas contas numa blockchain, e o token é a sua porta de entrada.",
-      "Think of a residents’ meeting in an apartment building. Residents vote on shared matters, the building manager pays the bills, and a large payment needs two signatures. The IMOBX token adds a wider circle around that meeting: the people who hold the token. That circle is the community’s DAO, a group that keeps its rules and its accounts on a blockchain, and the token is your way into it."
+      "Volume, votação e verificação",
+      "Volume, voting and verify"
     ],
     "bridge": [
       [
@@ -2832,8 +2805,8 @@
           "Volume."
         ],
         [
-          "Cada vez que o token muda de mãos, paga-se uma pequena taxa em USDC. As taxas pagam quem fez um trabalho conferido, e uma parte vai para o fundo de novas casas, cada uma numa linha própria das contas. Uma casa só começa a ser construída quando os recursos dela estão garantidos, então a obra segue, aconteça o que acontecer com o preço do token.",
-          "Each time the token changes hands, a small fee is paid in USDC. The fees pay people for work that has been checked, and part goes to the fund for new houses, each as its own line in the accounts. We start building a house only when its funding is secured, so building goes ahead whatever happens to the token’s price."
+          "Cada negociação no mercado paga uma pequena taxa em USDC. As taxas pagam quem fez um trabalho conferido, cada pagamento numa linha própria das contas. Uma casa só começa a ser construída quando os recursos dela estão garantidos.",
+          "Each trade on the market pays a small fee in USDC. The fees pay people for work that has been checked, each payment its own line in the accounts. We start building a house only when its funding is secured."
         ]
       ],
       [
@@ -2868,8 +2841,8 @@
       ]
     ],
     "receives_text": [
-      "Ter o token coloca você na lista de acesso aos serviços e benefícios da comunidade, faz de você parte da história dos bairros que a IMOBX constrói e abre uma conta que mostra a ajuda que você dá e o Zeal que você conquista.",
-      "Holding the token whitelists you for the community’s services and benefits, makes you part of the story of the neighbourhoods IMOBX builds, and opens an account that shows the help you give and the Zeal you earn."
+      "Ter o token dá acesso aos serviços e benefícios da comunidade.",
+      "Holding the token gives you access to the community’s services and benefits."
     ],
     "utilities_text": [
       "Quem faz staking dos seus tokens recebe uma parte das taxas de negociação, paga em USDC, e colocar liquidez na Arctide também rende parte dessas taxas. Quando as regras do token mudam, quem tem o token vota, e o trabalho comprovado dos membros conta junto com o que têm em staking. Embaixadores e corretores recebem das mesmas taxas pelo trabalho de divulgação conferido. A compra funciona pelo site, por QR code ou pelo Telegram, direto do mercado.",
@@ -2885,16 +2858,16 @@
     ],
     "bridge_short": [
       [
-        "As taxas de negociação, pagas em USDC, pagam trabalho conferido e as próximas casas.",
-        "Trading fees, paid in USDC, pay for checked work and the next houses."
+        "As taxas de negociação, pagas em USDC, pagam trabalho conferido.",
+        "Trading fees, paid in USDC, pay for checked work."
       ],
       [
         "Quem tem o token vota as regras do token. Na cooperativa: um membro, um voto.",
         "Holders vote on the token’s rules. In the cooperative: one member, one vote."
       ],
       [
-        "Qualquer pessoa pode conferir cada pagamento e quem o aprovou.",
-        "Anyone can check every payment and who approved it."
+        "No plano, qualquer pessoa pode conferir cada pagamento e quem o aprovou.",
+        "In the plan, anyone can check each payment and who approved it."
       ],
       [
         "Trave seus tokens por um período definido, como promessa de ficar com o projeto.",
@@ -2906,8 +2879,8 @@
       "More info"
     ],
     "token_more": [
-      "Mais sobre o token: o lançamento, o staking e nossos compromissos",
-      "More about the token: the launch, staking and our commitments"
+      "Mais sobre o token: o lançamento, a trava e nossos compromissos",
+      "More about the token: the launch, locking and our commitments"
     ],
     "matrix_axes": {
       "rows": [
@@ -2932,8 +2905,94 @@
       ]
     },
     "matrix_intro": [
-      "O token tem dois trabalhos: fazer o projeto avançar e mantê-lo firme. Cada um toca os recursos e as pessoas.",
-      "The token has two jobs: moving the project forward and keeping it steady. Each job touches funding and people."
+      "Junto com o ciclo, o token tem três funções.",
+      "Alongside the loop, the token has three functions."
+    ],
+    "loop_title": [
+      "Como o token sustenta o trabalho?",
+      "How does the token sustain the work?"
+    ],
+    "loop_intro": [
+      "Cada negociação no mercado paga uma pequena taxa. As taxas pagam trabalho conferido. Esse trabalho acrescenta serviços que membros e quem tem o token podem usar. O preço do token fica com o mercado.",
+      "Each trade on the market pays a small fee. Fees pay for checked work. That work adds services members and token holders can use. The token’s price is left to the market."
+    ],
+    "loop_steps": [
+      [
+        [
+          "Uso",
+          "Use"
+        ],
+        [
+          "acesso aos serviços e bens da comunidade",
+          "access to the community’s services and goods"
+        ]
+      ],
+      [
+        [
+          "Pessoas entram",
+          "People join"
+        ],
+        [
+          "mais gente quer usar o que a comunidade oferece",
+          "more people want to use what the community offers"
+        ]
+      ],
+      [
+        [
+          "Taxa de negociação",
+          "Trading fee"
+        ],
+        [
+          "cada negociação no mercado paga uma pequena taxa em USDC ao projeto",
+          "each trade on the market pays a small fee in USDC to the project"
+        ]
+      ],
+      [
+        [
+          "Trabalho conferido",
+          "Checked work"
+        ],
+        [
+          "as taxas pagam trabalho que alguém conferiu",
+          "the fees pay for work someone has checked"
+        ]
+      ],
+      [
+        [
+          "Mais serviços",
+          "More services"
+        ],
+        [
+          "esse trabalho acrescenta serviços que membros e quem tem o token podem usar",
+          "that work adds services members and token holders can use"
+        ]
+      ]
+    ],
+    "bridge_more": [
+      [
+        "Antes do lançamento, publicamos o valor da taxa e quem pode mudá-lo.",
+        "Before launch, we publish the fee rate and who can change it."
+      ],
+      [
+        "Antes do lançamento, publicamos quem controla as chaves de administração do token, ou seja, quem pode mudar as configurações dele.",
+        "Before launch, we publish who controls the token’s admin keys, meaning who can change its settings."
+      ],
+      [
+        "Qualquer pessoa pode conferir, com ou sem o token.",
+        "Anyone can check, with or without the token."
+      ],
+      [
+        "Uma trava mais longa dá o mesmo voto.",
+        "A longer lock gives the same vote."
+      ]
+    ],
+    "lock_title": [
+      "Travar seus tokens",
+      "Locking your tokens"
+    ],
+    "never_intro": [
+      "Parceiros e famílias podem nos cobrar por isto.",
+      "Partners and families can hold us to these."
     ]
   },
   "token_stub": {
