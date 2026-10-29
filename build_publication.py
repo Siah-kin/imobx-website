@@ -120,6 +120,55 @@ EXTRA_ANCHORS = [
 ]
 
 
+# Owner, 29 Oct: "no header goes without 1 or 2 lines of paragraph". A line under each heading that would otherwise
+# open straight into a drawing, table or list: its purpose or stakes, never a description of the picture.
+HEADING_INTROS = {
+    'rent-to-own.html': {
+        'Who handles a repair?': ('No plano, cada reparo tem uma pessoa responsável, um limite de gasto e uma segunda conferência, então nada depende de uma só pessoa.',
+                                  'In the plan, every repair has a named person, a spending limit and a second check, so nothing waits on one person.'),
+        'What do residents decide?': ('Os moradores cuidam juntos da vida comum do bairro; o contrato de cada família continua sendo só dela.',
+                                      'Residents run the shared life of the neighbourhood together; each family’s own agreement stays its own.'),
+    },
+    'transparency.html': {
+        'Who checks each payment?': ('No plano, um pagamento só sai depois que duas pessoas o olharam: uma aprova, outra confere.',
+                                     'In the plan, a payment goes out only after two people have looked at it: one approves it, another checks it.'),
+        'What will we publish?': ('Quem financia ou mora num bairro da IMOBX pode acompanhar as contas. Estes são os relatórios que planejamos publicar:',
+                                  'Anyone who funds or lives in an IMOBX neighbourhood can follow the accounts. These are the reports we plan to publish:'),
+    },
+    'blockchain.html': {
+        'Who sees what?': ('Seu contrato e seus pagamentos ficam entre você e a IMOBX; o que a própria IMOBX gasta fica aberto a todos.',
+                           'Your contract and your payments stay between you and IMOBX; what IMOBX itself spends is open to everyone.'),
+        'How much would run on the blockchain?': ('Podemos começar com contas bancárias e passar mais para o registro à medida que cada passo se provar.',
+                                                  'We can start with bank accounts and move more onto the ledger as each step proves itself.'),
+    },
+    'governance.html': {
+        'What are we deciding now?': ('Antes de a primeira família se mudar, estas perguntas precisam de resposta. Você pode ajudar a decidir.',
+                                      'Before the first family moves in, these questions need an answer. You can help settle them.'),
+    },
+    'why.html': {
+        'How big is the problem?': ('Faltam milhões de moradias no Brasil, e o aluguel sobe mais rápido que os preços.',
+                                    'Brazil is short of millions of dwellings, and rents are rising faster than prices.'),
+    },
+    'contact.html': {
+        'Your message, ready to copy': ('Suas respostas acima viram uma mensagem. Copie e cole no grupo.',
+                                        'Your answers above become one message. Copy it and paste it in the group.'),
+    },
+}
+
+
+def add_heading_intros(root):
+    """Insert the intro line right after its heading, matched by the heading's exact English text; skip if a paragraph already follows."""
+    for target, intros in HEADING_INTROS.items():
+        path = Path(root) / target
+        if not path.exists():
+            continue
+        html_text = path.read_text(encoding='utf-8')
+        for heading_en, (pt, en) in intros.items():
+            pattern = re.compile(r'(<h2[^>]*data-en="' + re.escape(esc(heading_en)) + r'"[^>]*>.*?</h2>)(?!\s*<p\b)', re.S)
+            html_text = pattern.sub(lambda m: m.group(1) + f'<p class="heading-intro" data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt)}</p>', html_text, count=1)
+        path.write_text(html_text, encoding='utf-8')
+
+
 def add_menu_anchors(root):
     """Give each heading a menu entry points to its id, matched by its exact English text."""
     wanted = {}
@@ -421,7 +470,7 @@ for doc, doc_title in GATEWAYS:
 
 if PREVIEW_ONLY:
     from add_dutch import add_dutch  # the preview gets its Dutch too; a full build adds it again after the exports
-    add_menu_anchors(ROOT)
+    add_menu_anchors(ROOT); add_heading_intros(ROOT)
     add_seo(ROOT)
     add_dutch(ROOT)
     print('Rendered local HTML for editorial and browser review. Existing exports are unchanged.')
@@ -593,7 +642,7 @@ for doc, doc_title in GATEWAYS:
     build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title, pages_from_pdf(ROOT, doc))
 # Dutch beside Portuguese and English (owner, 26 Oct 2026); the gate fails while any string lacks Dutch.
 from add_dutch import add_dutch
-add_menu_anchors(ROOT)
+add_menu_anchors(ROOT); add_heading_intros(ROOT)
 add_seo(ROOT)
 add_dutch(ROOT)
 write_manifest(ROOT)

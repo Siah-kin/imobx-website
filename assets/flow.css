@@ -191,3 +191,59 @@
 .v-cell[open] .v-link:after{transform:translateY(2px) rotate(-135deg)}
 .v-cell>summary:hover .v-link{color:#7A3600}
 @media (prefers-reduced-motion:reduce){.v-cell .v-link:after{transition:none}}
+
+/* Local governance: who decides, stage by stage (owner, 29 Oct) */
+.gov-flow-art{width:100%;height:auto;display:block}
+.gov-flow-art circle,.gov-flow-art path,.gov-flow-art rect{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.gov-flow-art .gv-core{fill:#E3EEF2;stroke:#193D4E;stroke-width:2.5}
+.gov-flow-art .gv-outer{stroke:#4A90A4;stroke-width:2.5;stroke-dasharray:6 6}
+.gov-flow-art .gv-members{fill:#F3F8FA;stroke:#276578;stroke-width:2.5}
+.gov-flow-art .gv-dot{fill:#276578;stroke:none}
+.gov-flow-art .gv-house{fill:#fff;stroke:#193D4E;stroke-width:2.2}
+.gov-flow-art .gv-lock{fill:#A84B00;stroke:none}
+.gov-flow-art .gv-shackle{stroke:#A84B00;stroke-width:2}
+.gov-flow-art .gv-arrow{stroke:#4A90A4;stroke-width:2.5}
+.gov-flow-art .gv-label{font:600 15px/1 Arial,Helvetica,sans-serif;fill:#193D4E;stroke:none}
+.gov-flow-art .gv-label-outer{fill:#276578;font-size:14px}
+.gov-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* motion: each stage appears in turn once the drawing is in view */
+.js-flow .gov-flow .gv-c1,.js-flow .gov-flow .gv-c2,.js-flow .gov-flow .gv-c2b,.js-flow .gov-flow .gv-c3,.js-flow .gov-flow .gv-c3b{opacity:0}
+.js-flow .gov-flow .gv-arrow,.js-flow .gov-flow .gv-house,.js-flow .gov-flow .gv-lock,.js-flow .gov-flow .gv-shackle,.js-flow .gov-flow .gv-dot,.js-flow .gov-flow .gv-label{opacity:0}
+.gov-flow.is-flowing .gv-c1,.gov-flow.is-flowing .gv-c1~.gv-dot{opacity:1;transition:opacity .5s ease .1s}
+.gov-flow.is-flowing .gv-label{opacity:1;transition:opacity .5s ease .3s}
+.gov-flow.is-flowing .gv-a1{opacity:1;transition:opacity .4s ease .6s}
+.gov-flow.is-flowing .gv-c2,.gov-flow.is-flowing .gv-c2b{opacity:1;transition:opacity .5s ease .9s}
+.gov-flow.is-flowing .gv-dot{opacity:1;transition:opacity .4s ease .9s}
+.gov-flow.is-flowing .gv-a2{opacity:1;transition:opacity .4s ease 1.4s}
+.gov-flow.is-flowing .gv-c3,.gov-flow.is-flowing .gv-c3b{opacity:1;transition:opacity .5s ease 1.7s}
+.gov-flow.is-flowing .gv-house{opacity:1;transition:opacity .4s ease 2.1s}
+.gov-flow.is-flowing .gv-lock,.gov-flow.is-flowing .gv-shackle{opacity:1;transition:opacity .4s ease 2.5s}
+@media (prefers-reduced-motion:reduce){.js-flow .gov-flow *{opacity:1!important;transition:none!important}}
+@media (max-width:700px){.gov-steps{grid-template-columns:1fr}}
+/* governance: three panels with their words (stack on a phone) */
+.gov-flow{margin:8px 0 24px}
+.gov-stages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.gov-stage strong{display:block;font-size:17px;color:#193D4E;margin:8px 0 4px}
+.gov-stage span{display:block;color:#526571;font-size:15px;line-height:1.55}
+.gov-panel{width:100%;max-width:300px;height:auto;display:block;margin:0 auto;overflow:visible}
+.gov-panel circle,.gov-panel path,.gov-panel rect{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.gov-panel .gv-core{fill:#E3EEF2;stroke:#193D4E;stroke-width:2.5}
+.gov-panel .gv-outer{stroke:#4A90A4;stroke-width:2.5;stroke-dasharray:3 7}
+.gov-panel .gv-members{fill:#F3F8FA;stroke:#276578;stroke-width:2.5}
+.gov-panel .gv-dot{fill:#276578;stroke:none}
+.gov-panel .gv-house{fill:#fff;stroke:#193D4E;stroke-width:2.2}
+.gov-panel .gv-lock{fill:#A84B00;stroke:none}
+.gov-panel .gv-shackle{stroke:#A84B00;stroke-width:2}
+.gov-panel .gv-arrow{stroke:#4A90A4;stroke-width:2.5}
+.gov-panel .gv-label{font:600 16px/1 Arial,Helvetica,sans-serif;fill:#193D4E;stroke:none}
+.gov-panel .gv-label-outer{fill:#276578;font-size:15px}
+.js-flow .gov-flow .gov-stage{opacity:0;transform:translateY(8px)}
+.gov-flow.is-flowing .gov-stage{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+.gov-flow.is-flowing .gov-stage:nth-child(2){transition-delay:.6s}
+.gov-flow.is-flowing .gov-stage:nth-child(3){transition-delay:1.2s}
+.js-flow .gov-flow .gv-lock,.js-flow .gov-flow .gv-shackle{opacity:0}
+.gov-flow.is-flowing .gv-lock,.gov-flow.is-flowing .gv-shackle{opacity:1;transition:opacity .4s ease 1.9s}
+@media (prefers-reduced-motion:reduce){.js-flow .gov-flow .gov-stage,.js-flow .gov-flow .gv-lock,.js-flow .gov-flow .gv-shackle{opacity:1!important;transform:none!important;transition:none!important}}
+@media (max-width:700px){.gov-stages{grid-template-columns:1fr;gap:32px}.gov-panel .gv-arrow{display:none}.gov-panel{max-width:260px}}
+.gov-flow.is-flowing .gv-arrow{opacity:1;transition:opacity .4s ease .5s}
+.gov-panel .gv-label-outer{font-size:14px}

@@ -236,3 +236,47 @@ def ledger_flow_html(text, bodies):
             + '<div class="money-flow-frame">' + _ledger_svg() + '</div>'
             + '<ol class="money-flow-steps">' + steps + '</ol>'
             + text(LEDGER_PRIVATE, 'p', 'class="ledger-private"') + '</figure>')
+
+
+# ---------- Local governance (owner, 29 Oct: "go"): who decides, stage by stage, drawn as circles ----------
+GOV_STEPS = [
+    (('Agora', 'Now'),
+     ('Os fundadores decidem, com as pessoas que chamam para uma tarefa definida.', 'The founders decide, with people they bring in for a set task.')),
+    (('Quando o token for lançado', 'When the token launches'),
+     ('Quem tem o token vota as regras do próprio token.', 'Token holders vote on the token’s own rules.')),
+    (('Quando as famílias morarem lá', 'Once families live there'),
+     ('Os membros decidem os assuntos da cooperativa: um membro, um voto. O contrato de cada família segue os termos que ela assinou e a lei.',
+      'Members decide the cooperative’s matters: one member, one vote. Each family’s agreement follows the terms it signed and the law.')),
+]
+GOV_LABELS = {'founders': ('Fundadores', 'Founders'), 'holders': ('Quem tem o token', 'Token holders'), 'members': ('Membros', 'Members')}
+
+
+def _gov_panels(text):
+    """Three small drawings, one per stage, so each stays readable when the stages stack on a phone."""
+    def label(pair, x, y, cls='gv-label'):
+        return text(pair, 'text', f'class="{cls}" x="{x}" y="{y}" text-anchor="middle"')
+    def ring(cx, cy, r, cls):
+        return f'<circle class="{cls}" cx="{cx}" cy="{cy}" r="{r}"/>'
+    def people(cx, cy):
+        return ''.join(f'<circle class="gv-dot" cx="{cx + dx}" cy="{cy}" r="5"/>' for dx in (-16, 0, 16))
+    def house(x, y):
+        return (f'<path class="gv-house" d="M{x-14} {y+16}V{y}l14-11 14 11v16Z"/>'
+                f'<rect class="gv-lock" x="{x-5}" y="{y+3}" width="10" height="8"/><path class="gv-shackle" d="M{x-3} {y+3}v-3a3 3 0 0 1 6 0v3"/>')
+    arrow = '<path class="gv-arrow" d="M276 135h18m-7-7 7 7-7 7"/>'
+    def svg(body, n, with_arrow):
+        return (f'<svg class="gov-panel gv-p{n}" viewBox="0 0 300 270" aria-hidden="true">' + body + (arrow if with_arrow else '') + '</svg>')
+    p1 = ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131)
+    p2 = (ring(150, 135, 112, 'gv-outer') + label(GOV_LABELS['holders'], 150, 62, 'gv-label gv-label-outer')
+          + ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131))
+    p3 = (ring(150, 135, 124, 'gv-outer') + label(GOV_LABELS['holders'], 150, 50, 'gv-label gv-label-outer')
+          + ring(150, 141, 86, 'gv-members') + label(GOV_LABELS['members'], 150, 98)
+          + house(114, 134) + house(150, 134) + house(186, 134))
+    return [svg(p1, 1, True), svg(p2, 2, True), svg(p3, 3, False)]
+
+
+def gov_flow_html(text):
+    """The governance figure: one drawing and its words per stage, side by side; stacked on a phone."""
+    panels = _gov_panels(text)
+    steps = ''.join('<li class="gov-stage">' + svg + text(title, 'strong') + text(body, 'span') + '</li>'
+                    for svg, (title, body) in zip(panels, GOV_STEPS))
+    return '<figure class="money-flow gov-flow"><ol class="gov-stages">' + steps + '</ol></figure>'

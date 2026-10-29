@@ -2,7 +2,7 @@
 import json
 import re
 import hashlib as _hashlib
-from money_flow import money_flow_html, cascade_html, route_html, ledger_flow_html, FUNDING_SCRIPT, SCRIPT as MF_SCRIPT
+from money_flow import money_flow_html, cascade_html, route_html, ledger_flow_html, gov_flow_html, FUNDING_SCRIPT, SCRIPT as MF_SCRIPT
 
 # FAQ items that moved into rent-to-own.html; the other questions moved into transparency.html.
 HOUSEHOLD_FAQ = ('home-purchase', 'home-repairs', 'home-exit', 'home-decisions', 'home-participate', 'tenant-access')
@@ -543,6 +543,8 @@ def build_guide(root, page, tr, esc, language_controls):
 
     # Where it leads, and the builder's work (owner, 28-29 Oct): the biggest section sits at the bottom, clearly the builder's.
     roadmap += '<section id="village">' + text(('Como poderia ser a primeira vila?', 'What could the first village look like?'), 'h2')
+    roadmap += text(('Rafael planejou a primeira vila com casas de 45 m² em volta de um pátio comum, com energia solar, um pomar e lugares para brincar e estudar.',
+                     'Rafael planned the first village as 45 m² houses around a shared courtyard, with solar power, an orchard and places to play and study.'))
     roadmap += '<div class="lead-figures"><figure class="lead-figure"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da primeira vila" data-alt-pt="Ilustração conceitual da primeira vila" data-alt-en="Concept illustration of the first village" data-alt-nl="Conceptillustratie van het eerste dorp">'
     roadmap += '<figcaption>' + text(('Ilustração conceitual da primeira vila, feita com um gerador de imagens.', 'Concept illustration of the first village, made with an image generator.'), 'span') + '</figcaption></figure>'
     roadmap += '<figure class="lead-figure"><img src="assets/property-1.jpg" width="823" height="581" loading="lazy" alt="Os dois lofts, vista externa" data-alt-pt="Os dois lofts, vista externa" data-alt-en="The two lofts, exterior view" data-alt-nl="De twee lofts, buitenaanzicht">'
@@ -629,6 +631,8 @@ def build_guide(root, page, tr, esc, language_controls):
     # Terms (decision 21; owner 'proceed', 28 Oct): status and conditions said once, here, from TERMS_PAGE_DRAFT_2026-10-28.md.
     # It sits before the closing band, so the page still ends on the one invitation.
     roadmap += '<section id="terms">' + text(TERMS_TITLE, 'h2')
+    roadmap += text(('Parceiros e famílias precisam saber exatamente no que estão entrando, por isso listamos o que está decidido e o que ainda está em aberto.',
+                     'Partners and families should know exactly what they are joining, so we list what is settled and what is still open.'))
     for heading, items in TERMS:  # owner, 28 Oct: the long list sits in folds so the page ends lighter
         roadmap += '<details class="disclosure"><summary>' + text(heading, 'span') + '</summary><div class="disclosure-body"><ul>'
         for item in items:
@@ -700,8 +704,9 @@ def build_guide(root, page, tr, esc, language_controls):
                 'Every payment needs more than one named person’s approval, and a family can ask for any decision to be reviewed.')) + '</section>')
     gov = '<main class="paper guide-paper band-page governance-page" id="main">' + language_controls
     gov += text(('Quem decide, e quando você tem voz?', 'Who decides, and when do you get a say?'), 'h1')
-    gov += '<div class="key-card">' + text(('A IMOBX está em preparação, então hoje uma pequena equipe toma as decisões. À medida que o projeto cresce, mais pessoas ganham voz: primeiro quem tem o token, depois as famílias que moram nas casas.',
-                                           'IMOBX is in preparation, so today a small team makes the decisions. As the project grows, more people get a say: first the people who hold the token, later the families who live in the houses.')) + '</div>'
+    gov += text(('A IMOBX está em preparação, então hoje uma pequena equipe toma as decisões. À medida que o projeto cresce, mais pessoas ganham voz, em três etapas:',
+                 'IMOBX is in preparation, so today a small team makes the decisions. As the project grows, more people get a say, in three stages:'), 'p', 'class="guide-lead"')
+    gov += gov_flow_html(text)  # owner, 29 Oct ('go'): the stages as one drawing; owner: every heading gets a line or two
     gov += on_this_page([(('Agora', 'Now'), 'now'), (('Proteções', 'Protections'), 'safeguards'), (('O token', 'The token'), 'token-rules'), (('Os moradores', 'Residents'), 'residents'),
                          (('O que estamos decidindo', 'What we are deciding'), 'deciding')])
     gov += '<section id="now">' + text(('Quem decide agora?', 'Who decides now?'), 'h2')
@@ -736,7 +741,7 @@ def build_guide(root, page, tr, esc, language_controls):
     gov += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
     gov += partner_line('governance.html') + '</main>'
     (root / 'governance.html').write_text(page('IMOBX | Local governance', gov,
-        f'<link rel="stylesheet" href="{asset_v("bands.css")}">', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Governança local'))
+        f'<link rel="stylesheet" href="{asset_v("flow.css")}"><link rel="stylesheet" href="{asset_v("bands.css")}">' + MF_SCRIPT, version=guide['version'], lang='pt-BR', title_pt='IMOBX | Governança local'))
 
     # The ideas behind IMOBX (decisions 15-16). Owner, 29 Oct: no quotation blocks or dates ("unorthodox, they do not
     # build familiarity"); his arguments in plain prose, in the "we" voice. Sources: SOURCE_WORDS WHY-04/09/10/11/12/15,
@@ -922,7 +927,7 @@ def build_guide(root, page, tr, esc, language_controls):
              + text(ax['rows'][0], 'div', 'class="v-axis v-row"') + v_cell(0) + v_cell(2)
              + text(ax['rows'][1], 'div', 'class="v-axis v-row"') + v_cell(1) + v_cell(3))
     chain += ('<section id="token">' + text(ch['token_fold'], 'h2') + text(ch['token_answer'], 'p', 'class="answer"')
-              + text(ch['bridge_title'], 'h3') + '<div class="v-matrix">' + cells + '</div>'
+              + text(ch['bridge_title'], 'h3') + text(ch['matrix_intro']) + '<div class="v-matrix">' + cells + '</div>'
               + fold(ch['token_more'],
                      text(ch['bridge_intro']) + text(ch['token_intro']) + text(ch['receives_text'])
                      + text(ch['token_purpose']) + text(ch['token_body']) + text(ch['review_note']) + text(ch['open_note'])

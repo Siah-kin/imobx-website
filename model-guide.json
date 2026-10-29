@@ -2930,7 +2930,11 @@
           "Keeps steady"
         ]
       ]
-    }
+    },
+    "matrix_intro": [
+      "O token tem dois trabalhos: fazer o projeto avançar e mantê-lo firme. Cada um toca os recursos e as pessoas.",
+      "The token has two jobs: moving the project forward and keeping it steady. Each job touches funding and people."
+    ]
   },
   "token_stub": {
     "title": [
