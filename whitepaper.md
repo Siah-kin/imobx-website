@@ -26,7 +26,7 @@ Housing problems exist worldwide; [UN-Habitat’s page on adequate housing](http
 
 A family takes three steps towards owning the home. First, IMOBX and the household agree the home, purchase price, monthly payment and amount credited towards purchase. Then each payment updates the household’s purchase record. Finally, once the purchase conditions are met, the required documents and registration transfer the whole home to the household.
 
-The purchase record shows the total paid and the part of that money that counts towards buying the home. Only that agreed part reduces the price still owed. It is part of the same payment, not extra income for IMOBX. Neither the village construction budget nor the separate two-loft contract is an announced sale price for a household.
+The purchase record shows the total paid and the part of that funding that counts towards buying the home. Only that agreed part reduces the price still owed. It is part of the same payment, not extra income for IMOBX. Neither the village construction budget nor the separate two-loft contract is an announced sale price for a household.
 
 Repair charges, late payments, temporary hardship and leaving the arrangement need their own agreed terms, and none is set. No refund formula or grace period has been selected. Before moving in, a household needs to know how the amounts already counted towards buying the home are treated if it leaves or if IMOBX cannot continue. These are open terms of the first offer, not decisions already made on the household’s behalf. See [payments and transfer](rent-to-own.html#payments) and [hardship and leaving](rent-to-own.html#hardship).
 
@@ -75,22 +75,22 @@ For the first project, each family’s agreement needs affordable payments in re
 
 <div class="pagebreak"></div>
 
-## 4. How the money would work
+## 4. How the funding would work
 
 The financial plan covers homes and continued service. The rules for payment and reinvestment are not agreed.
 
-The accounts identify each payer, purpose and permitted use, with separate records for rent, donations, grants, investments, service income and trading fees. If someone buys a token from another holder, the sale money normally goes to the seller. Only a separately collected project fee goes to IMOBX.
+The accounts identify each payer, purpose and permitted use, with separate records for rent, donations, grants, investments, service income and trading fees. If someone buys a token from another holder, the sale funding normally goes to the seller. Only a separately collected project fee goes to IMOBX.
 
-Under the plan, money is used in this order:
+Under the plan, funding is used in this order:
 
-1. Record the money actually received.
+1. Record the funding actually received.
 2. Set aside taxes and amounts promised for a specific purpose.
 3. Pay agreed property, maintenance and administration bills.
-4. Keep money for repairs, empty homes, promises made to families and unexpected costs.
+4. Keep funding for repairs, empty homes, promises made to families and unexpected costs.
 5. Fund new homes under the agreed budget.
-6. Pay investors only if money remains and a valid agreement allows it.
+6. Pay investors only if funding remains and a valid agreement allows it.
 
-Payments credited toward a family’s purchase are a commitment under its agreement. They are not a second receipt of cash. Using the money elsewhere must not make the promised home transfer impossible. Money locked in a trading market also cannot pay a building bill at the same time.
+Payments credited toward a family’s purchase are a commitment under its agreement. They are not a second receipt of cash. Using the funding elsewhere must not make the promised home transfer impossible. Funding locked in a trading market also cannot pay a building bill at the same time.
 
 ## 5. Trade fees as supplementary funding
 
@@ -100,13 +100,13 @@ A fee collected when people buy or sell the token is an optional source of fundi
 
 These receipts can help fund agreed work without creating more IMOBX tokens for that payment. They still depend on trading, so the plan is tested with little or no trading income. Higher fees may discourage buyers and sellers.
 
-The construction budget needs committed funding. A token’s market value does not establish money available to pay building bills. Payments for accepted outreach work come from a funded campaign budget. Eligibility, review, compensation disclosure and any point-redemption terms are defined before the programme pays participants.
+The construction budget needs committed funding. A token’s market value does not establish funding available to pay building bills. Payments for accepted outreach work come from a funded campaign budget. Eligibility, review, compensation disclosure and any point-redemption terms are defined before the programme pays participants.
 
 <div class="pagebreak"></div>
 
 ## 6. What self-sufficiency means
 
-Self-sufficiency has two separate tests. The first is whether recurring income covers IMOBX’s regular bills, repairs and the cost of keeping promises to families, which keeps the existing operation going. The second is building more homes, which needs additional money.
+Self-sufficiency has two separate tests. The first is whether recurring income covers IMOBX’s regular bills, repairs and the cost of keeping promises to families, which keeps the existing operation going. The second is building more homes, which needs additional funding.
 
 When a family becomes the owner, IMOBX stops receiving rent from that home. Forecasts must show how income continues afterward. Any ongoing service charge needs a real service, an affordable price and terms the resident agreed to.
 
@@ -137,7 +137,7 @@ A vote, including a token vote, cannot on its own change a family’s housing ag
 
 ## 8. What a token could represent
 
-The reason to consider a token is to raise money for budgeted housing construction and expansion and, on separate budget lines, IMOBX’s operations, branding and outreach, with a community helping introduce the housing project to partners and supporters. When investors buy new tokens, they pay the organisation that creates and sells them, and that organisation uses the money under the agreed funding terms. What buyers receive has not been chosen. A later sale between holders normally pays the seller; any fee received by IMOBX is recorded separately.
+The reason to consider a token is to raise funding for budgeted housing construction and expansion and, on separate budget lines, IMOBX’s operations, branding and outreach, with a community helping introduce the housing project to partners and supporters. When investors buy new tokens, they pay the organisation that creates and sells them, and that organisation uses the funding under the agreed funding terms. What buyers receive has not been chosen. A later sale between holders normally pays the seller; any fee received by IMOBX is recorded separately.
 
 Four paths are under study:
 
@@ -148,15 +148,15 @@ Four paths are under study:
 | C. Share of collected fees | A written right to receive part of the fees actually collected, if legally permitted. | Who creates the token, what buyers receive, costs, restrictions, risk of loss and the legal process for selling it. |
 | D. Investment in the operation | Shares recorded as tokens, or another written right stating what the investor receives. | The organisation responsible, the property and debts included, investor rights and the legal process for selling the investment. |
 
-These paths give different rights. A buyback pays a seller; burning the purchased tokens does not automatically pay remaining holders. Dividend rights require their own structure. Reinvesting income, sometimes called compounding, requires money actually received and a rule explaining its use. Locking tokens, called staking, does not create that income.
+These paths give different rights. A buyback pays a seller; burning the purchased tokens does not automatically pay remaining holders. Dividend rights require their own structure. Reinvesting income, sometimes called compounding, requires funding actually received and a rule explaining its use. Locking tokens, called staking, does not create that income.
 
-The outreach programme sets out tasks in writing, checks the work submitted and pays for work that meets the agreement from money already set aside. A community tool can show the task, who checked the work and whether it was paid for. Housing rights and residents’ voice do not depend on this programme.
+The outreach programme sets out tasks in writing, checks the work submitted and pays for work that meets the agreement from funding already set aside. A community tool can show the task, who checked the work and whether it was paid for. Housing rights and residents’ voice do not depend on this programme.
 
-Any later payment of profits or rental income depends on the chosen agreement. The agreement has to say which income can be paid to investors and which bills and promises are covered first. No date has been agreed for payments of profits or rental income to token holders. Money raised from funders, fees collected from token trading and income from running the homes have separate records. Investors receive only the rights written in their agreement.
+Any later payment of profits or rental income depends on the chosen agreement. The agreement has to say which income can be paid to investors and which bills and promises are covered first. No date has been agreed for payments of profits or rental income to token holders. Funding raised from funders, fees collected from token trading and income from running the homes have separate records. Investors receive only the rights written in their agreement.
 
 The plan is that each family owns its **whole home**. Sharing purchasing and administration across projects can save work. The proposal does not split any house between token buyers. An investment linked to IMOBX or to several projects has to state which properties, debts, income and shared risks it includes.
 
-The nonprofit idea is meant to keep money serving housing, and IMOBX’s legal form is not decided. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). The law does not say how such an organisation can offer investments, and we cannot simply promise those results as investor dividends. Brazilian advisers need to review participation without profit rights and any other permitted investment arrangement. A donation given for building homes keeps its agreed purpose.
+The nonprofit idea is meant to keep funding serving housing, and IMOBX’s legal form is not decided. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). The law does not say how such an organisation can offer investments, and we cannot simply promise those results as investor dividends. Brazilian advisers need to review participation without profit rights and any other permitted investment arrangement. A donation given for building homes keeps its agreed purpose.
 
 A membership record and an investment do different jobs. A membership record does not itself give property ownership or rental income. If an investment is offered, its agreement must say who owes what, who can buy, how payments work and how someone can sell or leave. Brazil’s securities-market regulator, the CVM, looks at actual rights, not just names such as “utility” or “governance”, in its [Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). That opinion explains how the CVM assesses tokens; it does not approve any IMOBX offer.
 
@@ -166,7 +166,7 @@ The token model and its rights remain under research. Promoters need to disclose
 
 ## 9. What becomes digital
 
-Under the plan, people can follow money in and out, see agreed decisions and check payments. A blockchain is a shared digital record that shows who approved a payment and when, and it can hold the payment record. It does not check the quality of a roof or replace the family’s agreement.
+Under the plan, people can follow funding in and out, see agreed decisions and check payments. A blockchain is a shared digital record that shows who approved a payment and when, and it can hold the payment record. It does not check the quality of a roof or replace the family’s agreement.
 
 [Arctide](https://arctide.app/) and [Argus](https://argus.world/) are examples of exchanges, or trading platforms, on the Arc network, a blockchain. Their sites show that such platforms exist; they do not show any IMOBX use or partnership.
 
@@ -180,7 +180,7 @@ Tasks need a responsible person, deadline and budget. If someone leaves a role, 
 
 Software assistants can organize documents and remind people about unfinished work, and blockchain records can show payment amounts and destinations. The agreed rules still determine who decides or spends. This method has not been tested: it needs agreement with participants and a working pilot. See [daily decisions and tasks](transparency.html#faq-flock-siah).
 
-Families pay in reais. IMOBX keeps money for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. No provider is confirmed for IMOBX. Residents do not need crypto wallets. See the [money path](transparency.html#settlement) and the [payment-service requirements](transparency.html#ramp-options).
+Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. No provider is confirmed for IMOBX. Residents do not need crypto wallets. See the [funding path](transparency.html#settlement) and the [payment-service requirements](transparency.html#ramp-options).
 
 <div class="pagebreak"></div>
 
@@ -194,11 +194,11 @@ After families move in, the plan follows at least three months before reviewing 
 |---|---|
 | Homes and agreements | Written proof of the right to use the property and a signed family agreement before moving in. |
 | Building | What was delivered, actual cost and any delay. |
-| Money | Monthly checks of all money received, paid and set aside. |
+| Funding | Monthly checks of all funding received, paid and set aside. |
 | Families | Repair requests, unresolved issues, participation and purchase progress. |
 | Continuing the project | Bills covered during low trading and funding for the next homes. |
 
-Service targets depend on the first project’s needs and resident participation. An unresolved property right, funding gap or unsafe building prevents the affected stage from proceeding. Expansion requires evidence that there is enough money for promises already made. Token prices and holder counts do not measure how well a family is housed.
+Service targets depend on the first project’s needs and resident participation. An unresolved property right, funding gap or unsafe building prevents the affected stage from proceeding. Expansion requires evidence that there is enough funding for promises already made. Token prices and holder counts do not measure how well a family is housed.
 
 ## 11. Partner participation
 
@@ -220,6 +220,6 @@ The legal registration, property documents, permissions and signed agreements ne
 
 The public [risk list](reference.html#risks) identifies construction, household, cash, offering and software risks, with reviewing roles still to be appointed. The complete financial model is not ready yet: it needs site costs in reais, affordable payments, repair and delay scenarios, and zero token-trading income. This paper does not show that income covers all costs or that the project can work across Brazil.
 
-The CVM’s [Resolution 249](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm) of 13 October 2026 creates an experimental programme for distributed-ledger technology, the technical name for shared digital records such as a blockchain. Article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in those tests; it does not authorise a public offering. The project’s legal form and any way to raise the money need their own review.
+The CVM’s [Resolution 249](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm) of 13 October 2026 creates an experimental programme for distributed-ledger technology, the technical name for shared digital records such as a blockchain. Article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in those tests; it does not authorise a public offering. The project’s legal form and any way to raise the funding need their own review.
 
 Project updates show agreements signed, funding received and work completed, alongside open questions and responsible roles. The [source list](reference.html#sources) shows which statement each source supports. The [version record](reference.html#versions) identifies this edition for citation; private household documents stay unpublished.

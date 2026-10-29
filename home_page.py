@@ -8,7 +8,7 @@ Portuguese first; English and Dutch beside it. The page carries data-pt and data
 from i18n/nl.json, keyed by the English. The Dutch of the approved mock is kept here as well, and the build
 stops if nl.json ever disagrees with it, so the three languages cannot drift apart.
 
-One warm thread on a teal page: the card and its button on the first screen, the money that leaks away in the
+One warm thread on a teal page: the card and its button on the first screen, the funding that leaks away in the
 comparison, the same button at the end (brief, section 7b: at most one orange zone per screen height)."""
 import html
 import json
@@ -203,13 +203,13 @@ method = (
     + t('a', 'Etapas do projeto', 'Project stages', 'Projectfasen', 'href="roadmap.html"')
     + '</p></section>')
 
-# ---------------------------------------------------------------- 3. where each month's money goes
+# ---------------------------------------------------------------- 3. where each month's funding goes
 ways = (
     '<section id="pagamento">' + anchors('tres-caminhos', 'dinheiro', 'custos')
-    + t('h2', 'Para onde vai o dinheiro de cada mês', "Where each month's money goes", 'Waar het geld van elke maand naartoe gaat')
+    + t('h2', 'Para onde vai o dinheiro de cada mês', "Where each month's funding goes", 'Waar het geld van elke maand naartoe gaat')
     + '<ol class="ways">'
     '<li class="way-loss">' + t('h3', 'Alugar', 'Renting', 'Huren') + '<div class="way-fig">' + rent_svg + '</div>'
-    + t('p', 'O dinheiro vai embora.', 'The money is gone.', 'Het geld is weg.', 'class="verdict"')
+    + t('p', 'O dinheiro vai embora.', 'The funding is gone.', 'Het geld is weg.', 'class="verdict"')
     + '<p>' + t('span', 'O aluguel de contrato novo subiu 9,13% nos 12 meses até setembro de 2026, contra 4,58% de inflação (',
         'Rent on new contracts rose 9.13% in the 12 months to September 2026, against 4.58% inflation (',
         'De huur van nieuwe contracten steeg met 9,13% in de 12 maanden tot september 2026, tegenover 4,58% inflatie (')
@@ -271,7 +271,7 @@ roles = [
       "Donations and grants for now. Investment only once the cooperative's legal form allows it, and only on written terms.",
       'Voorlopig donaties en subsidies. Investeren pas als de rechtsvorm van de coöperatie het toestaat, en alleen op schriftelijke voorwaarden.'),
      ('Conversamos sobre a finalidade do dinheiro e quem pode recebê-lo legalmente.',
-      'We talk about what the money is for and who can legally receive it.',
+      'We talk about what the funding is for and who can legally receive it.',
       'We bespreken waar het geld voor is en wie het wettelijk mag ontvangen.')),
 ]
 join = (

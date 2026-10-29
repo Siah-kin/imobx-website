@@ -11,11 +11,11 @@
 
 **Project proposal · Version 0.8, 24 October 2026**
 
-### 1. Homes with a path to ownership
+### 1. Houses with a path to ownership
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. Under the plan, a family rents a home under an agreement explaining how it becomes the owner. The organization arranges access to property, contracts construction and manages repairs and accounts. The first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
 
-**What exists today.** Rafael’s dated village budget and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available homes. Rafael describes his construction experience and local knowledge; his references are not yet listed. John works on communication and digital tools.
+**What exists today.** Rafael’s dated village budget and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael describes his construction experience and local knowledge; his references are not yet listed. John works on communication and digital tools.
 
 **What is not decided.** The property. The home’s price, monthly payment and time to pay, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, the terms for using each property, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The rights of any token, which is a digital record of a right that can be bought and sold.
 
@@ -23,8 +23,8 @@ IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. Under the pl
 
 | Part | How it works |
 |---|---|
-| Homes | Documents showing ownership or the legal right to use the property, a building budget and a clear family agreement. |
-| Money | Separate records for funding, payments, costs and amounts set aside. |
+| Houses | Documents showing ownership or the legal right to use the property, a building budget and a clear family agreement. |
+| Funding | Separate records for funding, payments, costs and amounts set aside. |
 | Decisions | Defined powers for residents, staff and any investors. |
 | Services | A way to request repairs, follow progress and question decisions. |
 
@@ -44,7 +44,7 @@ This guide explains how a request leads to completed work, a check that it meets
 
 ### Rafael’s village proposal
 
-Rafael’s plan brings together 45 m² two-level homes around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [illustration](properties.html#visao-rafael) shows the intended community, rather than a completed development, and it was made with an image generator.
+Rafael’s plan brings together 45 m² two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [illustration](properties.html#visao-rafael) shows the intended community, rather than a completed development, and it was made with an image generator.
 
 On 30 November 2025, Rafael supplied building calculations using CUB and SINAPI, Brazilian cost references. His revised per-home budget is:
 
@@ -57,7 +57,7 @@ On 30 November 2025, Rafael supplied building calculations using CUB and SINAPI,
 | Legal and design | 627 |
 | **Total** | **27,777** |
 
-The plan covers at least 36 homes built together over 12 months: **36 × US$27,777 = US$999,972**. These are Rafael’s dated project figures, not a finished-home price published by the indexes. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs, and the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains what CUB covers; neither gives a price for these homes. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs.
+The plan covers at least 36 houses built together over 12 months: **36 × US$27,777 = US$999,972**. These are Rafael’s dated project figures, not a finished-home price published by the indexes. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs, and the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains what CUB covers; neither gives a price for these houses. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs.
 
 ### The separate two-loft case
 
@@ -79,11 +79,11 @@ Under the plan, a family rents the home and pays the agreed monthly amount in re
 
 For the first household, the home’s price, monthly payment and time to pay have not been set, and neither has how much of each payment counts towards buying the home. Rafael’s construction budgets are evidence for assessing building costs, not household sale offers. The household does not need to buy an investment token or use a crypto wallet. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
 
-Repair charges, missed payments, temporary hardship and leaving need separate terms. If a family leaves, what happens to the money already counted towards buying its home is not agreed. No refund formula or grace period is established here. These terms belong in the offer the household assesses before agreeing to move in.
+Repair charges, missed payments, temporary hardship and leaving need separate terms. If a family leaves, what happens to the funding already counted towards buying its home is not agreed. No refund formula or grace period is established here. These terms belong in the offer the household assesses before agreeing to move in.
 
-### What the money pays for
+### What the funding pays for
 
-The budget covers taxes, property costs, maintenance, administration, the cost of keeping promises to families and money set aside for unexpected expenses. New construction and any investor payments need their own agreed funding and terms. Donations and grants keep their specified uses.
+The budget covers taxes, property costs, maintenance, administration, the cost of keeping promises to families and funding set aside for unexpected expenses. New construction and any investor payments need their own agreed funding and terms. Donations and grants keep their specified uses.
 
 Each amount received is counted once. An amount credited toward buying the home records the family’s progress; it is not another receipt of cash. The spending plan needs to preserve the organization’s ability to complete the promised home transfer.
 
@@ -106,15 +106,15 @@ The first project needs funding for its contracted work. Sources under considera
 
 ### New investment and later trading
 
-Under the token proposal, investors buy tokens directly from IMOBX to help fund its work. What buyers receive in return is not agreed. A later sale between investors normally pays the seller. A separately collected trading fee can provide additional money to the project where the agreement allows it.
+Under the token proposal, investors buy tokens directly from IMOBX to help fund its work. What buyers receive in return is not agreed. A later sale between investors normally pays the seller. A separately collected trading fee can provide additional funding to the project where the agreement allows it.
 
 The housing budget needs to work through periods of little or no trading income. The accounts show the fees actually received and their agreed use.
 
-### Money available for building
+### Funding available for building
 
-Funds committed to a trading market are unavailable for construction while that commitment lasts. The accounts distinguish money available for bills, amounts reserved for families and repairs, and other commitments.
+Funds committed to a trading market are unavailable for construction while that commitment lasts. The accounts distinguish funding available for bills, amounts reserved for families and repairs, and other commitments.
 
-New investment can pay for agreed work before families start paying rent. First, IMOBX needs its legal form, documents showing the right to use the property, a budget and a legally allowed way to raise that money. Forecast rent is not money already received. Payments to investors depend on the chosen agreement and actual available funds. See the [funding questions](transparency.html#faq-funding).
+New investment can pay for agreed work before families start paying rent. First, IMOBX needs its legal form, documents showing the right to use the property, a budget and a legally allowed way to raise that funding. Forecast rent is not funding already received. Payments to investors depend on the chosen agreement and actual available funds. See the [funding questions](transparency.html#faq-funding).
 
 ### How outreach work is paid
 
@@ -170,7 +170,7 @@ Under the plan, digital services help people read agreements, request repairs, f
 
 ### Following a payment
 
-Families pay in reais. IMOBX keeps money for Brazilian bills. Any approved digital payment needs a provider that accepts the organization and its activities, a record of conversion costs and a tested return to the bank. No provider is confirmed for IMOBX. See the [money path](transparency.html#settlement).
+Families pay in reais. IMOBX keeps funding for Brazilian bills. Any approved digital payment needs a provider that accepts the organization and its activities, a record of conversion costs and a tested return to the bank. No provider is confirmed for IMOBX. See the [funding path](transparency.html#settlement).
 
 <div id="distribution-accounting-and-the-legacy-euler-approach"></div>
 
@@ -190,16 +190,16 @@ The complete process, including payment failures and lost access, still needs to
 
 ## 7. Development stages
 
-IMOBX’s development plan connects the first homes in Rio with resident participation, transparent accounts and additional funding. Legal preparation, community discussions and digital trials can progress in parallel. Construction dates depend on each project, funding and permissions.
+IMOBX’s development plan connects the first houses in Rio with resident participation, transparent accounts and additional funding. Legal preparation, community discussions and digital trials can progress in parallel. Construction dates depend on each project, funding and permissions.
 
 | Stage | Intended result |
 |---|---|
 | Legal structure and property | A responsible organization, documents showing the legal right to use the property and reviewed housing agreements. |
 | Resident participation | A say in shared matters without buying investment tokens, with defined budgets and review procedures. |
-| First homes | Funded construction, safe occupancy and records of household payments and purchase progress. |
+| First houses | Funded construction, safe occupancy and records of household payments and purchase progress. |
 | Payment records people can check | A demonstration of USDC, a digital currency designed to track the US dollar, received and payments approved on Arc, a blockchain network, linked to accounts and evidence. |
 | Funding and account review | Records of where funding comes from, which spending is approved and how promises to families are paid for. |
-| More homes and owner partnerships | Further projects with local teams and possible rent-to-own services for participating owners. |
+| More houses and owner partnerships | Further projects with local teams and possible rent-to-own services for participating owners. |
 
 ### Following an operating project
 
@@ -219,7 +219,7 @@ The website explains the proposal now. As the project develops, reports show sig
 
 ## 8. Project status and next steps
 
-The housing operation and financial token remain in preparation. Published drawings and budgets help explain the intended work; they do not establish completed homes or an available investment.
+The housing operation and financial token remain in preparation. Published drawings and budgets help explain the intended work; they do not establish completed houses or an available investment.
 
 | Area | Current position |
 |---|---|
@@ -239,4 +239,4 @@ The readiness review brings together the property documents, site-specific budge
 
 Planned reports distinguish proposed, signed, paid and completed work. Residents have access to their own agreements and purchase records. Public accounts explain project spending without exposing household documents.
 
-The [project reference](reference.html#chapters) maps Rafael’s manuscript chapters to the current proposal and sources. It identifies open work, including the complete financial model and professional review. [Photos and drawings](properties.html) show the supplied design and site material with captions; they are not a listing of available homes. No investment is offered through this guide.
+The [project reference](reference.html#chapters) maps Rafael’s manuscript chapters to the current proposal and sources. It identifies open work, including the complete financial model and professional review. [Photos and drawings](properties.html) show the supplied design and site material with captions; they are not a listing of available houses. No investment is offered through this guide.

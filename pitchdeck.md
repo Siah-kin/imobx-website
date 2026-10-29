@@ -56,13 +56,13 @@ His US$27,777 per-home plan uses CUB and SINAPI, Brazilian building-cost referen
 
 - Shared works US$1,500 · design and legal work US$627.
 
-- The village plan assumes at least 36 homes built together.
+- The village plan assumes at least 36 houses built together.
 
 
 
 Source: [Whitepaper, section 3: the costs](whitepaper.html#3-the-cost-proposal-already-supplied). Shows how Rafael supplied these figures. It is not an independent check of them.
 
-**Presenter notes:** On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six homes total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together.
+**Presenter notes:** On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six houses total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together.
 
 
 
@@ -80,7 +80,7 @@ The household could see what it has paid towards the purchase and how much remai
 
 
 
-**Presenter notes:** The first homes are still being planned. This slide does not offer a home. The first home’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
+**Presenter notes:** The first houses are still being planned. This slide does not offer a home. The first home’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
 
 
 
@@ -92,19 +92,19 @@ Keep rent, donations, grants, service income and trading fees separately identif
 
 - Pay taxes, repairs and agreed running costs.
 
-- Keep money for empty homes and promises made to families.
+- Keep funding for empty houses and promises made to families.
 
-- Fund more homes; consider any permitted investor payments afterward.
-
-
-
-**Presenter notes:** Money credited toward a family’s purchase is not a second receipt of cash. Money paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Money locked in a trading market is not also available to build homes.
+- Fund more houses; consider any permitted investor payments afterward.
 
 
 
-## 6. Pay today’s bills and plan the next homes
+**Presenter notes:** Funding credited toward a family’s purchase is not a second receipt of cash. Funding paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Funding locked in a trading market is not also available to build houses.
 
-Running the existing homes and building more need separate budgets.
+
+
+## 6. Pay today’s bills and plan the next houses
+
+Running the existing houses and building more need separate budgets.
 
 
 
@@ -116,7 +116,7 @@ Running the existing homes and building more need separate budgets.
 
 
 
-**Presenter notes:** Having a thousand homes does not itself show that the accounts balance. One-off grants can help construction but do not become continuing income. Any ongoing charge needs a real, affordable service under agreed terms.
+**Presenter notes:** Having a thousand houses does not itself show that the accounts balance. One-off grants can help construction but do not become continuing income. Any ongoing charge needs a real, affordable service under agreed terms.
 
 
 
@@ -160,7 +160,7 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 
 
-## 9. A possible token could fund homes, operations and outreach
+## 9. A possible token could fund houses, operations and outreach
 
 Buyers of new tokens would pay the organisation that creates and sells them. Their rights are still undecided.
 
@@ -188,7 +188,7 @@ The roadmap names proposed roles and conditions for proceeding.
 
 
 
-- Property rights, household terms and budgets underpin the first homes.
+- Property rights, household terms and budgets underpin the first houses.
 
 - Digital payment trials and token research can progress alongside them.
 
@@ -198,11 +198,11 @@ The roadmap names proposed roles and conditions for proceeding.
 
 Source: [IMOBX project stages](https://siah-kin.github.io/imobx-website/roadmap.html). Sets out the stages and what must be ready in each. It sets no dates.
 
-**Presenter notes:** The six stages are legal structure and property; resident participation; first homes; payment records people can check; funding and account review; more homes and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
+**Presenter notes:** The six stages are legal structure and property; resident participation; first houses; payment records people can check; funding and account review; more houses and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
 
 
 
-## 11. Measure homes and promises kept
+## 11. Measure houses and promises kept
 
 Follow actual costs, accounts and families’ experience.
 
@@ -210,13 +210,13 @@ Follow actual costs, accounts and families’ experience.
 
 - Check completed work, final cost and delays.
 
-- Check money received and paid against the records; report repairs and unresolved issues.
+- Check funding received and paid against the records; report repairs and unresolved issues.
 
 - Show participation and progress toward owning the home.
 
 
 
-**Presenter notes:** Agree response times and affordability targets with local participants. Report homes as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. The published records do not yet document completed home transfers or committed capital.
+**Presenter notes:** Agree response times and affordability targets with local participants. Report houses as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. The published records do not yet document completed home transfers or committed capital.
 
 
 

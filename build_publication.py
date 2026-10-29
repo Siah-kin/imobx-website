@@ -76,15 +76,15 @@ MENU = [
         ('rent-to-own.html', 'leaving', 'Saída ou atraso no pagamento', 'Leaving or missed payments', 'What if you can’t pay for a while, or want to leave?'),
     ]),
     ('transparency.html', 'Custos e financiamento', 'Costs and funding', [
-        ('transparency.html', 'first-homes', 'Custo da obra', 'Building costs', 'What does it cost to build a home?'),
-        ('transparency.html', 'money-sources', 'Origem do dinheiro', 'Sources of money', 'Funding and spending: where the money comes from, and what it pays first'),
+        ('transparency.html', 'first-homes', 'Custo da obra', 'Building costs', 'What does it cost to build a house?'),
+        ('transparency.html', 'money-sources', 'Origem dos recursos', 'Sources of funding', 'Funding and spending: where the funding comes from, and what it pays first'),
         ('transparency.html', 'payment-route', 'Conferência dos pagamentos', 'Payment checks', 'Who checks each payment?'),
         ('transparency.html', 'reports', 'Relatórios publicados', 'Published reports', 'What will we publish?'),
     ]),
     # Owner, 28 Oct: a menu item is a page, and each entry in its list is a section of that page.
     ('roadmap.html', 'Desenvolvimento do projeto', 'Project development', [
         ('roadmap.html', 'stages', 'Onde estamos agora', 'Where we are now', 'What happens now, and what comes next?'),
-        ('roadmap.html', 'homes', 'Casas em estudo', 'Homes being considered', 'Which homes are being considered?'),
+        ('roadmap.html', 'homes', 'Imóveis candidatos', 'Candidate properties', 'Which properties are candidates for our first rent-to-own tenant?'),
         ('roadmap.html', 'terms', 'O que está decidido', 'What is decided', 'What is decided, and what is not yet'),
     ]),
     ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
@@ -99,14 +99,14 @@ MENU = [
     ('governance.html', 'Governança local', 'Local governance', [
         ('governance.html', 'now', 'Quem decide agora', 'Who decides now', 'Who decides now?'),
         ('governance.html', 'token-rules', 'Regras dos detentores', 'Rules for holders', 'Who decides about the token?'),
-        ('governance.html', 'residents', 'Os moradores', 'Residents', 'Who decides once families live in the homes?'),
+        ('governance.html', 'residents', 'Os moradores', 'Residents', 'Who decides once families live in the houses?'),
         ('governance.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
     ]),
     ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
         ('resources.html', 'title-reference', 'Pessoas e fontes', 'People and sources', 'Who is behind IMOBX, and where our figures come from'),
         ('resources.html', 'title-whitepaper', 'Proposta completa', 'Full proposal', 'The full proposal (whitepaper)'),
         ('resources.html', 'title-pitchdeck', 'Apresentação para parceiros', 'Partner presentation', 'Presentation for partners'),
-        ('resources.html', 'title-devsheet', 'Guia de construção', 'Building guide', 'Guide to building the first homes'),
+        ('resources.html', 'title-devsheet', 'Guia de construção', 'Building guide', 'Guide to building the first houses'),
     ]),
 ]
 # Pages without their own menu item light up their parent; the lofts page belongs to Project development.
@@ -234,7 +234,7 @@ RESOURCE_CATALOG = [
      'archive': True, 'links': [('pitchdeck.pdf','PDF','PDF'),
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes')]},
     {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': VERSION,
-     'shelf_pt': 'Guia para construir as primeiras casas', 'shelf_en': 'Guide to building the first homes',
+     'shelf_pt': 'Guia para construir as primeiras casas', 'shelf_en': 'Guide to building the first houses',
      'shelf_description_pt': 'Plantas das casas, como os moradores participam e as etapas de obra que propomos.',
      'shelf_description_en': 'House plans, how residents take part, and the building stages we propose.',
      'description_pt': 'Planos de moradia, participação dos moradores e etapas de desenvolvimento propostas.',
@@ -589,5 +589,5 @@ archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pd
         + sorted(str(p.relative_to(ROOT)) for p in ROOT.glob('*.html'))
         + sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'research').rglob('*.html'))
         + sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'assets').rglob('*') if p.is_file()),
-        f'IMOBX document collection / {LABEL_EN}\nStart with reference.html or project-reference-pt.pdf for status, sources and the manuscript chapter map.\nThe project is in preparation. These documents do not offer an investment.\nThe paper, deck and working guide are English drafts. The project reference, roadmap, questions and money page are Portuguese/English.\nThe bundle includes the website HTML and assets. External sources require an internet connection.\n')
+        f'IMOBX document collection / {LABEL_EN}\nStart with reference.html or project-reference-pt.pdf for status, sources and the manuscript chapter map.\nThe project is in preparation. These documents do not offer an investment.\nThe paper, deck and working guide are English drafts. The project reference, roadmap, questions and funding page are Portuguese/English.\nThe bundle includes the website HTML and assets. External sources require an internet connection.\n')
 print('Built document exports, on-page resources, the resources page, media kit and download archives.')

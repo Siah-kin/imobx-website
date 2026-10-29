@@ -56,7 +56,7 @@
           ],
           [
             "Ajuda a preparar o projeto. Não pode gastar nem assinar pela IMOBX.",
-            "Helps prepare the project. Cannot spend money or sign for IMOBX."
+            "Helps prepare the project. Cannot spend IMOBX funding or sign for IMOBX."
           ]
         ],
         [
@@ -200,12 +200,12 @@
         ],
         [
           [
-            "Falta de dinheiro ou dependência de negociação do token.",
+            "Falta de recursos ou dependência de negociação do token.",
             "Cash shortfall or dependence on token trading."
           ],
           [
-            "Dinheiro guardado, lista de contas e compromissos a pagar, e orçamento que não dependa de taxas de negociação.",
-            "Money set aside, a list of bills and promises to be paid, and a budget that works with no token-trading income."
+            "Recursos guardado, lista de contas e compromissos a pagar, e orçamento que não dependa de taxas de negociação.",
+            "Funding set aside, a list of bills and promises to be paid, and a budget that works with no token-trading income."
           ],
           [
             "Administração e contador. Nomeações pendentes.",
@@ -333,7 +333,7 @@
       "url": "https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/",
       "scope": [
         "Cerca de 5,77 milhões de moradias em falta em 2024, pelo critério da FJP (conta moradias, não pessoas em favelas).",
-        "About 5.77 million homes short in 2024, by FJP’s own measure (a count of homes, not of people in favelas)."
+        "About 5.77 million dwellings short in 2024, by FJP’s own measure (a count of dwellings, not of people in favelas)."
       ]
     }
   ],

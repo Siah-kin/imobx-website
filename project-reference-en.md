@@ -7,7 +7,7 @@
 | Person or group | Role in the plan | Where it stands |
 | --- | --- | --- |
 | Rafael Britto | Founder; a builder in Rio de Janeiro. Construction, budgets and local contacts. | No written duties yet. |
-| John | Communication, documentation and coordination of digital tools. | Helps prepare the project. Cannot spend money or sign for IMOBX. |
+| John | Communication, documentation and coordination of digital tools. | Helps prepare the project. Cannot spend IMOBX funding or sign for IMOBX. |
 | IMOBX | Project organisation, agreements and account reporting. | Legal form and legal representatives are being defined. |
 | OLYMPUS | Proposed builder, linked to Rafael; no contract signed. | Hired only after the work is agreed, prices are compared and someone independent of the builder approves. |
 | Residents | Housing terms and participation in shared matters. | Rules and representatives to be agreed with residents. |
@@ -47,4 +47,4 @@ Arc’s own description of its network and payment tools.
 
 [Fundação João Pinheiro: 2024 housing deficit](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
-About 5.77 million homes short in 2024, by FJP’s own measure (a count of homes, not of people in favelas).
+About 5.77 million dwellings short in 2024, by FJP’s own measure (a count of dwellings, not of people in favelas).

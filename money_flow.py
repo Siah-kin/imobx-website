@@ -1,16 +1,16 @@
-"""'How the money moves through one home': the rent-to-own diagram (owner, 25 Oct 2026), drawn in the same
+"""'How the funding moves through one home': the rent-to-own diagram (owner, 25 Oct 2026), drawn in the same
 vessel-and-pipe language as the homepage's 'Three ways to house a family'. Shapes are SVG; every word is page text,
 so it switches language with the rest of the site and the release checks can read it."""
 
 STEPS = [
-    (('Fundo para casas', 'Fund for homes'),
-     ('Dinheiro para construir. O que sobra de cada pagamento, depois dos custos e das reservas, vai para a próxima casa.', 'Money for building. What is left of each payment, after costs and reserves, goes into the next home.')),
+    (('Fundo para casas', 'Fund for new houses'),
+     ('Recursos para construir. O que sobra de cada pagamento, depois dos custos e das reservas, vai para a próxima casa.', 'Funding for building. What is left of each payment, after costs and reserves, goes into the next house.')),
     (('Obra', 'Building'),
      ('Nossa construtora faz a obra, e o custo do terreno e da construção fica registrado.', 'Our construction company builds it, and the cost of land and building is written down.')),
     (('A família entra', 'The family moves in'),
      ('O contrato é assinado antes da mudança.', 'The agreement is signed before moving in.')),
     (('O pagamento de cada mês', 'Each month’s payment'),
-     ('Parte compra a casa; outra parte paga manutenção e consertos.', 'Part buys the home; another part pays for upkeep and repairs.')),
+     ('Parte compra a casa; outra parte paga manutenção e consertos.', 'Part buys the house; another part pays for upkeep and repairs.')),
     (('A casa é da família', 'The home is the family’s'),
      ('Quando terminar de pagar o combinado, a escritura fica no seu nome.',
       'When you have paid what was agreed, the deed is in your name.')),
@@ -29,7 +29,7 @@ SVG = '''<svg class="money-flow-art" viewBox="0 0 1000 240" aria-hidden="true">
 <path d="M40 70H160L150 175H50Z" fill="#fff"/>
 <g clip-path="url(#mf-tank)"><rect class="mf-water mf-tank-water" x="30" y="100" width="140" height="90" fill="#4A90A4" fill-opacity=".55"/></g>
 <path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M40 70H160L150 175H50Z"/><path fill="none" stroke="#193D4E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M32 70h136"/>
-<!-- money for building runs to the building site -->
+<!-- funding for building runs to the building site -->
 <path class="mf-stream mf-pipe-out" fill="none" stroke="#4A90A4" stroke-width="6" stroke-linecap="round" d="M154 140H246"/>
 <!-- building: a bucket still being made -->
 <path d="M240 70H360L350 175H250Z" fill="#fff"/>
@@ -73,18 +73,18 @@ SCRIPT = ('<script>document.addEventListener("DOMContentLoaded",function(){var f
           'if(x.isIntersecting){f.classList.add("is-flowing");o.disconnect();}});},{threshold:.35}).observe(f);});</script>')
 
 
-# ---------- Funding page (25 Oct 2026): the order money is used, drawn as a cascade ----------
+# ---------- Funding page (25 Oct 2026): the order funding is used, drawn as a cascade ----------
 CASCADE_STEPS = [
-    (('Impostos e dinheiro com destino', 'Taxes and money with a set purpose'),
+    (('Impostos e recursos com destino', 'Taxes and funding with a set purpose'),
      ('Pagos ou separados antes de qualquer outra coisa.', 'Paid or set aside before anything else.')),
     (('Contas', 'Bills'),
      ('Contas do imóvel, manutenção e administração, como combinado.', 'Property bills, upkeep and running costs, as agreed.')),
     (('Reservas', 'Reserves'),
-     ('Reparos, casas vazias, promessas feitas às famílias e imprevistos.', 'Repairs, empty homes, promises made to families and the unexpected.')),
-    (('Novas casas', 'New homes'),
+     ('Reparos, casas vazias, promessas feitas às famílias e imprevistos.', 'Repairs, empty houses, promises made to families and the unexpected.')),
+    (('Novas casas', 'New houses'),
      ('Só dentro do orçamento combinado.', 'Only within the agreed budget.')),
     (('Investidores, por último', 'Investors, last'),
-     ('Só se sobrar dinheiro e um acordo escrito válido permitir.', 'Only if money remains and a valid written agreement allows it.')),
+     ('Só se sobrarem recursos e um acordo escrito válido permitir.', 'Only if funding remains and a valid written agreement allows it.')),
 ]
 
 

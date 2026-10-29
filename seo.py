@@ -13,12 +13,12 @@ IMAGE = LIVE + 'assets/homepage.jpg'
 
 # file: (title PT, title EN, description PT)
 PAGES = {
-    'index.html': ('IMOBX Rio: aluguel com opção de compra, sem entrada', 'IMOBX Rio: rent-to-own homes, no down payment',
+    'index.html': ('IMOBX Rio: aluguel com opção de compra, sem entrada', 'IMOBX Rio: rent-to-own houses, no down payment',
                    'Estamos preparando moradias com aluguel e compra para famílias no Rio de Janeiro, como cooperativa de bairro. Em preparação: ainda não há casas à venda.'),
     'rent-to-own.html': ('Como funciona o aluguel com compra da casa · IMOBX Rio', 'How rent-to-own would work · IMOBX Rio',
                          'Parte de cada pagamento mensal vai para a compra da casa, sem entrada. Veja como seriam o preço, os reparos e a saída.'),
-    'transparency.html': ('Quanto custa uma casa e para onde vai o dinheiro · IMOBX Rio', 'What a home costs and where the money goes · IMOBX Rio',
-                          'Os custos de construção, a ordem em que o dinheiro é gasto e quem pode financiar a primeira etapa.'),
+    'transparency.html': ('Quanto custa uma casa e para onde vão os recursos · IMOBX Rio', 'What a home costs and where the funding goes · IMOBX Rio',
+                          'Os custos de construção, a ordem em que o recurso é gasto e quem pode financiar a primeira etapa.'),
     'roadmap.html': ('Onde estamos e o que vem depois · IMOBX Rio', 'Where we are and what comes next · IMOBX Rio',
                      'A etapa atual do projeto, as próximas três etapas e o que ainda não está decidido.'),
     'blockchain.html': ('Como funcionaria um bairro na blockchain · IMOBX Rio', 'How would a neighbourhood work on a blockchain? · IMOBX Rio',

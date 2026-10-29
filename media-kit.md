@@ -35,27 +35,27 @@ Use readable type such as Arial. Keep backgrounds white and corners square. Expl
 
 ## 3. Short description in English
 
-IMOBX is preparing a first housing project in Rio de Janeiro. Families would rent a home under a clear agreement explaining how they can become its owner. Local builders, residents and supporters would help make the project work. Shared decisions and digital tools for following work and money are being developed. IMOBX’s legal form, the terms for using each property and any token rights are still being decided.
+IMOBX is preparing a first housing project in Rio de Janeiro. Families would rent a home under a clear agreement explaining how they can become its owner. Local builders, residents and supporters would help make the project work. Shared decisions and digital tools for following work and funding are being developed. IMOBX’s legal form, the terms for using each property and any token rights are still being decided.
 
 ## 4. Descrição curta em português
 
-A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As famílias alugariam uma casa com um contrato claro explicando como podem se tornar donas dela. Construtores locais, moradores e apoiadores ajudariam a fazer o projeto funcionar. Estão sendo desenvolvidas decisões compartilhadas e ferramentas digitais para acompanhar trabalho e dinheiro. A forma jurídica, as condições de uso de cada imóvel e os direitos de um eventual token ainda estão em definição.
+A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As famílias alugariam uma casa com um contrato claro explicando como podem se tornar donas dela. Construtores locais, moradores e apoiadores ajudariam a fazer o projeto funcionar. Estão sendo desenvolvidas decisões compartilhadas e ferramentas digitais para acompanhar trabalho e recursos. A forma jurídica, as condições de uso de cada imóvel e os direitos de um eventual token ainda estão em definição.
 
 ### Rafael's neighbourhood vision
 
-On 30 November 2025, Rafael described two-level homes around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. These features aim to support lower household costs, neighbourly life and learning. The [illustration](properties.html#visao-rafael) shows a plan, not a completed village. The January two-loft contract is a separate case. Costs, maintenance arrangements and any claimed savings need evidence from the chosen project.
+On 30 November 2025, Rafael described two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. These features aim to support lower household costs, neighbourly life and learning. The [illustration](properties.html#visao-rafael) shows a plan, not a completed village. The January two-loft contract is a separate case. Costs, maintenance arrangements and any claimed savings need evidence from the chosen project.
 
 ## 5. Project facts and images
 
 IMOBX is in preparation. Its legal form, the terms for using each property and any token rights remain undecided. No investment, guaranteed return, funding award or regulatory approval is established by these documents.
 
-Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 homes. The separate two-loft contract is US$27,777 for both together. The [project paper](whitepaper.html#3-the-cost-proposal-already-supplied) provides the dates and breakdown.
+Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 houses. The separate two-loft contract is US$27,777 for both together. The [project paper](whitepaper.html#3-the-cost-proposal-already-supplied) provides the dates and breakdown.
 
 The city photographs show favelas along the hillsides, highlighted by circles. The collection also includes construction photographs, loft drawings and the village concept. [View the photographs and drawings](properties.html).
 
 ## 6. Project resources
 
-- [Whitepaper](whitepaper.html): homes, money, shared decisions and sources.
+- [Whitepaper](whitepaper.html): houses, funding, shared decisions and sources.
 - [Pitch deck](pitchdeck.html): twelve slides for partners.
 - [Pilot and building guide](devsheet.html): housing plans, responsibilities and proposed targets.
 - [Roadmap](roadmap.html): steps and what must be ready before moving on.
