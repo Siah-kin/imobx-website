@@ -184,3 +184,10 @@
 .v-body p{margin:0;font-size:15px;line-height:1.6}
 @media (prefers-reduced-motion:reduce){.v-plus:before,.v-plus:after{transition:none}}
 @media (max-width:560px){.v-matrix{grid-template-columns:1fr}.v-row{padding:10px 14px}}
+/* Owner, 29 Oct: "more info link to drop out more info" — a visible text link with an arrow, no corner + */
+.v-cell>summary{padding:20px}
+.v-cell .v-link{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:4px;color:#A84B00;font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.v-cell .v-link:after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s ease}
+.v-cell[open] .v-link:after{transform:translateY(2px) rotate(-135deg)}
+.v-cell>summary:hover .v-link{color:#7A3600}
+@media (prefers-reduced-motion:reduce){.v-cell .v-link:after{transition:none}}
