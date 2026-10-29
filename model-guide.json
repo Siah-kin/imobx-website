@@ -1083,8 +1083,8 @@
       }
     ],
     "reporting_title": [
-      "O que vamos publicar?",
-      "What will we publish?"
+      "Para onde vai cada real?",
+      "Where does each real (R$) go?"
     ],
     "reporting_intro": [
       "Quando a operação existir, queremos publicar um resumo das contas, com o período e quem preparou e conferiu os números. A lista abaixo mostra o que esse relatório deve incluir. Queremos que moradores consultem acordos, acompanhem pedidos e vejam decisões, e que quem financia o projeto possa conferir as contas. Pagamentos na blockchain poderiam ajudar nessa conferência; os direitos de cada pessoa precisam estar escritos antes.",
@@ -1096,7 +1096,7 @@
         "For each period: who prepared the accounts and who checked them."
       ],
       [
-        "Quantos recursos havia no início e no fim, de onde veio, o que pagou e quanto está guardado ou já tem destino.",
+        "Quantos recursos havia no início e no fim, de onde vieram, o que pagaram e quanto está guardado ou já tem destino.",
         "How much funding there was at the start and at the end, where it came from, what it paid for, and how much is set aside or already promised."
       ],
       [
@@ -1106,10 +1106,6 @@
       [
         "Quem aprovou cada gasto, qual etapa da obra foi conferida e quais diferenças ou falhas ainda precisam de explicação.",
         "Who approved each expense, which building stage was checked, and which differences or failures still need explaining."
-      ],
-      [
-        "Nada pessoal é publicado: nem dados pessoais, nem documentos, nem contratos das famílias, no site ou na blockchain.",
-        "Nothing personal is published: no personal details, documents or family contracts, on the site or on the blockchain."
       ]
     ],
     "evidence_title": [
@@ -1223,8 +1219,8 @@
       "Manual review: prices, provider rules and balances are not monitored automatically. We will update this page with dated confirmations, tests and reports when available."
     ],
     "reporting_note": [
-      "Cada relatório separa o que está previsto, o que está contratado, o que entrou e o que foi gasto.",
-      "Each report keeps apart what is planned, what is signed, what came in and what was spent."
+      "Cada relatório separa o que está previsto, o que está contratado, o que entrou e o que foi gasto. Dados pessoais, documentos e contratos das famílias ficam privados, no site e na blockchain.",
+      "Each report keeps apart what is planned, what is signed, what came in and what was spent. Personal details, documents and family contracts stay private, on the site and on the blockchain."
     ]
   },
   "community_economy": {

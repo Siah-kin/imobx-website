@@ -611,7 +611,7 @@ def build_guide(root, page, tr, esc, language_controls):
                      + text(fp['route_title'], 'h2', 'id="payment-route"') + route_html(text) + '</section>')
 
     transparency += ('<section id="reporting">' + spans('legal', 'faq-nonprofit', 'faq-ico', 'ico-comparison') + text(public['reporting_title'], 'h2', 'id="reports"')
-                     + '<ul>' + ''.join(text(public['reporting'][i], 'li') for i in (0, 1, 2, 4)) + '</ul>' + text(public['reporting_note']) + '</section>')
+                     + '<ul>' + ''.join(text(public['reporting'][i], 'li') for i in (0, 1, 2, 3)) + '</ul>' + text(public['reporting_note']) + '</section>')
     transparency += '<section class="closing-band" id="elsewhere">' + spans('sources', 'updates', 'next-steps')
     transparency += spans('token-options', 'faq-yield', 'funding-questions', 'faq-thanks-zeal-lets', 'faq-euler', 'faq-exchanges',
                           'faq-property', 'faq-rwa', 'outreach', 'campaign-work')

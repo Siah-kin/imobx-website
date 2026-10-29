@@ -79,7 +79,7 @@ MENU = [
         ('transparency.html', 'first-homes', 'Custo da obra', 'Building costs', 'What does it cost to build a house?'),
         ('transparency.html', 'money-sources', 'Origem dos recursos', 'Sources of funding', 'Funding and spending: where the funding comes from, and what it pays first'),
         ('transparency.html', 'payment-route', 'Conferência dos pagamentos', 'Payment checks', 'Who checks each payment?'),
-        ('transparency.html', 'reports', 'Relatórios publicados', 'Published reports', 'What will we publish?'),
+        ('transparency.html', 'reports', 'Relatórios publicados', 'Published reports', 'Where does each real (R$) go?'),
     ]),
     # Owner, 28 Oct: a menu item is a page, and each entry in its list is a section of that page.
     ('roadmap.html', 'Desenvolvimento do projeto', 'Project development', [
@@ -132,8 +132,8 @@ HEADING_INTROS = {
     'transparency.html': {
         'Who checks each payment?': ('No plano, um pagamento só sai depois que duas pessoas o olharam: uma aprova, outra confere.',
                                      'In the plan, a payment goes out only after two people have looked at it: one approves it, another checks it.'),
-        'What will we publish?': ('Quem financia ou mora num bairro da IMOBX pode acompanhar as contas. Estes são os relatórios que planejamos publicar:',
-                                  'Anyone who funds or lives in an IMOBX neighbourhood can follow the accounts. These are the reports we plan to publish:'),
+        'Where does each real (R$) go?': ('Quem financia ou mora num bairro da IMOBX poderá acompanhar isso nos nossos relatórios. Cada um vai mostrar:',
+                                          'Anyone who funds or lives in an IMOBX neighbourhood will be able to follow it in our reports. Each one will show:'),
     },
     'blockchain.html': {
         'Who sees what?': ('Seu contrato e seus pagamentos ficam entre você e a IMOBX; o que a própria IMOBX gasta fica aberto a todos.',
