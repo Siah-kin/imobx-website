@@ -32,8 +32,7 @@ def build_reference(root, page, tr, esc):
     retired = data['retired_anchors']['ids']
     body = '<main class="paper guide-paper reference-page" id="main">'
     body += text(data['title'], 'h1')
-    body += '<div class="key-card">' + text(('Ainda precisamos de assessoria jurídica, de um contador e de alguém para cuidar do orçamento.',
-                                             'We still need a legal adviser, an accountant and someone to lead the budget.')) + '</div>'
+    # Owner, 29 Oct: the 'we still need…' line under the title is removed; the open roles are in the table below.
     body += '<p class="page-action">' + text(('Oferecer ajuda', 'Offer your help'), 'a', 'class="button act" href="contact.html"') + '</p>'
     body += '<nav class="guide-jump" aria-label="Sections">'
     for section in [x for x in data['sections'] if x.get('keep')]:

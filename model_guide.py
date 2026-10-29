@@ -914,9 +914,12 @@ def build_guide(root, page, tr, esc, language_controls):
         '<path class="vg-shackle" d="M28 32v-4a4 4 0 0 1 8 0v4"/></svg>']
     ax = ch['matrix_axes']
     def v_cell(i):
+        # Owner, 29 Oct: the whole card opens (no separate info icon); the + matches the page's other folds.
         g, o, short = v_glyphs[i], ch['bridge'][i], ch['bridge_short'][i]
-        return ('<div class="v-cell">' + g + '<h4>' + text((o[0][0].rstrip('.'), o[0][1].rstrip('.')), 'span') + '</h4>' + text(short)
-                + '<details class="v-more"><summary>' + text(ch['more_info'], 'span') + '</summary>' + text(o[1]) + '</details></div>')
+        return ('<details class="v-cell"><summary>' + g
+                + text((o[0][0].rstrip('.'), o[0][1].rstrip('.')), 'span', 'class="v-title"')
+                + text(short, 'span', 'class="v-line"') + '<span class="v-plus" aria-hidden="true"></span></summary>'
+                + '<div class="v-body">' + text(o[1]) + '</div></details>')
     # Owner, 29 Oct: a matrix. Rows: funding, people. Columns: moves forward, keeps steady.
     cells = ('<div class="v-axis v-corner"></div>' + text(ax['cols'][0], 'div', 'class="v-axis v-col"') + text(ax['cols'][1], 'div', 'class="v-axis v-col"')
              + text(ax['rows'][0], 'div', 'class="v-axis v-row"') + v_cell(0) + v_cell(2)

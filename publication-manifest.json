@@ -10,7 +10,7 @@
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "029bd64182dc00812924f3a57c350debed048fec39963085ec6cce716bf7dd7b"
+      "sha256": "a0abc103a15ee8d0c9cc9ad4f43326aacf91f2e25643fe15f9e1d3d0010e0961"
     },
     {
       "path": "properties.html",
@@ -30,15 +30,15 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "a51b033da6ef909e20b3afe630013b0bec7326466c69cb034486b1baf07e5ed3"
+      "sha256": "32cdfd72bf59071b282480279aaa42b3f6eb4be8ad2964832e9aeb71e26e5844"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "3f79a2ae5ad58a2477baa4a4598ad269daf48fc05217c20ea261fb5148debde4"
+      "sha256": "a3d1af0540ddfcb5dabb76d6668ebd2447b5dbf1721d8002d7780d14de3fe8d5"
     },
     {
       "path": "reference.html",
-      "sha256": "ddbd8f36a482db252c197589c162b677ef57be69c16d191884d0e64c683f8cdb"
+      "sha256": "7d8519b5916030acefba2aadcff04779b0338c439a79c4c15cf011ce79630a90"
     },
     {
       "path": "whitepaper.md",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "3fbc74031595c268f748935be1ce803be6f5b2e990912077729a6e084297eaaa"
+      "sha256": "ca1ad6e381d97eedc7203e9f6f87cecfa0e4db6a318b65a93eb588555d00770d"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "cca22faacbddbacba9be000e147873691eed5e47e50d4a4ccbf12a7161a22686"
+      "sha256": "e29d07e0c0baa6200a4eae0c761e8ebe21f70bec2365c368c451eb85f065130f"
     },
     {
       "path": "pitchdeck.json",
@@ -78,11 +78,11 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "b909553c2f10bf247859e8a0e4e9ddbd81693201b4a89b1fa7dcbde7be6b1c2f"
+      "sha256": "331aed097c949185999e7a318d5935260d49210cde52d42ddc9015e40e1b90c7"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "7ff7b989d18de5aa8b7c1d17ee94ce9657be14c2576f7e048517ff0c0373917c"
+      "sha256": "f2d35ab50a31b6f20216effbf650f07a0421a7312e776557537811fa67ecb367"
     },
     {
       "path": "roadmap.html",
@@ -90,7 +90,7 @@
     },
     {
       "path": "transparency.html",
-      "sha256": "8973d03949fe62775001fbb6d8f1e23befdbca72cae54d5f943816428ca6597f"
+      "sha256": "a25d6472be68414057ee90f39fed80b306417e6320d1b399f26d30578b061882"
     },
     {
       "path": "resources.html",

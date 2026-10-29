@@ -163,3 +163,24 @@
 .v-more>summary{min-width:44px;justify-content:center}
 .v-more>summary>span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .v-more>summary:before{width:24px;height:24px;font-size:14px}
+/* Owner, 29 Oct: whole card opens with a + like the page's folds; axis labels readable on a tinted band */
+.v-matrix{grid-template-columns:132px repeat(2,minmax(0,1fr));gap:12px}
+.v-axis{background:#E3EEF2;color:#193D4E;font-size:14px;font-weight:700;letter-spacing:0;border-radius:4px}
+.v-corner{background:none}
+.v-col{align-self:stretch;padding:10px 16px}
+.v-row{writing-mode:horizontal-tb;transform:none;text-align:left;align-self:stretch;display:flex;align-items:center;padding:12px 16px}
+.v-cell{padding:0}
+.v-cell>summary{list-style:none;cursor:pointer;display:block;position:relative;padding:20px 52px 20px 20px;min-height:44px}
+.v-cell>summary::-webkit-details-marker{display:none}
+.v-cell .v-title{display:block;margin:8px 0 4px;font-size:18px;font-weight:700;color:#193D4E}
+.v-cell .v-line{display:block;color:#526571;font-size:15px;line-height:1.55}
+.v-plus{position:absolute;top:18px;right:16px;width:28px;height:28px}
+.v-plus:before,.v-plus:after{content:"";position:absolute;left:6px;right:6px;top:13px;height:2px;background:#276578;transition:transform .2s ease}
+.v-plus:after{transform:rotate(90deg)}
+.v-cell[open] .v-plus:after{transform:rotate(0)}
+.v-cell>summary:hover .v-title{color:#276578}
+.v-cell>summary:focus-visible{outline:3px solid #276578;outline-offset:2px;border-radius:6px}
+.v-body{padding:0 20px 16px}
+.v-body p{margin:0;font-size:15px;line-height:1.6}
+@media (prefers-reduced-motion:reduce){.v-plus:before,.v-plus:after{transition:none}}
+@media (max-width:560px){.v-matrix{grid-template-columns:1fr}.v-row{padding:10px 14px}}
