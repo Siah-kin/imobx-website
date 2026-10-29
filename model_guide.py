@@ -107,12 +107,9 @@ TERMS = [
          'Investment is offered only through a lawful route and with written rights. No return is promised.'),
         ('As contas da obra são pagas com recursos já garantidos.', 'Building bills are paid with funding already secured.'),
     ]),
-    (('Leis e conferências', 'Law and checks'), [
-        ('O cadastro fiscal (Receita Federal), o momento em que a propriedade passa a outra pessoa (Código Civil) e as regras para parcerias com o poder público (Lei 13.019) fazem parte do trabalho jurídico em andamento.',
-         'Tax registration (Receita Federal), when ownership passes (Civil Code), and the rules for partnerships with public bodies (Law 13.019) are part of the legal work under way.'),
-        ('Um advogado confere as regras antes de qualquer pagamento passar por uma blockchain.',
-         'A lawyer checks the rules before any payment runs on a blockchain.'),
-        ('As revisões jurídica e de segurança ainda vão ser feitas.', 'Legal and security reviews are still to come.'),
+    (('Leis', 'Law'), [
+        ('As regras que se aplicam são o cadastro fiscal da Receita Federal, o Código Civil sobre quando a propriedade passa a outra pessoa e a Lei 13.019 para parcerias com o poder público.',
+         'The rules that apply are Receita Federal tax registration, the Civil Code on when ownership passes, and Law 13.019 for partnerships with public bodies.'),
     ]),
     (('Pessoas', 'People'), [
         ('Os direitos e deveres de cada pessoa dependem de contratos assinados e de registros oficiais. Hoje, os deveres formais dos fundadores ainda não estão escritos.',
@@ -961,7 +958,7 @@ def build_guide(root, page, tr, esc, language_controls):
               + text(ch['loop_title'], 'h3') + text(ch['loop_intro']) + loop_figure()
               + text(ch['bridge_title'], 'h3') + text(ch['matrix_intro']) + '<div class="v-lines">' + cells + '</div>'
               + fold(ch['token_more'],
-                     text(ch['token_intro']) + text(ch['receives_text']) + text(ch['token_purpose']) + text(ch['review_note'])
+                     text(ch['token_intro']) + text(ch['receives_text']) + text(ch['token_purpose'])
                      + text(ch['lock_title'], 'h3') + text(ch['bridge'][3][1]) + text(ch['bridge_more'][3])
                      + chain_source(('Como o regulador do mercado de capitais avalia tokens (CVM)', 'How Brazil’s market regulator looks at tokens (CVM)'), guide['sources']['cvm']['url'],
                                     ('Explica como a CVM decide quais regras valem para um token.', 'Explains how the CVM decides which rules apply to a token.'))

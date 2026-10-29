@@ -69,7 +69,7 @@ These are Rafael’s project figures, not a finished-house price published by a 
 
 ### The separate two-loft case
 
-On 20 January 2026, Rafael reported a contract for two lofts, waiting for the first deposit. The construction figure is **US$27,777 for both lofts together**: US$13,888.50 each by division. The included work, current progress and final costs are not yet documented. This is separate from the village budget. See the [drawings and photos](properties.html#estudo-lofts).
+In January 2026, Rafael’s construction company signed a contract to build two lofts. This is separate from the village budget. See the [drawings and photos](properties.html#estudo-lofts).
 
 For the first project, each family’s agreement needs affordable payments in reais and clear rules for price changes. The payment amount and purchase term are open, as the status at the top of this paper says.
 
@@ -137,7 +137,7 @@ Whatever a vote decides, including a token vote, only the family and IMOBX toget
 
 ## 8. What the token is for
 
-The token is for using the community’s services and goods, and it launches only once it gives that access. Until then, the work is funded through the routes in section 4. A Brazilian lawyer is reviewing the design; what holders receive is set after that review, under the rules of Brazil’s securities-market regulator, the CVM.
+The token is for using the community’s services and goods, and it launches only once it gives that access. Until then, the work is funded through the routes in section 4.
 
 It is designed as a loop. People use the token for the community’s services and goods. Each trade on the market pays a small fee in USDC. The fees pay for checked work, and that work adds services members and token holders can use. The token’s price is left to the market.
 
@@ -149,7 +149,7 @@ Alongside the loop, the token has three functions:
 | Voting | Holders vote on the token’s own rules. Cooperative matters stay one member, one vote. Before launch, we publish who controls the token’s admin keys, meaning who can change its settings. |
 | Verify | In the plan, anyone can check each payment and who approved it, with or without the token. |
 
-Locking tokens is a pledge to stay with the project for a set period; the tokens return at the end, and a longer lock gives the same vote. What a lock gives a holder is set after the lawyer’s review.
+Locking tokens is a pledge to stay with the project for a set period; the tokens return at the end, and a longer lock gives the same vote.
 
 Once the token can be used, it launches on a public market on the Arc blockchain, open to anyone from the first day.
 

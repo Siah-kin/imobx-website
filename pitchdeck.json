@@ -45,7 +45,7 @@
         "Shared works US$1,500 · design and legal work US$627.",
         "The village plan assumes at least 36 houses built together."
       ],
-      "notes": "On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six houses total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together.",
+      "notes": "On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six houses total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices.",
       "sources": [
         {
           "label": "Whitepaper, section 3: the costs",
@@ -124,7 +124,7 @@
         "Voting: holders vote on the token’s own rules; the cooperative keeps one member, one vote.",
         "Verify: in the plan, anyone can check each payment and who approved it."
       ],
-      "notes": "A Brazilian lawyer is reviewing the token’s design; what holders receive is set after that review, under the CVM’s rules. We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens. Paid outreach needs a funded task, a check of the completed work and disclosure of payment.",
+      "notes": "We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens. Paid outreach needs a funded task, a check of the completed work and disclosure of payment.",
       "sources": [
         {
           "label": "CVM Guidance Opinion 40",
@@ -134,7 +134,7 @@
         {
           "label": "IMOBX: the token, on the distributed ledger page",
           "url": "https://siah-kin.github.io/imobx-website/blockchain.html#token",
-          "effect": "Sets out the token’s four functions as the project describes them. A Brazilian lawyer is reviewing the design."
+          "effect": "Sets out the token’s four functions as the project describes them."
         }
       ]
     },

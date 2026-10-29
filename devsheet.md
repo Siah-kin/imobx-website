@@ -61,7 +61,7 @@ The plan covers at least 36 houses built together over 12 months: **36 × US$27,
 
 ### The separate two-loft case
 
-On 20 January 2026, Rafael reported a contract for two lofts, awaiting its first deposit. **US$27,777 covers both lofts together**, equivalent to US$13,888.50 each by division. The included work, current progress and final costs are not yet documented. This is a separate case from the village budget. See the [drawings and supplied photos](properties.html#estudo-lofts).
+In January 2026, Rafael’s construction company signed a contract to build two lofts. This is a separate case from the village budget. See the [drawings and supplied photos](properties.html#estudo-lofts).
 
 <div class="pagebreak"></div>
 

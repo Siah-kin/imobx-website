@@ -62,7 +62,7 @@ His US$27,777 per-house plan uses CUB and SINAPI, Brazilian building-cost refere
 
 Source: [Whitepaper, section 3: the costs](whitepaper.html#3-the-cost-proposal-already-supplied). Shows how Rafael supplied these figures. It is not an independent check of them.
 
-**Presenter notes:** On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six houses total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices. The separate January contract is US$27,777 for both lofts together.
+**Presenter notes:** On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six houses total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices.
 
 
 
@@ -176,9 +176,9 @@ We are examining how to introduce the IMOBX token in line with Brazilian law. It
 
 Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). Says Brazil's regulator looks at what an investment actually gives, not its name. It does not say whether an IMOBX token would comply.
 
-Source: [IMOBX: the token, on the distributed ledger page](https://siah-kin.github.io/imobx-website/blockchain.html#token). Sets out the token’s four functions as the project describes them. A Brazilian lawyer is reviewing the design.
+Source: [IMOBX: the token, on the distributed ledger page](https://siah-kin.github.io/imobx-website/blockchain.html#token). Sets out the token’s four functions as the project describes them.
 
-**Presenter notes:** A Brazilian lawyer is reviewing the token’s design; what holders receive is set after that review, under the CVM’s rules. We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens. Paid outreach needs a funded task, a check of the completed work and disclosure of payment.
+**Presenter notes:** We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens. Paid outreach needs a funded task, a check of the completed work and disclosure of payment.
 
 
 

@@ -49,7 +49,7 @@ On 30 November 2025, Rafael described two-level houses around a shared courtyard
 
 IMOBX is in preparation. Its legal form, the terms for using each property and any token rights remain undecided. No investment, guaranteed return, funding award or regulatory approval is established by these documents.
 
-Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 houses. The separate two-loft contract is US$27,777 for both together. The [project paper](whitepaper.html#3-the-cost-proposal-already-supplied) provides the dates and breakdown.
+Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 houses. The [project paper](whitepaper.html#3-the-cost-proposal-already-supplied) provides the dates and breakdown.
 
 The city photographs show favelas along the hillsides, highlighted by circles. The collection also includes construction photographs, loft drawings and the village concept. [View the photographs and drawings](properties.html).
 
