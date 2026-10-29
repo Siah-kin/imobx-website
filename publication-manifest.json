@@ -6,15 +6,15 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "43985081252f8ed7bb13837458388b71a580a4663b4e25bde01ee4f51d7d626b"
+      "sha256": "b4e4a6c93766e435883e10f45711b1f54398116ffb4626a118b85e8627610d9f"
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "d5dbf6f46ff43da757ffd32d3be955840e0ea05478c67a44e45d91a659e0ee10"
+      "sha256": "029bd64182dc00812924f3a57c350debed048fec39963085ec6cce716bf7dd7b"
     },
     {
       "path": "properties.html",
-      "sha256": "ededbd4aa6981c04785bbd793a3a0545c624d4384415fa198a715fd5e7487a35"
+      "sha256": "4f7711d151aed41a185f6d524dda4e10c5e9ef404d71792bd02f3bfff19d0f70"
     },
     {
       "path": "project-reference.json",
@@ -30,15 +30,15 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "4e3ec774a1a03f1973a0795bbf79e1815b465f9444baa165e6763ade96bda28f"
+      "sha256": "a51b033da6ef909e20b3afe630013b0bec7326466c69cb034486b1baf07e5ed3"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "ab9e7ca3cf5c452e2fa56c921bd92e4925c71bebb0806c891f4ed50a24fee6b7"
+      "sha256": "3f79a2ae5ad58a2477baa4a4598ad269daf48fc05217c20ea261fb5148debde4"
     },
     {
       "path": "reference.html",
-      "sha256": "25367a3d0cad8ef49c248e9d9057ed17a41bfec3f646d16c2c70d43988ad4394"
+      "sha256": "ddbd8f36a482db252c197589c162b677ef57be69c16d191884d0e64c683f8cdb"
     },
     {
       "path": "whitepaper.md",
@@ -46,11 +46,11 @@
     },
     {
       "path": "whitepaper.html",
-      "sha256": "2961a98b3cf1c3c8dc337fabb20adc351bbfb0cb7e30900aadc43af4076192ef"
+      "sha256": "e570f19f4f34a7c664423ff65d15e01c422c443af9a24c6350e9e9a41bbd1924"
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "0575ca40716ee56e3b7ae98b5f63f365553ed16ddca90620458699349c2e96fd"
+      "sha256": "3fbc74031595c268f748935be1ce803be6f5b2e990912077729a6e084297eaaa"
     },
     {
       "path": "devsheet.md",
@@ -58,11 +58,11 @@
     },
     {
       "path": "devsheet.html",
-      "sha256": "18ed95bd14a91d0fb84bae22792112ef3f158be49e6b7dbbfb69aa8be5af76e1"
+      "sha256": "3bb8e8d670e6d25c4e401e616c8b49a33cf50ec8e2f0fd3cc36d1d99a0049517"
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "1a0bafe615ada71bd9b28f5a8e5885124833457d24f630219400a8cae10d1a49"
+      "sha256": "cca22faacbddbacba9be000e147873691eed5e47e50d4a4ccbf12a7161a22686"
     },
     {
       "path": "pitchdeck.json",
@@ -74,27 +74,27 @@
     },
     {
       "path": "pitchdeck.html",
-      "sha256": "faa1cd44f9169831698e618f8938a27640647e798dd99f5faa209135ef296a53"
+      "sha256": "72942d3452496c1f1e20504c4f4f87f8c937dba1d4a216b2cc504b1e24e3219f"
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "dfa1f2ee68474fa6f2ceb4ba2cfd3a97eb9c533c8436f4b2e7c5a642fa93f5f9"
+      "sha256": "b909553c2f10bf247859e8a0e4e9ddbd81693201b4a89b1fa7dcbde7be6b1c2f"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "cbbea208560c3c4281d5e40c4fa47c1e3ded941e31db6ea2472ba15841246ead"
+      "sha256": "7ff7b989d18de5aa8b7c1d17ee94ce9657be14c2576f7e048517ff0c0373917c"
     },
     {
       "path": "roadmap.html",
-      "sha256": "767d2518edfaeee6c09de3e83e4243527d5e03f89d413431a0340800b4f6bb82"
+      "sha256": "2981a778b4e91535e992f4881fc2fcd5a9713ef5ad02fdb4ae2e83534a2d09a2"
     },
     {
       "path": "transparency.html",
-      "sha256": "5138f52e9c27dd66825b638bb6b4ed965ef91c421f56fca95f3169146e65ef40"
+      "sha256": "8973d03949fe62775001fbb6d8f1e23befdbca72cae54d5f943816428ca6597f"
     },
     {
       "path": "resources.html",
-      "sha256": "1bd8971e2f04678df79dfeeb641a1c3f0c9dc4adea1662832f5f75b6ccd13bdf"
+      "sha256": "89c7fe2fab763be7fce75ed88f4de5487204f580e451d9b2ef4ab09878f00988"
     },
     {
       "path": "model-guide.json",
@@ -102,7 +102,7 @@
     },
     {
       "path": "contact.html",
-      "sha256": "df057a427ec1633b62ca06704b0cc7497f2f9c1b1614de80c6a3aec275a89775"
+      "sha256": "b435bd41e31d125dceb8f2340d84ee2e2389cbec37922cd3d4d1a1e605f52a38"
     },
     {
       "path": "contact-routes.json",

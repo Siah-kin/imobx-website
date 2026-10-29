@@ -159,3 +159,7 @@
 .v-matrix.is-flowing .vg-lens{transform:translateX(18px);opacity:1;transition:transform 1.4s ease-in-out .6s,opacity .3s ease .6s}
 @media (prefers-reduced-motion:reduce){.v-matrix .vg-lens{transform:translateX(18px)!important}}
 @media (max-width:560px){.v-matrix{grid-template-columns:1fr}.v-corner,.v-col{display:none}.v-row{writing-mode:horizontal-tb;transform:none;text-align:left;padding:8px 0 0}}
+/* Owner, 29 Oct: the ⓘ alone, without the repeated "More info" text (kept for screen readers) */
+.v-more>summary{min-width:44px;justify-content:center}
+.v-more>summary>span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.v-more>summary:before{width:24px;height:24px;font-size:14px}

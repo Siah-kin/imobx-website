@@ -23,6 +23,8 @@ PAGES = {
                      'A etapa atual do projeto, as próximas três etapas e o que ainda não está decidido.'),
     'blockchain.html': ('Como funcionaria um bairro na blockchain · IMOBX Rio', 'How would a neighbourhood work on a blockchain? · IMOBX Rio',
                         'Pagamentos e aprovações registrados para os moradores conferirem; dados pessoais e contratos ficam privados. Ainda não está em funcionamento.'),
+    'ideas.html': ('Que ideias formaram a IMOBX · IMOBX Rio', 'What ideas shaped IMOBX · IMOBX Rio',
+                   'Cohousing, ecovilas, os princípios de Elinor Ostrom e das cooperativas, e os projetos que estudamos, cada um com a sua fonte.'),
     'governance.html': ('Quem decide na IMOBX, e quando você tem voz · IMOBX Rio', 'Who decides in IMOBX, and when you get a say · IMOBX Rio',
                         'Hoje os fundadores decidem; depois, quem tem o token decide as regras do token, e os membros da cooperativa decidem um membro, um voto.'),
     'properties.html': ('Lofts e terreno: desenhos e fotos · IMOBX Rio', 'Lofts and site: drawings and photos · IMOBX Rio',

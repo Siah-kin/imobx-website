@@ -740,6 +740,82 @@ def build_guide(root, page, tr, esc, language_controls):
     (root / 'governance.html').write_text(page('IMOBX | Local governance', gov,
         f'<link rel="stylesheet" href="{asset_v("bands.css")}">', version=guide['version'], lang='pt-BR', title_pt='IMOBX | Governança local'))
 
+    # The ideas behind IMOBX (decisions 15 and 16, owner 26-27 Oct; built 29 Oct: "We have a list").
+    # Founders' own words only (John's lines from the founders' chat); Rafael's choices join once he names them.
+    def quote(pair, who):
+        return ('<blockquote class="idea-quote">' + text(('“' + pair[0] + '”', '“' + pair[1] + '”'))
+                + '<cite>' + text(who, 'span') + '</cite></blockquote>')
+
+    def idea(title, body, quotes=(), source=None):
+        out = '<article class="idea">' + text(title, 'h3') + text(body)
+        out += ''.join(quote(q, w) for q, w in quotes)
+        if source:
+            out += '<p class="idea-source">' + text(source[0], 'a', f'href="{esc(source[1])}" rel="noopener"') + '</p>'
+        return out + '</article>'
+
+    ideas = '<main class="paper guide-paper band-page ideas-page" id="main">' + language_controls
+    ideas += text(('Que ideias formaram a IMOBX?', 'What ideas shaped IMOBX?'), 'h1')
+    ideas += on_this_page([(('Por que fazemos isso', 'Why we do this'), 'why'), (('O que formou o plano', 'What shaped the plan'), 'shaped'),
+                           (('Com o que conferimos', 'What we check against'), 'check'), (('Projetos que estudamos', 'Projects we studied'), 'studied')])
+    # The iceberg (decision 16): what anyone can check above the water, what drives us below it.
+    checkable = [(('Um contrato com a construtora do Rafael para dois lofts (janeiro de 2026), com os desenhos', 'A contract with Rafael’s construction company for two lofts (January 2026), with their drawings'), 'properties.html'),
+                 (('Um apartamento candidato para o nosso primeiro morador em aluguel com compra', 'A candidate flat for our first rent-to-own tenant'), 'roadmap.html#cases'),
+                 (('Custos de obra comparados às tabelas públicas do Brasil', 'Building costs set against Brazil’s public cost tables'), 'transparency.html#first-homes'),
+                 (('Pagamentos e aprovações previstos num registro público', 'Payments and approvals planned on a public ledger'), 'blockchain.html')]
+    drives = [(('Desta forma não construímos apenas unidades, construímos comunidades.', 'This way we not only build units, we build communities.'), ('John, dezembro de 2025', 'John, December 2025')),
+              (('Nosso lucro real é social.', 'Our real profit is social.'), ('John, novembro de 2025', 'John, November 2025')),
+              (('Então por que ser milionário se a sua vizinhança pode ser livre de estresse?', 'So why be a millionaire if your neighbourhood can be stress-free?'), ('John, agosto de 2026', 'John, August 2026'))]
+    ideas += '<section id="why">' + text(('Por que fazemos isso?', 'Why are we doing this?'), 'h2')
+    ideas += text(('“Trata-se de moldar um espaço onde as pessoas possam se conectar novamente. É por isso que fazemos isso.” John, conversa dos fundadores, dezembro de 2025',
+                   '“It’s about shaping space where people can connect again. This is why we do it.” John, founders’ chat, December 2025'), 'p', 'class="answer"')
+    ideas += ('<figure class="iceberg"><div class="iceberg-above">' + text(('O que você pode conferir', 'What you can check'), 'p', 'class="iceberg-label"')
+              + '<ul>' + ''.join('<li>' + text(label, 'a', f'href="{href}"') + '</li>' for label, href in checkable) + '</ul></div>'
+              + '<svg class="iceberg-water" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0,20 C80,4 160,36 250,20 S420,4 500,20 S670,36 750,20 S920,4 1000,20"/></svg>'
+              + '<div class="iceberg-below">' + text(('O que nos move', 'What drives us'), 'p', 'class="iceberg-label"')
+              + ''.join(quote(q, w) for q, w in drives) + '</div>'
+              + '<figcaption>' + text(('Acima da linha da água, o que qualquer pessoa pode conferir hoje. Abaixo, as razões, nas palavras dos fundadores.',
+                                       'Above the waterline, what anyone can check today. Below it, the reasons, in the founders’ own words.'), 'span') + '</figcaption></figure></section>')
+    ideas += '<section id="shaped">' + text(('Quais ideias formaram o plano?', 'Which ideas shaped the plan?'), 'h2') + '<div class="idea-grid">'
+    ideas += idea(('Cohousing', 'Co-housing'),
+                  ('Cada família tem a sua casa e divide espaços que todos administram juntos.', 'Each family keeps its own house and shares spaces that everyone runs together.'),
+                  [(('Na Bélgica, resolvemos isso com princípios de cohousing.', 'In Belgium, we solve that with co-housing principles.'), ('John, novembro de 2025', 'John, November 2025')),
+                   (('O cohousing combina com o aluguel com compra.', 'Co-housing is the right match for rent-to-own.'), ('John, abril de 2026', 'John, April 2026'))])
+    ideas += idea(('Ecovilas na Europa', 'Eco-villages in Europe'),
+                  ('John passou seis anos em ecovilas na Europa. Depois, trocou o ativismo por modelos de negócio.', 'John spent six years in eco-villages in Europe. Then he turned that activism into business models.'),
+                  [(('Achei que precisava de um modelo de negócios.', 'I thought I needed a business model.'), ('John, novembro de 2025', 'John, November 2025'))],
+                  (('O que é uma ecovila (Global Ecovillage Network)', 'What an eco-village is (Global Ecovillage Network)'), 'https://ecovillage.org/'))
+    ideas += '</div>' + text(('As escolhas do Rafael entram nesta página quando ele as indicar.', 'Rafael’s choices join this page once he has named them.')) + '</section>'
+    ideas += '<section id="check">' + text(('Com quais ideias conferimos o plano?', 'Which ideas do we check the plan against?'), 'h2') + '<div class="idea-grid">'
+    ideas += idea(('Os princípios de Elinor Ostrom', 'Elinor Ostrom’s principles'),
+                  ('Elinor Ostrom ganhou o Nobel de economia em 2009 por mostrar como comunidades administram bem recursos comuns, sem entregá-los a uma empresa ou ao Estado. A nossa proposta completa confere a IMOBX com os oito princípios dela.',
+                   'Elinor Ostrom won the 2009 Nobel Prize in economics for showing how communities manage shared resources well, without handing them to a company or the state. Our full proposal checks IMOBX against her eight principles.'),
+                  source=(('Elinor Ostrom no site do Prêmio Nobel', 'Elinor Ostrom on the Nobel Prize site'), 'https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/'))
+    ideas += idea(('Os princípios das cooperativas', 'The cooperative principles'),
+                  ('A Aliança Cooperativa Internacional reúne os sete princípios que as cooperativas do mundo compartilham, entre eles a gestão democrática pelos membros. No Brasil, a lei das cooperativas define um membro, um voto (Lei 5.764, art. 42).',
+                   'The International Cooperative Alliance sets out the seven principles cooperatives share worldwide, among them democratic control by the members. In Brazil, the cooperative law sets one member, one vote (Lei 5.764, article 42).'),
+                  source=(('A identidade cooperativa (ICA)', 'The cooperative identity (ICA)'), 'https://ica.coop/en/cooperatives/cooperative-identity'))
+    ideas += '</div></section>'
+    ideas += '<section id="studied">' + text(('Quais projetos estudamos?', 'Which projects did we study?'), 'h2') + '<div class="idea-grid">'
+    ideas += idea(('Mietshäuser Syndikat (Alemanha)', 'Mietshäuser Syndikat (Germany)'),
+                  ('Uma federação alemã de casas de aluguel administradas pelos moradores. Uma casa só pode ser vendida quando os moradores e a federação concordam; sobre aluguéis e novos moradores, os moradores decidem sozinhos. Estamos estudando se a IMOBX deve adotar uma regra assim.',
+                   'A German federation of rental houses run by their residents. A house can be sold only when both its residents and the federation agree; on rents and move-ins, the residents decide alone. We are studying whether IMOBX should adopt a rule like it.'),
+                  source=(('Mietshäuser Syndikat', 'Mietshäuser Syndikat'), 'https://www.syndikat.org/syndikat/'))
+    ideas += idea(('FUCVAM (Uruguai)', 'FUCVAM (Uruguay)'),
+                  ('A federação uruguaia de cooperativas de moradia, fundada em 1970. As famílias constroem juntas, em ajuda mútua, e a cooperativa fica com a propriedade. No plano da IMOBX, cada família é dona da sua casa.',
+                   'Uruguay’s federation of housing cooperatives, founded in 1970. Families build together through mutual aid, and the cooperative holds the title. In IMOBX’s plan, each family owns its own house.'),
+                  source=(('FUCVAM', 'FUCVAM'), 'https://www.fucvam.org.uy'))
+    ideas += idea(('Fundos comunitários de terra', 'Community land trusts'),
+                  ('O fundo fica com o terreno, e os direitos de cada família ficam num contrato longo e assinado. Daí vem a nossa regra: seja qual for o resultado de uma votação, só a família e a IMOBX juntas, dentro da lei, podem mudar o contrato de moradia de uma família.',
+                   'The trust keeps the land, and each family’s rights sit in a long, signed lease. Our rule comes from there: whatever a vote decides, only the family and IMOBX together, under the law, can change a family’s housing agreement.'),
+                  source=(('Community land trusts (Grounded Solutions Network)', 'Community land trusts (Grounded Solutions Network)'), 'https://groundedsolutions.org/strengthening-neighborhoods/community-land-trusts'))
+    ideas += '</div><p>' + text(('De onde vêm os nossos números', 'Where our figures come from'), 'a', 'href="reference.html#sources"') + '</p></section>'
+    ideas += '<section class="closing-band" id="help">' + text(('Conhece uma ideia ou um projeto que devíamos estudar? Conte para nós no grupo.', 'Do you know an idea or a project we should study? Tell us in the group.'))
+    ideas += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
+    ideas += partner_line('ideas.html') + '</main>'
+    (root / 'ideas.html').write_text(page('IMOBX | Ideas behind IMOBX', ideas,
+        f'<link rel="stylesheet" href="{asset_v("bands.css")}"><link rel="stylesheet" href="{asset_v("ideas.css")}"><script src="{asset_v("ideas.js")}" defer></script>',
+        version=guide['version'], lang='pt-BR', title_pt='IMOBX | Ideias por trás da IMOBX'))
+
     def flow(items, cls='flow'):
         """A short sequence drawn as connected steps (numbers from the list, no arrow glyphs)."""
         return f'<ol class="{cls}">' + ''.join('<li>' + (text(i[0], 'strong') + text(i[1], 'span') if isinstance(i[0], list) else text(i, 'span')) + '</li>'

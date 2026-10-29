@@ -103,14 +103,14 @@ MENU = [
         ('governance.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
     ]),
     ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
+        ('ideas.html', 'why', 'Ideias por trás da IMOBX', 'Ideas behind IMOBX', 'Why are we doing this?'),  # decision 15, built 29 Oct
         ('resources.html', 'title-reference', 'Pessoas e fontes', 'People and sources', 'Who is behind IMOBX, and where our figures come from'),
         ('resources.html', 'title-whitepaper', 'Proposta completa', 'Full proposal', 'The full proposal (whitepaper)'),
         ('resources.html', 'title-pitchdeck', 'Apresentação para parceiros', 'Partner presentation', 'Presentation for partners'),
-        ('resources.html', 'title-devsheet', 'Guia de construção', 'Building guide', 'Guide to building the first houses'),
     ]),
 ]
 # Pages without their own menu item light up their parent; the lofts page belongs to Project development.
-MENU_PARENT = {'properties.html': 'roadmap.html', 'reference.html': 'resources.html'}
+MENU_PARENT = {'properties.html': 'roadmap.html', 'reference.html': 'resources.html', 'ideas.html': 'resources.html'}
 # Section addresses other pages link to, kept although they left the menu.
 EXTRA_ANCHORS = [
     ('index.html', 'onde-estamos', 'Where we are now'),
@@ -195,7 +195,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
                'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
                'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html', 'IMOBX | Distributed ledger': 'blockchain.html', 'IMOBX | Project reference': 'reference.html',
                'IMOBX | Renting and buying a home': 'rent-to-own.html',
-               'IMOBX | Take part': 'contact.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
+               'IMOBX | Take part': 'contact.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | Ideas behind IMOBX': 'ideas.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
     document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{esc(description)}">
