@@ -40,6 +40,7 @@ def build_reference(root, page, tr, esc):
     for label, target in [(('Fontes', 'Sources'), 'sources'), (('Versões e downloads', 'Versions and downloads'), 'versions')]:
         body += text(label, 'a', f'href="#{target}"')
     body += '</nav>' + spans(i for i in retired if not i.startswith('source-'))
+    sections_start = len(body)  # Resources one-pager (owner, 29 Oct) takes everything from here on
     exports = [[], []]
     for i in range(2):
         exports[i] = ['# ' + data['title'][i], f'**{(LABEL_PT, LABEL_EN)[i]}**']
@@ -78,15 +79,13 @@ def build_reference(root, page, tr, esc):
         body += f'<li id="source-{esc(source["id"])}">' + text(source['label'], 'a', f'href="{esc(source["url"])}"')
         body += text(source['scope']) + '</li>'
     body += '</ol>' + spans(i for i in retired if i.startswith('source-'))
-    # for due diligence, beside the sources (moved here from Documents, review A resources #43)
-    body += '<p>' + text(('Para desenvolvedores: o texto do site como dados (JSON)', 'For developers: the site’s text as data (JSON)'),
-                         'a', 'href="model-guide.json" download') + '</p>'
     body += '</section><section id="versions">' + text(data['versions_title'], 'h2')
     body += text((LABEL_PT, LABEL_EN), 'p', 'class="resource-meta"')
     body += '<p><a href="project-reference-pt.pdf" download>Português · PDF</a> · '
     body += '<a href="project-reference-pt.md" download>Português · Markdown</a> · '
     body += '<a href="project-reference-en.pdf" download>English · PDF</a> · '
     body += '<a href="project-reference-en.md" download>English · Markdown</a></p></section></main>'  # citing and file versions are on Documents
+    build_reference.fragment = body[sections_start:].removesuffix('</main>')
     (root / 'reference.html').write_text(page('IMOBX | Project reference', body, version=VERSION,
                                             lang='pt-BR', title_pt='IMOBX | Referência do projeto'))
     for i, lang in enumerate(['pt', 'en']):

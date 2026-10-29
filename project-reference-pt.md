@@ -17,7 +17,7 @@
 
 Como a construtora proposta tem ligação com um fundador, outras pessoas comparam os preços, aprovam o contrato e conferem o serviço.
 
-## De onde vêm as informações?
+## Nossas fontes
 
 Conferido em 17/10/2026. Cada fonte sustenta só a frase em que aparece; nenhuma delas analisa ou aprova a IMOBX. Os números dos fundadores aparecem como deles.
 

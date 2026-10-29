@@ -17,7 +17,7 @@
 
 Because the proposed builder is linked to a founder, other people compare its prices, approve its contract and check its work.
 
-## Where do the facts come from?
+## Our sources
 
 Checked on 17 October 2026. Each source supports only the line it is cited for; none of them reviews or approves IMOBX. Figures from the founders are marked as theirs.
 

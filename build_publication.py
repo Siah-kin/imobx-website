@@ -103,14 +103,14 @@ MENU = [
         ('governance.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
     ]),
     ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
-        ('ideas.html', 'why', 'Ideias por trás da IMOBX', 'Ideas behind IMOBX', 'Why are we doing this?'),  # decision 15, built 29 Oct
-        ('resources.html', 'title-reference', 'Pessoas e fontes', 'People and sources', 'Who is behind IMOBX, and where our figures come from'),
-        ('resources.html', 'title-whitepaper', 'Proposta completa', 'Full proposal', 'The full proposal (whitepaper)'),
-        ('resources.html', 'title-pitchdeck', 'Apresentação para parceiros', 'Partner presentation', 'Presentation for partners'),
+        # Owner, 29 Oct: one Resources page, documents first, then ideas, people and sources.
+        ('resources.html', 'documents', 'Documentos', 'Documents', 'Project documents'),
+        ('resources.html', 'ideas', 'Ideias por trás da IMOBX', 'Ideas behind IMOBX', 'Why are we doing this?'),
+        ('resources.html', 'sources', 'Fontes', 'Sources', 'Where do the facts come from?'),
     ]),
 ]
 # Pages without their own menu item light up their parent; the lofts page belongs to Project development.
-MENU_PARENT = {'properties.html': 'roadmap.html', 'reference.html': 'resources.html', 'ideas.html': 'resources.html'}
+MENU_PARENT = {'properties.html': 'roadmap.html'}
 # Section addresses other pages link to, kept although they left the menu.
 EXTRA_ANCHORS = [
     ('index.html', 'onde-estamos', 'Where we are now'),
@@ -182,7 +182,7 @@ def site_header(lang='pt-BR', current=''):
             '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX, Rio de Janeiro. Um projeto de moradia preparado por Rafael Britto (fundador) e John (comunicação e ferramentas digitais)." data-en="IMOBX, Rio de Janeiro. A housing project prepared by Rafael Britto (founder) and John (communication and digital tools).">IMOBX, Rio de Janeiro. Um projeto de moradia preparado por Rafael Britto (fundador) e John (comunicação e ferramentas digitais).</p><p><a href="transparency.html" data-pt="Custos e financiamento" data-en="Costs and funding">Custos e financiamento</a> <a href="reference.html#people" data-pt="Pessoas e responsabilidades" data-en="People and responsibilities">Pessoas e responsabilidades</a> <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a> <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX, Rio de Janeiro. Um projeto de moradia preparado por Rafael Britto (fundador) e John (comunicação e ferramentas digitais)." data-en="IMOBX, Rio de Janeiro. A housing project prepared by Rafael Britto (founder) and John (communication and digital tools).">IMOBX, Rio de Janeiro. Um projeto de moradia preparado por Rafael Britto (fundador) e John (comunicação e ferramentas digitais).</p><p><a href="transparency.html" data-pt="Custos e financiamento" data-en="Costs and funding">Custos e financiamento</a> <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a> <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):
@@ -293,27 +293,30 @@ def resource_section(standalone=True):
 <p class="resource-meta">{translated(item['meta_pt'], item['meta_en'])}</p>
 <div class="resource-actions">{''.join(actions)}</div></article>'''
 
-    body = '<section class="content wrap" id="documentos"><span id="resources"></span><span id="recursos"></span>'
-    body += translated('Documentos do projeto', 'Project documents', 'h1')
-    body += '<div class="key-card">' + translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p') + '</div>'
-    body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h2') for key in ('reference',) + document_ids) + '</div>'
+    body = '<section id="documents"><span id="documentos"></span><span id="resources"></span><span id="recursos"></span>'
+    body += translated('Documentos do projeto', 'Project documents', 'h2')
+    body += translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p')
+    body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h3') for key in document_ids) + '</div><span id="resource-reference"></span><span id="title-reference"></span>'
     # moved from the project reference (review C #49), as one status line beside the documents
     body += translated('O documento do projeto de Rafael (cerca de 30 páginas) está em preparação.',
                        'Rafael’s project paper (about 30 pages) is in preparation.', 'p')
     body += '<section id="media-resources" aria-labelledby="media-resources-title">'
     body += translated('Logos e marca', 'Logos and brand', 'h2', 'id="media-resources-title"')
+    body += translated('Para a imprensa e os parceiros que escrevem sobre a IMOBX: o nosso logo e as nossas cores, prontos para usar.',
+                       'For press and partners who write about IMOBX: our logo and colours, ready to use.', 'p')
     body += '<div class="resource-grid">' + card(catalog['media-kit'], labelled_by='media-resources-title') + '</div></section>'
     # citing the reference, and the file versions (moved from the project reference, review C #131, #132, #142)
-    body += '<section id="cite" aria-labelledby="cite-title">'
-    body += translated('Como citar esta referência', 'How to cite this reference', 'h2', 'id="cite-title"')
+    cite = '<section id="cite" aria-labelledby="cite-title">'  # citing moves to the foot, next to the versions (owner, 29 Oct)
+    cite += translated('Como citar esta referência', 'How to cite this reference', 'h2', 'id="cite-title"')
     date_numeric = '/'.join(reversed(REVIEW_DATE.split('-')))
-    body += translated(f'Para citar: IMOBX, Referência do projeto, v{VERSION}, {date_numeric}, seguido do título da seção e do link.',
+    cite += translated(f'Para citar: IMOBX, Referência do projeto, v{VERSION}, {date_numeric}, seguido do título da seção e do link.',
                        f'To cite: IMOBX, Project reference, v{VERSION}, {DATE_EN}, then the section title and link.', 'p')
-    body += '<p>' + translated('Versões e identificação dos arquivos', 'File versions and identifiers', 'a', 'href="publication-manifest.json"') + '</p></section>'
+    cite += '<p>' + translated('Versões e identificação dos arquivos', 'File versions and identifiers', 'a', 'href="publication-manifest.json"') + '</p></section>'
+    resource_section.cite = cite
     # the "On the website" list copied the menu (review A #32–42): only the page's one action stays; old ids kept
     body += '<section id="website-pages"><span id="website-pages-title"></span>'
     body += '<span id="title-housing"></span><span id="resource-housing"></span><span id="title-transparency"></span><span id="resource-transparency"></span>'
-    body += '<div class="resource-more">' + translated('Participar', 'Take part', 'a', 'href="contact.html"')
+    body += '<div class="resource-more">'
     body += translated('Baixar tudo (ZIP)', 'Download everything (ZIP)', 'a', 'href="imobx-documents.zip" download')
     return body + '</div></section>'
 
@@ -351,10 +354,34 @@ language_controls = ''  # The shared header contains the single language control
 build_guide(ROOT, page, translated, esc, language_controls)
 build_reference(ROOT, page, translated, esc)
 build_contact(ROOT, page, translated, esc, VERSION)
+# Resources as one page (owner, 29 Oct): the documents first, then the ideas behind IMOBX, who does what, and the sources.
+_res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated('Nesta página', 'On this page', 'p') + '<ol>'
+            + ''.join('<li>' + translated(pt, en, 'a', f'href="#{a}"') + '</li>' for pt, en, a in
+                      [('Documentos', 'Documents', 'documents'), ('Ideias', 'Ideas', 'ideas'), ('Fontes', 'Sources', 'sources')])
+            + '</ol></nav>')
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
-    '<main id="main">' + language_controls + resource_section(standalone=True) + '</section>'
+    '<main class="paper guide-paper band-page resources-page" id="main">' + language_controls
+    + translated('Documentos, ideias e fontes', 'Documents, ideas and sources', 'h1')
+    + translated('Comece pelos documentos. Logo abaixo estão as razões por trás da IMOBX, as ideias que formaram o plano e a fonte de cada número.',
+                 'Start with the documents. Below them are the reasons behind IMOBX, the ideas that shaped the plan and the source of every figure.', 'p', 'class="guide-lead"') + _res_nav
+    + resource_section(standalone=True) + '</section>'
+    + build_guide.ideas_html + re.sub(r'<section id="people">.*?</section>', '<span id="people"></span>', build_reference.fragment, count=1, flags=re.S)  # owner, 29 Oct: 'remove this'
+    + resource_section.cite + build_guide.ideas_close
     + partner_line_html('resources.html', lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)) + '</main>',
-    '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
+    build_guide.ideas_head + '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
+
+
+def _moved(title, heading, default_hash):
+    """An old page now inside Resources: keeps every old #address (owner, 29 Oct)."""
+    target = 'resources.html' + default_hash
+    script = ('<script>(function(){var t="resources.html"+(location.hash||' + json.dumps(default_hash) + ');'
+              'var a=document.getElementById("moved-link");if(a)a.href=t;location.replace(t);})();</script>')
+    return redirect_stub(title, heading, target, 'Open the current version').replace(
+        f'<meta http-equiv="refresh" content="0;url={target}">', f'<noscript><meta http-equiv="refresh" content="0;url={target}"></noscript>').replace('</body>', script + '</body>')
+
+
+(ROOT / 'reference.html').write_text(_moved('IMOBX | Fontes', 'Fontes', '#sources'))
+(ROOT / 'ideas.html').write_text(_moved('IMOBX | Ideias por trás da IMOBX', 'Ideias por trás da IMOBX', '#ideas'))
 kit_html = markdown.markdown((ROOT / 'media-kit.md').read_text(), extensions=['tables', 'toc'])
 logo_previews = '''<div class="media-logo-grid"><figure class="media-logo light">
 <img src="assets/imobx-logo-light.png" width="400" height="400" alt="IMOBX logo on a white background">
