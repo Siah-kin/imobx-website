@@ -12,7 +12,8 @@
 | OLYMPUS | Proposed builder, linked to Rafael; no contract signed. | Hired only after the work is agreed, prices are compared and someone independent of the builder approves. |
 | Residents | Housing terms and participation in shared matters. | Rules and representatives to be agreed with residents. |
 | Community or charitable partner | Access to property, households or funders, if a partnership is agreed. | Under discussion; nothing agreed. |
-| Legal advice, accounting and building inspection | Review of agreements, accounts and safety. | Open: we are looking for these people. |
+| Legal advice and accounting | Advice on agreements and accounts. | Rafael’s own lawyers and accountant; their role for IMOBX is still to be agreed. |
+| Building inspection | An independent check of safety and of the completed work. | Open: we are looking for this person. |
 | Funders and people who promote the project | Funding or work under their own agreements. | Get only the rights in their own agreement. Anyone paid to promote IMOBX must say so. |
 
 Because the proposed builder is linked to a founder, other people compare its prices, approve its contract and check its work.

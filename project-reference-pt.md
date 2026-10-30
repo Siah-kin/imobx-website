@@ -12,7 +12,8 @@
 | OLYMPUS | Construtora proposta, ligada a Rafael; nenhum contrato assinado. | Só é contratada depois de combinar o serviço, comparar preços e ter a aprovação de alguém independente da construtora. |
 | Moradores | Condições de moradia e participação nos assuntos comuns. | Regras e representantes a combinar com os moradores. |
 | Parceiro comunitário ou beneficente | Acesso a imóvel, famílias ou financiadores, se a parceria for acordada. | Em conversa; nada acordado. |
-| Assessoria jurídica, contabilidade e conferência da obra | Revisão dos contratos, contas e segurança. | Vaga: estamos procurando essas pessoas. |
+| Assessoria jurídica e contabilidade | Orientação sobre contratos e contas. | Os próprios advogados e a contadora de Rafael; o papel deles na IMOBX ainda será combinado. |
+| Conferência da obra | Conferência independente da segurança e da obra entregue. | Vaga: estamos procurando essa pessoa. |
 | Financiadores e divulgadores | Recursos ou trabalho conforme acordos próprios. | Recebem só os direitos do próprio acordo. Quem recebe para divulgar a IMOBX precisa avisar. |
 
 Como a construtora proposta tem ligação com um fundador, outras pessoas comparam os preços, aprovam o contrato e conferem o serviço.
