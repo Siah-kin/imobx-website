@@ -60,7 +60,7 @@ His US$27,777 per-house plan uses CUB and SINAPI, Brazilian building-cost refere
 
 
 
-Source: [Whitepaper, section 3: the costs](whitepaper.html#3-the-cost-proposal-already-supplied). Shows how Rafael supplied these figures. It is not an independent check of them.
+Source: [Whitepaper, section 3: the costs](whitepaper.html#3-the-cost-proposal-already-supplied). Shows how Rafael supplied these figures.
 
 **Presenter notes:** On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six houses total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices.
 
@@ -80,7 +80,7 @@ The household could see what it has paid towards the purchase and how much remai
 
 
 
-**Presenter notes:** The first houses are still being planned. The first house’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
+**Presenter notes:** The first houses are still being planned. A family pays about 60% above the building cost over 15 years; each family’s monthly payment is agreed with it. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
 
 
 
@@ -138,7 +138,7 @@ Source: [ICA: cooperative identity](https://ica.coop/en/cooperatives/cooperative
 
 Source: [Elinor Ostrom: Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/). Is research on how communities manage shared resources. It does not test IMOBX's rules.
 
-**Presenter notes:** The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Whatever a token vote decides, only the family and IMOBX together, under the law, can change a family’s housing agreement. See rent-to-own.html#decisions and governance.html. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX.
+**Presenter notes:** The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Whatever a token vote decides, only the family and IMOBX together, under the law, can change a family’s housing agreement. See rent-to-own.html#decisions and governance.html.
 
 
 
@@ -174,11 +174,11 @@ We are examining how to introduce the IMOBX token in line with Brazilian law. It
 
 
 
-Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). Says Brazil's regulator looks at what an investment actually gives, not its name. It does not say whether an IMOBX token would comply.
+Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). Says Brazil's regulator looks at what an investment actually gives, not its name.
 
 Source: [IMOBX: the token, on the distributed ledger page](https://siah-kin.github.io/imobx-website/blockchain.html#token). Sets out the token’s four functions as the project describes them.
 
-**Presenter notes:** We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens. Paid outreach needs a funded task, a check of the completed work and disclosure of payment.
+**Presenter notes:** We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens.
 
 
 
@@ -216,7 +216,7 @@ Follow actual costs, accounts and families’ experience.
 
 
 
-**Presenter notes:** Agree response times and affordability targets with local participants. Report houses as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. The published records do not yet document completed house transfers or committed capital.
+**Presenter notes:** Agree response times and affordability targets with local participants. Report houses as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed.
 
 
 

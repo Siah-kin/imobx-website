@@ -15,9 +15,9 @@
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. Under the plan, a family rents a home under an agreement explaining how it becomes the owner. The organization arranges access to property, contracts construction and manages repairs and accounts. The first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
 
-**What exists today.** Rafael’s dated village budget and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael describes his construction experience and local knowledge; his references are not yet listed. John works on communication and digital tools.
+**What exists today.** Rafael’s dated village budget and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
 
-**What is not decided.** The property. The home’s price, monthly payment and time to pay, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, the terms for using each property, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The rights of any token, which is a digital record of a right that can be bought and sold.
+**What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, the terms for using each property, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The rights of any token, which is a digital record of a right that can be bought and sold.
 
 ### How the operation fits together
 
@@ -77,7 +77,7 @@ In January 2026, Rafael’s construction company signed a contract to build two 
 
 Under the plan, a family rents the home and pays the agreed monthly amount in reais. Its agreement states the purchase price and how much of each payment counts towards buying the home. Its purchase record shows how much has counted towards buying the home and how much remains to pay.
 
-For the first household, the home’s price, monthly payment and time to pay have not been set, and neither has how much of each payment counts towards buying the home. Rafael’s construction budgets are evidence for assessing building costs, not household sale offers. The household does not need to buy an investment token or use a crypto wallet. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
+In the model, a family pays about 60% above the building cost over 15 years; the first household’s exact price and monthly payment, and how much of each payment counts towards buying the home, are agreed with the family. Rafael’s construction budgets are evidence for assessing building costs, not household sale offers. The household does not need to buy an investment token or use a crypto wallet. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
 
 Repair charges, missed payments, temporary hardship and leaving need separate terms. If a family leaves, what happens to the funding already counted towards buying its home is not agreed. No refund formula or grace period is established here. These terms belong in the offer the household assesses before agreeing to move in.
 
@@ -205,11 +205,11 @@ IMOBX’s development plan connects the first houses in Rio with resident partic
 
 The monthly report shows receipts and payments, amounts set aside, building costs and delays, repairs, unresolved issues and families’ purchase progress. Every amount received and paid is checked against its records. Affordability and service-response targets need to be agreed locally.
 
-A first expansion review comes after at least three operating months. This is a review point, not proof of long-term viability. A second local team should be able to repeat the process, with funding for new work that respects existing commitments. The detailed roadmap explains who does the work, what must be ready and what stops a stage. Named appointments and delivery dates are open.
+A first expansion review comes after at least three operating months. A second local team should be able to repeat the process, with funding for new work that respects existing commitments. The detailed roadmap explains who does the work, what must be ready and what stops a stage. Named appointments and delivery dates are open.
 
 ### What the public can follow
 
-The website explains the proposal now. As the project develops, reports show signed agreements, approved work, funding received, construction and home transfers. Any investment access follows defined rights, legal review and checked payment arrangements. See the [detailed roadmap](roadmap.html).
+The website explains the proposal now. As the project develops, reports show signed agreements, approved work, funding received, construction and home transfers. See the [detailed roadmap](roadmap.html).
 
 <div class="pagebreak"></div>
 
@@ -233,10 +233,10 @@ The housing operation and financial token remain in preparation. Published drawi
 
 ### Evidence for the next project decision
 
-The readiness review brings together the property documents, site-specific budget, construction permissions, family terms, responsibilities and funding plan. Relevant building, accounting and legal professionals review their parts. Participants can see which commitments are agreed and which questions remain open.
+The readiness review brings together the property documents, site-specific budget, construction permissions, family terms, responsibilities and funding plan. Participants can see which commitments are agreed and which questions remain open.
 
 ### Following progress
 
 Planned reports distinguish proposed, signed, paid and completed work. Residents have access to their own agreements and purchase records. Public accounts explain project spending without exposing household documents.
 
-The [project reference](reference.html#chapters) maps Rafael’s manuscript chapters to the current proposal and sources. It identifies open work, including the complete financial model and professional review. [Photos and drawings](properties.html) show the supplied design and site material with captions; they are not a listing of available houses. No investment is offered through this guide.
+The [project reference](reference.html#chapters) maps Rafael’s manuscript chapters to the current proposal and sources. It identifies open work, including the complete financial model. [Photos and drawings](properties.html) show the supplied design and site material with captions; they are not a listing of available houses. No investment is offered through this guide.

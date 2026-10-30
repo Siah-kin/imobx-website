@@ -19,11 +19,11 @@ Because the proposed builder is linked to a founder, other people compare its pr
 
 ## Our sources
 
-Checked on 17 October 2026. Each source supports only the line it is cited for; none of them reviews or approves IMOBX. Figures from the founders are marked as theirs.
+Sources checked on 17 October 2026.
 
 [Rafael’s budget and his account of the lofts](https://siah-kin.github.io/imobx-website/whitepaper.html#3-the-cost-proposal-already-supplied)
 
-Rafael’s own figures, from 30 November 2025 and 20 January 2026. Not yet checked independently.
+Rafael’s own figures, from 30 November 2025 and 20 January 2026.
 
 [IBGE: 2022 Census, favelas and urban communities](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas)
 

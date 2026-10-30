@@ -50,7 +50,7 @@
         {
           "label": "Whitepaper, section 3: the costs",
           "url": "whitepaper.html#3-the-cost-proposal-already-supplied",
-          "effect": "Shows how Rafael supplied these figures. It is not an independent check of them."
+          "effect": "Shows how Rafael supplied these figures."
         }
       ]
     },
@@ -62,7 +62,7 @@
         "The household can follow the amount paid and the remaining price.",
         "The whole house transfers to the household once the purchase terms are met."
       ],
-      "notes": "The first houses are still being planned. The first house’s price, monthly payment and time to pay have not been set. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work."
+      "notes": "The first houses are still being planned. A family pays about 60% above the building cost over 15 years; each family’s monthly payment is agreed with it. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work."
     },
     {
       "title": "Show where each payment goes",
@@ -92,7 +92,7 @@
         "No investment purchase or promotional work would be required for a voice.",
         "Investor rights and each household’s contract have their own terms."
       ],
-      "notes": "The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Whatever a token vote decides, only the family and IMOBX together, under the law, can change a family’s housing agreement. See rent-to-own.html#decisions and governance.html. Resident decision-making is still a proposal and has not yet been demonstrated in IMOBX.",
+      "notes": "The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Whatever a token vote decides, only the family and IMOBX together, under the law, can change a family’s housing agreement. See rent-to-own.html#decisions and governance.html.",
       "sources": [
         {
           "label": "ICA: cooperative identity",
@@ -124,12 +124,12 @@
         "Voting: holders vote on the token’s own rules; the cooperative keeps one member, one vote.",
         "Verify: in the plan, anyone can check each payment and who approved it."
       ],
-      "notes": "We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens. Paid outreach needs a funded task, a check of the completed work and disclosure of payment.",
+      "notes": "We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens.",
       "sources": [
         {
           "label": "CVM Guidance Opinion 40",
           "url": "https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html",
-          "effect": "Says Brazil's regulator looks at what an investment actually gives, not its name. It does not say whether an IMOBX token would comply."
+          "effect": "Says Brazil's regulator looks at what an investment actually gives, not its name."
         },
         {
           "label": "IMOBX: the token, on the distributed ledger page",
@@ -163,7 +163,7 @@
         "Check funding received and paid against the records; report repairs and unresolved issues.",
         "Show participation and progress toward owning the home."
       ],
-      "notes": "Agree response times and affordability targets with local participants. Report houses as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed. The published records do not yet document completed house transfers or committed capital."
+      "notes": "Agree response times and affordability targets with local participants. Report houses as planned, contracted, delivered or transferred, with checked records. Token prices and holder counts do not measure how well families are housed."
     },
     {
       "title": "One property can become a project to assess",

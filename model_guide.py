@@ -112,8 +112,8 @@ TERMS = [
          'The rules that apply are Receita Federal tax registration, the Civil Code on when ownership passes, and Law 13.019 for partnerships with public bodies.'),
     ]),
     (('Pessoas', 'People'), [
-        ('Os direitos e deveres de cada pessoa dependem de contratos assinados e de registros oficiais. Hoje, os deveres formais dos fundadores ainda não estão escritos.',
-         'Each person’s rights and duties depend on signed agreements and official records. Today, the founders’ formal duties are not yet written down.'),
+        ('Os direitos e deveres de cada pessoa dependem de contratos assinados e de registros oficiais.',
+         'Each person’s rights and duties depend on signed agreements and official records.'),
     ]),
     (('O grupo do Telegram', 'The Telegram group'), [
         ('O grupo da IMOBX é aberto: todos nele veem o que você publica. Não inclua telefone, endereço nem documentos. As orientações completas estão na mensagem de boas-vindas do grupo.',

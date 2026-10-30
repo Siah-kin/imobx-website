@@ -19,11 +19,11 @@ Como a construtora proposta tem ligação com um fundador, outras pessoas compar
 
 ## Nossas fontes
 
-Conferido em 17/10/2026. Cada fonte sustenta só a frase em que aparece; nenhuma delas analisa ou aprova a IMOBX. Os números dos fundadores aparecem como deles.
+Fontes conferidas em 17/10/2026.
 
 [O orçamento de Rafael e o relato dele sobre os lofts](https://siah-kin.github.io/imobx-website/whitepaper.html#3-the-cost-proposal-already-supplied)
 
-Números do próprio Rafael, de 30/11/2025 e 20/01/2026. Ainda sem conferência independente.
+Números do próprio Rafael, de 30/11/2025 e 20/01/2026.
 
 [IBGE: Censo 2022, favelas e comunidades urbanas](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas)
 

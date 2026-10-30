@@ -8,9 +8,9 @@ IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family ren
 
 **What exists today.** Rafael’s November 2025 village budget; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
 
-**What is not decided.** The property. The home’s price, monthly payment and time to pay, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The rights of any token, which is a digital record of a right that can be bought and sold.
+**What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The rights of any token, which is a digital record of a right that can be bought and sold.
 
-Rafael describes his construction experience and knowledge of local conditions; his references are not yet listed. John works on community communication and digital tools.
+Rafael brings his construction experience and knowledge of local conditions. John works on community communication and digital tools.
 
 Under the plan, a family rents the home and makes monthly payments in reais. The agreement records the amount credited towards the purchase and the remaining agreed price. Ownership of the whole home passes to the household once the purchase conditions and property transfer are completed. IMOBX then stops receiving rent from that house.
 
@@ -40,7 +40,7 @@ A property can reach IMOBX by donation, lease, sale or another agreement, and th
 
 One structure under consideration is a foreign organization holding Brazilian property. [Receita Federal’s guidance for legal entities based abroad](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/solicitacao-de-atos-perante-o-cnpj-por-meio-da-internet/orientacoes-para-pessoa-juridica-domiciliada-no-exterior) confirms that such an organization needs a CNPJ, Brazil’s business tax registration. A CNPJ does not give property ownership or make a bank or exchange accept the organization; these are separate matters. IMOBX has not chosen its legal form and no property is confirmed here, so both still need documents.
 
-Rafael’s building company is a contractor under consideration. Its catalogue can show experience once the completed work, and permission to publish it, have been checked. Under the plan, a founder who is connected to a builder does not approve that builder’s bill. Someone else checks the price, profit, changes and completed work.
+Rafael’s building company is the proposed contractor. Under the plan, a founder who is connected to a builder does not approve that builder’s bill. Someone else checks the price, profit, changes and completed work.
 
 ### Rafael's village vision, 30 November 2025
 
@@ -100,7 +100,7 @@ Once the token can be used, each trade on the market pays a small fee in USDC. A
 
 The fees pay for work that has been checked, such as outreach tasks set out in writing, each payment its own line in the accounts. They depend on trading, so the plan is tested with little or no trading income. Higher fees may discourage buyers and sellers.
 
-A token’s market price does not establish funding available to pay building bills. Eligibility, review and disclosure of payment are defined before any outreach programme pays participants.
+
 
 <div class="pagebreak"></div>
 
@@ -157,7 +157,7 @@ The outreach programme sets out tasks in writing, checks the work submitted and 
 
 The plan is that each family owns its **whole house**. In Brazil, the property registry records who owns a house (Civil Code, article 1,245); the token carries no claim on any house.
 
-The nonprofit idea is meant to keep funding serving housing, and IMOBX’s legal form is not decided. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). Brazilian advisers review any funding arrangement the chosen legal form permits. A donation given for building houses keeps its agreed purpose.
+The nonprofit idea is meant to keep funding serving housing, and IMOBX’s legal form is not decided. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). A donation given for building houses keeps its agreed purpose.
 
 The CVM looks at the rights a token actually gives, not at names such as “utility” or “governance”, in its [Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). That opinion explains how the CVM assesses tokens; it does not approve any IMOBX offer. This paper claims no regulatory approval.
 
@@ -177,7 +177,7 @@ Under the plan, people can follow funding in and out, see agreed decisions and c
 
 Public markets, or trading platforms, already run on the Arc network, a blockchain.
 
-For the first project, we compare a shared digital record with ordinary accounts and signed agreements: what gets easier to check, how much it costs, who can correct an error and who keeps access. A token cannot create rental income, verify a building or guarantee a buyer when someone wants to leave. The [OECD’s study of tokenising assets in financial markets](https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/11/understanding-the-tokenisation-of-assets-in-financial-markets_2e657111/c033401a-en.pdf) is general background on tokenisation; it does not review IMOBX.
+A token cannot create rental income, verify a building or guarantee a buyer when someone wants to leave. The [OECD’s study of tokenising assets in financial markets](https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/11/understanding-the-tokenisation-of-assets-in-financial-markets_2e657111/c033401a-en.pdf) is general background on tokenisation.
 
 Residents and the organization agree who decides each matter, spending limits and how a decision can be reviewed. Everyday work follows these rules without waiting for instructions from the founder.
 
@@ -185,7 +185,7 @@ For example, a resident reports a leak through the support channel. The person h
 
 Tasks need a responsible person, deadline and budget. If someone leaves a role, their replacement finds the open work, approvals and documents needed to continue. Residents need ways to choose and replace responsible people. Personal information stays private.
 
-Software assistants can organize documents and remind people about unfinished work, and blockchain records can show payment amounts and destinations. The agreed rules still determine who decides or spends. This method has not been tested: it needs agreement with participants and a working pilot. See [daily decisions and tasks](transparency.html#faq-flock-siah).
+Software assistants can organize documents and remind people about unfinished work, and blockchain records can show payment amounts and destinations. The agreed rules still determine who decides or spends. See [daily decisions and tasks](transparency.html#faq-flock-siah).
 
 Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. No provider is confirmed for IMOBX. Residents do not need crypto wallets. See the [funding path](transparency.html#settlement) and the [payment-service requirements](transparency.html#ramp-options).
 
@@ -195,7 +195,7 @@ Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital 
 
 The [roadmap](roadmap.html#stages) follows six stages: legal structure and property, resident participation, first houses, payment records people can check, funding and account review, and further projects. Each stage explains who does the work, what must happen first and which records are needed before it proceeds. Construction dates depend on the chosen project, funding and permissions. Legal preparation, resident discussions and digital trials can progress alongside one another.
 
-After families move in, the plan follows at least three months before reviewing expansion. A second local team should be able to repeat the work. The website can report real progress and accounts before any token exists. A later purchase screen follows agreed rights and a checked legal and payment route.
+After families move in, the plan follows at least three months before reviewing expansion. A second local team should be able to repeat the work.
 
 | What to follow | What to show |
 |---|---|
@@ -211,7 +211,7 @@ Service targets depend on the first project’s needs and resident participation
 
 The [participation page](contact.html) has separate routes for residents, property owners, building professionals, community organisations, funding partners and community contributors. A household can describe its location and housing needs. An owner can describe a property and whether donation, sale or lease is being considered. A builder can introduce a service and area of work. A funding partner can state the type of support and documents it needs to assess.
 
-Receiving contacts are not yet available. Visitors can prepare and copy an introduction, but the site does not send it or reserve housing, appoint a contractor or accept an investment. Routes: [household](contact.html?role=resident), [property](contact.html?role=property) and [funding](contact.html?role=funding).
+To get in touch, choose the route for a [household](contact.html?role=resident), a [property](contact.html?role=property) or [funding](contact.html?role=funding).
 
 The partnership under discussion combines IMOBX as project organiser, OLYMPUS as a possible builder, linked to Rafael, and a community or charitable organisation as a possible property or local partner. A financing partner can support an agreed project budget. These relationships are proposals, with no partner agreement or funding commitment established here. A property visit can produce a condition assessment and a costed next step.
 
@@ -225,8 +225,8 @@ Rafael supplied the November budget and January two-loft account. Their dates an
 
 The legal registration, property documents, permissions and signed agreements need checking for the chosen project. The researched payment services do not establish a working IMOBX connection. Resident voting, reinvestment and token rights are decisions still to be agreed.
 
-The public [risk list](reference.html#risks) identifies construction, household, cash, offering and software risks, with reviewing roles still to be appointed. The complete financial model is not ready yet: it needs site costs in reais, affordable payments, repair and delay scenarios, and zero token-trading income. This paper does not show that income covers all costs or that the project can work across Brazil.
+The public [risk list](reference.html#risks) identifies construction, household, cash, offering and software risks. The complete financial model is not ready yet: it needs site costs in reais, affordable payments, repair and delay scenarios, and zero token-trading income.
 
-The CVM’s [Resolution 249](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm) of 13 October 2026 creates an experimental programme for distributed-ledger technology, the technical name for shared digital records such as a blockchain. Article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in those tests; it does not authorise a public offering. The project’s legal form and any way to raise the funding need their own review.
+The CVM’s [Resolution 249](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm) of 13 October 2026 creates an experimental programme for distributed-ledger technology, the technical name for shared digital records such as a blockchain. Article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in those tests; it does not authorise a public offering.
 
 Project updates show agreements signed, funding received and work completed, alongside open questions and responsible roles. The [source list](reference.html#sources) shows which statement each source supports. The [version record](reference.html#versions) identifies this edition for citation; private household documents stay unpublished.
