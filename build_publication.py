@@ -98,9 +98,9 @@ MENU = [
     # Owner, 28 Oct: Local governance is its own page, ordered from now to later (team, token holders, residents).
     ('governance.html', 'Governança local', 'Local governance', [
         ('governance.html', 'now', 'Quem decide agora', 'Who decides now', 'Who decides now?'),
+        ('governance.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
         ('governance.html', 'token-rules', 'Regras dos detentores', 'Rules for holders', 'Who decides about the token?'),
         ('governance.html', 'residents', 'Os moradores', 'Residents', 'Who decides once families live in the houses?'),
-        ('governance.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
     ]),
     ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
         # Owner, 29 Oct: one Resources page, documents first, then ideas, people and sources.

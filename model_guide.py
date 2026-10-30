@@ -705,12 +705,16 @@ def build_guide(root, page, tr, esc, language_controls):
     gov += text(('A IMOBX está em preparação, então hoje uma pequena equipe toma as decisões. À medida que o projeto cresce, mais pessoas ganham voz, em três etapas:',
                  'IMOBX is in preparation, so today a small team makes the decisions. As the project grows, more people get a say, in three stages:'), 'p', 'class="guide-lead"')
     gov += gov_flow_html(text)  # owner, 29 Oct ('go'): the stages as one drawing; owner: every heading gets a line or two
-    gov += on_this_page([(('Agora', 'Now'), 'now'), (('Proteções', 'Protections'), 'safeguards'), (('O token', 'The token'), 'token-rules'), (('Os moradores', 'Residents'), 'residents'),
-                         (('O que estamos decidindo', 'What we are deciding'), 'deciding')])
+    gov += on_this_page([(('Agora', 'Now'), 'now'), (('O que estamos decidindo', 'What we are deciding'), 'deciding'), (('Proteções', 'Protections'), 'safeguards'),
+                         (('O token', 'The token'), 'token-rules'), (('Os moradores', 'Residents'), 'residents')])
     gov += '<section id="now">' + text(('Quem decide agora?', 'Who decides now?'), 'h2')
     gov += text(('Hoje, os fundadores decidem, com as pessoas que chamam para uma tarefa definida. Cada tarefa tem uma pessoa responsável, um prazo e um orçamento, então o trabalho segue sem esperar por um fundador.',
                  'Today the founders decide, with the people they bring in for a set task. Each task has a person responsible, a deadline and a budget, so work goes on without waiting for a founder.'), 'p', 'class="answer"')
     gov += gtable(team_rows) + '</section>'
+    # Owner, 31 Oct: 'Who decides now?' and 'What are we deciding now?' belong together; they were apart by accident.
+    gov += '<section id="deciding">' + text(('O que estamos decidindo agora?', 'What are we deciding now?'), 'h2')
+    gov += '<div class="settle-groups">' + ''.join('<div>' + text(label, 'h3') + '<ul class="settle-list">' + ''.join(text(item, 'li') for item in items) + '</ul></div>'
+                                                  for label, items in groups) + '</div></section>'
     gov += SAFEGUARDS_SECTION
     gov += '<section id="token-rules">' + text(('Quem decide sobre o token?', 'Who decides about the token?'), 'h2')
     gov += text(('No plano, quando o token for lançado, quem tem o token vota nas regras do token, e membros cuja ajuda foi confirmada por outros (Zeal) também têm voz, junto com o que possuem. As decisões da cooperativa continuam com os seus membros: um membro, um voto.',
@@ -732,9 +736,6 @@ def build_guide(root, page, tr, esc, language_controls):
     gov += text(('Cada decisão fica numa ata. Uma decisão vale porque o estatuto da cooperativa diz como se decide; a blockchain guarda a prova. No plano, cada pagamento e quem o aprovou ficam numa blockchain pública, onde qualquer pessoa pode conferir.',
                  'Each decision is written in minutes. A decision binds because the cooperative’s statute sets how decisions are made; the blockchain keeps the proof. In the plan, every payment and who approved it is written on a public blockchain, where anyone can check it.'))
     gov += '<p>' + text(('Registro distribuído', 'Distributed ledger'), 'a', 'href="blockchain.html"') + '</p></section>'
-    gov += '<section id="deciding">' + text(('O que estamos decidindo agora?', 'What are we deciding now?'), 'h2')
-    gov += '<div class="settle-groups">' + ''.join('<div>' + text(label, 'h3') + '<ul class="settle-list">' + ''.join(text(item, 'li') for item in items) + '</ul></div>'
-                                                  for label, items in groups) + '</div></section>'
     gov += '<section class="closing-band" id="help">' + text(('Quer ajudar a desenhar como se decide? Apresente-se no grupo.', 'Want to help shape how decisions are made? Introduce yourself in the group.'))
     gov += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
     gov += partner_line('governance.html') + '</main>'

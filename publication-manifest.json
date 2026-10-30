@@ -6,15 +6,15 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "fe9397608eb14c0b13f58959c61ae4cccafe4405353bccb8c5f175834775aa92"
+      "sha256": "972f07a5ba23d9adf07f4efd6ef8695e7588d5c1ce88a58b60ac3323b462900d"
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "40bb01de9cf0f81f78ebd68493a95d8bdcfd2bdb5966692dff64cf94abfb63d1"
+      "sha256": "1cb82e26404d06104c056585a7a8b8dba3d9b4e1d6985a9c3ee2c1422ffbc60f"
     },
     {
       "path": "properties.html",
-      "sha256": "5b8009986b7900259461faf6f3360a6f288ab184f6cc567a4ba05e80aed51210"
+      "sha256": "63eeb50fda972296f1527d054e9516d14dfe55d0cf0db8272015e4591bfece01"
     },
     {
       "path": "project-reference.json",
@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "ee94a0eabcb67b0d0a0d9ee08e01d3da9799efe95903cfcd4e943a7ed7a3fce9"
+      "sha256": "774a21710413194df6d8a12e18431c5762559208dccc0b7f5bd6f15da684e055"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "8f0e7d3c87b73445edb28d5b5a5d6c04d4058f2b7f4f2579d535eb726c442fae"
+      "sha256": "cfe348f4bee620401a5dc840d1ee57bc5f1a5b877e63cb93ac5bf99bbf4ca595"
     },
     {
       "path": "reference.html",
@@ -46,11 +46,11 @@
     },
     {
       "path": "whitepaper.html",
-      "sha256": "2d7d13ebf00be0a5fa56ad104c7bc4fb536fe32c4d28a3eb348a70dcaeb8ee0f"
+      "sha256": "1d2d6f6fe53e5f6f10993d1420dd96ece6285bc823cde7f442f0ad9a9bef51ba"
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "7424ab246f543270646bd5ecd7cdd372db37771e860447cfcf97e4c57cf32a84"
+      "sha256": "84a8cd4724bb552f79941ab7d66f44d83040c0b47c9ec86aa80c1279423501a4"
     },
     {
       "path": "devsheet.md",
@@ -58,11 +58,11 @@
     },
     {
       "path": "devsheet.html",
-      "sha256": "dbe24215a513e5db84ae5c3ff0631d518bf27b3251517e93f62f9436c12f5e85"
+      "sha256": "d2d7379e102be1764f476375b4fce1e22a294d47f6c1898959b9bf4c20d1f22d"
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "3b8be230c3faaa03c5e8169ea1a1886bf8fdb294d2a4ac02bde6cd1437ca904b"
+      "sha256": "0ef8c66486e5ae52a998c9ed8d2e2b21a7a37ddc7ceb8d0745a732d167785edb"
     },
     {
       "path": "pitchdeck.json",
@@ -74,27 +74,27 @@
     },
     {
       "path": "pitchdeck.html",
-      "sha256": "6a2ffa89af8f3110fb11bb58ca2d6f035bd3075c13ae40fa4d44d02a83a2406c"
+      "sha256": "702c6a5a801922c60c9e34d409c25c838275a02298d0402df6ff3bfb190758dd"
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "0f71bbc53e0630077ce61d7bdbd7f314ad39d94fc1068183ec219854fc113a3d"
+      "sha256": "fdb54f4442241b11c1efabf0166bc0fd03af1daa7ec0edb0c454f97d1fa5c4ec"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "7d05b9b82e8f9a734fd88c0d6b69d73eed864ecfa72837855d910ba5d253302f"
+      "sha256": "e9f05f1affa7c6089485f8d99e55a4af6c843b7dad64de811c77752e00fb0578"
     },
     {
       "path": "roadmap.html",
-      "sha256": "04aa5fff50b0923e97863ab022318078e192a381b19b9df965b7afcfb838f2bb"
+      "sha256": "b6fc38ab011a4361747225d0850f645f3a5ef7fd838d42b22abe74e2b046e586"
     },
     {
       "path": "transparency.html",
-      "sha256": "50919738e07438b1c769092b89e54b7b2a593f746f9b366211fed7f8906b48fb"
+      "sha256": "f8188a80d2c6f0a04fe9f63e16af88799aa935674806b6d388e7f3920f7f93eb"
     },
     {
       "path": "resources.html",
-      "sha256": "8d1d581af63b3006dca2528efdf9fbb91c4e4f9d9174279eb038542d35e572c8"
+      "sha256": "670cd04862c695544f519cb6c1fe9a996f3962c9d3b20c1a1239a8b146f0d1c6"
     },
     {
       "path": "model-guide.json",
@@ -102,7 +102,7 @@
     },
     {
       "path": "contact.html",
-      "sha256": "8ede5e88b26f1b653286861fc4d0400b99d747336d3d5333189364354602a56b"
+      "sha256": "f942c6247da28359103ae280be99102859d12ffba9e2db917845dcd792037ab1"
     },
     {
       "path": "contact-routes.json",
