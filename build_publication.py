@@ -83,7 +83,7 @@ MENU = [
     ]),
     # Owner, 28 Oct: a menu item is a page, and each entry in its list is a section of that page.
     ('roadmap.html', 'Desenvolvimento do projeto', 'Project development', [
-        ('roadmap.html', 'stages', 'Onde estamos agora', 'Where we are now', 'Now, and the three stages after'),
+        ('roadmap.html', 'stages', 'Onde estamos agora', 'Where we are now', 'From groundwork to the first houses'),
         ('roadmap.html', 'homes', 'Onde a primeira família vai morar', 'Where the first family will live', 'Where will the first family live?'),
         ('roadmap.html', 'terms', 'O que está decidido', 'What is decided', 'What is decided, and what is not yet'),
     ]),
@@ -98,9 +98,9 @@ MENU = [
     # Owner, 28 Oct: Local governance is its own page, ordered from now to later (team, token holders, residents).
     ('governance.html', 'Governança local', 'Local governance', [
         ('governance.html', 'now', 'Quem decide agora', 'Who decides now', 'Who decides now?'),
-        ('governance.html', 'deciding', 'Decisões atuais', 'Current decisions', 'What are we deciding now?'),
-        ('governance.html', 'token-rules', 'Regras dos detentores', 'Rules for holders', 'Who decides about the token?'),
-        ('governance.html', 'residents', 'Os moradores', 'Residents', 'Who decides once families live in the houses?'),
+        ('governance.html', 'deciding', 'O que estamos decidindo', 'What we’re deciding now', 'What are we deciding now?'),
+        ('governance.html', 'token-rules', 'Regras dos detentores', 'Rules for holders', 'Who decides about the token?'),  # no 'token' in the menu: it shows on the homepage
+        ('governance.html', 'residents', 'Quando as famílias morarem nas casas', 'Once families live in the houses', 'Who decides once families live in the houses?'),
     ]),
     ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
         # Owner, 29 Oct: one Resources page, documents first, then ideas, people and sources.
@@ -142,8 +142,8 @@ HEADING_INTROS = {
                                                   'We can start with bank accounts and move more onto the ledger as each step proves itself.'),
     },
     'governance.html': {
-        'What are we deciding now?': ('Antes de a primeira família se mudar, estas perguntas precisam de resposta. Você pode ajudar a decidir.',
-                                      'Before the first family moves in, these questions need an answer. You can help settle them.'),
+        'What are we deciding now?': ('Antes de a primeira família se mudar, estas perguntas precisam de resposta. Você pode ajudar a decidir no grupo.',
+                                      'Before the first family moves in, these questions need an answer. You can help settle them in the group.'),
     },
     'why.html': {
         'How big is the problem?': ('Faltam milhões de moradias no Brasil, e o aluguel sobe mais rápido que os preços.',
@@ -231,7 +231,7 @@ def site_header(lang='pt-BR', current=''):
             '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX, criada no Rio de Janeiro pelos seus dois fundadores: Rafael Britto, construtor, e John, que cuida da comunicação e das ferramentas digitais." data-en="IMOBX, started in Rio de Janeiro by its two founders: Rafael Britto, a builder, and John, who looks after communication and digital tools.">IMOBX, criada no Rio de Janeiro pelos seus dois fundadores: Rafael Britto, construtor, e John, que cuida da comunicação e das ferramentas digitais.</p><p><a href="transparency.html" data-pt="Custos e recursos" data-en="Costs and funding">Custos e recursos</a> <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a> <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="A IMOBX foi criada no Rio de Janeiro pelos seus dois fundadores: Rafael Britto, construtor, e John, que cuida da comunicação e das ferramentas digitais." data-en="IMOBX was started in Rio de Janeiro by its two founders: Rafael Britto, a builder, and John, who looks after communication and digital tools.">A IMOBX foi criada no Rio de Janeiro pelos seus dois fundadores: Rafael Britto, construtor, e John, que cuida da comunicação e das ferramentas digitais.</p><p><a href="transparency.html" data-pt="Custos e recursos" data-en="Costs and funding">Custos e recursos</a> <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a> <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):

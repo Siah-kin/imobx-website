@@ -178,3 +178,6 @@
 .band-page .roadmap-track>h3{font-size:18px;margin:0 0 4px}.band-page .roadmap-track>p{margin:0;color:#405866;line-height:1.55}
 
 #building .lead-figures{margin-bottom:24px}
+
+/* owner, 31 Oct: open questions as a plain list, not empty checkboxes */
+.governance-page .settle-list{list-style:disc;padding-left:20px}.governance-page .settle-list li{padding-left:4px}.governance-page .settle-list li::before{display:none}

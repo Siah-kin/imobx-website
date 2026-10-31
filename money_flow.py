@@ -243,10 +243,10 @@ GOV_STEPS = [
     (('Agora', 'Now'),
      ('Os fundadores decidem, com as pessoas que chamam para uma tarefa definida.', 'The founders decide, with people they bring in for a set task.')),
     (('Quando o token for lançado', 'When the token launches'),
-     ('Quem tem o token vota as regras do próprio token.', 'Token holders vote on the token’s own rules.')),
+     ('As regras do próprio token são decididas por votação.', 'The token’s own rules are decided by vote.')),
     (('Quando as famílias morarem lá', 'Once families live there'),
-     ('Os membros decidem os assuntos da cooperativa: um membro, um voto. O contrato de cada família segue os termos que ela assinou e a lei.',
-      'Members decide the cooperative’s matters: one member, one vote. Each family’s agreement follows the terms it signed and the law.')),
+     ('Se a IMOBX se tornar uma cooperativa, os membros a administram juntos, com um voto cada.',
+      'If IMOBX becomes a cooperative, its members run it together, with one vote each.')),
 ]
 GOV_LABELS = {'founders': ('Fundadores', 'Founders'), 'holders': ('Quem tem o token', 'Token holders'), 'members': ('Membros', 'Members')}
 
