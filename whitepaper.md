@@ -146,8 +146,8 @@ Alongside the loop, the token has three functions:
 | Function | What it means |
 |---|---|
 | Volume | Trading fees, paid in USDC, pay for checked work. Before launch, we publish the fee rate and who can change it. |
-| Voting | Holders vote on the token’s own rules. Cooperative matters stay one member, one vote. Before launch, we publish who controls the token’s admin keys, meaning who can change its settings. |
-| Verify | In the plan, anyone can check each payment and who approved it, with or without the token. |
+| Voting | Holders vote on the token’s own rules, and members whose help others have confirmed (Zeal) have a say alongside what they hold. Cooperative matters stay one member, one vote. Before launch, we publish who controls the token’s admin keys, meaning who can change its settings. |
+| Verify | In the plan, anyone can check each payment and who approved it, with or without the token. Several named signers approve each payment, and they can approve only what is in the published budget. |
 
 Locking tokens is a pledge to stay with the project for a set period; the tokens return at the end, and a longer lock gives the same vote.
 
@@ -224,6 +224,8 @@ Builders, legal advisers and accountants review their own areas. Families help s
 Rafael supplied the November budget and January two-loft account. Their dates and different purposes matter. Designs show intended buildings, not completed houses. No number of donated properties or received funding is confirmed here.
 
 The legal registration, property documents, permissions and signed agreements need checking for the chosen project. The researched payment services do not establish a working IMOBX connection. Resident voting, reinvestment and token rights are decisions still to be agreed.
+
+Arc is run by a group of companies chosen by Circle, which built it, and regulators have yet to approve it ([Circle’s announcement](https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet); [the founding companies](https://www.arc.io/pressroom/circle-announces-founding-validator-cohort-and-major-integrations-for-arc-ahead-of-september-16-mainnet-launch)). USDC, the digital dollar used on Arc, is issued by Circle, which can freeze it, including on a government order ([Circle’s USDC risk factors](https://www.circle.com/legal/usdc-risk-factors)). On a blockchain every entry stays, so a mistake is corrected by adding a new entry, and whether a repair was done well is still judged by people on site.
 
 The public [risk list](reference.html#risks) identifies construction, household, cash, offering and software risks. The complete financial model is not ready yet: it needs site costs in reais, affordable payments, repair and delay scenarios, and zero token-trading income.
 

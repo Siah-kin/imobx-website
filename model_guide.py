@@ -925,9 +925,9 @@ def build_guide(root, page, tr, esc, language_controls):
     # plain lines with More info; Vow waits in the fold until a lock has a purpose.
     def v_line(i):
         o, short = ch['bridge'][i], ch['bridge_short'][i]
-        return ('<details class="v-line-item"><summary>' + text((o[0][0].rstrip('.'), o[0][1].rstrip('.')), 'span', 'class="v-title"')
-                + text(short, 'span', 'class="v-line"') + text(ch['more_info'], 'span', 'class="v-link"') + '</summary>'
-                + '<div class="v-body">' + text(o[1]) + text(ch['bridge_more'][i]) + '</div></details>')
+        # Owner, 31 Oct: the surface stays simple; the detail behind each function is in the whitepaper, section 8.
+        return ('<div class="v-line-item">' + text((o[0][0].rstrip('.'), o[0][1].rstrip('.')), 'span', 'class="v-title"')
+                + text(short, 'span', 'class="v-line"') + '</div>')
     cells = v_line(0) + v_line(1) + v_line(2)
     # The token's loop (owner, 29 Oct: "you can make such animation"). It starts with use, which is why the token
     # launches only once it gives access (decision 32). The drawing is for sighted readers; the list carries the meaning.
@@ -956,14 +956,11 @@ def build_guide(root, page, tr, esc, language_controls):
         return '<figure class="token-loop">' + svg + steps_list + '</figure>'
 
     chain += ('<section id="token">' + text(ch['token_fold'], 'h2') + text(ch['token_answer'], 'p', 'class="answer"')
-              + text(ch['loop_title'], 'h3') + text(ch['loop_intro']) + loop_figure()
+              + loop_figure()  # owner, 31 Oct: the drawing tells the loop; the paragraph that repeated it is gone
               + text(ch['bridge_title'], 'h3') + text(ch['matrix_intro']) + '<div class="v-lines">' + cells + '</div>'
-              + fold(ch['token_more'],
-                     text(ch['token_intro']) + text(ch['receives_text']) + text(ch['token_purpose'])
-                     + text(ch['lock_title'], 'h3') + text(ch['bridge'][3][1]) + text(ch['bridge_more'][3])
-                     + chain_source(('Como o regulador do mercado de capitais avalia tokens (CVM)', 'How Brazil’s market regulator looks at tokens (CVM)'), guide['sources']['cvm']['url'],
-                                    ('Explica como a CVM decide quais regras valem para um token.', 'Explains how the CVM decides which rules apply to a token.'))
-                     + text(ch['never_title'], 'h3') + text(ch['never_intro']) + '<ul>' + ''.join(text(o, 'li') for o in ch['never']) + '</ul>')
+              # Owner, 31 Oct: launch, locking and the CVM source live in the whitepaper, section 8; the commitments stay here.
+              + text(ch['never_title'], 'h3') + text(ch['never_intro']) + '<ul>' + ''.join(text(o, 'li') for o in ch['never']) + '</ul>'
+              + '<p>' + text(('Mais sobre o token (whitepaper, seção 8, em inglês)', 'More about the token (whitepaper, section 8)'), 'a', 'href="whitepaper.html#8-what-the-token-is-for"') + '</p>'
               + '<script>document.addEventListener("DOMContentLoaded",function(){var l=document.querySelector(".token-loop");'
                 'if(!l||!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;l.classList.add("js-loop");'
                 'new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){l.classList.add("is-looping");'
@@ -975,15 +972,10 @@ def build_guide(root, page, tr, esc, language_controls):
     chain += '<section id="open">' + text(ch['open_title'], 'h2')
     chain += text(ch['open_runs_title'], 'h3') + '<ol class="path-list">' + ''.join(text(o, 'li') for o in ch['open_runs']) + '</ol>'
     chain += '<div class="window">' + text(ch['same_title'], 'h3') + '<ul>' + ''.join(text(o, 'li') for o in ch['same']) + '</ul></div>'
-    chain += '<span id="limits"></span>' + fold(ch['limits_title'], '<ul>' + ''.join(text(o, 'li') for o in ch['limits']) + '</ul>'
-                  + chain_source(('O anúncio da Circle de que a Arc entrou em funcionamento (16 de setembro de 2026)', 'Circle’s announcement that Arc went live (16 September 2026)'),
-                                 'https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet',
-                                 ('Anuncia a rede e observa que os reguladores ainda vão avaliá-la.', 'Announces the network and notes that regulators have yet to approve it.'))
-                  + chain_source(('As empresas que operam a rede Arc', 'The companies that run the Arc network'),
-                                 'https://www.arc.io/pressroom/circle-announces-founding-validator-cohort-and-major-integrations-for-arc-ahead-of-september-16-mainnet-launch',
-                                 ('Lista as empresas fundadoras.', 'Lists the founding companies.'))
-                  + chain_source(('A lista de riscos do USDC feita pela própria Circle', 'Circle’s own list of USDC risks'), 'https://www.circle.com/legal/usdc-risk-factors',
-                                 ('Diz que a Circle pode bloquear USDC.', 'Says Circle can freeze USDC.'))) + '</section>'
+    # Owner, 31 Oct: what a blockchain can't do stays as one line; the Arc and USDC risks and their sources are in the whitepaper, section 12.
+    chain += ('<span id="limits"></span>' + text(('A Arc é nova, e o USDC pode ser bloqueado pela empresa que o emite.',
+                                                  'Arc is new, and USDC can be frozen by the company that issues it.'))
+              + '<p>' + text(('Esses riscos em detalhe (whitepaper, seção 12, em inglês)', 'These risks in full (whitepaper, section 12)'), 'a', 'href="whitepaper.html#12-risks-and-what-still-needs-checking"') + '</p></section>')
     chain += '<section class="closing-band" id="help">' + text(ch['closing']) + text(ch['button'], 'a', 'class="button act" href="contact.html"') + '</section>'
     chain += partner_line('blockchain.html') + '</main>'
     # Jargon popups (owner, 28 Oct): the meanings travel inside the page; terms.js runs after site.js.

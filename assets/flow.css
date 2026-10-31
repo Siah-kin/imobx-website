@@ -283,3 +283,7 @@
 .v-line-item .v-link::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s ease}
 .v-line-item[open] .v-link::after{transform:rotate(-135deg) translateY(-2px)}
 .v-line-item .v-body p{margin:6px 0 10px;line-height:1.6;max-width:62ch}
+
+/* owner, 31 Oct: the three functions are plain lines; the detail is in the whitepaper */
+.v-line-item>.v-title,.v-line-item>.v-line{display:block}
+.v-line-item{padding-bottom:12px}

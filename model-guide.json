@@ -2846,8 +2846,8 @@
     ],
     "bridge_short": [
       [
-        "As taxas de negociação, pagas em USDC, pagam trabalho conferido.",
-        "Trading fees, paid in USDC, pay for checked work."
+        "A taxa, quem pode mudá-la e quem tem as chaves de administração são publicados antes do lançamento.",
+        "The fee rate, who can change it, and who holds the admin keys are published before launch."
       ],
       [
         "Quem tem o token vota as regras do token. Na cooperativa: um membro, um voto.",
