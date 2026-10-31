@@ -23,8 +23,8 @@
     {
       "id": "cash-and-charter",
       "title": [
-        "Regras feitas com os moradores",
-        "Rules written with residents"
+        "Os moradores ajudam a escrever as regras",
+        "Residents help write the rules"
       ],
       "window": null,
       "card": [
@@ -41,17 +41,17 @@
         "First houses"
       ],
       "window": [
-        "Começa quando houver financiamento e licenças",
+        "Começa quando houver recursos e licenças",
         "Starts once funding and permits are in place"
       ],
       "card": [
         [
-          "Primeiro um piloto num apartamento que já existe, depois as primeiras casas novas, com a construtora de Rafael como construtora proposta. Um fiscal independente confere a obra, e as famílias se mudam quando as casas estiverem seguras e os contratos assinados.",
-          "First a pilot in an existing flat, then the first new houses, with Rafael’s construction company as the proposed builder. An independent inspector checks the work, and families move in once the houses are safe and the agreements are signed."
+          "Primeiro um piloto num apartamento que já existe, depois as primeiras casas novas, com a construtora do Rafael como construtora proposta. Um fiscal independente confere a obra, e as famílias se mudam quando as casas estiverem seguras e os contratos assinados.",
+          "First a pilot in an existing flat, then the first new houses, with Rafael’s company as the proposed builder. An independent inspector checks the work, and families move in once the houses are safe and the agreements are signed."
         ],
         [
-          "Um piloto deve começar perguntando a cada família sobre suas escolhas, sua renda e seu acesso a transporte, escola e serviços.",
-          "A pilot should start by asking each household about its preferences, income and access to transport, schools and services."
+          "Começamos o piloto perguntando a cada família do que ela precisa, quanto ganha e a que distância está de transporte, escola e serviços.",
+          "We start the pilot by asking each family what they need, what they earn, and how far they are from transport, schools and services."
         ],
         [
           "Depois dos primeiros meses de moradia, vemos quanto as casas custam de verdade para manter e se os reparos funcionam bem.",
@@ -62,8 +62,8 @@
     {
       "id": "digital-trial",
       "title": [
-        "Um teste de pagamentos que qualquer pessoa pode conferir",
-        "A test of payments anyone can check"
+        "Um primeiro pagamento pequeno, conferido",
+        "A first small payment, checked"
       ],
       "window": null,
       "card": [
@@ -80,8 +80,8 @@
     {
       "id": "token-decision",
       "title": [
-        "Recursos para o que já prometemos",
-        "Funding for what we have promised"
+        "Uma reserva guardada",
+        "Keeping a reserve"
       ],
       "window": null,
       "card": [
@@ -107,12 +107,8 @@
       ],
       "card": [
         [
-          "Quando as primeiras famílias estiverem instaladas e as casas se mostrarem sólidas, mais bairros podem vir. Cada custo e pagamento das primeiras casas fica aberto para conferir, para que novos financiadores e donos de imóveis adequados possam avaliar por conta própria antes de participar. Cada novo lugar compartilha projetos e compras com os outros, e os moradores decidem as próprias questões locais.",
-          "When the first families are settled and their houses hold up, more neighbourhoods can follow. Every cost and payment of the first houses stays open to see, so new funders and owners of suitable properties can judge for themselves before they join. Each new place shares designs and purchasing with the others, and its residents decide their own local matters."
-        ],
-        [
-          "Damos o próximo passo quando as primeiras casas funcionam e todo compromisso já assumido está coberto.",
-          "We take the next step once the first houses work and every promise already made is covered."
+          "Quando as primeiras famílias estiverem instaladas, as casas se mostrarem sólidas e todo compromisso com elas estiver pago, mais bairros podem vir. Cada custo e pagamento das primeiras casas fica aberto para conferir, para que novos financiadores e donos de imóveis adequados possam avaliar por conta própria antes de participar. Cada novo lugar compartilha projetos e compras com os outros, e os moradores decidem as próprias questões locais.",
+          "When the first families are settled, their houses hold up and every promise to them is paid for, more neighbourhoods can follow. Every cost and payment of the first houses stays open to see, so new funders and owners of suitable properties can judge for themselves before they join. Each new place shares designs and purchasing with the others, and its residents decide their own local matters."
         ]
       ]
     },
@@ -128,8 +124,12 @@
       ],
       "card": [
         [
-          "Proprietários poderiam vender seus imóveis pelo aluguel com compra, ou oferecer moradia compartilhada. Trazer proprietários exige uma organização muito mais confiável do que uma startup: com histórico, capaz de dar garantias e seguro.",
-          "Property owners could sell their houses through rent-to-own, or offer co-housing. Bringing owners in needs a much more trustworthy organisation than a startup: one with a track record, able to give guarantees and insurance."
+          "Mais tarde, quem tem um imóvel poderá vendê-lo a uma família pelo aluguel com compra, ou abri-lo para moradia compartilhada. Proprietários querem garantias e seguro antes de confiar um imóvel a alguém, por isso esta etapa vem quando a IMOBX já tiver histórico.",
+          "Later, people who own a house can sell it to a family through rent-to-own, or open it for co-housing. Owners want guarantees and insurance before they trust anyone with a house, so this stage comes once IMOBX has a track record."
+        ],
+        [
+          "O token da IMOBX vem quando a IMOBX estiver formalizada e as primeiras casas em aluguel com compra funcionarem como negócio. Nenhuma votação pode mudar o contrato de moradia de uma família: ele só muda quando a família e a IMOBX assinam juntas.",
+          "The IMOBX token comes once IMOBX is formally set up and the first rent-to-own houses run as a working business. No vote can change a family’s housing agreement: it changes only when the family and IMOBX both sign."
         ]
       ]
     }
@@ -991,7 +991,7 @@
   },
   "transparency": {
     "title": [
-      "Custos e financiamento: quanto custa uma casa e para onde vão os recursos",
+      "Custos e recursos: quanto custa uma casa e para onde vão os recursos",
       "Costs and funding: what a house costs and where the funding goes"
     ],
     "lead": [
@@ -1930,8 +1930,8 @@
       "The three cases"
     ],
     "intro": [
-      "Um imóvel se qualifica quando a propriedade, um contrato escrito e o consentimento da família estão no papel. Hoje o candidato é o apartamento de um dos fundadores.",
-      "A property qualifies once its ownership, a written agreement and the family’s consent are on paper. Today the candidate is a co-founder’s flat."
+      "Qualquer imóvel pode entrar quando a propriedade, um contrato escrito e o consentimento da família estiverem no papel. O primeiro candidato é um apartamento em Guadalupe que o Rafael, um dos nossos fundadores, construiu e que é dele.",
+      "Any property can join once its ownership, a written agreement and the family’s consent are on paper. The first candidate is a flat in Guadalupe that Rafael, one of our founders, built and owns."
     ],
     "headings": [
       [
@@ -1950,12 +1950,12 @@
     "rows": [
       [
         [
-          "O apartamento de um dos fundadores",
-          "A co-founder’s flat"
+          "O apartamento de Rafael em Guadalupe",
+          "Rafael’s flat in Guadalupe"
         ],
         [
-          "Alugado a uma família que o banco recusa por não ter entrada (fundadores, julho de 2026)",
-          "Rented to a family the bank turns down because they have no down payment (founders, July 2026)"
+          "A família que mora de aluguel quer comprá-lo, mas o banco pede uma entrada que ela não tem",
+          "The family who rent it want to buy it, but the bank asks for a down payment they don’t have"
         ],
         [
           "Candidato",
@@ -1968,12 +1968,12 @@
           "Two lofts"
         ],
         [
-          "Um contrato de obra informado em 20 de janeiro de 2026, que na época aguardava o primeiro depósito",
-          "A building contract reported on 20 January 2026, then waiting for its first deposit"
+          "Um contrato de obra de janeiro de 2026",
+          "A building contract from January 2026"
         ],
         [
-          "Uma obra própria da construtora de Rafael; última atualização registrada em janeiro de 2026",
-          "A separate job for Rafael’s construction company; last update recorded in January 2026"
+          "Uma obra da construtora do Rafael, não da IMOBX",
+          "A job for Rafael’s company, not for IMOBX"
         ]
       ],
       [
@@ -1982,11 +1982,11 @@
           "Village of at least 36 houses"
         ],
         [
-          "Orçamento do nosso construtor, de 30 de novembro de 2025",
-          "Our builder’s budget of 30 November 2025"
+          "Orçamento do Rafael, 30 de novembro de 2025",
+          "Rafael’s budget, 30 November 2025"
         ],
         [
-          "Conceito; depende de terreno, financiamento e escala",
+          "Conceito; depende de terreno, recursos e escala",
           "Concept; depends on land, funding and scale"
         ]
       ]

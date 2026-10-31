@@ -75,7 +75,7 @@ MENU = [
         ('rent-to-own.html', 'decisions', 'Decisões dos moradores', "Residents' decisions", 'What do residents decide?'),
         ('rent-to-own.html', 'leaving', 'Saída ou atraso no pagamento', 'Leaving or missed payments', 'What if you can’t pay for a while, or want to leave?'),
     ]),
-    ('transparency.html', 'Custos e financiamento', 'Costs and funding', [
+    ('transparency.html', 'Custos e recursos', 'Costs and funding', [
         ('transparency.html', 'first-homes', 'Custo da obra', 'Building costs', 'What does it cost to build a house?'),
         ('transparency.html', 'money-sources', 'Origem dos recursos', 'Sources of funding', 'Funding and spending: where the funding comes from, and what it pays first'),
         ('transparency.html', 'payment-route', 'Conferência dos pagamentos', 'Payment checks', 'Who checks each payment?'),
@@ -83,8 +83,8 @@ MENU = [
     ]),
     # Owner, 28 Oct: a menu item is a page, and each entry in its list is a section of that page.
     ('roadmap.html', 'Desenvolvimento do projeto', 'Project development', [
-        ('roadmap.html', 'stages', 'Onde estamos agora', 'Where we are now', 'What happens now, and what comes next?'),
-        ('roadmap.html', 'homes', 'Imóveis candidatos', 'Candidate properties', 'Which properties are candidates for our first rent-to-own tenant?'),
+        ('roadmap.html', 'stages', 'Onde estamos agora', 'Where we are now', 'Now, and the three stages after'),
+        ('roadmap.html', 'homes', 'Onde a primeira família vai morar', 'Where the first family will live', 'Where will the first family live?'),
         ('roadmap.html', 'terms', 'O que está decidido', 'What is decided', 'What is decided, and what is not yet'),
     ]),
     ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
@@ -231,7 +231,7 @@ def site_header(lang='pt-BR', current=''):
             '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX, Rio de Janeiro. Um projeto de moradia preparado por Rafael Britto (fundador) e John (comunicação e ferramentas digitais)." data-en="IMOBX, Rio de Janeiro. A housing project prepared by Rafael Britto (founder) and John (communication and digital tools).">IMOBX, Rio de Janeiro. Um projeto de moradia preparado por Rafael Britto (fundador) e John (comunicação e ferramentas digitais).</p><p><a href="transparency.html" data-pt="Custos e financiamento" data-en="Costs and funding">Custos e financiamento</a> <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a> <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="IMOBX, criada no Rio de Janeiro pelos seus dois fundadores: Rafael Britto, construtor, e John, que cuida da comunicação e das ferramentas digitais." data-en="IMOBX, started in Rio de Janeiro by its two founders: Rafael Britto, a builder, and John, who looks after communication and digital tools.">IMOBX, criada no Rio de Janeiro pelos seus dois fundadores: Rafael Britto, construtor, e John, que cuida da comunicação e das ferramentas digitais.</p><p><a href="transparency.html" data-pt="Custos e recursos" data-en="Costs and funding">Custos e recursos</a> <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a> <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):

@@ -80,19 +80,16 @@ ORG_PICS = [
 TERMS_TITLE = ('O que está decidido, e o que ainda não', 'What is decided, and what is not yet')
 TERMS = [
     (('Onde a IMOBX está hoje', 'Where IMOBX stands today'), [
-        ('A IMOBX é uma proposta em preparação no Rio de Janeiro. Nada está à venda nem para alugar, e nenhuma casa está sendo oferecida.',
-         'IMOBX is a proposal being prepared in Rio de Janeiro. Nothing is for sale or rent, and no house is on offer.'),
-        ('A IMOBX ainda não tem forma jurídica. Ela está sendo escolhida com assessores brasileiros.',
-         'IMOBX has no legal form yet. It is being chosen with Brazilian advisers.'),
-        ('Nenhum contrato foi assinado: nem com famílias, nem com construtoras, proprietários ou financiadores.',
-         'No contract has been signed: not with families, builders, owners or funders.'),
-        ('Nenhum órgão regulador aprovou nada, e o site não afirma ter nenhuma aprovação.',
-         'No regulator has approved anything, and the site claims no approval.'),
-        (('O plano completo e as suas etapas: ', 'The full plan and its stages: '), ('Etapas do projeto', 'Project stages'), '#stages'),
+        ('A IMOBX é uma proposta em preparação no Rio de Janeiro. Ela ainda não oferece nenhuma casa para vender ou alugar.',
+         'IMOBX is a proposal being prepared in Rio de Janeiro. It isn’t offering any house for sale or rent yet.'),
+        ('A IMOBX ainda não tem forma jurídica.', 'IMOBX has no legal form yet.'),
+        ('A própria IMOBX ainda não assinou contratos. Os lofts são uma obra da construtora do Rafael, não da IMOBX.',
+         'IMOBX itself hasn’t signed any contracts yet. The lofts are a job for Rafael’s company, not for IMOBX.'),
+        ('Nenhum órgão regulador aprovou nada.', 'No regulator has approved anything.'),
     ]),
     (('Casas e famílias', 'Houses and families'), [
-        ('Os desenhos e as fotos mostram a proposta. Não são anúncios de casas disponíveis, e o modelo dos lofts é um estudo de projeto.',
-         'The drawings and photos show the proposal. They are not listings of available houses, and the lofts model is a design study.'),
+        ('Os desenhos e as fotos mostram a proposta; não são anúncios de casas disponíveis.',
+         'The drawings and photos show the proposal; they are not listings of available houses.'),
         ('O preço, o valor mensal, o prazo e quem pode participar são definidos para cada projeto, num contrato escrito, antes de qualquer mudança.',
          'The price, the monthly amount, the term and who can join are set for each project, in a written agreement, before anyone moves in.'),
         ('Devolução, prazo de tolerância ou desconto só valem quando estiverem escritos nesse contrato.',
@@ -456,41 +453,17 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap = '<main class="paper guide-paper band-page roadmap-page" id="main">' + language_controls
     # Copy sweep, 28 Oct (review B, owner 'proceed'): status said once in the card; each stage is two or three
     # plain sentences instead of a labelled form; 'Who takes part' moves to Take part (its anchors stay here).
-    roadmap += text(('Etapas do projeto: onde estamos e o que vem depois', 'Project stages: where we are and what comes next'), 'h1')
-    roadmap += '<div class="key-card" id="where-we-stand">' + text(('Estamos preparando o primeiro projeto no Rio de Janeiro. As datas vêm quando a forma jurídica e o primeiro imóvel estiverem confirmados.',
-                     'We are preparing the first project in Rio de Janeiro. Dates follow once the legal form and the first property are confirmed.')) + '</div>'
-    # The owner's why (founders' chat, 24 Oct 2026), then who is preparing it (owner, 29 Oct).
-    roadmap += text(('Por que construir um lar? Todo mundo entende o que isso significa. É uma necessidade profundamente emocional, psicológica, espiritual e sagrada.',
-                     'Why build a home? Everybody understands what that means. It is a need that is deeply emotional, psychological, spiritual and sacred.'), 'p', 'class="guide-lead"')
-    roadmap += '<p class="prepared-by">' + text(('Preparado por Rafael Britto, fundador e construtor no Rio de Janeiro, e John, comunicação e ferramentas digitais.',
-                                                'Prepared by Rafael Britto, founder and builder in Rio de Janeiro, and John, communication and digital tools.'), 'span') + '</p>'
-    roadmap += on_this_page([(('Como planejamos', 'How we plan'), 'method'), (('Etapas', 'Stages'), 'stages'), (('Os imóveis', 'The properties'), 'cases'),
-                             (('A vila e os lofts', 'The village and the lofts'), 'village'), (('Fotos da obra', 'Building photos'), 'building'), (TERMS_TITLE, 'terms')])
+    roadmap += text(('Onde a IMOBX está agora e o que vem depois', 'Where IMOBX is now, and what comes next'), 'h1')
+    # Owner, 31 Oct: his chat words pasted as copy, and a byline, read as AI slop; the reason comes first, then the status.
+    roadmap += '<div class="key-card">' + text(('Ter a própria casa é uma das necessidades mais profundas que existem, e para muitas famílias do Rio ela continua fora de alcance.',
+                     'A home of your own is one of the deepest needs people have, and for many families in Rio it stays out of reach.')) + '</div>'
+    roadmap += text(('Estamos preparando o primeiro projeto no Rio de Janeiro. As datas vêm quando a forma jurídica e o primeiro imóvel estiverem confirmados.',
+                     'We are preparing the first project in Rio de Janeiro. Dates follow once the legal form and the first property are confirmed.'), 'p', 'class="guide-lead" id="where-we-stand"')
+    roadmap += on_this_page([(('Agora e as próximas três etapas', 'Now, and the three stages after'), 'stages'),
+                             (('Onde a primeira família vai morar', 'Where the first family will live'), 'cases'),
+                             (('Como poderia ser a primeira vila', 'What the first village could look like'), 'village'),
+                             (('O que a construtora do Rafael está construindo', 'What Rafael’s company is building'), 'building'), (TERMS_TITLE, 'terms')])
 
-    # How we plan (owner, 29 Oct): the design-thinking method shown openly, with where we are now. Being open about the
-    # method invites the cooperation the project aims for. Double Diamond: understand, define, try, test; tests can send
-    # us back. The drawing draws itself once when it comes into view; with reduced motion it is shown complete.
-    roadmap += '<section id="method">' + text(('Como planejamos?', 'How do we work out the plan?'), 'h2')
-    roadmap += text(('Planejamos às claras, com um método que designers usam: primeiro entender o problema com quem vive nele, depois defini-lo, depois experimentar soluções e testá-las. Cada teste pode nos fazer voltar um passo. Ver em que ponto estamos ajuda você a entrar na hora certa.',
-                     'We plan in the open, with a method designers use: first understand the problem with the people who live it, then define it, then try solutions and test them. Each test can send us back a step. Seeing where we are helps you join at the right moment.'), 'p', 'class="answer"')
-    def svg_t(x, y, pair, cls=''):
-        nl_ = NL_LOOKUP.get(pair[1], pair[1])
-        return (f'<text x="{x}" y="{y}" text-anchor="middle" class="{cls}" data-pt="{esc(pair[0])}" data-en="{esc(pair[1])}" data-nl="{esc(nl_)}">'
-                f'{esc(pair[0])}</text>')
-    roadmap += ('<figure class="method-figure"><svg class="method-diamond" viewBox="0 -14 680 270" role="img" aria-labelledby="method-title">'
-                + '<title id="method-title">' + esc('Duplo diamante: entender, definir, experimentar, testar. Estamos em: definir.') + '</title>'
-                + '<polygon class="dd-line" points="20,110 170,30 320,110 170,190" pathLength="1"/>'
-                + '<polygon class="dd-line dd-second" points="360,110 510,30 660,110 510,190" pathLength="1"/>'
-                + '<line class="dd-join" x1="320" y1="110" x2="360" y2="110"/>'
-                + '<path class="dd-back" d="M640,168 C560,232 160,232 40,168" pathLength="1"/>'
-                + svg_t(95, 116, ('Entender', 'Understand'), 'dd-label') + svg_t(245, 116, ('Definir', 'Define'), 'dd-label dd-now')
-                + svg_t(450, 116, ('Experimentar', 'Try'), 'dd-label') + svg_t(585, 116, ('Testar', 'Test'), 'dd-label')
-                + '<line class="dd-pointer" x1="245" y1="6" x2="245" y2="86"/><circle class="dd-marker" cx="245" cy="92" r="7"/>'
-                + svg_t(245, 0, ('Estamos aqui', 'We are here'), 'dd-here')
-                + svg_t(340, 248, ('Cada teste pode nos fazer voltar', 'Each test can send us back'), 'dd-note')
-                + '</svg><figcaption>' + text(('Hoje estamos definindo: a forma jurídica, as regras com os moradores, um teste de pagamentos e os recursos para o que prometemos.',
-                                               'Today we are defining: the legal form, the rules with residents, a test of payments, and funding for what we have promised.'), 'span')
-                + '</figcaption></figure></section>')
 
     # The path (owner, 28-29 Oct): one line that draws itself as you scroll, from preparation to the three stages.
     ICONS = {
@@ -504,9 +477,19 @@ def build_guide(root, page, tr, esc, language_controls):
     }
     def icon(key):
         return f'<svg class="path-icon" viewBox="0 0 28 28" aria-hidden="true">{ICONS[key]}</svg>'
-    roadmap += '<section id="stages">' + text(('O que acontece agora e o que vem depois?', 'What happens now, and what comes next?'), 'h2')
-    roadmap += text(('Agora, quatro frentes de preparação ao mesmo tempo. Depois, três etapas, uma de cada vez: primeiras casas, mais bairros e uma plataforma para proprietários.',
-                     'Now, four kinds of preparation at once. Then three stages, one after another: first houses, more neighbourhoods, and a platform for owners.'), 'p', 'class="answer"')
+    TRACK_LINES = {  # owner, 31 Oct: one line each, taken from the track's own detail
+        'foundation': ('Estamos escolhendo a forma jurídica, organizando os papéis do imóvel, fazendo o orçamento da obra em reais e escrevendo as condições para alugar e comprar uma casa.',
+                       'We’re choosing the legal form, getting the property papers in order, setting a building budget in reais, and writing the terms for renting and buying a house.'),
+        'cash-and-charter': ('Os futuros moradores ajudam a escrever as regras da casa, e uma regra só começa depois que eles opinam.',
+                             'Future residents help write the house rules, and a rule starts only after they’ve had their say.'),
+        'digital-trial': ('Antes de usar os recursos de alguém, fazemos um pequeno pagamento de teste e conferimos quem aprovou e se o registro bate com o extrato do banco.',
+                          'Before anyone’s funding is used, we send one small test payment and check who approved it and that the record matches the bank statement.'),
+        'token-decision': ('Guardamos uma reserva para as contas e para o que prometemos às famílias, para que um mês fraco não pare o trabalho. Quando ela fica baixa, gastos novos esperam.',
+                           'We keep a reserve for the bills and for what we’ve promised families, so a slow month doesn’t stop the work. When it runs low, new spending waits.'),
+    }
+    roadmap += '<section id="stages">' + text(('Agora e as próximas três etapas', 'Now, and the three stages after'), 'h2')
+    roadmap += text(('Hoje, quatro trabalhos andam juntos. Depois vêm as primeiras casas, mais bairros e uma plataforma para proprietários, um de cada vez.',
+                     'Four pieces of work run side by side today. Then come the first houses, more neighbourhoods and a platform for owners, one at a time.'), 'p', 'class="answer"')
     roadmap += '<div class="path"><div class="path-line" aria-hidden="true"><span class="path-fill"></span></div>'
     for label, ordered, members in grouped_stages():
         roadmap += '<div class="path-group' + ('' if ordered else ' path-now') + '">'
@@ -514,6 +497,10 @@ def build_guide(root, page, tr, esc, language_controls):
         roadmap += '<ol class="path-steps' + (' path-tracks' if not ordered else '') + '">'
         for number, stage in members:
             roadmap += f'<li class="path-step"><span class="path-dot" aria-hidden="true"></span>{icon(stage["id"])}'
+            if not ordered and stage['id'] in TRACK_LINES:
+                # Owner, 31 Oct: the surface stays simple; each preparation track is one plain line, the detail is in the papers.
+                roadmap += f'<div class="roadmap-stage roadmap-track" id="{esc(stage["id"])}">' + text(stage['title'], 'h3') + text(TRACK_LINES[stage['id']]) + '</div></li>'
+                continue
             roadmap += f'<details class="roadmap-stage" id="{esc(stage["id"])}"><summary>'
             roadmap += text(numbered(number, stage['title']) if number else stage['title'], 'h3')
             if stage.get('window'):
@@ -521,16 +508,12 @@ def build_guide(root, page, tr, esc, language_controls):
             roadmap += '<span class="stage-toggle">' + text(('Mostrar detalhes', 'Show details'), 'span', 'class="more"') + text(('Esconder detalhes', 'Hide details'), 'span', 'class="less"') + '</span></summary>'
             roadmap += ''.join(text(pair) for pair in stage['card']) + '</details></li>'
         roadmap += '</ol></div>'
-    roadmap += '<p class="path-condition">' + text(('O token vem só depois que a organização jurídica existir e as primeiras casas mostrarem um negócio que funciona.',
-                                                   'The token comes only after the legal organisation exists and the first rent-to-own properties show a working business.'), 'span') + ' '
-    roadmap += text(('Seja qual for o resultado de uma votação, só a família e a IMOBX juntas, dentro da lei, podem mudar o contrato de moradia de uma família.',
-                     'Whatever a vote decides, only the family and IMOBX together, under the law, can change a family’s housing agreement.'), 'span') + '</p>'
     roadmap += '</div></section>'
 
     cases = guide['cases']
     # The answer first (no pilot is confirmed), then what a proposed and a confirmed pilot mean.
     intro_lines = tuple(t.rsplit('. ', 1) for t in cases['intro'])
-    roadmap += '<section id="cases">' + text(('Quais imóveis são candidatos para o nosso primeiro morador em aluguel com compra?', 'Which properties are candidates for our first rent-to-own tenant?'), 'h2')
+    roadmap += '<section id="cases">' + text(('Onde a primeira família vai morar?', 'Where will the first family live?'), 'h2')
     roadmap += text(tuple(t[1] for t in intro_lines), 'p', 'class="answer"') + text(tuple(t[0] + '.' for t in intro_lines))
     roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in cases['headings'])
     roadmap += '</tr></thead><tbody>' + ''.join('<tr>' + text(r[0], 'th', 'scope="row"') + text(r[1], 'td') + text(r[2], 'td') + '</tr>'
@@ -545,21 +528,24 @@ def build_guide(root, page, tr, esc, language_controls):
                      'Rafael planned the first village as 45 m² houses around a shared courtyard, with solar power, an orchard and places to play and study.'))
     roadmap += '<div class="lead-figures"><figure class="lead-figure"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da primeira vila" data-alt-pt="Ilustração conceitual da primeira vila" data-alt-en="Concept illustration of the first village" data-alt-nl="Conceptillustratie van het eerste dorp">'
     roadmap += '<figcaption>' + text(('Ilustração conceitual da primeira vila, feita com um gerador de imagens.', 'Concept illustration of the first village, made with an image generator.'), 'span') + '</figcaption></figure>'
-    roadmap += '<figure class="lead-figure"><img src="assets/property-1.jpg" width="823" height="581" loading="lazy" alt="Os dois lofts, vista externa" data-alt-pt="Os dois lofts, vista externa" data-alt-en="The two lofts, exterior view" data-alt-nl="De twee lofts, buitenaanzicht">'
-    roadmap += '<figcaption>' + text(('Os dois lofts: nossa equipe modelou estes lofts em janeiro de 2026. É um estudo de projeto.', 'The two lofts: our team modelled them in January 2026. It is a design study.'), 'span') + '</figcaption></figure></div></section>'
-    roadmap += '<section id="building">' + text(('O que a construtora está fazendo?', 'What is the builder doing?'), 'h2')
-    roadmap += text(('Em janeiro de 2026, a construtora do Rafael assinou um contrato para construir dois lofts, como um primeiro teste da ideia da IMOBX. A construtora prepara esses projetos e define a própria agenda.',
-                     'In January 2026, Rafael’s construction company signed a contract to build two lofts, as a first test of the IMOBX idea. The company prepares these designs and sets its own schedule.'), 'p', 'class="answer"')
+    roadmap += '</div></section>'
+    roadmap += '<section id="building">' + text(('O que a construtora do Rafael está construindo?', 'What is Rafael’s company building?'), 'h2')
+    roadmap += text(('Em janeiro de 2026, a construtora do Rafael assinou um contrato para construir dois lofts. É uma obra própria da construtora, e mostra o tipo de casa que a IMOBX quer construir. A construtora faz os projetos e define a própria agenda.',
+                     'In January 2026, Rafael’s company signed a contract to build two lofts. It’s the company’s own job, and it shows the kind of house IMOBX plans to build. The company draws the plans and sets its own schedule.'), 'p', 'class="answer"')
+    roadmap += '<div class="lead-figures"><figure class="lead-figure"><img src="assets/property-1.jpg" width="823" height="581" loading="lazy" alt="Os dois lofts, vista externa" data-alt-pt="Os dois lofts, vista externa" data-alt-en="The two lofts, exterior view" data-alt-nl="De twee lofts, buitenaanzicht">'
+    roadmap += '<figcaption>' + text(('Nosso modelo 3D dos dois lofts, janeiro de 2026.', 'Our 3D model of the two lofts, January 2026.'), 'span') + '</figcaption></figure></div>'
     # Owner, 29 Oct: the photos that look like the loft model and show it being built; the frame first and largest.
-    photos = [('construction-timber-supplied.jpg', ('Pilares e paredes de blocos', 'Columns and block walls')), ('construction-concrete-supplied.jpg', ('Concreto', 'Concrete')),
-              ('construction-formwork-supplied.jpg', ('Fôrmas', 'Formwork')), ('construction-roof-supplied.jpg', ('Telhado', 'Roof')),
-              ('construction-solar-roof-supplied.jpg', ('Telhado solar', 'Solar roof'))]
+    photos = [('construction-timber-supplied.jpg', ('Escoras de madeira seguram a laje entre os pilares de concreto.', 'Timber props hold up the slab between the concrete columns.')),
+              ('construction-concrete-supplied.jpg', ('Brita e areia prontas ao lado de uma laje nova de concreto.', 'Gravel and sand ready next to a new concrete slab.')),
+              ('construction-formwork-supplied.jpg', ('Malha de aço montada na laje antes da concretagem.', 'Steel mesh laid on the slab before the concrete is poured.')),
+              ('construction-roof-supplied.jpg', ('Armação de ferro da fundação na vala, ao lado da laje pronta.', 'Foundation rebar in the trench, next to the finished slab.')),
+              ('construction-solar-roof-supplied.jpg', ('A nova laje de cobertura ao lado de um telhado com painéis solares.', 'The new roof slab next to a tiled roof with solar panels.'))]
     from PIL import Image as _Img
     dims = {f: _Img.open(root / 'assets' / f).size for f, _ in photos}  # width and height stop the page jumping as photos load
     roadmap += '<ul class="photo-strip">' + ''.join(
         f'<li><figure><img src="assets/{f}" width="{dims[f][0]}" height="{dims[f][1]}" loading="lazy" alt="{esc(cap[0])}" data-alt-pt="{esc(cap[0])}" data-alt-en="{esc(cap[1])}" data-alt-nl="{esc(NL_LOOKUP.get(cap[1], cap[1]))}"><figcaption>' + text(cap, 'span') + '</figcaption></figure></li>'
         for f, cap in photos) + '</ul>'
-    roadmap += '<p>' + text(('Fotos do arquivo da nossa equipe. Ainda estamos confirmando onde e quando cada uma foi tirada. ', 'Photos from our team’s archive. We are still confirming where and when each one was taken. '), 'span')
+    roadmap += '<p>' + text(('Fotos da obra, do nosso arquivo. ', 'Building-site photos from our team’s archive. '), 'span')
     roadmap += text(('Todas as fotos e desenhos dos lofts', 'All photos and drawings of the lofts'), 'a', 'href="properties.html"') + '</p></section>'
 
     public = guide['transparency']
