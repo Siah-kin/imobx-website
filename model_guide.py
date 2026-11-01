@@ -765,8 +765,8 @@ def build_guide(root, page, tr, esc, language_controls):
                     'A German federation of rental houses run by their residents. A house can be sold only when both its residents and the federation agree; on rents and move-ins, the residents decide alone. We are studying whether IMOBX should adopt a rule like it.')],
                   (('Mietshäuser Syndikat', 'Mietshäuser Syndikat'), 'https://www.syndikat.org/syndikat/'))
     ideas += idea(('FUCVAM (Uruguai)', 'FUCVAM (Uruguay)'),
-                  [('A federação uruguaia de cooperativas de moradia, fundada em 1970. As famílias constroem juntas, em ajuda mútua, e a cooperativa fica com a propriedade. No plano da IMOBX, cada família é dona da sua casa.',
-                    'Uruguay’s federation of housing cooperatives, founded in 1970. Families build together through mutual aid, and the cooperative holds the title. In IMOBX’s plan, each family owns its own house.')],
+                  [('A federação uruguaia de cooperativas de moradia por ajuda mútua, fundada em 1970. As famílias constroem juntas, em ajuda mútua, e a cooperativa fica com a propriedade. No plano da IMOBX, cada família é dona da sua casa.',
+                    'Uruguay’s federation of mutual-aid housing cooperatives, founded in 1970. Families build together through mutual aid, and the cooperative holds the title. In IMOBX’s plan, each family owns its own house.')],
                   (('FUCVAM', 'FUCVAM'), 'https://www.fucvam.org.uy'))
     ideas += idea(('Fundos comunitários de terra', 'Community land trusts'),
                   [('O fundo fica com o terreno, e os direitos de cada família ficam num contrato longo e assinado. Daí vem a nossa regra: seja qual for o resultado de uma votação, só a família e a IMOBX juntas, dentro da lei, podem mudar o contrato de moradia de uma família.',

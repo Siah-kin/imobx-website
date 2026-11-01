@@ -10,6 +10,7 @@ from model_guide import build_guide, redirect_stub, new_faq_location, partner_li
 from archive_gateway import build_gateway, pages_from_pdf
 from contact_page import build_contact
 from seo import add_seo
+import commons_story
 from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE, DATE_PT, DATE_EN, LABEL_EN, LABEL_PT
 from copy_review import require_review
 
@@ -414,10 +415,16 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
     + translated('Comece pelos documentos. Logo abaixo estão as razões por trás da IMOBX, as ideias que formaram o plano e a fonte de cada número.',
                  'Start with the documents. Below them are the reasons behind IMOBX, the ideas that shaped the plan and the source of every figure.', 'p', 'class="guide-lead"') + _res_nav
     + resource_section(standalone=True) + '</section>'
-    + build_guide.ideas_html + re.sub(r'<section id="people">.*?</section>', '<span id="people"></span>', build_reference.fragment, count=1, flags=re.S)  # owner, 29 Oct: 'remove this'
+    + build_guide.ideas_html.replace('<section id="studied">', commons_story.introduction(translated) + '<section id="studied">', 1) + re.sub(r'<section id="people">.*?</section>', '<span id="people"></span>', build_reference.fragment, count=1, flags=re.S)  # owner, 29 Oct: 'remove this'
     + resource_section.cite + build_guide.ideas_close
     + partner_line_html('resources.html', lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)) + '</main>',
     build_guide.ideas_head + '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
+
+
+(ROOT / 'commons-research.html').write_text(page('IMOBX | The things a community shares',
+    commons_story.article(translated),
+    '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR',
+    title_pt='IMOBX | O que uma comunidade compartilha'))
 
 
 def _moved(title, heading, default_hash):
