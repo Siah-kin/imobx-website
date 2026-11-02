@@ -6,23 +6,25 @@
    "status": "draft",
    "pt": {
     "forms": [
+     "criptoativos",
+     "criptoativo",
      "criptomoedas",
      "criptomoeda",
      "cripto"
     ],
-    "meaning": "Moedas digitais, como o bitcoin. Numa casa da IMOBX você paga em reais, como hoje."
+    "meaning": "Um ativo digital registrado numa blockchain, como o bitcoin ou um token."
    },
    "en": {
     "forms": [
      "crypto"
     ],
-    "meaning": "Digital currency such as bitcoin. In an IMOBX home you pay in reais, as you do today."
+    "meaning": "A digital asset recorded on a blockchain, such as bitcoin or a token."
    },
    "nl": {
     "forms": [
      "crypto"
     ],
-    "meaning": "Digitale munt zoals bitcoin. In een IMOBX-woning betaal je in reais, zoals nu."
+    "meaning": "Een digitaal bezit dat op een blockchain is vastgelegd, zoals bitcoin of een token."
    }
   },
   {
@@ -101,20 +103,20 @@
     "forms": [
      "carteira digital"
     ],
-    "meaning": "Um aplicativo para guardar criptomoedas e tokens, para quem quer comprar ou fazer staking do token da IMOBX. O aluguel é pago em reais."
+    "meaning": "Um aplicativo para guardar tokens. O aluguel é pago em reais."
    },
    "en": {
     "forms": [
      "digital wallet"
     ],
-    "meaning": "An app for holding crypto and tokens, for people who want to buy or stake the IMOBX token. Rent is paid in reais."
+    "meaning": "An app for holding tokens. Rent is paid in reais."
    },
    "nl": {
     "forms": [
      "digitale portemonnee",
      "digitale wallet"
     ],
-    "meaning": "Een app om crypto en tokens te bewaren, voor wie de IMOBX-token wil kopen of staken. Huur betaal je in reais."
+    "meaning": "Een app om tokens te bewaren. Huur betaal je in reais."
    }
   },
   {
@@ -125,21 +127,21 @@
      "tokens",
      "token"
     ],
-    "meaning": "Uma unidade digital numa blockchain, que se pode comprar, vender, guardar ou fazer staking. O token da IMOBX leva a marca do projeto e ajuda a pagar o seu começo."
+    "meaning": "Uma unidade digital registrada numa blockchain. O token da IMOBX é um token self-compounding de financiamento da comunidade: suas taxas de negociação financiam a comunidade em torno das casas."
    },
    "en": {
     "forms": [
      "tokens",
      "token"
     ],
-    "meaning": "A digital unit on a blockchain that people can buy, sell, keep or stake. The IMOBX token carries the project’s brand and helps pay for its start."
+    "meaning": "A digital unit recorded on a blockchain. The IMOBX token is a self-compounding community-funding token: its trading fees fund the community around the houses."
    },
    "nl": {
     "forms": [
      "tokens",
      "token"
     ],
-    "meaning": "Een digitale eenheid op een blockchain die je kunt kopen, verkopen, houden of staken. De IMOBX-token draagt het merk van het project en helpt het begin te betalen."
+    "meaning": "Een digitale eenheid die op een blockchain is vastgelegd. Het IMOBX-token is een self-compounding token dat de gemeenschap financiert: de handelsvergoedingen financieren de gemeenschap rond de huizen."
    }
   },
   {
@@ -291,21 +293,21 @@
      "cooperativa habitacional",
      "cooperativa"
     ],
-    "meaning": "Uma organização que pertence aos seus membros e é dirigida por eles. A IMOBX está se preparando para funcionar assim, como cooperativa de bairro; a forma jurídica ainda está sendo escolhida."
+    "meaning": "Uma organização que pertence aos seus membros e é dirigida por eles. Numa cooperativa de crédito, os membros poupam e pegam empréstimos juntos."
    },
    "en": {
     "forms": [
      "housing cooperative",
      "cooperative"
     ],
-    "meaning": "An organisation owned and run by its members. IMOBX is preparing to work this way, as a neighbourhood cooperative; its legal form is still being chosen."
+    "meaning": "An organisation owned and run by its members. In a credit cooperative, members save and borrow together."
    },
    "nl": {
     "forms": [
      "wooncoöperatie",
      "coöperatie"
     ],
-    "meaning": "Een organisatie die van haar leden is en door hen wordt bestuurd. IMOBX bereidt zich voor om zo te werken, als buurtcoöperatie; de rechtsvorm wordt nog gekozen."
+    "meaning": "Een organisatie die van haar leden is en door hen wordt bestuurd. In een kredietcoöperatie sparen en lenen leden samen."
    }
   },
   {

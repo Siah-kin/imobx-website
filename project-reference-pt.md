@@ -1,6 +1,6 @@
 # Quem está preparando a IMOBX, e de onde vêm as informações?
 
-**Versão 0.8, 24 de outubro de 2026**
+**Versão 0.9, 2 de novembro de 2026**
 
 ## Quem faz o quê, e quais funções ainda estão vagas?
 
@@ -48,4 +48,4 @@ A descrição da própria Arc sobre a rede e as ferramentas de pagamento.
 
 [Fundação João Pinheiro: déficit habitacional de 2024](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
-Cerca de 5,77 milhões de domicílios no déficit habitacional de 2024, que inclui famílias com gastos excessivos de aluguel, segundo o critério da FJP; não é uma contagem de moradias faltantes.
+Cerca de 5,77 milhões de domicílios estão no déficit habitacional de 2024 pelo critério da FJP, que também conta famílias que gastam parte excessiva da renda com aluguel.

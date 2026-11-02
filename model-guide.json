@@ -321,21 +321,21 @@
       "id": "yield",
       "home": false,
       "q": [
-        "O token pagaria renda, recompraria tokens ou daria acesso a serviços?",
-        "Would the token pay income, buy tokens back or provide services?"
+        "O que recebe quem tem o token?",
+        "What does a token holder receive?"
       ],
       "a": [
         [
-          "Estudamos um token para ajudar a financiar a operação e a divulgação da IMOBX. Compradores de tokens novos pagariam à organização que os cria e vende. O que receberiam em troca ainda não foi escolhido. Uma revenda normalmente paga ao vendedor; somente uma taxa separada poderia chegar ao projeto.",
-          "A token is under study to help fund IMOBX’s operations and outreach. Buyers of new tokens would pay the organisation that creates and sells them. What they would receive in return has not been chosen. A resale normally pays the seller; only a separately collected fee could reach the project."
+          "O token existe para financiar a comunidade: cada negociação paga uma taxa. No modelo dos fundadores, essa taxa seria dividida em 45% para salários do trabalho da comunidade, 35% para o pool e 20% para quem trava seus tokens para sempre. Quando a IMOBX coloca os recursos iniciais do pool, a maior parte da parte do pool vai para novas casas. A parte de 20% aguarda a leitura de um advogado.",
+          "The token is there to fund the community: every trade pays a fee. In the founders’ model, that fee would be split 45% for wages for the community’s work, 35% for the pool and 20% for people who lock their tokens for good. When IMOBX puts in the pool’s starting funds, most of the pool’s share goes to new houses. The 20% share waits for a lawyer’s reading."
         ],
         [
-          "Há quatro caminhos em estudo: seguir sem token próprio, oferecer um serviço ou desconto, participar de taxas recebidas ou investir na operação. Recompra paga quem vende; queimar tokens não paga automaticamente os demais. Pagar renda a quem tem tokens exigiria direitos definidos em contrato e recursos disponíveis. Nenhum caminho foi aprovado.",
-          "Four paths are under study: proceed without an IMOBX token, offer a service or discount, receive part of the fees actually collected, or invest in the operation. A buyback pays sellers; burning tokens does not automatically pay the others. Payments of income to token holders would need a written agreement and funding available to pay them. No path is approved."
+          "Qualquer benefício para quem trava seus tokens será nomeado, com suas condições, antes de valer.",
+          "Any benefit for people who lock their tokens will be named, with its terms, before it applies."
         ],
         [
-          "Qualquer renda depende de receita real, regras escritas e recursos disponíveis. O contrato de moradia e a voz dos moradores são independentes de investimento e divulgação.",
-          "Any income depends on funding actually received, written rules and available funds. Housing agreements and residents’ voice are independent of investment and outreach."
+          "As famílias participam como membros da IMOBX, e ser membro é tudo de que precisam. Seus contratos de moradia e sua voz como moradoras ficam separados do token.",
+          "Families take part as members of IMOBX, and membership is all they need. Their housing agreements and their voice as residents stay separate from the token."
         ]
       ],
       "sources": [
@@ -343,7 +343,7 @@
         "cvm",
         "cash"
       ],
-      "detail_url": "reference.html#token"
+      "detail_url": "token.html"
     },
     {
       "id": "arc-arctide",
@@ -644,11 +644,11 @@
     },
     "cash": {
       "label": "Whitepaper, section 4: the cash policy",
-      "url": "whitepaper.html#4-how-the-money-would-work"
+      "url": "whitepaper.html#4-how-the-funding-would-work"
     },
     "rights": {
-      "label": "Whitepaper, section 8: what a token could represent",
-      "url": "whitepaper.html#8-what-a-token-could-represent"
+      "label": "Whitepaper, section 8: what the token is for",
+      "url": "whitepaper.html#8-what-the-token-is-for"
     },
     "digital": {
       "label": "Whitepaper, section 9: what becomes digital",
@@ -711,8 +711,8 @@
       "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/11/understanding-the-tokenisation-of-assets-in-financial-markets_2e657111/c033401a-en.pdf"
     },
     "reference-token": {
-      "label": "Token / divulgação / outreach",
-      "url": "reference.html#token"
+      "label": "Self-compounding: como o token funciona / how the token works",
+      "url": "token.html"
     }
   },
   "settlement": {
@@ -2640,8 +2640,8 @@
         "Each family’s payments go first to its own home: its share of the purchase, repairs and reserves."
       ],
       [
-        "Votações, inclusive de quem tem tokens, orientam as decisões comuns; o que pode mudar o contrato de moradia de uma família está nos termos que a família assinou e na lei brasileira.",
-        "Votes, including token votes, guide shared decisions; what can change a family’s housing agreement is set out in the terms that family signed and in Brazilian law."
+        "As decisões comuns seguem um membro, um voto. Quem tem o token vota só as regras do próprio token, e o contrato de moradia de uma família muda só pelos termos que a família assinou e pela lei brasileira.",
+        "Shared decisions are one member, one vote. Token holders vote only on the token’s own rules, and a family’s housing agreement changes only under the terms that family signed and Brazilian law."
       ],
       [
         "As contas da obra só são pagas com recursos já garantidos; a negociação sustenta o trabalho em volta das casas.",
@@ -2760,10 +2760,6 @@
       "Para que serve o token da IMOBX?",
       "What is the IMOBX token for?"
     ],
-    "token_intro": [
-      "Estamos estudando como introduzir o token da IMOBX de acordo com a lei brasileira. Ele só será lançado quando já der acesso a serviços e produtos da comunidade. Até lá, o trabalho é financiado pelos caminhos descritos em Custos e financiamento.",
-      "We are examining how to introduce the IMOBX token in line with Brazilian law. It launches only once it gives access to the community’s services and goods. Until then, the work is funded through the routes set out under Costs and funding."
-    ],
     "never_title": [
       "Nossos compromissos",
       "Our commitments"
@@ -2778,8 +2774,8 @@
         "We show progress with proof and leave the price to the market."
       ],
       [
-        "Os membros da cooperativa aprovam as regras do token antes do lançamento.",
-        "The cooperative’s members agree the token’s rules before it launches."
+        "As regras abertas do token são publicadas, com aviso antes de qualquer mudança, e passam para a comunidade quando forem codificadas.",
+        "The token’s open rules are published, with notice before any change, and pass to the community once they are coded."
       ]
     ],
     "sources_title": [
@@ -2835,10 +2831,6 @@
           "Staking means locking your tokens for a set period, as a pledge that you are staying with the project. When the period ends they are yours again, to keep or to sell."
         ]
       ]
-    ],
-    "receives_text": [
-      "Ter o token dá acesso aos serviços e benefícios da comunidade.",
-      "Holding the token gives you access to the community’s services and benefits."
     ],
     "utilities_text": [
       "Quem faz staking dos seus tokens recebe uma parte das taxas de negociação, paga em USDC, e colocar liquidez na Arctide também rende parte dessas taxas. Quando as regras do token mudam, quem tem o token vota, e o trabalho comprovado dos membros conta junto com o que têm em staking. Embaixadores e corretores recebem das mesmas taxas pelo trabalho de divulgação conferido. A compra funciona pelo site, por QR code ou pelo Telegram, direto do mercado.",
@@ -2911,32 +2903,22 @@
     "loop_steps": [
       [
         [
-          "Uso",
-          "Use"
+          "Apoio",
+          "Backing"
         ],
         [
-          "acesso aos serviços e bens da comunidade",
-          "access to the community’s services and goods"
+          "quem acredita no projeto fica com o token",
+          "people who believe in the project hold the token"
         ]
       ],
       [
         [
-          "Pessoas entram",
-          "People join"
+          "Taxa",
+          "Fee"
         ],
         [
-          "mais gente quer usar o que a comunidade oferece",
-          "more people want to use what the community offers"
-        ]
-      ],
-      [
-        [
-          "Taxa de negociação",
-          "Trading fee"
-        ],
-        [
-          "cada negociação no mercado paga uma pequena taxa em USDC ao projeto",
-          "each trade on the market pays a small fee in USDC to the project"
+          "cada negociação paga uma taxa para a comunidade",
+          "each trade pays a fee to the community"
         ]
       ],
       [
@@ -2945,18 +2927,28 @@
           "Checked work"
         ],
         [
-          "as taxas pagam trabalho que alguém conferiu",
-          "the fees pay for work someone has checked"
+          "as taxas pagam salários por trabalho conferido e constroem novas casas",
+          "the fees pay wages for checked work and build new houses"
         ]
       ],
       [
         [
-          "Mais serviços",
-          "More services"
+          "Mais casas",
+          "More houses"
         ],
         [
-          "esse trabalho acrescenta serviços que membros e quem tem o token podem usar",
-          "that work adds services members and token holders can use"
+          "mais casas trazem mais vizinhos para a comunidade",
+          "more houses bring more neighbours into the community"
+        ]
+      ],
+      [
+        [
+          "Mais apoio",
+          "More backing"
+        ],
+        [
+          "uma comunidade que cresce atrai mais gente que quer apoiá-la",
+          "a growing community draws more people who want to back it"
         ]
       ]
     ],
@@ -3001,8 +2993,8 @@
       "Read the Distributed ledger page"
     ],
     "protection": [
-      "Votações, inclusive de quem tem tokens, orientam as decisões comuns; o que pode mudar o contrato de moradia de uma família está nos termos que a família assinou e na lei brasileira.",
-      "Votes, including token votes, guide shared decisions; what can change a family’s housing agreement is set out in the terms that family signed and in Brazilian law."
+      "As decisões comuns seguem um membro, um voto. Quem tem o token vota só as regras do próprio token, e o contrato de moradia de uma família muda só pelos termos que a família assinou e pela lei brasileira.",
+      "Shared decisions are one member, one vote. Token holders vote only on the token’s own rules, and a family’s housing agreement changes only under the terms that family signed and Brazilian law."
     ]
   }
 }

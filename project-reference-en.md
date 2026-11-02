@@ -1,6 +1,6 @@
 # Who is preparing IMOBX, and where do the facts come from?
 
-**Version 0.8, 24 October 2026**
+**Version 0.9, 2 November 2026**
 
 ## Who does what, and which roles are still open?
 
@@ -48,4 +48,4 @@ Arc’s own description of its network and payment tools.
 
 [Fundação João Pinheiro: 2024 housing deficit](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
-About 5.77 million households counted in the 2024 housing deficit under the FJP measure, which includes excessive rent burdens; this is not a count of missing homes.
+About 5.77 million households are in the 2024 housing deficit by the FJP measure, which also counts families paying too much of their income in rent.

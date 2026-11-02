@@ -7,8 +7,8 @@ import json
 import re
 from urllib.parse import urljoin
 
-VERSION = '0.8'
-REVIEW_DATE = '2026-10-24'
+VERSION = '0.9'
+REVIEW_DATE = '2026-11-02'
 _MONTHS_PT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
 _MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 _y, _m, _d = (int(x) for x in REVIEW_DATE.split('-'))

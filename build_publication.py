@@ -43,7 +43,7 @@ def esc(value):
 
 
 def version_label(item, lang):
-    """'Version 0.8, 24 October 2026'. Items that were not revised on that date show only their version."""
+    """'Version 0.9, 2 November 2026'. Items that were not revised on that date show only their version."""
     word, date = ('Versão', DATE_PT) if lang == 'pt' else ('Version', DATE_EN)
     return f"{word} {item['version']}" + (f', {date}' if item['version'] == VERSION else '')
 
@@ -55,7 +55,7 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
 
 
 # The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
-SITE_UPDATED = '2026-10-28'
+SITE_UPDATED = '2026-11-02'
 
 
 def status_bar_text():
@@ -94,7 +94,7 @@ MENU = [
         ('blockchain.html', 'request', 'Pedidos e reclamações', 'Requests and complaints',
          'What happens when I ask for a repair or make a complaint?'),
         ('blockchain.html', 'records', 'Quem vê o quê', 'Who sees what', 'Who sees what?'),  # owner, 28 Oct: 'records' is too abstract
-        ('blockchain.html', 'open', 'Banco ou registro distribuído', 'Bank or ledger', 'How much would run on the blockchain?'),
+        ('token.html', 'meaning', 'Self-compounding', 'Self-compounding', 'What does self-compounding mean?'),  # owner, 1 Nov: the token has its own page
     ]),
     # Owner, 28 Oct: Local governance is its own page, ordered from now to later (team, token holders, residents).
     ('governance.html', 'Governança local', 'Local governance', [
@@ -111,7 +111,7 @@ MENU = [
     ]),
 ]
 # Pages without their own menu item light up their parent; the lofts page belongs to Project development.
-MENU_PARENT = {'properties.html': 'roadmap.html'}
+MENU_PARENT = {'properties.html': 'roadmap.html', 'token.html': 'blockchain.html'}
 # Section addresses other pages link to, kept although they left the menu.
 EXTRA_ANCHORS = [
     ('index.html', 'onde-estamos', 'Where we are now'),
@@ -347,9 +347,10 @@ def resource_section(standalone=True):
     body += translated('Documentos do projeto', 'Project documents', 'h2')
     body += translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p')
     body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h3') for key in document_ids) + '</div><span id="resource-reference"></span><span id="title-reference"></span>'
-    # moved from the project reference (review C #49), as one status line beside the documents
-    body += translated('O documento do projeto de Rafael (cerca de 30 páginas) está em preparação.',
-                       'Rafael’s project paper (about 30 pages) is in preparation.', 'p')
+    # The token's current description lives on the Self-compounding page (TOKEN_POSITION.md, 2 Nov 2026).
+    body += ('<p>' + translated('Para o token da IMOBX, a sua taxa e os quatro V, leia a página',
+                                'For the IMOBX token, its fee and its four V’s, read the page') + ' '
+             + translated('Self-compounding', 'Self-compounding', 'a', 'href="token.html"') + '.</p>')
     body += '<section id="media-resources" aria-labelledby="media-resources-title">'
     body += translated('Logos e marca', 'Logos and brand', 'h2', 'id="media-resources-title"')
     body += translated('Para a imprensa e os parceiros que escrevem sobre a IMOBX: o nosso logo e as nossas cores, prontos para usar.',
@@ -411,7 +412,7 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
             + '</ol></nav>')
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main class="paper guide-paper band-page resources-page" id="main">' + language_controls
-    + translated('Documentos, ideias e fontes', 'Documents, ideas and sources', 'h1')
+    + translated('O que você pode ler e conferir sobre a IMOBX?', 'What can you read and check about IMOBX?', 'h1')
     + translated('Comece pelos documentos. Logo abaixo estão as razões por trás da IMOBX, as ideias que formaram o plano e a fonte de cada número.',
                  'Start with the documents. Below them are the reasons behind IMOBX, the ideas that shaped the plan and the source of every figure.', 'p', 'class="guide-lead"') + _res_nav
     + resource_section(standalone=True) + '</section>'
@@ -421,7 +422,7 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
     build_guide.ideas_head + '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
 
 
-(ROOT / 'commons-research.html').write_text(page('IMOBX | The things a community shares',
+(ROOT / 'commons-research.html').write_text(page('IMOBX | Who looks after the places neighbours share?',
     commons_story.article(translated),
     '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR',
     title_pt='IMOBX | O que uma comunidade compartilha'))

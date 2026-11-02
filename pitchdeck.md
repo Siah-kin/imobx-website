@@ -2,7 +2,7 @@
 
 A documented rent-to-own housing model for Rio
 
-**Partner discussion draft · Version 0.8, 24 October 2026**
+**Partner discussion draft · Version 0.9, 2 November 2026**
 
 
 
@@ -94,11 +94,11 @@ Keep rent, donations, grants, service income and trading fees separately identif
 
 - Keep funding for empty houses and promises made to families.
 
-- Fund more houses; consider any permitted investor payments afterward.
+- Fund more houses under the agreed budget.
 
 
 
-**Presenter notes:** Funding credited toward a family’s purchase is not a second receipt of cash. Funding paid by a buyer to a token seller normally goes to that seller, apart from separately collected fees. Funding locked in a trading market is not also available to build houses.
+**Presenter notes:** Funding credited toward a family’s purchase is not a second receipt of cash. A buyer’s payment for the token goes into the trading pool; only the fee on each trade is shared out. Funding locked in a trading market is not also available to build houses.
 
 
 
@@ -160,25 +160,25 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 
 
-## 9. The token launches once it can be used
+## 9. Every trade of the token pays a fee that funds the community
 
-We are examining how to introduce the IMOBX token in line with Brazilian law. It launches when holders can use it to reach the community’s services and goods.
+Holding the token is optional, and families join IMOBX as members. It is a planned self-compounding community-funding token with no presale.
 
 
 
-- Volume: trading fees, paid in USDC, pay for checked work.
+- Each trade would pay a fee: 14% on Arctide, plus its own 0.25%, and 11% on Argus.
 
-- Voting: holders vote on the token’s own rules; the cooperative keeps one member, one vote.
+- Each fee would go 45% to wages and 35% to the trading pool; the 20% for people who lock tokens waits for a lawyer’s reading.
 
-- Verify: in the plan, anyone can check each payment and who approved it.
+- Its use comes from four rules: Volume, Verify, Vote and Vow.
 
 
 
 Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). Says Brazil's regulator looks at what an investment actually gives, not its name.
 
-Source: [IMOBX: the token, on the distributed ledger page](https://siah-kin.github.io/imobx-website/blockchain.html#token). Sets out the token’s four functions as the project describes them.
+Source: [IMOBX: the Self-compounding page](https://siah-kin.github.io/imobx-website/token.html). Sets out the token’s fee, where it goes and the four V’s as the project describes them.
 
-**Presenter notes:** We start building a house only when its funding is secured. Residents take part as members, whether or not they hold tokens.
+**Presenter notes:** The first house is funded outside the token: once IMOBX’s legal entity is registered, it will run a crowdfunding campaign in reais and apply for grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. The fee would add to the houses budget over time. Buyers’ payments would go into the trading pool, so none of them would reach IMOBX. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of the 35% would go to new houses; if the token opens with a sale on Arctide’s bonding curve, that part would go to Arctide. Volume: the fees would give the community an income of its own. Verify: anyone could check where each fee went and who approved it. Vote: on the token’s own rules, weight would come mainly from work others have confirmed; members’ decisions stay one member, one vote. Vow: the commitments no vote can break, starting with each family’s housing agreement. Benefits for holders are chosen later from what IMOBX can actually supply. We start building a house only when its funding is secured.
 
 
 
@@ -190,7 +190,7 @@ The roadmap names proposed roles and conditions for proceeding.
 
 - Property rights, household terms and budgets underpin the first houses.
 
-- Digital payment trials and token research can progress alongside them.
+- Digital payment trials and the token’s preparation would run alongside them.
 
 - Expansion follows operating results and funding for existing commitments.
 
@@ -198,7 +198,7 @@ The roadmap names proposed roles and conditions for proceeding.
 
 Source: [IMOBX project stages](https://siah-kin.github.io/imobx-website/roadmap.html). Sets out the stages and what must be ready in each. It sets no dates.
 
-**Presenter notes:** The six stages are legal structure and property; resident participation; first houses; payment records people can check; funding and account review; more houses and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Adviser, accounting, approval and independent inspection roles still need appointments. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
+**Presenter notes:** The six stages are legal structure and property; resident participation; first houses; payment records people can check; funding and account review; more houses and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
 
 
 

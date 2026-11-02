@@ -136,7 +136,7 @@
     const { re, idOf } = matcher(lang());
     const seen = new Map();  // section -> Set of term ids already explained there
     const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {
-      acceptNode: n => n.nodeValue.trim() && !n.parentElement.closest('h1, h2, h3, h4, h5, h6, th, .glossary, .term-pop, script, style, svg, nav, .language-controls, summary')
+      acceptNode: n => n.nodeValue.trim() && !n.parentElement.closest('h1, h2, h3, h4, h5, h6, th, .glossary, .term-pop, script, style, svg, nav, .language-controls, summary, .vx-row, .vx-col')
         ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT });
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);

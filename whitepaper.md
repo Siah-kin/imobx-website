@@ -2,19 +2,19 @@
 
 ## A rent-to-own housing proposal for Rio
 
-**Project paper · Version 0.8, 24 October 2026**
+**Project paper · Version 0.9, 2 November 2026**
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family rents a home, part of each payment counts towards buying it, and the whole home is transferred to the family once the agreed conditions are met. The plan brings together local building work, written agreements, maintenance and accounts people can check.
 
 **What exists today.** Rafael’s November 2025 village budget; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
 
-**What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The rights of any token, which is a digital record of a right that can be bought and sold.
+**What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
 Rafael brings his construction experience and knowledge of local conditions. John works on community communication and digital tools.
 
 Under the plan, a family rents the home and makes monthly payments in reais. The agreement records the amount credited towards the purchase and the remaining agreed price. Ownership of the whole home passes to the household once the purchase conditions and property transfer are completed. IMOBX then stops receiving rent from that house.
 
-The [household explanation](rent-to-own.html) covers payments, repairs, decisions and leaving in Portuguese and English. The [dated project reference](reference.html) identifies sources and current responsibilities; its [chapter map](reference.html#chapters) connects the available material to Rafael’s longer manuscript.
+The [household explanation](rent-to-own.html) covers payments, repairs, decisions and leaving in Portuguese and English. The [source list](resources.html#sources) shows where each figure comes from, and the [Self-compounding page](token.html) explains the IMOBX token.
 
 ## 1. Who the pilot is for
 
@@ -79,7 +79,7 @@ For the first project, each family’s agreement needs affordable payments in re
 
 The financial plan covers houses and continued service. The rules for payment and reinvestment are not agreed.
 
-The accounts identify each payer, purpose and permitted use, with separate records for rent, donations, grants, investments, service income and trading fees. If someone buys a token from another holder, the sale funding normally goes to the seller. Only a separately collected project fee goes to IMOBX.
+The accounts identify each payer, purpose and permitted use, with separate records for rent, donations, grants, investments, service income and trading fees. When someone buys the IMOBX token, their payment goes into the token’s trading pool in exchange for tokens, and none of it reaches IMOBX. Only the fee on each trade is shared out, as section 5 sets out.
 
 Under the plan, funding is used in this order:
 
@@ -94,13 +94,17 @@ Payments credited toward a family’s purchase are a commitment under its agreem
 
 ## 5. Trade fees as supplementary funding
 
-The first houses are funded through the routes in section 4: founders, partners, grants and donations. Building never waits on token trading: we start building a house only when its funding is secured.
+Once IMOBX’s legal entity is registered, it will fund the first house through a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria, together with grants such as Circle’s Developer Grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Founders, partners and donors can add to it through the routes in section 4. We start building a house only when its funding is secured.
 
-Once the token can be used, each trade on the market pays a small fee in USDC. A published rule states which fees IMOBX receives, what they pay for and how receipts are checked; before launch, we publish the fee rate and who can change it. A sale between two holders pays the seller; it does not provide a building budget.
+The IMOBX token would add to the houses budget over time. Each trade of the token would pay a fee in USDC, a digital dollar: 14% on Arctide, an exchange on the Arc network, plus Arctide’s own 0.25%, and 11% on Argus, a second exchange, which keeps 30% of its fee. Buyers’ payments would go into the token’s trading pool, so this fee would be the community’s only income from the token.
 
-The fees pay for work that has been checked, such as outreach tasks set out in writing, each payment its own line in the accounts. They depend on trading, so the plan is tested with little or no trading income. Higher fees may discourage buyers and sellers.
+Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work, and the founders would draw no wages from it. 35% would go to the trading pool, the shared reserve through which the token changes hands. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. The founders’ only share of the fee would come from that 20%.
 
+When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, and that part of the pool’s share would go to new houses. If the token opens instead with a sale on Arctide’s bonding curve, where the first buyers’ payments start the pool, that part would go to Arctide, and new houses would receive the share earned by funds IMOBX adds to the pool itself.
 
+Wages would pay for work agreed in writing before it starts and checked before it is paid, and each payment would have its own line in the accounts. A community tool could show the task, who checked it and whether it was paid. Housing rights and residents’ voice stay separate from this paid work.
+
+Trading is usually busiest around a launch and much quieter afterwards. For that reason the plan is tested with little or no trading income, and every building budget rests on funding already secured.
 
 <div class="pagebreak"></div>
 
@@ -114,9 +118,9 @@ A one-off grant can help build, but it is not continuing income. Having 1,000 ho
 
 ## 7. Resident voice and accountable governance
 
-We are designing how decisions are shared: who decides what, and how software helps everyone follow the agreed rules. Residents, property contributors, builders, staff, donors, investors, neighbours and independent checkers need clear roles. We have mapped their likely needs for discussion, not confirmed them through interviews.
+Decisions are shared through clear roles: who decides what, and how software helps everyone follow the agreed rules. Residents, property contributors, builders, staff, donors, investors, neighbours and independent checkers each have a role, set out in the table below.
 
-Elinor Ostrom studied how people manage shared resources, and her [Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/) is the research basis for the principles we use. Applying them to IMOBX is the project’s own step; the lecture does not endorse IMOBX. We apply these lessons: define the group, involve affected people, check work and spending, resolve disputes and keep local decisions close to residents.
+Elinor Ostrom studied how people manage shared resources, and her [Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/) is the research behind five lessons we apply to IMOBX: define the group, involve the people affected, check work and spending, resolve disputes and keep local decisions close to residents.
 
 | Who or what | Rule under discussion |
 |---|---|
@@ -129,45 +133,42 @@ Elinor Ostrom studied how people manage shared resources, and her [Nobel lecture
 | Neighbours | A voice on local impacts, services and access. |
 | Independent checkers | Access and authority to review property, safety, accounts and agreements. |
 
-Examples of resident decisions are study-room hours, courtyard use and the order of shared-space repairs. Cooperative decisions follow one member, one vote, as Brazil’s cooperative law sets out (Lei 5.764, article 42), with representatives who can be replaced. The [International Cooperative Alliance’s statement of cooperative identity](https://ica.coop/en/cooperatives/cooperative-identity) describes democratic member control; it does not mean IMOBX is a registered cooperative. People handling maintenance act within an agreed budget, and someone else checks the work and bill. A resident who disagrees with a charge can ask for it to be checked.
+Examples of resident decisions are study-room hours, courtyard use and the order of shared-space repairs. In the plan, members decide with one member, one vote, as Brazil’s cooperative law sets out for cooperatives (Lei 5.764, article 42), with representatives who can be replaced. The [International Cooperative Alliance’s statement of cooperative identity](https://ica.coop/en/cooperatives/cooperative-identity) describes this democratic member control. People handling maintenance act within an agreed budget, and someone else checks the work and bill. A resident who disagrees with a charge can ask for it to be checked.
 
-Whatever a vote decides, including a token vote, only the family and IMOBX together, under the law, can change a family’s housing agreement. Holding tokens gives no say over another household’s purchase agreement. Residents take part as members, whether or not they hold tokens or do promotional work. The voting procedure, spending limits, repair responsibilities and review process are not designed yet; they are developed with participants. See [resident decisions and repairs](rent-to-own.html#decisions) and [who decides, and when](governance.html).
+Whatever a vote decides, including a token vote, only the family and IMOBX together, under the law, can change a family’s housing agreement. Holding tokens gives no say over another household’s purchase agreement. Residents take part as members, whether or not they hold tokens or do promotional work. The voting procedure, spending limits, repair responsibilities and review process are worked out with participants. See [resident decisions and repairs](rent-to-own.html#decisions) and [who decides, and when](governance.html).
 
 <div class="pagebreak"></div>
 
 ## 8. What the token is for
 
-The token is for using the community’s services and goods, and it launches only once it gives that access. Until then, the work is funded through the routes in section 4.
+After a house is built, the shared work carries on: repairs, checks, records and the next house. The IMOBX token would give the community an income for that work. Holding it is optional. It is planned as a self-compounding community-funding token, a crypto token that people would buy and sell on a public market on the Arc blockchain, and every trade would pay the fee described in section 5.
 
-It is designed as a loop. People use the token for the community’s services and goods. Each trade on the market pays a small fee in USDC. The fees pay for checked work, and that work adds services members and token holders can use. The token’s price is left to the market.
+Self-compounding is the model Ethervista introduced. Many token projects raise funds by selling tokens to early investors before launch, or by creating new tokens to pay for their work. IMOBX holds no presale, and the supply is fixed at 1,000,000 tokens: three quarters would sit locked in the trading pool, and the team would receive none. The community’s income from the token would be the fee alone.
 
-Alongside the loop, the token has three functions:
+The token’s use comes from four rules, the four V’s:
 
-| Function | What it means |
+| Rule | What it means |
 |---|---|
-| Volume | Trading fees, paid in USDC, pay for checked work. Before launch, we publish the fee rate and who can change it. |
-| Voting | Holders vote on the token’s own rules, and members whose help others have confirmed (Zeal) have a say alongside what they hold. Cooperative matters stay one member, one vote. Before launch, we publish who controls the token’s admin keys, meaning who can change its settings. |
-| Verify | In the plan, anyone can check each payment and who approved it, with or without the token. Several named signers approve each payment, and they can approve only what is in the published budget. |
+| Volume | Trading fees would give the community an income of its own. Before launch, we publish who can change the fee and who holds the token’s admin keys, meaning who can change its settings. |
+| Verify | Anyone, with or without a token, could check where each fee went and who approved it, while personal details stay private. In the plan, several named signers approve each payment, and only within the published budget. |
+| Vote | On the token’s own rules, a vote’s weight would come mainly from work that others have confirmed, and the size of a holding would count for less. Housing and shared matters stay one member, one vote, and holding tokens adds nothing to a housing vote. |
+| Vow | The commitments no vote can break, starting with each family’s housing agreement. |
 
-Locking tokens is a pledge to stay with the project for a set period; the tokens return at the end, and a longer lock gives the same vote.
+Locked tokens would stay locked for good, as section 5 explains. Any benefit for people who lock their tokens will be named, with its terms, before it applies.
 
-Once the token can be used, it launches on a public market on the Arc blockchain, open to anyone from the first day.
+Families need no token. They join IMOBX as members, sign their own housing agreement and take part in decisions with one member, one vote. The token would come at a later stage of the project. The plan is that each family owns its **whole house**, and in Brazil the property registry records who owns a house (Civil Code, article 1,245), so the token carries no claim on any house.
 
-The outreach programme sets out tasks in writing, checks the work submitted and pays for work that meets the agreement from funding already set aside. A community tool can show the task, who checked the work and whether it was paid for. Housing rights and residents’ voice stay separate from this programme.
-
-The plan is that each family owns its **whole house**. In Brazil, the property registry records who owns a house (Civil Code, article 1,245); the token carries no claim on any house.
-
-The nonprofit idea is meant to keep funding serving housing, and IMOBX’s legal form is not decided. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). A donation given for building houses keeps its agreed purpose.
+The nonprofit idea is there so that funding goes to housing; IMOBX’s legal form is still open. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). A donation given for building houses keeps its agreed purpose.
 
 The CVM looks at the rights a token actually gives, not at names such as “utility” or “governance”, in its [Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). That opinion explains how the CVM assesses tokens; it does not approve any IMOBX offer. This paper claims no regulatory approval.
 
 Our commitments, which partners and families can hold us to:
 
-- We start building a house only when its funding is secured; trading supports the work around it.
-- We show progress with proof and leave the price to the market.
-- The cooperative’s members agree the token’s rules before it launches.
+- We start building a house only when its funding is secured.
+- The token’s open rules are published, with notice before any change, and pass to the community once they are coded.
+- Families take part as members, with or without a token.
 
-Promoters disclose any payment they receive and follow the rules of each channel and country they reach. See [the token on the website](blockchain.html#token).
+The token’s rules stay open to change in its first stages, until everybody’s stake of involvement is reflected. People paid to promote the token would disclose the payment and follow the rules of each channel and country they reach. The [Self-compounding page](token.html) explains the token on the website.
 
 <div class="pagebreak"></div>
 
@@ -187,7 +188,7 @@ Tasks need a responsible person, deadline and budget. If someone leaves a role, 
 
 Software assistants can organize documents and remind people about unfinished work, and blockchain records can show payment amounts and destinations. The agreed rules still determine who decides or spends. See [daily decisions and tasks](transparency.html#faq-flock-siah).
 
-Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. No provider is confirmed for IMOBX. Residents do not need crypto wallets. See the [funding path](transparency.html#settlement) and the [payment-service requirements](transparency.html#ramp-options).
+Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. The provider is chosen with the first project. Residents do not need crypto wallets. See the [funding path](transparency.html#settlement) and the [payment-service requirements](transparency.html#ramp-options).
 
 <div class="pagebreak"></div>
 
@@ -205,7 +206,7 @@ After families move in, the plan follows at least three months before reviewing 
 | Families | Repair requests, unresolved issues, participation and purchase progress. |
 | Continuing the project | Bills covered during low trading and funding for the next houses. |
 
-Service targets depend on the first project’s needs and resident participation. An unresolved property right, funding gap or unsafe building prevents the affected stage from proceeding. Expansion requires evidence that there is enough funding for promises already made. Token prices and holder counts do not measure how well a family is housed.
+Service targets depend on the first project’s needs and resident participation. An unresolved property right, funding gap or unsafe building prevents the affected stage from proceeding. Expansion requires evidence that there is enough funding for promises already made. Success is measured by how well each family is housed.
 
 ## 11. Partner participation
 
@@ -215,20 +216,20 @@ To get in touch, choose the route for a [household](contact.html?role=resident),
 
 The partnership under discussion combines IMOBX as project organiser, OLYMPUS as a possible builder, linked to Rafael, and a community or charitable organisation as a possible property or local partner. A financing partner can support an agreed project budget. These relationships are proposals, with no partner agreement or funding commitment established here. A property visit can produce a condition assessment and a costed next step.
 
-Builders, legal advisers and accountants review their own areas. Families help shape the service before rules are fixed. If a builder is connected to an IMOBX founder, other people must compare prices, approve the contract and inspect the completed work. See [people and appointment status](reference.html#people).
+Builders, legal advisers and accountants review their own areas. Families help shape the service before rules are fixed. If a builder is connected to an IMOBX founder, other people must compare prices, approve the contract and inspect the completed work. The [project reference](project-reference-en.pdf) lists who does what and which roles are still open.
 
 <div id="12-risks-decisions-and-evidence-register"></div>
 
 ## 12. Risks and what still needs checking
 
-Rafael supplied the November budget and January two-loft account. Their dates and different purposes matter. Designs show intended buildings, not completed houses. No number of donated properties or received funding is confirmed here.
+Rafael supplied the November village budget and the January two-loft account, each with its own date and purpose. The designs show buildings as planned. Project updates report donated properties and funding received as they arrive.
 
-The legal registration, property documents, permissions and signed agreements need checking for the chosen project. The researched payment services do not establish a working IMOBX connection. Resident voting, reinvestment and token rights are decisions still to be agreed.
+The legal registration, property documents, permissions and signed agreements need checking for the chosen project. IMOBX’s connection to a payment service is set up and tested with the first project. Resident voting, reinvestment, who issues the token and which benefits its holders receive are decisions still to be agreed.
 
 Arc is run by a group of companies chosen by Circle, which built it, and regulators have yet to approve it ([Circle’s announcement](https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet); [the founding companies](https://www.arc.io/pressroom/circle-announces-founding-validator-cohort-and-major-integrations-for-arc-ahead-of-september-16-mainnet-launch)). USDC, the digital dollar used on Arc, is issued by Circle, which can freeze it, including on a government order ([Circle’s USDC risk factors](https://www.circle.com/legal/usdc-risk-factors)). On a blockchain every entry stays, so a mistake is corrected by adding a new entry, and whether a repair was done well is still judged by people on site.
 
-The public [risk list](reference.html#risks) identifies construction, household, cash, offering and software risks. The complete financial model is not ready yet: it needs site costs in reais, affordable payments, repair and delay scenarios, and zero token-trading income.
+The token’s price moves with every trade and can fall a long way, trading usually drops sharply after a launch, and a high fee can discourage buyers and sellers. The complete financial model is not ready yet: it needs site costs in reais, affordable payments, repair and delay scenarios, and zero token-trading income.
 
-The CVM’s [Resolution 249](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm) of 13 October 2026 creates an experimental programme for distributed-ledger technology, the technical name for shared digital records such as a blockchain. Article 1, paragraph 3 excludes real investors, actually issued securities and real-money movements in those tests; it does not authorise a public offering.
+The CVM’s [Resolution 249](https://conteudo.cvm.gov.br/legislacao/resolucoes/anexos/200/resol249.htm) of 13 October 2026 creates an experimental programme for distributed-ledger technology, the technical name for shared digital records such as a blockchain. Article 1, paragraph 3 excludes real investors, actually issued securities and real movements of funding in those tests; it does not authorise a public offering.
 
-Project updates show agreements signed, funding received and work completed, alongside open questions and responsible roles. The [source list](reference.html#sources) shows which statement each source supports. The [version record](reference.html#versions) identifies this edition for citation; private household documents stay unpublished.
+Project updates show agreements signed, funding received and work completed, alongside open questions and responsible roles. The [source list](resources.html#sources) shows which statement each source supports. The [version record](resources.html#versions) identifies this edition for citation; private household documents stay unpublished.
