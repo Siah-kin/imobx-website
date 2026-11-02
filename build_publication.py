@@ -411,7 +411,7 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
             + '</ol></nav>')
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main class="paper guide-paper band-page resources-page" id="main">' + language_controls
-    + translated('Documentos, ideias e fontes', 'Documents, ideas and sources', 'h1')
+    + translated('O que você pode ler e conferir sobre a IMOBX?', 'What can you read and check about IMOBX?', 'h1')
     + translated('Comece pelos documentos. Logo abaixo estão as razões por trás da IMOBX, as ideias que formaram o plano e a fonte de cada número.',
                  'Start with the documents. Below them are the reasons behind IMOBX, the ideas that shaped the plan and the source of every figure.', 'p', 'class="guide-lead"') + _res_nav
     + resource_section(standalone=True) + '</section>'
