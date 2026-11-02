@@ -20,7 +20,7 @@ Como a construtora proposta tem ligação com um fundador, outras pessoas compar
 
 ## Nossas fontes
 
-Fontes conferidas em 17/10/2026.
+Fontes das pesquisas e dos números.
 
 [O orçamento de Rafael e o relato dele sobre os lofts](https://siah-kin.github.io/imobx-website/whitepaper.html#3-the-cost-proposal-already-supplied)
 
@@ -48,4 +48,4 @@ A descrição da própria Arc sobre a rede e as ferramentas de pagamento.
 
 [Fundação João Pinheiro: déficit habitacional de 2024](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
-Cerca de 5,77 milhões de moradias em falta em 2024, pelo critério da FJP (conta moradias, não pessoas em favelas).
+Cerca de 5,77 milhões de domicílios no déficit habitacional de 2024, que inclui famílias com gastos excessivos de aluguel, segundo o critério da FJP; não é uma contagem de moradias faltantes.

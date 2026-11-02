@@ -18,23 +18,23 @@
     },
     {
       "path": "project-reference.json",
-      "sha256": "7495a17188dd085bab29c475e4d2351790bbf61581f380b699d84c9f29140652"
+      "sha256": "47466e69359672b34e3363b3751546f5e1d2216ca856c4753fcf2b692cd4b067"
     },
     {
       "path": "project-reference-pt.md",
-      "sha256": "38a6fd1eb90674eb567eb252afb026dd92516d98b9066191d3e0aff616afbe8b"
+      "sha256": "f28b1b8f01603de9cdde47990da79e80b6c08e738bafa1e79e6793736bec07d6"
     },
     {
       "path": "project-reference-en.md",
-      "sha256": "f98c88695b12c20da2cf401e15fa4f26b680e2926e2cfd0b46dcceae6b226a95"
+      "sha256": "bd44a63fcb75da917511902bb783cd475c41f5b0994fdc252415120ec62070c0"
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "fd9dbd0de192b6dd02eaba8134ec08c6c84cbae5d34fc60721647f4d1f3454b3"
+      "sha256": "fe0c21ebcb76610a8a6329fe9826bf92776ab9572f8a0329f5cb423e34df503c"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "c02014302a9bdac1c256707669ddece841eadc1a38246855722d00a48bfaf306"
+      "sha256": "4eb5fb7732616471b8107235f9439bb5d906eec779387df963d6b2e4b550cbe2"
     },
     {
       "path": "reference.html",
@@ -94,7 +94,7 @@
     },
     {
       "path": "resources.html",
-      "sha256": "01f0a19957ee45bd8ee74131c26536ce013fea723e1e56a823023cd9485fab40"
+      "sha256": "327822121740b1e836a82cf27a5a539de87a95d63219b6d99a6772477371fa80"
     },
     {
       "path": "model-guide.json",

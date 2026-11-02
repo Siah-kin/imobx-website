@@ -20,7 +20,7 @@ Because the proposed builder is linked to a founder, other people compare its pr
 
 ## Our sources
 
-Sources checked on 17 October 2026.
+Sources for the research and figures.
 
 [Rafael’s budget and his account of the lofts](https://siah-kin.github.io/imobx-website/whitepaper.html#3-the-cost-proposal-already-supplied)
 
@@ -48,4 +48,4 @@ Arc’s own description of its network and payment tools.
 
 [Fundação João Pinheiro: 2024 housing deficit](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
-About 5.77 million dwellings short in 2024, by FJP’s own measure (a count of dwellings, not of people in favelas).
+About 5.77 million households counted in the 2024 housing deficit under the FJP measure, which includes excessive rent burdens; this is not a count of missing homes.
