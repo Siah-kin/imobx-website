@@ -421,7 +421,7 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
     build_guide.ideas_head + '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
 
 
-(ROOT / 'commons-research.html').write_text(page('IMOBX | The things a community shares',
+(ROOT / 'commons-research.html').write_text(page('IMOBX | Who looks after the places neighbours share?',
     commons_story.article(translated),
     '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR',
     title_pt='IMOBX | O que uma comunidade compartilha'))
