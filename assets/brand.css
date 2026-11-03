@@ -463,3 +463,17 @@ main>.archive-section:first-child{border-top:0}
   html[lang="pt-BR"] .site-nav .lang{grid-column:2;grid-row:1}
   html[lang="pt-BR"] .site-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:0 18px}
 }
+
+/* Owner, 3 Nov: Self-compounding joined the top bar (eight items, visible from every page). On every desktop width and in
+   every language: logo and language buttons on the first row, the whole menu on one row below, spacing scaled to fit. */
+@media (min-width:1001px){
+  .site-nav,html[lang="nl"] .site-nav,html[lang="pt-BR"] .site-nav{grid-template-columns:1fr auto;gap:4px 20px;padding-block:10px}
+  .site-nav .wordmark,html[lang="nl"] .site-nav .wordmark,html[lang="pt-BR"] .site-nav .wordmark{grid-column:1;grid-row:1}
+  .site-nav .lang,html[lang="nl"] .site-nav .lang,html[lang="pt-BR"] .site-nav .lang{grid-column:2;grid-row:1}
+  .site-links,html[lang="nl"] .site-links,html[lang="pt-BR"] .site-links{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:0 20px;font-size:14px}
+}
+@media (min-width:1001px) and (max-width:1320px){.site-links,html[lang="nl"] .site-links,html[lang="pt-BR"] .site-links{gap:0 12px;font-size:13.5px}}
+@media (min-width:1001px) and (max-width:1120px){.site-links,html[lang="nl"] .site-links,html[lang="pt-BR"] .site-links{gap:0 6px;font-size:13px}}
+@media (min-width:1001px) and (max-width:1320px){html[lang="pt-BR"] .site-links{gap:0 8px;font-size:13px}}
+/* Portuguese labels are longest: between 1001 and 1120px the menu takes two even rows, as on tablets. */
+@media (min-width:1001px) and (max-width:1120px){html[lang="pt-BR"] .site-links{gap:4px 22px;font-size:14px}}

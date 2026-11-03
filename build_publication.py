@@ -94,7 +94,14 @@ MENU = [
         ('blockchain.html', 'request', 'Pedidos e reclamações', 'Requests and complaints',
          'What happens when I ask for a repair or make a complaint?'),
         ('blockchain.html', 'records', 'Quem vê o quê', 'Who sees what', 'Who sees what?'),  # owner, 28 Oct: 'records' is too abstract
-        ('token.html', 'meaning', 'Self-compounding', 'Self-compounding', 'What does self-compounding mean?'),  # owner, 1 Nov: the token has its own page
+    ]),
+    # Owner, 3 Nov: the token page is a top-level item, visible from every page, between the ledger and governance
+    # (the three pillars: Distributed ledger, Self-compounding, Local governance).
+    ('token.html', 'Self-compounding', 'Self-compounding', [
+        ('token.html', 'use', 'Para que serve', 'What it is for', 'What is it for?'),
+        ('token.html', 'meaning', 'O que significa', 'What it means', 'What does self-compounding mean?'),
+        ('token.html', 'fee', 'Para onde vai a taxa', 'Where the fee goes', 'Where does the fee go?'),
+        ('token.html', 'laws', 'As quatro regras', 'The four rules', 'Which four rules govern the community’s funding?'),
     ]),
     # Owner, 28 Oct: Local governance is its own page, ordered from now to later (team, token holders, residents).
     ('governance.html', 'Governança local', 'Local governance', [
