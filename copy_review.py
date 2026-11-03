@@ -8,7 +8,7 @@ import json
 SOURCES = (
     'index.html', 'properties.html', 'whitepaper.md', 'devsheet.md', 'pitchdeck.json',
     'model-guide.json', 'contact-routes.json', 'project-reference.json',
-    'build_publication.py', 'model_guide.py', 'contact_page.py', 'project_reference.py',
+    'build_publication.py', 'model_guide.py', 'i18n/nl.json', 'contact_page.py', 'project_reference.py',
     'copy_review.py', 'assets/site.js', 'assets/contact.js', 'assets/style.css', 'assets/brand.css',
 )
 QUESTIONS = ('housing_offer', 'resident_decisions', 'funding', 'project_status', 'next_action')
