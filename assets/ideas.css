@@ -29,13 +29,18 @@
 .js-ideas .iceberg-below{opacity:.001;transform:translateY(10px);transition:opacity .7s ease-out .5s,transform .7s cubic-bezier(.16,1,.3,1) .5s}
 .js-ideas .iceberg.is-in .iceberg-water path{stroke-dashoffset:0}
 .js-ideas .iceberg.is-in .iceberg-below{opacity:1;transform:none}
+.iceberg-onward{margin:14px 0 0;font-size:16px}.iceberg-below .iceberg-onward a{color:#D6EEF7;text-decoration-color:#7FB3C4}
+/* the stories lie below the waterline: it draws again above them (owner, 3 Nov) */
+.story-water{margin:44px 0 18px;max-width:880px}
+.js-ideas .story-water path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1)}
+.js-ideas .story-water.is-in path{stroke-dashoffset:0}
 @media (max-width:760px){
   .iceberg-above{width:auto;margin:0}
   .idea-grid,#studied .idea-grid{grid-template-columns:minmax(0,1fr)}
   .iceberg-below{padding:22px 18px}
 }
 @media (prefers-reduced-motion:reduce){
-  .js-ideas .iceberg-water path,.js-ideas .iceberg-below{transition:none;stroke-dashoffset:0;opacity:1;transform:none}
+  .js-ideas .iceberg-water path,.js-ideas .story-water path,.js-ideas .iceberg-below{transition:none;stroke-dashoffset:0;opacity:1;transform:none}
 }
 /* the founders' reasons, as plain statements (owner, 29 Oct: no quotation blocks) */
 .iceberg-reasons{margin:0;padding-left:20px}

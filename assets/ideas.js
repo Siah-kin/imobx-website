@@ -9,4 +9,6 @@
     if (e.isIntersecting) { berg.classList.add('is-in'); io.disconnect(); }
   }), { threshold: 0.3 });
   io.observe(berg);
+  const sw = document.querySelector('.story-water');
+  if (sw) new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { sw.classList.add('is-in'); o.disconnect(); } }), { threshold: 0.6 }).observe(sw);
 })();

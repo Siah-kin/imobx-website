@@ -740,9 +740,10 @@ def build_guide(root, page, tr, esc, language_controls):
               + '<ul>' + ''.join('<li>' + text(label, 'a', f'href="{href}"') + '</li>' for label, href in checkable) + '</ul></div>'
               + '<svg class="iceberg-water" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0,20 C80,4 160,36 250,20 S420,4 500,20 S670,36 750,20 S920,4 1000,20"/></svg>'
               + '<div class="iceberg-below">' + text(('O que nos move', 'What drives us'), 'p', 'class="iceberg-label"')
-              + '<ul class="iceberg-reasons">' + ''.join(text(d, 'li') for d in drives) + '</ul></div>'
+              + '<ul class="iceberg-reasons">' + ''.join(text(d, 'li') for d in drives) + '</ul>'
+              + '<p class="iceberg-onward">' + text(('Leia quem está por trás da IMOBX, abaixo da linha d’água', 'Read who is behind IMOBX, below the waterline'), 'a', 'href="#our-story"') + '</p></div>'
               + '</figure></section>')  # caption removed (owner, 29 Oct: it only described the drawing)
-    ideas += '<section id="our-story">' + text(('Quem está por trás da IMOBX?', 'Who is behind IMOBX?'), 'h2')
+    ideas += '<section id="our-story">' + '<svg class="iceberg-water story-water" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0,20 C80,4 160,36 250,20 S420,4 500,20 S670,36 750,20 S920,4 1000,20"/></svg>' + text(('Quem está por trás da IMOBX?', 'Who is behind IMOBX?'), 'h2')
     # Owner, 3 Nov: introduce both stories as the part of the iceberg below the waterline; Rafael's story goes live as drafted from his own words.
     ideas += text(('Esta é a parte do nosso iceberg abaixo da linha d’água. Achamos certo ser francos sobre os nossos motivos e sobre de onde viemos, para que você possa entender a sinceridade e a dedicação que colocamos neste trabalho há muito tempo.', 'This is the part of our iceberg below the waterline. We think it is right to be upfront about our motives and where we come from, so you can understand the sincerity and devotion we have been putting into this work for a very long time.'))
     ideas += text(('John', 'John'), 'h3')
