@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "cc559dac51e63793720ee403497ecca8295815c1df88a325cb0ec078a77d5cd1"
+      "sha256": "02bd2c088da60c9195e5b089ab783c9a5ba3469caed725c7d056da2bab3683aa"
     },
     {
       "path": "rent-to-own.html",
@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "143730af46c75c29af5e87391a0d629547067924a5ec6573c62df125a6045a8c"
+      "sha256": "e6810d878bb390733ec2bfb6ee8461cb8814b602d9faecf42dcae0a81b1454d0"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "1c681fc9796d4307558dabae28790ae29a9e2baa4bb046143fbd1cc4a06bd555"
+      "sha256": "eaf2a1574ba551ab70e6027e3a40a9f9b4a9bad91eff2fcb141b2a11fcf5939e"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "496340f971788e9dbcb33343a786ae8fa2a1a90544978af8971cff039af53dd0"
+      "sha256": "c26489b5aef7e3b9fe2588ffe3d3bf4457b50399e8bbcf60c35f45675a7d073f"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "9a1c611d2acdaf026a1d91a14d91b42f88c76e8b5f66b403931aebe8c09355f0"
+      "sha256": "57f20b588de7662ddbdd1d34d0d73f4cb4cfdbb641c15ae8ed98f5363654605a"
     },
     {
       "path": "pitchdeck.json",
@@ -78,11 +78,11 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "fd62b584aa638304fa68906f06938f130aedc2dee1c1624fcfeb1f292dd0efe9"
+      "sha256": "b320dd2f80ebf3f331694cdc78558a658a62f5b369be78b230163896d8ea1f3e"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "6ceae9b8ae8ee94b84bfaa680f944af7c0f2a2343c417866fa23ce4dfc9e366a"
+      "sha256": "916c81c262896fe1a8d9050b112929d53fa3363d4c7e85ee643aea7272e0cbdf"
     },
     {
       "path": "roadmap.html",
@@ -94,7 +94,7 @@
     },
     {
       "path": "resources.html",
-      "sha256": "0058c418cfb06d2f55f03158e72438f9fdfc84589cf3a562ec27f05c0ba926d4"
+      "sha256": "c648656dd484d29ed272a559e9f575cf3e572f7f2a20fb7838195246c79ddd9a"
     },
     {
       "path": "model-guide.json",

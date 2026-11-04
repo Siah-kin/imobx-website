@@ -14,7 +14,6 @@
 <div id="iceberg" class="iceberg-window" popover role="dialog" aria-labelledby="iceberg-title">
  <div class="iceberg-head"><h2 id="iceberg-title" data-pt="O que você pode conferir, e o que nos move" data-en="What you can check, and what drives us">O que você pode conferir, e o que nos move</h2>
   <button type="button" class="iceberg-close" popovertarget="iceberg" popovertargetaction="hide" data-aria-pt="Fechar" data-aria-en="Close" aria-label="Fechar">×</button></div>
- <p class="iceberg-intro" data-pt="Um projeto funciona como um iceberg: o que você pode conferir fica acima da água, e as razões que o sustentam ficam abaixo." data-en="A project works like an iceberg: what you can check sits above the water, and the reasons that carry it sit below." data-nl="Een project werkt als een ijsberg: wat je kunt controleren ligt boven water, en de redenen die het dragen liggen eronder.">Um projeto funciona como um iceberg: o que você pode conferir fica acima da água, e as razões que o sustentam ficam abaixo.</p>
  <div class="iceberg">
   <svg class="iceberg-peak" viewBox="0 0 140 70" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><path d="M70 6 100 68H40Z" fill="#EEF4F6" stroke="#193D4E" stroke-width="2"/></svg>
   <div class="iceberg-above"><h3 data-pt="Acima da linha d’água: o que você pode conferir hoje" data-en="Above the waterline: what you can check today">Acima da linha d’água: o que você pode conferir hoje</h3>
