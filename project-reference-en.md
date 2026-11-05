@@ -22,7 +22,7 @@ Because the proposed builder is linked to a founder, other people compare its pr
 
 Sources for the research and figures.
 
-[Rafael’s budget and his account of the lofts](https://siah-kin.github.io/imobx-website/whitepaper.html#3-the-cost-proposal-already-supplied)
+[Rafael’s budget and his account of the lofts](https://imobx.org/whitepaper.html#3-the-cost-proposal-already-supplied)
 
 Rafael’s own figures, from 30 November 2025 and 20 January 2026.
 

@@ -520,7 +520,7 @@ styles.add(ParagraphStyle(name='SpecCell', parent=styles['PaperCell'], fontSize=
 def inline(element):
     value = ET.tostring(element, encoding='unicode', method='html')
     value = re.sub(r'^<[^>]+>|</[^>]+>$', '', value.strip())
-    value = re.sub(r'href="([^"]+)"', lambda m: 'href="' + urljoin('https://siah-kin.github.io/imobx-website/', m[1]) + '"', value)
+    value = re.sub(r'href="([^"]+)"', lambda m: 'href="' + urljoin('https://imobx.org/', m[1]) + '"', value)
     return value.replace('<strong>', '<b>').replace('</strong>', '</b>').replace('<em>', '<i>').replace('</em>', '</i>')
 
 

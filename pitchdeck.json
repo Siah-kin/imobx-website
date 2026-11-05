@@ -15,7 +15,7 @@
       "sources": [
         {
           "label": "IMOBX resources and sources",
-          "url": "https://siah-kin.github.io/imobx-website/resources.html#sources",
+          "url": "https://imobx.org/resources.html#sources",
           "effect": "Lists what exists and what is not decided, with a review date. It is the project's own record."
         }
       ]
@@ -133,7 +133,7 @@
         },
         {
           "label": "IMOBX: the Self-compounding page",
-          "url": "https://siah-kin.github.io/imobx-website/token.html",
+          "url": "https://imobx.org/token.html",
           "effect": "Sets out the token’s fee, where it goes and the four V’s as the project describes them."
         }
       ]
@@ -150,7 +150,7 @@
       "sources": [
         {
           "label": "IMOBX project stages",
-          "url": "https://siah-kin.github.io/imobx-website/roadmap.html",
+          "url": "https://imobx.org/roadmap.html",
           "effect": "Sets out the stages and what must be ready in each. It sets no dates."
         }
       ]

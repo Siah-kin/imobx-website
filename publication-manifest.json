@@ -6,15 +6,15 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "02bd2c088da60c9195e5b089ab783c9a5ba3469caed725c7d056da2bab3683aa"
+      "sha256": "094c47f89e9fcd68e9e5840b9f740763cba0cdde1be7db5c632e31001301a31d"
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "ac94e6312acece99e1e6301ff2a553f0c6224e481eb4c75f341482a962278386"
+      "sha256": "9850b9d1c24f5fba2568b53afe078aebcae860f6ff9a06ce9137e6befdf53706"
     },
     {
       "path": "properties.html",
-      "sha256": "4aa9e34afb04c989bc7f0b8fe0d6967b57dcded836a70dfa828ca3d02a774d47"
+      "sha256": "119927066d0e694131ce80318436668fae6bada5ca5e46bf01251ee5446c98d7"
     },
     {
       "path": "project-reference.json",
@@ -22,19 +22,19 @@
     },
     {
       "path": "project-reference-pt.md",
-      "sha256": "c114df27a4b31054b6a4ab77e19ab018633db7c45f9a56964c482a7095b89c25"
+      "sha256": "a3749f0a2c1ec3bc104bcd7f155e3c367ff952b8b391a4e4283d2d5d336fa6cd"
     },
     {
       "path": "project-reference-en.md",
-      "sha256": "b2d7f49266ac8b46e5761eab11aecbaa6a21d39f9f4c728b3f7765223aba40d2"
+      "sha256": "3532bf3fff9cccc80d4da5bce3e6289482fd8bdcbbfe160c6805922fa31a186c"
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "e6810d878bb390733ec2bfb6ee8461cb8814b602d9faecf42dcae0a81b1454d0"
+      "sha256": "29d7dfc42c1794bd4a4f293a20e06ce0f8e8733bea2f8a2dd23b5d09bdf1076a"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "eaf2a1574ba551ab70e6027e3a40a9f9b4a9bad91eff2fcb141b2a11fcf5939e"
+      "sha256": "bad2dc782041ccebd0ee06ea636828301f6fc94fbee902932a307a07fb5a84c2"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "c26489b5aef7e3b9fe2588ffe3d3bf4457b50399e8bbcf60c35f45675a7d073f"
+      "sha256": "117c9a19103a0203891cfb7636fc807f6c4c1ae465f786248b658eff98850245"
     },
     {
       "path": "devsheet.md",
@@ -62,15 +62,15 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "57f20b588de7662ddbdd1d34d0d73f4cb4cfdbb641c15ae8ed98f5363654605a"
+      "sha256": "73ac94aec2d76960014c7bb5811189927ae121b0d4ef308e6d76723ad428a201"
     },
     {
       "path": "pitchdeck.json",
-      "sha256": "26e6843caadfe36f987d3fdc8f32313a97ad7e2a5b0462f534af8eea20f2f8d3"
+      "sha256": "ca5951c2667b9bc862434f1c578733b1c8d15307c62a1a302cb2eda5b437e9b9"
     },
     {
       "path": "pitchdeck.md",
-      "sha256": "e96d616daac42635cd009b4998176848d0d78229543f0ef556c01a2fecdb9be4"
+      "sha256": "3522a2b9a645a43cba011184dd8ab400fd2c45c375e7d7964683021eae19240e"
     },
     {
       "path": "pitchdeck.html",
@@ -78,23 +78,23 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "b320dd2f80ebf3f331694cdc78558a658a62f5b369be78b230163896d8ea1f3e"
+      "sha256": "a7969eed443cd10e3ae390f83d2cf330f1185e43c52d4a9eb83e5e988c4183a9"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "916c81c262896fe1a8d9050b112929d53fa3363d4c7e85ee643aea7272e0cbdf"
+      "sha256": "6fa62a92aec3589df526b51de0d469225c9dcf1c21ff3b842538ecb5d3e11fb0"
     },
     {
       "path": "roadmap.html",
-      "sha256": "bcb057dc1029193034765e74f83731b4509a27047936d323bbe080d428662322"
+      "sha256": "9b93bfe679a74d2d9fecf42c3a824b64ae9e52995d634b65049e4dd52d786e4a"
     },
     {
       "path": "transparency.html",
-      "sha256": "e27238e37589430ec052e032f4c94f988a292a336c956020e784d9c2b026bdb6"
+      "sha256": "3001250b2450686ee2daf9b5de555f72427738b24051a8343fbb61505d367836"
     },
     {
       "path": "resources.html",
-      "sha256": "c648656dd484d29ed272a559e9f575cf3e572f7f2a20fb7838195246c79ddd9a"
+      "sha256": "3cda58d5a42103c3b1768e15066093cba33b6f461113df4b9b8da12a89738f6c"
     },
     {
       "path": "model-guide.json",
@@ -102,7 +102,7 @@
     },
     {
       "path": "contact.html",
-      "sha256": "fbe2db6bfebd40a1b6ca7a11080bd5821325e888c1e51bf672a4007bfe07bb94"
+      "sha256": "04e309b4112991c54cc8c2d50ba66c53d00c25932fc031decc98508f55cb888f"
     },
     {
       "path": "contact-routes.json",

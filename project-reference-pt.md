@@ -22,7 +22,7 @@ Como a construtora proposta tem ligação com um fundador, outras pessoas compar
 
 Fontes das pesquisas e dos números.
 
-[O orçamento de Rafael e o relato dele sobre os lofts](https://siah-kin.github.io/imobx-website/whitepaper.html#3-the-cost-proposal-already-supplied)
+[O orçamento de Rafael e o relato dele sobre os lofts](https://imobx.org/whitepaper.html#3-the-cost-proposal-already-supplied)
 
 Números do próprio Rafael, de 30/11/2025 e 20/01/2026.
 

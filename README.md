@@ -2,7 +2,7 @@
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro, with shared decisions and a possible financial token to help fund construction and growth. The legal form, property arrangements and investment rights remain under study.
 
-- [Project website](https://siah-kin.github.io/imobx-website/)
+- [Project website](https://imobx.org/)
 - [Renting and buying the home](rent-to-own.html)
 - [Project paper](whitepaper.html)
 - [Pilot and building guide](devsheet.html)

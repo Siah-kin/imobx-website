@@ -297,8 +297,8 @@ MAIN = '<main id="main" class="band-page home-page">' + opening + method + ways 
 
 TITLE_EN, TITLE_PT, TITLE_NL = 'IMOBX | Proposed Rio housing pilot', 'IMOBX | Proposta de piloto no Rio', 'IMOBX | Voorgestelde woonpilot in Rio'
 _dutch[TITLE_EN] = TITLE_NL
-HEAD = ('<link rel="canonical" href="https://siah-kin.github.io/imobx-website/">'
-        '<meta property="og:image" content="https://siah-kin.github.io/imobx-website/assets/homepage.jpg"><meta property="og:type" content="website">'
+HEAD = ('<link rel="canonical" href="https://imobx.org/">'
+        '<meta property="og:image" content="https://imobx.org/assets/homepage.jpg"><meta property="og:type" content="website">'
         '<meta property="og:title" content="IMOBX | Proposta de piloto no Rio">'
         '<meta property="og:description" content="Um aluguel que termina com a casa no seu nome. Nas grandes cidades do Brasil, o aluguel de contrato novo subiu quase o dobro da inflação no último ano, e nem um centavo dele vira seu. Queremos mudar isso, começando com um piloto pequeno no Rio.">')
 DESCRIPTION = 'Proposta de piloto de moradia com opção de compra no Rio, organizado como cooperativa de bairro. Nada está à venda; a cooperativa ainda não está constituída.'

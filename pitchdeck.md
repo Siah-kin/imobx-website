@@ -20,7 +20,7 @@ IMOBX is preparing a first rent-to-own housing project in Rio.
 
 
 
-Source: [IMOBX resources and sources](https://siah-kin.github.io/imobx-website/resources.html#sources). Lists what exists and what is not decided, with a review date. It is the project's own record.
+Source: [IMOBX resources and sources](https://imobx.org/resources.html#sources). Lists what exists and what is not decided, with a review date. It is the project's own record.
 
 **Presenter notes:** Rafael brings construction and local experience; John handles community and digital work. Their roles, the legal organization and the right to use each property need written agreements. This draft explains the plan and asks for partners; it does not offer an investment.
 
@@ -176,7 +176,7 @@ Holding the token is optional, and families join IMOBX as members. It is a plann
 
 Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). Says Brazil's regulator looks at what an investment actually gives, not its name.
 
-Source: [IMOBX: the Self-compounding page](https://siah-kin.github.io/imobx-website/token.html). Sets out the token’s fee, where it goes and the four V’s as the project describes them.
+Source: [IMOBX: the Self-compounding page](https://imobx.org/token.html). Sets out the token’s fee, where it goes and the four V’s as the project describes them.
 
 **Presenter notes:** The first house is funded outside the token: once IMOBX’s legal entity is registered, it will run a crowdfunding campaign in reais and apply for grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. The fee would add to the houses budget over time. Buyers’ payments would go into the trading pool, so none of them would reach IMOBX. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of the 35% would go to new houses; if the token opens with a sale on Arctide’s bonding curve, that part would go to Arctide. Volume: the fees would give the community an income of its own. Verify: anyone could check where each fee went and who approved it. Vote: on the token’s own rules, weight would come mainly from work others have confirmed; members’ decisions stay one member, one vote. Vow: the commitments no vote can break, starting with each family’s housing agreement. Benefits for holders are chosen later from what IMOBX can actually supply. We start building a house only when its funding is secured.
 
@@ -196,7 +196,7 @@ The roadmap names proposed roles and conditions for proceeding.
 
 
 
-Source: [IMOBX project stages](https://siah-kin.github.io/imobx-website/roadmap.html). Sets out the stages and what must be ready in each. It sets no dates.
+Source: [IMOBX project stages](https://imobx.org/roadmap.html). Sets out the stages and what must be ready in each. It sets no dates.
 
 **Presenter notes:** The six stages are legal structure and property; resident participation; first houses; payment records people can check; funding and account review; more houses and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
 

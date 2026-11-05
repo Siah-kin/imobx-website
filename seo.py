@@ -8,7 +8,7 @@ import html
 import re
 from pathlib import Path
 
-LIVE = 'https://siah-kin.github.io/imobx-website/'
+LIVE = 'https://imobx.org/'
 IMAGE = LIVE + 'assets/homepage.jpg'
 
 # file: (title PT, title EN, description PT)

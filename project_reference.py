@@ -94,7 +94,7 @@ def build_reference(root, page, tr, esc):
             exports[i].append(f'[{source["label"][i]}]({source["url"]})\n\n{source["scope"][i]}')
         # Editable exports retain working links when shared away from the site.
         source = '\n\n'.join(exports[i]) + '\n'
-        source = re.sub(r'\]\(([^)]+)\)', lambda m: '](' + urljoin('https://siah-kin.github.io/imobx-website/', m[1]) + ')', source)
+        source = re.sub(r'\]\(([^)]+)\)', lambda m: '](' + urljoin('https://imobx.org/', m[1]) + ')', source)
         (root / f'project-reference-{lang}.md').write_text(source)
 
 
