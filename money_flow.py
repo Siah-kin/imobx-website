@@ -190,7 +190,7 @@ LEDGER_TITLES = [
     ('Aprovado dentro do limite', 'Approved within the limit'),
     ('Conferido por outra pessoa', 'Checked by someone else'),
     ('Pago, e no registro público', 'Paid, and on the public ledger'),
-    ('Segundo olhar? Revisão', 'Second look? A review'),
+    ('Uma revisão, se você quiser', 'A review, if you want one'),
 ]
 LEDGER_PRIVATE = ('Abaixo da linha fica o que é privado: seu contrato, seus pagamentos e o que diz a sua reclamação.',
                   'Below the line stays what is private: your contract, your payments and what your complaint says.')

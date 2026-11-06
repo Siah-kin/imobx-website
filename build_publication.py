@@ -93,7 +93,7 @@ MENU = [
         ('blockchain.html', 'layers', 'Privacidade e acesso', 'Privacy and access', 'What changes for my family, and what stays private?'),
         ('blockchain.html', 'request', 'Pedidos e reclamações', 'Requests and complaints',
          'What happens when I ask for a repair or make a complaint?'),
-        ('blockchain.html', 'records', 'Quem vê o quê', 'Who sees what', 'Who sees what?'),  # owner, 28 Oct: 'records' is too abstract
+        ('blockchain.html', 'records', 'Quem pode ler o quê', 'Who can read what', 'Who can read my information, and who can read IMOBX’s payments?'),  # owner, 28 Oct: 'records' is too abstract
     ]),
     # Owner, 3 Nov: the token page is a top-level item, visible from every page, between the ledger and governance
     # (the three pillars: Distributed ledger, Self-compounding, Local governance).
@@ -144,10 +144,10 @@ HEADING_INTROS = {
                                           'Anyone who funds or lives in an IMOBX neighbourhood will be able to follow it in our reports. Each one will show:'),
     },
     'blockchain.html': {
-        'Who sees what?': ('Seu contrato e seus pagamentos ficam entre você e a IMOBX; o que a própria IMOBX gasta fica aberto a todos.',
-                           'Your contract and your payments stay between you and IMOBX; what IMOBX itself spends is open to everyone.'),
-        'How much would run on the blockchain?': ('Podemos começar com contas bancárias e passar mais para o registro à medida que cada passo se provar.',
-                                                  'We can start with bank accounts and move more onto the ledger as each step proves itself.'),
+        'Who can read my information, and who can read IMOBX’s payments?': ('Seus vizinhos podem acompanhar o seu pedido de reparo. Uma reclamação só é lida por você e por quem a revisa. Qualquer pessoa pode ler o que a própria IMOBX paga.',
+                           'Your neighbours can follow your repair request. A complaint is read only by you and the people who review it. Anyone can read what IMOBX itself pays.'),
+        'How much would run on the blockchain?': ('Podemos começar com contas bancárias e passar mais para o registro assim que cada passo funcionar.',
+                                                  'We can start with bank accounts and move more onto the ledger once each step works.'),
     },
     'governance.html': {
         'What are we deciding now?': ('Antes de a primeira família se mudar, estas perguntas precisam de resposta. Você pode ajudar a decidir no grupo.',
@@ -283,7 +283,7 @@ RESOURCE_CATALOG = [
      'archive': True, 'links': [('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
     {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': VERSION,
      'shelf_pt': 'Apresentação para parceiros', 'shelf_en': 'Presentation for partners',
-     'shelf_description_pt': None, 'shelf_description_en': None,
+     'shelf_description_pt': 'O projeto em resumo, para parceiros e financiadores.', 'shelf_description_en': 'The project in short, for partners and funders.',
      'description_pt': 'Apresentação para parceiros, com notas para quem apresenta.',
      'description_en': 'Partner presentation with presenter notes.',
      'meta_pt': f'12 slides com notas para quem apresenta · inglês · rascunho · {DATE_PT}',

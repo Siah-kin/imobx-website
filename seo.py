@@ -22,7 +22,7 @@ PAGES = {
     'roadmap.html': ('Onde estamos e o que vem depois · IMOBX Rio', 'Where we are and what comes next · IMOBX Rio',
                      'A etapa atual do projeto, as próximas três etapas e o que ainda não está decidido.'),
     'blockchain.html': ('Como funcionaria um bairro na blockchain · IMOBX Rio', 'How would a neighbourhood work on a blockchain? · IMOBX Rio',
-                        'Pagamentos e aprovações registrados para os moradores conferirem; dados pessoais e contratos ficam privados. Ainda não está em funcionamento.'),
+                        'Pagamentos e aprovações registrados para os moradores conferirem; dados pessoais e contratos ficam privados. Em preparação.'),
     'governance.html': ('Quem decide na IMOBX, e quando você tem voz · IMOBX Rio', 'Who decides in IMOBX, and when you get a say · IMOBX Rio',
                         'Hoje os fundadores decidem. No plano, quem tem o token vota as regras do token, e os membros decidem um membro, um voto.'),
     'properties.html': ('Lofts e terreno: desenhos e fotos · IMOBX Rio', 'Lofts and site: drawings and photos · IMOBX Rio',

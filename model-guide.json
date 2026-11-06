@@ -2338,8 +2338,8 @@
       "How would a neighbourhood work on a blockchain?"
     ],
     "lead": [
-      "Para a sua família, o dia a dia continua igual: você paga em reais, como paga o aluguel hoje. Um pedido de reparo ou uma reclamação segue um caminho claro, que você acompanha, e seu contrato e seus dados pessoais continuam privados. O primeiro projeto vai testar isso.",
-      "For your family, daily life stays the same: you pay in reais, as you pay rent today. A repair request or a complaint follows a clear path you can track, and your contract and personal data stay private. The first project will test this."
+      "Para a sua família, o dia a dia continua igual: você paga em reais, como paga o aluguel hoje, e acompanha cada pedido de reparo ou reclamação.",
+      "For your family, daily life stays the same: you pay in reais, as you pay rent today, and you can follow every repair request or complaint."
     ],
     "key": [
       "Quando vizinhos juntam recursos para construir casas, a primeira pergunta é sempre: para onde vão os recursos? A IMOBX quer que a resposta fique aberta a todos. Cada pagamento do projeto, e quem o aprovou, ficaria numa blockchain pública, também chamada de registro distribuído, onde qualquer morador ou financiador pode conferir.",
@@ -2362,8 +2362,8 @@
       ],
       [
         [
-          "Quem vê o quê",
-          "Who sees what"
+          "Quem pode ler o quê",
+          "Who can read what"
         ],
         "records"
       ],
@@ -2387,8 +2387,8 @@
       "What changes for my family, and what stays private?"
     ],
     "layers_answer": [
-      "Você paga em reais, do jeito que paga o aluguel hoje. Seu contrato, seus pagamentos, seus dados pessoais e o que você escreve numa reclamação continuam privados. O que fica público são os recursos que a própria IMOBX desembolsa.",
-      "You pay in reais, the way you pay rent today. Your contract, your payments, your personal data and anything you write in a complaint stay private. What becomes public is the funding IMOBX itself pays out."
+      "Seu contrato, seus pagamentos, seus dados pessoais e o que você escreve numa reclamação continuam privados. O que fica público são os recursos que a própria IMOBX desembolsa.",
+      "Your contract, your payments, your personal data and anything you write in a complaint stay private. What becomes public is the funding IMOBX itself pays out."
     ],
     "layers": [
       [
@@ -2477,8 +2477,8 @@
       "Who decides who can spend?"
     ],
     "records_title": [
-      "Quem vê o quê?",
-      "Who sees what?"
+      "Quem pode ler as minhas informações, e quem pode ler os pagamentos da IMOBX?",
+      "Who can read my information, and who can read IMOBX’s payments?"
     ],
     "records_head": [
       [
@@ -2613,8 +2613,8 @@
       "How much would run on the blockchain?"
     ],
     "open_runs_title": [
-      "Quanto passaria pela blockchain?",
-      "How much would go through the blockchain?"
+      "Quais são as três opções?",
+      "What are the three options?"
     ],
     "open_runs": [
       [
@@ -2631,8 +2631,8 @@
       ]
     ],
     "same_title": [
-      "Seja qual for a decisão",
-      "Whatever is decided"
+      "O que fica igual nas três opções?",
+      "What stays fixed in all three options?"
     ],
     "same": [
       [
@@ -2679,8 +2679,8 @@
       "Take part"
     ],
     "glossary_title": [
-      "Palavras usadas nesta página",
-      "Words used on this page"
+      "O que essas palavras significam?",
+      "What do these words mean?"
     ],
     "glossary": [
       [
@@ -2779,8 +2779,8 @@
       ]
     ],
     "sources_title": [
-      "Fontes independentes sobre as regras e as ferramentas",
-      "Independent sources on the rules and the tools"
+      "Onde posso conferir as regras?",
+      "Where can I check the rules?"
     ],
     "token_purpose": [
       "Quando o token já puder ser usado, ele será lançado num mercado público na blockchain Arc, aberto a qualquer pessoa desde o primeiro dia.",
