@@ -238,3 +238,89 @@ initImageViewer();
     if (openToggle && openToggle.offsetParent !== null) openToggle.focus();
   });
 })();
+
+// Option B: the arrow opens sections taken from the destination page itself.
+(function () {
+  var band = document.querySelector('.option-b .pillar-band');
+  if (!band) return;
+  var toggles = Array.from(band.querySelectorAll('.pillar-toggle'));
+  function close(except) {
+    toggles.forEach(function (button) {
+      if (button === except) return;
+      button.setAttribute('aria-expanded', 'false');
+      document.getElementById(button.getAttribute('aria-controls')).hidden = true;
+    });
+  }
+  function populate(panel) {
+    if (panel.dataset.loaded) return Promise.resolve();
+    return fetch(panel.dataset.source).then(function (response) {
+      if (!response.ok) throw new Error('Cannot load page sections');
+      return response.text();
+    }).then(function (text) {
+      var doc = new DOMParser().parseFromString(text, 'text/html');
+      // Short navigation labels point to the same sections as the full page headings.
+      var shortLabels = {
+        'blockchain.html': {
+          layers: ['Privacidade e acesso', 'Privacy and access', 'Privacy en toegang'],
+          request: ['Reparos e reclamações', 'Repairs and complaints', 'Reparaties en klachten'],
+          records: ['Quem pode ler o quê', 'Who can read what', 'Wie wat kan lezen'],
+          token: ['Token da IMOBX', 'IMOBX token', 'IMOBX-token'],
+          open: ['Opções para a blockchain', 'Blockchain options', 'Blockchainopties']
+        },
+        'token.html': {
+          use: ['Para que serve', 'Purpose', 'Waarvoor dient het'],
+          meaning: ['Como funciona', 'How it works', 'Hoe het werkt'],
+          fee: ['Destino da taxa', 'Where fees go', 'Waar vergoedingen naartoe gaan'],
+          sale: ['O que o diferencia', 'How it differs', 'Wat het onderscheidt'],
+          laws: ['As quatro regras', 'The four rules', 'De vier regels'],
+          notice: ['Aviso importante', 'Important notice', 'Belangrijke mededeling']
+        },
+        'governance.html': {
+          now: ['Quem decide agora', 'Who decides now', 'Wie nu beslist'],
+          deciding: ['Decisões em aberto', 'Open decisions', 'Open besluiten'],
+          'token-rules': ['Decisões sobre o token', 'Token decisions', 'Besluiten over de token'],
+          residents: ['Decisões dos moradores', 'Residents’ decisions', 'Besluiten van bewoners'],
+          recorded: ['Registro das decisões', 'Decision records', 'Vastgelegde besluiten']
+        }
+      };
+      var list = document.createElement('ul');
+      doc.querySelectorAll('main section[id] > h2').forEach(function (heading) {
+        var id = heading.parentElement.id;
+        if (!id || !heading.dataset.pt || !heading.dataset.en) return;
+        var li = document.createElement('li'), link = document.createElement('a');
+        link.href = panel.dataset.source + '#' + id;
+        var labels = (shortLabels[panel.dataset.source] || {})[id];
+        ['pt', 'en', 'nl'].forEach(function (lang, index) { link.dataset[lang] = labels ? labels[index] : (heading.dataset[lang] || heading.dataset.en); });
+        link.textContent = link.dataset[(document.documentElement.lang || 'pt').slice(0, 2)] || link.dataset.en;
+        li.appendChild(link); list.appendChild(li);
+      });
+      panel.replaceChildren(list); panel.dataset.loaded = 'true';
+    });
+  }
+  function open(button) {
+    close(button);
+    var panel = document.getElementById(button.getAttribute('aria-controls'));
+    populate(panel).then(function () {
+      if (button.getAttribute('aria-expanded') === 'true') panel.hidden = false;
+    }).catch(function () { button.setAttribute('aria-expanded', 'false'); });
+    button.setAttribute('aria-expanded', 'true');
+  }
+  toggles.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.stopPropagation();
+      if (event.detail && Date.now() - (Number(button.dataset.hoverAt) || 0) < 500) return;
+      if (button.getAttribute('aria-expanded') === 'true') close(); else open(button);
+    });
+    button.addEventListener('mouseenter', function () {
+      if (matchMedia('(hover: hover) and (pointer: fine)').matches) { button.dataset.hoverAt = String(Date.now()); open(button); }
+    });
+  });
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('.pillar-band') && !event.target.closest('.pillar-panel')) close();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    var active = toggles.find(function (button) { return button.getAttribute('aria-expanded') === 'true'; });
+    if (active) { event.stopImmediatePropagation(); close(); active.focus(); }
+  }, true);
+})();

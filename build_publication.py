@@ -204,7 +204,7 @@ def site_header(lang='pt-BR', current=''):
     portuguese = lang.startswith('pt')
     section = MENU_PARENT.get(current, current)  # the lofts page highlights Project development
     links = ''
-    for target, pt, en, entries in MENU:
+    for target, pt, en, entries in [item for item in MENU if item[0] in ('rent-to-own.html', 'transparency.html', 'roadmap.html', 'resources.html')]:
         if not entries:
             active = ' aria-current="page"' if target == current else ''
             links += (f'<div class="nav-item"><a href="{target}" data-pt="{esc(pt)}" data-en="{esc(en)}"{active}>'
@@ -222,21 +222,38 @@ def site_header(lang='pt-BR', current=''):
                   f'aria-controls="{menu_id}"><span data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt if portuguese else en)}</span>'
                   f'<span class="sub-arrow" aria-hidden="true">▾</span></button>'
                   f'<ul class="sub" id="{menu_id}" hidden>{sub}</ul></div>')
+    pillar_data = [
+        ('blockchain.html', 'Registro distribuído', 'Distributed ledger', 'Quem pode ler o quê', 'Who can read what', '<rect x="4" y="4" width="16" height="16"/><path d="M4 9h16M4 14h16M9 4v16"/>'),
+        ('token.html', 'Self-compounding', 'Self-compounding', 'Para onde vai a taxa', 'Where the fee goes', '<path d="M12 20V10M12 10c0-4 3-6 7-6 0 4-3 6-7 6zM12 13c0-3-2-5-6-5 0 3 2 5 6 5z"/>'),
+        ('governance.html', 'Governança local', 'Local governance', 'Quem decide agora', 'Who decides now', '<circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 19c1-3 3-5 5-5s4 2 5 5M11 19c1-3 3-5 5-5s4 2 5 5"/>'),
+    ]
+    pillars = ''
+    for target, pt, en, desc_pt, desc_en, icon in pillar_data:
+        current_attr = ' aria-current="page"' if target == current else ''
+        panel_id = 'pillar-' + target.split('.')[0]
+        pillars += (f'<div class="pillar-item{" is-current" if target == current else ""}">'
+                    f'<a class="pillar-link" href="{target}"{current_attr}><svg viewBox="0 0 24 24" aria-hidden="true">{icon}</svg>'
+                    f'<span><strong data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt)}</strong>'
+                    f'<small data-pt="{esc(desc_pt)}" data-en="{esc(desc_en)}">{esc(desc_pt)}</small></span></a>'
+                    f'<button type="button" class="pillar-toggle" aria-expanded="false" aria-controls="{panel_id}" '
+                    f'aria-label="{esc(pt)}" data-aria-pt="{esc(pt)}" data-aria-en="{esc(en)}"><span aria-hidden="true">▾</span></button></div>')
+    panels = ''.join(f'<div class="pillar-panel" id="pillar-{target.split(".")[0]}" data-source="{target}" hidden></div>' for target, *_ in pillar_data)
     here = ' aria-current="page"' if current == 'contact.html' else ''
-    links += (f'<div class="nav-item"><a class="nav-action" href="contact.html" data-pt="Participar" data-en="Take part"{here}>'
-              f'{"Participar" if portuguese else "Take part"}</a></div>')
-    return ('<header class="top site-header"><nav class="wrap site-nav" data-site-nav '
+    action = (f'<a class="nav-action option-b-action" href="contact.html" data-pt="Participar" data-en="Take part"{here}>'
+              f'{"Participar" if portuguese else "Take part"}</a>')
+    return ('<header class="top site-header option-b"><nav class="wrap site-nav" data-site-nav '
             'aria-label="Principal" data-aria-pt="Principal" data-aria-en="Main">'
             '<a class="wordmark" href="index.html" aria-label="IMOBX"><img class="brand-logo" '
             'src="assets/imobx-logo-light.png" width="94" height="94" alt="IMOBX"></a>'
             '<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-links" '
             'data-pt="Menu" data-en="Menu">Menu</button>'
-            '<div class="site-links" id="site-links">' + links + '</div>'
-            '<div class="lang" role="group" aria-label="Idioma / Language / Taal">'
+            '<div class="site-links" id="site-links"><div class="housing-links">' + links + '</div>'
+            '<div class="pillar-band">' + pillars + '</div><div class="pillar-panels">' + panels + '</div><div class="option-b-mobile-action">' + action + '</div></div>'
+            '<div class="option-b-right"><div class="lang" role="group" aria-label="Idioma / Language / Taal">'
             f'<button type="button" data-language="pt" aria-pressed="{str(portuguese).lower()}" aria-label="Português brasileiro">PT</button>'
             f'<button type="button" data-language="en" aria-pressed="{str(not portuguese).lower()}" aria-label="English">EN</button>'
             '<button type="button" data-language="nl" aria-pressed="false" aria-label="Nederlands">NL</button>'
-            '</div></nav></header>')
+            '</div>' + action + '</div></nav></header>')
 
 
 SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap"><p data-pt="A IMOBX foi criada no Rio de Janeiro pelos seus dois fundadores: Rafael Britto, construtor, e John, que cuida da comunicação e das ferramentas digitais." data-en="IMOBX was started in Rio de Janeiro by its two founders: Rafael Britto, a builder, and John, who looks after communication and digital tools.">A IMOBX foi criada no Rio de Janeiro pelos seus dois fundadores: Rafael Britto, construtor, e John, que cuida da comunicação e das ferramentas digitais.</p><p><a href="transparency.html" data-pt="Custos e recursos" data-en="Costs and funding">Custos e recursos</a> <a href="resources.html" data-pt="Documentos para baixar" data-en="Documents to download">Documentos para baixar</a> <a href="contact.html" data-pt="Participar" data-en="Take part">Participar</a></p></div></footer>'
@@ -252,7 +269,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
                'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
                'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html', 'IMOBX | Distributed ledger': 'blockchain.html', 'IMOBX | Project reference': 'reference.html',
                'IMOBX | Renting and buying a home': 'rent-to-own.html',
-               'IMOBX | Take part': 'contact.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | Ideas behind IMOBX': 'ideas.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
+               'IMOBX | Take part': 'contact.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | Self-compounding': 'token.html', 'IMOBX | Ideas behind IMOBX': 'ideas.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
     document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{esc(description)}">
@@ -387,7 +404,7 @@ _home_css = 'assets/home-b.css?v=' + _hashlib.sha256((ROOT / 'assets' / 'home-b.
 
 for name in ['index.html', 'properties.html']:
     target = ROOT / name
-    source, count = re.subn(r'<header class="top(?: site-header)?">.*?</header>',
+    source, count = re.subn(r'<header class="top(?: site-header)?(?: option-b)?">.*?</header>',
                            lambda _: site_header('pt-BR', name),
                            target.read_text(), count=1, flags=re.S)
     if count != 1:

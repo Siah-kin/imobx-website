@@ -477,3 +477,99 @@ main>.archive-section:first-child{border-top:0}
 @media (min-width:1001px) and (max-width:1320px){html[lang="pt-BR"] .site-links{gap:0 8px;font-size:13px}}
 /* Portuguese labels are longest: between 1001 and 1120px the menu takes two even rows, as on tablets. */
 @media (min-width:1001px) and (max-width:1120px){html[lang="pt-BR"] .site-links{gap:4px 22px;font-size:14px}}
+
+/* Local prototype: Option B. Uses the existing IMOBX palette. */
+.option-b .site-nav,.option-b .site-nav:where(html[lang]){display:grid;grid-template-columns:72px minmax(0,1fr) auto;align-items:center;gap:0 12px;padding-block:8px}
+.option-b .site-nav .brand-logo{width:64px;height:64px}
+.option-b .site-links{display:contents}
+.option-b .housing-links{display:flex;align-items:center;justify-content:space-evenly;gap:4px;white-space:nowrap;font-size:clamp(12px,1vw,15px)}
+.option-b .housing-links .sub-toggle{min-width:0;padding:0 5px}
+.option-b .housing-links .nav-item{flex:none}
+.option-b .option-b-right{display:flex;gap:8px;align-items:center;white-space:nowrap}
+.option-b .option-b-action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 12px;background:#A84B00;color:#fff;font-weight:700;text-decoration:none;font-size:14px}
+.option-b .option-b-action:hover,.option-b .option-b-action:focus-visible{background:#7F3A00}
+.option-b .pillar-band{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;background:var(--pale);padding:8px}
+.option-b .pillar-item{display:flex;min-width:0;border:1px solid #276578;background:#fff}
+.option-b .pillar-item.is-current{background:#276578;color:#fff}
+.option-b .pillar-link{display:flex;flex:1;min-width:0;min-height:64px;align-items:center;gap:10px;padding:7px 10px;text-decoration:none;color:inherit}
+.option-b .pillar-link:hover,.option-b .pillar-toggle:hover{background:var(--pale);color:var(--ink)}
+.option-b .pillar-link svg{width:22px;height:22px;flex:none;fill:none;stroke:#A84B00;stroke-width:1.6}
+.option-b .is-current .pillar-link svg{stroke:#fff}
+.option-b .pillar-link strong,.option-b .pillar-link small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.option-b .pillar-link strong{font-size:15px;line-height:1.3}.option-b .pillar-link small{font-size:13px;line-height:1.4}
+.option-b .pillar-toggle{width:44px;min-width:44px;min-height:44px;border:0;border-left:1px solid #276578;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.option-b .is-current .pillar-toggle{border-color:#fff}.option-b .pillar-toggle[aria-expanded="true"] span{display:inline-block;transform:rotate(180deg)}
+.option-b .pillar-panels{grid-column:1/-1}.option-b .pillar-panel{padding:8px 16px;border:1px solid #276578;background:#fff;animation:option-b-fade .15s ease-out}
+.option-b .pillar-panel[hidden]{display:none}.option-b .pillar-panel ul{display:flex;flex-wrap:wrap;gap:0 18px;margin:0;padding:0;list-style:none}
+.option-b .pillar-panel a{display:flex;align-items:center;min-height:44px;color:#A84B00;font-size:14px}
+.option-b :is(a,button):focus-visible{outline:3px solid #A84B00;outline-offset:2px;position:relative;z-index:4}
+@keyframes option-b-fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.option-b .pillar-panel{animation:none}}
+@media(max-width:1000px){
+ .option-b .site-nav,.option-b .site-nav:where(html[lang]){grid-template-columns:1fr auto auto;gap:4px 10px;padding-block:8px}
+ .option-b .site-nav .wordmark{grid-column:1;grid-row:1}.option-b .site-nav .menu-toggle{grid-column:2;grid-row:1}
+ .option-b .site-nav .option-b-right{grid-column:3;grid-row:1}.option-b .option-b-action{display:none}
+ .js-menu .option-b .site-nav .site-links{display:none}
+ .js-menu .option-b .site-nav.menu-open .site-links{display:flex;flex-direction:column;align-items:stretch;grid-column:1/-1;grid-row:2;padding:8px 0}
+ .option-b .housing-links{display:flex;flex-direction:column;align-items:stretch;font-size:15px;white-space:normal}
+ .js-menu .option-b .site-nav.menu-open .housing-links .nav-item{width:100%}
+ .option-b .pillar-band{display:flex;flex-direction:column;gap:8px;width:100%;padding:8px;margin-top:10px}
+ .option-b .pillar-link{min-height:64px}.option-b .pillar-panels{width:100%}
+ .option-b .pillar-panel ul{display:block}.option-b .pillar-panel a{white-space:normal}
+}
+@media(max-width:400px){.option-b .site-nav .brand-logo{width:48px;height:48px}.option-b .lang button{min-width:40px}.option-b .lang{gap:0}}
+.option-b .option-b-mobile-action{display:none}
+@media(max-width:1000px){.option-b .option-b-mobile-action{display:block;margin-top:10px}.option-b .option-b-mobile-action .option-b-action{display:inline-flex;width:auto;padding:0 16px;color:#fff}}
+@media(min-width:1001px){
+ .option-b .site-nav .wordmark{grid-column:1;grid-row:1}
+ .option-b .housing-links{grid-column:2;grid-row:1}
+ .option-b .option-b-right{grid-column:3;grid-row:1}
+ .option-b .pillar-band{grid-row:2}.option-b .pillar-panels{grid-row:3}
+}
+@media(max-width:1000px){
+ .js-menu .option-b .site-nav.menu-open .site-links .pillar-link{display:flex;width:auto;flex:1;padding:7px 10px;border-top:0;text-align:left}
+ .js-menu .option-b .site-nav.menu-open .site-links .pillar-panel a{display:flex;padding:8px 0;border-top:0}
+ .option-b .lang button{min-width:44px}
+}
+@media(min-width:1001px){html[lang] .option-b .site-nav{grid-template-columns:72px minmax(0,1fr) auto;gap:0 12px;padding-block:8px}}
+.option-b :is(a,button):focus-visible{outline:3px solid var(--ink);outline-offset:2px;box-shadow:0 0 0 2px #fff}
+
+/* Teal navigation: light treatment of the existing logo. */
+html .option-b.site-header{position:relative}
+html .option-b.site-header::before{content:"";position:absolute;top:0;left:0;right:0;height:72px;background:#276578}
+html .option-b .site-nav{position:relative}
+html .option-b .wordmark{background:#276578}
+html .option-b .brand-logo{filter:grayscale(1) invert(1) brightness(4);mix-blend-mode:screen}
+html .option-b .housing-links .sub-toggle{background:#276578;color:#fff;border:0;padding:0 9px;transition:background-color .15s ease}
+html .option-b .housing-links .sub-toggle:hover{background:#A84B00;color:#fff}
+html .option-b .lang{background:#276578;border:1px solid #fff}
+html .option-b .lang button{background:#276578;color:#fff;border:0}
+html .option-b .lang button[aria-pressed="true"]{background:#fff;color:#193d4e}
+html .option-b .lang button:hover:not([aria-pressed="true"]){background:#A84B00;color:#fff}
+html .option-b .pillar-band{background:#fff;gap:10px;padding:4px 0 8px}
+html .option-b .pillar-item{border-color:var(--line)}
+html .option-b .pillar-item.is-current{background:var(--pale);color:var(--ink);border-color:#276578}
+html .option-b .is-current .pillar-link svg{stroke:#A84B00}
+html .option-b .pillar-toggle,html .option-b .is-current .pillar-toggle{border-left-color:var(--line)}
+html .option-b .pillar-link{min-height:48px;padding:4px 10px;gap:8px}
+html .option-b .pillar-link svg{width:18px;height:18px}
+html .option-b .pillar-link strong{font-size:14px;font-weight:600}
+html .option-b .pillar-link small{font-size:13px}
+html .option-b .pillar-panel ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 20px}
+html .option-b .pillar-panel a{white-space:normal}
+html .option-b :is(a,button):focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #193d4e}
+@media(min-width:1001px){html .option-b .housing-links{font-size:clamp(13px,1.1vw,15px);font-weight:600}}
+@media(max-width:1000px){
+ html .option-b.site-header::before{height:64px}
+ html .option-b .site-nav .menu-toggle{background:#276578;color:#fff;border-color:#fff}
+ html .option-b .housing-links{gap:6px}
+ html.js-menu .option-b .site-nav.menu-open .housing-links .nav-item{border:0}
+ html.js-menu .option-b .site-nav.menu-open .housing-links .sub-toggle{padding:8px 12px}
+ html.js-menu .option-b .site-nav.menu-open .option-b-mobile-action .option-b-action{padding:0 16px}
+ html .option-b .pillar-band{padding:4px 0 8px}
+ html .option-b .pillar-panel ul{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html .option-b .housing-links .sub-toggle{transition:none}}
+
+/* Footer matches the navigation, with readable links. */
+.site-footer{background:#276578;color:#fff}.site-footer p,.site-footer a{color:#fff}.site-footer a:hover{color:#fff;text-decoration-thickness:2px}.site-footer a:focus-visible{outline:3px solid #fff;outline-offset:4px}
