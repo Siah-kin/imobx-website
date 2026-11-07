@@ -244,7 +244,12 @@ initImageViewer();
   var band = document.querySelector('.option-b .pillar-band');
   if (!band) return;
   var toggles = Array.from(band.querySelectorAll('.pillar-toggle'));
+  var panels = document.querySelector('.option-b .pillar-panels');
+  var hoverOpened = false;
+  var closeTimer;
   function close(except) {
+    clearTimeout(closeTimer);
+    if (!except) hoverOpened = false;
     toggles.forEach(function (button) {
       if (button === except) return;
       button.setAttribute('aria-expanded', 'false');
@@ -297,8 +302,9 @@ initImageViewer();
       panel.replaceChildren(list); panel.dataset.loaded = 'true';
     });
   }
-  function open(button) {
+  function open(button, fromHover) {
     close(button);
+    hoverOpened = !!fromHover;
     var panel = document.getElementById(button.getAttribute('aria-controls'));
     populate(panel).then(function () {
       if (button.getAttribute('aria-expanded') === 'true') panel.hidden = false;
@@ -306,15 +312,33 @@ initImageViewer();
     button.setAttribute('aria-expanded', 'true');
   }
   toggles.forEach(function (button) {
+    var item = button.closest('.pillar-item');
     button.addEventListener('click', function (event) {
       event.stopPropagation();
       if (event.detail && Date.now() - (Number(button.dataset.hoverAt) || 0) < 500) return;
-      if (button.getAttribute('aria-expanded') === 'true') close(); else open(button);
+      if (button.getAttribute('aria-expanded') === 'true') close(); else open(button, false);
     });
     button.addEventListener('mouseenter', function () {
-      if (matchMedia('(hover: hover) and (pointer: fine)').matches) { button.dataset.hoverAt = String(Date.now()); open(button); }
+      if (matchMedia('(hover: hover) and (pointer: fine)').matches) { button.dataset.hoverAt = String(Date.now()); open(button, true); }
+    });
+    item.addEventListener('mouseenter', function () {
+      if (button.getAttribute('aria-expanded') === 'true') clearTimeout(closeTimer);
+    });
+    item.addEventListener('mouseleave', function () {
+      if (button.getAttribute('aria-expanded') === 'true') scheduleHoverClose();
     });
   });
+  function scheduleHoverClose() {
+    if (!hoverOpened) return;
+    clearTimeout(closeTimer);
+    closeTimer = setTimeout(function () {
+      var focused = document.activeElement;
+      if (focused && focused.matches(':focus-visible') && (band.contains(focused) || panels.contains(focused))) return;
+      if (hoverOpened) close();
+    }, 200);
+  }
+  panels.addEventListener('mouseenter', function () { clearTimeout(closeTimer); });
+  panels.addEventListener('mouseleave', scheduleHoverClose);
   document.addEventListener('click', function (event) {
     if (!event.target.closest('.pillar-band') && !event.target.closest('.pillar-panel')) close();
   });
