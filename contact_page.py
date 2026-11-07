@@ -10,6 +10,7 @@ def build_contact(root, page, tr, esc, version):
         return tr(*pair, tag, attrs)
     contact = data['contact']
     body = '<main class="paper contact-page" id="main">'
+    body += '<p class="key-card"><a href="jobs.html" data-pt="Trabalhe com a IMOBX: vaga em captação de recursos" data-en="Work with IMOBX: fundraising opportunity" data-nl="Werk mee met IMOBX: vacature fondsenwerving">Trabalhe com a IMOBX: vaga em captação de recursos</a></p>'
     if contact['telegram']:
         body += t(('Participe: apresente-se no nosso grupo do Telegram', 'Take part: introduce yourself in our Telegram group'), 'h1')
         body += '<div class="key-card">' + t(('Responda a algumas perguntas aqui, copie a mensagem e publique no grupo da IMOBX no Telegram.',
