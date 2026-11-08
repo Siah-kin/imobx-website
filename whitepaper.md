@@ -98,7 +98,7 @@ Once IMOBX’s legal entity is registered, it will fund the first house through 
 
 The IMOBX token would add to the houses budget over time. Each trade of the token would pay a fee in USDC, a digital dollar: 14% on Arctide, an exchange on the Arc network, plus Arctide’s own 0.25%, and 11% on Argus, a second exchange, which keeps 30% of its fee. Buyers’ payments would go into the token’s trading pool, so this fee would be the community’s only income from the token.
 
-Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work, and the founders would draw no wages from it. 35% would go to the trading pool, the shared reserve through which the token changes hands. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. The founders’ only share of the fee would come from that 20%.
+Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work. 35% would go to the trading pool, the shared reserve through which the token changes hands. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading.
 
 When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, and that part of the pool’s share would go to new houses. If the token opens instead with a sale on Arctide’s bonding curve, where the first buyers’ payments start the pool, that part would go to Arctide, and new houses would receive the share earned by funds IMOBX adds to the pool itself.
 
