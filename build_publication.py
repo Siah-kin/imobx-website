@@ -10,6 +10,7 @@ from model_guide import build_guide, redirect_stub, new_faq_location, partner_li
 from archive_gateway import build_gateway, pages_from_pdf
 from contact_page import build_contact
 from about_page import build_about
+from tour_page import build_tour
 from seo import add_seo
 import commons_story
 from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE, DATE_PT, DATE_EN, LABEL_EN, LABEL_PT
@@ -431,6 +432,7 @@ build_guide(ROOT, page, translated, esc, language_controls)
 build_reference(ROOT, page, translated, esc)
 build_contact(ROOT, page, translated, esc, VERSION)
 build_about(ROOT, page, translated, esc)
+build_tour(ROOT, page, VERSION)
 # Resources as one page (owner, 29 Oct): the documents first, then the ideas behind IMOBX, who does what, and the sources.
 _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated('Nesta página', 'On this page', 'p') + '<ol>'
             + ''.join('<li>' + translated(pt, en, 'a', f'href="#{a}"') + '</li>' for pt, en, a in

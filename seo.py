@@ -29,6 +29,8 @@ PAGES = {
                         'O protótipo de dois lofts e o projeto da primeira vila. Estudos de projeto, não anúncios de casas.'),
     'resources.html': ('Documentos, ideias e fontes · IMOBX Rio', 'Documents, ideas and sources · IMOBX Rio',
                        'Os documentos do projeto para baixar, as ideias que formaram a IMOBX, quem faz o quê e as fontes de cada fato.'),
+    'tour.html': ('Conheça a IMOBX em cinco passos · IMOBX Rio', 'Take a tour of IMOBX in five steps · IMOBX Rio',
+                  'A IMOBX em cinco passos: a necessidade, o aluguel com compra, a construtora, a cooperativa e como participar.'),
     'about.html': ('Sobre a IMOBX: por que existe e quem a começou · IMOBX Rio', 'About IMOBX: why it exists and who started it · IMOBX Rio',
                    'Por que a IMOBX existe, quem a começou, o que queremos construir e como funcionaria o aluguel com compra no Rio.'),
     'contact.html': ('Fale com a IMOBX Rio', 'Contact IMOBX Rio',

@@ -1,0 +1,48 @@
+.tour-dialog {
+  box-sizing: border-box;
+  width: min(680px, calc(100% - 32px));
+  max-width: none;
+  max-height: min(720px, calc(100dvh - 32px));
+  padding: 0;
+  border: 1px solid #d9e3e8;
+  background: #fff;
+  color: #193d4e;
+  box-shadow: 0 18px 54px rgba(15, 44, 57, .22);
+}
+.tour-dialog::backdrop { background: rgba(10, 30, 39, .65); }
+.tour-dialog-shell { display: flex; flex-direction: column; max-height: min(720px, calc(100dvh - 32px)); }
+.tour-dialog-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 28px; border-bottom: 1px solid #d9e3e8; }
+.tour-progress { margin: 0; color: #526571; font-size: 15px; font-weight: 700; }
+.tour-dialog-content { overflow-y: auto; min-height: 0; padding: 26px 28px 34px; }
+.tour-scroll-hint { margin: 0; padding: 4px 20px 7px; color: #526571; font-size: 14px; text-align: center; }
+.tour-scroll-hint[hidden] { display: none; }
+.tour-dialog-content section[hidden] { display: none; }
+.tour-dialog-content h2 { margin: 0 0 20px; color: #193d4e; font-size: clamp(28px, 4vw, 36px); line-height: 1.15; }
+.tour-dialog-content p, .tour-dialog-content li { max-width: 60ch; font-size: 18px; line-height: 1.6; }
+.tour-dialog-content a { color: #a84b00; text-underline-offset: 4px; }
+.tour-dialog-actions { display: flex; justify-content: space-between; gap: 16px; padding: 20px 28px; border-top: 1px solid #d9e3e8; }
+.tour-dialog button { min-height: 44px; padding: 9px 20px; border: 1px solid #276578; background: #fff; color: #193d4e; font: inherit; font-weight: 700; cursor: pointer; }
+.tour-dialog .tour-close { border-color: transparent; }
+.tour-dialog .tour-next { background: #276578; color: #fff; }
+.tour-dialog button:hover:not(:disabled) { outline: 2px solid #a84b00; outline-offset: 1px; }
+.tour-dialog button:focus-visible, .tour-dialog a:focus-visible, .tour-dialog h2:focus-visible, .tour-dialog h3:focus-visible { outline: 3px solid #a84b00; outline-offset: 3px; }
+.tour-dialog button:disabled { opacity: .5; cursor: default; }
+@media (max-width: 480px) {
+  .tour-dialog-top, .tour-dialog-actions { padding: 16px 20px; }
+  .tour-dialog-content { padding: 24px 20px; }
+}
+
+/* Homepage hero (owner, 8 Nov: "properly organize these buttons"): one filled main action, one outlined, same size. */
+.home-hero .actions .button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border:2px solid #276578;font-size:18px;text-decoration:none}
+.home-hero .actions .button-quiet{background:#fff;color:#276578}
+.home-hero .actions .button-quiet:hover,.home-hero .actions .button-quiet:focus-visible{background:#edf5f7;color:#193d4e}
+@media (max-width:600px){.home-hero .actions{flex-direction:column;align-items:stretch}.home-hero .actions .button{width:100%}}
+.tour-page section{margin-top:40px}
+.tour-page section p{max-width:62ch;font-size:18px;line-height:1.6}
+
+.tour-dialog .tour-next.is-last{background:#fff;color:#276578}
+.tour-dialog-actions{align-items:center}
+.tour-dialog-actions [hidden]{display:none}
+.tour-dialog-content a.tour-cta{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;background:#276578;color:#fff;font-weight:700;text-decoration:none;border:2px solid #276578}
+.tour-dialog-content a.tour-cta:hover,.tour-dialog-content a.tour-cta:focus-visible{background:#1d5262;color:#fff}
+.tour-page a.tour-cta{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;background:#276578;color:#fff;font-weight:700;text-decoration:none}
