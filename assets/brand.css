@@ -573,3 +573,12 @@ html .option-b :is(a,button):focus-visible{outline:3px solid #fff;outline-offset
 
 /* Footer matches the navigation, with readable links. */
 .site-footer{background:#276578;color:#fff}.site-footer p,.site-footer a{color:#fff}.site-footer a:hover{color:#fff;text-decoration-thickness:2px}.site-footer a:focus-visible{outline:3px solid #fff;outline-offset:4px}
+
+/* Shared footer: a quiet project identity and a short list of destinations. */
+.site-footer{padding:40px 0 44px}
+.site-footer .footer-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,280px);gap:32px 64px;align-items:start}
+.site-footer .footer-name{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-size:22px;font-weight:700;letter-spacing:.12em;line-height:1.2;text-decoration:none;margin-bottom:4px}
+.site-footer .footer-identity p{max-width:36ch;margin:0;line-height:1.5}
+.site-footer .footer-nav{display:flex;flex-direction:column;align-items:flex-start}
+.site-footer .footer-nav a{display:inline-flex;align-items:center;min-height:44px;line-height:1.35}
+@media(max-width:800px){.site-footer .footer-inner{grid-template-columns:1fr;gap:24px}.site-footer{padding:32px 0 36px}}
