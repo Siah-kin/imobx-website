@@ -574,11 +574,15 @@ html .option-b :is(a,button):focus-visible{outline:3px solid #fff;outline-offset
 /* Footer matches the navigation, with readable links. */
 .site-footer{background:#276578;color:#fff}.site-footer p,.site-footer a{color:#fff}.site-footer a:hover{color:#fff;text-decoration-thickness:2px}.site-footer a:focus-visible{outline:3px solid #fff;outline-offset:4px}
 
-/* Shared footer: a quiet project identity and a short list of destinations. */
-.site-footer{padding:40px 0 44px}
-.site-footer .footer-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,280px);gap:32px 64px;align-items:start}
-.site-footer .footer-name{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-size:22px;font-weight:700;letter-spacing:.12em;line-height:1.2;text-decoration:none;margin-bottom:4px}
-.site-footer .footer-identity p{max-width:36ch;margin:0;line-height:1.5}
-.site-footer .footer-nav{display:flex;flex-direction:column;align-items:flex-start}
-.site-footer .footer-nav a{display:inline-flex;align-items:center;min-height:44px;line-height:1.35}
-@media(max-width:800px){.site-footer .footer-inner{grid-template-columns:1fr;gap:24px}.site-footer{padding:32px 0 36px}}
+/* The shared footer keeps the brand and groups the site's main destinations. */
+.site-footer{padding:48px 0 52px}
+.site-footer .footer-inner{display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,2fr);gap:48px;align-items:start}
+.site-footer .footer-brand{display:inline-flex;align-items:center;min-width:112px;min-height:112px}
+.site-footer .footer-brand img{display:block;width:112px;height:112px;filter:grayscale(1) invert(1) brightness(4);mix-blend-mode:screen}
+.site-footer .footer-mission{font-size:18px;line-height:1.4;max-width:20ch;margin:8px 0 0;font-weight:700}
+.site-footer .footer-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 32px}
+.site-footer .footer-column h2{font:700 16px/1.4 var(--sans);letter-spacing:0;color:#fff;margin:0 0 8px}
+.site-footer .footer-column ul{list-style:none;padding:0;margin:0}
+.site-footer .footer-column a{display:inline-flex;align-items:center;min-height:44px;line-height:1.35;padding:6px 0}
+@media(max-width:800px){.site-footer .footer-inner{grid-template-columns:1fr;gap:32px}.site-footer{padding:32px 0 40px}.site-footer .footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
+@media(max-width:400px){.site-footer .footer-columns{gap:24px 16px}}
