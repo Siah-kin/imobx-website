@@ -1,6 +1,7 @@
 .contact-page{max-width:940px}
-.contact-page h1{max-width:20ch}
-.contact-page>p{max-width:65ch}
+.contact-page h1{max-width:26ch}
+.contact-page>p{max-width:60ch;font-size:19px;line-height:1.6;margin:0 0 20px}
+.contact-page>p.contact-lead{font-size:22px;margin-top:8px}
 .contact-method{border-top:1px solid var(--line);margin-top:32px;padding-top:20px}
 .contact-method h2{margin:0 0 8px}
 .contact-method p{max-width:65ch;margin:0 0 12px}

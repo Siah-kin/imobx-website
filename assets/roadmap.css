@@ -50,6 +50,11 @@
 #building .photo-strip li:first-child img{aspect-ratio:16/9}
 .lead-figures{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;margin-top:24px;align-items:start}
 .lead-figure{margin:0}
+.favela-pair{margin:0 0 24px}
+.favela-pair .lead-figures{grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:0}
+.favela-pair img{width:100%;height:auto;display:block;border-radius:4px}
+.favela-pair figcaption{margin-top:10px;color:#526571;font-size:15px;line-height:1.5}
+.key-card p+p{margin-top:12px}
 .lead-figure img{width:100%;height:auto;display:block;border-radius:4px}
 .lead-figure figcaption,.photo-strip figcaption{margin-top:10px;color:#526571;font-size:15px;line-height:1.5}
 .photo-strip{list-style:none;margin:24px 0 18px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
@@ -61,7 +66,7 @@
   .path-line{left:11px}
   .path-dot{left:-35px}
   .path-tracks{grid-template-columns:minmax(0,1fr)}
-  .lead-figures{grid-template-columns:minmax(0,1fr)}
+  .lead-figures,.favela-pair .lead-figures{grid-template-columns:minmax(0,1fr)}
   .photo-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
   /* the drawing runs edge to edge on phones, with larger labels so they stay readable */
   .method-figure{margin-left:-12px;margin-right:-12px}
