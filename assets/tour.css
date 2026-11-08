@@ -39,3 +39,10 @@
 @media (max-width:600px){.home-hero .actions{flex-direction:column;align-items:stretch}.home-hero .actions .button{width:100%}}
 .tour-page section{margin-top:40px}
 .tour-page section p{max-width:62ch;font-size:18px;line-height:1.6}
+
+.tour-dialog .tour-next.is-last{background:#fff;color:#276578}
+.tour-dialog-actions{align-items:center}
+.tour-dialog-actions [hidden]{display:none}
+.tour-dialog-content a.tour-cta{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;background:#276578;color:#fff;font-weight:700;text-decoration:none;border:2px solid #276578}
+.tour-dialog-content a.tour-cta:hover,.tour-dialog-content a.tour-cta:focus-visible{background:#1d5262;color:#fff}
+.tour-page a.tour-cta{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;background:#276578;color:#fff;font-weight:700;text-decoration:none}

@@ -37,7 +37,8 @@
     dialog.querySelector('[data-tour-progress]').textContent = words.step(current + 1, steps.length);
     dialog.querySelector('[data-tour-close]').textContent = words.close;
     dialog.querySelector('[data-tour-back]').textContent = words.back;
-    dialog.querySelector('[data-tour-back]').disabled = current === 0;
+    dialog.querySelector('[data-tour-back]').hidden = current === 0;
+    dialog.querySelector('[data-tour-next]').classList.toggle('is-last', current === steps.length - 1);
     dialog.querySelector('[data-tour-next]').textContent = current === steps.length - 1 ? words.finish : words.next;
     dialog.querySelector('[data-tour-scroll-hint]').textContent = words.scroll;
     const heading = steps[current].querySelector('h2, h3');
