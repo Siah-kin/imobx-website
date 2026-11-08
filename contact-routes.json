@@ -25,7 +25,11 @@
             "Em qual cidade ou região você procura moradia?",
             "In which city or area are you looking for a home?"
           ],
-          "required": true
+          "required": true,
+          "lead": [
+            "Procuro moradia em",
+            "I am looking for a home in"
+          ]
         },
         {
           "id": "needs",
@@ -34,7 +38,11 @@
             "What does your family need from a home?"
           ],
           "multiline": true,
-          "required": true
+          "required": true,
+          "lead": [
+            "Minha família precisa de:",
+            "What my family needs:"
+          ]
         }
       ],
       "reading_url": "rent-to-own.html#payments",
@@ -64,16 +72,24 @@
             "Onde fica, que tipo de imóvel é e qual a sua ligação com ele?",
             "Where is it, what kind of property is it, and how are you connected to it?"
           ],
-          "required": true
+          "required": true,
+          "lead": [
+            "Sobre o imóvel:",
+            "About the property:"
+          ]
         },
         {
           "id": "arrangement",
           "label": [
-            "Você pensa em vender, alugar, doar ou vender pelo aluguel com compra?",
+            "Você pensa em vender, alugar, doar ou vender pelo modelo de aluguel com compra?",
             "Would you sell it, rent it out, give it, or sell it through rent-to-own?"
           ],
           "multiline": true,
-          "required": true
+          "required": true,
+          "lead": [
+            "O que penso fazer com ele:",
+            "What I have in mind for it:"
+          ]
         }
       ],
       "reading_url": "roadmap.html#participation",
@@ -103,7 +119,11 @@
             "Qual serviço você oferece e em qual região?",
             "What service do you offer, and in which area?"
           ],
-          "required": true
+          "required": true,
+          "lead": [
+            "O que ofereço:",
+            "What I offer:"
+          ]
         },
         {
           "id": "experience",
@@ -112,7 +132,11 @@
             "What work have you done before? A link to it helps."
           ],
           "multiline": true,
-          "required": true
+          "required": true,
+          "lead": [
+            "Trabalhos que já fiz:",
+            "Work I have done:"
+          ]
         }
       ],
       "reading_url": "devsheet.html#2-housing-designs-and-building-costs",
@@ -142,7 +166,11 @@
             "De qual organização você é, onde ela atua e qual é a sua função?",
             "Which organisation are you with, where does it work, and what is your role?"
           ],
-          "required": true
+          "required": true,
+          "lead": [
+            "Minha organização:",
+            "My organisation:"
+          ]
         },
         {
           "id": "proposal",
@@ -151,7 +179,11 @@
             "What would you like to do together?"
           ],
           "multiline": true,
-          "required": true
+          "required": true,
+          "lead": [
+            "O que gostaríamos de fazer com a IMOBX:",
+            "What we would like to do with IMOBX:"
+          ]
         }
       ],
       "reading_url": "index.html#parceiros",
@@ -181,7 +213,11 @@
             "Em que tipo de apoio você está pensando?",
             "What kind of funding do you have in mind?"
           ],
-          "required": true
+          "required": true,
+          "lead": [
+            "O apoio que tenho em mente:",
+            "The funding I have in mind:"
+          ]
         },
         {
           "id": "purpose",
@@ -190,7 +226,11 @@
             "What would you like to know first?"
           ],
           "multiline": true,
-          "required": true
+          "required": true,
+          "lead": [
+            "O que quero saber primeiro:",
+            "What I would like to know first:"
+          ]
         }
       ],
       "reading_url": "transparency.html#community-economy",
@@ -220,7 +260,11 @@
             "Como você quer contribuir?",
             "How do you want to contribute?"
           ],
-          "required": true
+          "required": true,
+          "lead": [
+            "Como quero ajudar:",
+            "How I would like to help:"
+          ]
         },
         {
           "id": "availability",
@@ -229,7 +273,11 @@
             "Which languages do you speak, and how much time can you give?"
           ],
           "multiline": true,
-          "required": true
+          "required": true,
+          "lead": [
+            "Idiomas e tempo disponível:",
+            "Languages and time I can give:"
+          ]
         }
       ],
       "reading_url": "transparency.html#campaign-work",

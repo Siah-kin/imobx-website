@@ -445,7 +445,15 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += text(('Onde a IMOBX está agora e o que vem depois', 'Where IMOBX is now, and what comes next'), 'h1')
     # Owner, 31 Oct: his chat words pasted as copy, and a byline, read as AI slop; the reason comes first, then the status.
     roadmap += '<div class="key-card">' + text(('Ter a própria casa é uma das necessidades mais profundas que existem, e para muitas famílias do Rio ela continua fora de alcance.',
-                     'A home of your own is one of the deepest needs people have, and for many families in Rio it stays out of reach.')) + '</div>'
+                     'A home of your own is one of the deepest needs people have, and for many families in Rio it stays out of reach.'))
+    # Owner, 8 Nov: the two favela photos come back here, under the need they show (removed on 28 Oct by mistake).
+    roadmap += text(('Com a crise da moradia no Rio, as favelas nos morros crescem rápido.',
+                     'With Rio’s housing crisis, the favelas on its hillsides are growing fast.')) + '</div>'
+    roadmap += '<figure class="favela-pair"><div class="lead-figures">'
+    for f, alt in [('community-bay-circles.jpg', ('Favelas nos morros ao redor da baía, marcadas com círculos', 'Favelas on the hillsides around the bay, marked with circles')),
+                   ('community-dusk-circles.jpg', ('Favelas nos morros ao entardecer, marcadas com círculos', 'Favelas on the hillsides at dusk, marked with circles'))]:
+        roadmap += f'<img src="assets/{f}" width="1448" height="1086" loading="lazy" alt="{esc(alt[0])}" data-alt-pt="{esc(alt[0])}" data-alt-en="{esc(alt[1])}" data-alt-nl="{esc(NL_LOOKUP.get(alt[1], alt[1]))}">'
+    roadmap += '</div><figcaption>' + text(('Os círculos marcam favelas nos morros, ao redor da baía e ao entardecer.', 'The circles mark favelas on the hillsides, around the bay and at dusk.'), 'span') + '</figcaption></figure>'
     roadmap += text(('Estamos preparando o primeiro projeto no Rio de Janeiro. Vamos marcar as datas quando tivermos escolhido que tipo de organização a IMOBX vai ser e confirmado o primeiro imóvel.',
                      'We are preparing the first project in Rio de Janeiro. We’ll set dates once we’ve chosen what kind of organisation IMOBX will be and confirmed the first property.'), 'p', 'class="guide-lead" id="where-we-stand"')
     roadmap += on_this_page([(('Da preparação às primeiras casas', 'From groundwork to the first houses'), 'stages'),
@@ -616,8 +624,8 @@ def build_guide(root, page, tr, esc, language_controls):
                 roadmap += text(item, 'li')
         roadmap += '</ul></div></details>'
     roadmap += '</section>'
-    roadmap += '<section class="closing-band" id="help">' + text(('Vamos resolver as perguntas em aberto, como o tipo de organização que a IMOBX vai ser e o primeiro imóvel, com as pessoas que participarem. Todo mundo no grupo vê o que você publica, então deixe de fora telefones, endereços e documentos; entrar no grupo não reserva uma casa nem cria um trabalho ou um acordo. Se você pode ajudar com alguma dessas perguntas, apresente-se.',
-                                                                   'We’ll settle the open questions, such as what kind of organisation IMOBX will be and the first property, with the people who join us. Everyone in the group can see what you post, so keep phone numbers, addresses and documents out of it, and joining doesn’t reserve a house or create a job or an agreement. If you can help with one of the open questions, introduce yourself.'))
+    roadmap += '<section class="closing-band" id="help">' + text(('Vamos resolver as perguntas em aberto, como o tipo de organização que a IMOBX vai ser e o primeiro imóvel, com as pessoas que participarem. Se você pode ajudar com uma delas, apresente-se.',
+                                                                   'We’ll settle the open questions, such as what kind of organisation IMOBX will be and the first property, with the people who join us. If you can help with one of them, introduce yourself.'))
     roadmap += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
     roadmap += partner_line('roadmap.html') + '</main>'
     (root / 'roadmap.html').write_text(page('IMOBX | Project stages', roadmap,

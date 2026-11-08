@@ -6,15 +6,15 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "7e968778b25b56fad0d32ccb4d920d02c07323f2177f15483cff8ac1ee54041e"
+      "sha256": "e84cc684488099437ee83b63b076d04bb62ce919b6d06eef27ec8aec6e85d7be"
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "df8b14fd2f7ef3f023f818e6f13e9d51d979c488d94d94c7b4b2f3369659c7fe"
+      "sha256": "25df0e48f20432de4d1df563612b92025e743dac209aa90062775727817a9fd6"
     },
     {
       "path": "properties.html",
-      "sha256": "fa69d6ff8b89eb3c25ffa560cdaa0afc4b7f06455483b2a9523b8e093625d67a"
+      "sha256": "8097741ee9f570959ccd42efb37fc09c332bdb4fd5da0f3fc15ad45e925ede76"
     },
     {
       "path": "project-reference.json",
@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "18f37bb1e57b36acf12f0d75a7320b4690bce08a148e3f9993496b859ed95580"
+      "sha256": "e99dc4d83f1ae0e7f79e44932c1e02e0e99f4df3b3fa85acfc40089027f61068"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "63b43cbd669b061965d8a27e409e222ef04e976f4e66dcdc1ca0bca10c1fb3ac"
+      "sha256": "d2455de34f80bf9599b05104e9222ec5d1d7f2084e59b5f44f34bc7ccc60c769"
     },
     {
       "path": "reference.html",
@@ -46,11 +46,11 @@
     },
     {
       "path": "whitepaper.html",
-      "sha256": "b0e59833b310ad1b1798f12fd26190dec75e139fe6278e553fcb5a3c325042d9"
+      "sha256": "14a720ce43cc3e4a6ed198e68a844e5e58d5c6e50f0f0f922e06101d693c5223"
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "c9437bc29d32cfc97c7912addfbeb0423d8767653991cebb4fca4b99d2c41b0c"
+      "sha256": "174d6921db808b3f4e39efd7520445b8d65cf602769f1ad64d452cead243fdef"
     },
     {
       "path": "devsheet.md",
@@ -58,11 +58,11 @@
     },
     {
       "path": "devsheet.html",
-      "sha256": "5c62cba855adf55c21c75c50d7929a2b726ce4995c59190abd104e06d7a9bd26"
+      "sha256": "7d2f057354850afbe87e02640ba3e7279f3fba75c98b45d86eef3f4c369dfe73"
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "c207cfc3bd1e19a9b16fa27110c8f180e700f67d468ea4bb609734b499411b01"
+      "sha256": "bfb456501009f70f85970df47c6394574f822f18b70811ca2eee55e2414eba30"
     },
     {
       "path": "pitchdeck.json",
@@ -74,27 +74,27 @@
     },
     {
       "path": "pitchdeck.html",
-      "sha256": "f62dcdc8e68533ed2730e19fa22ca73fea3582e8ed8c0b37d0d8fd96ca798c90"
+      "sha256": "338a8eb704a862a619b2c35187f8fa262ccf6033e9e499866ed067dcd227a0b5"
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "466702906678779e48d2f99f6110f291e7f40e59a5d49157426593586d53a5bf"
+      "sha256": "4cb092500129fece2c454cb5f9dd671481202df3f8782bbe4b845b68416bc754"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "c123edf6a378cb82d9cc7fb3fb3eb7abac8c637851a770f31acb700160782dd2"
+      "sha256": "3879f6ea3cecd7f86d2877f5a1dd78f0b6423b858696a97054cd76a044692d63"
     },
     {
       "path": "roadmap.html",
-      "sha256": "4df6c93f1c54fded7d3de02b04575c36baf00080f8e147907edb94e40bcc3c26"
+      "sha256": "e84df6a65f82e370ce02d80f84444e1d7517101c9ad3b5aaa0360f3428ac6004"
     },
     {
       "path": "transparency.html",
-      "sha256": "6f1421a4094e890df8ceb1af5986d0272bb2f2ede50462b8a1e8e4dd21c133aa"
+      "sha256": "102f7dce499b4c2f2d8a06bcd46b937127bd024bb54594cf067f9682c0aa6948"
     },
     {
       "path": "resources.html",
-      "sha256": "b350f5fd8504d580ac1cd20021e5a07fcace3bc49ed58fafa907d54f2e7f9658"
+      "sha256": "60ec6094664a1497f025602ced7ddc46ceb2c6aaeb68dcec9df58c649f2b99ad"
     },
     {
       "path": "model-guide.json",
@@ -102,19 +102,19 @@
     },
     {
       "path": "contact.html",
-      "sha256": "0a2344fd93725704aeb8d50865cbb7a2d4963274acb3177d8f2896808a4ab003"
+      "sha256": "4dac8c080cad33fcfe2816b923b06ad4abc5f409142de03283fb5c334f049c12"
     },
     {
       "path": "contact-routes.json",
-      "sha256": "3f67ff75382f1d2d0cbc3c87d69bc06a3ec1e48ca9119c7846b5b8a961c4ad81"
+      "sha256": "dc5f1c0dd1ecc4a22fa278ec09f8565b772aedcad4cf1681744e1b734d909ec3"
     },
     {
       "path": "assets/contact.js",
-      "sha256": "c10e60b43433ae56104fe48caa5a897b28634df709196e03009de2aa1a07edd2"
+      "sha256": "be049b16822306919fcf749a6ae86394b1cb243b6e8d7e6f4680b355d472eae1"
     },
     {
       "path": "assets/contact.css",
-      "sha256": "6d063c250307ed39c27724c21e1e60191b0b6cc6c52e21384291eb69bee558c0"
+      "sha256": "502fa0bc092d8c51c4b33b222308efb80b97851d13282f206f43747cb54988f7"
     }
   ]
 }
