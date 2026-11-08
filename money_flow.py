@@ -245,8 +245,8 @@ GOV_STEPS = [
     (('Quando o token for lançado', 'When the token launches'),
      ('As regras do próprio token são decididas por votação.', 'The token’s own rules are decided by vote.')),
     (('Quando as famílias morarem lá', 'Once families live there'),
-     ('Se a IMOBX se tornar uma cooperativa, os membros a administram juntos, com um voto cada.',
-      'If IMOBX becomes a cooperative, its members run it together, with one vote each.')),
+     ('Como cooperativa, os membros administram a IMOBX juntos, com um voto cada.',
+      'As a cooperative, its members run IMOBX together, with one vote each.')),
 ]
 GOV_LABELS = {'founders': ('Fundadores', 'Founders'), 'holders': ('Quem tem o token', 'Token holders'), 'members': ('Membros', 'Members')}
 

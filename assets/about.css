@@ -1,0 +1,17 @@
+.about-page{max-width:1040px}
+.about-page h1{margin-bottom:8px}
+.about-page section{margin-top:56px}
+.about-page section:first-of-type{margin-top:24px}
+.about-page h2{font-size:30px;margin:0 0 16px}
+.about-page p{max-width:66ch;font-size:18px;line-height:1.65}
+.about-page .about-lead{font-size:24px;line-height:1.45;font-weight:700;color:var(--ink);max-width:32ch}
+.about-founders{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.about-founder{margin:0;padding:28px 28px 24px;background:#edf5f7;border-radius:6px;display:flex;flex-direction:column;justify-content:space-between}
+.about-founder blockquote{margin:0}
+.about-founder blockquote p{font-size:17px;line-height:1.65;margin:0 0 14px}
+.about-founder figcaption{font-weight:700;font-size:16px;color:var(--ink);margin-top:8px}
+.about-picture{margin:28px 0 0}
+.about-picture img{display:block;width:100%;height:auto;max-height:440px;object-fit:cover;border-radius:4px}
+.about-picture figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.about-now{border-top:1px solid var(--line);padding-top:32px}
+@media(max-width:760px){.about-founders{grid-template-columns:minmax(0,1fr)}.about-page h2{font-size:26px}.about-page .about-lead{font-size:21px}.about-founder{padding:22px 20px}}
