@@ -57,7 +57,7 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
 
 
 # The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
-SITE_UPDATED = '2026-11-08'
+SITE_UPDATED = '2026-11-09'
 
 
 def status_bar_text():
@@ -372,6 +372,7 @@ def resource_section(standalone=True):
     body = '<section id="documents"><span id="documentos"></span><span id="resources"></span><span id="recursos"></span>'
     body += translated('Documentos do projeto', 'Project documents', 'h2')
     body += translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p')
+    body += translated('Os documentos usam um orçamento de 2025 para uma vila de 36 casas. A primeira fase agora planejada é de cinco apartamentos; seus valores ainda precisam ser confirmados.', 'The documents use a 2025 budget for a village of 36 houses. The planned first phase is now five flats; its figures still need confirmation.', 'p')
     body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h3') for key in document_ids) + '</div><span id="resource-reference"></span><span id="title-reference"></span>'
     # The token's current description lives on the Self-compounding page (TOKEN_POSITION.md, 2 Nov 2026).
     body += ('<p>' + translated('Para o token da IMOBX, a sua taxa e os quatro V, leia a página',
@@ -503,7 +504,8 @@ for number, item in enumerate(deck['slides'], 1):
 catalog = {item['id']: item for item in RESOURCE_CATALOG}
 GATEWAYS = [('whitepaper', 'IMOBX | Whitepaper'), ('devsheet', 'IMOBX | Pilot and building guide'), ('pitchdeck', 'IMOBX | Pitch deck')]
 for doc, doc_title in GATEWAYS:
-    build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title)
+    sections = pages_from_pdf(ROOT, doc) if (ROOT / f'{doc}.pdf').is_file() else None
+    build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title, sections)
 
 if PREVIEW_ONLY:
     from add_dutch import add_dutch  # the preview gets its Dutch too; a full build adds it again after the exports
