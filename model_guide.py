@@ -454,7 +454,7 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '</div><figcaption>' + text(('Os círculos marcam favelas nos morros, ao redor da baía e ao entardecer.', 'The circles mark favelas on the hillsides, around the bay and at dusk.'), 'span') + '</figcaption></figure>'
     roadmap += text(('Estamos preparando o primeiro projeto no Rio de Janeiro. Vamos marcar as datas quando a cooperativa estiver registrada e o primeiro imóvel confirmado.',
                      'We are preparing the first project in Rio de Janeiro. We’ll set dates once the cooperative is registered and the first property is confirmed.'), 'p', 'class="guide-lead" id="where-we-stand"')
-    roadmap += on_this_page([(('Da preparação às primeiras casas', 'From groundwork to the first houses'), 'stages'),
+    roadmap += on_this_page([(('Os passos, e onde cada um está', 'The steps, and where each one stands'), 'stages'),
                              (('Como as primeiras casas serão financiadas', 'How the first houses will be funded'), 'funding'),
                              (('No que o Rafael está trabalhando agora', 'What Rafael is working on now'), 'rafael-now'),
                              (('Onde a primeira família vai morar', 'Where the first family will live'), 'cases'),
@@ -484,29 +484,19 @@ def build_guide(root, page, tr, esc, language_controls):
         'token-decision': ('Planejamos guardar uma reserva para as contas e para o que prometemos às famílias, para que um mês fraco não pare a obra. Se a reserva ficar baixa, gastos novos esperam até ela se recompor.',
                            'We plan to keep a reserve for the bills and for what we’ve promised families, so one slow month doesn’t stop the building work. If the reserve runs low, new spending waits until it’s back up.'),
     }
-    roadmap += '<section id="stages">' + text(('Da preparação às primeiras casas', 'From groundwork to the first houses'), 'h2')
-    roadmap += text(('Hoje estamos trabalhando em quatro coisas ao mesmo tempo, todas preparando as primeiras casas.',
-                     'Today we’re working on four things at once, all of them groundwork for the first houses.'), 'p', 'class="answer"')
-    roadmap += '<div class="path"><div class="path-line" aria-hidden="true"><span class="path-fill"></span></div>'
-    for label, ordered, members in grouped_stages():
-        roadmap += '<div class="path-group' + ('' if ordered else ' path-now') + '">'
-        roadmap += '<p class="path-group-label">' + ('' if ordered else '<span class="path-here">' + text(('Estamos aqui', 'We are here'), 'span') + '</span>') + text(label, 'span') + '</p>'
-        roadmap += '<ol class="path-steps' + (' path-tracks' if not ordered else '') + '">'
-        for number, stage in members:
-            roadmap += f'<li class="path-step"><span class="path-dot" aria-hidden="true"></span>{icon(stage["id"])}'
-            if not ordered and stage['id'] in TRACK_LINES:
-                # Owner, 31 Oct: the surface stays simple; each preparation track is one plain line, the detail is in the papers.
-                roadmap += f'<div class="roadmap-stage roadmap-track" id="{esc(stage["id"])}">' + text(stage['title'], 'h3') + text(TRACK_LINES[stage['id']]) + '</div></li>'
-                continue
-            roadmap += f'<details class="roadmap-stage" id="{esc(stage["id"])}"><summary>'
-            roadmap += text(numbered(number, stage['title']) if number else stage['title'], 'h3')
-            if stage.get('window'):
-                roadmap += text(stage['window'], 'span', 'class="guide-window"')
-            roadmap += '<span class="stage-toggle">' + text(('Mostrar detalhes', 'Show details'), 'span', 'class="more"') + text(('Esconder detalhes', 'Hide details'), 'span', 'class="less"') + '</span></summary>'
-            roadmap += ''.join(text(pair) for pair in stage['card']) + '</details></li>'
+    # Owner, 9 Nov ("roadmap remains underutilised"): one board, every step with where it stands: done, now, next, then.
+    roadmap += '<section id="stages">' + text(('Os passos, e onde cada um está', 'The steps, and where each one stands'), 'h2')
+    roadmap += text(('Esta é a lista dos passos até as primeiras casas, na ordem em que acontecem.', 'This is the list of steps to the first houses, in the order they happen.'), 'p', 'class="answer"')
+    roadmap += '<div class="board">'
+    BOARD = [('Pronto', 'Done', 'Klaar', [('O custo de um apartamento e de cinco, calculado pelo índice público de custo da construção do Rio (CUB), em setembro de 2026.', 'The cost of one flat and of five, worked out from Rio’s public building-cost index (CUB), September 2026.', 'De kosten van één appartement en van vijf, berekend met de openbare bouwkostenindex van Rio (CUB), september 2026.'), ('O contrato de obra de dois lofts da construtora do Rafael, assinado em janeiro de 2026.', 'The building contract for two lofts by Rafael’s company, signed January 2026.', 'Het bouwcontract voor twee lofts van het bedrijf van Rafael, getekend in januari 2026.'), ('As respostas do Rafael sobre custo, terreno, atraso no pagamento e recursos, de 4 a 6 de novembro de 2026.', 'Rafael’s answers on cost, site, late payment and funding, 4 to 6 November 2026.', 'Rafaels antwoorden over kosten, kavel, betalingsachterstand en financiering, 4 tot 6 november 2026.')]), ('Agora', 'Now', 'Nu', [('O apartamento de Guadalupe: o Rafael escreve o contrato de aluguel com compra e pergunta à família que mora lá se quer participar.', 'The Guadalupe flat: Rafael writes the rent-to-own agreement and asks the family living there whether they want to take part.', 'Het appartement in Guadalupe: Rafael schrijft de huurkoopovereenkomst en vraagt het gezin dat er woont of het wil meedoen.'), ('Um advogado independente e um contador, para conferir os contratos e organizar como os pagamentos são registrados.', 'An independent lawyer and an accountant, to check the agreements and set up how payments are recorded.', 'Een onafhankelijke advocaat en een boekhouder, om de overeenkomsten te controleren en de registratie van betalingen te regelen.'), ('O custo de um apartamento confirmado para um prédio de cinco.', 'The cost of one flat confirmed for a building of five.', 'De kosten van één appartement bevestigd voor een gebouw van vijf.'), ('Um terreno de 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz.', 'A plot of 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz.', 'Een kavel van 200 tot 300 m² in Anchieta, Pavuna, Bangu of Santa Cruz.'), ('A vaga de apoio à captação, aberta agora: pesquisa os caminhos de financiamento.', 'The fundraising role, open now: it researches the funding routes.', 'De functie voor fondsenwerving, nu open: die onderzoekt de financieringsroutes.')]), ('Em seguida', 'Next', 'Hierna', [('Registrar a cooperativa.', 'Register the cooperative.', 'De coöperatie inschrijven.'), ('Um pagamento de teste, pequeno: quem aprovou, e se as nossas contas batem com o extrato do banco.', 'A small test payment: who approved it, and whether our books match the bank statement.', 'Een kleine testbetaling: wie die goedkeurde, en of onze boeken kloppen met het bankafschrift.'), ('Uma reserva para as contas e para o que prometemos às famílias. Se ela baixar, os gastos novos esperam.', 'A reserve for the bills and for what we have promised families. If it runs low, new spending waits.', 'Een reserve voor de rekeningen en voor wat we gezinnen hebben beloofd. Loopt ze laag, dan wacht nieuwe uitgave.'), ('A campanha de financiamento coletivo: escolher a plataforma, escrever as recompensas, definir a meta e abrir.', 'The crowdfunding campaign: choose the platform, write the rewards, set the goal and open it.', 'De crowdfundingcampagne: het platform kiezen, de beloningen schrijven, het doel bepalen en openen.'), ('Pedidos de financiamento ligado ao ODS 11 da ONU e a outros caminhos que a vaga de captação encontrar.', 'Applications for funding linked to UN Goal 11 and to other routes the fundraising role finds.', 'Aanvragen voor financiering via VN-doel 11 en andere routes die de functie voor fondsenwerving vindt.')]), ('Depois', 'Then', 'Daarna', [('A primeira família assina o contrato no apartamento de Guadalupe.', 'The first family signs the agreement in the Guadalupe flat.', 'Het eerste gezin tekent de overeenkomst in het appartement in Guadalupe.'), ('Construir cinco apartamentos de cada vez, quando o financiamento e as licenças estiverem garantidos.', 'Build five flats at a time, once funding and permits are in place.', 'Telkens vijf appartementen bouwen, zodra financiering en vergunningen rond zijn.'), ('Os moradores ajudam a escrever as regras da casa, e uma regra só começa depois que eles opinarem.', 'Residents help write the house rules, and a rule starts only once they have had their say.', 'Bewoners helpen de huisregels schrijven, en een regel gaat pas in als zij hun zegje hebben gedaan.'), ('Avaliar as primeiras casas, depois abrir mais bairros e, mais tarde, receber imóveis de outros proprietários.', 'Review the first houses, then open more neighbourhoods and, later, take in other owners’ properties.', 'De eerste huizen evalueren, daarna meer buurten openen en later woningen van andere eigenaren opnemen.')])]
+    for key, (pt, en, nl, items) in zip(['done', 'now', 'next', 'then'], BOARD):
+        roadmap += f'<div class="board-col board-{key}">' + text((pt, en), 'h3', 'class="board-head"') + '<ol>'
+        for ipt, ien, inl in items:
+            roadmap += text((ipt, ien), 'li')
         roadmap += '</ol></div>'
+    roadmap += '</div>'
     housing_membership = ('Na proposta, as famílias se associam a uma cooperativa de moradia e assinam seus próprios contratos de moradia. Elas não precisam comprar nem ter tokens.', 'Under the proposal, families join a housing cooperative and sign their own housing agreements. They do not need to buy or hold tokens.')
-    roadmap += '</div>' + text(('O token da IMOBX', 'The IMOBX token'), 'h3')
+    roadmap += text(('O token da IMOBX', 'The IMOBX token'), 'h3')
     roadmap += text(('A IMOBX planeja um token self-compounding de financiamento comunitário para uma etapa posterior. Ter o token é opcional. As taxas de negociação deverão ajudar a financiar o trabalho da comunidade.',
                      'IMOBX plans a self-compounding community-funding token for a later stage. Holding it is optional. Trading fees are intended to help fund community work.'))
     roadmap += text(housing_membership)
@@ -535,14 +525,7 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '</ol>'
     roadmap += ('<p>' + text(('A pesquisa e os pedidos de apoio são o trabalho da nossa nova', 'The research and the applications are the work of our new'), 'span') + ' '
                 + text(('vaga de apoio à captação de recursos', 'fundraising support role'), 'a', 'href="jobs.html"') + '.</p>')
-    roadmap += text(('Os próximos passos, em ordem:', 'The next steps, in order:'), 'p', 'class="funding-next"') + '<ol class="funding-steps">'
-    for step in [('Registrar a cooperativa, com a orientação de um advogado independente.', 'Register the cooperative, with an independent lawyer’s advice.'),
-                 ('Escolher a plataforma da campanha e escrever as recompensas.', 'Choose the campaign platform and write the rewards.'),
-                 ('Preencher a vaga de captação e começar por uma lista de programas do ODS 11 e de outros financiadores.', 'Fill the fundraising role, starting with a list of Goal 11 programmes and other funders.'),
-                 ('Definir a meta da campanha a partir do custo atualizado de um apartamento.', 'Set the campaign goal from the updated cost of one flat.'),
-                 ('Abrir a campanha.', 'Open the campaign.')]:
-        roadmap += text(step, 'li')
-    roadmap += '</ol></section>'
+    roadmap += '</section>'
     roadmap += '<section id="rafael-now">' + text(('No que o Rafael está trabalhando agora?', 'What is Rafael working on now?'), 'h2')
     roadmap += text(('O Rafael é engenheiro civil e tem a sua própria construtora no Rio. Estes são os passos em que ele está, na ordem em que um leva ao outro.',
                      'Rafael is a civil engineer with his own construction company in Rio. These are the steps he is on, in the order they lead into each other.'), 'p', 'class="answer"')
