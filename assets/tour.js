@@ -211,21 +211,23 @@
   } catch (_) { /* Manual tour access remains available. */ }
   if (shouldInvite) {
     const words = {
-      pt: { title: 'Conheça a IMOBX', intro: 'Quer conhecer o projeto em uma visita guiada?', take: 'Fazer a visita', skip: 'Pular' },
-      en: { title: 'Discover IMOBX', intro: 'Would you like a guided tour of the project?', take: 'Take the tour', skip: 'Skip' },
-      nl: { title: 'Ontdek IMOBX', intro: 'Wil je het project leren kennen met een rondleiding?', take: 'Start de rondleiding', skip: 'Overslaan' }
+      pt: { title: 'Conheça a IMOBX', intro: 'Quer conhecer o projeto em uma visita guiada?', take: 'Fazer a visita', skip: 'Pular', info: 'Suas informações', details: 'Este navegador lembra se você começou ou pulou a visita, quando possível. A opção de participação escolhida preenche o formulário de contato. Ao enviar o email, você compartilha suas respostas com a IMOBX. Fazer a visita não inscreve você em novidades por email.' },
+      en: { title: 'Discover IMOBX', intro: 'Would you like a guided tour of the project?', take: 'Take the tour', skip: 'Skip', info: 'Your information', details: 'This browser remembers whether you started or skipped the tour when possible. The participation option you select is filled into the contact form. Sending the email shares your answers with IMOBX. Taking the tour does not sign you up for email updates.' },
+      nl: { title: 'Ontdek IMOBX', intro: 'Wil je het project leren kennen met een rondleiding?', take: 'Start de rondleiding', skip: 'Overslaan', info: 'Je gegevens', details: 'Deze browser onthoudt waar mogelijk of je de rondleiding bent gestart of hebt overgeslagen. De gekozen manier om mee te doen wordt ingevuld in het contactformulier. Door de e-mail te versturen deel je je antwoorden met IMOBX. De rondleiding volgen meldt je niet aan voor nieuws per e-mail.' }
     };
     const invite = document.createElement('dialog');
     invite.className = 'tour-invitation';
     invite.setAttribute('aria-labelledby', 'tour-invitation-title');
     invite.setAttribute('aria-describedby', 'tour-invitation-intro');
-    invite.innerHTML = '<div class="tour-invitation-inner"><h2 id="tour-invitation-title"></h2><p id="tour-invitation-intro"></p><div class="tour-invitation-actions"><button type="button" data-invite-take></button><button type="button" data-invite-skip></button></div></div>';
+    invite.innerHTML = '<div class="tour-invitation-inner"><h2 id="tour-invitation-title"></h2><p id="tour-invitation-intro"></p><details class="tour-information"><summary data-invite-info></summary><p data-invite-details></p></details><div class="tour-invitation-actions"><button type="button" data-invite-take></button><button type="button" data-invite-skip></button></div></div>';
     const renderInvite = () => {
       const w = words[language()];
       invite.querySelector('h2').textContent = w.title;
       invite.querySelector('p').textContent = w.intro;
       invite.querySelector('[data-invite-take]').textContent = w.take;
       invite.querySelector('[data-invite-skip]').textContent = w.skip;
+      invite.querySelector('[data-invite-info]').textContent = w.info;
+      invite.querySelector('[data-invite-details]').textContent = w.details;
     };
     const remember = choice => { try { localStorage.setItem(invitationKey, choice); } catch (_) {} };
     invite.querySelector('[data-invite-skip]').addEventListener('click', () => { remember('skipped'); invite.close(); });

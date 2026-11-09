@@ -127,3 +127,8 @@
 .tour-page [data-tour-step]:not(.tour-motion-active) .pop{animation:none;opacity:1;transform:none}
 .tour-page [data-tour-step]:not(.tour-motion-active) .flow{animation:none}
 .tour-page a.tour-cta:hover,.tour-page a.tour-cta:focus-visible{background:#1d5262;color:#fff}
+.tour-information{margin:0 0 20px}
+.tour-information summary{cursor:pointer;color:#193d4e;font-weight:700;min-height:44px;display:list-item;padding:10px 0}
+.tour-invitation .tour-information p{font-size:15px;line-height:1.5;margin:0 0 16px}
+.tour-information summary:focus-visible{outline:3px solid #a84b00;outline-offset:3px}
+.tour-information[open] summary{margin-bottom:8px}
