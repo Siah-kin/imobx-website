@@ -59,3 +59,8 @@
 .tour-page section{margin-top:48px;max-width:720px}
 .tour-page .tour-figure img,.tour-page .tour-figure svg{max-height:340px}
 @media (max-width:480px){.tour-roles{grid-template-columns:1fr}.tour-figure img,.tour-figure svg{max-height:170px}}
+
+/* Review, 9 Nov: links visible on phones, taller dialog, chosen answer visible. */
+.tour-dialog,.tour-dialog-shell{max-height:calc(100dvh - 24px)}
+.tour-roles a.tour-role.is-chosen{background:#276578;color:#fff;border-color:#276578}
+@media (max-width:480px){.tour-figure img,.tour-figure svg{max-height:140px}.tour-dialog-content{padding:18px 20px}.tour-dialog-content h2{font-size:26px;margin-bottom:12px}.tour-dialog-content p{font-size:17px}}
