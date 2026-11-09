@@ -5,7 +5,7 @@
   <link rel="canonical" href="https://imobx.org/"><meta name="description" content="Proposta de piloto de moradia com opção de compra no Rio. Conheça os contratos, custos e decisões em preparação.">
   <meta property="og:image" content="https://imobx.org/assets/community-bay-circles.jpg"><meta property="og:type" content="website"><meta property="og:title" content="IMOBX | Proposta de piloto no Rio"><meta property="og:description" content="Moradia com opção de compra. Contratos, custos e prestação de contas em preparação.">
   <title>IMOBX | Proposta de piloto no Rio</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css"><script src="assets/site.js" defer></script>
-<link rel="stylesheet" href="assets/home-b.css"><link rel="stylesheet" href="assets/tour.css"><script src="assets/tour.js" defer></script></head>
+<link rel="stylesheet" href="assets/home-b.css"><link rel="stylesheet" href="assets/tour.css"><link rel="stylesheet" href="assets/tour-contact.css"><script src="assets/tour-contact.js" defer></script><script src="assets/tour.js" defer></script></head>
 <body>
 <a href="#main" class="skip" data-pt="Pular para o conteúdo" data-en="Skip to content" data-nl="Naar de inhoud">Pular para o conteúdo</a>
 <div class="review" data-pt="Projeto em preparação · atualizado em 24 de outubro de 2026" data-en="Project in preparation · updated 24 October 2026" data-nl="Project in preparation · updated 24 October 2026">Projeto em preparação · atualizado em 24 de outubro de 2026</div>

@@ -19,6 +19,8 @@
   let current = 0;
   let loading = false;
   const returnKey = '__imobxTourReturnCard';
+  const returnRoleKey = '__imobxTourReturnRole';
+  const validRoles = ['resident', 'property', 'professional', 'funding'];
 
   function updateScrollHint() {
     if (!dialog || !dialog.open) return;
@@ -36,7 +38,13 @@
     dialog.querySelectorAll('[data-pt][data-en]').forEach(node => {
       node.textContent = node.dataset[code] || node.dataset.en;
     });
+    dialog.querySelectorAll('img[data-alt-pt][data-alt-en]').forEach(image => {
+      image.alt = image.dataset['alt' + code.charAt(0).toUpperCase() + code.slice(1)] || image.dataset.altEn;
+    });
+    const contactPath = dialog.querySelector('.tour-contact select');
+    if (contactPath && role && !contactPath.value) contactPath.value = role;
     dialog.querySelector('[data-tour-progress]').textContent = words.step(current + 1, steps.length);
+    dialog.querySelector('[data-tour-bar]').style.width = ((current + 1) / steps.length * 100) + '%';
     dialog.querySelector('[data-tour-close]').textContent = words.close;
     dialog.querySelector('[data-tour-back]').textContent = words.back;
     dialog.querySelector('[data-tour-back]').hidden = current === 0;
@@ -47,7 +55,12 @@
       link.href = 'contact.html' + (role ? '?role=' + encodeURIComponent(role) : '') + '#apresentacao';
     });
     dialog.querySelectorAll('a.tour-jobs').forEach(link => { link.hidden = role === 'resident'; });  // a family looking for a home does not need the job link
-    dialog.querySelectorAll('[data-tour-role]').forEach(link => link.classList.toggle('is-chosen', link.dataset.tourRole === role));
+    dialog.querySelectorAll('[data-tour-role]').forEach(link => {
+      const chosen = link.dataset.tourRole === role;
+      link.classList.toggle('is-chosen', chosen);
+      if (chosen) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
     const heading = steps[current].querySelector('h2, h3');
     if (heading) {
       heading.id = 'tour-dialog-heading-' + (current + 1);
@@ -68,7 +81,7 @@
   function makeDialog(sourceSteps, related) {
     const box = document.createElement('dialog');
     box.className = 'tour-dialog';
-    box.innerHTML = '<div class="tour-dialog-shell"><div class="tour-dialog-top"><p class="tour-progress" data-tour-progress aria-live="polite"></p><button type="button" class="tour-close" data-tour-close></button></div><div class="tour-dialog-content" data-tour-content></div><p class="tour-scroll-hint" data-tour-scroll-hint hidden></p><div class="tour-dialog-actions"><button type="button" class="tour-back" data-tour-back></button><button type="button" class="tour-next" data-tour-next></button></div></div>';
+    box.innerHTML = '<div class="tour-dialog-shell"><div class="tour-dialog-top"><p class="tour-progress" data-tour-progress aria-live="polite"></p><button type="button" class="tour-close" data-tour-close></button></div><div class="tour-bar" aria-hidden="true"><span data-tour-bar></span></div><div class="tour-dialog-content" data-tour-content></div><p class="tour-scroll-hint" data-tour-scroll-hint hidden></p><div class="tour-dialog-actions"><button type="button" class="tour-back" data-tour-back></button><button type="button" class="tour-next" data-tour-next></button></div></div>';
     const content = box.querySelector('[data-tour-content]');
     content.addEventListener('scroll', updateScrollHint, { passive: true });
     sourceSteps.forEach(section => {
@@ -79,6 +92,17 @@
       content.appendChild(copy);
     });
     steps = Array.from(content.children);
+    // The final card keeps the founders' story and offers a private conversation.
+    const last = steps[steps.length - 1];
+    const oldContact = last.querySelector('a.tour-cta');
+    const contact = last.querySelector('[data-tour-contact-page]') || document.createElement('div');
+    if (!contact.parentNode) last.appendChild(contact);
+    if (window.IMOBXTourContact && typeof window.IMOBXTourContact.mount === 'function') {
+      try {
+        window.IMOBXTourContact.mount(contact, { role });
+        if (contact.querySelector('form') && oldContact) oldContact.remove();
+      } catch (_) { contact.remove(); /* Preserve the original contact link. */ }
+    }
     if (related) {
       const paragraph = document.createElement('p');
       const link = document.createElement('a');
@@ -99,8 +123,11 @@
     content.addEventListener('click', event => {
       const choice = event.target.closest('[data-tour-role]');
       if (choice) {
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
         role = choice.dataset.tourRole;
+        const contactPath = box.querySelector('.tour-contact select');
+        if (contactPath) contactPath.value = role;
         moveTo(current + 1);
         return;
       }
@@ -114,7 +141,7 @@
       try {
         const state = history.state;
         if (state === null || (typeof state === 'object' && !Array.isArray(state))) {
-          history.replaceState({ ...state, [returnKey]: current }, '');
+          history.replaceState({ ...state, [returnKey]: current, [returnRoleKey]: role }, '');
         }
       } catch (_) { /* Navigation still works when history cannot be updated. */ }
     });
@@ -155,12 +182,54 @@
     const state = history.state;
     if (!state || !Number.isInteger(state[returnKey])) return;
     const index = state[returnKey];
+    role = validRoles.includes(state[returnRoleKey]) ? state[returnRoleKey] : null;
     const rest = { ...state };
     delete rest[returnKey];
+    delete rest[returnRoleKey];
     try { history.replaceState(rest, ''); } catch (_) { /* Ignore if history is unavailable. */ }
     const navigation = performance.getEntriesByType('navigation')[0];
     if (event.persisted || (navigation && navigation.type === 'back_forward')) openTour(index, false);
   });
   document.addEventListener('imobx:languagechange', () => { if (dialog) update(); });
   window.addEventListener('resize', updateScrollHint);
+
+  // The invitation is optional and only shown when browser storage is available.
+  // A fragment is a direct destination, so never cover it with a first-visit prompt.
+  const invitationKey = 'imobx-tour-invitation-v1';
+  let shouldInvite = false;
+  try {
+    const previous = localStorage.getItem(invitationKey);
+    const probe = invitationKey + '-probe';
+    localStorage.setItem(probe, '1');
+    localStorage.removeItem(probe);
+    shouldInvite = !previous && !window.location.hash;
+  } catch (_) { /* Manual tour access remains available. */ }
+  if (shouldInvite) {
+    const words = {
+      pt: { title: 'Conheça a IMOBX', intro: 'Quer conhecer o projeto em uma visita guiada?', take: 'Fazer a visita', skip: 'Pular' },
+      en: { title: 'Discover IMOBX', intro: 'Would you like a guided tour of the project?', take: 'Take the tour', skip: 'Skip' },
+      nl: { title: 'Ontdek IMOBX', intro: 'Wil je het project leren kennen met een rondleiding?', take: 'Start de rondleiding', skip: 'Overslaan' }
+    };
+    const invite = document.createElement('dialog');
+    invite.className = 'tour-invitation';
+    invite.setAttribute('aria-labelledby', 'tour-invitation-title');
+    invite.setAttribute('aria-describedby', 'tour-invitation-intro');
+    invite.innerHTML = '<div class="tour-invitation-inner"><h2 id="tour-invitation-title"></h2><p id="tour-invitation-intro"></p><div class="tour-invitation-actions"><button type="button" data-invite-take></button><button type="button" data-invite-skip></button></div></div>';
+    const renderInvite = () => {
+      const w = words[language()];
+      invite.querySelector('h2').textContent = w.title;
+      invite.querySelector('p').textContent = w.intro;
+      invite.querySelector('[data-invite-take]').textContent = w.take;
+      invite.querySelector('[data-invite-skip]').textContent = w.skip;
+    };
+    const remember = choice => { try { localStorage.setItem(invitationKey, choice); } catch (_) {} };
+    invite.querySelector('[data-invite-skip]').addEventListener('click', () => { remember('skipped'); invite.close(); });
+    invite.querySelector('[data-invite-take]').addEventListener('click', () => { remember('started'); invite.close(); openTour(0, true); });
+    invite.addEventListener('cancel', () => remember('skipped'));
+    invite.addEventListener('close', () => { if (document.activeElement === document.body && opener.isConnected) opener.focus(); });
+    document.addEventListener('imobx:languagechange', renderInvite);
+    document.body.appendChild(invite);
+    renderInvite();
+    try { invite.showModal(); } catch (_) { invite.remove(); }
+  }
 })();

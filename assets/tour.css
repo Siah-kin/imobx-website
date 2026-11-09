@@ -72,3 +72,40 @@
 @media (max-width:480px){.tour-quote p{font-size:17px}}
 
 .tour-links a[hidden]{display:none}
+
+/* A first-visit invitation; the tour link stays available after either choice. */
+.tour-invitation{box-sizing:border-box;width:min(470px,calc(100% - 32px));padding:0;border:1px solid #d9e3e8;background:#fff;color:#193d4e;box-shadow:0 18px 54px rgba(15,44,57,.22)}
+.tour-invitation::backdrop{background:rgba(10,30,39,.55)}
+.tour-invitation-inner{padding:28px}
+.tour-invitation h2{margin:0 0 12px;font-size:clamp(24px,4vw,30px);line-height:1.2}
+.tour-invitation p{font-size:18px;line-height:1.5;margin:0 0 24px}
+.tour-invitation-actions{display:flex;gap:12px;flex-wrap:wrap}
+.tour-invitation button{min-height:48px;padding:10px 20px;border:2px solid #276578;background:white;color:#193d4e;font:inherit;font-weight:700;cursor:pointer}
+.tour-invitation [data-invite-take]{background:#276578;color:white}
+.tour-invitation button:focus-visible{outline:3px solid #a84b00;outline-offset:3px}
+@media(max-width:480px){.tour-invitation-inner{padding:24px}.tour-invitation-actions button{flex:1 1 100%}}
+.tour-roles a.tour-role.is-chosen::after{content:'✓';margin-left:auto;padding-left:12px;font-weight:700}
+
+/* Motion (owner, 9 Nov: "static, monotone"): the drawings play when a chapter opens; a bar shows progress; chapters slide in. */
+.tour-bar{height:4px;background:#d9e3e8}
+.tour-bar span{display:block;height:100%;width:0;background:#b35400;transition:width .4s ease}
+.tour-dialog-content > section:not([hidden]){animation:tourIn .35s ease both}
+@keyframes tourIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.pop{opacity:0;transform-box:fill-box;transform-origin:center;animation:tourPop .55s cubic-bezier(.2,1.4,.4,1) forwards;animation-delay:calc(var(--i) * .35s)}
+@keyframes tourPop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.pop.pulse{animation:tourPop .55s cubic-bezier(.2,1.4,.4,1) forwards,tourPulse 2.4s ease-in-out 1;animation-delay:calc(var(--i) * .35s),calc(var(--i) * .35s + .55s)}
+@keyframes tourPulse{50%{transform:scale(1.06)}}
+.pop.lock{animation:tourLock .6s ease forwards;animation-delay:calc(var(--i) * .35s)}
+@keyframes tourLock{from{opacity:0;transform:translateY(-14px)}60%{opacity:1;transform:translateY(3px)}to{opacity:1;transform:none}}
+.flow{animation:tourFlow 5s linear 1}
+@keyframes tourFlow{to{stroke-dashoffset:-96}}
+@media (prefers-reduced-motion:reduce){
+  .pop,.pop.pulse,.pop.lock{animation:none;opacity:1;transform:none}
+  .flow,.tour-dialog-content > section:not([hidden]){animation:none}
+  .tour-bar span{transition:none}
+}
+
+/* Wait until the illustration enters view on the standalone page. */
+.tour-page [data-tour-step]:not(.tour-motion-active) .pop{animation:none;opacity:1;transform:none}
+.tour-page [data-tour-step]:not(.tour-motion-active) .flow{animation:none}
+.tour-page a.tour-cta:hover,.tour-page a.tour-cta:focus-visible{background:#1d5262;color:#fff}

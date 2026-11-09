@@ -51,62 +51,62 @@ ARROW_DEF = ''
 # Drawings carry no words: the caption under each one is real text that scales and translates (review, 9 Nov).
 
 
+def _g(i, inner, extra=''):
+    """A drawing part that pops in, one after another (CSS in assets/tour.css; still under reduced motion)."""
+    return f'<g class="pop {extra}" style="--i:{i}">{inner}</g>'
+
+
 def svg_bricks():
-    """Rent day: each month, part of the payment counts towards the house. No figures."""
+    """Rent day: each month, part of the payment counts towards the house. Bricks fill in one by one. No figures."""
     cells = ''
     for i in range(12):
         x, y = 140 + (i % 6) * 40, 112 + (i // 6) * 40
-        cells += f'<rect x="{x}" y="{y}" width="32" height="32" rx="4" fill="{TEAL if i < 5 else "#fff"}" stroke="{TEAL}" stroke-width="3"/>'
+        r = f'<rect x="{x}" y="{y}" width="32" height="32" rx="4" fill="{TEAL if i < 5 else "#fff"}" stroke="{TEAL}" stroke-width="3"/>'
+        cells += _g(round(i * 0.7 + 1, 2), r) if i < 5 else r
     return (f'<svg viewBox="0 0 520 220" role="img" aria-hidden="true"><rect width="520" height="220" fill="{PALE}"/>'
             f'<polygon points="118,104 260,30 402,104" fill="{ORANGE}"/><rect x="118" y="104" width="284" height="100" fill="#fff" stroke="{INK}" stroke-width="4"/>'
             + cells + '</svg>')
 
 
 def svg_repair():
-    """1 request, 2 approved and checked, 3 paid and published in the open book."""
-    out = f'<svg viewBox="0 0 520 200" role="img" aria-hidden="true">{ARROW_DEF}<rect width="520" height="200" fill="{PALE}"/>'
-    # 1: a wrench on a card
-    out += f'<rect x="20" y="50" width="130" height="110" rx="10" fill="#fff" stroke="{TEAL}" stroke-width="4"/>'
-    out += f'<path d="M60 125 l35 -35 m-10 -12 a14 14 0 1 0 20 20" stroke="{INK}" stroke-width="7" fill="none" stroke-linecap="round"/>'
-    # 2: two people, one tick
-    out += f'<rect x="195" y="50" width="130" height="110" rx="10" fill="#fff" stroke="{TEAL}" stroke-width="4"/>'
-    out += f'<circle cx="240" cy="92" r="14" fill="{INK}"/><circle cx="282" cy="92" r="14" fill="{TEAL}"/><path d="M236 128 l12 12 l26 -28" stroke="{ORANGE}" stroke-width="7" fill="none" stroke-linecap="round"/>'
-    # 3: open book
-    out += f'<rect x="370" y="50" width="130" height="110" rx="10" fill="{TEAL}"/>'
-    out += f'<path d="M392 80 q43 -14 43 6 q0 -20 43 -6 v60 q-43 -14 -43 6 q0 -20 -43 -6z" fill="#fff"/><path d="M435 86 v60" stroke="{TEAL}" stroke-width="3"/>'
-    out += _arrow(152, 105, 190, 105) + _arrow(327, 105, 365, 105)
-    out += _badge(30, 42, 1) + _badge(205, 42, 2) + _badge(380, 42, 3)
-    return out + '</svg>'
+    """1 request, 2 approved and checked, 3 paid and published in the open book. Lights up in order."""
+    out = f'<svg viewBox="0 0 520 200" role="img" aria-hidden="true"><rect width="520" height="200" fill="{PALE}"/>'
+    c1 = (f'<rect x="20" y="50" width="130" height="110" rx="10" fill="#fff" stroke="{TEAL}" stroke-width="4"/>'
+          f'<path d="M60 125 l35 -35 m-10 -12 a14 14 0 1 0 20 20" stroke="{INK}" stroke-width="7" fill="none" stroke-linecap="round"/>' + _badge(30, 42, 1))
+    c2 = (f'<rect x="195" y="50" width="130" height="110" rx="10" fill="#fff" stroke="{TEAL}" stroke-width="4"/>'
+          f'<circle cx="240" cy="92" r="14" fill="{INK}"/><circle cx="282" cy="92" r="14" fill="{TEAL}"/><path d="M236 128 l12 12 l26 -28" stroke="{ORANGE}" stroke-width="7" fill="none" stroke-linecap="round"/>' + _badge(205, 42, 2))
+    c3 = (f'<rect x="370" y="50" width="130" height="110" rx="10" fill="{TEAL}"/>'
+          f'<path d="M392 80 q43 -14 43 6 q0 -20 43 -6 v60 q-43 -14 -43 6 q0 -20 -43 -6z" fill="#fff"/><path d="M435 86 v60" stroke="{TEAL}" stroke-width="3"/>' + _badge(380, 42, 3))
+    return (out + _g(1, c1) + _g(2.2, _arrow(152, 105, 190, 105)) + _g(3, c2) + _g(4.2, _arrow(327, 105, 365, 105)) + _g(5, c3, 'pulse') + '</svg>')
 
 
 def svg_courtyard():
     """Left: one member, one vote around the shared courtyard. Right: the family's agreement, locked."""
     out = f'<svg viewBox="0 0 520 220" role="img" aria-hidden="true"><rect width="520" height="220" fill="{PALE}"/>'
     out += f'<ellipse cx="150" cy="110" rx="120" ry="78" fill="#fff" stroke="{TEAL}" stroke-width="4" stroke-dasharray="8 8"/>'
-    for x, y in [(70, 80), (150, 50), (230, 80), (230, 140), (150, 170), (70, 140)]:
-        out += f'<circle cx="{x}" cy="{y}" r="20" fill="{TEAL}"/><path d="M{x - 9} {y} l6 6 l12 -13" stroke="#fff" stroke-width="4" fill="none"/>'
+    for i, (x, y) in enumerate([(70, 80), (150, 50), (230, 80), (230, 140), (150, 170), (70, 140)]):
+        out += _g(round(1 + i * 0.5, 2), f'<circle cx="{x}" cy="{y}" r="20" fill="{TEAL}"/><path d="M{x - 9} {y} l6 6 l12 -13" stroke="#fff" stroke-width="4" fill="none"/>')
     out += f'<rect x="120" y="92" width="60" height="36" rx="4" fill="{PALE}" stroke="{TEAL}" stroke-width="2"/>'
     out += f'<polygon points="330,95 410,40 490,95" fill="{ORANGE}"/><rect x="330" y="95" width="160" height="95" fill="#fff" stroke="{INK}" stroke-width="4"/>'
-    out += f'<rect x="394" y="128" width="32" height="30" rx="4" fill="{INK}"/><path d="M401 128 v-9 a9 9 0 0 1 18 0 v9" stroke="{INK}" stroke-width="5" fill="none"/>'
+    out += _g(4.5, f'<rect x="394" y="128" width="32" height="30" rx="4" fill="{INK}"/><path d="M401 128 v-9 a9 9 0 0 1 18 0 v9" stroke="{INK}" stroke-width="5" fill="none"/>', 'lock')
     return out + '</svg>'
 
 
 def svg_token():
     """Self-compounding as a cycle: 1 a trade, 2 a fee, 3 paid work and new houses, 4 the project grows; back to 1."""
-    out = f'<svg viewBox="0 0 520 260" role="img" aria-hidden="true">{ARROW_DEF}<rect width="520" height="260" fill="{PALE}"/>'
+    out = f'<svg viewBox="0 0 520 260" role="img" aria-hidden="true"><rect width="520" height="260" fill="{PALE}"/>'
     nodes = [(260, 55), (430, 130), (260, 205), (90, 130)]
-    out += f'<ellipse cx="260" cy="130" rx="170" ry="75" fill="none" stroke="{TEAL}" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>'
-    out += _arrow(300, 62, 400, 105) + _arrow(400, 158, 300, 200) + _arrow(220, 200, 120, 158) + _arrow(120, 105, 220, 62)
+    out += f'<ellipse class="flow" cx="260" cy="130" rx="170" ry="75" fill="none" stroke="{TEAL}" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>'
+    arrows = [_arrow(300, 62, 400, 105), _arrow(400, 158, 300, 200), _arrow(220, 200, 120, 158), _arrow(120, 105, 220, 62)]
     icons = [
         f'<path d="M240 48 h40 M270 40 l10 8 l-10 8 M280 64 h-40 M250 56 l-10 8 l10 8" stroke="{INK}" stroke-width="5" fill="none" stroke-linecap="round"/>',
         f'<circle cx="430" cy="130" r="20" fill="{ORANGE}"/><text x="430" y="139" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">%</text>',
         f'<polygon points="236,205 260,186 284,205" fill="{ORANGE}"/><rect x="240" y="205" width="40" height="24" fill="#fff" stroke="{INK}" stroke-width="3"/>',
         f'<circle cx="78" cy="128" r="11" fill="{TEAL}"/><circle cx="102" cy="128" r="11" fill="{TEAL}"/><circle cx="90" cy="110" r="11" fill="{INK}"/>',
     ]
-    for (x, y), icon in zip(nodes, icons):
-        out += f'<circle cx="{x}" cy="{y}" r="36" fill="#fff" stroke="{TEAL}" stroke-width="4"/>' + icon
-    for i, (x, y) in enumerate(nodes, 1):
-        out += _badge(x - 34, y - 30, i)
+    for i, ((x, y), icon) in enumerate(zip(nodes, icons)):
+        out += _g(round(1 + i * 1.1, 2), f'<circle cx="{x}" cy="{y}" r="36" fill="#fff" stroke="{TEAL}" stroke-width="4"/>' + icon + _badge(x - 34, y - 30, i + 1))
+        out += _g(round(1.6 + i * 1.1, 2), arrows[i])
     return out + '</svg>'
 
 
@@ -125,7 +125,7 @@ RAFAEL = T('Rafael Britto, cofundador', 'Rafael Britto, co-founder', 'Rafael Bri
 # Chapter: (id, heading, visual, quote, paragraphs, links). quote = (text, who) or None.
 STEPS = [
     ('tour-who', T('Quem é você?', 'Who are you?', 'Wie ben je?'), None, None,
-     [T('Escolha o que mais combina. No fim, levamos você ao lugar certo.', 'Pick the closest one. At the end, we take you to the right place.', 'Kies wat het best past. Aan het eind brengen we je op de juiste plek.')], 'roles'),
+     [T('Escolha o que mais combina. No fim, você pode contar como gostaria de participar.', 'Pick the closest one. At the end, you can tell us how you would like to take part.', 'Kies wat het best past. Aan het eind kun je vertellen hoe je wilt meedoen.')], 'roles'),
     # WHY-01 (owner's approved landing line)
     ('tour-home', T('Um lugar para chamar de lar', 'A place to call home', 'Een plek om je thuis te voelen'), None,
      (T('Construir um lar é uma busca existencial de todo ser humano, onde quer que esteja.', 'Creating a home is an existential quest for every human, wherever you are.', 'Een thuis creëren is een existentiële zoektocht voor ieder mens, waar je ook bent.'), JOHN),
@@ -160,9 +160,9 @@ STEPS = [
      ('img', 'assets/property-1.jpg', 823, 581, T('Modelo 3D dos dois lofts', '3D model of the two lofts', '3D-model van de twee lofts'),
       T('Os lofts que a construtora do Rafael está construindo.', 'The lofts Rafael’s company is building.', 'De lofts die het bouwbedrijf van Rafael bouwt.')),
      (T('Os imóveis nos grandes centros são muito caros, por isso que devemos construir, ao invés de comprar pronto.', 'Properties in large centres are very expensive, which is why we should build, instead of buying ready-made.', 'Woningen in grote steden zijn erg duur, daarom moeten we bouwen in plaats van kant-en-klaar kopen.'), RAFAEL),
-     [T('Rafael é engenheiro civil e tem a sua própria construtora, a Olympus. Os preços dela seguem o índice público de custo da construção do Rio (CUB). Depois do primeiro apartamento, o plano é construir alguns apartamentos de cada vez.',
-        'Rafael is a civil engineer with his own construction company, Olympus. Its prices are tied to Rio’s public building-cost index (CUB). After the first flat, the plan is to build a few flats at a time.',
-        'Rafael is civiel ingenieur met een eigen bouwbedrijf, Olympus. Zijn prijzen volgen de openbare bouwkostenindex van Rio (CUB). Na het eerste appartement is het plan telkens een paar appartementen te bouwen.')],
+     [T('Rafael é engenheiro civil e tem a sua própria construtora, a Olympus. Os preços dela seguem o índice público de custo da construção do Rio (CUB). Depois do primeiro apartamento, o plano é construir cinco apartamentos na primeira fase da obra.',
+        'Rafael is a civil engineer with his own construction company, Olympus. Its prices are tied to Rio’s public building-cost index (CUB). After the first flat, the plan is to build five flats in the first building phase.',
+        'Rafael is civiel ingenieur met een eigen bouwbedrijf, Olympus. Zijn prijzen volgen de openbare bouwkostenindex van Rio (CUB). Na het eerste appartement is het plan om in de eerste bouwfase vijf appartementen te bouwen.')],
      [('transparency.html', T('O que custa uma casa', 'What a house costs', 'Wat een huis kost'))]),
     # VIS-03 (John); the village as Rafael planned it (roadmap)
     ('tour-village', T('A vila que queremos', 'The village we want', 'Het dorp dat we willen'),
@@ -201,9 +201,9 @@ STEPS = [
     # HOW-02 (John), HOW-12 (John), WHA-15 (Rafael)
     ('tour-grow', T('Como a IMOBX cresce?', 'How does IMOBX grow?', 'Hoe groeit IMOBX?'), None,
      (T('Primeiro trabalhamos com provas. E provas geram confiança. E com confiança, dá para atrair mais recursos e crescer.', 'First we work with proof. And proof builds trust. And with trust, you can draw in more funding and scale.', 'Eerst werken we met bewijs. Bewijs schept vertrouwen. En met vertrouwen trek je meer middelen aan en kun je groeien.'), JOHN),
-     [T('Primeiro uma família, depois alguns apartamentos de cada vez, depois proprietários que queiram entrar com as suas casas. Cresce de baixo para cima: não é preciso ter milhões.',
-        'One family first, then a few flats at a time, then owners who want to bring in their own houses. It grows from the bottom up, and it doesn’t take millions.',
-        'Eerst één gezin, dan telkens een paar appartementen, dan eigenaren die hun eigen huis willen inbrengen. Het groeit van onderop, en er zijn geen miljoenen voor nodig.')],
+     [T('Primeiro uma família, depois uma fase de cinco apartamentos, depois proprietários que queiram entrar com as suas casas. Cresce de baixo para cima: não é preciso ter milhões.',
+        'One family first, then a phase of five flats, then owners who want to bring in their own houses. It grows from the bottom up, and it doesn’t take millions.',
+        'Eerst één gezin, dan een fase met vijf appartementen, dan eigenaren die hun eigen huis willen inbrengen. Het groeit van onderop, en er zijn geen miljoenen voor nodig.')],
      [('roadmap.html#stages', T('Onde estamos e o que vem depois', 'Where we are and what comes next', 'Waar we staan en wat er komt'))]),
     # Rafael's cave question (his Q1 story, OK'd 8 Nov); John's lines (About page)
     ('tour-people', T('Quem começou a IMOBX, e por quê?', 'Who started IMOBX, and why?', 'Wie begon IMOBX, en waarom?'), None,
@@ -255,7 +255,9 @@ def build_tour(root, page, version):
         else:
             body += '<p class="tour-links">' + ' '.join(
                 _text('a', l[1], f'href="{escape(l[0], quote=True)}"' + (f' class="{l[2]}"' if len(l) > 2 else '')) for l in links) + '</p>'
+        if ident == 'tour-join':
+            body += '<div data-tour-contact-page></div>'
         body += '</section>'
     body += '</main>'
-    (root / 'tour.html').write_text(page('IMOBX | Take a tour', body, '<link rel="stylesheet" href="assets/tour.css">', version=version,
+    (root / 'tour.html').write_text(page('IMOBX | Take a tour', body, '<link rel="stylesheet" href="assets/tour.css"><link rel="stylesheet" href="assets/tour-contact.css"><script src="assets/tour-contact.js" defer></script>', version=version,
                                          lang='pt-BR', title_pt='IMOBX | Conheça a IMOBX'), encoding='utf-8')
