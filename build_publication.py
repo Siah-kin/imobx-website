@@ -440,7 +440,9 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
             + '</ol></nav>')
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main class="paper guide-paper band-page resources-page" id="main">' + language_controls
-    + translated('Recursos', 'Resources', 'h1') + _res_nav
+    + translated('Documentos e fontes da IMOBX', 'IMOBX documents and sources', 'h1')
+    + translated('Leia o plano completo por conta própria: a proposta, a apresentação para parceiros e o guia de construção, com a fonte de cada número do site.',
+                 'Read the full plan for yourself: the proposal, the presentation for partners and the building guide, with the source of every figure on this site.', 'p', 'class="guide-lead"') + _res_nav
     + resource_section(standalone=True) + '</section>'
     + build_guide.ideas_html + commons_story.introduction(translated)
     + re.sub(r'<section id="people">.*?</section>', '<span id="people"></span>', build_reference.fragment, count=1, flags=re.S).replace(translated('Fontes das pesquisas e dos números.', 'Sources for the research and figures.', 'p'), '')  # owner, 29 Oct: 'remove this'
