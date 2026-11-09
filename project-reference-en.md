@@ -1,6 +1,6 @@
 # Who is preparing IMOBX, and where do the facts come from?
 
-**Version 0.9, 2 November 2026**
+**Version 0.9, 9 November 2026**
 
 ## Who does what, and which roles are still open?
 

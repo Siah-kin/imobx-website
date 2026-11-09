@@ -115,12 +115,13 @@ MENU = [
     ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
         # Owner, 29 Oct: one Resources page, documents first, then ideas, people and sources.
         ('resources.html', 'documents', 'Documentos', 'Documents', 'Project documents'),
-        ('resources.html', 'ideas', 'Ideias por trás da IMOBX', 'Ideas behind IMOBX', 'Why are we doing this?'),
-        ('resources.html', 'sources', 'Fontes', 'Sources', 'Where do the facts come from?'),
+        ('resources.html', 'our-story', 'Fundadores', 'Founders', 'The founders'),
+        ('commons-research.html', '', 'Pesquisa sobre propriedade compartilhada', 'Research on shared ownership', 'Research on shared ownership'),  # owner, 9 Nov: it belongs under Resources
+        ('resources.html', 'sources', 'Fontes', 'Sources', 'Our sources'),
     ]),
 ]
 # Pages without their own menu item light up their parent; the lofts page belongs to Project development.
-MENU_PARENT = {'properties.html': 'roadmap.html', 'token.html': 'blockchain.html'}
+MENU_PARENT = {'properties.html': 'roadmap.html', 'token.html': 'blockchain.html', 'commons-research.html': 'resources.html'}
 # Section addresses other pages link to, kept although they left the menu.
 EXTRA_ANCHORS = [
     ('index.html', 'onde-estamos', 'Where we are now'),
@@ -271,7 +272,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
                'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
                'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html', 'IMOBX | Distributed ledger': 'blockchain.html', 'IMOBX | Project reference': 'reference.html',
                'IMOBX | Renting and buying a home': 'rent-to-own.html',
-               'IMOBX | Take part': 'contact.html', 'IMOBX | About': 'about.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | Self-compounding': 'token.html', 'IMOBX | Ideas behind IMOBX': 'ideas.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
+               'IMOBX | Take part': 'contact.html', 'IMOBX | About': 'about.html', 'IMOBX | Research on shared ownership': 'commons-research.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | Self-compounding': 'token.html', 'IMOBX | Ideas behind IMOBX': 'ideas.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
     document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{esc(description)}">
@@ -317,6 +318,14 @@ RESOURCE_CATALOG = [
      'description_en': 'Housing plans, resident participation and proposed development stages.',
      'meta_pt': f'Inglês · rascunho · {DATE_PT}', 'meta_en': f'English · draft · {DATE_EN}',
      'archive': True, 'links': [('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
+    {'id': 'token-paper', 'pt': 'Documento do token', 'en': 'Token paper', 'version': VERSION,
+     'shelf_pt': 'O token: como funciona e para que serve', 'shelf_en': 'The token: how it works and what it is for',
+     'shelf_description_pt': 'A taxa de cada negociação, para onde ela vai, as quatro regras e os riscos.',
+     'shelf_description_en': 'The fee on each trade, where it goes, the four rules and the risks.',
+     'description_pt': 'Como o token funciona, para que serve e quais são os riscos.',
+     'description_en': 'How the token works, what it is for and what the risks are.',
+     'meta_pt': 'Inglês · rascunho · 9 de novembro de 2026', 'meta_en': 'English · draft · 9 November 2026',
+     'archive': True, 'links': [('token-paper.pdf','PDF','PDF'), ('token-paper.md','Texto editável','Editable text')]},
     {'id': 'transparency', 'pt': 'Financiamento e gastos', 'en': 'Funding and spending', 'version': '0.1',
      'description_pt': 'Fontes de financiamento, despesas previstas e como os participantes poderiam conferir as contas.',
      'description_en': 'Funding sources, planned spending and how participants could check the accounts.',
@@ -351,7 +360,7 @@ def translated(pt, en, tag='span', attributes=''):
 def resource_section(standalone=True):
     """The Documents page (resources.html). Its one caller passes standalone=True."""
     catalog = {item['id']: item for item in RESOURCE_CATALOG}
-    document_ids = ('whitepaper', 'pitchdeck', 'devsheet')
+    document_ids = ('whitepaper', 'pitchdeck', 'devsheet', 'token-paper')
 
     def card(item, level='h3', labelled_by=None):
         name_pt, name_en = item.get('shelf_pt', item['pt']), item.get('shelf_en', item['en'])
@@ -599,6 +608,7 @@ def paper_footer(c, doc):
 for name, content, label, title in [
     ('whitepaper', paper_html, f'IMOBX / PROJECT PROPOSAL / {LABEL_EN}', 'IMOBX project paper v' + VERSION),
     ('devsheet', devsheet_html, f'IMOBX / PILOT AND BUILDING GUIDE / {LABEL_EN}', 'IMOBX pilot and building guide v' + VERSION),
+    ('token-paper', markdown.markdown((ROOT / 'token-paper.md').read_text(), extensions=['tables']), 'IMOBX / TOKEN PAPER / DRAFT 9 NOVEMBER 2026', 'IMOBX token paper, draft 9 November 2026'),
     *[(f'project-reference-{lang}', markdown.markdown((ROOT / f'project-reference-{lang}.md').read_text(), extensions=['tables']),
        f'IMOBX / {lang.upper()} / {LABEL_PT if lang == "pt" else LABEL_EN}', f'IMOBX project reference / {lang.upper()} / v{VERSION}')
       for lang in ['pt', 'en']],
@@ -698,7 +708,7 @@ logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'asse
 archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
         'IMOBX media kit v0.2 / 16 October 2026\nLogo artwork, colours, image sources and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
-        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'roadmap.html', 'transparency.html', 'model-guide.json',
+        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'token-paper.pdf', 'token-paper.md', 'roadmap.html', 'transparency.html', 'model-guide.json',
         'project-reference.json', 'project-reference-pt.md', 'project-reference-en.md', 'publication-manifest.json', 'contact-routes.json',
         'project-reference-pt.pdf', 'project-reference-en.pdf', 'media-kit.md', 'media-kit.zip', 'brand-colors.json', 'DESIGN.md']
         + sorted(str(p.relative_to(ROOT)) for p in ROOT.glob('*.html'))

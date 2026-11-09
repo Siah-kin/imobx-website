@@ -9,13 +9,13 @@
 
 ## Pilot and building guide
 
-**Project proposal · Version 0.9, 2 November 2026**
+**Project proposal · Version 0.9, 9 November 2026**
 
 ### 1. Houses with a path to ownership
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. Under the plan, a family rents a home under an agreement explaining how it becomes the owner. The organization arranges access to property, contracts construction and manages repairs and accounts. The first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
 
-**What exists today.** Rafael’s dated village budget and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
+**What exists today.** Rafael’s September 2026 cost sum for one flat and for five flats and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
 
 **What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, the terms for using each property, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
@@ -46,22 +46,21 @@ This guide explains how a request leads to completed work, a check that it meets
 
 Rafael’s plan brings together 45 m² two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [illustration](properties.html#visao-rafael), made with an image generator, shows the community as planned.
 
-On 30 November 2025, Rafael supplied building calculations using CUB and SINAPI, Brazilian cost references. His revised per-house budget is:
+Rafael worked out the cost of a 45 m² flat at September 2026 prices. He started from CUB-RJ, the public building-cost index for Rio de Janeiro, and added 35% for overheads and his company’s margin:
 
-| Item | USD per house |
+| Item | R$ per flat |
 |---|---:|
-| Land | 5,550 |
-| House construction, 45 square metres | 18,600 |
-| Solar | 1,500 |
-| Shared infrastructure and facilities | 1,500 |
-| Legal and design | 627 |
-| **Total** | **27,777** |
+| Construction, 45 m² × R$2,476 (CUB-RJ, September 2026) | 111,400 |
+| Overheads and margin, 35% | 39,000 |
+| **Building** | **150,400** |
+| Land, up to | 30,000 |
+| **Total with land** | **about 180,000** |
 
-The plan covers at least 36 houses built together over 12 months: **36 × US$27,777 = US$999,972**. These are Rafael’s dated project figures, not a finished-house price published by the indexes. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs, and the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains what CUB covers; neither gives a price for these houses. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs.
+The plan builds five flats at a time on a plot of 200 to 300 m², bought whole for about R$140,000. The first flat needs about R$290,000 and five flats about R$892,000. The CUB rate for a small building may be higher than the one Rafael used. A village of about 36 houses is a later stage and has no budget yet. These are Rafael’s dated project figures, not a finished-flat price published by the indexes. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs, and the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains what CUB covers; neither gives a price for these flats. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs.
 
 ### The separate two-loft case
 
-In January 2026, Rafael’s construction company signed a contract to build two lofts. This is a separate case from the village budget. See the [drawings and supplied photos](properties.html#estudo-lofts).
+In January 2026, Rafael’s construction company signed a contract to build two lofts. This is a separate case from the cost sum for the flats. See the [drawings and supplied photos](properties.html#estudo-lofts).
 
 <div class="pagebreak"></div>
 
@@ -77,7 +76,7 @@ In January 2026, Rafael’s construction company signed a contract to build two 
 
 Under the plan, a family rents the home and pays the agreed monthly amount in reais. Its agreement states the purchase price and how much of each payment counts towards buying the home. Its purchase record shows how much has counted towards buying the home and how much remains to pay.
 
-In the model, a family pays about 60% above the building cost over 15 years; the first household’s exact price and monthly payment, and how much of each payment counts towards buying the home, are agreed with the family. Rafael’s construction budgets show what building costs; each household’s price is set in its own agreement. The family pays in reais and takes part as a member, with no token or crypto wallet needed. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
+The price for the first household and its monthly payment, and how much of each payment counts towards buying the home, are not decided yet. They are agreed in writing with the family before it moves in. Rafael’s construction figures show what building costs; each household’s price is set in its own agreement. The family pays in reais and takes part as a member, with no token or crypto wallet needed. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
 
 Repair charges, missed payments, temporary hardship and leaving each have their own terms. They say what happens to the funding already counted towards buying the home if a family leaves, including any refund and grace period, and they are part of the offer the household assesses before agreeing to move in.
 
@@ -102,7 +101,7 @@ The financial plan needs to show costs and cash through construction, occupancy 
 
 ## 4. Funding construction and growth
 
-A builder needs to know that a house is paid for before work starts. The first house is funded outside the token: once IMOBX’s legal entity is registered, it will run a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria and apply for grants such as Circle’s Developer Grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Donations, grants and service income each keep their agreed use, and housing, wages and any investor payments each need their own approved budget. Construction starts only when a house’s funding is secured.
+A builder needs to know that a house is paid for before work starts. The first house is funded outside the token: once IMOBX’s legal entity is registered, it will run a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria then apply for funding linked to UN Sustainable Development Goal 11 and other grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Donations, grants and service income each keep their agreed use, and housing, wages and any investor payments each need their own approved budget. Construction starts only when a house’s funding is secured.
 
 ### The token’s trading fee
 
@@ -222,7 +221,7 @@ The first houses come first, and the IMOBX token would come at a later stage. Pu
 
 | Area | Current position |
 |---|---|
-| Design and costs | Rafael’s dated village budget and the separate two-loft account are available. |
+| Design and costs | Rafael’s September 2026 cost sum for one flat and for five flats and the separate two-loft account are available. |
 | Property | The first project needs documented ownership or authority to use the site. |
 | Organization | IMOBX’s legal entity is registered first; accountable roles and agreements follow. |
 | Families | Eligibility, affordability, individual terms and shared decision rights need local discussion. |
