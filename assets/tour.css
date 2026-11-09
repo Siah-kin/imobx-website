@@ -70,3 +70,5 @@
 .tour-quote p{margin:0 0 6px;font-size:19px;line-height:1.5;font-weight:700;color:#193d4e}
 .tour-quote cite{font-style:normal;font-size:14px;color:#526571}
 @media (max-width:480px){.tour-quote p{font-size:17px}}
+
+.tour-links a[hidden]{display:none}

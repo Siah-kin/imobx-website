@@ -46,6 +46,7 @@
     dialog.querySelectorAll('a.tour-cta').forEach(link => {
       link.href = 'contact.html' + (role ? '?role=' + encodeURIComponent(role) : '') + '#apresentacao';
     });
+    dialog.querySelectorAll('a.tour-jobs').forEach(link => { link.hidden = role === 'resident'; });  // a family looking for a home does not need the job link
     dialog.querySelectorAll('[data-tour-role]').forEach(link => link.classList.toggle('is-chosen', link.dataset.tourRole === role));
     const heading = steps[current].querySelector('h2, h3');
     if (heading) {

@@ -129,9 +129,9 @@ STEPS = [
     # WHY-01 (owner's approved landing line)
     ('tour-home', T('Um lugar para chamar de lar', 'A place to call home', 'Een plek om je thuis te voelen'), None,
      (T('Construir um lar é uma busca existencial de todo ser humano, onde quer que esteja.', 'Creating a home is an existential quest for every human, wherever you are.', 'Een thuis creëren is een existentiële zoektocht voor ieder mens, waar je ook bent.'), JOHN),
-     [T('A IMOBX está preparando o primeiro projeto no Rio de Janeiro. A família paga a casa todo mês como um aluguel, e aos poucos ela passa a ser sua.',
-        'IMOBX is preparing its first project in Rio de Janeiro. A family pays for the house each month like rent, and slowly it becomes theirs.',
-        'IMOBX bereidt zijn eerste project in Rio de Janeiro voor. Een gezin betaalt het huis elke maand zoals huur, en langzaam wordt het van hen.')],
+     [T('A IMOBX está preparando o primeiro projeto no Rio de Janeiro, para famílias que hoje pagam aluguel e querem ter a casa própria.',
+        'IMOBX is preparing its first project in Rio de Janeiro, for families who rent today and would like to own.',
+        'IMOBX bereidt zijn eerste project in Rio de Janeiro voor, voor gezinnen die nu huren en graag eigenaar willen worden.')],
      [('about.html', T('Por que a IMOBX existe', 'Why IMOBX exists', 'Waarom IMOBX bestaat'))]),
     # SIT-13 as the heading (John); SIT-06 (Rafael)
     ('tour-why', T('Proprietários não conseguem vender. Sonhadores não conseguem comprar.', 'Owners can’t sell. Dreamers can’t buy.', 'Eigenaren kunnen niet verkopen. Dromers kunnen niet kopen.'),
@@ -142,38 +142,36 @@ STEPS = [
         'In 2022 Brazil was short of about 6 million dwellings. Rents have since risen faster than inflation: 9.13% in the 12 months to September 2026, against 4.58%.',
         'In 2022 ontbraken in Brazilië ongeveer 6 miljoen woningen. Sindsdien stijgen de huren sneller dan de inflatie: 9,13% in de 12 maanden tot september 2026, tegen 4,58%.')],
      [('why.html', T('Leia os números', 'Read the numbers', 'Lees de cijfers'))]),
-    # PRO-01 (Rafael, in his own English)
-    ('tour-tenant', T('Um inquilino em Guadalupe', 'A tenant in Guadalupe', 'Een huurder in Guadalupe'), None,
-     (T('Tenho um apartamento com um inquilino. O inquilino ainda não comprou porque o banco pede entrada de 30%. Este poderia ser o nosso piloto.', 'I have an apartment with a tenant in it. The tenant has not yet bought it because the bank asks for a 30% down payment. This could be our pilot.', 'Ik heb een appartement met een huurder erin. De huurder heeft het nog niet gekocht omdat de bank 30% aanbetaling vraagt. Dit zou ons proefproject kunnen zijn.'), RAFAEL),
-     [T('É muito provável que a IMOBX comece por esse apartamento: uma família, antes de qualquer obra nova.',
-        'That flat is most likely where IMOBX starts: one family, before anything new is built.',
-        'Dat appartement is hoogstwaarschijnlijk waar IMOBX begint: één gezin, voordat er iets nieuws wordt gebouwd.')],
+    ('tour-tenant', T('Um apartamento para começar', 'A flat to start with', 'Een appartement om mee te beginnen'), None, None,
+     [T('O Rafael tem um apartamento em Guadalupe, onde uma família mora de aluguel. É muito provável que a IMOBX comece por ele: uma família, antes de qualquer obra nova.',
+        'Rafael has a flat in Guadalupe where a family rents today. It is most likely where IMOBX starts: one family, before anything new is built.',
+        'Rafael heeft een appartement in Guadalupe waar nu een gezin huurt. Daar begint IMOBX hoogstwaarschijnlijk: één gezin, voordat er iets nieuws wordt gebouwd.')],
      [('roadmap.html#homes', T('Onde a primeira família vai morar', 'Where the first family will live', 'Waar het eerste gezin gaat wonen'))]),
     # WHA-05 (John)
     ('tour-rent', T('Dia de aluguel, com um tijolo seu', 'Rent day, with a brick of your own', 'Huurdag, met een eigen steen'),
      ('svg', 'bricks', T('Um exemplo, sem valores reais: a cada mês, uma parte do pagamento conta para a compra.', 'An example, with no real figures: each month, part of the payment counts towards the house.', 'Een voorbeeld, zonder echte bedragen: elke maand telt een deel van de betaling mee voor het huis.')),
      (T('O impacto social é o fato de ele poder ser dono do imóvel quanto mais pagar o aluguel.', 'The social impact is the fact that he can own the property the more that he pays rent.', 'De sociale impact is dat hij meer eigenaar van het huis wordt naarmate hij meer huur betaalt.'), JOHN),
-     [T('Você paga todo mês como paga o aluguel hoje, sem dar entrada. Parte de cada pagamento conta para comprar a casa. O preço, o pagamento e quanto conta ficam combinados por escrito antes de você se mudar.',
-        'You pay each month as you pay rent today, with no down payment. Part of every payment counts towards buying the house. The price, the payment and how much counts are agreed in writing before you move in.',
-        'Je betaalt elke maand zoals je nu huur betaalt, zonder aanbetaling. Een deel van elke betaling telt mee voor de aankoop van het huis. De prijs, de betaling en hoeveel meetelt worden schriftelijk afgesproken voordat je erin trekt.')],
+     [T('Você paga todo mês como paga o aluguel hoje, e propomos que seja sem entrada. Parte de cada pagamento conta para comprar a casa. O preço, o pagamento e quanto conta ficam combinados por escrito antes de você se mudar.',
+        'You pay each month as you pay rent today, and we propose no down payment. Part of every payment counts towards buying the house. The price, the payment and how much counts are agreed in writing before you move in.',
+        'Je betaalt elke maand zoals je nu huur betaalt, en we stellen voor dat het zonder aanbetaling gaat. Een deel van elke betaling telt mee voor de aankoop van het huis. De prijs, de betaling en hoeveel meetelt worden schriftelijk afgesproken voordat je erin trekt.')],
      [('rent-to-own.html', T('Como funciona o aluguel com compra', 'How rent-to-own works', 'Zo werkt huurkoop'))]),
     # HOW-10 (Rafael); Q4 (Olympus may be named); Q10 (index price)
     ('tour-builder', T('Por que construir, em vez de comprar?', 'Why build, instead of buying?', 'Waarom bouwen, in plaats van kopen?'),
      ('img', 'assets/property-1.jpg', 823, 581, T('Modelo 3D dos dois lofts', '3D model of the two lofts', '3D-model van de twee lofts'),
       T('Os lofts que a construtora do Rafael está construindo.', 'The lofts Rafael’s company is building.', 'De lofts die het bouwbedrijf van Rafael bouwt.')),
-     (T('Os imóveis nos grandes centros são muito caros, por isso devemos construir, em vez de comprar pronto.', 'Properties in large centres are very expensive, which is why we should build, instead of buying ready-made.', 'Woningen in grote steden zijn erg duur, daarom moeten we bouwen in plaats van kant-en-klaar kopen.'), RAFAEL),
-     [T('Rafael é engenheiro civil e tem a sua própria construtora, a Olympus. Ela cobra a obra pelo índice público de custo da construção do Rio (CUB). Depois do primeiro apartamento, o plano é construir alguns apartamentos de cada vez.',
-        'Rafael is a civil engineer with his own construction company, Olympus. It charges for building work by Rio’s public building-cost index (CUB). After the first flat, the plan is to build a few flats at a time.',
-        'Rafael is civiel ingenieur met een eigen bouwbedrijf, Olympus. Het rekent de bouw af volgens de openbare bouwkostenindex van Rio (CUB). Na het eerste appartement is het plan telkens een paar appartementen te bouwen.')],
+     (T('Os imóveis nos grandes centros são muito caros, por isso que devemos construir, ao invés de comprar pronto.', 'Properties in large centres are very expensive, which is why we should build, instead of buying ready-made.', 'Woningen in grote steden zijn erg duur, daarom moeten we bouwen in plaats van kant-en-klaar kopen.'), RAFAEL),
+     [T('Rafael é engenheiro civil e tem a sua própria construtora, a Olympus. Os preços dela seguem o índice público de custo da construção do Rio (CUB). Depois do primeiro apartamento, o plano é construir alguns apartamentos de cada vez.',
+        'Rafael is a civil engineer with his own construction company, Olympus. Its prices are tied to Rio’s public building-cost index (CUB). After the first flat, the plan is to build a few flats at a time.',
+        'Rafael is civiel ingenieur met een eigen bouwbedrijf, Olympus. Zijn prijzen volgen de openbare bouwkostenindex van Rio (CUB). Na het eerste appartement is het plan telkens een paar appartementen te bouwen.')],
      [('transparency.html', T('O que custa uma casa', 'What a house costs', 'Wat een huis kost'))]),
     # VIS-03 (John); the village as Rafael planned it (roadmap)
     ('tour-village', T('A vila que queremos', 'The village we want', 'Het dorp dat we willen'),
      ('img', 'assets/homepage.jpg', 1024, 765, T('Ilustração conceitual da primeira vila', 'Concept illustration of the first village', 'Conceptillustratie van het eerste dorp'),
       T('Nosso desenho da primeira vila, feito com um gerador de imagens.', 'Our design for the first village, drawn with an image generator.', 'Ons ontwerp voor het eerste dorp, gemaakt met een beeldgenerator.')),
-     (T('Agora estamos todos fragmentados, mas tenho certeza de que, aos poucos, podemos crescer em comunidades pequenas, mais fortes e resilientes.', 'We are now all fragmented, but I am sure that slowly we can grow into small but stronger and resilient communities.', 'We zijn nu allemaal versnipperd, maar ik weet zeker dat we langzaam kunnen uitgroeien tot kleine, sterkere en veerkrachtige gemeenschappen.'), JOHN),
-     [T('Rafael desenhou a primeira vila com casas de 45 m² em volta de um pátio comum, para os pais verem os filhos brincando. Há um pomar, energia solar nos telhados e salas para estudar.',
-        'Rafael drew the first village as 45 m² houses around a shared courtyard, so parents can see their children play. It has an orchard, solar panels on the roofs and rooms to study in.',
-        'Rafael tekende het eerste dorp als huizen van 45 m² rond een gedeelde binnenplaats, zodat ouders hun kinderen zien spelen. Er is een boomgaard, er liggen zonnepanelen op de daken en er zijn ruimtes om te studeren.')],
+     (T('Agora estamos todos fragmentados, mas tenho certeza de que, aos poucos, podemos crescer em comunidades pequenas, mas mais fortes e resilientes.', 'We are now all fragmented, but I am sure that slowly we can grow into small but stronger and resilient communities.', 'We zijn nu allemaal versnipperd, maar ik weet zeker dat we langzaam kunnen uitgroeien tot kleine maar sterkere en veerkrachtige gemeenschappen.'), JOHN),
+     [T('No plano do Rafael, casas de 45 m² ficam em volta de um pátio comum, para os pais verem os filhos brincando, com um pomar, energia solar nos telhados e salas para estudar.',
+        'In Rafael’s plan, 45 m² houses stand around a shared courtyard, so parents can see their children play, with an orchard, solar panels on the roofs and rooms to study in.',
+        'In het plan van Rafael staan huizen van 45 m² rond een gedeelde binnenplaats, zodat ouders hun kinderen zien spelen, met een boomgaard, zonnepanelen op de daken en ruimtes om te studeren.')],
      [('roadmap.html#village', T('Veja a primeira vila', 'See the first village', 'Bekijk het eerste dorp'))]),
     # HOW-13 (John); governance page (cooperative, vote protection)
     ('tour-courtyard', T('Quem decide?', 'Who decides?', 'Wie beslist?'),
@@ -186,9 +184,9 @@ STEPS = [
     # Owner-approved ledger lead (28 Oct)
     ('tour-books', T('Para onde vão os recursos dos vizinhos?', 'Where does the neighbours’ funding go?', 'Waar gaat de financiering van de buren heen?'),
      ('svg', 'repair', T('1 O pedido · 2 aprovado e conferido · 3 pago e publicado no livro aberto.', '1 The request · 2 approved and checked · 3 paid and published in the open book.', '1 Het verzoek · 2 goedgekeurd en gecontroleerd · 3 betaald en gepubliceerd in het open boek.')), None,
-     [T('Quando vizinhos juntam recursos para construir casas, a primeira pergunta é sempre: para onde vão os recursos? A IMOBX quer que a resposta fique aberta a todos.',
-        'When neighbours pool funding for houses, the first question is always: where does the funding go? IMOBX wants the answer open to everyone.',
-        'Als buren samen financiering inleggen voor huizen, is de eerste vraag altijd: waar gaat de financiering heen? IMOBX wil dat het antwoord voor iedereen open ligt.'),
+     [T('Quando vizinhos juntam recursos para construir casas, a primeira pergunta é sempre: para onde vai isso? A IMOBX quer que a resposta fique aberta a todos.',
+        'When neighbours pool funding for houses, the first question is always: where does it go? IMOBX wants the answer open to everyone.',
+        'Als buren samen financiering inleggen voor huizen, is de eerste vraag altijd: waar gaat het heen? IMOBX wil dat het antwoord voor iedereen open ligt.'),
       T('Veja um reparo. Uma pessoa aprova o serviço e outra confere. Só então ele é pago. No nosso plano, cada pagamento entra num livro de contas aberto com o nome de quem aprovou. Os contratos e os dados pessoais ficam privados.',
         'Take a repair. One person approves the work and another checks it. Only then is it paid. In our plan, each payment goes into an open book with the name of who approved it. Contracts and personal data stay private.',
         'Neem een reparatie. Eén persoon keurt het werk goed en een ander controleert het. Pas dan wordt het betaald. In ons plan komt elke betaling in een open boek met de naam van wie die goedkeurde. Contracten en persoonsgegevens blijven privé.')],
@@ -207,20 +205,19 @@ STEPS = [
         'One family first, then a few flats at a time, then owners who want to bring in their own houses. It grows from the bottom up, and it doesn’t take millions.',
         'Eerst één gezin, dan telkens een paar appartementen, dan eigenaren die hun eigen huis willen inbrengen. Het groeit van onderop, en er zijn geen miljoenen voor nodig.')],
      [('roadmap.html#stages', T('Onde estamos e o que vem depois', 'Where we are and what comes next', 'Waar we staan en wat er komt'))]),
-    # Rafael's cave question (his Q1 story, OK'd 8 Nov); John's line (Resources)
+    # Rafael's cave question (his Q1 story, OK'd 8 Nov); John's lines (About page)
     ('tour-people', T('Quem começou a IMOBX, e por quê?', 'Who started IMOBX, and why?', 'Wie begon IMOBX, en waarom?'), None,
-     (T('Por que ter a própria caverna não é um direito de todos? A IMOBX é a minha resposta a essa pergunta.', 'Why isn’t having one’s own cave a right for everyone? IMOBX is my answer to that question.', 'Waarom is een eigen grot geen recht voor iedereen? IMOBX is mijn antwoord op die vraag.'), RAFAEL),
-     [T('John cresceu como o mais velho de três filhos. Desde 2005, procura formas de as comunidades compartilharem o que pertence a todos. A proposta da IMOBX leva essa ideia à moradia.',
-        'John grew up the oldest of three. Since 2005, he has looked for ways for communities to share what belongs to everyone. The IMOBX proposal brings that idea to housing.',
-        'John groeide op als oudste van drie. Sinds 2005 zoekt hij naar manieren waarop gemeenschappen delen wat van iedereen is. Het voorstel van IMOBX brengt dat idee naar het wonen.')],
+     [(T('Quando a vida aperta, a primeira coisa que queremos é entrar na nossa caverna e nos proteger. Por que ter a própria caverna não é um direito de todos? A IMOBX é a minha resposta a essa pergunta.', 'When life gets hard, the first thing we want is to go into our cave and protect ourselves. Why isn’t having one’s own cave a right for everyone? IMOBX is my answer to that question.', 'Als het leven zwaar wordt, willen we eerst onze grot in om ons te beschermen. Waarom is een eigen grot geen recht voor iedereen? IMOBX is mijn antwoord op die vraag.'), RAFAEL),
+      (T('Desde 2005, procuro formas para que as comunidades compartilhem o que pertence a todos. A proposta da IMOBX leva essa ideia de compartilhar à moradia.', 'Since 2005, I have looked for ways for communities to share what they hold in common. The IMOBX proposal brings that idea of sharing to housing.', 'Sinds 2005 zoek ik naar manieren waarop gemeenschappen delen wat van hen allemaal is. Het voorstel van IMOBX brengt dat idee van delen naar het wonen.'), JOHN)],
+     [],
      [('about.html', T('Sobre a IMOBX', 'About IMOBX', 'Over IMOBX')), ('resources.html', T('Documentos e fontes', 'Documents and sources', 'Documenten en bronnen')), ('commons-research.html', T('A pesquisa sobre propriedade compartilhada', 'The research on shared ownership', 'Het onderzoek naar gedeeld eigendom'))]),
     # ASK-01 (John)
     ('tour-join', T('Sua vez', 'Your turn', 'Jouw beurt'), None,
-     (T('Qualquer pessoa que tenha uma visão parecida com a nossa, entenda o problema e tenha os meios ou a dedicação para resolvê-lo.', 'Whatever person has a very similar kind of vision to ours, understands the problem, and has the means or dedication to solve it.', 'Iedereen die een visie heeft die op de onze lijkt, het probleem begrijpt en de middelen of de toewijding heeft om het op te lossen.'), JOHN),
-     [T('A IMOBX está em preparação, e a sua cooperativa ainda vai ser fundada. Buscamos a primeira família, a primeira casa e as pessoas que vão fundar a cooperativa com a gente.',
-        'IMOBX is in preparation, and its cooperative is still to be founded. We are looking for the first family, the first house and the people who will found the cooperative with us.',
-        'IMOBX is in voorbereiding, en de coöperatie moet nog worden opgericht. We zoeken het eerste gezin, het eerste huis en de mensen die de coöperatie met ons oprichten.')],
-     [('contact.html#apresentacao', T('Apresente-se', 'Introduce yourself', 'Stel jezelf voor'), 'tour-cta'), ('jobs.html', T('Ver a vaga', 'See the open role', 'Bekijk de vacature'))]),
+     (T('Qualquer pessoa que tenha uma visão parecida com a nossa, entenda o problema e tenha os meios ou a dedicação para resolvê-lo. É esse o tipo de pessoa que queremos atrair.', 'Whatever person has a very similar kind of vision to ours, understands the problem, and has the means or dedication to solve it. That’s the type of people we’re trying to attract.', 'Iedereen die een visie heeft die op de onze lijkt, het probleem begrijpt en de middelen of de toewijding heeft om het op te lossen. Dat is het soort mensen dat we willen aantrekken.'), JOHN),
+     [T('A IMOBX está em preparação. Buscamos a primeira família, a primeira casa e as pessoas que vão fundar a cooperativa com a gente.',
+        'IMOBX is in preparation. We are looking for the first family, the first house and the people who will found the cooperative with us.',
+        'IMOBX is in voorbereiding. We zoeken het eerste gezin, het eerste huis en de mensen die de coöperatie met ons oprichten.')],
+     [('contact.html#apresentacao', T('Apresente-se', 'Introduce yourself', 'Stel jezelf voor'), 'tour-cta'), ('jobs.html', T('Ver a vaga', 'See the open role', 'Bekijk de vacature'), 'tour-jobs')]),
 ]
 
 
@@ -240,9 +237,11 @@ def _visual(v):
 def _quote(q):
     if not q:
         return ''
-    text, who = q
-    quoted = tuple(f'“{x}”' for x in text)
-    return '<blockquote class="tour-quote">' + _text('p', quoted) + _text('cite', who) + '</blockquote>'
+    out = ''
+    for text, who in (q if isinstance(q, list) else [q]):
+        quoted = tuple(f'“{x}”' for x in text)
+        out += '<blockquote class="tour-quote">' + _text('p', quoted) + _text('cite', who) + '</blockquote>'
+    return out
 
 
 def build_tour(root, page, version):
