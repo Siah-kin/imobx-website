@@ -9,13 +9,13 @@
 
 ## Pilot and building guide
 
-**Project proposal · Version 0.9, 2 November 2026**
+**Project proposal · Version 0.9, 9 November 2026**
 
 ### 1. Houses with a path to ownership
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. Under the plan, a family rents a home under an agreement explaining how it becomes the owner. The organization arranges access to property, contracts construction and manages repairs and accounts. The first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
 
-**What exists today.** Rafael’s dated village budget and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
+**What exists today.** Rafael’s September 2026 cost sum for one flat and for five flats and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
 
 **What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, the terms for using each property, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
@@ -60,7 +60,7 @@ The plan builds five flats at a time on a plot of 200 to 300 m², bought whole f
 
 ### The separate two-loft case
 
-In January 2026, Rafael’s construction company signed a contract to build two lofts. This is a separate case from the village budget. See the [drawings and supplied photos](properties.html#estudo-lofts).
+In January 2026, Rafael’s construction company signed a contract to build two lofts. This is a separate case from the cost sum for the flats. See the [drawings and supplied photos](properties.html#estudo-lofts).
 
 <div class="pagebreak"></div>
 
@@ -101,7 +101,7 @@ The financial plan needs to show costs and cash through construction, occupancy 
 
 ## 4. Funding construction and growth
 
-A builder needs to know that a house is paid for before work starts. The first house is funded outside the token: once IMOBX’s legal entity is registered, it will run a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria and apply for grants such as Circle’s Developer Grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Donations, grants and service income each keep their agreed use, and housing, wages and any investor payments each need their own approved budget. Construction starts only when a house’s funding is secured.
+A builder needs to know that a house is paid for before work starts. The first house is funded outside the token: once IMOBX’s legal entity is registered, it will run a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria then apply for funding linked to UN Sustainable Development Goal 11 and other grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Donations, grants and service income each keep their agreed use, and housing, wages and any investor payments each need their own approved budget. Construction starts only when a house’s funding is secured.
 
 ### The token’s trading fee
 
@@ -221,7 +221,7 @@ The first houses come first, and the IMOBX token would come at a later stage. Pu
 
 | Area | Current position |
 |---|---|
-| Design and costs | Rafael’s dated village budget and the separate two-loft account are available. |
+| Design and costs | Rafael’s September 2026 cost sum for one flat and for five flats and the separate two-loft account are available. |
 | Property | The first project needs documented ownership or authority to use the site. |
 | Organization | IMOBX’s legal entity is registered first; accountable roles and agreements follow. |
 | Families | Eligibility, affordability, individual terms and shared decision rights need local discussion. |

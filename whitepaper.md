@@ -2,11 +2,11 @@
 
 ## A rent-to-own housing proposal for Rio
 
-**Project paper · Version 0.9, 2 November 2026**
+**Project paper · Version 0.9, 9 November 2026**
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family rents a home, part of each payment counts towards buying it, and the whole home is transferred to the family once the agreed conditions are met. The plan brings together local building work, written agreements, maintenance and accounts people can check.
 
-**What exists today.** Rafael’s November 2025 village budget; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
+**What exists today.** Rafael’s September 2026 cost sum for one flat and for five flats; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
 
 **What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
@@ -72,7 +72,7 @@ These are Rafael’s project figures, not a finished-flat price published by a c
 
 ### The separate two-loft case
 
-In January 2026, Rafael’s construction company signed a contract to build two lofts. This is separate from the village budget. See the [drawings and photos](properties.html#estudo-lofts).
+In January 2026, Rafael’s construction company signed a contract to build two lofts. This is separate from the cost sum for the flats. See the [drawings and photos](properties.html#estudo-lofts).
 
 For the first project, each family’s agreement needs affordable payments in reais and clear rules for price changes. The payment amount and purchase term are open, as the status at the top of this paper says.
 
@@ -97,7 +97,7 @@ Payments credited toward a family’s purchase are a commitment under its agreem
 
 ## 5. Trade fees as supplementary funding
 
-Once IMOBX’s legal entity is registered, it will fund the first house through a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria, together with grants such as Circle’s Developer Grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Founders, partners and donors can add to it through the routes in section 4. We start building a house only when its funding is secured.
+Once IMOBX’s legal entity is registered, it will fund the first house through a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria, then funding linked to UN Sustainable Development Goal 11, and other grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Founders, partners and donors can add to it through the routes in section 4. We start building a house only when its funding is secured.
 
 The IMOBX token would add to the houses budget over time. Each trade of the token would pay a fee in USDC, a digital dollar: 14% on Arctide, an exchange on the Arc network, plus Arctide’s own 0.25%, and 11% on Argus, a second exchange, which keeps 30% of its fee. Buyers’ payments would go into the token’s trading pool, so this fee would be the community’s only income from the token.
 
@@ -225,7 +225,7 @@ Builders, legal advisers and accountants review their own areas. Families help s
 
 ## 12. Risks and what still needs checking
 
-Rafael supplied the November village budget and the January two-loft account, each with its own date and purpose. The designs show buildings as planned. Project updates report donated properties and funding received as they arrive.
+Rafael supplied the September 2026 cost sum for one flat and for five flats, and the January two-loft account, each with its own date and purpose. The designs show buildings as planned. Project updates report donated properties and funding received as they arrive.
 
 The legal registration, property documents, permissions and signed agreements need checking for the chosen project. IMOBX’s connection to a payment service is set up and tested with the first project. Resident voting, reinvestment, who issues the token and which benefits its holders receive are decisions still to be agreed.
 

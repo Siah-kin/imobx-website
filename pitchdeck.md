@@ -2,7 +2,7 @@
 
 A documented rent-to-own housing model for Rio
 
-**Partner discussion draft · Version 0.9, 2 November 2026**
+**Partner discussion draft · Version 0.9, 9 November 2026**
 
 
 

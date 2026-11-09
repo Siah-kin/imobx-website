@@ -47,7 +47,7 @@ On 30 November 2025, Rafael described two-level houses around a shared courtyard
 
 ## 5. Project facts and images
 
-IMOBX is in preparation. Its legal form, the terms for using each property and any token rights remain undecided. No investment, guaranteed return, funding award or regulatory approval is established by these documents.
+IMOBX is in preparation. IMOBX plans to register as a housing cooperative. The terms for using each property and any token rights remain undecided. No investment, guaranteed return, funding award or regulatory approval is established by these documents.
 
 Rafael’s cost sum for a 45 m² flat starts from CUB, the public Rio building-cost index, and comes to about R$180,000 with its share of the land. The [project paper](whitepaper.html#3-what-one-flat-costs-to-build) gives the figures.
 

@@ -525,8 +525,8 @@ def build_guide(root, page, tr, esc, language_controls):
          ('Assim que a cooperativa estiver registrada, ela abre uma campanha em reais numa plataforma brasileira, como a Benfeitoria. O token da IMOBX é uma etapa separada, mais adiante.',
           'Once the cooperative is registered, it runs a campaign in reais on a Brazilian platform such as Benfeitoria. The IMOBX token is a separate, later step.')),
         (('Depois, financiamento ligado ao Objetivo de Desenvolvimento Sustentável 11 da ONU.', 'Second, funding linked to UN Sustainable Development Goal 11.'),
-         ('O ODS 11 trata de cidades e comunidades sustentáveis, e é isso que um bairro cooperativo no Rio quer ser. Este é o segundo caminho mais provável.',
-          'Goal 11 is about sustainable cities and communities, which is what a cooperative neighbourhood in Rio sets out to be. This is the likely second route.')),
+         ('O ODS 11 trata de cidades e comunidades sustentáveis, e é isso que um bairro cooperativo no Rio quer ser. Deve ser o nosso segundo caminho.',
+          'Goal 11 is about sustainable cities and communities, which is what a cooperative neighbourhood in Rio sets out to be. This is likely our second route.')),
         (('Em seguida, outros caminhos que estamos pesquisando.', 'Then, other routes we are researching.'),
          ('Financiadores de desenvolvimento sustentável, programas de desenvolvimento urbano e financiadores do ecossistema cripto.',
           'Sustainable development funders, city development programmes and funders in the crypto ecosystem.')),
@@ -555,7 +555,7 @@ def build_guide(root, page, tr, esc, language_controls):
          ('O advogado confere os contratos das famílias, e o contador organiza como os pagamentos são registrados.', 'The lawyer checks the family agreements, and the accountant sets up how payments are recorded.'),
          ('contratos em que uma família pode confiar, e uma conta bancária para a cooperativa.', 'agreements a family can rely on, and a bank account for the cooperative.')),
         (('O custo atualizado de um apartamento.', 'The updated cost of one flat.'),
-         ('O Rafael está confirmando qual taxa do índice público de custo da construção (CUB) vale para um prédio pequeno de cinco apartamentos.', 'Rafael is confirming which rate of the public building-cost index (CUB) fits a small building of five flats.'),
+         ('O Rafael está confirmando qual padrão do índice público de custo da construção (CUB) vale para um prédio pequeno de cinco apartamentos.', 'Rafael is confirming which standard of the public building-cost index (CUB) fits a small building of five flats.'),
          ('a meta da campanha.', 'the campaign goal.')),
         (('Um terreno para cinco apartamentos.', 'A plot for five flats.'),
          ('Ele procura 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz, para construir cinco apartamentos de cada vez.', 'He is looking for 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz, to build five flats at a time.'),
@@ -564,7 +564,7 @@ def build_guide(root, page, tr, esc, language_controls):
          ('A obra segue enquanto o resto é preparado.', 'The work on site goes on while the rest is prepared.'),
          ('um exemplo real do tipo de construção que a IMOBX planeja.', 'a working example of the kind of building IMOBX plans.')),
     ]:
-        roadmap += ('<li>' + text(head, 'strong') + ' ' + text(body, 'span') + ' <em>' + text(('Isso leva a:', 'This leads to:'), 'span') + ' ' + text(leads, 'span') + '</em></li>')
+        roadmap += ('<li>' + text(head, 'strong') + ' ' + text(body, 'span') + ' <em>' + text(('Resultado:', 'Result:'), 'span') + ' ' + text(leads, 'span') + '</em></li>')
     roadmap += '</ol></section>'
     cases = guide['cases']
     # The answer first (no pilot is confirmed), then what a proposed and a confirmed pilot mean.
@@ -682,8 +682,8 @@ def build_guide(root, page, tr, esc, language_controls):
                 roadmap += text(item, 'li')
         roadmap += '</ul></div></details>'
     roadmap += '</section>'
-    roadmap += '<section class="closing-band" id="help">' + text(('Vamos resolver as perguntas em aberto, como o tipo de organização que a IMOBX vai ser e o primeiro imóvel, com as pessoas que participarem. Se você pode ajudar com uma delas, apresente-se.',
-                                                                   'We’ll settle the open questions, such as what kind of organisation IMOBX will be and the first property, with the people who join us. If you can help with one of them, introduce yourself.'))
+    roadmap += '<section class="closing-band" id="help">' + text(('Vamos resolver as perguntas em aberto, como o primeiro imóvel e o preço para as famílias, com as pessoas que participarem. Se você pode ajudar com uma delas, apresente-se.',
+                                                                   'We’ll settle the open questions, such as the first property and the price for families, with the people who join us. If you can help with one of them, introduce yourself.'))
     roadmap += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
     roadmap += partner_line('roadmap.html') + '</main>'
     (root / 'roadmap.html').write_text(page('IMOBX | Project stages', roadmap,
