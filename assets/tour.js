@@ -27,6 +27,8 @@
     hint.hidden = content.scrollHeight - content.clientHeight - content.scrollTop <= 2;
   }
 
+  let role = null;  // owner, 9 Nov: the answer to 'Who are you?' decides where the last button leads
+
   function update() {
     const code = language();
     const words = labels[code];
@@ -41,6 +43,10 @@
     dialog.querySelector('[data-tour-next]').classList.toggle('is-last', current === steps.length - 1);
     dialog.querySelector('[data-tour-next]').textContent = current === steps.length - 1 ? words.finish : words.next;
     dialog.querySelector('[data-tour-scroll-hint]').textContent = words.scroll;
+    dialog.querySelectorAll('a.tour-cta').forEach(link => {
+      link.href = 'contact.html' + (role ? '?role=' + encodeURIComponent(role) : '') + '#apresentacao';
+    });
+    dialog.querySelectorAll('[data-tour-role]').forEach(link => link.classList.toggle('is-chosen', link.dataset.tourRole === role));
     const heading = steps[current].querySelector('h2, h3');
     if (heading) {
       heading.id = 'tour-dialog-heading-' + (current + 1);
@@ -90,6 +96,13 @@
       else moveTo(current + 1);
     });
     content.addEventListener('click', event => {
+      const choice = event.target.closest('[data-tour-role]');
+      if (choice) {
+        event.preventDefault();
+        role = choice.dataset.tourRole;
+        moveTo(current + 1);
+        return;
+      }
       const link = event.target.closest('a[href]');
       if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey ||
           event.shiftKey || event.altKey || link.hasAttribute('download') ||
