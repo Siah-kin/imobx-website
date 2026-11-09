@@ -27,16 +27,19 @@
     hint.hidden = content.scrollHeight - content.clientHeight - content.scrollTop <= 2;
   }
 
-  let role = null;  // owner, 9 Nov: the answer to 'Who are you?' decides where the last button leads
+  let role = null;
+  let allSteps = [];  // owner, 9 Nov: the answer to 'Who are you?' decides where the last button leads
 
   function update() {
     const code = language();
     const words = labels[code];
-    steps.forEach((step, index) => { step.hidden = index !== current; });
+    allSteps.forEach(step => { step.hidden = true; });
+    steps[current].hidden = false;
     dialog.querySelectorAll('[data-pt][data-en]').forEach(node => {
       node.textContent = node.dataset[code] || node.dataset.en;
     });
     dialog.querySelector('[data-tour-progress]').textContent = words.step(current + 1, steps.length);
+    dialog.querySelector('[data-tour-bar]').style.width = ((current + 1) / steps.length * 100) + '%';
     dialog.querySelector('[data-tour-close]').textContent = words.close;
     dialog.querySelector('[data-tour-back]').textContent = words.back;
     dialog.querySelector('[data-tour-back]').hidden = current === 0;
@@ -68,7 +71,7 @@
   function makeDialog(sourceSteps, related) {
     const box = document.createElement('dialog');
     box.className = 'tour-dialog';
-    box.innerHTML = '<div class="tour-dialog-shell"><div class="tour-dialog-top"><p class="tour-progress" data-tour-progress aria-live="polite"></p><button type="button" class="tour-close" data-tour-close></button></div><div class="tour-dialog-content" data-tour-content></div><p class="tour-scroll-hint" data-tour-scroll-hint hidden></p><div class="tour-dialog-actions"><button type="button" class="tour-back" data-tour-back></button><button type="button" class="tour-next" data-tour-next></button></div></div>';
+    box.innerHTML = '<div class="tour-dialog-shell"><div class="tour-dialog-top"><p class="tour-progress" data-tour-progress aria-live="polite"></p><button type="button" class="tour-close" data-tour-close></button></div><div class="tour-bar" aria-hidden="true"><span data-tour-bar></span></div><div class="tour-dialog-content" data-tour-content></div><p class="tour-scroll-hint" data-tour-scroll-hint hidden></p><div class="tour-dialog-actions"><button type="button" class="tour-back" data-tour-back></button><button type="button" class="tour-next" data-tour-next></button></div></div>';
     const content = box.querySelector('[data-tour-content]');
     content.addEventListener('scroll', updateScrollHint, { passive: true });
     sourceSteps.forEach(section => {
@@ -78,7 +81,8 @@
       copy.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
       content.appendChild(copy);
     });
-    steps = Array.from(content.children);
+    allSteps = Array.from(content.children);
+    steps = allSteps.slice();
     if (related) {
       const paragraph = document.createElement('p');
       const link = document.createElement('a');
@@ -101,6 +105,8 @@
       if (choice) {
         event.preventDefault();
         role = choice.dataset.tourRole;
+        // Owner, 9 Nov: each visitor gets its own journey. A chapter without data-tour-for is for everyone.
+        steps = allSteps.filter(step => !step.dataset.tourFor || step.dataset.tourFor.split(' ').includes(role));
         moveTo(current + 1);
         return;
       }

@@ -82,7 +82,7 @@ TERMS = [
     (('Onde a IMOBX está hoje', 'Where IMOBX stands today'), [
         ('A IMOBX ainda está em preparação, então ainda não há casas para alugar ou comprar.',
          'IMOBX is still in preparation, so there are no houses to rent or buy yet.'),
-        ('Ainda não escolhemos que tipo de organização a IMOBX vai ser.', 'We haven’t yet chosen what kind of organisation IMOBX will be.'),
+        ('Planejamos fundar a IMOBX como uma cooperativa habitacional, que ainda não está registrada.', 'We plan to found IMOBX as a housing cooperative, which is not registered yet.'),
         ('A IMOBX ainda não assinou nenhum contrato.',
          'IMOBX hasn’t signed any contracts yet.'),
         ('Nenhuma autoridade pública aprovou ainda os planos da IMOBX.', 'No public authority has approved IMOBX’s plans yet.'),
@@ -94,11 +94,9 @@ TERMS = [
          'Anything a family is promised, such as a refund, extra time to pay or a discount, counts once it is written into their signed agreement.'),
     ]),
     (('Recursos', 'Funding'), [
-        ('O plano é que os recursos venham de doações e editais, e de investimento se a organização que escolhermos puder aceitar.',
-         'Funding is planned to come from donations and grants, and from investment if the organisation we choose may accept it.'),
+        ('O plano é que os recursos venham primeiro de uma campanha de financiamento coletivo em reais e de editais.',
+         'Funding is planned to come first from a crowdfunding campaign in reais, and from grants.'),
         (('Veja como os recursos seriam gastos em ', 'See how the funding would be spent on '), ('Custos e recursos', 'Costs and funding'), 'transparency.html'),
-        ('Qualquer investimento só seria oferecido de um jeito que a lei brasileira permite, com os direitos do investidor por escrito e sem retorno prometido.',
-         'Any investment would be offered only in a way Brazilian law allows, with the investor’s rights in writing, and with no promised return.'),
         ('Só começamos a construir quando os recursos para isso estiverem no banco.', 'We start building only once the funding for it is in the bank.'),
     ]),
     (('Leis', 'Law'), [
@@ -454,11 +452,13 @@ def build_guide(root, page, tr, esc, language_controls):
                    ('community-dusk-circles.jpg', ('Favelas nos morros ao entardecer, marcadas com círculos', 'Favelas on the hillsides at dusk, marked with circles'))]:
         roadmap += f'<img src="assets/{f}" width="1448" height="1086" loading="lazy" alt="{esc(alt[0])}" data-alt-pt="{esc(alt[0])}" data-alt-en="{esc(alt[1])}" data-alt-nl="{esc(NL_LOOKUP.get(alt[1], alt[1]))}">'
     roadmap += '</div><figcaption>' + text(('Os círculos marcam favelas nos morros, ao redor da baía e ao entardecer.', 'The circles mark favelas on the hillsides, around the bay and at dusk.'), 'span') + '</figcaption></figure>'
-    roadmap += text(('Estamos preparando o primeiro projeto no Rio de Janeiro. Vamos marcar as datas quando tivermos escolhido que tipo de organização a IMOBX vai ser e confirmado o primeiro imóvel.',
-                     'We are preparing the first project in Rio de Janeiro. We’ll set dates once we’ve chosen what kind of organisation IMOBX will be and confirmed the first property.'), 'p', 'class="guide-lead" id="where-we-stand"')
+    roadmap += text(('Estamos preparando o primeiro projeto no Rio de Janeiro. Vamos marcar as datas quando a cooperativa estiver registrada e o primeiro imóvel confirmado.',
+                     'We are preparing the first project in Rio de Janeiro. We’ll set dates once the cooperative is registered and the first property is confirmed.'), 'p', 'class="guide-lead" id="where-we-stand"')
     roadmap += on_this_page([(('Da preparação às primeiras casas', 'From groundwork to the first houses'), 'stages'),
+                             (('Como as primeiras casas serão financiadas', 'How the first houses will be funded'), 'funding'),
+                             (('No que o Rafael está trabalhando agora', 'What Rafael is working on now'), 'rafael-now'),
                              (('Onde a primeira família vai morar', 'Where the first family will live'), 'cases'),
-                             (('Como poderia ser a primeira vila', 'What the first village could look like'), 'village'),
+                             (('A vila que Rafael imagina', 'The village Rafael imagines'), 'village'),
                              (('O que a construtora do Rafael está construindo', 'What Rafael’s company is building'), 'building'), (TERMS_TITLE, 'terms')])
 
 
@@ -475,8 +475,8 @@ def build_guide(root, page, tr, esc, language_controls):
     def icon(key):
         return f'<svg class="path-icon" viewBox="0 0 28 28" aria-hidden="true">{ICONS[key]}</svg>'
     TRACK_LINES = {  # owner, 31 Oct: one line each, taken from the track's own detail
-        'foundation': ('Estamos decidindo que tipo de organização a IMOBX vai ser, como uma cooperativa ou uma empresa. Também estamos organizando os papéis do imóvel, transformando a estimativa do Rafael num orçamento de obra em reais e escrevendo os termos que uma família assina para alugar uma casa e depois comprá-la.',
-                       'We’re deciding what kind of organisation IMOBX will be, such as a cooperative or a company. We’re also getting the property papers in order, turning Rafael’s estimate into a building budget in reais, and writing the terms a family signs to rent a house and then buy it.'),
+        'foundation': ('Estamos preparando o registro da IMOBX como cooperativa habitacional. Também estamos organizando os papéis do imóvel, transformando a estimativa do Rafael num orçamento de obra em reais e escrevendo os termos que uma família assina para alugar uma casa e depois comprá-la.',
+                       'We’re preparing to register IMOBX as a housing cooperative. We’re also getting the property papers in order, turning Rafael’s estimate into a building budget in reais, and writing the terms a family signs to rent a house and then buy it.'),
         'cash-and-charter': ('Os futuros moradores vão ajudar a escrever as regras da casa, e uma regra só começa depois que eles opinarem.',
                              'Future residents will help write the house rules, and a rule starts only once they’ve had their say.'),
         'digital-trial': ('Antes de gastar os recursos de alguém, planejamos fazer um pequeno pagamento de teste e conferir duas coisas: quem o aprovou e se o nosso registro bate com o extrato do banco, para sabermos que a conferência funciona antes de passar valores de verdade.',
@@ -514,6 +514,58 @@ def build_guide(root, page, tr, esc, language_controls):
                      'Under the proposed rules, votes about the token cannot change a family’s housing agreement. The planned agreement would require both the family and IMOBX to sign changes, subject to Brazilian law.')) + '</section>'
 
 
+    # Owner, 9 Nov: the roadmap shows the funding strategy (crowdfunding first, then UN SDG 11, then other routes the
+    # fundraising role researches) and Rafael's progress as a sequence. Draft: ROADMAP_FUNDING_PROGRESS_DRAFT_2026-11-09.md.
+    roadmap += '<section id="funding">' + text(('Como as primeiras casas serão financiadas?', 'How will the first houses be funded?'), 'h2')
+    roadmap += text(('A obra só começa quando o financiamento dela já estiver na conta. Esta é a ordem que seguimos até lá.',
+                     'Building starts once the funding for it is in the bank. This is the order we follow to get there.'), 'p', 'class="answer"')
+    roadmap += '<ol class="funding-routes">'
+    for head, body in [
+        (('Primeiro, uma campanha de financiamento coletivo.', 'First, a crowdfunding campaign.'),
+         ('Assim que a cooperativa estiver registrada, ela abre uma campanha em reais numa plataforma brasileira, como a Benfeitoria. O token da IMOBX é uma etapa separada, mais adiante.',
+          'Once the cooperative is registered, it runs a campaign in reais on a Brazilian platform such as Benfeitoria. The IMOBX token is a separate, later step.')),
+        (('Depois, financiamento ligado ao Objetivo de Desenvolvimento Sustentável 11 da ONU.', 'Second, funding linked to UN Sustainable Development Goal 11.'),
+         ('O ODS 11 trata de cidades e comunidades sustentáveis, e é isso que um bairro cooperativo no Rio quer ser. Deve ser o nosso segundo caminho.',
+          'Goal 11 is about sustainable cities and communities, which is what a cooperative neighbourhood in Rio sets out to be. This is likely our second route.')),
+        (('Em seguida, outros caminhos que estamos pesquisando.', 'Then, other routes we are researching.'),
+         ('Financiadores de desenvolvimento sustentável, programas de desenvolvimento urbano e financiadores do ecossistema cripto.',
+          'Sustainable development funders, city development programmes and funders in the crypto ecosystem.')),
+    ]:
+        roadmap += '<li>' + text(head, 'strong') + ' ' + text(body, 'span') + '</li>'
+    roadmap += '</ol>'
+    roadmap += ('<p>' + text(('A pesquisa e os pedidos de apoio são o trabalho da nossa nova', 'The research and the applications are the work of our new'), 'span') + ' '
+                + text(('vaga de apoio à captação de recursos', 'fundraising support role'), 'a', 'href="jobs.html"') + '.</p>')
+    roadmap += text(('Os próximos passos, em ordem:', 'The next steps, in order:'), 'p', 'class="funding-next"') + '<ol class="funding-steps">'
+    for step in [('Registrar a cooperativa, com a orientação de um advogado independente.', 'Register the cooperative, with an independent lawyer’s advice.'),
+                 ('Escolher a plataforma da campanha e escrever as recompensas.', 'Choose the campaign platform and write the rewards.'),
+                 ('Preencher a vaga de captação e começar por uma lista de programas do ODS 11 e de outros financiadores.', 'Fill the fundraising role, starting with a list of Goal 11 programmes and other funders.'),
+                 ('Definir a meta da campanha a partir do custo atualizado de um apartamento.', 'Set the campaign goal from the updated cost of one flat.'),
+                 ('Abrir a campanha.', 'Open the campaign.')]:
+        roadmap += text(step, 'li')
+    roadmap += '</ol></section>'
+    roadmap += '<section id="rafael-now">' + text(('No que o Rafael está trabalhando agora?', 'What is Rafael working on now?'), 'h2')
+    roadmap += text(('O Rafael é engenheiro civil e tem a sua própria construtora no Rio. Estes são os passos em que ele está, na ordem em que um leva ao outro.',
+                     'Rafael is a civil engineer with his own construction company in Rio. These are the steps he is on, in the order they lead into each other.'), 'p', 'class="answer"')
+    roadmap += '<ol class="rafael-steps">'
+    for head, body, leads in [
+        (('O apartamento de Guadalupe.', 'The Guadalupe flat.'),
+         ('O Rafael aceitou o aluguel com compra, sem entrada, para o apartamento dele, e vai perguntar à família que mora lá se quer participar.', 'Rafael has agreed to rent-to-own with no down payment for his flat, and is asking the family living there whether they want to take part.'),
+         ('um primeiro teste dos termos, antes de construir qualquer coisa nova.', 'a first test of the terms, before anything new is built.')),
+        (('Um advogado independente e um contador.', 'An independent lawyer and an accountant.'),
+         ('O advogado confere os contratos das famílias, e o contador organiza como os pagamentos são registrados.', 'The lawyer checks the family agreements, and the accountant sets up how payments are recorded.'),
+         ('contratos em que uma família pode confiar, e uma conta bancária para a cooperativa.', 'agreements a family can rely on, and a bank account for the cooperative.')),
+        (('O custo atualizado de um apartamento.', 'The updated cost of one flat.'),
+         ('O Rafael está confirmando qual padrão do índice público de custo da construção (CUB) vale para um prédio pequeno de cinco apartamentos.', 'Rafael is confirming which standard of the public building-cost index (CUB) fits a small building of five flats.'),
+         ('a meta da campanha.', 'the campaign goal.')),
+        (('Um terreno para cinco apartamentos.', 'A plot for five flats.'),
+         ('Ele procura 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz, para construir cinco apartamentos de cada vez.', 'He is looking for 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz, to build five flats at a time.'),
+         ('o primeiro prédio novo, quando o financiamento estiver garantido.', 'the first new building, once the funding is in place.')),
+        (('Os dois lofts que a construtora dele está construindo.', 'The two lofts his company is building.'),
+         ('A obra segue enquanto o resto é preparado.', 'The work on site goes on while the rest is prepared.'),
+         ('um exemplo real do tipo de construção que a IMOBX planeja.', 'a working example of the kind of building IMOBX plans.')),
+    ]:
+        roadmap += ('<li>' + text(head, 'strong') + ' ' + text(body, 'span') + ' <em>' + text(('Resultado:', 'Result:'), 'span') + ' ' + text(leads, 'span') + '</em></li>')
+    roadmap += '</ol></section>'
     cases = guide['cases']
     # The answer first (no pilot is confirmed), then what a proposed and a confirmed pilot mean.
     intro_lines = tuple(t.rsplit('. ', 1) for t in cases['intro'])
@@ -527,11 +579,11 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += text(('Como funciona o aluguel com compra para uma família', 'How rent-to-own works for a family'), 'a', 'href="rent-to-own.html"') + '</section>'
 
     # Where it leads, and the builder's work (owner, 28-29 Oct): the biggest section sits at the bottom, clearly the builder's.
-    roadmap += '<section id="village">' + text(('Como poderia ser a primeira vila?', 'What could the first village look like?'), 'h2')
-    roadmap += text(('Rafael planejou a primeira vila com casas de 45 m² em volta de um pátio comum, com energia solar, um pomar e lugares para brincar e estudar.',
-                     'Rafael planned the first village as 45 m² houses around a shared courtyard, with solar power, an orchard and places to play and study.'))
-    roadmap += '<div class="lead-figures"><figure class="lead-figure"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da primeira vila" data-alt-pt="Ilustração conceitual da primeira vila" data-alt-en="Concept illustration of the first village" data-alt-nl="Conceptillustratie van het eerste dorp">'
-    roadmap += '<figcaption>' + text(('Ilustração conceitual da primeira vila, feita com um gerador de imagens.', 'Concept illustration of the first village, made with an image generator.'), 'span') + '</figcaption></figure>'
+    roadmap += '<section id="village">' + text(('Como poderia ser a vila de Rafael, mais adiante?', 'What could Rafael’s village look like, later on?'), 'h2')
+    roadmap += text(('Rafael desenhou uma vila com casas de 45 m² em volta de um pátio comum, com energia solar, um pomar e lugares para brincar e estudar. É uma etapa posterior: os primeiros passos são fases de cinco apartamentos.',
+                     'Rafael designed a village of 45 m² houses around a shared courtyard, with solar power, an orchard and places to play and study. It is a later stage. The first steps are phases of five flats.'))
+    roadmap += '<div class="lead-figures"><figure class="lead-figure"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da vila de Rafael" data-alt-pt="Ilustração conceitual da vila de Rafael" data-alt-en="Concept illustration of Rafael’s village" data-alt-nl="Conceptillustratie van het dorp van Rafael">'
+    roadmap += '<figcaption>' + text(('Ilustração conceitual da vila de Rafael, feita com um gerador de imagens.', 'Concept illustration of Rafael’s village, made with an image generator.'), 'span') + '</figcaption></figure>'
     roadmap += '</div></section>'
     roadmap += '<section id="building">' + text(('O que a construtora do Rafael está construindo?', 'What is Rafael’s company building?'), 'h2')
     roadmap += text(('Em janeiro de 2026, a construtora do Rafael assinou um contrato para construir dois lofts. É uma obra própria da construtora, com projetos e agenda dela. Os lofts são o tipo de casa que a IMOBX quer construir, e as fotos abaixo mostram como a equipe do Rafael trabalha.',
@@ -630,8 +682,8 @@ def build_guide(root, page, tr, esc, language_controls):
                 roadmap += text(item, 'li')
         roadmap += '</ul></div></details>'
     roadmap += '</section>'
-    roadmap += '<section class="closing-band" id="help">' + text(('Vamos resolver as perguntas em aberto, como o tipo de organização que a IMOBX vai ser e o primeiro imóvel, com as pessoas que participarem. Se você pode ajudar com uma delas, apresente-se.',
-                                                                   'We’ll settle the open questions, such as what kind of organisation IMOBX will be and the first property, with the people who join us. If you can help with one of them, introduce yourself.'))
+    roadmap += '<section class="closing-band" id="help">' + text(('Vamos resolver as perguntas em aberto, como o primeiro imóvel e o preço para as famílias, com as pessoas que participarem. Se você pode ajudar com uma delas, apresente-se.',
+                                                                   'We’ll settle the open questions, such as the first property and the price for families, with the people who join us. If you can help with one of them, introduce yourself.'))
     roadmap += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
     roadmap += partner_line('roadmap.html') + '</main>'
     (root / 'roadmap.html').write_text(page('IMOBX | Project stages', roadmap,
@@ -767,6 +819,19 @@ def build_guide(root, page, tr, esc, language_controls):
               + '</figure></section>')  # caption removed (owner, 29 Oct: it only described the drawing)
     ideas += '<section id="our-story">' + '<svg class="iceberg-water story-water" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0,20 C80,4 160,36 250,20 S420,4 500,20 S670,36 750,20 S920,4 1000,20"/></svg>' + text(('Os fundadores', 'The founders'), 'h2')
     # The iceberg's waterline introduces the founders; their own accounts follow without an editorial preamble.
+    ideas += text(('Rafael, engenheiro civil', 'Rafael, civil engineer'), 'h3')
+    # Owner, 8 Nov: Rafael's bio follows his own story (Q1, 6 Nov): master's paused after the first year, no sales career.
+    # Left out until he agrees: his worries, Dr. Cavalieri's name and the army unit.
+    ideas += text(('Minha infância me ensinou cedo o valor de cada centavo e de um teto seguro. Meu pai foi ausente, e minha mãe sustentava a casa trabalhando de 70 a 80 horas por semana para criar três filhos. Aos 7 anos, eu já ia sozinho ao mercado fazer pequenas compras, e tive que aprender números decimais antes da hora só para conferir o troco. Aos 10, fazia bicos para os vizinhos: ia ao mercado, levava as compras até a porta, ganhava um ou dois reais e guardava. Eu sempre guardei.',
+                   'My childhood taught me early the value of every cent and of a safe roof. My father was absent, and my mother supported the household working 70 to 80 hours a week to raise three children. At 7, I was already going to the market on my own to do small shopping, and I had to learn decimals ahead of time just to check the change. At 10, I did odd jobs for the neighbours: I’d go to the market, carry their groceries to their door, earn a real or two, and save it. I always saved.'))
+    ideas += text(('Aos 14, entrei no CAMP (Círculo dos Amigos do Menino Patrulheiro), um programa que prepara jovens de famílias pobres para o trabalho, e consegui o meu primeiro emprego, como aprendiz de produção numa fábrica de dobradiças, onde fiquei até os 19. Sem perceber, aquele foi o meu primeiro contato com a construção civil. Nesse período, também servi nas Forças Armadas como soldado. Quando terminei o serviço militar, decidi que não ia continuar como auxiliar de produção: eu queria crescer.',
+                   'At 14, I joined CAMP (Círculo dos Amigos do Menino Patrulheiro), a programme that prepares young people from poor families for work, and I got my first job as a production trainee at a hinge factory, where I stayed until I was 19. Without realising it, that was my first contact with civil construction. During that period, I also served in the Armed Forces as a soldier. When I finished military service, I decided I would not stay a production assistant: I wanted to grow.'))
+    ideas += text(('Comecei Matemática na Universidade Gama Filho e estudei até o 6º período, mas não me via como professor, e também não podia pagar as mensalidades. Prestei vestibular para uma universidade pública e, vindo de escolas públicas, passei para Engenharia Civil, graças ao meu amor pelos livros, que me deu o que a sala de aula não deu. Tornei-me engenheiro civil. Entrei no mestrado em Estruturas da Faculdade de Engenharia da UERJ e concluí o primeiro ano, mas tive que interrompê-lo por dificuldades financeiras.',
+                   'I began Mathematics at Universidade Gama Filho and studied through the 6th semester, but I didn’t see myself as a teacher, and I also couldn’t afford the fees. I applied to a public university and, coming from public schools, I passed the entrance exam for Civil Engineering, thanks to my love of books, which gave me what the classroom did not. I became a civil engineer. I was admitted to the master’s in Structures at UERJ’s Faculty of Engineering and completed the first year, then had to pause it due to financial difficulties.'))
+    ideas += text(('Desde o início da graduação, em 2013, estudo o mercado imobiliário. Fundei a Construtora Olympus olhando para um problema que conheço de perto: o Brasil valoriza os muito qualificados e precisa da mão de obra braçal, mas deixa de lado quem está no meio.',
+                   'Since the start of my degree, in 2013, I have studied the real-estate market. I founded Construtora Olympus looking at a problem I know firsthand: Brazil values the highly qualified and needs manual labour, but leaves aside those in the middle.'))
+    ideas += text(('Nunca desisti de um sonho que carrego desde a faculdade: construir boas moradias, de padrão modesto ou acessível, para que as famílias mais pobres possam de novo realizar o sonho da casa própria. A pergunta que não sai da minha cabeça é simples: por que ter a própria caverna não é um direito de todos? A IMOBX é a minha resposta a essa pergunta.',
+                   'I never gave up a dream I have carried since university: to build good homes, of modest or affordable standard, so that the poorest families can once again fulfil the dream of owning their own home. The question that won’t leave my mind is simple: why isn’t having one’s own cave a right for everyone? IMOBX is my answer to that question.'))
     ideas += text(('John', 'John'), 'h3')
     ideas += text(('Hoje, trabalho com Rafael Britto, que traz experiência em construção no Rio. Compartilhamos uma pergunta: como uma família pode chegar à casa própria enquanto os vizinhos cuidam dos espaços que dividem?',
                    'Today, I work with Rafael Britto, who brings construction experience in Rio. We share a question: how can a family find a path to owning a home while neighbours care for the places they share?'))
@@ -830,19 +895,6 @@ def build_guide(root, page, tr, esc, language_controls):
     ideas += text(('Em 2025, esses caminhos se juntaram. Estou construindo o SIAH Protocol para guardar um registro de contribuições que outras pessoas confirmam, para que uma comunidade lembre quem ajudou quando uma campanha termina. A proposta da IMOBX leva essa ideia de compartilhar à moradia: famílias poderiam caminhar para ser donas da própria casa, num bairro que administram juntas. Hoje, agentes de IA que escrevem código fazem boa parte do que antes exigia um diretor de tecnologia e uma equipe de desenvolvimento. Ter estado nos ombros de gigantes, sabendo por dentro o que fez lançamentos darem certo ou errado, é o que eu trago para um projeto de tokenização como a IMOBX.',
                    'In 2025, these threads came together. I’m building SIAH Protocol to keep a record of contributions confirmed by other people, so a community remembers who helped after a campaign ends. The IMOBX proposal brings that idea of sharing to housing: families could move towards owning their house in a neighbourhood they run together. Today, AI coding agents can do much of what once took a CTO and a development team. Having stood on the shoulders of giants, knowing from the inside what made launches succeed or fail, is what I bring to a tokenization project like IMOBX.'))
     ideas += '</div></details>'
-    ideas += text(('Rafael', 'Rafael'), 'h3')
-    # Owner, 8 Nov: Rafael's bio follows his own story (Q1, 6 Nov): master's paused after the first year, no sales career.
-    # Left out until he agrees: his worries, Dr. Cavalieri's name and the army unit.
-    ideas += text(('Minha infância me ensinou cedo o valor de cada centavo e de um teto seguro. Meu pai foi ausente, e minha mãe sustentava a casa trabalhando de 70 a 80 horas por semana para criar três filhos. Aos 7 anos, eu já ia sozinho ao mercado fazer pequenas compras, e tive que aprender números decimais antes da hora só para conferir o troco. Aos 10, fazia bicos para os vizinhos: ia ao mercado, levava as compras até a porta, ganhava um ou dois reais e guardava. Eu sempre guardei.',
-                   'My childhood taught me early the value of every cent and of a safe roof. My father was absent, and my mother supported the household working 70 to 80 hours a week to raise three children. At 7, I was already going to the market on my own to do small shopping, and I had to learn decimals ahead of time just to check the change. At 10, I did odd jobs for the neighbours: I’d go to the market, carry their groceries to their door, earn a real or two, and save it. I always saved.'))
-    ideas += text(('Aos 14, entrei no CAMP (Círculo dos Amigos do Menino Patrulheiro), um programa que prepara jovens de famílias pobres para o trabalho, e consegui o meu primeiro emprego, como aprendiz de produção numa fábrica de dobradiças, onde fiquei até os 19. Sem perceber, aquele foi o meu primeiro contato com a construção civil. Nesse período, também servi nas Forças Armadas como soldado. Quando terminei o serviço militar, decidi que não ia continuar como auxiliar de produção: eu queria crescer.',
-                   'At 14, I joined CAMP (Círculo dos Amigos do Menino Patrulheiro), a programme that prepares young people from poor families for work, and I got my first job as a production trainee at a hinge factory, where I stayed until I was 19. Without realising it, that was my first contact with civil construction. During that period, I also served in the Armed Forces as a soldier. When I finished military service, I decided I would not stay a production assistant: I wanted to grow.'))
-    ideas += text(('Comecei Matemática na Universidade Gama Filho e estudei até o 6º período, mas não me via como professor, e também não podia pagar as mensalidades. Prestei vestibular para uma universidade pública e, vindo de escolas públicas, passei para Engenharia Civil, graças ao meu amor pelos livros, que me deu o que a sala de aula não deu. Tornei-me engenheiro civil. Entrei no mestrado em Estruturas da Faculdade de Engenharia da UERJ e concluí o primeiro ano, mas tive que interrompê-lo por dificuldades financeiras.',
-                   'I began Mathematics at Universidade Gama Filho and studied through the 6th semester, but I didn’t see myself as a teacher, and I also couldn’t afford the fees. I applied to a public university and, coming from public schools, I passed the entrance exam for Civil Engineering, thanks to my love of books, which gave me what the classroom did not. I became a civil engineer. I was admitted to the master’s in Structures at UERJ’s Faculty of Engineering and completed the first year, then had to pause it due to financial difficulties.'))
-    ideas += text(('Desde o início da graduação, em 2013, estudo o mercado imobiliário. Fundei a Construtora Olympus olhando para um problema que conheço de perto: o Brasil valoriza os muito qualificados e precisa da mão de obra braçal, mas deixa de lado quem está no meio.',
-                   'Since the start of my degree, in 2013, I have studied the real-estate market. I founded Construtora Olympus looking at a problem I know firsthand: Brazil values the highly qualified and needs manual labour, but leaves aside those in the middle.'))
-    ideas += text(('Nunca desisti de um sonho que carrego desde a faculdade: construir boas moradias, de padrão modesto ou acessível, para que as famílias mais pobres possam de novo realizar o sonho da casa própria. A pergunta que não sai da minha cabeça é simples: por que ter a própria caverna não é um direito de todos? A IMOBX é a minha resposta a essa pergunta.',
-                   'I never gave up a dream I have carried since university: to build good homes, of modest or affordable standard, so that the poorest families can once again fulfil the dream of owning their own home. The question that won’t leave my mind is simple: why isn’t having one’s own cave a right for everyone? IMOBX is my answer to that question.'))
     ideas += text(('Como nos conhecemos', 'How we met'), 'h3')
     ideas += text(('Conheci Rafael pela Ether Vista, hoje chamada Arctide, onde nós dois tínhamos o token VISTA. Rafael chegou por uma campanha brasileira, com a grande comunidade brasileira que hoje, junto com uma internacional, é a principal comunidade por trás da Ether Vista. Eu cheguei pelo primeiro token lançado na Ether Vista, que me contratou como gerente de campanha de embaixadores. Esse trabalho me ensinou as bases do projeto, e decidi liderar uma retomada pela comunidade e ajudar a desenhar um modelo de negócio adequado. Foi por isso que Rafael me perguntou se eu o ajudaria a criar um token para a IMOBX e lançá-lo na Arctide. Hoje estou ajudando Rafael a fundar a IMOBX, porque precisamos de ferramentas melhores para nos organizar e levar recursos para onde fazem diferença.',
                    'Rafael and I met through Ether Vista, now called Arctide, where we both held its VISTA token. Rafael came in through a Brazilian campaign, with the large Brazilian community that is now, together with an international one, the main community behind Ether Vista. I came in through the first token launched on Ether Vista, which hired me as its ambassador campaign manager. That work taught me the foundations of the project, and I decided to lead a community takeover and help design a proper business model. That is why Rafael asked me whether I would help him build a token for IMOBX and launch it on Arctide. Now I’m helping him found IMOBX, because we need better tools to organise ourselves and direct resources where they make a difference.'))

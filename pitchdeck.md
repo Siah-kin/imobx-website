@@ -2,7 +2,7 @@
 
 A documented rent-to-own housing model for Rio
 
-**Partner discussion draft · Version 0.9, 2 November 2026**
+**Partner discussion draft · Version 0.9, 9 November 2026**
 
 
 
@@ -46,23 +46,23 @@ Source: [UN-Habitat: adequate housing](https://unhabitat.org/11-1-adequate-housi
 
 
 
-## 3. Rafael has supplied a building budget
+## 3. Rafael has worked out what one flat costs
 
-His US$27,777 per-house plan uses CUB and SINAPI, Brazilian building-cost references.
-
-
-
-- Land US$5,550 · construction US$18,600 · solar US$1,500.
-
-- Shared works US$1,500 · design and legal work US$627.
-
-- The village plan assumes at least 36 houses built together.
+His sum starts from CUB, the public Rio building-cost index: about R$180,000 for a 45 m² flat with its share of the land.
 
 
 
-Source: [Whitepaper, section 3: the costs](whitepaper.html#3-the-cost-proposal-already-supplied). Shows how Rafael supplied these figures.
+- Building R$150,400 (R$111,400 from CUB plus 35% for overheads and margin) · land up to R$30,000.
 
-**Presenter notes:** On 30 November 2025 Rafael showed a US$21,883.86 construction calculation plus land, then the revised US$27,777 budget. Direct purchasing and shared costs form part of the plan. Thirty-six houses total US$999,972, with a proposed 12-month program. These are Rafael’s budget figures, not an index-published finished-home price. Track dates, included work, prices in reais and actual invoices.
+- Five flats at a time on one plot, bought whole for about R$140,000.
+
+- First flat about R$290,000; five flats about R$892,000.
+
+
+
+Source: [Whitepaper, section 3: the costs](whitepaper.html#3-what-one-flat-costs-to-build). Shows how Rafael supplied these figures.
+
+**Presenter notes:** In September 2026 Rafael worked out the cost of a 45 m² flat: 45 × R$2,476 (CUB-RJ) = R$111,400, plus 35% for overheads and margin = R$150,400, plus land of up to R$30,000. The CUB rate for a small building may be higher. The plot for five flats is bought whole, for about R$140,000. A village of about 36 houses is a later stage and has no budget yet. These are Rafael’s figures, not an index-published finished-flat price. Track dates, included work, prices in reais and actual invoices.
 
 
 
@@ -80,7 +80,7 @@ The household could see what it has paid towards the purchase and how much remai
 
 
 
-**Presenter notes:** The first houses are still being planned. A family pays about 60% above the building cost over 15 years; each family’s monthly payment is agreed with it. How much of each payment would count towards buying it also remains to be agreed. Rafael’s village budget and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
+**Presenter notes:** The first flats are still being planned. The price for each family and its monthly payment are not decided yet; both are agreed with the family in writing. How much of each payment would count towards buying it also remains to be agreed. Rafael’s cost sum and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
 
 
 

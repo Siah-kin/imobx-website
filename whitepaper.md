@@ -2,11 +2,11 @@
 
 ## A rent-to-own housing proposal for Rio
 
-**Project paper · Version 0.9, 2 November 2026**
+**Project paper · Version 0.9, 9 November 2026**
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family rents a home, part of each payment counts towards buying it, and the whole home is transferred to the family once the agreed conditions are met. The plan brings together local building work, written agreements, maintenance and accounts people can check.
 
-**What exists today.** Rafael’s November 2025 village budget; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
+**What exists today.** Rafael’s September 2026 cost sum for one flat and for five flats; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
 
 **What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
@@ -50,26 +50,29 @@ Under the plan, residents agree who cares for shared spaces, how study rooms are
 
 <div class="pagebreak"></div>
 
-## 3. The cost proposal already supplied
+## 3. What one flat costs to build
 
-Rafael prepared a **US$27,777 budget per 45 m² house** using CUB and SINAPI, Brazilian building-cost references, and his purchasing and construction plan. On 30 November 2025, he showed a US$21,883.86 construction calculation plus US$5,550 for land. He then supplied this revised budget:
+Rafael, the builder among our founders, worked out the cost of a 45 m² flat at September 2026 prices. He started from CUB-RJ, the public building-cost index for Rio de Janeiro, at R$2,476 a square metre: 45 m² × R$2,476 = R$111,400. He added 35% for overheads and his company’s margin, which brings the building to **R$150,400**. The land adds up to R$30,000, so one flat costs **about R$180,000**.
 
-| Item | Rafael’s budget, USD per house |
+| Item | Rafael’s sum, R$ per flat |
 |---|---:|
-| Land | 5,550 |
-| House construction, 45 square metres | 18,600 |
-| Solar | 1,500 |
-| Shared infrastructure and facilities | 1,500 |
-| Legal and design | 627 |
-| **Total** | **27,777** |
+| Construction, 45 m² × R$2,476 (CUB-RJ, September 2026) | 111,400 |
+| Overheads and margin, 35% | 39,000 |
+| **Building** | **150,400** |
+| Land, up to | 30,000 |
+| **Total with land** | **about 180,000** |
 
-His plan calls for at least 36 houses built together: **US$999,972 over 12 months**. Buying directly and sharing building work and facilities are part of the savings plan. Each actual build must record its price date, quantities, included work, costs in reais and invoices.
+The rate Rafael used is the CUB rate for an eight-storey building. The rate for a small building may be higher. If it is, the total rises.
 
-These are Rafael’s project figures, not a finished-house price published by a cost index. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs; a specific budget still needs its own location, date and scope. CUB leaves out some site works, connections, design and builder payments, as the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains. A saving has to be explained through the work and purchasing plan; deducting a presumed profit percentage does not prove it.
+Rafael plans to build five flats at a time on a plot of 200 to 300 m², bought whole for about R$140,000 (about R$700 a square metre). He is looking at areas such as Anchieta, Pavuna, Bangu and Santa Cruz. The first flat therefore needs about **R$290,000** (R$150,400 plus the plot), and five flats about **R$892,000** (5 × R$150,400 plus the plot). A village of about 36 houses around a shared courtyard is Rafael’s idea for a later stage. It has no budget yet.
+
+Each actual build must record its price date, quantities, included work, costs in reais and invoices. The price for each family and its monthly payment are not decided yet. They are agreed in writing with the family before it moves in.
+
+These are Rafael’s project figures, not a finished-flat price published by a cost index. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs; a specific budget still needs its own location, date and scope. CUB leaves out some site works, connections, design and builder payments, as the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains.
 
 ### The separate two-loft case
 
-In January 2026, Rafael’s construction company signed a contract to build two lofts. This is separate from the village budget. See the [drawings and photos](properties.html#estudo-lofts).
+In January 2026, Rafael’s construction company signed a contract to build two lofts. This is separate from the cost sum for the flats. See the [drawings and photos](properties.html#estudo-lofts).
 
 For the first project, each family’s agreement needs affordable payments in reais and clear rules for price changes. The payment amount and purchase term are open, as the status at the top of this paper says.
 
@@ -94,7 +97,7 @@ Payments credited toward a family’s purchase are a commitment under its agreem
 
 ## 5. Trade fees as supplementary funding
 
-Once IMOBX’s legal entity is registered, it will fund the first house through a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria, together with grants such as Circle’s Developer Grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Founders, partners and donors can add to it through the routes in section 4. We start building a house only when its funding is secured.
+Once IMOBX’s legal entity is registered, it will fund the first house through a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria, then funding linked to UN Sustainable Development Goal 11, and other grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Founders, partners and donors can add to it through the routes in section 4. We start building a house only when its funding is secured.
 
 The IMOBX token would add to the houses budget over time. Each trade of the token would pay a fee in USDC, a digital dollar: 14% on Arctide, an exchange on the Arc network, plus Arctide’s own 0.25%, and 11% on Argus, a second exchange, which keeps 30% of its fee. Buyers’ payments would go into the token’s trading pool, so this fee would be the community’s only income from the token.
 
@@ -222,7 +225,7 @@ Builders, legal advisers and accountants review their own areas. Families help s
 
 ## 12. Risks and what still needs checking
 
-Rafael supplied the November village budget and the January two-loft account, each with its own date and purpose. The designs show buildings as planned. Project updates report donated properties and funding received as they arrive.
+Rafael supplied the September 2026 cost sum for one flat and for five flats, and the January two-loft account, each with its own date and purpose. The designs show buildings as planned. Project updates report donated properties and funding received as they arrive.
 
 The legal registration, property documents, permissions and signed agreements need checking for the chosen project. IMOBX’s connection to a payment service is set up and tested with the first project. Resident voting, reinvestment, who issues the token and which benefits its holders receive are decisions still to be agreed.
 

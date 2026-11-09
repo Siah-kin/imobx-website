@@ -1,6 +1,6 @@
 # Quem está preparando a IMOBX, e de onde vêm as informações?
 
-**Versão 0.9, 2 de novembro de 2026**
+**Versão 0.9, 9 de novembro de 2026**
 
 ## Quem faz o quê, e quais funções ainda estão vagas?
 
