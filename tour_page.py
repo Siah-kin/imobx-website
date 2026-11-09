@@ -307,7 +307,9 @@ def build_tour(root, page, version):
         else:
             body += '<p class="tour-links">' + ' '.join(
                 _text('a', l[1], f'href="{escape(l[0], quote=True)}"' + (f' class="{l[2]}"' if len(l) > 2 else '')) for l in links) + '</p>'
+        if ident == 'tour-join':
+            body += '<div data-tour-contact-page></div>'
         body += '</section>'
     body += '</main>'
-    (root / 'tour.html').write_text(page('IMOBX | Take a tour', body, '<link rel="stylesheet" href="assets/tour.css">', version=version,
+    (root / 'tour.html').write_text(page('IMOBX | Take a tour', body, '<link rel="stylesheet" href="assets/tour.css"><link rel="stylesheet" href="assets/tour-contact.css"><script src="assets/tour-contact.js" defer></script>', version=version,
                                          lang='pt-BR', title_pt='IMOBX | Conheça a IMOBX'), encoding='utf-8')

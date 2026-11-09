@@ -1,0 +1,12 @@
+.tour-contact { display: grid; gap: 2rem; }
+.tour-contact h2 { margin: 0 0 .65rem; }
+.tour-contact p { margin: 0 0 1rem; }
+.tour-contact form { display: grid; gap: .55rem; }
+.tour-contact label { font-weight: 600; margin-top: .5rem; }
+.tour-contact input, .tour-contact select, .tour-contact textarea { width: 100%; box-sizing: border-box; font: inherit; color: inherit; background: #fff; border: 1px solid #777; border-radius: .3rem; padding: .7rem; }
+.tour-contact textarea { resize: vertical; }
+.tour-contact :is(input, select, textarea, button):focus-visible { outline: 3px solid #235a50; outline-offset: 2px; }
+.tour-contact .tour-contact-note { font-size: .9rem; margin: .4rem 0; }
+.tour-contact button { justify-self: start; font: inherit; font-weight: 600; color: #fff; background: #235a50; border: 0; border-radius: .3rem; padding: .75rem 1.2rem; cursor: pointer; }
+
+.tour-contact [hidden] { display: none; }
