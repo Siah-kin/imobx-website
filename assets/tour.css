@@ -64,3 +64,9 @@
 .tour-dialog,.tour-dialog-shell{max-height:calc(100dvh - 24px)}
 .tour-roles a.tour-role.is-chosen{background:#276578;color:#fff;border-color:#276578}
 @media (max-width:480px){.tour-figure img,.tour-figure svg{max-height:140px}.tour-dialog-content{padding:18px 20px}.tour-dialog-content h2{font-size:26px;margin-bottom:12px}.tour-dialog-content p{font-size:17px}}
+
+/* Founders' words in the tour (owner, 9 Nov). */
+.tour-quote{margin:0 0 16px;padding:14px 18px;background:#edf5f7;border-radius:4px}
+.tour-quote p{margin:0 0 6px;font-size:19px;line-height:1.5;font-weight:700;color:#193d4e}
+.tour-quote cite{font-style:normal;font-size:14px;color:#526571}
+@media (max-width:480px){.tour-quote p{font-size:17px}}
