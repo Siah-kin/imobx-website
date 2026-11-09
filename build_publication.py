@@ -302,7 +302,7 @@ RESOURCE_CATALOG = [
      'archive': True, 'links': [('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
     {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': VERSION,
      'shelf_pt': 'Apresentação para parceiros', 'shelf_en': 'Presentation for partners',
-     'shelf_description_pt': 'O projeto em resumo, para parceiros e financiadores.', 'shelf_description_en': 'The project in short, for partners and funders.',
+     'shelf_description_pt': 'Proposta de moradia para parceiros e financiadores.', 'shelf_description_en': 'Housing proposal for partners and funders.',
      'description_pt': 'Apresentação para parceiros, com notas para quem apresenta.',
      'description_en': 'Partner presentation with presenter notes.',
      'meta_pt': f'12 slides com notas para quem apresenta · inglês · rascunho · {DATE_PT}',
@@ -379,8 +379,6 @@ def resource_section(standalone=True):
              + translated('Self-compounding', 'Self-compounding', 'a', 'href="token.html"') + '.</p>')
     body += '<section id="media-resources" aria-labelledby="media-resources-title">'
     body += translated('Logos e marca', 'Logos and brand', 'h2', 'id="media-resources-title"')
-    body += translated('Para a imprensa e os parceiros que escrevem sobre a IMOBX: o nosso logo e as nossas cores, prontos para usar.',
-                       'For press and partners who write about IMOBX: our logo and colours, ready to use.', 'p')
     body += '<div class="resource-grid">' + card(catalog['media-kit'], labelled_by='media-resources-title') + '</div></section>'
     # citing the reference, and the file versions (moved from the project reference, review C #131, #132, #142)
     cite = '<section id="cite" aria-labelledby="cite-title">'  # citing moves to the foot, next to the versions (owner, 29 Oct)
@@ -436,24 +434,25 @@ build_tour(ROOT, page, VERSION)
 # Resources as one page (owner, 29 Oct): the documents first, then the ideas behind IMOBX, who does what, and the sources.
 _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated('Nesta página', 'On this page', 'p') + '<ol>'
             + ''.join('<li>' + translated(pt, en, 'a', f'href="#{a}"') + '</li>' for pt, en, a in
-                      [('Documentos', 'Documents', 'documents'), ('Ideias', 'Ideas', 'ideas'), ('Fontes', 'Sources', 'sources')])
+                      [('Documentos', 'Documents', 'documents'), ('Fundadores', 'Founders', 'our-story'),
+                       ('Princípios', 'Principles', 'check'), ('Modelos de moradia', 'Housing models', 'studied'),
+                       ('Pesquisa', 'Research', 'commons-research'), ('Fontes', 'Sources', 'sources')])
             + '</ol></nav>')
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main class="paper guide-paper band-page resources-page" id="main">' + language_controls
-    + translated('O que você pode ler e conferir sobre a IMOBX?', 'What can you read and check about IMOBX?', 'h1')
-    + translated('Comece pelos documentos. Logo abaixo estão as razões por trás da IMOBX, as ideias que formaram o plano e a fonte de cada número.',
-                 'Start with the documents. Below them are the reasons behind IMOBX, the ideas that shaped the plan and the source of every figure.', 'p', 'class="guide-lead"') + _res_nav
+    + translated('Recursos', 'Resources', 'h1') + _res_nav
     + resource_section(standalone=True) + '</section>'
-    + build_guide.ideas_html.replace('<section id="studied">', commons_story.introduction(translated) + '<section id="studied">', 1) + re.sub(r'<section id="people">.*?</section>', '<span id="people"></span>', build_reference.fragment, count=1, flags=re.S)  # owner, 29 Oct: 'remove this'
+    + build_guide.ideas_html + commons_story.introduction(translated)
+    + re.sub(r'<section id="people">.*?</section>', '<span id="people"></span>', build_reference.fragment, count=1, flags=re.S).replace(translated('Fontes das pesquisas e dos números.', 'Sources for the research and figures.', 'p'), '')  # owner, 29 Oct: 'remove this'
     + resource_section.cite + build_guide.ideas_close
     + partner_line_html('resources.html', lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)) + '</main>',
     build_guide.ideas_head + '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
 
 
-(ROOT / 'commons-research.html').write_text(page('IMOBX | Who looks after the places neighbours share?',
+(ROOT / 'commons-research.html').write_text(page('IMOBX | Research on shared ownership',
     commons_story.article(translated),
     '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR',
-    title_pt='IMOBX | O que uma comunidade compartilha'))
+    title_pt='IMOBX | Pesquisa sobre propriedade compartilhada'))
 
 
 def _moved(title, heading, default_hash):
