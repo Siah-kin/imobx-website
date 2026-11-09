@@ -27,12 +27,14 @@
     hint.hidden = content.scrollHeight - content.clientHeight - content.scrollTop <= 2;
   }
 
-  let role = null;  // owner, 9 Nov: the answer to 'Who are you?' decides where the last button leads
+  let role = null;
+  let allSteps = [];  // owner, 9 Nov: the answer to 'Who are you?' decides where the last button leads
 
   function update() {
     const code = language();
     const words = labels[code];
-    steps.forEach((step, index) => { step.hidden = index !== current; });
+    allSteps.forEach(step => { step.hidden = true; });
+    steps[current].hidden = false;
     dialog.querySelectorAll('[data-pt][data-en]').forEach(node => {
       node.textContent = node.dataset[code] || node.dataset.en;
     });
@@ -79,7 +81,8 @@
       copy.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
       content.appendChild(copy);
     });
-    steps = Array.from(content.children);
+    allSteps = Array.from(content.children);
+    steps = allSteps.slice();
     if (related) {
       const paragraph = document.createElement('p');
       const link = document.createElement('a');
@@ -102,6 +105,8 @@
       if (choice) {
         event.preventDefault();
         role = choice.dataset.tourRole;
+        // Owner, 9 Nov: each visitor gets its own journey. A chapter without data-tour-for is for everyone.
+        steps = allSteps.filter(step => !step.dataset.tourFor || step.dataset.tourFor.split(' ').includes(role));
         moveTo(current + 1);
         return;
       }

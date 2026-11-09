@@ -82,7 +82,7 @@ TERMS = [
     (('Onde a IMOBX está hoje', 'Where IMOBX stands today'), [
         ('A IMOBX ainda está em preparação, então ainda não há casas para alugar ou comprar.',
          'IMOBX is still in preparation, so there are no houses to rent or buy yet.'),
-        ('Ainda não escolhemos que tipo de organização a IMOBX vai ser.', 'We haven’t yet chosen what kind of organisation IMOBX will be.'),
+        ('Planejamos fundar a IMOBX como uma cooperativa habitacional, que ainda não está registrada.', 'We plan to found IMOBX as a housing cooperative, which is not registered yet.'),
         ('A IMOBX ainda não assinou nenhum contrato.',
          'IMOBX hasn’t signed any contracts yet.'),
         ('Nenhuma autoridade pública aprovou ainda os planos da IMOBX.', 'No public authority has approved IMOBX’s plans yet.'),
@@ -94,11 +94,9 @@ TERMS = [
          'Anything a family is promised, such as a refund, extra time to pay or a discount, counts once it is written into their signed agreement.'),
     ]),
     (('Recursos', 'Funding'), [
-        ('O plano é que os recursos venham de doações e editais, e de investimento se a organização que escolhermos puder aceitar.',
-         'Funding is planned to come from donations and grants, and from investment if the organisation we choose may accept it.'),
+        ('O plano é que os recursos venham primeiro de uma campanha de financiamento coletivo em reais e de editais.',
+         'Funding is planned to come first from a crowdfunding campaign in reais, and from grants.'),
         (('Veja como os recursos seriam gastos em ', 'See how the funding would be spent on '), ('Custos e recursos', 'Costs and funding'), 'transparency.html'),
-        ('Qualquer investimento só seria oferecido de um jeito que a lei brasileira permite, com os direitos do investidor por escrito e sem retorno prometido.',
-         'Any investment would be offered only in a way Brazilian law allows, with the investor’s rights in writing, and with no promised return.'),
         ('Só começamos a construir quando os recursos para isso estiverem no banco.', 'We start building only once the funding for it is in the bank.'),
     ]),
     (('Leis', 'Law'), [
@@ -454,9 +452,11 @@ def build_guide(root, page, tr, esc, language_controls):
                    ('community-dusk-circles.jpg', ('Favelas nos morros ao entardecer, marcadas com círculos', 'Favelas on the hillsides at dusk, marked with circles'))]:
         roadmap += f'<img src="assets/{f}" width="1448" height="1086" loading="lazy" alt="{esc(alt[0])}" data-alt-pt="{esc(alt[0])}" data-alt-en="{esc(alt[1])}" data-alt-nl="{esc(NL_LOOKUP.get(alt[1], alt[1]))}">'
     roadmap += '</div><figcaption>' + text(('Os círculos marcam favelas nos morros, ao redor da baía e ao entardecer.', 'The circles mark favelas on the hillsides, around the bay and at dusk.'), 'span') + '</figcaption></figure>'
-    roadmap += text(('Estamos preparando o primeiro projeto no Rio de Janeiro. Vamos marcar as datas quando tivermos escolhido que tipo de organização a IMOBX vai ser e confirmado o primeiro imóvel.',
-                     'We are preparing the first project in Rio de Janeiro. We’ll set dates once we’ve chosen what kind of organisation IMOBX will be and confirmed the first property.'), 'p', 'class="guide-lead" id="where-we-stand"')
+    roadmap += text(('Estamos preparando o primeiro projeto no Rio de Janeiro. Vamos marcar as datas quando a cooperativa estiver registrada e o primeiro imóvel confirmado.',
+                     'We are preparing the first project in Rio de Janeiro. We’ll set dates once the cooperative is registered and the first property is confirmed.'), 'p', 'class="guide-lead" id="where-we-stand"')
     roadmap += on_this_page([(('Da preparação às primeiras casas', 'From groundwork to the first houses'), 'stages'),
+                             (('Como as primeiras casas serão financiadas', 'How the first houses will be funded'), 'funding'),
+                             (('No que o Rafael está trabalhando agora', 'What Rafael is working on now'), 'rafael-now'),
                              (('Onde a primeira família vai morar', 'Where the first family will live'), 'cases'),
                              (('Como poderia ser a primeira vila', 'What the first village could look like'), 'village'),
                              (('O que a construtora do Rafael está construindo', 'What Rafael’s company is building'), 'building'), (TERMS_TITLE, 'terms')])
@@ -475,8 +475,8 @@ def build_guide(root, page, tr, esc, language_controls):
     def icon(key):
         return f'<svg class="path-icon" viewBox="0 0 28 28" aria-hidden="true">{ICONS[key]}</svg>'
     TRACK_LINES = {  # owner, 31 Oct: one line each, taken from the track's own detail
-        'foundation': ('Estamos decidindo que tipo de organização a IMOBX vai ser, como uma cooperativa ou uma empresa. Também estamos organizando os papéis do imóvel, transformando a estimativa do Rafael num orçamento de obra em reais e escrevendo os termos que uma família assina para alugar uma casa e depois comprá-la.',
-                       'We’re deciding what kind of organisation IMOBX will be, such as a cooperative or a company. We’re also getting the property papers in order, turning Rafael’s estimate into a building budget in reais, and writing the terms a family signs to rent a house and then buy it.'),
+        'foundation': ('Estamos preparando o registro da IMOBX como cooperativa habitacional. Também estamos organizando os papéis do imóvel, transformando a estimativa do Rafael num orçamento de obra em reais e escrevendo os termos que uma família assina para alugar uma casa e depois comprá-la.',
+                       'We’re preparing to register IMOBX as a housing cooperative. We’re also getting the property papers in order, turning Rafael’s estimate into a building budget in reais, and writing the terms a family signs to rent a house and then buy it.'),
         'cash-and-charter': ('Os futuros moradores vão ajudar a escrever as regras da casa, e uma regra só começa depois que eles opinarem.',
                              'Future residents will help write the house rules, and a rule starts only once they’ve had their say.'),
         'digital-trial': ('Antes de gastar os recursos de alguém, planejamos fazer um pequeno pagamento de teste e conferir duas coisas: quem o aprovou e se o nosso registro bate com o extrato do banco, para sabermos que a conferência funciona antes de passar valores de verdade.',
@@ -514,6 +514,58 @@ def build_guide(root, page, tr, esc, language_controls):
                      'Under the proposed rules, votes about the token cannot change a family’s housing agreement. The planned agreement would require both the family and IMOBX to sign changes, subject to Brazilian law.')) + '</section>'
 
 
+    # Owner, 9 Nov: the roadmap shows the funding strategy (crowdfunding first, then UN SDG 11, then other routes the
+    # fundraising role researches) and Rafael's progress as a sequence. Draft: ROADMAP_FUNDING_PROGRESS_DRAFT_2026-11-09.md.
+    roadmap += '<section id="funding">' + text(('Como as primeiras casas serão financiadas?', 'How will the first houses be funded?'), 'h2')
+    roadmap += text(('A obra só começa quando o financiamento dela já estiver na conta. Esta é a ordem que seguimos até lá.',
+                     'Building starts once the funding for it is in the bank. This is the order we follow to get there.'), 'p', 'class="answer"')
+    roadmap += '<ol class="funding-routes">'
+    for head, body in [
+        (('Primeiro, uma campanha de financiamento coletivo.', 'First, a crowdfunding campaign.'),
+         ('Assim que a cooperativa estiver registrada, ela abre uma campanha em reais numa plataforma brasileira, como a Benfeitoria. O token da IMOBX é uma etapa separada, mais adiante.',
+          'Once the cooperative is registered, it runs a campaign in reais on a Brazilian platform such as Benfeitoria. The IMOBX token is a separate, later step.')),
+        (('Depois, financiamento ligado ao Objetivo de Desenvolvimento Sustentável 11 da ONU.', 'Second, funding linked to UN Sustainable Development Goal 11.'),
+         ('O ODS 11 trata de cidades e comunidades sustentáveis, e é isso que um bairro cooperativo no Rio quer ser. Este é o segundo caminho mais provável.',
+          'Goal 11 is about sustainable cities and communities, which is what a cooperative neighbourhood in Rio sets out to be. This is the likely second route.')),
+        (('Em seguida, outros caminhos que estamos pesquisando.', 'Then, other routes we are researching.'),
+         ('Financiadores de desenvolvimento sustentável, programas de desenvolvimento urbano e financiadores do ecossistema cripto.',
+          'Sustainable development funders, city development programmes and funders in the crypto ecosystem.')),
+    ]:
+        roadmap += '<li>' + text(head, 'strong') + ' ' + text(body, 'span') + '</li>'
+    roadmap += '</ol>'
+    roadmap += ('<p>' + text(('A pesquisa e os pedidos de apoio são o trabalho da nossa nova', 'The research and the applications are the work of our new'), 'span') + ' '
+                + text(('vaga de apoio à captação de recursos', 'fundraising support role'), 'a', 'href="jobs.html"') + '.</p>')
+    roadmap += text(('Os próximos passos, em ordem:', 'The next steps, in order:'), 'p', 'class="funding-next"') + '<ol class="funding-steps">'
+    for step in [('Registrar a cooperativa, com a orientação de um advogado independente.', 'Register the cooperative, with an independent lawyer’s advice.'),
+                 ('Escolher a plataforma da campanha e escrever as recompensas.', 'Choose the campaign platform and write the rewards.'),
+                 ('Preencher a vaga de captação e começar por uma lista de programas do ODS 11 e de outros financiadores.', 'Fill the fundraising role, starting with a list of Goal 11 programmes and other funders.'),
+                 ('Definir a meta da campanha a partir do custo atualizado de um apartamento.', 'Set the campaign goal from the updated cost of one flat.'),
+                 ('Abrir a campanha.', 'Open the campaign.')]:
+        roadmap += text(step, 'li')
+    roadmap += '</ol></section>'
+    roadmap += '<section id="rafael-now">' + text(('No que o Rafael está trabalhando agora?', 'What is Rafael working on now?'), 'h2')
+    roadmap += text(('O Rafael é engenheiro civil e tem a sua própria construtora no Rio. Estes são os passos em que ele está, na ordem em que um leva ao outro.',
+                     'Rafael is a civil engineer with his own construction company in Rio. These are the steps he is on, in the order they lead into each other.'), 'p', 'class="answer"')
+    roadmap += '<ol class="rafael-steps">'
+    for head, body, leads in [
+        (('O apartamento de Guadalupe.', 'The Guadalupe flat.'),
+         ('O Rafael aceitou o aluguel com compra, sem entrada, para o apartamento dele, e vai perguntar à família que mora lá se quer participar.', 'Rafael has agreed to rent-to-own with no down payment for his flat, and is asking the family living there whether they want to take part.'),
+         ('um primeiro teste dos termos, antes de construir qualquer coisa nova.', 'a first test of the terms, before anything new is built.')),
+        (('Um advogado independente e um contador.', 'An independent lawyer and an accountant.'),
+         ('O advogado confere os contratos das famílias, e o contador organiza como os pagamentos são registrados.', 'The lawyer checks the family agreements, and the accountant sets up how payments are recorded.'),
+         ('contratos em que uma família pode confiar, e uma conta bancária para a cooperativa.', 'agreements a family can rely on, and a bank account for the cooperative.')),
+        (('O custo atualizado de um apartamento.', 'The updated cost of one flat.'),
+         ('O Rafael está confirmando qual taxa do índice público de custo da construção (CUB) vale para um prédio pequeno de cinco apartamentos.', 'Rafael is confirming which rate of the public building-cost index (CUB) fits a small building of five flats.'),
+         ('a meta da campanha.', 'the campaign goal.')),
+        (('Um terreno para cinco apartamentos.', 'A plot for five flats.'),
+         ('Ele procura 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz, para construir cinco apartamentos de cada vez.', 'He is looking for 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz, to build five flats at a time.'),
+         ('o primeiro prédio novo, quando o financiamento estiver garantido.', 'the first new building, once the funding is in place.')),
+        (('Os dois lofts que a construtora dele está construindo.', 'The two lofts his company is building.'),
+         ('A obra segue enquanto o resto é preparado.', 'The work on site goes on while the rest is prepared.'),
+         ('um exemplo real do tipo de construção que a IMOBX planeja.', 'a working example of the kind of building IMOBX plans.')),
+    ]:
+        roadmap += ('<li>' + text(head, 'strong') + ' ' + text(body, 'span') + ' <em>' + text(('Isso leva a:', 'This leads to:'), 'span') + ' ' + text(leads, 'span') + '</em></li>')
+    roadmap += '</ol></section>'
     cases = guide['cases']
     # The answer first (no pilot is confirmed), then what a proposed and a confirmed pilot mean.
     intro_lines = tuple(t.rsplit('. ', 1) for t in cases['intro'])

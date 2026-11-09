@@ -79,3 +79,10 @@
   .js-roadmap .method-diamond .dd-marker,.js-roadmap .method-diamond .dd-pointer,.js-roadmap .method-diamond .dd-here,.js-roadmap .method-diamond .dd-back{transition:none;opacity:1;animation:none}
   .path-fill{transform:none}
 }
+
+/* Funding order and Rafael's steps (owner, 9 Nov) */
+.funding-routes,.funding-steps,.rafael-steps{max-width:68ch;padding-left:1.4em}
+.funding-routes li,.rafael-steps li{margin:0 0 14px;line-height:1.6}
+.rafael-steps em{display:block;font-style:normal;color:#526571;margin-top:4px}
+.funding-next{font-weight:700;margin-top:20px}
+#funding,#rafael-now{margin-top:56px}
