@@ -159,14 +159,14 @@ opening = (
     + '</div><figure class="village" id="vila"><span id="visao-rafael"></span><div class="village-frame">'
     + img('assets/homepage.jpg', 1024, 765,
           'Ilustração conceitual da vila projetada por Rafael: casas em torno de um pátio verde com pomar, horta, parquinhos, salas de estudo e painéis solares.',
-          'Concept illustration of the village Rafael designed: homes around a green courtyard with an orchard, kitchen garden, playgrounds, study rooms and solar panels.',
+          'Concept illustration of the village Rafael designed: houses around a green courtyard with an orchard, kitchen garden, playgrounds, study rooms and solar panels.',
           'Conceptillustratie van het dorp dat Rafael ontwierp: woningen rond een groene binnenplaats met een boomgaard, moestuin, speeltuinen, studieruimtes en zonnepanelen.',
           'fetchpriority="high"')
     + ''.join(f'<span class="pin" style="left:{x}%;top:{y}%" aria-hidden="true">{i}</span>' for i, (x, y) in enumerate(pins, 1))
     + '</div><ol class="pin-legend">' + ''.join(t('li', *row) for row in legend) + '</ol>'
-    + '<figcaption>' + t('span', 'Rafael Britto desenhou esta vila em novembro de 2025 com um gerador de imagens. Ela mostra a ideia, não casas para alugar. Horta, pomar e energia solar dependem do terreno e do orçamento.',
-                         'Rafael Britto drew this village in November 2025 with an image generator. It shows the idea, not homes you can rent. Garden, orchard and solar depend on the land and the budget.',
-                         'Rafael Britto tekende dit dorp in november 2025 met een beeldgenerator. Het laat het idee zien, geen woningen die je kunt huren. Moestuin, boomgaard en zonnepanelen hangen af van het terrein en het budget.')
+    + '<figcaption>' + t('span', 'Rafael Britto desenhou esta vila em novembro de 2025 com um gerador de imagens. Ela mostra a ideia de uma etapa posterior, não casas para alugar. Horta, pomar e energia solar dependem do terreno e do orçamento.',
+                         'Rafael Britto drew this village in November 2025 with an image generator. It shows the idea for a later stage, not houses you can rent. Garden, orchard and solar depend on the land and the budget.',
+                         'Rafael Britto tekende dit dorp in november 2025 met een beeldgenerator. Het laat het idee voor een latere fase zien, geen woningen die je kunt huren. Moestuin, boomgaard en zonnepanelen hangen af van het terrein en het budget.')
     + '</figcaption></figure></div></section>')
 
 # ---------------------------------------------------------------- 2. the method

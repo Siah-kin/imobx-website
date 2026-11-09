@@ -49,7 +49,7 @@ On 30 November 2025, Rafael described two-level houses around a shared courtyard
 
 IMOBX is in preparation. Its legal form, the terms for using each property and any token rights remain undecided. No investment, guaranteed return, funding award or regulatory approval is established by these documents.
 
-Rafael’s US$27,777 per-home village budget uses CUB/SINAPI building-cost references and shared costs across at least 36 houses. The [project paper](whitepaper.html#3-the-cost-proposal-already-supplied) provides the dates and breakdown.
+Rafael’s cost sum for a 45 m² flat starts from CUB, the public Rio building-cost index, and comes to about R$180,000 with its share of the land. The [project paper](whitepaper.html#3-what-one-flat-costs-to-build) gives the figures.
 
 The city photographs show favelas along the hillsides, highlighted by circles. The collection also includes construction photographs, loft drawings and the village concept. [View the photographs and drawings](properties.html).
 

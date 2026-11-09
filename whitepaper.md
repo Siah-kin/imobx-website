@@ -50,22 +50,25 @@ Under the plan, residents agree who cares for shared spaces, how study rooms are
 
 <div class="pagebreak"></div>
 
-## 3. The cost proposal already supplied
+## 3. What one flat costs to build
 
-Rafael prepared a **US$27,777 budget per 45 m² house** using CUB and SINAPI, Brazilian building-cost references, and his purchasing and construction plan. On 30 November 2025, he showed a US$21,883.86 construction calculation plus US$5,550 for land. He then supplied this revised budget:
+Rafael, the builder among our founders, worked out the cost of a 45 m² flat at September 2026 prices. He started from CUB-RJ, the public building-cost index for Rio de Janeiro, at R$2,476 a square metre: 45 m² × R$2,476 = R$111,400. He added 35% for overheads and his company’s margin, which brings the building to **R$150,400**. The land adds up to R$30,000, so one flat costs **about R$180,000**.
 
-| Item | Rafael’s budget, USD per house |
+| Item | Rafael’s sum, R$ per flat |
 |---|---:|
-| Land | 5,550 |
-| House construction, 45 square metres | 18,600 |
-| Solar | 1,500 |
-| Shared infrastructure and facilities | 1,500 |
-| Legal and design | 627 |
-| **Total** | **27,777** |
+| Construction, 45 m² × R$2,476 (CUB-RJ, September 2026) | 111,400 |
+| Overheads and margin, 35% | 39,000 |
+| **Building** | **150,400** |
+| Land, up to | 30,000 |
+| **Total with land** | **about 180,000** |
 
-His plan calls for at least 36 houses built together: **US$999,972 over 12 months**. Buying directly and sharing building work and facilities are part of the savings plan. Each actual build must record its price date, quantities, included work, costs in reais and invoices.
+The rate Rafael used is the CUB rate for an eight-storey building. The rate for a small building may be higher. If it is, the total rises.
 
-These are Rafael’s project figures, not a finished-house price published by a cost index. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs; a specific budget still needs its own location, date and scope. CUB leaves out some site works, connections, design and builder payments, as the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains. A saving has to be explained through the work and purchasing plan; deducting a presumed profit percentage does not prove it.
+Rafael plans to build five flats at a time on a plot of 200 to 300 m², bought whole for about R$140,000 (about R$700 a square metre). He is looking at areas such as Anchieta, Pavuna, Bangu and Santa Cruz. The first flat therefore needs about **R$290,000** (R$150,400 plus the plot), and five flats about **R$892,000** (5 × R$150,400 plus the plot). A village of about 36 houses around a shared courtyard is Rafael’s idea for a later stage. It has no budget yet.
+
+Each actual build must record its price date, quantities, included work, costs in reais and invoices. The price for each family and its monthly payment are not decided yet. They are agreed in writing with the family before it moves in.
+
+These are Rafael’s project figures, not a finished-flat price published by a cost index. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs; a specific budget still needs its own location, date and scope. CUB leaves out some site works, connections, design and builder payments, as the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains.
 
 ### The separate two-loft case
 

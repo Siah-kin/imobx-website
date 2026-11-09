@@ -45,8 +45,8 @@ def build_about(root, page, tr, esc):
     b += '<section id="build">' + t(('O que queremos construir?', 'What do we want to build?'), 'h2')
     b += t(('Queremos bairros de transição social rumo a um futuro resiliente, onde os vizinhos voltam a se conhecer e as crianças brincam onde os pais podem vê-las. Quem mora ali decide junto como o lugar funciona. O nosso lucro real é social. A nossa riqueza é um mundo onde as pessoas são livres, e um bairro sem estresse vale mais do que ficar milionário.',
             'We want neighbourhoods of social transition towards a resilient future, where neighbours know each other again and children play where their parents can see them. The people who live there decide together how the place is run. Our real profit is social. Our richness is a world where people are free, and a stress-free neighbourhood is worth more than becoming a millionaire.'))
-    b += ('<figure class="about-picture"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da primeira vila" data-alt-pt="Ilustração conceitual da primeira vila" data-alt-en="Concept illustration of the first village" data-alt-nl="Conceptillustratie van het eerste dorp">'
-          '<figcaption>' + t(('Ilustração conceitual da primeira vila, feita com um gerador de imagens.', 'Concept illustration of the first village, made with an image generator.'), 'span') + '</figcaption></figure>')
+    b += ('<figure class="about-picture"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da vila de Rafael" data-alt-pt="Ilustração conceitual da vila de Rafael" data-alt-en="Concept illustration of Rafael’s village" data-alt-nl="Conceptillustratie van het dorp van Rafael">'
+          '<figcaption>' + t(('Ilustração conceitual da vila de Rafael, feita com um gerador de imagens.', 'Concept illustration of Rafael’s village, made with an image generator.'), 'span') + '</figcaption></figure>')
     b += '</section>'
 
     b += '<section id="how">' + t(('Como funcionaria?', 'How would it work?'), 'h2')

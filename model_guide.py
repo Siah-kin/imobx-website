@@ -458,7 +458,7 @@ def build_guide(root, page, tr, esc, language_controls):
                              (('Como as primeiras casas serão financiadas', 'How the first houses will be funded'), 'funding'),
                              (('No que o Rafael está trabalhando agora', 'What Rafael is working on now'), 'rafael-now'),
                              (('Onde a primeira família vai morar', 'Where the first family will live'), 'cases'),
-                             (('Como poderia ser a primeira vila', 'What the first village could look like'), 'village'),
+                             (('A vila que Rafael imagina', 'The village Rafael imagines'), 'village'),
                              (('O que a construtora do Rafael está construindo', 'What Rafael’s company is building'), 'building'), (TERMS_TITLE, 'terms')])
 
 
@@ -579,11 +579,11 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += text(('Como funciona o aluguel com compra para uma família', 'How rent-to-own works for a family'), 'a', 'href="rent-to-own.html"') + '</section>'
 
     # Where it leads, and the builder's work (owner, 28-29 Oct): the biggest section sits at the bottom, clearly the builder's.
-    roadmap += '<section id="village">' + text(('Como poderia ser a primeira vila?', 'What could the first village look like?'), 'h2')
-    roadmap += text(('Rafael planejou a primeira vila com casas de 45 m² em volta de um pátio comum, com energia solar, um pomar e lugares para brincar e estudar.',
-                     'Rafael planned the first village as 45 m² houses around a shared courtyard, with solar power, an orchard and places to play and study.'))
-    roadmap += '<div class="lead-figures"><figure class="lead-figure"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da primeira vila" data-alt-pt="Ilustração conceitual da primeira vila" data-alt-en="Concept illustration of the first village" data-alt-nl="Conceptillustratie van het eerste dorp">'
-    roadmap += '<figcaption>' + text(('Ilustração conceitual da primeira vila, feita com um gerador de imagens.', 'Concept illustration of the first village, made with an image generator.'), 'span') + '</figcaption></figure>'
+    roadmap += '<section id="village">' + text(('Como poderia ser a vila de Rafael, mais adiante?', 'What could Rafael’s village look like, later on?'), 'h2')
+    roadmap += text(('Rafael desenhou uma vila com casas de 45 m² em volta de um pátio comum, com energia solar, um pomar e lugares para brincar e estudar. É uma etapa posterior: os primeiros passos são fases de cinco apartamentos.',
+                     'Rafael designed a village of 45 m² houses around a shared courtyard, with solar power, an orchard and places to play and study. It is a later stage. The first steps are phases of five flats.'))
+    roadmap += '<div class="lead-figures"><figure class="lead-figure"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da vila de Rafael" data-alt-pt="Ilustração conceitual da vila de Rafael" data-alt-en="Concept illustration of Rafael’s village" data-alt-nl="Conceptillustratie van het dorp van Rafael">'
+    roadmap += '<figcaption>' + text(('Ilustração conceitual da vila de Rafael, feita com um gerador de imagens.', 'Concept illustration of Rafael’s village, made with an image generator.'), 'span') + '</figcaption></figure>'
     roadmap += '</div></section>'
     roadmap += '<section id="building">' + text(('O que a construtora do Rafael está construindo?', 'What is Rafael’s company building?'), 'h2')
     roadmap += text(('Em janeiro de 2026, a construtora do Rafael assinou um contrato para construir dois lofts. É uma obra própria da construtora, com projetos e agenda dela. Os lofts são o tipo de casa que a IMOBX quer construir, e as fotos abaixo mostram como a equipe do Rafael trabalha.',

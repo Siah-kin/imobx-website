@@ -46,18 +46,17 @@ This guide explains how a request leads to completed work, a check that it meets
 
 Rafael’s plan brings together 45 m² two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [illustration](properties.html#visao-rafael), made with an image generator, shows the community as planned.
 
-On 30 November 2025, Rafael supplied building calculations using CUB and SINAPI, Brazilian cost references. His revised per-house budget is:
+Rafael worked out the cost of a 45 m² flat at September 2026 prices. He started from CUB-RJ, the public building-cost index for Rio de Janeiro, and added 35% for overheads and his company’s margin:
 
-| Item | USD per house |
+| Item | R$ per flat |
 |---|---:|
-| Land | 5,550 |
-| House construction, 45 square metres | 18,600 |
-| Solar | 1,500 |
-| Shared infrastructure and facilities | 1,500 |
-| Legal and design | 627 |
-| **Total** | **27,777** |
+| Construction, 45 m² × R$2,476 (CUB-RJ, September 2026) | 111,400 |
+| Overheads and margin, 35% | 39,000 |
+| **Building** | **150,400** |
+| Land, up to | 30,000 |
+| **Total with land** | **about 180,000** |
 
-The plan covers at least 36 houses built together over 12 months: **36 × US$27,777 = US$999,972**. These are Rafael’s dated project figures, not a finished-house price published by the indexes. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs, and the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains what CUB covers; neither gives a price for these houses. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs.
+The plan builds five flats at a time on a plot of 200 to 300 m², bought whole for about R$140,000. The first flat needs about R$290,000 and five flats about R$892,000. The CUB rate for a small building may be higher than the one Rafael used. A village of about 36 houses is a later stage and has no budget yet. These are Rafael’s dated project figures, not a finished-flat price published by the indexes. [SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx) is the Caixa reference for construction costs and inputs, and the [CUB scope page](https://sinduscon-caxias.net.br/servicos/cub) explains what CUB covers; neither gives a price for these flats. A chosen site needs a budget in reais covering its actual work, permissions, services and unexpected costs.
 
 ### The separate two-loft case
 
@@ -77,7 +76,7 @@ In January 2026, Rafael’s construction company signed a contract to build two 
 
 Under the plan, a family rents the home and pays the agreed monthly amount in reais. Its agreement states the purchase price and how much of each payment counts towards buying the home. Its purchase record shows how much has counted towards buying the home and how much remains to pay.
 
-In the model, a family pays about 60% above the building cost over 15 years; the first household’s exact price and monthly payment, and how much of each payment counts towards buying the home, are agreed with the family. Rafael’s construction budgets show what building costs; each household’s price is set in its own agreement. The family pays in reais and takes part as a member, with no token or crypto wallet needed. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
+The price for the first household and its monthly payment, and how much of each payment counts towards buying the home, are not decided yet. They are agreed in writing with the family before it moves in. Rafael’s construction figures show what building costs; each household’s price is set in its own agreement. The family pays in reais and takes part as a member, with no token or crypto wallet needed. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
 
 Repair charges, missed payments, temporary hardship and leaving each have their own terms. They say what happens to the funding already counted towards buying the home if a family leaves, including any refund and grace period, and they are part of the offer the household assesses before agreeing to move in.
 
