@@ -143,8 +143,8 @@ STEPS = [
         'In 2024 vielen in Brazilië ongeveer 5,77 miljoen huishoudens onder het woningtekort, volgens de berekening van de Fundação João Pinheiro. De huren stijgen sneller dan de inflatie: 9,13% in de 12 maanden tot september 2026, tegen 4,58%. In Rio stegen ze met 14,80%.')],
      [('why.html', T('Leia os números', 'Read the numbers', 'Lees de cijfers'))]),
     ('tour-tenant', T('Um apartamento para começar', 'A flat to start with', 'Een appartement om mee te beginnen'), None, None,
-     [T('Uma família aluga um apartamento num prédio que a Olympus, a construtora do Rafael, construiu em Guadalupe, . Estamos avaliando um contrato de aluguel com compra, com aluguel menor. Nada está combinado ainda.',
-        'A family rents a flat in the Guadalupe building Olympus, Rafael’s company, built. We are considering a rent-to-own agreement with a lower rent. Nothing is agreed yet.',
+     [T('Uma família aluga um apartamento num prédio que a Olympus, a construtora do Rafael, construiu em Guadalupe. Estamos avaliando um contrato de aluguel com compra, com aluguel menor. Nada está combinado ainda.',
+        'A family rents a flat in the Guadalupe building that Olympus, Rafael’s company, built. We are considering a rent-to-own agreement with a lower rent. Nothing is agreed yet.',
         'Een gezin huurt een appartement in het gebouw in Guadalupe dat Olympus, het bouwbedrijf van Rafael, bouwde, en heeft moeite met betalen. We overwegen een huurkoopovereenkomst met een lagere huur. Er is nog niets afgesproken.')],
      [('roadmap.html#homes', T('Onde a primeira família vai morar', 'Where the first family will live', 'Waar het eerste gezin gaat wonen'))]),
     # WHA-05 (John)
@@ -249,7 +249,7 @@ STEPS = [
     # ASK-01 (John)
     ('tour-join', T('Sua vez', 'Your turn', 'Jouw beurt'), None,
      (T('Qualquer pessoa que tenha uma visão parecida com a nossa, entenda o problema e tenha os meios ou a dedicação para resolvê-lo. É esse o tipo de pessoa que queremos atrair.', 'Whatever person has a very similar kind of vision to ours, understands the problem, and has the means or dedication to solve it. That’s the type of people we’re trying to attract.', 'Iedereen die een visie heeft die op de onze lijkt, het probleem begrijpt en de middelen of de toewijding heeft om het op te lossen. Dat is het soort mensen dat we willen aantrekken.'), JOHN),
-     [T('A IMOBX está em preparação. Estamos avaliando um primeiro contrato de aluguel com compra para uma família em Guadalupe, e procurando um terreno para cinco apartamentos novos. Também precisamos das pessoas que vão fundar a cooperativa com a gente.',
+     [T('A IMOBX está em preparação. Estamos avaliando um primeiro contrato de aluguel com compra para uma família em Guadalupe e procurando um terreno para cinco apartamentos novos. Também precisamos das pessoas que vão fundar a cooperativa com a gente.',
         'IMOBX is in preparation. We are considering a first rent-to-own agreement for a family in Guadalupe, and looking for a plot for five new flats. We also need the people who will found the cooperative with us.',
         'IMOBX is in voorbereiding. We overwegen een eerste huurkoopovereenkomst voor een gezin in Guadalupe en zoeken een perceel voor vijf nieuwe appartementen. We hebben ook de mensen nodig die de coöperatie met ons oprichten.')],
      [('contact.html#apresentacao', T('Apresente-se', 'Introduce yourself', 'Stel jezelf voor'), 'tour-cta'), ('jobs.html', T('Ver a vaga', 'See the open role', 'Bekijk de vacature'), 'tour-jobs')]),
