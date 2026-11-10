@@ -26,7 +26,7 @@ PAGES = {
     'governance.html': ('Quem decide na IMOBX, e quando você tem voz · IMOBX Rio', 'Who decides in IMOBX, and when you get a say · IMOBX Rio',
                         'Hoje os fundadores decidem. No plano, quem tem o token vota as regras do token, e os membros decidem um membro, um voto.'),
     'properties.html': ('Lofts e terreno: desenhos e fotos · IMOBX Rio', 'Lofts and site: drawings and photos · IMOBX Rio',
-                        'O protótipo de dois lofts e o projeto da primeira vila. Estudos de projeto, não anúncios de casas.'),
+                        'Os dois lofts da construtora do Rafael e a vila que ele imagina para mais adiante. Estudos de projeto, não anúncios de casas.'),
     'resources.html': ('Documentos, ideias e fontes · IMOBX Rio', 'Documents, ideas and sources · IMOBX Rio',
                        'Os documentos do projeto para baixar, as ideias que formaram a IMOBX, quem faz o quê e as fontes de cada fato.'),
     'tour.html': ('Conheça a IMOBX · IMOBX Rio', 'Take a tour of IMOBX · IMOBX Rio',

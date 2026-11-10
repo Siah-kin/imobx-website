@@ -6,8 +6,8 @@
 
 | Pessoa ou grupo | Papel no plano | Situação |
 | --- | --- | --- |
-| Rafael Britto | Fundador; construtor no Rio de Janeiro. Obra, orçamento e contatos locais. | Funções ainda não definidas por escrito. |
-| John | Comunicação, documentação e coordenação das ferramentas digitais. | Ajuda a preparar o projeto. Não pode gastar nem assinar pela IMOBX. |
+| Rafael Britto | Cofundador; construtor no Rio de Janeiro. Obra, orçamento e contatos locais. | Funções ainda não definidas por escrito. |
+| John | Cofundador; comunicação, documentação e coordenação das ferramentas digitais. | Ajuda a preparar o projeto. Não pode gastar nem assinar pela IMOBX. |
 | IMOBX | Organização do projeto, contratos e acompanhamento das contas. | A forma jurídica e os representantes legais estão em definição. |
 | OLYMPUS | Construtora proposta, ligada a Rafael; nenhum contrato assinado. | Só é contratada depois de combinar o serviço, comparar preços e ter a aprovação de alguém independente da construtora. |
 | Moradores | Condições de moradia e participação nos assuntos comuns. | Regras e representantes a combinar com os moradores. |
@@ -24,7 +24,7 @@ Fontes das pesquisas e dos números.
 
 [O orçamento de Rafael e o relato dele sobre os lofts](https://imobx.org/whitepaper.html#3-the-cost-proposal-already-supplied)
 
-Números do próprio Rafael, de 30/11/2025 e 20/01/2026.
+Números do próprio Rafael: o orçamento de 30/11/2025 e 20/01/2026 e as respostas de 4 a 6 de novembro de 2026, com o CUB-RJ de setembro de 2026 (Sinduscon-Rio).
 
 [IBGE: Censo 2022, favelas e comunidades urbanas](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas)
 
@@ -32,7 +32,7 @@ Números do próprio Rafael, de 30/11/2025 e 20/01/2026.
 
 [CAIXA: SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx)
 
-A tabela brasileira de referência de custos de obra, usada no orçamento de Rafael.
+A tabela brasileira de custos de obra item a item, para conferir o orçamento por item que o Rafael está preparando.
 
 [CVM: Parecer de Orientação 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html)
 

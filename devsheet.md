@@ -101,7 +101,7 @@ The financial plan needs to show costs and cash through construction, occupancy 
 
 ## 4. Funding construction and growth
 
-A builder needs to know that a house is paid for before work starts. The first house is funded outside the token: once IMOBX’s legal entity is registered, it will run a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria then apply for funding linked to UN Sustainable Development Goal 11 and other grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Donations, grants and service income each keep their agreed use, and housing, wages and any investor payments each need their own approved budget. Construction starts only when a house’s funding is secured.
+A builder needs to know that a house is paid for before work starts. The first house is funded outside the token: once the IMOBX housing cooperative is registered, it will run a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria then apply for funding linked to UN Sustainable Development Goal 11 and other grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Donations, grants and service income each keep their agreed use, and housing, wages and any investor payments each need their own approved budget. Construction starts only when a house’s funding is secured.
 
 ### The token’s trading fee
 
@@ -223,9 +223,9 @@ The first houses come first, and the IMOBX token would come at a later stage. Pu
 |---|---|
 | Design and costs | Rafael’s September 2026 cost sum for one flat and for five flats and the separate two-loft account are available. |
 | Property | The first project needs documented ownership or authority to use the site. |
-| Organization | IMOBX’s legal entity is registered first; accountable roles and agreements follow. |
+| Organization | The IMOBX housing cooperative is registered first; accountable roles and agreements follow. |
 | Families | Eligibility, affordability, individual terms and shared decision rights need local discussion. |
-| Funding | Once IMOBX’s legal entity is registered, a crowdfunding campaign in reais and grants will fund the first house. The campaign runs before the token launches, and its backers receive ordinary rewards, never tokens. Project updates report grants, campaign results and donated properties as they arrive. |
+| Funding | Once the IMOBX housing cooperative is registered, a crowdfunding campaign in reais and grants will fund the first house. The campaign runs before the token launches, and its backers receive ordinary rewards, never tokens. Project updates report grants, campaign results and donated properties as they arrive. |
 | Token | A planned self-compounding community-funding token, optional to hold, with no presale and a fixed supply of 1,000,000 tokens. Its trading fee would pay wages and add to the houses budget over time; the share for people who lock their tokens waits for a lawyer’s reading. Any benefit for people who lock their tokens will be named, with its terms, before it applies. Still open: who issues it. |
 | Payments | Provider acceptance and the complete payment route remain to be demonstrated. |
 

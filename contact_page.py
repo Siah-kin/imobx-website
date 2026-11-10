@@ -54,8 +54,8 @@ def build_contact(root, page, tr, esc, version):
     body += t(('Editar respostas', 'Edit answers'), 'button', 'type="button" class="contact-text-button" id="edit-enquiry"') + '</div>'
     body += '<p id="enquiry-status" role="status" aria-live="polite"></p></section></section>'
 
-    body += ('<figure class="contact-picture"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da primeira vila" data-alt-pt="Ilustração conceitual da primeira vila" data-alt-en="Concept illustration of the first village" data-alt-nl="Conceptillustratie van het eerste dorp">'
-             '<figcaption>' + t(('Ilustração conceitual da primeira vila, feita com um gerador de imagens.', 'Concept illustration of the first village, made with an image generator.'), 'span') + '</figcaption></figure>')
+    body += ('<figure class="contact-picture"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da vila que o Rafael imagina" data-alt-pt="Ilustração conceitual da vila que o Rafael imagina" data-alt-en="Concept illustration of the village Rafael imagines" data-alt-nl="Conceptillustratie van het dorp dat Rafael zich voorstelt">'
+             '<figcaption>' + t(('Ilustração conceitual da vila que o Rafael imagina para mais adiante, feita com um gerador de imagens.', 'Concept illustration of the village Rafael imagines for a later stage, made with an image generator.'), 'span') + '</figcaption></figure>')
     body += '</main>'
     embedded = json.dumps(data, ensure_ascii=False).replace('<', '\\u003c')
     body += '<script id="contact-route-data" type="application/json">' + embedded + '</script>'
