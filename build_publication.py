@@ -157,8 +157,8 @@ HEADING_INTROS = {
                                       'Before the first family moves in, these questions need an answer. You can help settle them in the group.'),
     },
     'why.html': {
-        'How big is the problem?': ('Faltam milhões de moradias no Brasil, e o aluguel sobe mais rápido que os preços.',
-                                    'Brazil is short of millions of dwellings, and rents are rising faster than prices.'),
+        'How big is the problem?': ('Milhões de domicílios no Brasil não têm moradia adequada ou gastam demais da renda com aluguel.',
+                                    'Millions of households in Brazil have no suitable home or spend too much of their income on rent.'),
     },
     'contact.html': {
         'Your message, ready to copy': ('Suas respostas acima viram uma mensagem. Copie e cole no grupo.',
@@ -381,7 +381,7 @@ def resource_section(standalone=True):
     body = '<section id="documents"><span id="documentos"></span><span id="resources"></span><span id="recursos"></span>'
     body += translated('Documentos do projeto', 'Project documents', 'h2')
     body += translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p')
-    body += translated('Os documentos usam um orçamento de 2025 para uma vila de 36 casas. A primeira fase agora planejada é de cinco apartamentos; seus valores ainda precisam ser confirmados.', 'The documents use a 2025 budget for a village of 36 houses. The planned first phase is now five flats; its figures still need confirmation.', 'p')
+    body += translated('Os documentos usam a estimativa do Rafael de setembro de 2026 para cinco apartamentos de cada vez. Os valores ainda precisam ser confirmados. A vila de cerca de 36 casas é uma etapa posterior, ainda sem orçamento.', 'The documents use Rafael’s September 2026 estimate for five flats at a time. The figures still need confirmation. The village of about 36 houses is a later stage with no budget yet.', 'p')
     body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h3') for key in document_ids) + '</div><span id="resource-reference"></span><span id="title-reference"></span>'
     # The token's current description lives on the Self-compounding page (TOKEN_POSITION.md, 2 Nov 2026).
     body += ('<p>' + translated('Para o token da IMOBX, a sua taxa e os quatro V, leia a página',
@@ -412,7 +412,7 @@ import hashlib as _hashlib
 _home_css = 'assets/home-b.css?v=' + _hashlib.sha256((ROOT / 'assets' / 'home-b.css').read_bytes()).hexdigest()[:10]
 (ROOT / 'index.html').write_text((ROOT / 'home_b.htmlsrc').read_text().replace('assets/home-b.css', _home_css))
 
-for name in ['index.html', 'properties.html']:
+for name in ['index.html', 'properties.html', 'jobs.html']:
     target = ROOT / name
     source, count = re.subn(r'<header class="top(?: site-header)?(?: option-b)?">.*?</header>',
                            lambda _: site_header('pt-BR', name),

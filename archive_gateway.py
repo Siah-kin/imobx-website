@@ -28,7 +28,7 @@ def build_gateway(root, page, tr, esc, item, name, title, sections=None):
     body = '<main class="paper archive-gateway" id="main"><span id="top"></span>'
     body += text((item['pt'], item['en']), 'h1')
     body += text((item['description_pt'], item['description_en']))
-    body += text(('Os documentos usam um orçamento de 2025 para uma vila de 36 casas. A primeira fase agora planejada é de cinco apartamentos; seus valores ainda precisam ser confirmados.', 'The documents use a 2025 budget for a village of 36 houses. The planned first phase is now five flats; its figures still need confirmation.'))
+    body += text(('Os documentos usam a estimativa do Rafael de setembro de 2026 para cinco apartamentos de cada vez. Os valores ainda precisam ser confirmados. A vila de cerca de 36 casas é uma etapa posterior, ainda sem orçamento.', 'The documents use Rafael’s September 2026 estimate for five flats at a time. The figures still need confirmation. The village of about 36 houses is a later stage with no budget yet.'))
     body += text((LABEL_PT + ' · documento em inglês', LABEL_EN + ' · English document'), 'p', 'class="resource-meta"')
     body += '<p class="archive-downloads">' + ' · '.join(
         text((pt, en), 'a', f'href="{esc(target)}" download') for target, pt, en in item['links'] if not target.endswith('.html')) + '</p>'

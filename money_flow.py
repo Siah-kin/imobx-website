@@ -6,7 +6,7 @@ STEPS = [
     (('Fundo para casas', 'Fund for new houses'),
      ('Recursos para construir. O que sobra de cada pagamento, depois dos custos e das reservas, vai para a próxima casa.', 'Funding for building. What is left of each payment, after costs and reserves, goes into the next house.')),
     (('Obra', 'Building'),
-     ('Nossa construtora faz a obra, e o custo do terreno e da construção fica registrado.', 'Our construction company builds it, and the cost of land and building is written down.')),
+     ('A construtora do Rafael faz a obra, e o custo do terreno e da construção fica registrado.', 'Rafael’s construction company builds it, and the cost of land and building is written down.')),
     (('A família entra', 'The family moves in'),
      ('O contrato é assinado antes da mudança.', 'The agreement is signed before moving in.')),
     (('O pagamento de cada mês', 'Each month’s payment'),
@@ -128,7 +128,7 @@ ROUTE_STEPS = [
     (('Outra pessoa aprova o gasto', 'Someone else approves the spending'),
      ('A construtora nunca aprova a própria cobrança.', 'The builder never approves its own invoice.')),
     (('A construtora recebe em reais', 'The builder is paid in reais'),
-     ('Depois que alguém de fora dos fundadores confere aquela etapa da obra.', 'After someone outside the founders checks that stage of the work.')),
+     ('Depois que alguém de fora dos cofundadores confere aquela etapa da obra.', 'After someone outside the co-founders checks that stage of the work.')),
 ]
 
 
@@ -241,7 +241,7 @@ def ledger_flow_html(text, bodies):
 # ---------- Local governance (owner, 29 Oct: "go"): who decides, stage by stage, drawn as circles ----------
 GOV_STEPS = [
     (('Agora', 'Now'),
-     ('Os fundadores decidem, com as pessoas que chamam para uma tarefa definida.', 'The founders decide, with people they bring in for a set task.')),
+     ('Os cofundadores decidem, com as pessoas que chamam para uma tarefa definida.', 'The co-founders decide, with people they bring in for a set task.')),
     (('Quando o token for lançado', 'When the token launches'),
      ('As regras do próprio token são decididas por votação.', 'The token’s own rules are decided by vote.')),
     (('Quando as famílias morarem lá', 'Once families live there'),

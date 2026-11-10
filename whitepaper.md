@@ -64,7 +64,7 @@ Rafael, the builder among our founders, worked out the cost of a 45 m² flat at 
 
 The rate Rafael used is the CUB rate for an eight-storey building. The rate for a small building may be higher. If it is, the total rises.
 
-Rafael plans to build five flats at a time on a plot of 200 to 300 m², bought whole for about R$140,000 (about R$700 a square metre). He is looking at areas such as Anchieta, Pavuna, Bangu and Santa Cruz. The first flat therefore needs about **R$290,000** (R$150,400 plus the plot), and five flats about **R$892,000** (5 × R$150,400 plus the plot). A village of about 36 houses around a shared courtyard is Rafael’s idea for a later stage. It has no budget yet.
+Rafael plans to build five flats at a time on a plot of 200 to 300 m², bought whole for about R$140,000 (about R$700 a square metre). He is looking at areas such as Anchieta, Pavuna, Bangu and Santa Cruz. The first new flat therefore needs about **R$290,000** (R$150,400 plus the plot), and five flats about **R$892,000** (5 × R$150,400 plus the plot). A village of about 36 houses around a shared courtyard is Rafael’s idea for a later stage. It has no budget yet.
 
 Each actual build must record its price date, quantities, included work, costs in reais and invoices. The price for each family and its monthly payment are not decided yet. They are agreed in writing with the family before it moves in.
 
@@ -97,7 +97,7 @@ Payments credited toward a family’s purchase are a commitment under its agreem
 
 ## 5. Trade fees as supplementary funding
 
-Once IMOBX’s legal entity is registered, it will fund the first house through a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria, then funding linked to UN Sustainable Development Goal 11, and other grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Founders, partners and donors can add to it through the routes in section 4. We start building a house only when its funding is secured.
+Once the IMOBX housing cooperative is registered, it will fund the first house through a crowdfunding campaign in reais on a Brazilian platform such as Benfeitoria, then funding linked to UN Sustainable Development Goal 11, and other grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. Founders, partners and donors can add to it through the routes in section 4. We start building a house only when its funding is secured.
 
 The IMOBX token would add to the houses budget over time. Each trade of the token would pay a fee in USDC, a digital dollar: 14% on Arctide, an exchange on the Arc network, plus Arctide’s own 0.25%, and 11% on Argus, a second exchange, which keeps 30% of its fee. Buyers’ payments would go into the token’s trading pool, so this fee would be the community’s only income from the token.
 

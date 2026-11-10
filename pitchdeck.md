@@ -28,7 +28,7 @@ Source: [IMOBX resources and sources](https://imobx.org/resources.html#sources).
 
 ## 2. Start with what a family needs
 
-The first project would help displaced families and people unable to use ordinary housing finance.
+The first project would help families who rent today and cannot get ordinary housing finance.
 
 
 
@@ -56,13 +56,13 @@ His sum starts from CUB, the public Rio building-cost index: about R$180,000 for
 
 - Five flats at a time on one plot, bought whole for about R$140,000.
 
-- First flat about R$290,000; five flats about R$892,000.
+- First new flat, with the whole plot, about R$290,000; five new flats about R$892,000.
 
 
 
-Source: [Whitepaper, section 3: the costs](whitepaper.html#3-what-one-flat-costs-to-build). Shows how Rafael supplied these figures.
+Source: [Whitepaper, section 3: the costs](whitepaper.html#3-the-cost-proposal-already-supplied). Shows how Rafael supplied these figures.
 
-**Presenter notes:** In September 2026 Rafael worked out the cost of a 45 m² flat: 45 × R$2,476 (CUB-RJ) = R$111,400, plus 35% for overheads and margin = R$150,400, plus land of up to R$30,000. The CUB rate for a small building may be higher. The plot for five flats is bought whole, for about R$140,000. A village of about 36 houses is a later stage and has no budget yet. These are Rafael’s figures, not an index-published finished-flat price. Track dates, included work, prices in reais and actual invoices.
+**Presenter notes:** In September 2026 Rafael worked out the cost of a 45 m² flat: 45 × R$2,476 (CUB-RJ) = about R$111,400, plus 35% for overheads and margin = R$150,400, plus land of up to R$30,000. The CUB rate for a small building may be higher. The plot for five flats is bought whole, for about R$140,000. A village of about 36 houses is a later stage and has no budget yet. These are Rafael’s figures, not an index-published finished-flat price. Track dates, included work, prices in reais and actual invoices.
 
 
 
@@ -80,7 +80,7 @@ The household could see what it has paid towards the purchase and how much remai
 
 
 
-**Presenter notes:** The first flats are still being planned. The price for each family and its monthly payment are not decided yet; both are agreed with the family in writing. How much of each payment would count towards buying it also remains to be agreed. Rafael’s cost sum and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
+**Presenter notes:** The first family would most likely live in Rafael’s existing flat in Guadalupe; the new flats are still being planned. The price for each family and its monthly payment are not decided yet; both are agreed with the family in writing. How much of each payment would count towards buying it also remains to be agreed. Rafael’s cost sum and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
 
 
 
@@ -178,7 +178,7 @@ Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/parecer
 
 Source: [IMOBX: the Self-compounding page](https://imobx.org/token.html). Sets out the token’s fee, where it goes and the four V’s as the project describes them.
 
-**Presenter notes:** The first house is funded outside the token: once IMOBX’s legal entity is registered, it will run a crowdfunding campaign in reais and apply for grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. The fee would add to the houses budget over time. Buyers’ payments would go into the trading pool, so none of them would reach IMOBX. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of the 35% would go to new houses; if the token opens with a sale on Arctide’s bonding curve, that part would go to Arctide. Volume: the fees would give the community an income of its own. Verify: anyone could check where each fee went and who approved it. Vote: on the token’s own rules, weight would come mainly from work others have confirmed; members’ decisions stay one member, one vote. Vow: the commitments no vote can break, starting with each family’s housing agreement. Benefits for holders are chosen later from what IMOBX can actually supply. We start building a house only when its funding is secured.
+**Presenter notes:** The first house is funded outside the token: once the IMOBX housing cooperative is registered, it will run a crowdfunding campaign in reais and apply for grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. The fee would add to the houses budget over time. Buyers’ payments would go into the trading pool, so none of them would reach IMOBX. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of the 35% would go to new houses; if the token opens with a sale on Arctide’s bonding curve, that part would go to Arctide. Volume: the fees would give the community an income of its own. Verify: anyone could check where each fee went and who approved it. Vote: on the token’s own rules, weight would come mainly from work others have confirmed; members’ decisions stay one member, one vote. Vow: the commitments no vote can break, starting with each family’s housing agreement. Benefits for holders are chosen later from what IMOBX can actually supply. We start building a house only when its funding is secured.
 
 
 
@@ -190,7 +190,7 @@ The roadmap names proposed roles and conditions for proceeding.
 
 - Property rights, household terms and budgets underpin the first houses.
 
-- Digital payment trials and the token’s preparation would run alongside them.
+- Digital payment trials would run alongside them; the token is a separate, later step.
 
 - Expansion follows operating results and funding for existing commitments.
 
@@ -198,7 +198,7 @@ The roadmap names proposed roles and conditions for proceeding.
 
 Source: [IMOBX project stages](https://imobx.org/roadmap.html). Sets out the stages and what must be ready in each. It sets no dates.
 
-**Presenter notes:** The six stages are legal structure and property; resident participation; first houses; payment records people can check; funding and account review; more houses and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. OLYMPUS is a possible builder connected to Rafael. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
+**Presenter notes:** The six stages are legal structure and property; resident participation; first houses; payment records people can check; funding and account review; more houses and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Olympus is Rafael’s own construction company and the proposed builder. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
 
 
 
@@ -234,6 +234,6 @@ An owner, building team, local organization and funder could develop a costed pr
 
 
 
-**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. There is no contact address yet: visitors can prepare and copy an introduction, but the website sends nothing. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property.
+**Presenter notes:** These are possible contributions, not confirmed partnerships or contracts. The contact page has separate routes and explanations. The contact page has an email address (contact@imobx.org) and a way to prepare an introduction first; the website sends nothing by itself. You can also join the IMOBX group on Telegram, where the co-founders reply. A property introduction can lead to assessment, not an automatic transfer. If a builder is connected to an IMOBX founder, someone independent must check the contract and completed work. See contact.html and rent-to-own.html#property.
 
 

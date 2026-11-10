@@ -6,8 +6,8 @@
 
 | Person or group | Role in the plan | Where it stands |
 | --- | --- | --- |
-| Rafael Britto | Founder; a builder in Rio de Janeiro. Construction, budgets and local contacts. | No written duties yet. |
-| John | Communication, documentation and coordination of digital tools. | Helps prepare the project. Cannot spend IMOBX funding or sign for IMOBX. |
+| Rafael Britto | Co-founder; a builder in Rio de Janeiro. Construction, budgets and local contacts. | No written duties yet. |
+| John | Co-founder; communication, documentation and coordination of digital tools. | Helps prepare the project. Cannot spend IMOBX funding or sign for IMOBX. |
 | IMOBX | Project organisation, agreements and account reporting. | Legal form and legal representatives are being defined. |
 | OLYMPUS | Proposed builder, linked to Rafael; no contract signed. | Hired only after the work is agreed, prices are compared and someone independent of the builder approves. |
 | Residents | Housing terms and participation in shared matters. | Rules and representatives to be agreed with residents. |
@@ -24,7 +24,7 @@ Sources for the research and figures.
 
 [Rafael’s budget and his account of the lofts](https://imobx.org/whitepaper.html#3-the-cost-proposal-already-supplied)
 
-Rafael’s own figures, from 30 November 2025 and 20 January 2026.
+Rafael’s own figures: his budget of 30 November 2025 and 20 January 2026 and his answers of 4 to 6 November 2026, with the September 2026 CUB-RJ (Sinduscon-Rio).
 
 [IBGE: 2022 Census, favelas and urban communities](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas)
 
@@ -32,7 +32,7 @@ Rafael’s own figures, from 30 November 2025 and 20 January 2026.
 
 [CAIXA: SINAPI](https://www.caixa.gov.br/poder-publico/modernizacao-gestao/sinapi/paginas/default.aspx)
 
-Brazil’s reference table for building costs, used in Rafael’s budget.
+Brazil’s table of building costs, item by item. Anyone can use it to check the itemised budget Rafael is preparing.
 
 [CVM: Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html)
 

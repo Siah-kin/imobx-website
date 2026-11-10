@@ -21,10 +21,10 @@ def build_about(root, page, tr, esc):
     b += '<section id="why">' + t(('Por que a IMOBX existe?', 'Why does IMOBX exist?'), 'h2')
     b += t(('Construir um lar é uma busca existencial de todo ser humano, onde quer que esteja.',
             'Creating a home is an existential quest for every human, wherever you are.'), 'p', 'class="about-lead"')
-    b += linked(('Em 2022,', 'In 2022,'),
+    b += linked(('Em 2024,', 'In 2024,'),
                 ('o déficit habitacional do Brasil', 'Brazil’s housing deficit', 'why.html'),
-                ('era de cerca de 6 milhões de moradias. Mais da metade (cerca de 3,24 milhões) eram famílias com renda de até três salários mínimos que gastam mais de 30% da renda com aluguel. Os aluguéis subiram 9,13% nos 12 meses até setembro de 2026, o dobro da inflação oficial de 4,58%. O Censo 2022 contou cerca de 16,4 milhões de pessoas morando em favelas e comunidades urbanas: um em cada doze brasileiros.',
-                 'was about 6 million dwellings. More than half of it (about 3.24 million) were households earning up to three minimum wages that spend more than 30% of their income on rent. Rents rose 9.13% in the 12 months to September 2026, twice the official inflation of 4.58%. The 2022 Census counted about 16.4 million people living in favelas and urban communities: one in every twelve Brazilians.'))
+                ('era de cerca de 5,77 milhões de domicílios, pelo critério da Fundação João Pinheiro. Desses, cerca de 3,59 milhões (62%) eram domicílios urbanos com renda de até três salários mínimos que gastam mais de 30% da renda com aluguel. Os aluguéis subiram 9,13% nos 12 meses até setembro de 2026, o dobro da inflação oficial de 4,58%. O Censo 2022 contou cerca de 16,4 milhões de pessoas morando em favelas e comunidades urbanas: um em cada doze brasileiros.',
+                 'was about 5.77 million households, by the Fundação João Pinheiro measure. Of those, about 3.59 million (62%) were urban households earning up to three minimum wages that spend more than 30% of their income on rent. Rents rose 9.13% in the 12 months to September 2026, twice the official inflation of 4.58%. The 2022 Census counted about 16.4 million people living in favelas and urban communities: one in every twelve Brazilians.'))
     b += '</section>'
 
     b += '<section id="founders">' + t(('Quem começou a IMOBX, e por quê?', 'Who started IMOBX, and why?'), 'h2') + '<div class="about-founders">'
@@ -40,7 +40,7 @@ def build_about(root, page, tr, esc):
           + t(('Desde 2005, procuro formas para que as comunidades compartilhem o que pertence a todos. A proposta da IMOBX leva essa ideia de compartilhar à moradia.',
                  'Since 2005, I have looked for ways for communities to share what they hold in common. The IMOBX proposal brings that idea of sharing to housing.'))
           + '</blockquote><figcaption>' + t(('John, cofundador', 'John, co-founder'), 'span') + '</figcaption></figure>')
-    b += '</div><p>' + t(('As histórias completas de John e Rafael', 'John’s and Rafael’s full stories'), 'a', 'href="resources.html#our-story"') + '</p></section>'
+    b += '</div><p>' + t(('As histórias completas de Rafael e John', 'Rafael’s and John’s full stories'), 'a', 'href="resources.html#our-story"') + '</p></section>'
 
     b += '<section id="build">' + t(('O que queremos construir?', 'What do we want to build?'), 'h2')
     b += t(('Queremos bairros de transição social rumo a um futuro resiliente, onde os vizinhos voltam a se conhecer e as crianças brincam onde os pais podem vê-las. Quem mora ali decide junto como o lugar funciona. O nosso lucro real é social. A nossa riqueza é um mundo onde as pessoas são livres, e um bairro sem estresse vale mais do que ficar milionário.',
@@ -61,8 +61,8 @@ def build_about(root, page, tr, esc):
     b += '</section>'
 
     b += '<section id="now" class="about-now">' + t(('Onde estamos agora?', 'Where are we now?'), 'h2')
-    b += t(('A IMOBX está em preparação, e a sua cooperativa ainda vai ser fundada. Buscamos a primeira família, a primeira casa e as pessoas que vão fundar a cooperativa com a gente. Se você é uma família procurando moradia, tem um terreno ou uma casa, constrói, financia ou é um vizinho que quer que isso exista, queremos conhecer você.',
-            'IMOBX is in preparation, and its cooperative is still to be founded. We are looking for the first family, the first house and the people who will found the cooperative with us. If you are a family looking for a home, someone with land or a house, a builder, a funder or a neighbour who wants this to exist, we would like to meet you.'))
+    b += t(('A IMOBX está em preparação, e a sua cooperativa ainda vai ser fundada. Estamos escrevendo o primeiro contrato, para o apartamento do Rafael em Guadalupe, e procurando um terreno para cinco apartamentos novos. Também precisamos das pessoas que vão fundar a cooperativa com a gente. Se você é uma família procurando moradia, tem um terreno ou uma casa, constrói, financia ou é um vizinho que quer que isso exista, queremos conhecer você.',
+            'IMOBX is in preparation, and its cooperative is still to be founded. We are writing the first agreement, for Rafael’s flat in Guadalupe, and looking for a plot for five new flats. We also need the people who will found the cooperative with us. If you are a family looking for a home, someone with land or a house, a builder, a funder or a neighbour who wants this to exist, we would like to meet you.'))
     b += '<p>' + t(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html#apresentacao"') + '</p></section>'
     b += '</main>'
     (root / 'about.html').write_text(page('IMOBX | About', b, '<link rel="stylesheet" href="assets/about.css">', lang='pt-BR', title_pt='IMOBX | Sobre',
