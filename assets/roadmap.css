@@ -191,3 +191,8 @@
 .rafael-steps li::before{content:counter(rstep)".";display:inline;width:auto;height:auto;border:0;color:#193D4E;font-weight:700;margin:0 6px 0 0;place-items:initial}
 .route-tag{background:none;border:0;padding:0;color:#276578}
 .property-cards{margin-top:14px}
+
+/* the token as a clearly labelled "later" step with its link (owner, 10 Nov) */
+.route-later{margin:26px 0 0;padding:18px 22px;background:#fff;border:1px solid #D9E3E8;max-width:44rem}
+.route-later h3{margin:0 0 6px;font-size:18px;color:#193D4E}
+.route-later p{margin:0 0 8px;max-width:none}

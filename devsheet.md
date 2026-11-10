@@ -42,7 +42,7 @@ This guide explains how a request leads to completed work, a check that it meets
 
 ## 2. Housing designs and building costs
 
-### Rafael’s village proposal
+### The village proposal
 
 Rafael’s plan brings together 45 m² two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [illustration](properties.html#visao-rafael), made with an image generator, shows the community as planned.
 

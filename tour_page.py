@@ -143,9 +143,9 @@ STEPS = [
         'In 2024 vielen in Brazilië ongeveer 5,77 miljoen huishoudens onder het woningtekort, volgens de berekening van de Fundação João Pinheiro. De huren stijgen sneller dan de inflatie: 9,13% in de 12 maanden tot september 2026, tegen 4,58%. In Rio stegen ze met 14,80%.')],
      [('why.html', T('Leia os números', 'Read the numbers', 'Lees de cijfers'))]),
     ('tour-tenant', T('Um apartamento para começar', 'A flat to start with', 'Een appartement om mee te beginnen'), None, None,
-     [T('O Rafael tem um apartamento em Guadalupe, onde uma família mora de aluguel. É muito provável que a IMOBX comece por ele: uma família, antes de qualquer obra nova.',
-        'Rafael has a flat in Guadalupe where a family rents today. It is most likely where IMOBX starts: one family, before anything new is built.',
-        'Rafael heeft een appartement in Guadalupe waar nu een gezin huurt. Daar begint IMOBX hoogstwaarschijnlijk: één gezin, voordat er iets nieuws wordt gebouwd.')],
+     [T('Uma família aluga um apartamento num prédio que a Olympus, a construtora do Rafael, construiu em Guadalupe, e tem dificuldade para pagar. Estamos avaliando um contrato de aluguel com compra, com aluguel menor. Nada está combinado ainda.',
+        'A family rents a flat in the Guadalupe building Olympus, Rafael’s company, built, and struggles to pay. We are considering a rent-to-own agreement with a lower rent. Nothing is agreed yet.',
+        'Een gezin huurt een appartement in het gebouw in Guadalupe dat Olympus, het bouwbedrijf van Rafael, bouwde, en heeft moeite met betalen. We overwegen een huurkoopovereenkomst met een lagere huur. Er is nog niets afgesproken.')],
      [('roadmap.html#homes', T('Onde a primeira família vai morar', 'Where the first family will live', 'Waar het eerste gezin gaat wonen'))]),
     # WHA-05 (John)
     ('tour-rent', T('Dia de aluguel, com um tijolo seu', 'Rent day, with a brick of your own', 'Huurdag, met een eigen steen'),
@@ -192,8 +192,8 @@ STEPS = [
      [('transparency.html', T('O que custa uma casa', 'What a house costs', 'Wat een huis kost'))]),
     # VIS-03 (John); the village as Rafael planned it (roadmap)
     ('tour-village', T('A vila que queremos', 'The village we want', 'Het dorp dat we willen'),
-     ('img', 'assets/homepage.jpg', 1024, 765, T('Ilustração conceitual da vila que o Rafael imagina', 'Concept illustration of the village Rafael imagines', 'Conceptillustratie van het dorp dat Rafael zich voorstelt'),
-      T('A ideia do Rafael para uma vila mais adiante, desenhada com um gerador de imagens.', 'Rafael’s idea for a later village, drawn with an image generator.', 'Rafaels idee voor een later dorp, gemaakt met een beeldgenerator.')),
+     ('img', 'assets/homepage.jpg', 1024, 765, T('Ilustração conceitual da vila que imaginamos', 'Concept illustration of the village we imagine', 'Conceptillustratie van het dorp dat we ons voorstellen'),
+      T('A vila que imaginamos para mais adiante, desenhada com um gerador de imagens.', 'The village we imagine for later, drawn with an image generator.', 'Het dorp dat we ons voorstellen voor later, gemaakt met een beeldgenerator.')),
      (T('Agora estamos todos fragmentados, mas tenho certeza de que, aos poucos, podemos crescer em comunidades pequenas, mas mais fortes e resilientes.', 'We are now all fragmented, but I am sure that slowly we can grow into small but stronger and resilient communities.', 'We zijn nu allemaal versnipperd, maar ik weet zeker dat we langzaam kunnen uitgroeien tot kleine maar sterkere en veerkrachtige gemeenschappen.'), JOHN),
      [T('No plano do Rafael, casas de 45 m² ficam em volta de um pátio comum, para os pais verem os filhos brincando, com um pomar, energia solar nos telhados e salas para estudar. É uma etapa posterior; primeiro vêm cinco apartamentos de cada vez.',
         'In Rafael’s plan, 45 m² houses stand around a shared courtyard, so parents can see their children play, with an orchard, solar panels on the roofs and rooms to study in. It is a later stage; first come five flats at a time.',
@@ -249,9 +249,9 @@ STEPS = [
     # ASK-01 (John)
     ('tour-join', T('Sua vez', 'Your turn', 'Jouw beurt'), None,
      (T('Qualquer pessoa que tenha uma visão parecida com a nossa, entenda o problema e tenha os meios ou a dedicação para resolvê-lo. É esse o tipo de pessoa que queremos atrair.', 'Whatever person has a very similar kind of vision to ours, understands the problem, and has the means or dedication to solve it. That’s the type of people we’re trying to attract.', 'Iedereen die een visie heeft die op de onze lijkt, het probleem begrijpt en de middelen of de toewijding heeft om het op te lossen. Dat is het soort mensen dat we willen aantrekken.'), JOHN),
-     [T('A IMOBX está em preparação. Estamos escrevendo o primeiro contrato, para o apartamento do Rafael em Guadalupe, e procurando um terreno para cinco apartamentos novos. Também precisamos das pessoas que vão fundar a cooperativa com a gente.',
-        'IMOBX is in preparation. We are writing the first agreement, for Rafael’s flat in Guadalupe, and looking for a plot for five new flats. We also need the people who will found the cooperative with us.',
-        'IMOBX is in voorbereiding. We schrijven de eerste overeenkomst, voor Rafaels appartement in Guadalupe, en zoeken een perceel voor vijf nieuwe appartementen. We hebben ook de mensen nodig die de coöperatie met ons oprichten.')],
+     [T('A IMOBX está em preparação. Estamos avaliando um primeiro contrato de aluguel com compra para uma família em Guadalupe, e procurando um terreno para cinco apartamentos novos. Também precisamos das pessoas que vão fundar a cooperativa com a gente.',
+        'IMOBX is in preparation. We are considering a first rent-to-own agreement for a family in Guadalupe, and looking for a plot for five new flats. We also need the people who will found the cooperative with us.',
+        'IMOBX is in voorbereiding. We overwegen een eerste huurkoopovereenkomst voor een gezin in Guadalupe en zoeken een perceel voor vijf nieuwe appartementen. We hebben ook de mensen nodig die de coöperatie met ons oprichten.')],
      [('contact.html#apresentacao', T('Apresente-se', 'Introduce yourself', 'Stel jezelf voor'), 'tour-cta'), ('jobs.html', T('Ver a vaga', 'See the open role', 'Bekijk de vacature'), 'tour-jobs')]),
 ]
 

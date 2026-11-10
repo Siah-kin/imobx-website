@@ -80,7 +80,7 @@ The household could see what it has paid towards the purchase and how much remai
 
 
 
-**Presenter notes:** The first family would most likely live in Rafael’s existing flat in Guadalupe; the new flats are still being planned. The price for each family and its monthly payment are not decided yet; both are agreed with the family in writing. How much of each payment would count towards buying it also remains to be agreed. Rafael’s cost sum and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
+**Presenter notes:** The first family would most likely live in the Guadalupe building that Olympus built; the new flats are still being planned. The price for each family and its monthly payment are not decided yet; both are agreed with the family in writing. How much of each payment would count towards buying it also remains to be agreed. Rafael’s cost sum and the two-loft contract are construction cases, not household sale prices. Repair charges, hardship and exit terms remain open. The household explanation is at rent-to-own.html. Before building, the project needs documents showing the right to use the property, a budget and someone independent to inspect the work.
 
 
 
