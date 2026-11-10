@@ -586,3 +586,8 @@ html .option-b :is(a,button):focus-visible{outline:3px solid #fff;outline-offset
 .site-footer .footer-column a{display:inline-flex;align-items:center;min-height:44px;line-height:1.35;padding:6px 0}
 @media(max-width:800px){.site-footer .footer-inner{grid-template-columns:1fr;gap:32px}.site-footer{padding:32px 0 40px}.site-footer .footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
 @media(max-width:400px){.site-footer .footer-columns{gap:24px 16px}}
+
+/* Tablet menu (10 Nov): between 701 and 1000 px the links are folded away, so the Menu button must show here too */
+@media (min-width:701px) and (max-width:1000px){
+  .js-menu .menu-toggle{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid #276578;background:#fff;color:#276578;font:700 15px Arial,Helvetica,sans-serif;justify-self:end}
+}

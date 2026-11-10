@@ -492,10 +492,10 @@ def build_guide(root, page, tr, esc, language_controls):
     # then one readable card per step (the detail). Every board item keeps its place.
     STOPS = [
         ('done', 0, ('Custos calculados', 'Costs worked out'), ('O custo de um apartamento e de cinco, pelo índice público de custo da construção do Rio.', 'The cost of one flat and of five, from Rio’s public building-cost index.'), None, [0, 1]),
-        ('now', 1, ('Preparando', 'Preparing'), ('Contrato do apartamento de Guadalupe, conferentes independentes, busca do terreno.', 'Agreement for the Guadalupe flat, independent checkers, plot search.'), None, [0, 1, 2, 3, 4]),
-        ('next', 2, ('Registrar a cooperativa', 'Register the cooperative'), ('Um pagamento de teste e uma reserva para as contas.', 'A test payment and a reserve for the bills.'), None, [0, 1, 2]),
-        ('next', 2, ('Campanha de financiamento coletivo', 'Crowdfunding campaign'), ('Em reais, depois ODS 11 e outros financiadores.', 'In reais, then UN Goal 11 and other funders.'), ('Aqui entra o financiamento', 'Funding comes in here'), [3, 4]),
-        ('then', 3, ('As famílias chegam', 'Families move in'), ('A primeira família assina em Guadalupe. Os moradores escrevem as regras da casa.', 'The first family signs in Guadalupe. Residents write the house rules.'), None, [0, 2, 3]),
+        ('now', 1, ('Preparando', 'Preparing'), ('Contrato do apartamento de Guadalupe, conferentes independentes, busca do terreno.', 'Agreement for the Guadalupe flat, independent checkers, plot search.'), None, [1, 4]),
+        ('next', 2, ('Registrar a cooperativa', 'Register the cooperative'), ('Um pagamento de teste e uma reserva para as contas.', 'A test payment and a reserve for the bills.'), None, [1, 2]),
+        ('next', 2, ('Campanha de financiamento coletivo', 'Crowdfunding campaign'), ('Em reais, depois ODS 11 (cidades sustentáveis) e outros financiadores.', 'In reais, then UN Goal 11 (sustainable cities) and other funders.'), ('Aqui entra o financiamento', 'Funding comes in here'), [3, 4]),
+        ('then', 3, ('A primeira família assina', 'The first family signs'), ('No apartamento de Guadalupe. Depois, os moradores escrevem as regras da casa.', 'In the Guadalupe flat. Residents then write the house rules.'), None, [0, 2, 3]),
         ('then', 3, ('Construir cinco apartamentos', 'Build five flats'), ('Começa quando o custo total estiver na conta.', 'Starts once the full cost is in the bank.'), ('Cerca de R$892.000', 'About R$892,000'), [1]),
     ]
     roadmap += '<ol class="route-map">'
@@ -507,7 +507,8 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '<h3 class="route-detail-head">' + text(('O que acontece em cada passo', 'What happens at each step'), 'span') + '</h3><div class="route-detail">'
     for n, (key, col, title, summary, tag, idxs) in enumerate(STOPS, 1):
         roadmap += (f'<article id="step-{n}" class="route-card route-card-{key}"><h4><span class="route-dot">' + ('✓' if key == 'done' else str(n)) + '</span>' + text(title, 'span') + '</h4><ul>'
-                    + ''.join(text((BOARD[col][3][i][0], BOARD[col][3][i][1]), 'li') for i in idxs) + '</ul></article>')
+                    + ''.join(text((BOARD[col][3][i][0], BOARD[col][3][i][1]), 'li') for i in idxs)
+                    + ('<li>' + text(('No que o Rafael está trabalhando agora', 'What Rafael is working on now'), 'a', 'href="#rafael-now"') + '</li>' if key == 'now' else '') + '</ul></article>')
     roadmap += '</div>'
     housing_membership = ('Na proposta, as famílias se associam a uma cooperativa habitacional e assinam seus próprios contratos de moradia. Elas não precisam comprar nem ter tokens.', 'Under the proposal, families join a housing cooperative and sign their own housing agreements. They do not need to buy or hold tokens.')
     roadmap += text(('O token da IMOBX', 'The IMOBX token'), 'h3')
