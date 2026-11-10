@@ -196,3 +196,70 @@
 .route-later{margin:26px 0 0;padding:18px 22px;background:#fff;border:1px solid #D9E3E8;max-width:44rem}
 .route-later h3{margin:0 0 6px;font-size:18px;color:#193D4E}
 .route-later p{margin:0 0 8px;max-width:none}
+
+/* The roadmap as one story (owner, 10 Nov). The path reuses the homepage's line-and-squares device: a hairline, a square for
+   each step, filled when done, open when ahead, orange only for "we are here" (as in the method drawing). No boxes, no chips. */
+#stages .route-path{max-width:none;width:100%}
+.route-path{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px;position:relative}
+.route-path::before{content:"";position:absolute;left:0;right:0;top:5px;height:2px;background:#4A90A4;opacity:.45}
+.route-path>li{position:relative;padding-top:34px;margin:0}
+.route-path>li::before{content:"";position:absolute;left:0;top:0;width:12px;height:12px;box-sizing:border-box;background:#fff;border:2px solid #4A90A4}
+.route-path>li.rp-done::before{background:#4A90A4}
+.route-path>li.rp-now::before{width:16px;height:16px;top:-2px;background:#B85500;border-color:#B85500}
+.route-path h3{margin:0 0 8px;font-size:18px;line-height:1.25;color:#193D4E}
+.route-path p{margin:0;font-size:15.5px;line-height:1.55;color:#193D4E}
+.rp-status{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.rp-here{position:absolute;left:0;top:-32px;font-size:14px;font-weight:700;color:#B85500;white-space:nowrap}
+.route-after{margin:40px 0 0;font-size:16px}
+@media(max-width:1099px){
+  .route-path{grid-template-columns:minmax(0,1fr);gap:0;margin-top:28px}
+  .route-path::before{left:5px;right:auto;top:6px;bottom:6px;width:2px;height:auto}
+  .route-path>li{padding:0 0 26px 38px}
+  .route-path>li::before{top:3px}
+  .route-path>li.rp-now::before{top:1px;left:-2px}
+  .rp-here{position:static;display:block;margin:0 0 4px}
+}
+
+/* funding: three routes as a plain numbered list with hairlines, not three boxes */
+#funding{margin-top:0}
+.funding-cards{display:block;list-style:none;max-width:44rem;margin:20px 0;padding:0;counter-reset:route}
+.funding-cards li{display:block;counter-increment:route;position:relative;border:0;border-top:1px solid #D9E3E8;border-radius:0;background:none;margin:0;padding:16px 0 16px 42px}
+.funding-cards li::before{content:counter(route) ".";position:absolute;left:0;top:14px;font-size:21px;font-weight:700;color:#276578}
+.funding-cards strong::before{content:none}
+
+/* the next building: Rafael's two current steps as a plain list, then his company's lofts as the example */
+.building-now{margin-top:44px}
+.building-now .rafael-steps{display:block;list-style:none;max-width:44rem;padding:0;margin:12px 0 0}
+.building-now .rafael-steps li{display:block;border:0;border-top:1px solid #D9E3E8;border-radius:0;background:none;padding:14px 0;margin:0}
+.building-now .rafael-steps li::before{content:none}
+.building-now .rafael-steps strong{display:inline;font-size:inherit}
+.building-example{margin-top:52px}
+
+/* later: the village drawing beside the village and token text */
+.later-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:start;margin-top:24px}
+.later-text h3{margin:0 0 8px;font-size:20px;color:#193D4E}
+.later-text h3:not(:first-child){margin-top:32px}
+.later-text p{margin:0 0 12px}
+@media(max-width:899px){.later-grid{grid-template-columns:minmax(0,1fr);gap:28px}}
+
+#stages .route-after{margin-top:44px}
+#terms>p:last-child{margin-top:32px}
+
+/* design review fixes (10 Nov): a tighter top so the path shows on the first screen, a "Done" word beside the colour, one rule between folds, the lofts as a pair */
+.roadmap-page>h1{padding-top:36px}
+.roadmap-page>.guide-lead{padding-bottom:16px}
+.band-page>#stages{padding-top:36px}
+.route-path{margin-top:48px}
+.rp-doneword{color:#526571}
+.building-now{margin-top:0}
+.loft-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:24px 0 18px}
+.loft-pair figure{margin:0}
+.loft-pair img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.loft-pair img.loft-model{object-fit:contain;background:#fff}
+.loft-pair figcaption{margin-top:10px;color:#526571;font-size:15px;line-height:1.5}
+@media(max-width:700px){.loft-pair{grid-template-columns:minmax(0,1fr)}}
+#terms .disclosure+.disclosure{margin-top:0;border-top:0}
+.funding-cards,.building-now .rafael-steps{max-width:32em}
+
+.loft-pair img{border:1px solid #D9E3E8;box-sizing:border-box}
+#terms .disclosure-body ul{margin-top:0}
