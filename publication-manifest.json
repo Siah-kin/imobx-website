@@ -10,7 +10,7 @@
     },
     {
       "path": "rent-to-own.html",
-      "sha256": "a8577b3324a7043dea22d0ed20b9c9d165ad310fc5067c0454188238438469a6"
+      "sha256": "076dec17103ed446a13e4fc77e9bb4d01c650412b8a0bfedd8a38d101614eaf2"
     },
     {
       "path": "properties.html",
@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "654e44ebd1b22271b0edd9d0f25e9c70e4a30cc106dec42e5a140c2aa333b9fb"
+      "sha256": "3260ad7cc09f7b5f8e0d7dc69377f76510b7bbb102259ec03f672d29a1c6707e"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "e51e00058b54820d4fe82b3abfc5b7900c8e243d732654fe54d87c236bb56a56"
+      "sha256": "3090b7fc44acb9c75316f477a8e94ad002721c481a8668200db0853a6f6d2520"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "9ac5b519541becb0814954e0b6ac36afccc2d6b06c4b62dfa71c39cc716b6e97"
+      "sha256": "89bacf6ed5ef7799e22083d87325f74a429a5516c31b15c500ac92e5a08de7b9"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "b1e1d6c1b83498d25ee8d1a91fff1b961e0df3c5114094bdb63366572d00a7f7"
+      "sha256": "957eea2efd81ce348353dc916d7c52dcbe076c6dbf2b1a9ffc98a4cf4f08a326"
     },
     {
       "path": "pitchdeck.json",
@@ -78,23 +78,23 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "bb7f76d7dda5680ee2bf350c9f0185dd39d3a9508df7c1b34de7b4ee92ce1ebc"
+      "sha256": "1f2a015ec7d8a0923bf19ee1ba8b784283878cc221458be37a7ac242bb50e55b"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "6a9bc8fe853ee4afb0e1dd48891af6cd894003819de4c11dc6d7308e6899e3c1"
+      "sha256": "5520de0926b4cb87c0629de6974fad28a0f75668f08cd367231548bbdb297e7b"
     },
     {
       "path": "roadmap.html",
-      "sha256": "87bf712d587a3c631401295d8085593c35a94965ff74c177c5e9a900bd586815"
+      "sha256": "b1f6af2cbabe9e2cdb10bfedcc8617db5820b92d663927b632ab4596d8e33d82"
     },
     {
       "path": "transparency.html",
-      "sha256": "bd018c52c3875f605eb8e1b1b7a82a8a16b66308759645da015ad5c3d1db0678"
+      "sha256": "10ddea443e80c4ced75fe845c03e1959badc05de1b272264100a6c96976e8a4e"
     },
     {
       "path": "resources.html",
-      "sha256": "8390f776c9f4a174f6c7411506a88c6b5c492fe8e39db76d03954a26fd9a390d"
+      "sha256": "2072f916e27b7c558fd546624a178df8d192a2a25b619f3ee64d4bf482d809c5"
     },
     {
       "path": "model-guide.json",

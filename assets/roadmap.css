@@ -116,3 +116,41 @@
  .guide-table.figures-table td{display:table-cell;width:auto;border-bottom:1px solid var(--line);padding:10px 12px}
  .guide-table.figures-table td::before{content:none}
 }
+
+/* the roadmap's visual path (owner, 10 Nov): six steps on a line, a "we are here" marker, then one readable card per step */
+.route-lead{margin:0 0 26px;font-size:18px;line-height:1.5;color:#193D4E}
+.route-map{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));position:relative}
+.route-map::before{content:"";position:absolute;left:8.33%;right:8.33%;top:22px;height:3px;background:#D9E3E8;border-radius:2px}
+.route-stop{position:relative;padding:0 10px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.route-dot{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:3px solid #4A90A4;font-weight:700;font-size:18px;color:#276578;position:relative;z-index:1;flex:none}
+.route-done .route-dot{background:#4A90A4;border-color:#4A90A4;color:#fff}
+.route-now .route-dot{border-color:#B85500;color:#B85500;box-shadow:0 0 0 6px #FDF1E4}
+.route-chip{display:inline-block;margin:12px 0 8px;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;background:#fff;border:1px solid #D9E3E8;color:#526571}
+.route-now .route-chip{background:#FDF1E4;border-color:#F0D2AE;color:#8A3F00}
+.route-done .route-chip{background:#E3EEF2;border-color:#C5DCE4;color:#276578}
+.route-title{display:block;font-size:17px;line-height:1.25;color:#193D4E;margin:0 0 6px}
+.route-sum{display:block;font-size:15px;line-height:1.5;color:#2B4655}
+.route-tag{display:block;margin-top:10px;font-size:14px;font-weight:700;color:#276578;background:#fff;border:1px solid #C5DCE4;border-radius:8px;padding:6px 10px}
+.route-legend{display:flex;gap:20px;flex-wrap:wrap;margin:26px 0 8px;font-size:14px;color:#526571;max-width:none}
+.route-legend>span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px;vertical-align:-1px;border:2px solid #4A90A4;background:#fff}
+.route-legend>.rl-done::before{background:#4A90A4}
+.route-legend>.rl-now::before{border-color:#B85500;background:#FDF1E4}
+.route-detail-head{margin:34px 0 14px;font-size:20px;color:#193D4E}
+.route-detail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.route-card{background:#fff;border:1px solid #D9E3E8;border-radius:8px;padding:20px 22px}
+.route-card h4{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:18px;line-height:1.25;color:#193D4E}
+.route-card .route-dot{width:34px;height:34px;font-size:15px;border-width:2px}
+.route-card-now{background:#fff;border-color:#F0D2AE}
+.route-card ul{margin:0;padding-left:1.2em}
+.route-card li{margin:0 0 10px;font-size:16px;line-height:1.55;color:#193D4E}
+.route-card li:last-child{margin-bottom:0}
+@media(max-width:1099px){.route-detail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:899px){
+ .route-map{grid-template-columns:1fr}
+ .route-map::before{left:22px;right:auto;top:8px;bottom:8px;width:3px;height:auto}
+ .route-stop{text-align:left;align-items:flex-start;padding:0 0 22px 66px;min-height:70px}
+ .route-stop>.route-dot{position:absolute;left:0;top:0}
+ .route-chip{margin-top:0}
+ .route-tag{max-width:none}
+}
+@media(max-width:700px){.route-detail{grid-template-columns:1fr}}
