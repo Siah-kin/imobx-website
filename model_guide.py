@@ -502,7 +502,7 @@ def build_guide(root, page, tr, esc, language_controls):
         ('Em seguida', 'Next', [
             ('Registrar a cooperativa.', 'Register the cooperative.'),
             ('Fazemos um pequeno pagamento de teste para conferir quem aprova os pagamentos e se as nossas contas batem com o extrato do banco.', 'We make a small test payment to check who approves payments and that our books match the bank statement.'),
-            ('Uma reserva para as contas e para o que prometemos às famílias. Se ela baixar, os gastos novos esperam.', 'A reserve for the bills and for what we promise families. If it runs low, new spending waits.'),
+            ('Separamos uma reserva para as contas e para os compromissos com as famílias. Se ela baixar, os gastos novos esperam.', 'We set aside a reserve for the bills and for our commitments to families. If it runs low, new spending waits.'),
             ('Escolhemos a plataforma, escrevemos as recompensas, definimos a meta e abrimos a campanha de financiamento coletivo.', 'We choose the platform, write the rewards, set the goal and open the crowdfunding campaign.')]),
         ('Depois', 'Then', [
             ('Se a família topar, ela assina um contrato de aluguel com compra do apartamento em que mora, no prédio de Guadalupe.', 'If the family agrees, it signs a rent-to-own agreement for its flat in the Guadalupe building.'),
@@ -520,12 +520,32 @@ def build_guide(root, page, tr, esc, language_controls):
     ]
     roadmap += '<section id="stages"><span id="rafael-now"></span>' + text(('O caminho até os primeiros apartamentos', 'The path to the first flats'), 'h2')
     roadmap += text(('Seis passos, em ordem. Estamos no passo 2.', 'Six steps, in order. We are at step 2.'), 'p', 'class="route-lead"')
+    roadmap += text(('Situação em 10 de novembro de 2026. Cada passo lista o que precisa para ser concluído.', 'Status on 10 November 2026. Each step lists what it needs before it is done.'), 'p', 'class="route-asof"')
     roadmap += '<ol class="route-map">'
     for n, (key, col, title, summary, idxs) in enumerate(STOPS, 1):
         roadmap += (f'<li class="route-stop route-{key}"><span class="route-dot">' + ('✓' if key == 'done' else str(n)) + '</span>'
                     + text((BOARD[col][0], BOARD[col][1]), 'span', 'class="route-chip"') + '<strong class="route-title">' + text(title, 'a', f'href="#step-{n}"') + '</strong>'
                     + text(summary, 'span', 'class="route-sum"') + '</li>')
     roadmap += '</ol>'
+    # Fourth layer: what must be true before each step starts, and where its source is. Only facts already on the page.
+    NEEDS = {
+        1: (('O índice público de custo da construção do Rio (CUB). O orçamento detalhado vem antes da obra, no passo 6.', 'Rio’s public building-cost index (CUB). The itemised quote comes before building, at step 6.'),
+            (('Custos e recursos', 'Costs and funding'), 'transparency.html#budgets')),
+        2: (('Advogado, contador e engenheiro independentes escolhidos, e um terreno.', 'An independent lawyer, accountant and engineer chosen, and a plot.'),
+            (('Quem decide', 'Who decides'), 'governance.html')),
+        3: (('Um caminho jurídico para o registro, confirmado por um advogado.', 'A registration route confirmed by a lawyer.'),
+            (('Termos e leis', 'Terms and law'), '#terms')),
+        4: (('A cooperativa registrada, e uma plataforma que aceite a campanha.', 'The cooperative registered, and a platform that accepts the campaign.'),
+            (('Recursos', 'Funding'), 'transparency.html#money-order')),
+        5: (('O consentimento da família, um acordo escrito e a prova de quem é dono do prédio.', 'The family’s consent, a written agreement, and proof of who owns the building.'),
+            (('Aluguel com compra', 'Rent-to-own'), 'rent-to-own.html')),
+        6: (('O custo total na conta, um orçamento detalhado e as licenças.', 'The full cost in the bank, an itemised quote and the permits.'),
+            (('Custos e recursos', 'Costs and funding'), 'transparency.html#budgets')),
+    }
+    NEEDS_HTML = {}
+    for _n, (_need, (_lab, _href)) in NEEDS.items():
+        NEEDS_HTML[_n] = ('<p class="rp-needs">' + text(('Precisa de: ', 'Needs: '), 'strong') + ' ' + text(_need, 'span') + ' '
+                          + text(_lab, 'a', f'href="{_href}"') + '</p>')
     roadmap += '<h3 class="route-detail-head">' + text(('O que acontece em cada passo', 'What happens at each step'), 'span') + '</h3><div class="route-detail">'
     for n, (key, col, title, summary, idxs) in enumerate(STOPS, 1):
         items = ''
@@ -537,7 +557,7 @@ def build_guide(root, page, tr, esc, language_controls):
             else:
                 items += text(pair, 'li')
         roadmap += (f'<article id="step-{n}" class="route-card route-card-{key}"><h4><span class="route-dot">' + ('✓' if key == 'done' else str(n)) + '</span>'
-                    + text(title, 'span') + '</h4><ul>' + items + '</ul></article>')
+                    + text(title, 'span') + '</h4><ul>' + items + '</ul>' + NEEDS_HTML[n] + '</article>')
     roadmap += '</div>'
     roadmap += '<p class="route-after">' + text(('Mais adiante: a vila que imaginamos e o token opcional', 'Later: the village we imagine and the optional token'), 'a', 'href="#later"') + '</p></section>'
     housing_membership = ('Na proposta, as famílias se associam a uma cooperativa habitacional e assinam seus próprios contratos de moradia. Elas não precisam comprar nem ter tokens.', 'Under the proposal, families join a housing cooperative and sign their own housing agreements. They do not need to buy or hold tokens.')
