@@ -222,7 +222,7 @@
 @media (max-width:700px){.gov-steps{grid-template-columns:1fr}}
 /* governance: three panels with their words (stack on a phone) */
 .gov-flow{margin:8px 0 24px}
-.gov-stages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.gov-stages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .gov-stage strong{display:block;font-size:17px;color:#193D4E;margin:8px 0 4px}
 .gov-stage span{display:block;color:#526571;font-size:15px;line-height:1.55}
 .gov-panel{width:100%;max-width:300px;height:auto;display:block;margin:0 auto;overflow:visible}
@@ -241,6 +241,8 @@
 .gov-flow.is-flowing .gov-stage{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
 .gov-flow.is-flowing .gov-stage:nth-child(2){transition-delay:.6s}
 .gov-flow.is-flowing .gov-stage:nth-child(3){transition-delay:1.2s}
+.gov-flow.is-flowing .gov-stage:nth-child(4){transition-delay:1.8s}
+@media (max-width:1000px) and (min-width:701px){.gov-stages{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}.gov-panel .gv-arrow{display:none}}
 .js-flow .gov-flow .gv-lock,.js-flow .gov-flow .gv-shackle{opacity:0}
 .gov-flow.is-flowing .gv-lock,.gov-flow.is-flowing .gv-shackle{opacity:1;transition:opacity .4s ease 1.9s}
 @media (prefers-reduced-motion:reduce){.js-flow .gov-flow .gov-stage,.js-flow .gov-flow .gv-lock,.js-flow .gov-flow .gv-shackle{opacity:1!important;transform:none!important;transition:none!important}}

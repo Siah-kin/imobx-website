@@ -38,7 +38,7 @@
 
 /* Reading measure: about 66 characters, starting at the shared edge; drawings and rows use the full width */
 .band-page section p,.band-page>section>ul:not(.funding-status):not(.roles),.band-page>section>.source-note,.band-page .duo p,
-.band-page>section>ol:not(.step-strip):not(.launch-steps):not(.purpose-list):not(.path):not(.ways):not(.layer-list):not(.figure-row){max-width:32em;margin-left:0}
+.band-page>section>ol:not(.step-strip):not(.launch-steps):not(.purpose-list):not(.path):not(.ways):not(.layer-list):not(.figure-row):not(.funding-cards):not(.route-map){max-width:32em;margin-left:0}
 .band-page>section>p,.band-page>section>ul{margin-top:0}
 .band-page ul{padding-left:20px}
 .band-page>section>details{max-width:none}
