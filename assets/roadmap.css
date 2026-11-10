@@ -95,3 +95,24 @@
 .board-col ol{margin:0;padding-left:1.2em}
 .board-col li{margin:0 0 10px;line-height:1.5;font-size:16px}
 @media(max-width:760px){.board{grid-template-columns:minmax(0,1fr)}}
+
+/* funding routes: three cards in a row, stacked on a phone (owner, 10 Nov: clear layout) */
+.funding-cards{list-style:none;margin:20px 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:route}
+.funding-cards li{counter-increment:route;border:1px solid var(--line);border-radius:6px;padding:18px 20px;background:#fff;margin:0}
+.funding-cards strong{display:block;font-size:18px;color:#193D4E;margin-bottom:6px}
+.funding-cards strong::before{content:counter(route) ". "}
+.funding-cards span{display:block;font-size:16px;line-height:1.55}
+@media(max-width:899px){.funding-cards{grid-template-columns:minmax(0,1fr)}}
+
+/* the five-flats figures: a plain two-column table that stays a table on a phone */
+.figures-table{max-width:44rem}
+.figures-table td:last-child,.figures-table th:last-child{text-align:right;white-space:nowrap}
+.figures-table .figure-total{font-weight:700}
+@media(max-width:600px){
+ .guide-paper .guide-table.figures-table table,.guide-table.figures-table table{display:table;min-width:0;width:100%}
+ .guide-table.figures-table thead{position:static;width:auto;height:auto;overflow:visible;clip:auto}
+ .guide-table.figures-table tbody{display:table-row-group}
+ .guide-table.figures-table tr{display:table-row;border:0;margin:0;background:none}
+ .guide-table.figures-table td{display:table-cell;width:auto;border-bottom:1px solid var(--line);padding:10px 12px}
+ .guide-table.figures-table td::before{content:none}
+}

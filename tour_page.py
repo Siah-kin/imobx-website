@@ -232,7 +232,7 @@ STEPS = [
       T('Os cinco primeiros apartamentos podem mostrar o que muda: quem passou a morar ali, o aluguel antes e depois, e a segurança de ficar na casa.',
         'The first five flats can show what changes: who moved in, their rent before and after, and how secure their right to stay is.',
         'De eerste vijf appartementen kunnen laten zien wat er verandert: wie er kwam wonen, de huur ervoor en erna, en hoe zeker hun recht op wonen is.')],
-     [('roadmap.html#funding', T('O plano de financiamento', 'The funding plan', 'Het financieringsplan')), ('jobs.html', T('A vaga de captação', 'The fundraising role', 'De functie voor fondsenwerving'))]),
+     [('roadmap.html#funding', T('O plano de financiamento', 'The funding plan', 'Het financieringsplan')), ('transparency.html', T('Custos e recursos', 'Costs and funding', 'Kosten en financiering'))]),
     # HOW-02 (John), HOW-12 (John), WHA-15 (Rafael)
     ('tour-grow', T('Como a IMOBX cresce?', 'How does IMOBX grow?', 'Hoe groeit IMOBX?'), None,
      (T('Primeiro trabalhamos com provas. E provas geram confiança. E com confiança, dá para atrair mais recursos e crescer.', 'First we work with proof. And proof builds trust. And with trust, you can draw in more funding and scale.', 'Eerst werken we met bewijs. Bewijs schept vertrouwen. En met vertrouwen trek je meer middelen aan en kun je groeien.'), JOHN),

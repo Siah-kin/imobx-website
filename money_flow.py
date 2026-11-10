@@ -242,17 +242,20 @@ def ledger_flow_html(text, bodies):
 GOV_STEPS = [
     (('Agora', 'Now'),
      ('Os cofundadores decidem, com as pessoas que chamam para uma tarefa definida.', 'The co-founders decide, with people they bring in for a set task.')),
-    (('Quando o token for lançado', 'When the token launches'),
-     ('As regras do próprio token são decididas por votação.', 'The token’s own rules are decided by vote.')),
+    (('Quando a cooperativa estiver registrada', 'Once the cooperative is registered'),
+     ('Os cofundadores conduzem a campanha de financiamento coletivo pela conta bancária da própria cooperativa.',
+      'The co-founders run the crowdfunding campaign from the cooperative’s own bank account.')),
     (('Quando as famílias morarem lá', 'Once families live there'),
      ('Como cooperativa, os membros administram a IMOBX juntos, com um voto cada.',
       'As a cooperative, its members run IMOBX together, with one vote each.')),
+    (('Quando o token for lançado', 'When the token launches'),
+     ('As regras do próprio token são decididas por votação.', 'The token’s own rules are decided by vote.')),
 ]
-GOV_LABELS = {'founders': ('Fundadores', 'Founders'), 'holders': ('Quem tem o token', 'Token holders'), 'members': ('Membros', 'Members')}
+GOV_LABELS = {'founders': ('Fundadores', 'Founders'), 'campaign': ('Campanha', 'Campaign'), 'holders': ('Quem tem o token', 'Token holders'), 'members': ('Membros', 'Members')}
 
 
 def _gov_panels(text):
-    """Three small drawings, one per stage, so each stays readable when the stages stack on a phone."""
+    """Four small drawings, one per stage, so each stays readable when the stages stack on a phone."""
     def label(pair, x, y, cls='gv-label'):
         return text(pair, 'text', f'class="{cls}" x="{x}" y="{y}" text-anchor="middle"')
     def ring(cx, cy, r, cls):
@@ -266,12 +269,14 @@ def _gov_panels(text):
     def svg(body, n, with_arrow):
         return (f'<svg class="gov-panel gv-p{n}" viewBox="0 0 300 270" aria-hidden="true">' + body + (arrow if with_arrow else '') + '</svg>')
     p1 = ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131)
-    p2 = (ring(150, 135, 112, 'gv-outer') + label(GOV_LABELS['holders'], 150, 62, 'gv-label gv-label-outer')
-          + ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131))
-    p3 = (ring(150, 135, 124, 'gv-outer') + label(GOV_LABELS['holders'], 150, 50, 'gv-label gv-label-outer')
+    p2 = (ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131)
+          + label(GOV_LABELS['campaign'], 150, 232, 'gv-label gv-label-outer'))
+    p3 = (ring(150, 141, 86, 'gv-members') + label(GOV_LABELS['members'], 150, 98)
+          + house(114, 134) + house(150, 134) + house(186, 134))
+    p4 = (ring(150, 135, 124, 'gv-outer') + label(GOV_LABELS['holders'], 150, 50, 'gv-label gv-label-outer')
           + ring(150, 141, 86, 'gv-members') + label(GOV_LABELS['members'], 150, 98)
           + house(114, 134) + house(150, 134) + house(186, 134))
-    return [svg(p1, 1, True), svg(p2, 2, True), svg(p3, 3, False)]
+    return [svg(p1, 1, True), svg(p2, 2, True), svg(p3, 3, True), svg(p4, 4, False)]
 
 
 def gov_flow_html(text):
