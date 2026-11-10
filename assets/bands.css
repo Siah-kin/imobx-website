@@ -181,3 +181,6 @@
 
 /* owner, 31 Oct: open questions as a plain list, not empty checkboxes */
 .governance-page .settle-list{list-style:disc;padding-left:20px}.governance-page .settle-list li{padding-left:4px}.governance-page .settle-list li::before{display:none}
+
+/* pages that end in a tinted band meet the footer with no white strip between them (design review, 10 Nov) */
+.band-page+footer{margin-top:0}
