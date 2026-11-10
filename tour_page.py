@@ -143,8 +143,8 @@ STEPS = [
         'In 2024 vielen in Brazilië ongeveer 5,77 miljoen huishoudens onder het woningtekort, volgens de berekening van de Fundação João Pinheiro. De huren stijgen sneller dan de inflatie: 9,13% in de 12 maanden tot september 2026, tegen 4,58%. In Rio stegen ze met 14,80%.')],
      [('why.html', T('Leia os números', 'Read the numbers', 'Lees de cijfers'))]),
     ('tour-tenant', T('Um apartamento para começar', 'A flat to start with', 'Een appartement om mee te beginnen'), None, None,
-     [T('Uma família aluga um apartamento num prédio que a Olympus, a construtora do Rafael, construiu em Guadalupe, e tem dificuldade para pagar. Estamos avaliando um contrato de aluguel com compra, com aluguel menor. Nada está combinado ainda.',
-        'A family rents a flat in the Guadalupe building Olympus, Rafael’s company, built, and struggles to pay. We are considering a rent-to-own agreement with a lower rent. Nothing is agreed yet.',
+     [T('Uma família aluga um apartamento num prédio que a Olympus, a construtora do Rafael, construiu em Guadalupe, . Estamos avaliando um contrato de aluguel com compra, com aluguel menor. Nada está combinado ainda.',
+        'A family rents a flat in the Guadalupe building Olympus, Rafael’s company, built. We are considering a rent-to-own agreement with a lower rent. Nothing is agreed yet.',
         'Een gezin huurt een appartement in het gebouw in Guadalupe dat Olympus, het bouwbedrijf van Rafael, bouwde, en heeft moeite met betalen. We overwegen een huurkoopovereenkomst met een lagere huur. Er is nog niets afgesproken.')],
      [('roadmap.html#homes', T('Onde a primeira família vai morar', 'Where the first family will live', 'Waar het eerste gezin gaat wonen'))]),
     # WHA-05 (John)

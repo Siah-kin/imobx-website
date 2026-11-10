@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "c6f3bd464b1be2c1ffa5d0ca07a0b160d08ee8f1f15259f86f5b3d3a3e45d0b3"
+      "sha256": "675ee59f41a87bb385695937b63c6702b310b3dad92b3ad0e28aefeafc207df4"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "6cb1afe40ec4e7c2927fe4ab9f8699740f3c93fbe4596bd3bc525e907224de6a"
+      "sha256": "061051e17770bcd3a0ae97e8a7e2b6d48f4878ee3f35d99a7a8edac4245289e0"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "906102faa481e389474106859dc89ec724130051fba270c1ceb1f1bade568b50"
+      "sha256": "9eb64afd71eee624638451617efee21c31b93e5122b0b5ce0dcd5765dfc918a5"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "fb92ce3c2df9a51509ebcc03f680880eb1b132c8d635896fab6e015852b0b77e"
+      "sha256": "a380f35a047a0525bbbf959e8e528ca3d74ffca59ee174e5e92b4dbcba5dab45"
     },
     {
       "path": "pitchdeck.json",
@@ -78,15 +78,15 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "63def0f4b5dbd8347fdc381b808019542bf2304acce086df50d71c285a35b0a7"
+      "sha256": "a4efad760b17982c3b61bd949a05edc932efbd5494cf36c1ffaf806f0a26ecff"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "ab77361dba7f0e6fd1cb8c795bb10fedb589a952460ca1b2f6bcdbf4a309976f"
+      "sha256": "52f4ef3b0721966eadb7100f21cb7a9769758caee97b87fd2ffc3be328587e96"
     },
     {
       "path": "roadmap.html",
-      "sha256": "611ab83eb1b37edc0a1b8a71051040fc7eff8a43b67d4a50b949107efaeb3b7c"
+      "sha256": "4df9ddddb04a542949fcdabf1fa569a85b940e8a0d62b1f173e0c36f6666165c"
     },
     {
       "path": "transparency.html",
@@ -98,7 +98,7 @@
     },
     {
       "path": "model-guide.json",
-      "sha256": "37d9b840f5ca607b35cd76c5edf1b70b0c0e395229bcdb924ef9e20eb8d5213c"
+      "sha256": "cc84b8e4f8f7a0210ef0a1dbd54d12452c56318247ded8dc55322cc343078307"
     },
     {
       "path": "contact.html",
