@@ -183,9 +183,9 @@ STEPS = [
     # Professional only. ASK-03 (Rafael, his PT original); CUB-RJ R8-N Sep 2026 [read]; register Q5.
     ('tour-work', T('Trabalhar com a IMOBX', 'Working with IMOBX', 'Werken met IMOBX'), None,
      (T('Vou fechar parcerias com colegas de construção e fornecedores também.', 'I will form partnerships with construction colleagues and suppliers as well.', 'Ik ga ook samenwerken met collega’s uit de bouw en met leveranciers.'), RAFAEL),
-     [T('Os preços da obra seguem o índice público de custo da construção do Rio, o CUB: R$ 2.476 por m² no padrão R8-N em setembro de 2026. No nosso plano, cada pagamento é aprovado por uma pessoa e conferido por outra antes de ser pago.',
+     [T('Os preços da obra seguem o índice público de custo da construção do Rio, o CUB: R$2.476 por m² no padrão R8-N em setembro de 2026. No nosso plano, cada pagamento é aprovado por uma pessoa e conferido por outra antes de ser pago.',
         'Building prices follow Rio’s public building-cost index, the CUB: R$2,476 per m² for the R8-N standard in September 2026. In our plan, each payment is approved by one person and checked by another before it is paid.',
-        'Bouwprijzen volgen de openbare bouwkostenindex van Rio, de CUB: R$ 2.476 per m² voor de R8-N-standaard in september 2026. In ons plan wordt elke betaling door één persoon goedgekeurd en door een ander gecontroleerd voordat ze wordt betaald.'),
+        'Bouwprijzen volgen de openbare bouwkostenindex van Rio, de CUB: R$2.476 per m² voor de R8-N-standaard in september 2026. In ons plan wordt elke betaling door één persoon goedgekeurd en door een ander gecontroleerd voordat ze wordt betaald.'),
       T('Buscamos um advogado independente, um contador e um engenheiro independente para trabalhar com a gente nos primeiros apartamentos.',
         'We are looking for an independent lawyer, an accountant and an independent engineer to work with us on the first flats.',
         'We zoeken een onafhankelijke advocaat, een boekhouder en een onafhankelijke ingenieur om met ons aan de eerste appartementen te werken.')],
