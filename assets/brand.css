@@ -591,3 +591,7 @@ html .option-b :is(a,button):focus-visible{outline:3px solid #fff;outline-offset
 @media (min-width:701px) and (max-width:1000px){
   .js-menu .menu-toggle{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid #276578;background:#fff;color:#276578;font:700 15px Arial,Helvetica,sans-serif;justify-self:end}
 }
+/* Portuguese menu, 1001-1060 px (10 Nov): one pixel above the tablet fold the long labels met the language switch */
+@media (min-width:1001px) and (max-width:1060px){html[lang="pt-BR"] .site-links{gap:4px 3px;font-size:12px}}
+/* Portuguese header, 1001-1140 px (10 Nov, reviewer): the long labels ran under the language switch; smaller type in this band only */
+@media (min-width:1001px) and (max-width:1140px){html[lang="pt-BR"] .site-nav .site-links a,html[lang="pt-BR"] .site-nav .site-links button{font-size:12px;letter-spacing:0}}
