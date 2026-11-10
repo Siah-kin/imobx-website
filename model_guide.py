@@ -491,12 +491,12 @@ def build_guide(root, page, tr, esc, language_controls):
     # Owner, 10 Nov: the roadmap must be visual and quick to take in, not a notebook page. A path of six steps (the map),
     # then one readable card per step (the detail). Every board item keeps its place.
     STOPS = [
-        ('done', 0, ('Custos calculados', 'Costs worked out'), ('O custo de um apartamento e de cinco, pelo índice público de custo da construção do Rio.', 'The cost of one flat and of five, from Rio’s public building-cost index.'), None, [0, 1, 2]),
+        ('done', 0, ('Custos calculados', 'Costs worked out'), ('O custo de um apartamento e de cinco, pelo índice público de custo da construção do Rio.', 'The cost of one flat and of five, from Rio’s public building-cost index.'), None, [0, 1]),
         ('now', 1, ('Preparando', 'Preparing'), ('Contrato do apartamento de Guadalupe, conferentes independentes, busca do terreno.', 'Agreement for the Guadalupe flat, independent checkers, plot search.'), None, [0, 1, 2, 3, 4]),
         ('next', 2, ('Registrar a cooperativa', 'Register the cooperative'), ('Um pagamento de teste e uma reserva para as contas.', 'A test payment and a reserve for the bills.'), None, [0, 1, 2]),
         ('next', 2, ('Campanha de financiamento coletivo', 'Crowdfunding campaign'), ('Em reais, depois ODS 11 e outros financiadores.', 'In reais, then UN Goal 11 and other funders.'), ('Aqui entra o financiamento', 'Funding comes in here'), [3, 4]),
-        ('then', 3, ('Construir cinco apartamentos', 'Build five flats'), ('Começa quando o custo total estiver na conta.', 'Starts once the full cost is in the bank.'), ('Cerca de R$892.000', 'About R$892,000'), [1]),
         ('then', 3, ('As famílias chegam', 'Families move in'), ('A primeira família assina em Guadalupe. Os moradores escrevem as regras da casa.', 'The first family signs in Guadalupe. Residents write the house rules.'), None, [0, 2, 3]),
+        ('then', 3, ('Construir cinco apartamentos', 'Build five flats'), ('Começa quando o custo total estiver na conta.', 'Starts once the full cost is in the bank.'), ('Cerca de R$892.000', 'About R$892,000'), [1]),
     ]
     roadmap += '<ol class="route-map">'
     for n, (key, col, title, summary, tag, idxs) in enumerate(STOPS, 1):

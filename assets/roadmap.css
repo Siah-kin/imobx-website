@@ -185,3 +185,9 @@
 .pc-value{display:block;color:#2B4655}
 .pc-status{color:#193D4E;font-weight:700}
 @media(max-width:700px){.property-cards{grid-template-columns:minmax(0,1fr)}}
+
+/* review fixes (10 Nov): Rafael's numbers are plain numerals, not path markers; tags are plain labels, not buttons; full-width lists */
+.rafael-steps,.property-cards{width:100%;margin-left:0;max-width:none}
+.rafael-steps li::before{content:counter(rstep)".";display:inline;width:auto;height:auto;border:0;color:#193D4E;font-weight:700;margin:0 6px 0 0;place-items:initial}
+.route-tag{background:none;border:0;padding:0;color:#276578}
+.property-cards{margin-top:14px}
