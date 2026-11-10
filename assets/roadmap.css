@@ -145,7 +145,7 @@
 .route-card li{margin:0 0 10px;font-size:16px;line-height:1.55;color:#193D4E}
 .route-card li:last-child{margin-bottom:0}
 @media(max-width:1099px){.route-detail{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:899px){
+@media(max-width:1099px){
  .route-map{grid-template-columns:1fr}
  .route-map::before{left:22px;right:auto;top:8px;bottom:8px;width:3px;height:auto}
  .route-stop{text-align:left;align-items:flex-start;padding:0 0 22px 66px;min-height:70px}
@@ -154,3 +154,34 @@
  .route-tag{max-width:none}
 }
 @media(max-width:700px){.route-detail{grid-template-columns:1fr}}
+
+.route-title a{color:#193D4E;text-decoration:underline;text-decoration-color:#4A90A4;text-underline-offset:3px}
+.route-title,.route-sum{overflow-wrap:break-word;hyphens:manual}
+.route-card{scroll-margin-top:90px}
+.roadmap-need{padding-top:8px}
+
+.route-map .route-title a{text-decoration:none}
+.route-map .route-title a:hover,.route-map .route-title a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+@media(min-width:701px) and (max-width:1099px){
+ .route-map{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:30px}
+ .route-map::before{display:none}
+ .route-stop{text-align:center;align-items:center;padding:0 10px;min-height:0}
+ .route-stop>.route-dot{position:relative;left:auto;top:auto}
+ .route-chip{margin-top:12px}
+}
+
+/* Rafael's four steps: small numbered cards (owner, 10 Nov: the page read as a notebook; the words are unchanged) */
+.rafael-steps{list-style:none;padding:0;max-width:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;counter-reset:rstep}
+.rafael-steps li{counter-increment:rstep;background:#fff;border:1px solid #D9E3E8;border-radius:6px;padding:18px 20px;margin:0}
+.rafael-steps li::before{content:counter(rstep);display:inline-grid;place-items:center;width:30px;height:30px;border:2px solid #4A90A4;color:#276578;font-weight:700;margin-bottom:8px}
+.rafael-steps strong{display:block;font-size:17px;color:#193D4E}
+@media(max-width:700px){.rafael-steps{grid-template-columns:minmax(0,1fr)}}
+/* the property status cards (same four rows as the old table) */
+.property-cards{list-style:none;padding:0;margin:18px 0;max-width:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.property-card{background:#fff;border:1px solid #D9E3E8;padding:16px 18px;margin:0}
+.pc-name{display:block;font-size:17px;color:#193D4E;margin-bottom:8px}
+.pc-row{display:block;margin:4px 0;font-size:15px;line-height:1.5}
+.pc-label{display:block;font-size:13px;font-weight:700;color:#526571;text-transform:none}
+.pc-value{display:block;color:#2B4655}
+.pc-status{color:#193D4E;font-weight:700}
+@media(max-width:700px){.property-cards{grid-template-columns:minmax(0,1fr)}}

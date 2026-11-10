@@ -491,24 +491,22 @@ def build_guide(root, page, tr, esc, language_controls):
     # Owner, 10 Nov: the roadmap must be visual and quick to take in, not a notebook page. A path of six steps (the map),
     # then one readable card per step (the detail). Every board item keeps its place.
     STOPS = [
-        ('done', 0, ('Custos calculados', 'Costs worked out'), ('Um apartamento e cinco, pelo índice público de custo da construção do Rio.', 'One flat and five, from Rio’s public building-cost index.'), None, [0, 1, 2]),
-        ('now', 1, ('Preparando', 'Preparing'), ('Contrato do apartamento de Guadalupe, quem confere o trabalho, busca do terreno.', 'Agreement for the Guadalupe flat, independent checkers, plot search.'), None, [0, 1, 2, 3, 4]),
+        ('done', 0, ('Custos calculados', 'Costs worked out'), ('O custo de um apartamento e de cinco, pelo índice público de custo da construção do Rio.', 'The cost of one flat and of five, from Rio’s public building-cost index.'), None, [0, 1, 2]),
+        ('now', 1, ('Preparando', 'Preparing'), ('Contrato do apartamento de Guadalupe, conferentes independentes, busca do terreno.', 'Agreement for the Guadalupe flat, independent checkers, plot search.'), None, [0, 1, 2, 3, 4]),
         ('next', 2, ('Registrar a cooperativa', 'Register the cooperative'), ('Um pagamento de teste e uma reserva para as contas.', 'A test payment and a reserve for the bills.'), None, [0, 1, 2]),
         ('next', 2, ('Campanha de financiamento coletivo', 'Crowdfunding campaign'), ('Em reais, depois ODS 11 e outros financiadores.', 'In reais, then UN Goal 11 and other funders.'), ('Aqui entra o financiamento', 'Funding comes in here'), [3, 4]),
         ('then', 3, ('Construir cinco apartamentos', 'Build five flats'), ('Começa quando o custo total estiver na conta.', 'Starts once the full cost is in the bank.'), ('Cerca de R$892.000', 'About R$892,000'), [1]),
-        ('then', 3, ('As famílias se mudam', 'Families move in'), ('A primeira família assina em Guadalupe. Os moradores escrevem as regras da casa.', 'The first family signs in Guadalupe. Residents write the house rules.'), None, [0, 2, 3]),
+        ('then', 3, ('As famílias chegam', 'Families move in'), ('A primeira família assina em Guadalupe. Os moradores escrevem as regras da casa.', 'The first family signs in Guadalupe. Residents write the house rules.'), None, [0, 2, 3]),
     ]
     roadmap += '<ol class="route-map">'
     for n, (key, col, title, summary, tag, idxs) in enumerate(STOPS, 1):
         roadmap += (f'<li class="route-stop route-{key}"><span class="route-dot">' + ('✓' if key == 'done' else str(n)) + '</span>'
-                    + text((BOARD[col][0], BOARD[col][1]), 'span', 'class="route-chip"') + text(title, 'strong', 'class="route-title"')
+                    + text((BOARD[col][0], BOARD[col][1]), 'span', 'class="route-chip"') + '<strong class="route-title">' + text(title, 'a', f'href="#step-{n}"') + '</strong>'
                     + text(summary, 'span', 'class="route-sum"') + (text(tag, 'span', 'class="route-tag"') if tag else '') + '</li>')
     roadmap += '</ol>'
-    roadmap += ('<p class="route-legend"><span class="rl-done">' + text(('Pronto', 'Done'), 'span') + '</span><span class="rl-now">' + text(('Estamos aqui', 'We are here'), 'span')
-                + '</span><span class="rl-next">' + text(('Ainda por vir', 'Still to come'), 'span') + '</span></p>')
     roadmap += '<h3 class="route-detail-head">' + text(('O que acontece em cada passo', 'What happens at each step'), 'span') + '</h3><div class="route-detail">'
     for n, (key, col, title, summary, tag, idxs) in enumerate(STOPS, 1):
-        roadmap += (f'<article class="route-card route-card-{key}"><h4><span class="route-dot">' + ('✓' if key == 'done' else str(n)) + '</span>' + text(title, 'span') + '</h4><ul>'
+        roadmap += (f'<article id="step-{n}" class="route-card route-card-{key}"><h4><span class="route-dot">' + ('✓' if key == 'done' else str(n)) + '</span>' + text(title, 'span') + '</h4><ul>'
                     + ''.join(text((BOARD[col][3][i][0], BOARD[col][3][i][1]), 'li') for i in idxs) + '</ul></article>')
     roadmap += '</div>'
     housing_membership = ('Na proposta, as famílias se associam a uma cooperativa habitacional e assinam seus próprios contratos de moradia. Elas não precisam comprar nem ter tokens.', 'Under the proposal, families join a housing cooperative and sign their own housing agreements. They do not need to buy or hold tokens.')
@@ -576,9 +574,11 @@ def build_guide(root, page, tr, esc, language_controls):
     intro_lines = tuple(t.rsplit('. ', 1) for t in cases['intro'])
     roadmap += '<section id="cases">' + text(('Onde a primeira família vai morar?', 'Where will the first family live?'), 'h2')
     roadmap += text(tuple(cases['answer']), 'p', 'class="answer"') + text(tuple(cases['intro'])) + text(tuple(cases['join']))  # owner audit 31 Oct: answer and detail written separately
-    roadmap += '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in cases['headings'])
-    roadmap += '</tr></thead><tbody>' + ''.join('<tr>' + text(r[0], 'th', 'scope="row"') + text(r[1], 'td') + text(r[2], 'td') + '</tr>'
-                                              for r in cases['rows']) + '</tbody></table></div>'
+    # Owner, 10 Nov: the property table reads as a notebook grid; the same four rows are now status cards.
+    roadmap += '<ul class="property-cards">' + ''.join('<li class="property-card"><strong class="pc-name">' + text(r[0], 'span') + '</strong>'
+                                              + '<span class="pc-row">' + text(cases['headings'][1], 'span', 'class="pc-label"') + text(r[1], 'span', 'class="pc-value"') + '</span>'
+                                              + '<span class="pc-row">' + text(cases['headings'][2], 'span', 'class="pc-label"') + text(r[2], 'span', 'class="pc-value pc-status"') + '</span></li>'
+                                              for r in cases['rows']) + '</ul>'
     # 'Who takes part' (the eight groups) moves to Take part (review B 80-108); its old anchors stay so links still land here.
     roadmap += '<span id="participation"></span>' + ''.join(f'<span id="role-{role["id"]}"></span>' for role in guide['participation']['roles'])
     roadmap += text(('Como funciona o aluguel com compra para uma família', 'How rent-to-own works for a family'), 'a', 'href="rent-to-own.html"') + '</section>'
@@ -678,8 +678,8 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '<section id="terms">' + text(TERMS_TITLE, 'h2')
     roadmap += text(('Se você pensa em participar, apoiar com recursos ou trazer um imóvel, é com isto que você pode contar hoje.',
                      'If you’re thinking of joining, funding or bringing a property, this is what you can count on today.'))
-    for heading, items in TERMS:  # owner, 28 Oct: the long list sits in folds so the page ends lighter
-        roadmap += '<details class="disclosure"><summary>' + text(heading, 'span') + '</summary><div class="disclosure-body"><ul>'
+    for _i, (heading, items) in enumerate(TERMS):  # owner, 28 Oct: the long list sits in folds so the page ends lighter; 10 Nov: the first fold opens
+        roadmap += '<details class="disclosure"' + (' open' if _i == 0 else '') + '><summary>' + text(heading, 'span') + '</summary><div class="disclosure-body"><ul>'
         for item in items:
             if len(item) == 3:  # (lead-in, link label, anchor)
                 roadmap += '<li>' + text(item[0], 'span') + text(item[1], 'a', f'href="{item[2]}"') + '.</li>'
@@ -690,6 +690,16 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '<section class="closing-band" id="help">' + text(('Vamos resolver as perguntas em aberto, como o terreno dos apartamentos novos e o preço para as famílias, com as pessoas que participarem. Se você pode ajudar com uma delas, apresente-se.',
                                                                    'We’ll settle the open questions, such as the plot for the new flats and the price for families, with the people who join us. If you can help with one of them, introduce yourself.'))
     roadmap += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
+    # Owner, 10 Nov: the roadmap looked like a notebook page. The path now comes straight after the heading; the need, the
+    # photos and the section list move below it.
+    _ns = roadmap.index('<div class="key-card">')
+    _m = re.search(r'<p [^>]*id="where-we-stand"', roadmap)
+    _need = roadmap[_ns:_m.start()]
+    roadmap = roadmap[:_ns] + roadmap[_m.start():]
+    _n1 = roadmap.index('<nav class="on-this-page"'); _n2 = roadmap.index('</nav>', _n1) + len('</nav>')
+    roadmap = roadmap[:_n1] + roadmap[_n2:]  # the section list is dropped: the page is now short and starts with the path
+    _f = roadmap.index('<section id="funding">')
+    roadmap = roadmap[:_f] + '<section class="roadmap-need">' + text(('Por que isso é necessário?', 'Why is this needed?'), 'h2') + _need + '</section>' + roadmap[_f:]
     roadmap += partner_line('roadmap.html') + '</main>'
     (root / 'roadmap.html').write_text(page('IMOBX | Project stages', roadmap,
         f'<link rel="stylesheet" href="{asset_v("bands.css")}"><link rel="stylesheet" href="{asset_v("roadmap.css")}"><script src="{asset_v("roadmap.js")}" defer></script>',

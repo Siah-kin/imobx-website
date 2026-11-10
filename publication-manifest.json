@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "index.html",
-      "sha256": "bb87b79941db0bc0422b18a0dbda7fd01f233160008d605bfd7363b15be4c219"
+      "sha256": "c0704c55552b08970d85835d74ac5f6e406fd80595c66e6d47194962b5eb791b"
     },
     {
       "path": "rent-to-own.html",
@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "3260ad7cc09f7b5f8e0d7dc69377f76510b7bbb102259ec03f672d29a1c6707e"
+      "sha256": "aabf54ddc848d8f2069ab71c22c3f2e31b3d74cac0c9a7c24c5b2d1ca4116643"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "3090b7fc44acb9c75316f477a8e94ad002721c481a8668200db0853a6f6d2520"
+      "sha256": "418cb334cb08bd5c7ab58f01decc6b0ca9d7d83a72f254c98777d2c346f49d6e"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "89bacf6ed5ef7799e22083d87325f74a429a5516c31b15c500ac92e5a08de7b9"
+      "sha256": "69d5bff332773b36ae0843f2328bae67d5199013600576f70737782d0f5a62c9"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "957eea2efd81ce348353dc916d7c52dcbe076c6dbf2b1a9ffc98a4cf4f08a326"
+      "sha256": "1b9735c07b1f01934f682493b1f6f3f5446e2e17e46cb192ba24fcb4ef7c5482"
     },
     {
       "path": "pitchdeck.json",
@@ -78,19 +78,19 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "1f2a015ec7d8a0923bf19ee1ba8b784283878cc221458be37a7ac242bb50e55b"
+      "sha256": "d8204866d4838d48f737402431ed2159bf6e17d20200c8f3b54be72ab51e5196"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "5520de0926b4cb87c0629de6974fad28a0f75668f08cd367231548bbdb297e7b"
+      "sha256": "74b84b23de18610c9fb46f5c2a58fe7fc592c651f7dc47cf6371573582197945"
     },
     {
       "path": "roadmap.html",
-      "sha256": "b1f6af2cbabe9e2cdb10bfedcc8617db5820b92d663927b632ab4596d8e33d82"
+      "sha256": "0d3f20bff48e3417b3654a2ad2749c9f612b7dd94e7636a77661bae3c4a16c57"
     },
     {
       "path": "transparency.html",
-      "sha256": "10ddea443e80c4ced75fe845c03e1959badc05de1b272264100a6c96976e8a4e"
+      "sha256": "7d7ce8a84f845df6313256b067c8a9c316eeec7febff1c8360e8cbbc9a78aa5a"
     },
     {
       "path": "resources.html",
