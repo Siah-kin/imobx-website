@@ -30,11 +30,11 @@
     },
     {
       "path": "project-reference-pt.pdf",
-      "sha256": "ac1fe34d214ed30eac11529a3d2c3565769df46ac4acdf56ac7e7257a417053e"
+      "sha256": "10c294d4ae4f5cea6be0f5a3f3e41044a551da8d0972307208aec4fc31a745ae"
     },
     {
       "path": "project-reference-en.pdf",
-      "sha256": "1fa7690d52dca0767853fa70f069a8ef89566caa0ab0f364a83af13a43c9ebbc"
+      "sha256": "b3aa4378fddf9b7de2a3155b6c9163884a9c6401e18384db2cfc2313886ad3b3"
     },
     {
       "path": "reference.html",
@@ -50,7 +50,7 @@
     },
     {
       "path": "whitepaper.pdf",
-      "sha256": "610bdee3c612d4d89c0cf09779bb5e792b4c693fcd74df18833abcbb0a63c8c5"
+      "sha256": "cf7128b38967623b2b545fd1d90acc2330407cbd06d3589e48473f37628eb604"
     },
     {
       "path": "devsheet.md",
@@ -62,7 +62,7 @@
     },
     {
       "path": "devsheet.pdf",
-      "sha256": "a7588b7727742929a0085a86aba29469fa34b8a9de80e1456c854dfdd61268b4"
+      "sha256": "3495b0ee1b24d04b67cb7f1ff27d24d9208d77d6522445cd48084513580db507"
     },
     {
       "path": "pitchdeck.json",
@@ -78,15 +78,15 @@
     },
     {
       "path": "pitchdeck.pdf",
-      "sha256": "e01ca722a104dfc754958fccbedad85d0eaf8635712464938215d362f6fc20f0"
+      "sha256": "1d190ec407950ecf490fca99ff16d83a12cd16b43368f99d73e555875ad2f145"
     },
     {
       "path": "pitchdeck.pptx",
-      "sha256": "0055e3e5af6cd969db58112250eccf6cda60c813c5f5f09923581a440af6de37"
+      "sha256": "0cc6a57257499e8340c1ea1dbf53da7f7aa586d3cea259cb39c11366a500fbf4"
     },
     {
       "path": "roadmap.html",
-      "sha256": "fe43568c135beff3711be851cc8cb84a15876ee5e05675ecfd50bfe7b2559131"
+      "sha256": "499430e224d91a26db3ae3f1805ee11a549769ab9e12202b91d83fc2c2b71b49"
     },
     {
       "path": "transparency.html",
