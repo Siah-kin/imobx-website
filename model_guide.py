@@ -495,7 +495,7 @@ def build_guide(root, page, tr, esc, language_controls):
             ('O contrato de obra de dois lofts da construtora do Rafael, assinado em janeiro de 2026.', 'The building contract for two lofts by Rafael’s company, signed January 2026.')]),
         ('Agora', 'Now', [
             ('O prédio de Guadalupe: estamos avaliando um contrato de aluguel com compra, com aluguel menor, para uma família que mora lá.', 'The Guadalupe building: we are considering a rent-to-own agreement with a lower rent for a family that rents there.'),
-            ('O John está nomeando um advogado, um contador e um engenheiro, todos independentes da construtora do Rafael. Eles conferem os contratos e a obra.', 'John is appointing a lawyer, an accountant and an engineer, all independent of Rafael’s company. They check the contracts and the building work.'),
+            ('O John está nomeando um advogado, um contador e um engenheiro, todos independentes da construtora do Rafael. Eles vão conferir os contratos e a obra.', 'John is appointing a lawyer, an accountant and an engineer, all independent of Rafael’s company. They will check the contracts and the building work.'),
             ('O Rafael está confirmando qual padrão do índice público de custo da construção (CUB) vale para um prédio pequeno de cinco apartamentos. A resposta define a meta da campanha.', 'Rafael is confirming which standard of the public building-cost index (CUB) fits a small building of five flats. The answer sets the campaign goal.'),
             ('Ele procura um terreno de 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz.', 'He is looking for a plot of 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz.'),
         ]),
@@ -512,7 +512,7 @@ def build_guide(root, page, tr, esc, language_controls):
     # (key, board column, title, one-line summary, the card's items)
     STOPS = [
         ('done', 0, ('Custos estimados', 'Costs estimated'), ('Uma estimativa do custo de um apartamento e de cinco. Ainda não é orçamento.', 'An estimate of the cost of one flat and of five. Not yet a quote.'), [0, 1]),
-        ('now', 1, ('Preparando', 'Preparing'), ('Estamos avaliando um contrato de aluguel com compra para uma família que aluga um apartamento no prédio de Guadalupe, nomeando revisores independentes e procurando um terreno.', 'We are considering a rent-to-own agreement for a family renting a flat in the Guadalupe building, appointing independent checkers and looking for a plot.'), [1, 2, 3]),
+        ('now', 1, ('Preparando', 'Preparing'), ('Estamos nomeando revisores independentes e procurando um terreno.', 'We are appointing independent checkers and looking for a plot.'), [1, 2, 3]),
         ('next', 2, ('Registrar a cooperativa', 'Register the cooperative'), ('Registramos a cooperativa, fazemos um pagamento de teste e separamos uma reserva para as contas.', 'We register the cooperative, make a test payment and set aside a reserve for the bills.'), [1, 2]),
         ('next', 2, ('Campanha de financiamento coletivo', 'Crowdfunding campaign'), ('A campanha abre em reais.', 'The campaign opens in reais.'), [3]),
         ('then', 3, ('Uma família assina', 'A family signs'), ('Se a família topar, ela assina o contrato.', 'If the family agrees, it signs the agreement.'), [0, 2]),
