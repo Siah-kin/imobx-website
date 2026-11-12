@@ -58,8 +58,8 @@ The city photographs show favelas along the hillsides, highlighted by circles. T
 - [Whitepaper](whitepaper.html): houses, funding, shared decisions and sources.
 - [Pitch deck](pitchdeck.html): twelve slides for partners.
 - [Pilot and building guide](devsheet.html): housing plans, responsibilities and proposed targets.
-- [Roadmap](roadmap.html): steps and what must be ready before moving on.
-- [Questions about funding, tokens and governance](transparency.html#funding-questions): plain explanations of the model and digital tools.
+- [Roadmap](project-development.html): steps and what must be ready before moving on.
+- [Questions about funding, tokens and governance](costs-and-funding.html#funding-questions): plain explanations of the model and digital tools.
 - [Questions families ask](rent-to-own.html#questions): renting, buying, repairs, decisions and taking part.
 - [All documents](resources.html): online reading and downloads.
 

@@ -267,3 +267,16 @@
 
 .route-asof{margin:6px 0 30px;font-size:15px;color:#526571;max-width:44rem}
 .route-card .rp-needs{margin:14px 0 0;padding-top:12px;border-top:1px solid #D9E3E8;font-size:15px;line-height:1.5;color:#2B4655}
+
+/* Growth stages (owner, 12 Nov): same card as the path, a stage chip instead of a numbered dot, footers aligned */
+.stages-tie{margin:0 0 18px;color:#526571}
+.growth-stages{align-items:stretch}
+.growth-stages .route-card{display:flex;flex-direction:column}
+.growth-stages .route-chip{align-self:flex-start;margin:0 0 10px}
+.growth-stages .route-card h3{margin:0 0 12px;font-size:18px;line-height:1.25;color:#193D4E}
+.growth-stages .rp-needs{margin-top:auto}
+.growth-stages .route-card>p:not(.rp-needs){margin:0 0 12px}
+.card-link{margin-top:4px}
+@media(max-width:899px){.later-grid .later-text{order:-1}}
+.growth-stages .route-card-now{align-self:start}
+.growth-stages .route-card p{text-wrap:auto}

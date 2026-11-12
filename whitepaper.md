@@ -14,7 +14,7 @@ Rafael brings his construction experience and knowledge of local conditions. Joh
 
 Under the plan, a family rents the home and makes monthly payments in reais. The agreement records the amount credited towards the purchase and the remaining agreed price. Ownership of the whole home passes to the household once the purchase conditions and property transfer are completed. IMOBX then stops receiving rent from that house.
 
-The [household explanation](rent-to-own.html) covers payments, repairs, decisions and leaving in Portuguese and English. The [source list](resources.html#sources) shows where each figure comes from, and the [Self-compounding page](token.html) explains the IMOBX token.
+The [household explanation](rent-to-own.html) covers payments, repairs, decisions and leaving in Portuguese and English. The [source list](resources.html#sources) shows where each figure comes from, and the [Self-compounding page](self-compounding.html) explains the IMOBX token.
 
 ## 1. Who the pilot is for
 
@@ -171,7 +171,7 @@ Our commitments, which partners and families can hold us to:
 - The token’s open rules are published, with notice before any change, and pass to the community once they are coded.
 - Families take part as members, with or without a token.
 
-The token’s rules stay open to change in its first stages, until everybody’s stake of involvement is reflected. People paid to promote the token would disclose the payment and follow the rules of each channel and country they reach. The [Self-compounding page](token.html) explains the token on the website.
+The token’s rules stay open to change in its first stages, until everybody’s stake of involvement is reflected. People paid to promote the token would disclose the payment and follow the rules of each channel and country they reach. The [Self-compounding page](self-compounding.html) explains the token on the website.
 
 <div class="pagebreak"></div>
 
@@ -189,15 +189,15 @@ For example, a resident reports a leak through the support channel. The person h
 
 Tasks need a responsible person, deadline and budget. If someone leaves a role, their replacement finds the open work, approvals and documents needed to continue. Residents need ways to choose and replace responsible people. Personal information stays private.
 
-Software assistants can organize documents and remind people about unfinished work, and blockchain records can show payment amounts and destinations. The agreed rules still determine who decides or spends. See [daily decisions and tasks](transparency.html#faq-flock-siah).
+Software assistants can organize documents and remind people about unfinished work, and blockchain records can show payment amounts and destinations. The agreed rules still determine who decides or spends. See [daily decisions and tasks](costs-and-funding.html#faq-flock-siah).
 
-Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. The provider is chosen with the first project. Residents do not need crypto wallets. See the [funding path](transparency.html#settlement) and the [payment-service requirements](transparency.html#ramp-options).
+Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. The provider is chosen with the first project. Residents do not need crypto wallets. See the [funding path](costs-and-funding.html#settlement) and the [payment-service requirements](costs-and-funding.html#ramp-options).
 
 <div class="pagebreak"></div>
 
 ## 10. Pilot roadmap and evidence
 
-The [roadmap](roadmap.html#stages) follows six stages: legal structure and property, resident participation, first houses, payment records people can check, funding and account review, and further projects. Each stage explains who does the work, what must happen first and which records are needed before it proceeds. Construction dates depend on the chosen project, funding and permissions. Legal preparation, resident discussions and digital trials can progress alongside one another.
+The [roadmap](project-development.html#stages) follows six stages: legal structure and property, resident participation, first houses, payment records people can check, funding and account review, and further projects. Each stage explains who does the work, what must happen first and which records are needed before it proceeds. Construction dates depend on the chosen project, funding and permissions. Legal preparation, resident discussions and digital trials can progress alongside one another.
 
 After families move in, the plan follows at least three months before reviewing expansion. A second local team should be able to repeat the work.
 

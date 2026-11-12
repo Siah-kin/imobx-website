@@ -265,14 +265,14 @@ initImageViewer();
       var doc = new DOMParser().parseFromString(text, 'text/html');
       // Short navigation labels point to the same sections as the full page headings.
       var shortLabels = {
-        'blockchain.html': {
+        'distributed-ledger.html': {
           layers: ['Privacidade e acesso', 'Privacy and access', 'Privacy en toegang'],
           request: ['Reparos e reclamações', 'Repairs and complaints', 'Reparaties en klachten'],
           records: ['Quem pode ler o quê', 'Who can read what', 'Wie wat kan lezen'],
           token: ['Token da IMOBX', 'IMOBX token', 'IMOBX-token'],
           open: ['Opções para a blockchain', 'Blockchain options', 'Blockchainopties']
         },
-        'token.html': {
+        'self-compounding.html': {
           use: ['Para que serve', 'Purpose', 'Waarvoor dient het'],
           meaning: ['Como funciona', 'How it works', 'Hoe het werkt'],
           fee: ['Destino da taxa', 'Where fees go', 'Waar vergoedingen naartoe gaan'],

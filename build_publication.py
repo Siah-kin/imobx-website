@@ -57,7 +57,7 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
 
 
 # The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
-SITE_UPDATED = '2026-11-09'
+SITE_UPDATED = '2026-11-12'
 
 
 def status_bar_text():
@@ -78,32 +78,33 @@ MENU = [
         ('rent-to-own.html', 'decisions', 'Decisões dos moradores', "Residents' decisions", 'What do residents decide?'),
         ('rent-to-own.html', 'leaving', 'Saída ou atraso no pagamento', 'Leaving or missed payments', 'What if you can’t pay for a while, or want to leave?'),
     ]),
-    ('transparency.html', 'Custos e recursos', 'Costs and funding', [
-        ('transparency.html', 'first-homes', 'Custo da obra', 'Building costs', 'What does it cost to build a house?'),
-        ('transparency.html', 'money-sources', 'Origem dos recursos', 'Sources of funding', 'Funding and spending: where the funding comes from, and what it pays first'),
-        ('transparency.html', 'payment-route', 'Conferência dos pagamentos', 'Payment checks', 'Who checks each payment?'),
-        ('transparency.html', 'reports', 'Relatórios publicados', 'Published reports', 'Where does each real (R$) go?'),
+    ('costs-and-funding.html', 'Custos e recursos', 'Costs and funding', [
+        ('costs-and-funding.html', 'first-homes', 'Custo da obra', 'Building costs', 'What does it cost to build a house?'),
+        ('costs-and-funding.html', 'money-sources', 'Origem dos recursos', 'Sources of funding', 'Where does the funding come from, and what does it pay first?'),
+        ('costs-and-funding.html', 'payment-route', 'Conferência dos pagamentos', 'Payment checks', 'Who checks each payment?'),
+        ('costs-and-funding.html', 'reports', 'Relatórios publicados', 'Published reports', 'Where does each real (R$) go?'),
     ]),
     # Owner, 28 Oct: a menu item is a page, and each entry in its list is a section of that page.
-    ('roadmap.html', 'Desenvolvimento do projeto', 'Project development', [
-        ('roadmap.html', 'stages', 'Onde estamos agora', 'Where we are now', 'From groundwork to the first houses'),
-        ('roadmap.html', 'homes', 'Onde a primeira família vai morar', 'Where the first family will live', 'Where will the first family live?'),
-        ('roadmap.html', 'terms', 'O que está decidido', 'What is decided', 'What is decided, and what is not yet'),
+    ('project-development.html', 'Desenvolvimento do projeto', 'Project development', [
+        ('project-development.html', 'stages', 'Onde estamos agora', 'Where we are now', 'From groundwork to the first houses'),
+        ('project-development.html', 'homes', 'Onde a primeira família vai morar', 'Where the first family will live', 'Where will the first family live?'),
+        ('project-development.html', 'later', 'Depois dos primeiros apartamentos', 'After the first flats', 'What comes after the first flats?'),
+        ('project-development.html', 'terms', 'O que está decidido', 'What is decided', 'What is decided, and what is not yet'),
     ]),
-    ('blockchain.html', 'Registro distribuído', 'Distributed ledger', [
+    ('distributed-ledger.html', 'Registro distribuído', 'Distributed ledger', [
         # the rebuilt ledger page (28 Oct) carries its section ids, so these reuse them
-        ('blockchain.html', 'layers', 'Privacidade e acesso', 'Privacy and access', 'What changes for my family, and what stays private?'),
-        ('blockchain.html', 'request', 'Pedidos e reclamações', 'Requests and complaints',
+        ('distributed-ledger.html', 'layers', 'Privacidade e acesso', 'Privacy and access', 'What changes for my family, and what stays private?'),
+        ('distributed-ledger.html', 'request', 'Pedidos e reclamações', 'Requests and complaints',
          'What happens when I ask for a repair or make a complaint?'),
-        ('blockchain.html', 'records', 'Quem pode ler o quê', 'Who can read what', 'Who can read my information, and who can read IMOBX’s payments?'),  # owner, 28 Oct: 'records' is too abstract
+        ('distributed-ledger.html', 'records', 'Quem pode ler o quê', 'Who can read what', 'Who can read my information, and who can read IMOBX’s payments?'),  # owner, 28 Oct: 'records' is too abstract
     ]),
     # Owner, 3 Nov: the token page is a top-level item, visible from every page, between the ledger and governance
     # (the three pillars: Distributed ledger, Self-compounding, Local governance).
-    ('token.html', 'Self-compounding', 'Self-compounding', [
-        ('token.html', 'use', 'Para que serve', 'What it is for', 'What is it for?'),
-        ('token.html', 'meaning', 'O que significa', 'What it means', 'What does self-compounding mean?'),
-        ('token.html', 'fee', 'Para onde vai a taxa', 'Where the fee goes', 'Where does the fee go?'),
-        ('token.html', 'laws', 'As quatro regras', 'The four rules', 'Which four rules govern the community’s funding?'),
+    ('self-compounding.html', 'Self-compounding', 'Self-compounding', [
+        ('self-compounding.html', 'use', 'Para que serve', 'What it is for', 'What is it for?'),
+        ('self-compounding.html', 'meaning', 'O que significa', 'What it means', 'What does self-compounding mean?'),
+        ('self-compounding.html', 'fee', 'Para onde vai a taxa', 'Where the fee goes', 'Where does the fee go?'),
+        ('self-compounding.html', 'laws', 'As quatro regras', 'The four rules', 'Which four rules govern the community’s funding?'),
     ]),
     # Owner, 28 Oct: Local governance is its own page, ordered from now to later (team, token holders, residents).
     ('governance.html', 'Governança local', 'Local governance', [
@@ -121,7 +122,7 @@ MENU = [
     ]),
 ]
 # Pages without their own menu item light up their parent; the lofts page belongs to Project development.
-MENU_PARENT = {'properties.html': 'roadmap.html', 'token.html': 'blockchain.html', 'commons-research.html': 'resources.html'}
+MENU_PARENT = {'properties.html': 'project-development.html', 'self-compounding.html': 'distributed-ledger.html', 'commons-research.html': 'resources.html'}
 # Section addresses other pages link to, kept although they left the menu.
 EXTRA_ANCHORS = [
     ('index.html', 'onde-estamos', 'Where we are now'),
@@ -140,13 +141,13 @@ HEADING_INTROS = {
         'What do residents decide?': ('Os moradores cuidam juntos da vida comum do bairro; o contrato de cada família continua sendo só dela.',
                                       'Residents run the shared life of the neighbourhood together; each family’s own agreement stays its own.'),
     },
-    'transparency.html': {
+    'costs-and-funding.html': {
         'Who checks each payment?': ('No plano, um pagamento só sai depois que duas pessoas o olharam: uma aprova, outra confere.',
                                      'In the plan, a payment goes out only after two people have looked at it: one approves it, another checks it.'),
         'Where does each real (R$) go?': ('Quem financia ou mora num bairro da IMOBX poderá acompanhar isso nos nossos relatórios. Cada um vai mostrar:',
                                           'Anyone who funds or lives in an IMOBX neighbourhood will be able to follow it in our reports. Each one will show:'),
     },
-    'blockchain.html': {
+    'distributed-ledger.html': {
         'Who can read my information, and who can read IMOBX’s payments?': ('Seus vizinhos podem acompanhar o seu pedido de reparo. Uma reclamação só é lida por você e por quem a revisa. Qualquer pessoa pode ler o que a própria IMOBX paga.',
                            'Your neighbours can follow your repair request. A complaint is read only by you and the people who review it. Anyone can read what IMOBX itself pays.'),
         'How much would run on the blockchain?': ('Podemos começar com contas bancárias e passar mais para o registro assim que cada passo funcionar.',
@@ -207,7 +208,7 @@ def site_header(lang='pt-BR', current=''):
     portuguese = lang.startswith('pt')
     section = MENU_PARENT.get(current, current)  # the lofts page highlights Project development
     links = ''
-    for target, pt, en, entries in [item for item in MENU if item[0] in ('rent-to-own.html', 'transparency.html', 'roadmap.html', 'resources.html')]:
+    for target, pt, en, entries in [item for item in MENU if item[0] in ('rent-to-own.html', 'costs-and-funding.html', 'project-development.html', 'resources.html')]:
         if not entries:
             active = ' aria-current="page"' if target == current else ''
             links += (f'<div class="nav-item"><a href="{target}" data-pt="{esc(pt)}" data-en="{esc(en)}"{active}>'
@@ -226,8 +227,8 @@ def site_header(lang='pt-BR', current=''):
                   f'<span class="sub-arrow" aria-hidden="true">▾</span></button>'
                   f'<ul class="sub" id="{menu_id}" hidden>{sub}</ul></div>')
     pillar_data = [
-        ('blockchain.html', 'Registro distribuído', 'Distributed ledger', 'Quem pode ler o quê', 'Who can read what', '<rect x="4" y="4" width="16" height="16"/><path d="M4 9h16M4 14h16M9 4v16"/>'),
-        ('token.html', 'Self-compounding', 'Self-compounding', 'Para onde vai a taxa', 'Where the fee goes', '<path d="M12 20V10M12 10c0-4 3-6 7-6 0 4-3 6-7 6zM12 13c0-3-2-5-6-5 0 3 2 5 6 5z"/>'),
+        ('distributed-ledger.html', 'Registro distribuído', 'Distributed ledger', 'Quem pode ler o quê', 'Who can read what', '<rect x="4" y="4" width="16" height="16"/><path d="M4 9h16M4 14h16M9 4v16"/>'),
+        ('self-compounding.html', 'Self-compounding', 'Self-compounding', 'Para onde vai a taxa', 'Where the fee goes', '<path d="M12 20V10M12 10c0-4 3-6 7-6 0 4-3 6-7 6zM12 13c0-3-2-5-6-5 0 3 2 5 6 5z"/>'),
         ('governance.html', 'Governança local', 'Local governance', 'Quem decide agora', 'Who decides now', '<circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 19c1-3 3-5 5-5s4 2 5 5M11 19c1-3 3-5 5-5s4 2 5 5"/>'),
     ]
     pillars = ''
@@ -259,7 +260,7 @@ def site_header(lang='pt-BR', current=''):
             '</div>' + action + '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap footer-inner"><div class="footer-identity"><a class="footer-brand" href="index.html" aria-label="IMOBX"><img src="assets/imobx-logo-light.png" width="112" height="112" alt="IMOBX"></a><p class="footer-mission" data-pt="De uma casa a um bairro resiliente" data-en="From a house to a resilient neighbourhood" data-nl="Van een huis naar een veerkrachtige buurt">De uma casa a um bairro resiliente</p></div><nav class="footer-nav" aria-label="IMOBX"><div class="footer-columns"><div class="footer-column"><h2 data-pt="Moradia" data-en="Housing" data-nl="Wonen">Moradia</h2><ul><li><a href="rent-to-own.html" data-pt="Aluguel com compra" data-en="Rent-to-own" data-nl="Huurkoop">Aluguel com compra</a></li><li><a href="transparency.html" data-pt="Custos e recursos" data-en="Costs and funding" data-nl="Kosten en financiering">Custos e recursos</a></li><li><a href="roadmap.html" data-pt="Desenvolvimento do projeto" data-en="Project development" data-nl="Projectontwikkeling">Desenvolvimento do projeto</a></li></ul></div><div class="footer-column"><h2 data-pt="Nossa proposta" data-en="Our approach" data-nl="Onze aanpak">Nossa proposta</h2><ul><li><a href="blockchain.html" data-pt="Registro distribuído" data-en="Distributed ledger" data-nl="Distributed Ledger">Registro distribuído</a></li><li><a href="token.html" data-pt="Self-compounding" data-en="Self-compounding" data-nl="Self-compounding">Self-compounding</a></li><li><a href="governance.html" data-pt="Governança local" data-en="Local governance" data-nl="Lokaal bestuur">Governança local</a></li></ul></div><div class="footer-column"><h2 data-pt="Mais" data-en="More" data-nl="Meer">Mais</h2><ul><li><a href="about.html" data-pt="Sobre a IMOBX" data-en="About IMOBX" data-nl="Over IMOBX">Sobre a IMOBX</a></li><li><a href="resources.html" data-pt="Recursos" data-en="Resources" data-nl="Bronnen">Recursos</a></li><li><a href="jobs.html" data-pt="Vagas" data-en="Jobs" data-nl="Vacatures">Vagas</a></li><li><a href="contact.html" data-pt="Participar" data-en="Take part" data-nl="Meedoen">Participar</a></li></ul></div></div></nav></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap footer-inner"><div class="footer-identity"><a class="footer-brand" href="index.html" aria-label="IMOBX"><img src="assets/imobx-logo-light.png" width="112" height="112" alt="IMOBX"></a><p class="footer-mission" data-pt="De uma casa a um bairro resiliente" data-en="From a house to a resilient neighbourhood" data-nl="Van een huis naar een veerkrachtige buurt">De uma casa a um bairro resiliente</p></div><nav class="footer-nav" aria-label="IMOBX"><div class="footer-columns"><div class="footer-column"><h2 data-pt="Moradia" data-en="Housing" data-nl="Wonen">Moradia</h2><ul><li><a href="rent-to-own.html" data-pt="Aluguel com compra" data-en="Rent-to-own" data-nl="Huurkoop">Aluguel com compra</a></li><li><a href="costs-and-funding.html" data-pt="Custos e recursos" data-en="Costs and funding" data-nl="Kosten en financiering">Custos e recursos</a></li><li><a href="project-development.html" data-pt="Desenvolvimento do projeto" data-en="Project development" data-nl="Projectontwikkeling">Desenvolvimento do projeto</a></li></ul></div><div class="footer-column"><h2 data-pt="Nossa proposta" data-en="Our approach" data-nl="Onze aanpak">Nossa proposta</h2><ul><li><a href="distributed-ledger.html" data-pt="Registro distribuído" data-en="Distributed ledger" data-nl="Distributed Ledger">Registro distribuído</a></li><li><a href="self-compounding.html" data-pt="Self-compounding" data-en="Self-compounding" data-nl="Self-compounding">Self-compounding</a></li><li><a href="governance.html" data-pt="Governança local" data-en="Local governance" data-nl="Lokaal bestuur">Governança local</a></li></ul></div><div class="footer-column"><h2 data-pt="Mais" data-en="More" data-nl="Meer">Mais</h2><ul><li><a href="about.html" data-pt="Sobre a IMOBX" data-en="About IMOBX" data-nl="Over IMOBX">Sobre a IMOBX</a></li><li><a href="resources.html" data-pt="Recursos" data-en="Resources" data-nl="Bronnen">Recursos</a></li><li><a href="jobs.html" data-pt="Vagas" data-en="Jobs" data-nl="Vacatures">Vagas</a></li><li><a href="contact.html" data-pt="Participar" data-en="Take part" data-nl="Meedoen">Participar</a></li></ul></div></div></nav></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):
@@ -269,10 +270,10 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
         script += '<script src="assets/site.js" defer></script>'
     description = description or 'IMOBX housing pilot: model, roadmap and project resources.'
     current = {'IMOBX | Proposed Rio housing pilot': 'index.html',
-               'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'transparency.html',
-               'IMOBX | Roadmap': 'roadmap.html', 'IMOBX | IMOBX roadmap': 'roadmap.html', 'IMOBX | Project stages': 'roadmap.html', 'IMOBX | Blockchain': 'blockchain.html', 'IMOBX | Distributed ledger': 'blockchain.html', 'IMOBX | Project reference': 'reference.html',
+               'IMOBX | Resources': 'resources.html', 'IMOBX | Funding and spending': 'costs-and-funding.html',
+               'IMOBX | Roadmap': 'project-development.html', 'IMOBX | IMOBX roadmap': 'project-development.html', 'IMOBX | Project stages': 'project-development.html', 'IMOBX | Blockchain': 'distributed-ledger.html', 'IMOBX | Distributed ledger': 'distributed-ledger.html', 'IMOBX | Project reference': 'reference.html',
                'IMOBX | Renting and buying a home': 'rent-to-own.html',
-               'IMOBX | Take part': 'contact.html', 'IMOBX | About': 'about.html', 'IMOBX | Research on shared ownership': 'commons-research.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | Self-compounding': 'token.html', 'IMOBX | Ideas behind IMOBX': 'ideas.html', 'IMOBX | The token': 'transparency.html'}.get(title, '')
+               'IMOBX | Take part': 'contact.html', 'IMOBX | About': 'about.html', 'IMOBX | Research on shared ownership': 'commons-research.html', 'IMOBX | Local governance': 'governance.html', 'IMOBX | Self-compounding': 'self-compounding.html', 'IMOBX | Ideas behind IMOBX': 'ideas.html', 'IMOBX | The token': 'costs-and-funding.html'}.get(title, '')
     document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{esc(description)}">
@@ -331,7 +332,7 @@ RESOURCE_CATALOG = [
      'description_en': 'Funding sources, planned spending and how participants could check the accounts.',
      'meta_pt': 'Português e inglês · planos e fontes',
      'meta_en': 'Portuguese and English · plans and sources',
-     'links': [('transparency.html','Ver a página','View page')]},
+     'links': [('costs-and-funding.html','Ver a página','View page')]},
 ]
 RESOURCE_CATALOG[-1]['version'] = VERSION
 RESOURCE_CATALOG.insert(0, {
@@ -386,7 +387,7 @@ def resource_section(standalone=True):
     # The token's current description lives on the Self-compounding page (TOKEN_POSITION.md, 2 Nov 2026).
     body += ('<p>' + translated('Para o token da IMOBX, a sua taxa e os quatro V, leia a página',
                                 'For the IMOBX token, its fee and its four V’s, read the page') + ' '
-             + translated('Self-compounding', 'Self-compounding', 'a', 'href="token.html"') + '.</p>')
+             + translated('Self-compounding', 'Self-compounding', 'a', 'href="self-compounding.html"') + '.</p>')
     body += '<section id="media-resources" aria-labelledby="media-resources-title">'
     body += translated('Logos e marca', 'Logos and brand', 'h2', 'id="media-resources-title"')
     body += '<div class="resource-grid">' + card(catalog['media-kit'], labelled_by='media-resources-title') + '</div></section>'
@@ -450,7 +451,7 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
             + '</ol></nav>')
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main class="paper guide-paper band-page resources-page" id="main">' + language_controls
-    + translated('Documentos e fontes da IMOBX', 'IMOBX documents and sources', 'h1')
+    + translated('Recursos: documentos e fontes da IMOBX', 'Resources: IMOBX documents and sources', 'h1')
     + translated('Leia o plano completo por conta própria: a proposta, a apresentação para parceiros e o guia de construção, com a fonte de cada número do site.',
                  'Read the full plan for yourself: the proposal, the presentation for partners and the building guide, with the source of every figure on this site.', 'p', 'class="guide-lead"') + _res_nav
     + resource_section(standalone=True) + '</section>'
@@ -708,7 +709,7 @@ logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'asse
 archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
         'IMOBX media kit v0.2 / 16 October 2026\nLogo artwork, colours, image sources and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
-        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'token-paper.pdf', 'token-paper.md', 'roadmap.html', 'transparency.html', 'model-guide.json',
+        'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'token-paper.pdf', 'token-paper.md', 'project-development.html', 'costs-and-funding.html', 'model-guide.json',
         'project-reference.json', 'project-reference-pt.md', 'project-reference-en.md', 'publication-manifest.json', 'contact-routes.json',
         'project-reference-pt.pdf', 'project-reference-en.pdf', 'media-kit.md', 'media-kit.zip', 'brand-colors.json', 'DESIGN.md']
         + sorted(str(p.relative_to(ROOT)) for p in ROOT.glob('*.html'))

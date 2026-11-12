@@ -133,7 +133,7 @@
         },
         {
           "label": "IMOBX: the Self-compounding page",
-          "url": "https://imobx.org/token.html",
+          "url": "https://imobx.org/self-compounding.html",
           "effect": "Sets out the token’s fee, where it goes and the four V’s as the project describes them."
         }
       ]
@@ -150,7 +150,7 @@
       "sources": [
         {
           "label": "IMOBX project stages",
-          "url": "https://imobx.org/roadmap.html",
+          "url": "https://imobx.org/project-development.html",
           "effect": "Sets out the stages and what must be ready in each. It sets no dates."
         }
       ]

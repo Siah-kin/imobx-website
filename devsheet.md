@@ -30,7 +30,7 @@ IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. Under the pl
 
 Shared designs, purchasing and administration can make further projects easier to deliver. Each family has a route to owning its whole home. Residents help shape shared spaces and local priorities.
 
-This guide explains how a request leads to completed work, a check that it meets the agreement, and payment. The [whitepaper](whitepaper.html) explains the model, and the [roadmap](roadmap.html) sets out stages and conditions for proceeding. The [source list](resources.html#sources) shows where each figure comes from, in Portuguese and English, and the [Self-compounding page](token.html) explains the IMOBX token.
+This guide explains how a request leads to completed work, a check that it meets the agreement, and payment. The [whitepaper](whitepaper.html) explains the model, and the [roadmap](project-development.html) sets out stages and conditions for proceeding. The [source list](resources.html#sources) shows where each figure comes from, in Portuguese and English, and the [Self-compounding page](self-compounding.html) explains the IMOBX token.
 
 <div class="pagebreak"></div>
 
@@ -90,7 +90,7 @@ Each amount received is counted once. An amount credited toward buying the home 
 
 Once the purchase conditions are met, the required documents and registration transfer the whole home to the household. A token transfer does not perform that property transfer. IMOBX stops receiving rent from the home. Continued services and further construction need their own funding; any ongoing service charge needs an actual service and terms the household agreed to.
 
-The financial plan needs to show costs and cash through construction, occupancy and transfer. It also needs to account for delays, major repairs and periods when a household cannot pay. See [funding and spending](transparency.html).
+The financial plan needs to show costs and cash through construction, occupancy and transfer. It also needs to account for delays, major repairs and periods when a household cannot pay. See [funding and spending](costs-and-funding.html).
 
 <div class="pagebreak"></div>
 
@@ -107,7 +107,7 @@ A builder needs to know that a house is paid for before work starts. The first h
 
 Over time, the IMOBX token would add to the houses budget. Holding it is optional. It is planned as a self-compounding community-funding token with no presale and a fixed supply of 1,000,000 tokens. Buyers’ payments would go into the token’s trading pool in exchange for tokens, and none of them would reach IMOBX. The community’s income would be the fee on every trade: 14% on Arctide, plus Arctide’s own 0.25%, and 11% on Argus, which keeps 30% of it.
 
-Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. The other 35% would go to the trading pool. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of that 35% would go to new houses. If the token opens instead with a sale on Arctide’s bonding curve, Arctide would receive that part, and new houses would receive the share earned by funds IMOBX adds to the pool itself. The [Self-compounding page](token.html) explains the token and its four V’s: Volume, Verify, Vote and Vow.
+Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. The other 35% would go to the trading pool. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of that 35% would go to new houses. If the token opens instead with a sale on Arctide’s bonding curve, Arctide would receive that part, and new houses would receive the share earned by funds IMOBX adds to the pool itself. The [Self-compounding page](self-compounding.html) explains the token and its four V’s: Volume, Verify, Vote and Vow.
 
 Trading is usually busiest around a launch and much quieter afterwards, so the housing budget has to work through long periods of little or no trading income. The accounts will show the fees actually received and how each was used.
 
@@ -115,7 +115,7 @@ Trading is usually busiest around a launch and much quieter afterwards, so the h
 
 Funds put into the trading pool stay there. The accounts distinguish funding available for bills, amounts reserved for families and repairs, and other commitments.
 
-Campaign and grant funding will pay for agreed work before families start paying rent. First, IMOBX needs its legal form, documents showing the right to use the property, a budget for the site and a legally allowed way to run the campaign. Forecast rent is not funding already received. Payments to any investors depend on the chosen agreement and the funds actually available. See the [funding questions](transparency.html#faq-funding).
+Campaign and grant funding will pay for agreed work before families start paying rent. First, IMOBX needs its legal form, documents showing the right to use the property, a budget for the site and a legally allowed way to run the campaign. Forecast rent is not funding already received. Payments to any investors depend on the chosen agreement and the funds actually available. See the [funding questions](costs-and-funding.html#faq-funding).
 
 ### How paid work is checked
 
@@ -147,7 +147,7 @@ Study-room hours, courtyard use, shared-space repair priorities and representati
 
 A household’s purchase terms follow its agreement. A vote, including a token vote, cannot on its own change a family’s housing agreement, and buying tokens does not give control over another family’s contract. Residents’ say does not depend on holding tokens or investing. Investors receive only the rights written in their agreement. The voting procedure, spending limits and dispute review process are worked out with participants. See the [decisions and repair examples](rent-to-own.html#decisions).
 
-Elinor Ostrom’s work on shared resources, described in [section 7 of the whitepaper](whitepaper.html#7-resident-voice-and-accountable-governance), informs questions about membership, shared rules, checking work and resolving disputes. These questions apply to facilities such as solar equipment, the orchard and study rooms. See the [decision examples](roadmap.html#governance) and the [participant map](roadmap.html#participation). Brazil’s securities-market regulator, the CVM, looks at the rights a token carries, not its label, in [Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html); the opinion does not approve any IMOBX offer.
+Elinor Ostrom’s work on shared resources, described in [section 7 of the whitepaper](whitepaper.html#7-resident-voice-and-accountable-governance), informs questions about membership, shared rules, checking work and resolving disputes. These questions apply to facilities such as solar equipment, the orchard and study rooms. See the [decision examples](project-development.html#governance) and the [participant map](project-development.html#participation). Brazil’s securities-market regulator, the CVM, looks at the rights a token carries, not its label, in [Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html); the opinion does not approve any IMOBX offer.
 
 <div class="pagebreak"></div>
 
@@ -170,7 +170,7 @@ Under the plan, digital services help people read agreements, request repairs, f
 
 ### Following a payment
 
-Families pay in reais. IMOBX keeps funding for Brazilian bills. Any approved digital payment needs a provider that accepts the organization and its activities, a record of conversion costs and a tested return to the bank. The provider is chosen with the first project. See the [funding path](transparency.html#settlement).
+Families pay in reais. IMOBX keeps funding for Brazilian bills. Any approved digital payment needs a provider that accepts the organization and its activities, a record of conversion costs and a tested return to the bank. The provider is chosen with the first project. See the [funding path](costs-and-funding.html#settlement).
 
 <div id="distribution-accounting-and-the-legacy-euler-approach"></div>
 
@@ -178,7 +178,7 @@ Families pay in reais. IMOBX keeps funding for Brazilian bills. Any approved dig
 
 A resident reports a leak. The maintenance role assesses it and obtains a quote. Spending follows the agreed budget and approval rule. Another person checks the completed repair; the accounts link its payment and receipt. The resident can question the result. Records of unfinished work let a replacement continue when someone leaves a role.
 
-Before the first families move in, the complete process is tested, including payment failures and lost access. A public report shows the approved budget, the work completed, who checked it and the amount paid. It identifies who prepared and reviewed the accounts. Private identity and household documents stay outside the public site. See [everyday decisions and tasks](transparency.html#faq-flock-siah).
+Before the first families move in, the complete process is tested, including payment failures and lost access. A public report shows the approved budget, the work completed, who checked it and the amount paid. It identifies who prepared and reviewed the accounts. Private identity and household documents stay outside the public site. See [everyday decisions and tasks](costs-and-funding.html#faq-flock-siah).
 
 <div class="pagebreak"></div>
 
@@ -207,7 +207,7 @@ A first expansion review comes after at least three operating months. A second l
 
 ### What the public can follow
 
-The website explains the proposal now. As the project develops, reports show signed agreements, approved work, funding received, construction and home transfers. See the [detailed roadmap](roadmap.html).
+The website explains the proposal now. As the project develops, reports show signed agreements, approved work, funding received, construction and home transfers. See the [detailed roadmap](project-development.html).
 
 <div class="pagebreak"></div>
 

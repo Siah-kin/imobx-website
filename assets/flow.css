@@ -106,7 +106,7 @@
 
 .closing-band .button:not(.act),.closing-band a.button:not(.act){background:#276578;color:#fff}
 
-/* 'From a request to a record anyone can check' on blockchain.html (owner, 28 Oct): same language as the money drawing.
+/* 'From a request to a record anyone can check' on distributed-ledger.html (owner, 28 Oct): same language as the money drawing.
    Above the ground line is public, below it private. Motion: the pipes run, then the ledger blocks appear one by one. */
 .ledger-flow .lf-waterline{stroke:#276578;stroke-width:2;stroke-dasharray:8 6}
 .ledger-private{margin:14px 0 0;font-size:15px;color:#526571}

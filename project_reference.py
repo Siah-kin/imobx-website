@@ -104,7 +104,7 @@ def write_manifest(root):
              'project-reference-pt.pdf', 'project-reference-en.pdf', 'reference.html',
              'whitepaper.md', 'whitepaper.html', 'whitepaper.pdf', 'devsheet.md', 'devsheet.html', 'devsheet.pdf',
              'pitchdeck.json', 'pitchdeck.md', 'pitchdeck.html', 'pitchdeck.pdf', 'pitchdeck.pptx',
-             'roadmap.html', 'transparency.html', 'resources.html', 'model-guide.json',
+             'project-development.html', 'costs-and-funding.html', 'resources.html', 'model-guide.json',
              'contact.html', 'contact-routes.json', 'assets/contact.js', 'assets/contact.css']
     data = {'version': VERSION, 'reviewed': REVIEW_DATE, 'status': 'Project proposal; no investment offer',
             'reference': 'reference.html',

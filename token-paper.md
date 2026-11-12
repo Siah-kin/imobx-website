@@ -87,4 +87,4 @@ This paper is not an offer or an invitation to buy, and it is not financial, leg
 
 ## Where to read more
 
-The page [Self-compounding](token.html) on this site explains the same design in short form. The page [How would a neighbourhood work on a blockchain?](blockchain.html) explains the open books. The page [Who decides, and when you get a say](governance.html) explains how decisions are made.
+The page [Self-compounding](self-compounding.html) on this site explains the same design in short form. The page [How would a neighbourhood work on a blockchain?](distributed-ledger.html) explains the open books. The page [Who decides, and when you get a say](governance.html) explains how decisions are made.

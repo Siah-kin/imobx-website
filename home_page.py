@@ -200,7 +200,7 @@ method = (
     + t('span', 'Primeiro provamos que funciona. A prova gera confiança, e a confiança atrai financiamento e escala. ',
         'First we prove it works. Proof builds trust, and trust draws in funding and scale. ',
         'Eerst bewijzen we dat het werkt. Bewijs bouwt vertrouwen op, en vertrouwen trekt financiering en schaal aan. ')
-    + t('a', 'Etapas do projeto', 'Project stages', 'Projectfasen', 'href="roadmap.html"')
+    + t('a', 'Etapas do projeto', 'Project stages', 'Projectfasen', 'href="project-development.html"')
     + '</p></section>')
 
 # ---------------------------------------------------------------- 3. where each month's funding goes
