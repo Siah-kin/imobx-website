@@ -132,3 +132,14 @@
 .tour-invitation .tour-information p{font-size:15px;line-height:1.5;margin:0 0 16px}
 .tour-information summary:focus-visible{outline:3px solid #a84b00;outline-offset:3px}
 .tour-information[open] summary{margin-bottom:8px}
+
+/* Language switch inside the first-visit invitation and the tour (owner, 13 Nov): same look as the header's PT | EN | NL */
+.tour-lang{display:flex;width:max-content;border:1px solid #276578}
+.tour-dialog .tour-lang button,.tour-invitation .tour-lang button{min-width:44px;min-height:44px;padding:0 8px;border:0;background:#fff;color:#193d4e;font-size:14px;font-weight:700}
+.tour-dialog .tour-lang button[aria-pressed="true"],.tour-invitation .tour-lang button[aria-pressed="true"]{background:#276578;color:#fff}
+.tour-invitation .tour-lang{margin:0 0 18px auto}
+.tour-invitation-inner{position:relative}
+@media(min-width:481px){.tour-invitation .tour-lang{position:absolute;top:22px;right:28px;margin:0}.tour-invitation h2{padding-right:150px}}
+.tour-invitation:focus{outline:none}
+@media(max-width:480px){.tour-dialog-top{gap:8px}.tour-dialog .tour-close{padding-left:8px;padding-right:8px}}
+@media(max-width:420px){.tour-dialog-top{flex-wrap:wrap;row-gap:6px}.tour-dialog .tour-progress{order:3;flex-basis:100%;margin:0}}

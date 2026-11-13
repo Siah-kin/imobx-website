@@ -254,9 +254,9 @@ def site_header(lang='pt-BR', current=''):
             '<div class="site-links" id="site-links"><div class="housing-links">' + links + '</div>'
             '<div class="pillar-band">' + pillars + '</div><div class="pillar-panels">' + panels + '</div><div class="option-b-mobile-action">' + action + '</div></div>'
             '<div class="option-b-right"><div class="lang" role="group" aria-label="Idioma / Language / Taal">'
-            f'<button type="button" data-language="pt" aria-pressed="{str(portuguese).lower()}" aria-label="Português brasileiro">PT</button>'
-            f'<button type="button" data-language="en" aria-pressed="{str(not portuguese).lower()}" aria-label="English">EN</button>'
-            '<button type="button" data-language="nl" aria-pressed="false" aria-label="Nederlands">NL</button>'
+            f'<button type="button" data-language="pt" aria-pressed="{str(portuguese).lower()}" aria-label="PT, Português brasileiro" lang="pt-BR">PT</button>'
+            f'<button type="button" data-language="en" aria-pressed="{str(not portuguese).lower()}" aria-label="EN, English" lang="en">EN</button>'
+            '<button type="button" data-language="nl" aria-pressed="false" aria-label="NL, Nederlands" lang="nl">NL</button>'
             '</div>' + action + '</div></nav></header>')
 
 

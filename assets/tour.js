@@ -6,14 +6,40 @@
       typeof HTMLDialogElement.prototype.showModal !== 'function') return;
 
   const labels = {
-    pt: { close: 'Fechar', back: 'Voltar', next: 'Próximo', finish: 'Concluir', scroll: 'Role para ler mais ↓', step: (n, total) => `Etapa ${n} de ${total}` },
-    en: { close: 'Close', back: 'Back', next: 'Next', finish: 'Finish', scroll: 'Scroll to read more ↓', step: (n, total) => `Step ${n} of ${total}` },
-    nl: { close: 'Sluiten', back: 'Terug', next: 'Volgende', finish: 'Afronden', scroll: 'Scroll om verder te lezen ↓', step: (n, total) => `Stap ${n} van ${total}` }
+    pt: { close: 'Fechar', back: 'Voltar', next: 'Próximo', finish: 'Concluir', scroll: 'Role para ler mais ↓', step: (n, total) => `Etapa ${n} de ${total}`, stepOnly: n => `Etapa ${n}` },
+    en: { close: 'Close', back: 'Back', next: 'Next', finish: 'Finish', scroll: 'Scroll to read more ↓', step: (n, total) => `Step ${n} of ${total}`, stepOnly: n => `Step ${n}` },
+    nl: { close: 'Sluiten', back: 'Terug', next: 'Volgende', finish: 'Afronden', scroll: 'Scroll om verder te lezen ↓', step: (n, total) => `Stap ${n} van ${total}`, stepOnly: n => `Stap ${n}` }
   };
   const language = () => {
     const code = document.documentElement.lang.slice(0, 2);
     return labels[code] ? code : 'pt';
   };
+  // The page's own language buttons sit behind a modal, so the invitation and the tour carry their own switch
+  // (owner, 13 Nov: a visitor could not change the language in the first-visit popup or in the tour).
+  // A click is passed on to the header button, so the page, both dialogs and the saved choice stay in step.
+  const langSwitch = () => {
+    const group = document.createElement('div');
+    group.className = 'tour-lang';
+    group.setAttribute('role', 'group');
+    group.setAttribute('aria-label', 'Idioma / Language / Taal');
+    [['pt', 'PT', 'Português brasileiro', 'pt-BR'], ['en', 'EN', 'English', 'en'], ['nl', 'NL', 'Nederlands', 'nl']].forEach(([code, text, name, tag]) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.dataset.tourLang = code;
+      button.textContent = text;
+      button.setAttribute('aria-label', text + ', ' + name);
+      button.lang = tag;
+      button.addEventListener('click', () => {
+        const header = document.querySelector('[data-language="' + code + '"]');
+        if (header) header.click();
+      });
+      group.appendChild(button);
+    });
+    return group;
+  };
+  const syncLang = root => root.querySelectorAll('[data-tour-lang]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.tourLang === language()));
+  });
   let dialog = null;
   let steps = [];
   let current = 0;
@@ -35,6 +61,7 @@
   function update() {
     const code = language();
     const words = labels[code];
+    syncLang(dialog);
     allSteps.forEach(step => { step.hidden = true; });
     steps[current].hidden = false;
     dialog.querySelectorAll('[data-pt][data-en]').forEach(node => {
@@ -45,7 +72,10 @@
     });
     const contactPath = dialog.querySelector('.tour-contact select');
     if (contactPath && role && !contactPath.value) contactPath.value = role;
-    dialog.querySelector('[data-tour-progress]').textContent = words.step(current + 1, steps.length);
+    // The total is only true once the visitor has said who they are; before that the list is longer than the path they will walk.
+    const pathKnown = role !== null;
+    dialog.querySelector('[data-tour-progress]').textContent = pathKnown ? words.step(current + 1, steps.length) : words.stepOnly(current + 1);
+    dialog.querySelector('.tour-bar').style.visibility = pathKnown ? '' : 'hidden';
     dialog.querySelector('[data-tour-bar]').style.width = ((current + 1) / steps.length * 100) + '%';
     dialog.querySelector('[data-tour-close]').textContent = words.close;
     dialog.querySelector('[data-tour-back]').textContent = words.back;
@@ -84,6 +114,7 @@
     const box = document.createElement('dialog');
     box.className = 'tour-dialog';
     box.innerHTML = '<div class="tour-dialog-shell"><div class="tour-dialog-top"><p class="tour-progress" data-tour-progress aria-live="polite"></p><button type="button" class="tour-close" data-tour-close></button></div><div class="tour-bar" aria-hidden="true"><span data-tour-bar></span></div><div class="tour-dialog-content" data-tour-content></div><p class="tour-scroll-hint" data-tour-scroll-hint hidden></p><div class="tour-dialog-actions"><button type="button" class="tour-back" data-tour-back></button><button type="button" class="tour-next" data-tour-next></button></div></div>';
+    box.querySelector('.tour-dialog-top').insertBefore(langSwitch(), box.querySelector('[data-tour-close]'));
     const content = box.querySelector('[data-tour-content]');
     content.addEventListener('scroll', updateScrollHint, { passive: true });
     sourceSteps.forEach(section => {
@@ -219,8 +250,12 @@
     invite.className = 'tour-invitation';
     invite.setAttribute('aria-labelledby', 'tour-invitation-title');
     invite.setAttribute('aria-describedby', 'tour-invitation-intro');
+    invite.tabIndex = -1;  // focus starts on the dialog, so a screen reader reads its title and description first
     invite.innerHTML = '<div class="tour-invitation-inner"><h2 id="tour-invitation-title"></h2><p id="tour-invitation-intro"></p><details class="tour-information"><summary data-invite-info></summary><p data-invite-details></p></details><div class="tour-invitation-actions"><button type="button" data-invite-take></button><button type="button" data-invite-skip></button></div></div>';
+    const inviteInner = invite.querySelector('.tour-invitation-inner');
+    inviteInner.insertBefore(langSwitch(), inviteInner.firstChild);
     const renderInvite = () => {
+      syncLang(invite);
       const w = words[language()];
       invite.querySelector('h2').textContent = w.title;
       invite.querySelector('p').textContent = w.intro;
@@ -237,6 +272,6 @@
     document.addEventListener('imobx:languagechange', renderInvite);
     document.body.appendChild(invite);
     renderInvite();
-    try { invite.showModal(); } catch (_) { invite.remove(); }
+    try { invite.showModal(); invite.focus(); } catch (_) { invite.remove(); }  // Chrome ignores autofocus on a dialog, so focus is set here
   }
 })();

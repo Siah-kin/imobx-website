@@ -12,7 +12,7 @@ explanations connect new ideas to situations the reader understands. Avoid impor
 private instructions or naming discussions into visitor-facing explanations.
 Marketing formulas are optional. Plain navigation labels need no unique selling claim.
 
-Review both Portuguese and English in the browser at mobile and desktop widths. Record
+Review Portuguese, English and Dutch in the browser at mobile and desktop widths. Record
 editorial reasoning and browser evidence privately. Label actual audience testing
 separately; an AI review or a readability score cannot establish comprehension.
 
