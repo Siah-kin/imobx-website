@@ -329,3 +329,38 @@
 .service-list li { margin: .25rem 0; }
 .token-notice { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
 .token-notice h2 { font-size: 1rem; margin-bottom: .4rem; }
+
+/* How does the token grow? (owner, 12 and 13 Nov). Small motion, only while visible, off for reduced motion. */
+.token-growth .tg-steps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.token-growth .tg-step{position:relative;padding:0 18px 0 0}
+.token-growth .tg-step:not(:last-child)::after{content:"";position:absolute;top:46px;right:2px;width:16px;height:2px;background:#4A90A4}
+.token-growth .tg-step:not(:last-child)::before{content:"";position:absolute;top:41px;right:0;width:8px;height:8px;border-top:2px solid #4A90A4;border-right:2px solid #4A90A4;transform:rotate(45deg)}
+.token-growth .tg-icon{display:block;width:120px;height:96px;margin:0 0 14px}
+.token-growth .tg-chip{display:block;width:max-content;box-sizing:border-box;height:24px;line-height:20px;font-size:13px;font-weight:700;border-radius:999px;padding:1px 10px;margin:0 0 8px;background:#FDF1E4;border:1px solid #F0D2AE;color:#8A3F00}
+.token-growth .tg-step h3{font-size:19px;line-height:1.25;margin:0 0 6px;color:#193D4E}
+.token-growth .tg-step p{font-size:16px;line-height:1.5;margin:0;color:#2B4655;max-width:none}
+.token-growth .tg-loop{margin:26px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.token-growth .tg-loop svg{grid-column:3 / 6;width:100%;height:64px;display:block}
+.token-growth .tg-loop p{grid-column:3 / 6;margin:6px 0 0;font-size:16px;color:#276578;font-weight:700;max-width:none}
+.token-growth .tg-caption{margin:30px 0 0;font-size:14px;color:#526571}
+@keyframes tgNudge{0%,60%,100%{translate:0 0;opacity:.8}30%{translate:5px 0;opacity:1}}
+@keyframes tgFlow{to{stroke-dashoffset:-28}}
+@keyframes tgTurn{to{transform:rotate(360deg)}}
+.token-growth .tg-step:not(:last-child)::after,.token-growth .tg-step:not(:last-child)::before{animation:tgNudge 3.2s ease-in-out 6}
+.token-growth .tg-step:nth-child(2)::after,.token-growth .tg-step:nth-child(2)::before{animation-delay:.5s}
+.token-growth .tg-step:nth-child(3)::after,.token-growth .tg-step:nth-child(3)::before{animation-delay:1s}
+.token-growth .tg-step:nth-child(4)::after,.token-growth .tg-step:nth-child(4)::before{animation-delay:1.5s}
+.token-growth .tg-flow{stroke-dasharray:7 7;animation:tgFlow 1.8s linear 10}
+.token-growth .tg-ring{transform-box:fill-box;transform-origin:center;animation:tgTurn 30s linear 1}
+.token-growth .tg-steps:not(.is-live) *,.token-growth .tg-steps:not(.is-live) *::before,.token-growth .tg-steps:not(.is-live) *::after,.token-growth .tg-loop:not(.is-live) path{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.token-growth .tg-step::before,.token-growth .tg-step::after,.token-growth .tg-flow,.token-growth .tg-ring{animation:none!important}.token-growth .tg-step:not(:last-child)::after,.token-growth .tg-step:not(:last-child)::before{opacity:1}}
+@media(min-width:1041px){.token-growth .tg-step:not(:first-child)>div{padding-top:32px}}
+@media(max-width:1040px){
+  .token-growth .tg-steps{grid-template-columns:1fr;gap:26px}
+  .token-growth .tg-step{padding:0;display:grid;grid-template-columns:96px 1fr;column-gap:16px;align-items:start}
+  .token-growth .tg-step:not(:last-child)::after,.token-growth .tg-step:not(:last-child)::before{display:none}
+  .token-growth .tg-icon{width:96px;height:77px;margin:0;grid-row:1 / span 3}
+  .token-growth .tg-loop svg{display:none}
+  .token-growth .tg-loop{display:block}
+  .token-growth .tg-loop p{margin:22px 0 0;padding-top:14px;border-top:1px solid #D9E3E8}
+}
