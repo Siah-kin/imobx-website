@@ -15,6 +15,21 @@ def T(pt, en, nl):
     return (pt, en, nl)
 
 
+def S(url, label, note=None):
+    """A source note after a figure: 'Source: <link>. <what the figure measures>'. Plain parts, so the dialog on the home page can update each one."""
+    return ('source', url, label, note)
+
+
+def _paragraph(item):
+    if len(item) == 4 and item[0] == 'source':
+        _, url, label, note = item
+        out = '<p class="source-note">' + _text('span', T('Fonte: ', 'Source: ', 'Bron: ')) + _text('a', label, f'href="{escape(url, quote=True)}"') + '.'
+        if note:
+            out += ' ' + _text('span', note)
+        return out + '</p>'
+    return _text('p', item)
+
+
 def _text(tag, pair, attrs=''):
     pt, en, nl = pair
     a = f'data-pt="{escape(pt, quote=True)}" data-en="{escape(en, quote=True)}" data-nl="{escape(nl, quote=True)}"'
@@ -69,7 +84,7 @@ def svg_bricks():
 
 
 def svg_repair():
-    """1 request, 2 approved and checked, 3 paid and published in the open book. Lights up in order."""
+    """1 request, 2 approved and checked, 3 paid and recorded (the open-book drawing is the ledger). Lights up in order."""
     out = f'<svg viewBox="0 0 520 200" role="img" aria-hidden="true"><rect width="520" height="200" fill="{PALE}"/>'
     c1 = (f'<rect x="20" y="50" width="130" height="110" rx="10" fill="#fff" stroke="{TEAL}" stroke-width="4"/>'
           f'<path d="M60 125 l35 -35 m-10 -12 a14 14 0 1 0 20 20" stroke="{INK}" stroke-width="7" fill="none" stroke-linecap="round"/>' + _badge(30, 42, 1))
@@ -138,9 +153,17 @@ STEPS = [
      ('img', 'assets/community-bay-circles.jpg', 1448, 1086, T('Favelas nos morros ao redor da baía, marcadas com círculos', 'Favelas on the hillsides around the bay, marked with circles', 'Favela’s op de hellingen rond de baai, gemarkeerd met cirkels'),
       T('Os círculos marcam favelas nos morros.', 'The circles mark favelas on the hillsides.', 'De cirkels geven favela’s op de hellingen aan.')),
      (T('O absurdo do Brasil não é o preço dos imóveis, é a taxa de juros.', 'The absurdity in Brazil is not the price of real estate, it is the interest rate.', 'Het absurde in Brazilië is niet de prijs van vastgoed, maar de rente.'), RAFAEL),
-     [T('Em 2024, cerca de 5,77 milhões de domicílios estavam em déficit habitacional no Brasil, pela medida da Fundação João Pinheiro. Os aluguéis sobem mais rápido do que a inflação: 9,13% nos 12 meses até setembro de 2026, contra 4,58%. No Rio, a alta foi de 14,80%.',
-        'In 2024 about 5.77 million households in Brazil were in housing deficit, by the Fundação João Pinheiro measure. Rents are rising faster than inflation: 9.13% in the 12 months to September 2026, against 4.58%. In Rio they rose 14.80%.',
-        'In 2024 vielen in Brazilië ongeveer 5,77 miljoen huishoudens onder het woningtekort, volgens de berekening van de Fundação João Pinheiro. De huren stijgen sneller dan de inflatie: 9,13% in de 12 maanden tot september 2026, tegen 4,58%. In Rio stegen ze met 14,80%.')],
+     [T('Em 2024, cerca de 5,77 milhões de domicílios estavam em déficit habitacional no Brasil, pela medida da Fundação João Pinheiro.',
+        'In 2024 about 5.77 million households in Brazil were in housing deficit, by the Fundação João Pinheiro measure.',
+        'In 2024 bedroeg het woningtekort in Brazilië ongeveer 5,77 miljoen huishoudens, volgens de berekening van de Fundação João Pinheiro.'),
+      S('https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/',
+        T('Fundação João Pinheiro, déficit habitacional de 2024', 'Fundação João Pinheiro, 2024 housing deficit', 'Fundação João Pinheiro, woningtekort 2024')),
+      T('Nos 12 meses até setembro de 2026, os preços pedidos para novos aluguéis subiram 9,13% nas 36 cidades que o índice FipeZAP acompanha, contra 4,58% de inflação. No Rio, a alta foi de 14,80%.',
+        'In the 12 months to September 2026, asking rents for new rentals rose 9.13% across the 36 cities the FipeZAP index tracks, against 4.58% inflation. In Rio they rose 14.80%.',
+        'In de 12 maanden tot september 2026 steeg de gevraagde huur bij nieuwe verhuur met 9,13% in de 36 steden die de FipeZAP-index volgt, tegenover 4,58% inflatie. In Rio was de stijging 14,80%.'),
+      S('https://diariodocomercio.com.br/economia/aluguel-sobe-dobro-inflacao-2026/',
+        T('Índice FipeZAP, via Diário do Comércio', 'FipeZAP index, via Diário do Comércio', 'FipeZAP-index, via Diário do Comércio'),
+        T('Ele acompanha os preços pedidos nos anúncios.', 'It follows asking prices in listings.', 'Hij volgt vraagprijzen in advertenties.'))],
      [('why.html', T('Leia os números', 'Read the numbers', 'Lees de cijfers'))]),
     ('tour-tenant', T('Um apartamento para começar', 'A flat to start with', 'Een appartement om mee te beginnen'), None, None,
      [T('Uma família aluga um apartamento num prédio que a Olympus, a construtora do Rafael, construiu em Guadalupe. Estamos avaliando um contrato de aluguel com compra, com aluguel menor. Nada está combinado ainda.',
@@ -164,32 +187,37 @@ STEPS = [
     # Owner only. HOW-04 (John); Q14 plot search; Superlogica default index, Rio state, Jul 2026 [read].
     ('tour-owner', T('Você tem um imóvel ou um terreno?', 'Do you have a house or land?', 'Heb je een huis of grond?'), None,
      (T('Depois, vamos olhar imóveis de outras pessoas que possam se juntar à nossa missão e visão.', 'Then we’ll look at secondary properties that can join our mission and vision.', 'Daarna kijken we naar woningen van anderen die zich bij onze missie en visie kunnen aansluiten.'), JOHN),
-     [T('Agora, o Rafael procura um terreno de 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz. Mais adiante, quem tem uma casa poderá vendê-la a uma família pelo aluguel com compra, quando a IMOBX puder oferecer garantias e seguro.',
-        'Right now, Rafael is looking for a plot of 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz. Later, people who own a house will be able to sell it to a family through rent-to-own, once IMOBX can offer guarantees and insurance.',
-        'Op dit moment zoekt Rafael een kavel van 200 tot 300 m² in Anchieta, Pavuna, Bangu of Santa Cruz. Later kunnen eigenaren hun huis via huurkoop aan een gezin verkopen, zodra IMOBX garanties en verzekering kan bieden.'),
-      T('O atraso no pagamento é a preocupação mais comum do proprietário. Entre os aluguéis acompanhados pelo índice da Superlógica no estado do Rio, 3,68% estavam com mais de 60 dias de atraso em julho de 2026. No plano da IMOBX, cada atraso segue passos escritos no contrato.',
-        'Late payment is the most common worry for owners who rent out a home. Among rents tracked by the Superlógica index in Rio state, 3.68% were more than 60 days late in July 2026. In IMOBX’s plan, each late payment follows steps written into the agreement.',
-        'Een betalingsachterstand is de grootste zorg van verhuurders. Van de huren die de Superlógica-index in de staat Rio volgt, was in juli 2026 3,68% meer dan 60 dagen te laat. In het plan van IMOBX volgt elke achterstand stappen die in de overeenkomst staan.')],
+     [T('Agora, o Rafael procura um terreno de 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz. Mais adiante, quem tem uma casa poderia vendê-la a uma família pelo aluguel com compra, se a IMOBX puder oferecer garantias e seguro.',
+        'Right now, Rafael is looking for a plot of 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz. Later, people who own a house could sell it to a family through rent-to-own, if IMOBX can offer guarantees and insurance.',
+        'Op dit moment zoekt Rafael een kavel van 200 tot 300 m² in Anchieta, Pavuna, Bangu of Santa Cruz. Later zouden eigenaren hun huis via huurkoop aan een gezin kunnen verkopen, als IMOBX garanties en verzekering kan bieden.'),
+      T('O atraso no pagamento preocupa muitos proprietários que alugam um imóvel. Entre os aluguéis acompanhados pelo índice da Superlógica no estado do Rio, 3,68% estavam com mais de 60 dias de atraso em julho de 2026. No plano da IMOBX, cada atraso segue passos escritos no contrato.',
+        'Late payment worries many owners who rent out a home. Among rents tracked by the Superlógica index in Rio state, 3.68% were more than 60 days late in July 2026. In IMOBX’s plan, each late payment follows steps written into the agreement.',
+        'Veel verhuurders maken zich zorgen over huurachterstand. Van de huren die de Superlógica-index in de staat Rio volgt, was in juli 2026 3,68% meer dan 60 dagen te laat. In het plan van IMOBX volgt elke achterstand stappen die in de overeenkomst staan.'),
+      S('https://diariodorio.com/economia/mercado-imobiliario/2026/08/29/inadimplencia-de-aluguel-no-rio-melhora-em-2026-e-atinge-minima-historica.html',
+        T('Índice de inadimplência de aluguel da Superlógica, via Diário do Rio', 'Superlógica rental default index, via Diário do Rio', 'Superlógica-index voor huurachterstand, via Diário do Rio'),
+        T('Cobre contratos administrados com o software da Superlógica, não todos os aluguéis do estado.', 'It covers contracts managed with Superlógica’s software, not every rental in the state.', 'De index dekt contracten die met de software van Superlógica worden beheerd, niet elke huur in de staat.'))],
      [('contact.html?role=property#apresentacao', T('Escreva para nós', 'Write to us', 'Schrijf ons'))]),
     # HOW-10 (Rafael); Q4 (Olympus may be named); Q10 (index price)
     ('tour-builder', T('Por que construir, em vez de comprar?', 'Why build, instead of buying?', 'Waarom bouwen, in plaats van kopen?'),
      ('img', 'assets/property-1.jpg', 823, 581, T('Modelo 3D dos dois lofts', '3D model of the two lofts', '3D-model van de twee lofts'),
-      T('Os lofts que a construtora do Rafael está construindo.', 'The lofts Rafael’s company is building.', 'De lofts die het bouwbedrijf van Rafael bouwt.')),
+      T('Um modelo 3D dos dois lofts que a construtora do Rafael tem contrato para construir.', 'A 3D model of the two lofts that Rafael’s company has a contract to build.', 'Een 3D-model van de twee lofts waarvoor het bouwbedrijf van Rafael een bouwcontract heeft.')),
      (T('Os imóveis nos grandes centros são muito caros, por isso que devemos construir, ao invés de comprar pronto.', 'Properties in large centres are very expensive, which is why we should build, instead of buying ready-made.', 'Woningen in grote steden zijn erg duur, daarom moeten we bouwen in plaats van kant-en-klaar kopen.'), RAFAEL),
-     [T('Rafael é engenheiro civil e tem a sua própria construtora, a Olympus. Os preços dela seguem o índice público de custo da construção do Rio (CUB). Depois do apartamento de Guadalupe, o plano é construir cinco apartamentos novos de cada vez.',
-        'Rafael is a civil engineer with his own construction company, Olympus. Its prices are tied to Rio’s public building-cost index (CUB). After the Guadalupe flat, the plan is to build five new flats at a time.',
-        'Rafael is civiel ingenieur met een eigen bouwbedrijf, Olympus. Zijn prijzen volgen de openbare bouwkostenindex van Rio (CUB). Na het appartement in Guadalupe is het plan telkens vijf nieuwe appartementen te bouwen.')],
-     [('costs-and-funding.html', T('O que custa uma casa', 'What a house costs', 'Wat een huis kost'))]),
+     [T('Rafael é engenheiro civil e tem a sua própria construtora, a Olympus. Depois do apartamento de Guadalupe, o plano é construir cinco apartamentos novos de cada vez.',
+        'Rafael is a civil engineer with his own construction company, Olympus. After the Guadalupe flat, the plan is to build five new flats at a time.',
+        'Rafael is civiel ingenieur met een eigen bouwbedrijf, Olympus. Na het appartement in Guadalupe is het plan telkens vijf nieuwe appartementen te bouwen.')],
+     [('costs-and-funding.html', T('O que custa um apartamento', 'What a flat costs', 'Wat een appartement kost'))]),
     # Professional only. ASK-03 (Rafael, his PT original); CUB-RJ R8-N Sep 2026 [read]; register Q5.
     ('tour-work', T('Trabalhar com a IMOBX', 'Working with IMOBX', 'Werken met IMOBX'), None,
      (T('Vou fechar parcerias com colegas de construção e fornecedores também.', 'I will form partnerships with construction colleagues and suppliers as well.', 'Ik ga ook samenwerken met collega’s uit de bouw en met leveranciers.'), RAFAEL),
-     [T('Os preços da obra seguem o índice público de custo da construção do Rio, o CUB: R$2.476 por m² no padrão R8-N em setembro de 2026. No nosso plano, cada pagamento é aprovado por uma pessoa e conferido por outra antes de ser pago.',
-        'Building prices follow Rio’s public building-cost index, the CUB: R$2,476 per m² for the R8-N standard in September 2026. In our plan, each payment is approved by one person and checked by another before it is paid.',
-        'Bouwprijzen volgen de openbare bouwkostenindex van Rio, de CUB: R$2.476 per m² voor de R8-N-standaard in september 2026. In ons plan wordt elke betaling door één persoon goedgekeurd en door een ander gecontroleerd voordat ze wordt betaald.'),
+     [T('O CUB, o índice público de custo da construção do Rio, era de R$2.476 por m² no padrão R8-N em setembro de 2026. A estimativa do Rafael parte desse índice e soma 35% para despesas gerais e para a margem da construtora dele.',
+        'Rio’s public building-cost index, the CUB, was R$2,476 per m² for the R8-N standard in September 2026. Rafael’s estimate starts from it and adds 35% for overheads and his company’s margin.',
+        'De CUB, de openbare bouwkostenindex van Rio, was in september 2026 R$2.476 per m² voor de R8-N-standaard. De schatting van Rafael gaat van die index uit en telt er 35% bij voor algemene kosten en de marge van zijn bedrijf.'),
+      S('https://www.sinduscon-rio.com.br/',
+        T('CUB-RJ: o custo por m², setembro de 2026 (Sinduscon-Rio)', 'CUB-RJ: the cost per m², September 2026 (Sinduscon-Rio)', 'CUB-RJ: de kosten per m², september 2026 (Sinduscon-Rio)')),
       T('Buscamos um advogado independente, um contador e um engenheiro independente para trabalhar com a gente nos primeiros apartamentos.',
         'We are looking for an independent lawyer, an accountant and an independent engineer to work with us on the first flats.',
         'We zoeken een onafhankelijke advocaat, een boekhouder en een onafhankelijke ingenieur om met ons aan de eerste appartementen te werken.')],
-     [('costs-and-funding.html', T('O que custa uma casa', 'What a house costs', 'Wat een huis kost'))]),
+     [('costs-and-funding.html', T('O que custa um apartamento', 'What a flat costs', 'Wat een appartement kost'))]),
     # VIS-03 (John); the village as Rafael planned it (roadmap)
     ('tour-village', T('A vila que queremos', 'The village we want', 'Het dorp dat we willen'),
      ('img', 'assets/homepage.jpg', 1024, 765, T('Ilustração conceitual da vila que imaginamos', 'Concept illustration of the village we imagine', 'Conceptillustratie van het dorp dat we ons voorstellen'),
@@ -203,20 +231,20 @@ STEPS = [
     ('tour-courtyard', T('Quem decide?', 'Who decides?', 'Wie beslist?'),
      ('svg', 'courtyard', T('À esquerda: um membro, um voto. À direita: o contrato da família, que só muda com a família e a IMOBX de acordo.', 'Left: one member, one vote. Right: the family’s agreement, which changes only when the family and IMOBX agree.', 'Links: één lid, één stem. Rechts: de overeenkomst van het gezin, die alleen verandert als gezin en IMOBX akkoord zijn.')),
      (T('Não dá para chegar à autossuficiência ou a comunidades integradas sem uma boa organização por trás.', 'You cannot reach self-sufficiency or integrated communities without proper organisation backing it.', 'Je bereikt geen zelfvoorziening of hechte gemeenschappen zonder een goede organisatie erachter.'), JOHN),
-     [T('Planejamos fundar a IMOBX como uma cooperativa habitacional: os membros são donos dela e a administram juntos, com um voto cada. Nenhuma votação pode mudar o contrato de moradia de uma família: ele só muda quando a família e a IMOBX concordam, dentro da lei brasileira.',
-        'We plan to found IMOBX as a housing cooperative: its members own it and run it together, with one vote each. No vote can change a family’s housing agreement: it changes only when the family and IMOBX both agree, under Brazilian law.',
-        'We willen IMOBX oprichten als wooncoöperatie: de leden bezitten en besturen haar samen, met elk één stem. Geen stemming kan de woonovereenkomst van een gezin veranderen: die verandert alleen als het gezin en IMOBX het allebei eens zijn, binnen de Braziliaanse wet.')],
+     [T('Planejamos fundar a IMOBX como uma cooperativa habitacional: os membros são donos dela e a administram juntos, com um voto cada. Nenhuma votação pode mudar o contrato de moradia de uma família: ele só muda quando a família e a IMOBX concordam.',
+        'We plan to found IMOBX as a housing cooperative: its members own it and run it together, with one vote each. No vote can change a family’s housing agreement: it changes only when the family and IMOBX both agree.',
+        'We willen IMOBX oprichten als wooncoöperatie: de leden bezitten en besturen haar samen, met elk één stem. Geen stemming kan de woonovereenkomst van een gezin veranderen: die verandert alleen als het gezin en IMOBX het allebei eens zijn.')],
      [('governance.html#cooperative', T('Por que uma cooperativa', 'Why a cooperative', 'Waarom een coöperatie'))]),
     # Owner-approved ledger lead (28 Oct)
     ('tour-books', T('Para onde vão os recursos dos vizinhos?', 'Where does the neighbours’ funding go?', 'Waar gaat de financiering van de buren heen?'),
-     ('svg', 'repair', T('1 O pedido · 2 aprovado e conferido · 3 pago e publicado no livro aberto.', '1 The request · 2 approved and checked · 3 paid and published in the open book.', '1 Het verzoek · 2 goedgekeurd en gecontroleerd · 3 betaald en gepubliceerd in het open boek.')), None,
+     ('svg', 'repair', T('1 O pedido · 2 aprovado e conferido · 3 pago e anotado.', '1 The request · 2 approved and checked · 3 paid and written down.', '1 Het verzoek · 2 goedgekeurd en gecontroleerd · 3 betaald en genoteerd.')), None,
      [T('Quando vizinhos juntam recursos para construir casas, a primeira pergunta é sempre: para onde vai isso? A IMOBX quer que a resposta fique aberta a todos.',
         'When neighbours pool funding for houses, the first question is always: where does it go? IMOBX wants the answer open to everyone.',
         'Als buren samen financiering inleggen voor huizen, is de eerste vraag altijd: waar gaat het heen? IMOBX wil dat het antwoord voor iedereen open ligt.'),
-      T('Veja um reparo. Uma pessoa aprova o serviço e outra confere. Só então ele é pago. No nosso plano, cada pagamento entra num livro de contas aberto com o nome de quem aprovou. Os contratos e os dados pessoais ficam privados.',
-        'Take a repair. One person approves the work and another checks it. Only then is it paid. In our plan, each payment goes into an open book with the name of who approved it. Contracts and personal data stay private.',
-        'Neem een reparatie. Eén persoon keurt het werk goed en een ander controleert het. Pas dan wordt het betaald. In ons plan komt elke betaling in een open boek met de naam van wie die goedkeurde. Contracten en persoonsgegevens blijven privé.')],
-     [('distributed-ledger.html', T('Como funcionam as contas abertas', 'How the open books work', 'Hoe de open boeken werken'))]),
+      T('Veja um reparo. No plano, uma pessoa aprova o serviço, outra confere, e só então ele é pago. Cada pagamento seria registrado com o nome de quem aprovou. Contas bancárias e contratos assinados vêm primeiro, e depois o registro distribuído pode ficar aberto para qualquer pessoa ler. Os contratos e os dados pessoais ficam privados.',
+        'Take a repair. In the plan, one person approves the work and another checks it, and only then is it paid. Each payment would be recorded with the name of who approved it. Bank accounts and signed agreements come first, and the ledger may follow, open for anyone to read. Contracts and personal data stay private.',
+        'Neem een reparatie. In het plan keurt één persoon het werk goed en controleert een ander het, en pas dan wordt het betaald. Elke betaling zou worden vastgelegd met de naam van wie die goedkeurde. Eerst komen bankrekeningen en getekende overeenkomsten, en daarna kan het register voor iedereen leesbaar worden. Contracten en persoonsgegevens blijven privé.')],
+     [('distributed-ledger.html', T('Como o registro distribuído funcionaria', 'How the ledger would work', 'Hoe de distributed ledger zou werken'))]),
     # TOKEN_POSITION (approved lines, 41c)
     ('tour-token', T('Para os curiosos: o token', 'For the curious: the token', 'Voor de nieuwsgierigen: de token'),
      ('svg', 'token', T('1 Alguém negocia o token · 2 a negociação paga uma taxa · 3 a taxa paga trabalho e novas casas · 4 o projeto cresce com o que ele mesmo gera, e o ciclo recomeça.', '1 Someone trades the token · 2 the trade pays a fee · 3 the fee pays for work and new houses · 4 the project grows from what it earns, and the cycle starts again.', '1 Iemand verhandelt de token · 2 de transactie betaalt een vergoeding · 3 die betaalt werk en nieuwe huizen · 4 het project groeit met wat het zelf verdient, en de cirkel begint opnieuw.')), None,
@@ -225,13 +253,13 @@ STEPS = [
         'Later wil IMOBX ook een self-compounding token uitgeven die de gemeenschap financiert. Een token hebben is vrijwillig, en gezinnen hebben het niet nodig. De nieuwe appartementen worden apart gefinancierd, te beginnen met een crowdfundingcampagne.')],
      [('self-compounding.html', T('Como o token funciona', 'How the token works', 'Hoe de token werkt'))]),
     # Funder (and professional). Funding order from the roadmap (owner, 9 Nov); SDG 11.1 measures [read].
-    ('tour-funding', T('Como as primeiras casas serão financiadas?', 'How will the first houses be funded?', 'Hoe worden de eerste huizen gefinancierd?'), None, None,
-     [T('Primeiro, uma campanha de financiamento coletivo em reais, assim que a cooperativa estiver registrada. Depois, financiamento ligado ao Objetivo de Desenvolvimento Sustentável 11 da ONU, sobre cidades e comunidades sustentáveis. Quem assumir a nossa nova vaga de captação vai pesquisar os outros caminhos.',
-        'First, a crowdfunding campaign in reais, once the cooperative is registered. Then, funding linked to UN Sustainable Development Goal 11, on sustainable cities and communities. The person in our new fundraising role will research the other routes.',
-        'Eerst een crowdfundingcampagne in reais, zodra de coöperatie is ingeschreven. Daarna financiering via Duurzame Ontwikkelingsdoelstelling 11 van de VN, over duurzame steden en gemeenschappen. Wie onze nieuwe functie voor fondsenwerving invult, onderzoekt de andere routes.'),
-      T('Os cinco primeiros apartamentos podem mostrar o que muda: quem passou a morar ali, o aluguel antes e depois, e a segurança de ficar na casa.',
-        'The first five flats can show what changes: who moved in, their rent before and after, and how secure their right to stay is.',
-        'De eerste vijf appartementen kunnen laten zien wat er verandert: wie er kwam wonen, de huur ervoor en erna, en hoe zeker hun recht op wonen is.')],
+    ('tour-funding', T('Como os primeiros apartamentos serão financiados?', 'How will the first flats be funded?', 'Hoe worden de eerste appartementen gefinancierd?'), None, None,
+     [T('Os fundadores pagam os primeiros custos por conta própria. A obra começa a ser financiada por uma campanha de financiamento coletivo em reais, assim que a cooperativa estiver registrada. Depois vem financiamento ligado ao Objetivo de Desenvolvimento Sustentável 11 da ONU, sobre cidades e comunidades sustentáveis. Procuramos alguém para uma nova função de captação de recursos, para pesquisar os outros caminhos.',
+        'The founders pay the first costs themselves. The building is funded first by a crowdfunding campaign in reais, once the cooperative is registered. Funding linked to UN Sustainable Development Goal 11, on sustainable cities and communities, follows. We are looking for someone in a new fundraising role to research the other routes.',
+        'De oprichters betalen de eerste kosten zelf. De bouw wordt eerst gefinancierd met een crowdfundingcampagne in reais, zodra de coöperatie is ingeschreven. Daarna volgt financiering via Duurzame Ontwikkelingsdoelstelling 11 van de VN, over duurzame steden en gemeenschappen. We zoeken iemand voor een nieuwe functie in fondsenwerving om de andere routes te onderzoeken.'),
+      T('No nosso plano, quem financia poderia acompanhar o que os cinco primeiros apartamentos mudam, em relatórios publicados. Os relatórios mostrariam quantas famílias se mudaram, o aluguel antes e depois, e a segurança do direito de cada família de continuar morando ali. Nomes e contratos ficam privados.',
+        'In our plan, funders could follow what the first five flats change in published reports. The reports would show how many families moved in, the rent before and after, and how secure each family’s right to stay is. Names and contracts stay private.',
+        'In ons plan zouden financiers in gepubliceerde rapporten kunnen volgen wat de eerste vijf appartementen veranderen. De rapporten zouden laten zien hoeveel gezinnen er kwamen wonen, de huur ervoor en erna, en hoe zeker het recht van elk gezin is om te blijven wonen. Namen en contracten blijven privé.')],
      [('project-development.html#funding', T('O plano de financiamento', 'The funding plan', 'Het financieringsplan')), ('costs-and-funding.html', T('Custos e recursos', 'Costs and funding', 'Kosten en financiering'))]),
     # HOW-02 (John), HOW-12 (John), WHA-15 (Rafael)
     ('tour-grow', T('Como a IMOBX cresce?', 'How does IMOBX grow?', 'Hoe groeit IMOBX?'), None,
@@ -300,7 +328,7 @@ def build_tour(root, page, version):
     for ident, heading, visual, quote, paragraphs, links in STEPS:
         roles = f' data-tour-for="{FOR[ident]}"' if ident in FOR else ''
         body += f'<section data-tour-step id="{ident}"{roles}>' + _text('h2', heading) + _visual(visual) + _quote(quote)
-        body += ''.join(_text('p', x) for x in paragraphs)
+        body += ''.join(_paragraph(x) for x in paragraphs)
         if links == 'roles':
             body += '<ul class="tour-roles">' + ''.join(
                 '<li>' + _text('a', label, f'href="contact.html?role={rid}#apresentacao" data-tour-role="{rid}" class="tour-role"') + '</li>' for rid, label in ROLES) + '</ul>'

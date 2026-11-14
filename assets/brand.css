@@ -595,3 +595,66 @@ html .option-b :is(a,button):focus-visible{outline:3px solid #fff;outline-offset
 @media (min-width:1001px) and (max-width:1060px){html[lang="pt-BR"] .site-links{gap:4px 3px;font-size:12px}}
 /* Portuguese header, 1001-1140 px (10 Nov, reviewer): the long labels ran under the language switch; smaller type in this band only */
 @media (min-width:1001px) and (max-width:1140px){html[lang="pt-BR"] .site-nav .site-links a,html[lang="pt-BR"] .site-nav .site-links button{font-size:12px;letter-spacing:0}}
+
+/* About in the main menu (13 Nov): a plain link in a row of teal buttons. It takes the same look (white on teal, orange on hover),
+   a 44 px tap width on desktop, and the row of its neighbours in the phone menu. In the narrowest desktop band (1001-1140 px)
+   the header is a little wider and the labels sit closer, so Portuguese and Dutch stay on one line each. */
+html .option-b .housing-links .nav-item>a{background:#276578;color:#fff;transition:background-color .15s ease}
+html .option-b .housing-links .nav-item>a:hover{background:#A84B00;color:#fff}
+@media (min-width:1001px){
+  html .option-b .housing-links .nav-item>a{min-width:44px;justify-content:center;padding:0 9px}
+}
+@media (min-width:1001px) and (max-width:1140px){
+  .option-b .site-nav.wrap{width:min(1200px,96%)}
+  .option-b .housing-links{gap:0}
+  html .option-b .housing-links .sub-toggle,html .option-b .housing-links .nav-item>a{padding:0 4px}
+}
+@media (max-width:1000px){
+  .js-menu .option-b .site-nav.menu-open .housing-links .nav-item>a{padding:12px 11px;min-height:44px}
+}
+
+/* 404 page (13 Nov): shown for any missing address, so a few words, a way home and the main pages as 44 px links */
+.not-found{max-width:40rem;padding-block:24px 72px}
+.not-found-logo{display:inline-block}
+.not-found h1{margin:16px 0 12px;font-size:clamp(32px,3.4vw,40px)}
+.not-found-links{list-style:none;margin:24px 0 0;padding:0}
+.not-found-links a{display:flex;align-items:center;min-height:44px;color:#A84B00}
+
+/* Tap targets (13 Nov, audit stage 1): a link that stands alone on its line, the jump lists and the document downloads are
+   44 px high where there is room, and never under 24 px; links inside a sentence keep the line of the sentence */
+main .link-line>a,main section>a[href],main.archive-gateway>a[href],.on-this-page li a,.guide-jump a,.archive-sections li>a,.idea-source a,.card-link a,.iceberg-onward a{display:inline-flex;align-items:center;min-height:44px}
+.archive-downloads{display:flex;flex-wrap:wrap;align-items:center;gap:0 8px}
+.archive-downloads a{display:inline-flex;align-items:center;min-height:44px}
+.source-note a{display:inline;padding-block:5px}
+.contact-routes .contact-route input{width:24px;height:24px;margin-top:2px}
+.archive-downloads a{min-width:44px;justify-content:center}
+.site-footer .footer-column a{min-width:44px}
+.tour-links a{display:inline-flex;align-items:center;min-height:44px}
+.on-this-page ol{gap:0}
+
+/* Progress pictures (13 Nov): from 700 px one wide picture, then two; three in a row from 1100 px. No picture stands alone on a row and none is narrower than about 300 px; one column below 700 px */
+@media(max-width:699px){#fotos-andamento .construction-photo-grid{grid-template-columns:1fr}}
+@media(min-width:700px){#fotos-andamento .construction-photo-grid figure:first-child{grid-column:1/-1}}
+@media(min-width:1100px){#fotos-andamento .construction-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}#fotos-andamento .construction-photo-grid figure:first-child{grid-column:auto}}
+
+/* Design pass (13 Nov, critique round 1) */
+/* Header from 401 to 1000 px: the logo block is 64 px, so the teal bar is 72 px (as on desktop) and the grid adds no height under it */
+@media(min-width:401px) and (max-width:1000px){
+  html .option-b.site-header::before{height:72px}
+  html .option-b .site-nav{min-height:0;padding-block:8px 0}
+}
+/* The step titles on the path are links on their own line: 44 px high */
+.route-title a{display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+/* On this page: from 700 px the links wrap into columns instead of one tall column of 44 px rows */
+@media(min-width:700px){.on-this-page ol{grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:0 24px}}
+
+/* Design pass (14 Nov, critique round 2) */
+/* Document pages: the section headings already carry their own numbers (1. Who the pilot is for), so the list shows each number once */
+.archive-sections.own-numbers{list-style:none;padding-left:0}
+/* The opened phone menu: the Take part block is a flex row, so its label sits in the middle of the orange block, not on its top edge */
+@media(max-width:700px){html.js-menu .option-b .site-nav.menu-open .option-b-mobile-action .option-b-action{display:flex;align-items:center;justify-content:flex-start}}
+/* Download rows: the label starts at the left edge of its 44 px box, so it lines up with the text above; the media-kit logo link is 44 px high */
+.archive-downloads a{justify-content:flex-start}
+.media-logo figcaption a{display:inline-flex;align-items:center;min-height:44px}
+/* Lofts and site, 700 to 1099 px: the first progress picture spanned both columns (630 to 990 px), two to three times the others; it stops at 720 px and is centred */
+@media(min-width:700px) and (max-width:1099px){#fotos-andamento .construction-photo-grid figure:first-child{width:100%;max-width:720px;justify-self:center}}

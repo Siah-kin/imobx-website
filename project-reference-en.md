@@ -49,3 +49,19 @@ Arc’s own description of its network and payment tools.
 [Fundação João Pinheiro: 2024 housing deficit](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
 About 5.77 million households are in the 2024 housing deficit by the FJP measure, which also counts families paying too much of their income in rent.
+
+[FipeZAP index, via Diário do Comércio](https://diariodocomercio.com.br/economia/aluguel-sobe-dobro-inflacao-2026/)
+
+In the 12 months to September 2026, asking rents for new rentals rose 9.13% across the 36 cities the FipeZAP index tracks, and 14.80% in Rio. Inflation over the same 12 months was 4.58% (IPCA). The index follows asking prices in listings of ready flats, so rises in existing contracts are left out.
+
+[IBGE, 2022 Census, via Agência Pública](https://apublica.org/2023/06/censo-2022-brasil-tem-11-milhoes-de-casas-e-apartamentos-vagos/)
+
+The 2022 Census counted about 11.4 million empty houses and flats, but an empty house or flat is not always where a family needs it, or fit to live in.
+
+[Agência Brasil, 9 December 2025 (read at O Povo)](https://www.opovo.com.br/noticias/economia/2025/12/09/caixa-libera-contratacao-de-mais-de-um-financiamento-imobiliario.html)
+
+A Caixa example: the bank finances up to 80% of the price under the SAC repayment schedule and up to 70% under the Price table. The term is up to 420 months, or 35 years. By our sum, the rest of the price, 20 to 30%, is the down payment.
+
+[Superlógica rental default index, via Diário do Rio](https://diariodorio.com/economia/mercado-imobiliario/2026/08/29/inadimplencia-de-aluguel-no-rio-melhora-em-2026-e-atinge-minima-historica.html)
+
+In Rio state, 3.68% of the rents the index tracks were more than 60 days late in July 2026. It covers contracts managed with Superlógica’s software, not every rental in the state.

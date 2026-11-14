@@ -2,7 +2,9 @@
 // Three languages (owner, 26 Oct 2026): Portuguese first, English, Dutch. A string without Dutch falls back to English.
 const LANGS = { pt: 'pt-BR', en: 'en', nl: 'nl' };
 const cap = language => language.charAt(0).toUpperCase() + language.slice(1);
-function setLanguage(language) {
+// A saved choice is stored only when the visitor presses a language button (owner, 13 Nov 2026: the site opens in the
+// browser's language, and a saved choice always wins). Opening a page never saves anything.
+function setLanguage(language, remember) {
   if (!LANGS[language]) language = 'pt';
   document.documentElement.lang = LANGS[language];
   document.querySelectorAll('[data-pt][data-en]').forEach(element => {
@@ -28,18 +30,24 @@ function setLanguage(language) {
       Array.from(row.children).forEach((cell, index) => { if (names[index]) cell.setAttribute('data-label', names[index]); });
     });
   });
-  try { localStorage.setItem('imobx-language', language); } catch (_) {}
+  if (remember) { try { localStorage.setItem('imobx-language', language); } catch (_) {} }
   document.dispatchEvent(new Event('imobx:languagechange'));
 }
 document.querySelectorAll('[data-language]').forEach(button => {
-  button.addEventListener('click', () => setLanguage(button.dataset.language));
+  button.addEventListener('click', () => setLanguage(button.dataset.language, true));
 });
-let preferredLanguage = document.documentElement.lang.startsWith('pt') ? 'pt' : (document.documentElement.lang.startsWith('nl') ? 'nl' : 'en');
+// The site opens in the visitor's browser language: Portuguese, English or Dutch, and Portuguese for any other.
+function browserLanguage() {
+  const tag = String((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+  const code = tag.slice(0, 2);
+  return LANGS[code] ? code : 'pt';
+}
+let preferredLanguage = browserLanguage();
 try {
   const savedLanguage = localStorage.getItem('imobx-language');
   if (LANGS[savedLanguage]) preferredLanguage = savedLanguage;
 } catch (_) {}
-setLanguage(preferredLanguage);
+setLanguage(preferredLanguage, false);
 
 function revealAnchor() {
   if (!location.hash) return;
@@ -180,11 +188,20 @@ initImageViewer();
     button.dataset.pt = open ? 'Fechar' : 'Menu'; button.dataset.en = open ? 'Close' : 'Menu'; button.dataset.nl = open ? 'Sluiten' : 'Menu';
     button.textContent = open ? ({ pt: 'Fechar', en: 'Close', nl: 'Sluiten' }[lang] || 'Close') : 'Menu';
   });
+  function closePanel() {
+    nav.classList.remove('menu-open'); button.setAttribute('aria-expanded', 'false');
+    button.dataset.pt = 'Menu'; button.dataset.en = 'Menu'; button.dataset.nl = 'Menu'; button.textContent = 'Menu';
+  }
   nav.querySelectorAll('.site-links a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      nav.classList.remove('menu-open'); button.setAttribute('aria-expanded', 'false');
-      button.dataset.pt = 'Menu'; button.dataset.en = 'Menu'; button.dataset.nl = 'Menu'; button.textContent = 'Menu';
-    });
+    link.addEventListener('click', closePanel);
+  });
+  // Escape closes the opened panel and puts focus back on the Menu button. While a section list inside the panel is
+  // open, that Escape belongs to the list (the next one closes the panel).
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape' || !nav.classList.contains('menu-open')) return;
+    if (nav.querySelector('.sub-toggle[aria-expanded="true"]')) return;
+    closePanel();
+    button.focus();
   });
 })();
 
@@ -270,7 +287,7 @@ initImageViewer();
           request: ['Reparos e reclamações', 'Repairs and complaints', 'Reparaties en klachten'],
           records: ['Quem pode ler o quê', 'Who can read what', 'Wie wat kan lezen'],
           token: ['Token da IMOBX', 'IMOBX token', 'IMOBX-token'],
-          open: ['Opções para a blockchain', 'Blockchain options', 'Blockchainopties']
+          open: ['Opções para o registro', 'Ledger options', 'Opties voor het register']
         },
         'self-compounding.html': {
           use: ['Para que serve', 'Purpose', 'Waarvoor dient het'],

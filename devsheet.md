@@ -111,7 +111,7 @@ Each fee would be split three ways. 45% would pay wages for the people hired to 
 
 Trading is usually busiest around a launch and much quieter afterwards, so the housing budget has to work through long periods of little or no trading income. The accounts will show the fees actually received and how each was used.
 
-### Funding available for building
+### Funding planned for building
 
 Funds put into the trading pool stay there. The accounts distinguish funding available for bills, amounts reserved for families and repairs, and other commitments.
 

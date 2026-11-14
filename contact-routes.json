@@ -199,12 +199,12 @@
         "I want to talk about funding"
       ],
       "description": [
-        "Financiamento coletivo, editais, doações ou investimento.",
-        "Crowdfunding, grants, donations or investment."
+        "Financiamento coletivo, editais, doações ou, se a lei permitir, investimento.",
+        "Crowdfunding, grants, donations or, if the law allows it, investment."
       ],
       "context": [
-        "Diga se considera financiamento coletivo, edital, doação ou investimento e quais documentos precisa analisar. Construção, manutenção e divulgação têm finalidades e orçamentos distintos.",
-        "Say whether you are considering crowdfunding, a grant, a donation or investment and what documents you need to review. Construction, maintenance and outreach have distinct purposes and budgets."
+        "Diga o que você considera: financiamento coletivo, edital, doação ou, se a lei permitir, investimento. Diga também quais documentos precisa analisar. Construção, manutenção e divulgação têm finalidades e orçamentos distintos.",
+        "Tell us which you are considering: crowdfunding, a grant, a donation or, if the law allows it, investment. Say which documents you need to review. Construction, maintenance and outreach have distinct purposes and budgets."
       ],
       "fields": [
         {

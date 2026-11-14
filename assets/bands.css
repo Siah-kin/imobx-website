@@ -184,3 +184,8 @@
 
 /* pages that end in a tinted band meet the footer with no white strip between them (design review, 10 Nov) */
 .band-page+footer{margin-top:0}
+
+/* Costs and funding opening (13 Nov): the estimate, then who pays first, read as one lead */
+.band-page>.guide-lead.lead-first{padding-bottom:6px}
+.band-page>p.lead-follow:not(.guide-lead){font-size:18px;line-height:1.55;padding-top:6px;padding-bottom:36px;padding-right:calc(24px + max(0px,100% - 48px - 560px))}
+@media (max-width:600px){.band-page>p.lead-follow:not(.guide-lead){padding-right:16px}}

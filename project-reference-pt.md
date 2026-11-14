@@ -49,3 +49,19 @@ A descrição da própria Arc sobre a rede e as ferramentas de pagamento.
 [Fundação João Pinheiro: déficit habitacional de 2024](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
 Cerca de 5,77 milhões de domicílios estão no déficit habitacional de 2024 pelo critério da FJP, que também conta famílias que gastam parte excessiva da renda com aluguel.
+
+[Índice FipeZAP, via Diário do Comércio](https://diariodocomercio.com.br/economia/aluguel-sobe-dobro-inflacao-2026/)
+
+Nos 12 meses até setembro de 2026, os preços pedidos para novos aluguéis subiram 9,13% nas 36 cidades que o índice FipeZAP acompanha, e 14,80% no Rio. A inflação nos mesmos 12 meses foi de 4,58% (IPCA). O índice acompanha preços anunciados em imóveis prontos, então os aumentos em contratos já existentes ficam de fora.
+
+[IBGE, Censo 2022, via Agência Pública](https://apublica.org/2023/06/censo-2022-brasil-tem-11-milhoes-de-casas-e-apartamentos-vagos/)
+
+O Censo de 2022 contou cerca de 11,4 milhões de casas e apartamentos vazios, mas um imóvel vazio nem sempre está onde a família precisa, nem em condições de morar.
+
+[Agência Brasil, 9 de dezembro de 2025 (lido no O Povo)](https://www.opovo.com.br/noticias/economia/2025/12/09/caixa-libera-contratacao-de-mais-de-um-financiamento-imobiliario.html)
+
+Um exemplo da Caixa: o banco financia até 80% do valor do imóvel no sistema SAC e até 70% na Tabela Price. O prazo chega a 420 meses, ou 35 anos. Pela nossa conta, o resto do preço, de 20 a 30%, é a entrada.
+
+[Índice de inadimplência de aluguel da Superlógica, via Diário do Rio](https://diariodorio.com/economia/mercado-imobiliario/2026/08/29/inadimplencia-de-aluguel-no-rio-melhora-em-2026-e-atinge-minima-historica.html)
+
+No estado do Rio, 3,68% dos aluguéis acompanhados pelo índice tinham mais de 60 dias de atraso em julho de 2026. O índice cobre contratos administrados com o software da Superlógica, não todos os aluguéis do estado.

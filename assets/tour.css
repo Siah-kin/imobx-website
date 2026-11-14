@@ -143,3 +143,6 @@
 .tour-invitation:focus{outline:none}
 @media(max-width:480px){.tour-dialog-top{gap:8px}.tour-dialog .tour-close{padding-left:8px;padding-right:8px}}
 @media(max-width:420px){.tour-dialog-top{flex-wrap:wrap;row-gap:6px}.tour-dialog .tour-progress{order:3;flex-basis:100%;margin:0}}
+
+/* Source notes after a figure (13 Nov): the link to the source sits right under the sentence it supports */
+.tour-page .source-note,.tour-dialog .source-note{margin:-4px 0 16px;font-size:15px;line-height:1.45;color:#526571}

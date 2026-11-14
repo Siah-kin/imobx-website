@@ -38,7 +38,7 @@ The village illustration, made with an image generator, and the loft drawings sh
 
 ## Project descriptions
 
-The [media kit](media-kit.html) provides short descriptions in Portuguese and English. The [project paper](whitepaper.html) explains the housing proposal, costs and current stage. These descriptions identify the project as being prepared, with its legal form and token rights still being decided.
+The [media kit](media-kit.html) provides short descriptions in Portuguese and English. The [project paper](whitepaper.html) explains the housing proposal, costs and current stage. These descriptions identify the project as being in preparation. IMOBX will be a housing cooperative and is not registered yet, and token rights are still being decided.
 
 ## Resources
 

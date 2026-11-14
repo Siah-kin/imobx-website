@@ -57,7 +57,7 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
 
 
 # The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
-SITE_UPDATED = '2026-11-12'
+SITE_UPDATED = '2026-11-13'
 
 
 def status_bar_text():
@@ -113,6 +113,8 @@ MENU = [
         ('governance.html', 'token-rules', 'Regras dos detentores', 'Rules for holders', 'Who decides about the token?'),  # no 'token' in the menu: it shows on the homepage
         ('governance.html', 'residents', 'Quando as famílias morarem nas casas', 'Once families live in the houses', 'Who decides once families live in the houses?'),
     ]),
+    # Owner, 13 Nov (decision 55): About is in the main menu, between the project pages and Resources. It has no section list.
+    ('about.html', 'Sobre', 'About', []),
     ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
         # Owner, 29 Oct: one Resources page, documents first, then ideas, people and sources.
         ('resources.html', 'documents', 'Documentos', 'Documents', 'Project documents'),
@@ -148,10 +150,10 @@ HEADING_INTROS = {
                                           'Anyone who funds or lives in an IMOBX neighbourhood will be able to follow it in our reports. Each one will show:'),
     },
     'distributed-ledger.html': {
-        'Who can read my information, and who can read IMOBX’s payments?': ('Seus vizinhos podem acompanhar o seu pedido de reparo. Uma reclamação só é lida por você e por quem a revisa. Qualquer pessoa pode ler o que a própria IMOBX paga.',
-                           'Your neighbours can follow your repair request. A complaint is read only by you and the people who review it. Anyone can read what IMOBX itself pays.'),
-        'How much would run on the blockchain?': ('Podemos começar com contas bancárias e passar mais para o registro assim que cada passo funcionar.',
-                                                  'We can start with bank accounts and move more onto the ledger once each step works.'),
+        'Who can read my information, and who can read IMOBX’s payments?': ('Seus vizinhos podem acompanhar o seu pedido de reparo. Uma reclamação só é lida por você e por quem a revisa. Se os pagamentos da IMOBX forem para o registro distribuído, qualquer pessoa poderá lê-los.',
+                           'Your neighbours can follow your repair request. A complaint is read only by you and the people who review it. If IMOBX’s payments go on the ledger, anyone can read them.'),
+        'How much would go on the ledger?': ('Começamos com contas bancárias e contratos assinados, e decidimos passo a passo quanto mais vai para o registro distribuído.',
+                                             'We start with bank accounts and signed agreements, and decide step by step how much more goes on the ledger.'),
     },
     'governance.html': {
         'What are we deciding now?': ('Antes de a primeira família se mudar, estas perguntas precisam de resposta. Você pode ajudar a decidir no grupo.',
@@ -203,12 +205,38 @@ def add_menu_anchors(root):
         path.write_text(text, encoding='utf-8')
 
 
+def add_link_lines(root):
+    """A link that stands alone on its line (a paragraph or list item that holds nothing else) gets the class link-line,
+    so the style sheet gives it a 44 px tap height (audit stage 1, item 7). Links inside a sentence are left alone."""
+    only_link = re.compile(r'<(p|li)((?:\s[^>]*)?)>((?:\s*<span id="[^"]*"></span>)*\s*<a\s[^>]*>(?:[^<]|<span[^>]*>[^<]*</span>)*</a>\s*[.,;:]?\s*)</\1>')
+
+    def mark(match):
+        tag, attrs, inner = match.groups()
+        if 'link-line' in attrs:
+            return match.group(0)
+        if re.search(r'\sclass="', attrs):
+            attrs = re.sub(r'\sclass="([^"]*)"', lambda m: f' class="{m.group(1)} link-line"', attrs, count=1)
+        else:
+            attrs += ' class="link-line"'
+        return f'<{tag}{attrs}>{inner}</{tag}>'
+
+    for path in sorted(Path(root).glob('*.html')):
+        text = path.read_text(encoding='utf-8')
+        start = text.find('<main')
+        end = text.find('</main>')
+        if start < 0 or end < 0:
+            continue
+        body = only_link.sub(mark, text[start:end])
+        if body != text[start:end]:
+            path.write_text(text[:start] + body + text[end:], encoding='utf-8')
+
+
 def site_header(lang='pt-BR', current=''):
     """One main menu; each label opens a short list: its page, then up to four sections."""
     portuguese = lang.startswith('pt')
     section = MENU_PARENT.get(current, current)  # the lofts page highlights Project development
     links = ''
-    for target, pt, en, entries in [item for item in MENU if item[0] in ('rent-to-own.html', 'costs-and-funding.html', 'project-development.html', 'resources.html')]:
+    for target, pt, en, entries in [item for item in MENU if item[0] in ('rent-to-own.html', 'costs-and-funding.html', 'project-development.html', 'about.html', 'resources.html')]:
         if not entries:
             active = ' aria-current="page"' if target == current else ''
             links += (f'<div class="nav-item"><a href="{target}" data-pt="{esc(pt)}" data-en="{esc(en)}"{active}>'
@@ -291,7 +319,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
 # numbers, no editable-text links. 'shelf_*' keys change the shelf only; the gateway pages still use 'pt', 'en' and
 # 'description_*'. A 'shelf_description_*' of None leaves the shelf card without a description.
 RESOURCE_CATALOG = [
-    {'id': 'media-kit', 'pt': 'Media kit IMOBX', 'en': 'IMOBX media kit', 'version': '0.2', 'shelf_title': False,
+    {'id': 'media-kit', 'pt': 'Media kit IMOBX', 'en': 'IMOBX media kit', 'version': '0.3', 'shelf_title': False,
      'description_pt': 'Logos para fundos claros e escuros, as cores e como usá-los.',
      'description_en': 'Logos for light and dark backgrounds, the colours, and how to use them.',
      'meta_pt': 'Guia em inglês', 'meta_en': 'Guide in English',
@@ -312,7 +340,7 @@ RESOURCE_CATALOG = [
      'archive': True, 'links': [('pitchdeck.pdf','PDF','PDF'),
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes')]},
     {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': VERSION,
-     'shelf_pt': 'Guia para construir as primeiras casas', 'shelf_en': 'Guide to building the first houses',
+     'shelf_pt': 'Guia para construir os primeiros apartamentos', 'shelf_en': 'Guide to building the first flats',
      'shelf_description_pt': 'Plantas das casas, como os moradores participam e as etapas de obra que propomos.',
      'shelf_description_en': 'House plans, how residents take part, and the building stages we propose.',
      'description_pt': 'Planos de moradia, participação dos moradores e etapas de desenvolvimento propostas.',
@@ -382,7 +410,7 @@ def resource_section(standalone=True):
     body = '<section id="documents"><span id="documentos"></span><span id="resources"></span><span id="recursos"></span>'
     body += translated('Documentos do projeto', 'Project documents', 'h2')
     body += translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p')
-    body += translated('Os documentos usam a estimativa do Rafael de setembro de 2026 para cinco apartamentos de cada vez. Os valores ainda precisam ser confirmados. A vila de cerca de 36 casas é uma etapa posterior, ainda sem orçamento.', 'The documents use Rafael’s September 2026 estimate for five flats at a time. The figures still need confirmation. The village of about 36 houses is a later stage with no budget yet.', 'p')
+    body += translated('Os documentos usam a estimativa do Rafael de setembro de 2026 para os cinco primeiros apartamentos. Ela ainda precisa ser confirmada. A vila de cerca de 36 casas é uma etapa posterior, ainda sem orçamento.', 'The documents use Rafael’s September 2026 estimate for the first five flats. It still needs confirmation. The village of about 36 houses is a later stage with no budget yet.', 'p')
     body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h3') for key in document_ids) + '</div><span id="resource-reference"></span><span id="title-reference"></span>'
     # The token's current description lives on the Self-compounding page (TOKEN_POSITION.md, 2 Nov 2026).
     body += ('<p>' + translated('Para o token da IMOBX, a sua taxa e os quatro V, leia a página',
@@ -473,7 +501,10 @@ def _moved(title, heading, default_hash):
     target = 'resources.html' + default_hash
     script = ('<script>(function(){var t="resources.html"+(location.hash||' + json.dumps(default_hash) + ');'
               'var a=document.getElementById("moved-link");if(a)a.href=t;location.replace(t);})();</script>')
-    return redirect_stub(title, heading, target, 'Open the current version').replace(
+    # Like the four renamed addresses: it asks search engines to leave the old address out and names the official one.
+    stub = redirect_stub(title, heading, target, 'Open the current version')
+    stub = stub.replace('</title>', '</title><meta name="robots" content="noindex"><link rel="canonical" href="https://imobx.org/resources.html">', 1)
+    return stub.replace(
         f'<meta http-equiv="refresh" content="0;url={target}">', f'<noscript><meta http-equiv="refresh" content="0;url={target}"></noscript>').replace('</body>', script + '</body>')
 
 
@@ -495,9 +526,11 @@ brand_section = ('<section id="brand-guide"><h2>Brand guide</h2>'
 (ROOT / 'media-kit.html').write_text(page('IMOBX | Media kit',
     '<main class="paper"><p><a href="media-kit.zip" download>Download media kit ZIP</a> · '
     '<a href="media-kit.md" download>Editable guide</a> · <a href="brand-colors.json" download>Brand colours (JSON)</a> · '
-    '<a href="#brand-guide">Brand guide</a></p>' + kit_html + brand_section + '</main>', version='0.2'))
+    '<a href="#brand-guide">Brand guide</a></p>' + kit_html + brand_section + '</main>', version='0.3'))
+# Like the other old addresses: it asks search engines to leave the old address out and names the official one.
 (ROOT / 'design.html').write_text(redirect_stub(
-    'IMOBX | Design guidelines', 'Design guidelines', 'media-kit.html#brand-guide', 'Open the current version'))
+    'IMOBX | Design guidelines', 'Design guidelines', 'media-kit.html#brand-guide', 'Open the current version').replace(
+    '</title>', '</title><meta name="robots" content="noindex"><link rel="canonical" href="https://imobx.org/media-kit.html">', 1))
 
 
 # The whitepaper, pilot guide and deck are English downloads. Their web addresses are download pages that keep every
@@ -519,7 +552,7 @@ for doc, doc_title in GATEWAYS:
 
 if PREVIEW_ONLY:
     from add_dutch import add_dutch  # the preview gets its Dutch too; a full build adds it again after the exports
-    add_menu_anchors(ROOT); add_heading_intros(ROOT)
+    add_menu_anchors(ROOT); add_heading_intros(ROOT); add_link_lines(ROOT)
     add_seo(ROOT)
     add_dutch(ROOT)
     print('Rendered local HTML for editorial and browser review. Existing exports are unchanged.')
@@ -692,7 +725,7 @@ for doc, doc_title in GATEWAYS:
     build_gateway(ROOT, page, translated, esc, catalog[doc], doc, doc_title, pages_from_pdf(ROOT, doc))
 # Dutch beside Portuguese and English (owner, 26 Oct 2026); the gate fails while any string lacks Dutch.
 from add_dutch import add_dutch
-add_menu_anchors(ROOT); add_heading_intros(ROOT)
+add_menu_anchors(ROOT); add_heading_intros(ROOT); add_link_lines(ROOT)
 add_seo(ROOT)
 add_dutch(ROOT)
 write_manifest(ROOT)
@@ -707,7 +740,7 @@ def archive(name, paths, introduction):
 
 logo_paths = ['assets/imobx-logo-light.png', 'assets/imobx-logo-dark.jpg', 'assets/imobx-logo-light-source.webp']
 archive('media-kit.zip', ['media-kit.md', 'brand-colors.json', 'DESIGN.md'] + logo_paths,
-        'IMOBX media kit v0.2 / 16 October 2026\nLogo artwork, colours, image sources and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
+        'IMOBX media kit v0.3 / 13 November 2026\nLogo artwork, colours, image sources and project descriptions.\nRead media-kit.md for the project status and available assets.\n')
 archive('imobx-documents.zip', ['whitepaper.pdf', 'whitepaper.md', 'pitchdeck.pdf', 'pitchdeck.pptx',
         'pitchdeck.md', 'pitchdeck.json', 'devsheet.pdf', 'devsheet.md', 'token-paper.pdf', 'token-paper.md', 'project-development.html', 'costs-and-funding.html', 'model-guide.json',
         'project-reference.json', 'project-reference-pt.md', 'project-reference-en.md', 'publication-manifest.json', 'contact-routes.json',

@@ -23,8 +23,16 @@ def build_about(root, page, tr, esc):
             'Creating a home is an existential quest for every human, wherever you are.'), 'p', 'class="about-lead"')
     b += linked(('Em 2024,', 'In 2024,'),
                 ('o déficit habitacional do Brasil', 'Brazil’s housing deficit', 'why.html'),
-                ('era de cerca de 5,77 milhões de domicílios, pelo critério da Fundação João Pinheiro. Desses, cerca de 3,59 milhões (62%) eram domicílios urbanos com renda de até três salários mínimos que gastam mais de 30% da renda com aluguel. Os aluguéis subiram 9,13% nos 12 meses até setembro de 2026, o dobro da inflação oficial de 4,58%. O Censo 2022 contou cerca de 16,4 milhões de pessoas morando em favelas e comunidades urbanas: um em cada doze brasileiros.',
-                 'was about 5.77 million households, by the Fundação João Pinheiro measure. Of those, about 3.59 million (62%) were urban households earning up to three minimum wages that spend more than 30% of their income on rent. Rents rose 9.13% in the 12 months to September 2026, twice the official inflation of 4.58%. The 2022 Census counted about 16.4 million people living in favelas and urban communities: one in every twelve Brazilians.'))
+                ('era de cerca de 5,77 milhões de domicílios, segundo a', 'was about 5.77 million households, according to the'),
+                ('Fundação João Pinheiro', 'Fundação João Pinheiro', 'https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/'),
+                ('. Desses, cerca de 3,59 milhões (62%) eram domicílios urbanos com renda de até três salários mínimos que gastam mais de 30% da renda com aluguel.',
+                 '. Of those, about 3.59 million (62%) were urban households earning up to three minimum wages that spend more than 30% of their income on rent.'))
+    b += linked(('Nos 12 meses até setembro de 2026, os preços pedidos para novos aluguéis subiram 9,13%, o dobro da inflação oficial de 4,58%, segundo o', 'In the 12 months to September 2026, asking rents for new rentals rose 9.13%, twice the official inflation of 4.58%, according to the'),
+                ('índice FipeZAP', 'FipeZAP index', 'https://diariodocomercio.com.br/economia/aluguel-sobe-dobro-inflacao-2026/'),
+                ('. O índice acompanha os preços pedidos nos anúncios de 36 cidades.', '. The index follows asking prices in listings across 36 cities.'))
+    b += linked(('O Censo 2022', 'The 2022 Census', 'https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/41797-censo-2022-brasil-tinha-16-4-milhoes-de-pessoas-morando-em-favelas-e-comunidades-urbanas'),
+                ('contou cerca de 16,4 milhões de pessoas morando em favelas e comunidades urbanas: um em cada doze brasileiros.',
+                 'counted about 16.4 million people living in favelas and urban communities: one in every twelve Brazilians.'))
     b += '</section>'
 
     b += '<section id="founders">' + t(('Quem começou a IMOBX, e por quê?', 'Who started IMOBX, and why?'), 'h2') + '<div class="about-founders">'
@@ -52,8 +60,8 @@ def build_about(root, page, tr, esc):
     b += '<section id="how">' + t(('Como funcionaria?', 'How would it work?'), 'h2')
     b += linked(('Nosso plano é o', 'Our plan is'),
                 ('aluguel com compra', 'rent-to-own', 'rent-to-own.html'),
-                ('. Uma família se mudaria sem dar entrada, e parte de cada pagamento mensal iria para a compra da casa. A construtora do Rafael construiria a um custo conhecido, conferido de forma independente. O que sobrar iria para a próxima casa, para a próxima família. Planejamos começar com uma família, muito provavelmente no prédio que a Olympus construiu em Guadalupe, e depois construir cinco apartamentos de cada vez.',
-                 '. A family would move in without a down payment, and part of every monthly payment would go towards buying the house. Rafael’s construction company would build at a known cost, checked independently. What is left over would go into the next house, for the next family. We plan to start with one family, most likely in the building Olympus built in Guadalupe, and then build five flats at a time.'))
+                ('. Uma família se mudaria sem dar entrada, e parte de cada pagamento mensal iria para a compra da casa. A Olympus, a construtora do Rafael, construiria a um preço ligado ao índice público de custo da construção do Rio, conferido de forma independente. O que sobrar iria para a próxima casa, para a próxima família. Planejamos começar com uma família, muito provavelmente no prédio que a Olympus construiu em Guadalupe, e depois construir cinco apartamentos de cada vez.',
+                 '. A family would move in without a down payment, and part of every monthly payment would go towards buying the house. Olympus, Rafael’s construction company, would build at a price tied to Rio’s public building-cost index, checked independently. What is left over would go into the next house, for the next family. We plan to start with one family, most likely in the building Olympus built in Guadalupe, and then build five flats at a time.'))
     b += linked(('Outros grupos de moradia já administram suas casas juntos, e', 'Housing groups elsewhere already run their houses together, and'),
                 ('aprendemos com eles', 'we learn from them', 'resources.html#studied'),
                 ('. A FUCVAM, federação uruguaia de cooperativas de ajuda mútua fundada em 1970, faz as famílias construírem juntas, enquanto a cooperativa fica com a escritura. O Mietshäuser Syndikat, na Alemanha, une casas de aluguel administradas pelos próprios moradores. Nos Estados Unidos, os fundos comunitários de terra mantêm a terra em comum e dão a cada família os seus direitos num contrato longo e assinado. Pegamos o que funciona e adaptamos ao Rio, onde cada família seria dona da própria casa.',

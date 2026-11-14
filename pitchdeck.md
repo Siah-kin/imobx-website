@@ -160,7 +160,7 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 
 
-## 9. Every trade of the token pays a fee that funds the community
+## 9. Each trade of the planned token would pay a fee that funds the community
 
 Holding the token is optional, and families join IMOBX as members. It is a planned self-compounding community-funding token with no presale.
 

@@ -189,7 +189,7 @@ LEDGER_TITLES = [
     ('Seu pedido', 'Your request'),
     ('Aprovado dentro do limite', 'Approved within the limit'),
     ('Conferido por outra pessoa', 'Checked by someone else'),
-    ('Pago, e no registro público', 'Paid, and on the public ledger'),
+    ('Pago e anotado', 'Paid, and written down'),
     ('Uma revisão, se você quiser', 'A review, if you want one'),
 ]
 LEDGER_PRIVATE = ('Abaixo da linha fica o que é privado: seu contrato, seus pagamentos e o que diz a sua reclamação.',
@@ -203,7 +203,7 @@ def _ledger_svg():
     request = bucket(100, '<path class="mf-mark" d="M86 120h28v18H98l-8 8v-8h-4z"/>')                 # a speech bubble: the request
     approved = bucket(300, '<path class="mf-mark" d="M286 130l10 10 18-20"/>')                          # a tick: approved
     checked = bucket(500, '<path class="mf-mark" d="M478 130s9-12 22-12 22 12 22 12-9 12-22 12-22-12-22-12z"/><circle class="mf-mark" cx="500" cy="130" r="5"/>')
-    # paid, and on the public ledger: three linked blocks that appear one by one
+    # paid, and recorded: three linked blocks that appear one by one
     blocks = ''.join(f'<rect class="lf-block lf-block-{i}" x="{646 + i * 38}" y="104" width="32" height="32" fill="#4A90A4" fill-opacity=".55" stroke="#193D4E" stroke-width="2.5"/>'
                      + (f'<path class="lf-block lf-block-{i}" d="M{678 + i * 38} 120h6" stroke="#193D4E" stroke-width="2.5"/>' if i < 2 else '')
                      for i in range(3))

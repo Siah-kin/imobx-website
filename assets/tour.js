@@ -268,7 +268,14 @@
     invite.querySelector('[data-invite-skip]').addEventListener('click', () => { remember('skipped'); invite.close(); });
     invite.querySelector('[data-invite-take]').addEventListener('click', () => { remember('started'); invite.close(); openTour(0, true); });
     invite.addEventListener('cancel', () => remember('skipped'));
-    invite.addEventListener('close', () => { if (document.activeElement === document.body && opener.isConnected) opener.focus(); });
+    // When the invitation closes, focus goes back to the Menu button where the menu is a button, otherwise to the tour link.
+    invite.addEventListener('close', () => {
+      const here = document.activeElement;  // still the dialog or one of its buttons when it closes, and then it falls to the page body
+      if (here && here !== document.body && here !== invite && !invite.contains(here)) return;
+      const menuButton = document.querySelector('[data-site-nav] .menu-toggle');
+      const target = menuButton && menuButton.offsetParent !== null ? menuButton : opener;
+      if (target && target.isConnected) target.focus();
+    });
     document.addEventListener('imobx:languagechange', renderInvite);
     document.body.appendChild(invite);
     renderInvite();

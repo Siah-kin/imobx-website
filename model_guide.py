@@ -80,8 +80,8 @@ ORG_PICS = [
 TERMS_TITLE = ('O que está decidido, e o que ainda não', 'What is decided, and what is not yet')
 TERMS = [
     (('Onde a IMOBX está hoje', 'Where IMOBX stands today'), [
-        ('A IMOBX ainda está em preparação, então ainda não há casas para alugar ou comprar.',
-         'IMOBX is still in preparation, so there are no houses to rent or buy yet.'),
+        ('A IMOBX ainda está em preparação, então ainda não há apartamentos para alugar ou comprar.',
+         'IMOBX is still in preparation, so there are no flats to rent or buy yet.'),
         ('A IMOBX será uma cooperativa habitacional. Ela ainda não está registrada.', 'IMOBX will be a housing cooperative. It is not registered yet.'),
         ('A própria IMOBX ainda não assinou nenhum contrato.',
          'IMOBX itself has not signed any contracts yet.'),
@@ -94,8 +94,8 @@ TERMS = [
          'Anything a family is promised, such as a refund, extra time to pay or a discount, counts once it is written into their signed agreement.'),
     ]),
     (('Recursos', 'Funding'), [
-        ('Os recursos vêm primeiro de uma campanha de financiamento coletivo em reais, e depois de financiamento ligado ao ODS 11.',
-         'Funding comes first from a crowdfunding campaign in reais, then from funding linked to UN Goal 11.'),
+        ('Depois dos primeiros custos dos fundadores, os recursos vêm primeiro de uma campanha de financiamento coletivo em reais, e depois de financiamento ligado ao ODS 11.',
+         'After the founders’ first costs, funding comes first from a crowdfunding campaign in reais, then from funding linked to UN Goal 11.'),
         (('Veja como os recursos são gastos em ', 'See how the funding is spent on '), ('Custos e recursos', 'Costs and funding'), 'costs-and-funding.html'),
         ('Só começamos a construir quando os recursos para isso estiverem no banco.', 'We start building only once the funding for it is in the bank.'),
     ]),
@@ -258,12 +258,12 @@ def build_guide(root, page, tr, esc, language_controls):
     def source_links(*keys):
         """'Sources: <label> · <label>.' when the paragraph above already states what they do not show."""
         return ('<p class="source-note">' + text(('Fontes: ', 'Sources: '), 'span')
-                + ' · '.join(f'<a href="{esc(guide["sources"][k]["url"])}">{label_text(k)}</a>' for k in keys) + '.</p>')
+                + '&nbsp;· '.join(f'<a href="{esc(guide["sources"][k]["url"])}">{label_text(k)}</a>' for k in keys) + '.</p>')
 
     def grouped_sources(note, *keys):
         """'Sources: <label> · <label>. <one limit for all>' (second review, 25 Oct: one line per section)."""
         return ('<p class="source-note">' + text(('Fontes: ', 'Sources: '), 'span')
-                + ' · '.join(f'<a href="{esc(guide["sources"][k]["url"])}">{label_text(k)}</a>' for k in keys) + '. '
+                + '&nbsp;· '.join(f'<a href="{esc(guide["sources"][k]["url"])}">{label_text(k)}</a>' for k in keys) + '. '
                 + text(note, 'span') + '</p>')
 
     def full_source(key):
@@ -308,7 +308,7 @@ def build_guide(root, page, tr, esc, language_controls):
             yield label, ordered, [(n if ordered else None, st) for n, st in enumerate(members, 1)]
 
     def links(keys):
-        return '<p class="guide-sources">' + ' · '.join(
+        return '<p class="guide-sources">' + '&nbsp;· '.join(
             f'<a href="{esc(guide["sources"][key]["url"])}">{label_text(key)}</a>'
             for key in keys) + '</p>'
 
@@ -409,7 +409,7 @@ def build_guide(root, page, tr, esc, language_controls):
     rec = [x.split('. ', 1) for x in rp['record']]
     resident += text(journey['steps_title'], 'h2', 'id="money"') + text((rec[0][0] + '.', rec[1][0] + '.'), 'p', 'class="answer"')
     resident += money_flow_html(text) + text((rec[0][1], rec[1][1]))
-    resident += text(('Quanto custa construir as primeiras casas', 'What the first houses cost to build'),
+    resident += text(('Quanto custa construir os primeiros apartamentos', 'What the first flats cost to build'),
                      'a', 'href="costs-and-funding.html#budgets"') + '</section>'
 
     resident += '<section id="repairs">' + span_ids(anchors['repairs']) + text(journey['repairs_title'], 'h2')
@@ -492,13 +492,13 @@ def build_guide(root, page, tr, esc, language_controls):
     # incoherent was the rest of the page, which now follows in order. Who is doing what sits in the "Preparing" card.
     BOARD = [
         ('Concluído', 'Done', [
-            ('O custo de um apartamento e de cinco, estimado pelo índice público de custo da construção do Rio (CUB), em setembro de 2026.', 'The cost of one flat and of five, estimated from Rio’s public building-cost index (CUB), September 2026.'),
-            ('O contrato de obra de dois lofts da construtora do Rafael, assinado em janeiro de 2026.', 'The building contract for two lofts by Rafael’s company, signed January 2026.')]),
+            ('O custo de um apartamento e de cinco, estimado pelo índice público de custo da construção do Rio (CUB), em setembro de 2026.', 'The cost of one flat and of five, estimated from Rio’s public building-cost index (CUB), September 2026.')]),
         ('Agora', 'Now', [
             ('O prédio de Guadalupe: estamos avaliando um contrato de aluguel com compra, com aluguel menor, para uma família que mora lá.', 'The Guadalupe building: we are considering a rent-to-own agreement with a lower rent for a family that rents there.'),
-            ('O John está nomeando um advogado, um contador e um engenheiro, todos independentes da construtora do Rafael. Eles vão conferir os contratos e a obra.', 'John is appointing a lawyer, an accountant and an engineer, all independent of Rafael’s company. They will check the contracts and the building work.'),
+            ('O John está procurando um advogado, um contador e um engenheiro, todos independentes da construtora do Rafael. Ele os nomeia, com o acordo dos dois cofundadores. Os três vão conferir os contratos e a obra.', 'John is looking for a lawyer, an accountant and an engineer, all independent of Rafael’s company. He appoints them, with both co-founders agreeing. The three will check the contracts and the building work.'),
             ('O Rafael está confirmando qual padrão do índice público de custo da construção (CUB) vale para um prédio pequeno de cinco apartamentos. A resposta define a meta da campanha.', 'Rafael is confirming which standard of the public building-cost index (CUB) fits a small building of five flats. The answer sets the campaign goal.'),
             ('Ele procura um terreno de 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz.', 'He is looking for a plot of 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz.'),
+            ('Os fundadores pagam os primeiros custos por conta própria: o parecer do advogado e a avaliação independente do apartamento de Guadalupe.', 'The founders pay the first costs themselves: the lawyer’s opinion and the independent valuation of the Guadalupe flat.'),
         ]),
         ('Em seguida', 'Next', [
             ('Registrar a cooperativa.', 'Register the cooperative.'),
@@ -512,8 +512,8 @@ def build_guide(root, page, tr, esc, language_controls):
     ]
     # (key, board column, title, one-line summary, the card's items)
     STOPS = [
-        ('done', 0, ('Custos estimados', 'Costs estimated'), ('Uma estimativa do custo de um apartamento e de cinco. Ainda não é orçamento.', 'An estimate of the cost of one flat and of five. Not yet a quote.'), [0, 1]),
-        ('now', 1, ('Preparando', 'Preparing'), ('Estamos nomeando revisores independentes e procurando um terreno.', 'We are appointing independent checkers and looking for a plot.'), [1, 2, 3]),
+        ('done', 0, ('Custos estimados', 'Costs estimated'), ('Uma estimativa do custo de um apartamento e de cinco. Ainda não é orçamento.', 'An estimate of the cost of one flat and of five. Not yet a quote.'), [0]),
+        ('now', 1, ('Preparando', 'Preparing'), ('Estamos procurando revisores independentes e um terreno. Os fundadores pagam os primeiros custos.', 'We are looking for independent checkers and a plot. The founders pay the first costs.'), [1, 4, 2, 3]),
         ('next', 2, ('Registrar a cooperativa', 'Register the cooperative'), ('Registramos a cooperativa, fazemos um pagamento de teste e separamos uma reserva para as contas.', 'We register the cooperative, make a test payment and set aside a reserve for the bills.'), [1, 2]),
         ('next', 2, ('Campanha de financiamento coletivo', 'Crowdfunding campaign'), ('A campanha abre em reais.', 'The campaign opens in reais.'), [3]),
         ('then', 3, ('Uma família assina', 'A family signs'), ('Se a família topar, ela assina o contrato.', 'If the family agrees, it signs the agreement.'), [0, 2]),
@@ -552,11 +552,7 @@ def build_guide(root, page, tr, esc, language_controls):
         items = ''
         for i in idxs:
             pair = BOARD[col][2][i]
-            if key == 'now' and i == 4:  # the open role ends with a way to apply
-                items += ('<li>' + text(pair, 'span') + ' ' + text(('Se for você, ', 'If this is you,'), 'span') + ' '
-                          + text(('apresente-se', 'introduce yourself'), 'a', 'href="contact.html"') + '.</li>')
-            else:
-                items += text(pair, 'li')
+            items += text(pair, 'li')  # (the old open-role item at index 4 left the path on 12 Nov; index 4 now holds the founders' first costs)
         roadmap += (f'<article id="step-{n}" class="route-card route-card-{key}"><h4><span class="route-dot">' + ('✓' if key == 'done' else str(n)) + '</span>'
                     + text(title, 'span') + '</h4><ul>' + items + '</ul>' + NEEDS_HTML[n] + '</article>')
     roadmap += '</div>'
@@ -575,7 +571,7 @@ def build_guide(root, page, tr, esc, language_controls):
 
     # Funding, said once: the order of the three routes. The figures and sources live on Costs and funding.
     roadmap += '<section id="funding"><span id="building"></span>' + text(('Como os cinco primeiros apartamentos serão financiados?', 'How will the first five flats be funded?'), 'h2')
-    roadmap += ('<p>' + text(('Os cinco primeiros apartamentos têm uma estimativa de cerca de R$892.000 num terreno de 200 m², sem orçamento detalhado ainda.', 'The first five flats are estimated at about R$892,000 on a 200 m² plot, with no itemised quote yet.'), 'span') + ' '
+    roadmap += ('<p>' + text(('O Rafael estima os cinco primeiros apartamentos em cerca de R$892.000, com um terreno de 200 m². Ainda não há orçamento detalhado.', 'Rafael estimates the first five flats at about R$892,000, including a 200 m² plot. There is no itemised quote yet.'), 'span') + ' '
                 + text(('Arrecadamos os recursos do primeiro prédio novo nesta ordem.', 'We raise the funding for the first new building in this order.'), 'span') + '</p>')
     roadmap += '<ol class="funding-cards">'
     for head, body in [
@@ -614,16 +610,16 @@ def build_guide(root, page, tr, esc, language_controls):
     roadmap += '<section id="later"><span id="stages-later"></span>' + text(('O que vem depois dos primeiros apartamentos?', 'What comes after the first flats?'), 'h2')
     roadmap += text(('A IMOBX cresce em três etapas. Cada etapa começa quando a anterior tiver mostrado resultados para as famílias que moram ali: casas construídas dentro do orçamento e cada pagamento aberto para conferir.',
                      'IMOBX grows in three stages. Each one begins once the one before has shown results for the families living in it: houses built within budget and every payment open to check.'), 'p', 'class="answer"')
-    _ledger = (text(('A IMOBX abre mais bairros e registra pagamentos e aprovações num ', 'IMOBX opens more neighbourhoods and records payments and approvals on a '), 'span')
-               + text(('registro público', 'public ledger'), 'a', 'href="distributed-ledger.html"') + '.')
+    _ledger = (text(('A IMOBX abre mais bairros e poderá guardar pagamentos e aprovações num ', 'IMOBX opens more neighbourhoods and may keep payments and approvals on a '), 'span')
+               + text(('registro distribuído', 'ledger'), 'a', 'href="distributed-ledger.html"') + '.')
     GROWTH = [
         ('now', ('Um piloto local', 'A local pilot'),
-         [text(('Os primeiros apartamentos no Rio, geridos no local e sem sistemas online. As famílias pagam em reais, e uma segunda pessoa confere cada pagamento.',
-                'The first flats in Rio, run locally and offline. Families pay in reais, and a second person checks every payment.'))],
+         [text(('Os primeiros apartamentos no Rio, geridos no local e sem sistemas online. No plano, as famílias pagam em reais e uma segunda pessoa confere cada pagamento.',
+                'The first flats in Rio, run locally and offline. In the plan, families pay in reais and a second person checks every payment.'))],
          None, None),
         ('next', ('Mais bairros, online', 'More neighbourhoods, online'),
          ['<p>' + _ledger + '</p>',
-          '<p>' + text(('O token da IMOBX é lançado nesta etapa. Ter o token é opcional, e as famílias nunca precisam dele. Não há pré-venda, a equipe não recebe tokens, e cada negociação paga uma taxa que financia a comunidade. Nenhuma votação de quem tem o token pode mudar o contrato de moradia de uma família.', 'The IMOBX token launches in this stage. Holding it is optional, and families never need it. There is no presale, the team receives no tokens, and every trade pays a fee that funds the community. No token vote can change a family’s housing agreement.'), 'span') + '</p>',
+          '<p>' + text(('No plano, o token da IMOBX é lançado nesta etapa. Ter o token é opcional, e as famílias nunca precisam dele. Não há pré-venda, a equipe não recebe tokens e cada negociação paga uma taxa que financia a comunidade. Nenhuma votação de quem tem o token pode mudar o contrato de moradia de uma família.', 'In the plan, the IMOBX token launches in this stage. Holding it is optional, and families never need it. There is no presale, the team receives no tokens, and every trade pays a fee that funds the community. No token vote can change a family’s housing agreement.'), 'span') + '</p>',
           '<p class="card-link">' + text(('Como o token funciona', 'How the token works'), 'a', 'href="self-compounding.html"') + '</p>'],
          ('Começa:', 'Starts:'),
          ('quando os primeiros apartamentos estiverem prontos dentro do orçamento, com famílias morando neles. A moradia também precisa de uma renda própria que se mantenha nas altas e baixas do mercado.',
@@ -669,8 +665,9 @@ def build_guide(root, page, tr, esc, language_controls):
 
     fp = guide['funding_page']
     transparency = '<main class="paper guide-paper transparency-page band-page" id="main">' + language_controls
-    transparency += text(public['title'], 'h1') + '<div class="key-card">' + text(fp['key']) + '</div>'
-    transparency += text(fp['lead'], 'p', 'class="guide-lead"')
+    transparency += text(public['title'], 'h1')
+    transparency += text(fp['lead'], 'p', 'class="guide-lead lead-first"') + text(fp['first_costs'], 'p', 'class="lead-follow"')  # the estimate, then who pays first (decision 55)
+    transparency += '<div class="key-card">' + text(fp['key']) + '</div>'
     transparency += on_this_page([(('Custo da obra', 'Building costs'), 'budgets'), (('Origem dos recursos', 'Sources of funding'), 'money-order'),
                                   (('Por que não só alugar', 'Why not just rent'), 'rent-to-own-or-rent'), (('Onde entra o token', 'Where the token comes in'), 'token'),
                                   (('Conferência dos pagamentos', 'Payment checks'), 'settlement'), (('Relatórios publicados', 'Published reports'), 'reporting')])
@@ -780,19 +777,19 @@ def build_guide(root, page, tr, esc, language_controls):
     # the token's holders decide its rules once it launches; the cooperative's members and residents decide later.
     # Research: CODEX_GOVERNANCE_IA_2026-10-28.md and research/GOVERNANCE_VERTICAL_SCOUT_2026-10-28.md.
     headings = [('Decisão', 'Decision'), ('Quem decide', 'Who decides'), ('Limites e conferências', 'Limits and checks')]
-    def gtable(rows):
-        out = '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in headings) + '</tr></thead><tbody>'
+    def gtable(rows, heads=headings):
+        out = '<div class="guide-table"><table><thead><tr>' + ''.join(text(h, 'th', 'scope="col"') for h in heads) + '</tr></thead><tbody>'
         return out + ''.join('<tr>' + ''.join(text(cell, 'td') for cell in row) + '</tr>' for row in rows) + '</tbody></table></div>'
     team_rows = [
         [('Projeto, orçamento e obra', 'Design, budgets and building work'),
          ('Rafael Britto, um dos nossos cofundadores. A construtora dele é a construtora proposta.', 'Rafael Britto, one of our co-founders. His construction company is the proposed builder.'),
-         ('No plano, as cobranças da empresa dele são aprovadas por outra pessoa, uma segunda pessoa confere o serviço, e só então a cobrança é paga.', 'In the plan, someone other than Rafael approves his company’s invoices, a second person checks the work, and only then is the invoice paid.')],
+         ('As cobranças da empresa dele são aprovadas por outra pessoa, uma segunda pessoa confere o serviço, e só então a cobrança é paga.', 'Someone other than Rafael approves his company’s invoices, a second person checks the work, and only then is the invoice paid.')],
         [('Comunicação, ferramentas digitais e o grupo', 'Communication, digital tools and the group'),
          ('John, um dos nossos cofundadores.', 'John, one of our co-founders.'),
          ('Ele publica cada mudança no plano aqui e no grupo.', 'He publishes every change to the plan here and in the group.')],
         [('Divulgação, embaixadores e corretores', 'Promotion, ambassadors and brokers'),
          ('Os cofundadores.', 'The co-founders.'),
-         ('O trabalho de divulgação é conferido, e o plano é publicar os pagamentos. As condições de pagamento são combinadas antes.', 'Promotional work is checked, and the plan is to publish payments. Payment terms are agreed in advance.')],
+         ('O trabalho de divulgação é conferido e os pagamentos são publicados. As condições de pagamento são combinadas antes.', 'Promotional work is checked and payments are published. Payment terms are agreed in advance.')],
         [('Captação de recursos', 'Fundraising'),
          ('A pessoa de captação organiza o próprio trabalho dentro das tarefas e metas combinadas com John. Os cofundadores decidem juntos sobre compromissos de financiamento.', 'The fundraiser organises their own work around the tasks and targets agreed with John. The co-founders decide together on funding commitments.'),
          ('Prepara planos e pedidos de financiamento. Não pode assinar, gastar nem prometer recursos pela IMOBX.', 'Prepares funding plans and applications. Cannot sign, spend or promise funding for IMOBX.')],
@@ -801,7 +798,7 @@ def build_guide(root, page, tr, esc, language_controls):
          ('Recompensas comuns de campanha, nunca tokens.', 'Ordinary campaign rewards, never tokens.')],
         [('Guarda e liberação dos recursos', 'Holding and releasing the funding'),
          ('Os cofundadores, a partir da conta bancária da própria cooperativa.', 'The co-founders, from the cooperative’s own bank account.'),
-         ('Nunca uma conta pessoal. Cada pagamento tem duas pessoas: uma aprova, outra confere.', 'Never a personal account. Every payment has two people: one approves, another checks.')],
+         ('Nunca uma conta pessoal, e duas pessoas em cada pagamento: uma aprova, outra confere.', 'Never a personal account, and two people on every payment: one approves, another checks.')],
         [('Quem confere os contratos, os pagamentos e a obra', 'Who checks the agreements, payments and building work'),
          ('O John nomeia um advogado independente, um contador e um engenheiro independente, com o acordo dos dois cofundadores.', 'John appoints an independent lawyer, an accountant and an independent engineer, with both co-founders agreeing.'),
          ('Nenhum deles trabalha para a construtora do Rafael, e o Rafael não escolhe o engenheiro que confere a obra da própria construtora.', 'None of them works for Rafael’s company, and Rafael does not choose the engineer who checks his own company’s building work.')],
@@ -828,9 +825,9 @@ def build_guide(root, page, tr, esc, language_controls):
         ('Como a cooperativa vai ser registrada, e com quais estatutos?', 'How will the cooperative be registered, and under which statute?'),
         ('Quais recompensas a campanha vai oferecer?', 'Which rewards will the campaign offer?'),
         ('Qual empresa vai cuidar dos pagamentos?', 'Which company will handle payments?'),
-        ('Quanto passa pela blockchain: nada, alguns pagamentos ou cada pagamento e aprovação?', 'How much runs on the blockchain: none of it, some payments, or every payment and approval?'),
+        ('Quanto vai para o registro distribuído: nada, alguns pagamentos ou cada pagamento e aprovação?', 'How much goes on the ledger: none of it, some payments, or every payment and approval?'),
     ]
-    groups = [(('A casa, o preço e as regras', 'The house, the price and the rules'), open_terms[0:4]), (('Recursos e registro da cooperativa', 'Funding and registering the cooperative'), open_terms[4:8])]
+    groups = [(('Os apartamentos, o preço e as regras', 'The flats, the price and the rules'), open_terms[0:4]), (('Recursos e registro da cooperativa', 'Funding and registering the cooperative'), open_terms[4:8])]
     gov = '<main class="paper guide-paper band-page governance-page" id="main">' + language_controls
     gov += text(('Governança local: quem decide, e quando você tem voz?', 'Local governance: who decides, and when do you get a say?'), 'h1')
     gov += text(('A IMOBX está em preparação, então hoje os nossos dois cofundadores tomam as decisões. À medida que o projeto cresce, o plano tem quatro etapas, e cada uma traz mais pessoas:',
@@ -842,7 +839,7 @@ def build_guide(root, page, tr, esc, language_controls):
     gov += '<section id="now">' + text(('Quem decide agora?', 'Who decides now?'), 'h2')
     gov += text(('Por enquanto, o Rafael decide sobre a obra, o John sobre a comunicação, e os dois decidem juntos o resto. Quando um trabalho precisa de outra pessoa, eles a chamam para esse trabalho, com prazo e orçamento.',
                  'For now, Rafael decides on the building, John on communication, and the two decide the rest together. When a job needs someone else, they bring that person in for that job, with a deadline and a budget.'), 'p', 'class="answer"')
-    gov += gtable(team_rows) + '</section>'
+    gov += gtable(team_rows, headings[:2] + [('Limites e conferências (planejados)', 'Limits and checks (planned)')]) + '</section>'  # the plan is said once, here
     # Owner, 8 Nov ("publish" on the why-placement advice): the cooperative's why gets its one home here, after who decides now.
     gov += '<section id="cooperative">' + text(('Por que uma cooperativa?', 'Why a cooperative?'), 'h2')
     gov += text(('Famílias, proprietários e financiadores precisam confiar numa organização maior que os seus dois cofundadores. Numa cooperativa, cada membro tem voz.',
@@ -861,8 +858,8 @@ def build_guide(root, page, tr, esc, language_controls):
                  'Could a token vote change a family’s agreement? No vote can change a family’s housing agreement: it changes only when the family and IMOBX both agree, under Brazilian law.'))
     gov += '<p>' + text(('Como o token funciona', 'How the token works'), 'a', 'href="distributed-ledger.html#token"') + '</p></section>'
     gov += '<section id="residents">' + text(('Quem decide quando as famílias morarem nas casas?', 'Who decides once families live in the houses?'), 'h2')
-    gov += text(('Quando as primeiras casas existirem e a cooperativa estiver registrada, o plano é que os membros tomem as grandes decisões juntos e que os moradores cuidem dos espaços comuns. Os primeiros moradores vão ajudar a escrever essas regras.',
-                 'Once the first houses exist and the cooperative is registered, the plan is for members to make the big decisions together and for residents to run their shared spaces. The first residents will help write those rules.'), 'p', 'class="answer"')
+    gov += text(('Quando os primeiros apartamentos existirem e a cooperativa estiver registrada, o plano é que os membros tomem as grandes decisões juntos e que os moradores cuidem dos espaços comuns. Os primeiros moradores vão ajudar a escrever essas regras.',
+                 'Once the first flats exist and the cooperative is registered, the plan is for members to make the big decisions together and for residents to run their shared spaces. The first residents will help write those rules.'), 'p', 'class="answer"')
     gov += gtable(resident_rows)  # owner, 31 Oct: the section's answer stays open, not folded
     why_org = guide['why']
     gov += text(why_org['org_title'], 'h3')  # owner, 31 Oct audit: the 'this is how' intro was meta
@@ -870,8 +867,8 @@ def build_guide(root, page, tr, esc, language_controls):
                                                       for pic, (t_, b_) in zip(ORG_PICS, why_org['org_cols'])) + '</ol>'
     gov += '</section>'
     gov += '<section id="recorded">' + text(('Como as decisões ficam registradas?', 'How are decisions recorded?'), 'h2')
-    gov += text(('No plano, cada decisão fica registrada na ata da reunião em que foi tomada. Quando a cooperativa estiver registrada, o estatuto vai dizer como se decide. Cada pagamento, e os nomes de quem o aprovou, podem ir para uma blockchain pública, onde qualquer pessoa pode conferir. Quanto vai para lá ainda está sendo decidido: de nada até todos os pagamentos.',
-                 'In the plan, every decision is written down in the minutes of the meeting where it was made. Once the cooperative is registered, its statute, the founding rulebook, will set out how decisions are made. Each payment, and the names of the people who approved it, can go on a public blockchain where anyone can check them. How much goes there is still being decided, from none of it to every payment.'))
+    gov += text(('Cada decisão será registrada na ata da reunião em que for tomada. Quando a cooperativa estiver registrada, o estatuto vai dizer como se decide. Cada pagamento, e os nomes de quem o aprovou, poderão ir para um registro distribuído, onde qualquer pessoa pode conferir. Contas bancárias e contratos assinados vêm primeiro. Quanto vai para o registro distribuído ainda está sendo decidido: de nada até todos os pagamentos.',
+                 'Every decision will be written down in the minutes of the meeting where it is made. Once the cooperative is registered, its statute, the founding rulebook, will set out how decisions are made. Each payment, and the names of the people who approved it, may go on a ledger where anyone can check them. Bank accounts and signed agreements come first. How much goes on the ledger is still being decided, from none of it to every payment.'))
     gov += '<p>' + text(('Veja as opções para registrar os pagamentos', 'See the options for recording payments'), 'a', 'href="distributed-ledger.html"') + '</p></section>'
     gov += '<section class="closing-band" id="help">' + text(('Quer ajudar a desenhar como se decide? Apresente-se no grupo.', 'Want to help shape how decisions are made? Introduce yourself in the group.'))
     gov += text(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html"') + '</section>'
@@ -898,10 +895,10 @@ def build_guide(root, page, tr, esc, language_controls):
     checkable = [(('O contrato que a construtora do Rafael assinou em janeiro de 2026 para construir dois lofts, com os desenhos', 'The contract Rafael’s company signed in January 2026 to build two lofts, with their drawings'), 'properties.html'),
                  (('Um apartamento candidato para o nosso primeiro morador em aluguel com compra', 'A candidate flat for our first rent-to-own tenant'), 'project-development.html#cases'),
                  (('Custos de obra comparados às tabelas públicas do Brasil', 'Building costs set against Brazil’s public cost tables'), 'costs-and-funding.html#first-homes'),
-                 (('Pagamentos e aprovações previstos num registro público', 'Payments and approvals planned on a public ledger'), 'distributed-ledger.html')]
+                 (('Pagamentos e aprovações, que poderão ir para um registro distribuído mais adiante', 'Payments and approvals, which may go on a ledger later'), 'distributed-ledger.html')]
     drives = [('Construímos comunidades, não só unidades: lugares onde as pessoas voltam a se encontrar.', 'We build communities, not only units: places where people connect again.'),
               ('O nosso lucro real é social. A nossa riqueza é um mundo onde as pessoas são livres.', 'Our real profit is social. Our wealth is a world where people are free.'),
-              ('Quem aluga se torna dono, e um bairro sem estresse vale mais do que ficar milionário.', 'Renters become owners, and a stress-free neighbourhood is worth more than becoming a millionaire.')]
+              ('Quem aluga pode se tornar dono, e um bairro sem estresse vale mais do que ficar milionário.', 'Renters can become owners, and a stress-free neighbourhood is worth more than becoming a millionaire.')]
     ideas = '<section id="ideas">' + text(('Por que a IMOBX', 'Why IMOBX'), 'h2', 'id="why"')
     ideas += text(('Para criar bairros onde as pessoas voltam a se conectar, e onde quem aluga pode se tornar dono.',
                    'To create neighbourhoods where people connect again, and where renters can become owners.'), 'p', 'class="answer"')
@@ -1053,13 +1050,16 @@ def build_guide(root, page, tr, esc, language_controls):
     page_why += '<div class="key-card">' + text((wl[0][0] + '.', wl[1][0] + '.')) + '</div>'
     page_why += text((wl[0][1], wl[1][1]), 'p', 'class="guide-lead"')
     page_why += on_this_page([(('Os números', 'The figures'), 'figures'), (('Favelas', 'Favelas'), 'context'),
-                              (('Por que o aluguel sobe', 'Why rents rise'), 'causes'), (('O que a IMOBX faria', 'What IMOBX would do'), 'answer')])
+                              (('O que pode manter os aluguéis subindo', 'What could keep rents rising'), 'causes'), (('O que a IMOBX faria', 'What IMOBX would do'), 'answer')])
     page_why += '<section id="figures">' + text(why['facts_title'], 'h2') + '<ol class="figure-row">'
     for big, fact in zip(why['figures_big'], why['facts']):
         page_why += '<li>' + text(big, 'strong', 'class="figure-big"') + text(fact['text']) + '<p class="source-note">' + text(('Fonte: ', 'Source: '), 'span')
         page_why += text(fact['source'], 'a', f'href="{esc(fact["url"])}"') + ('. ' + text(fact['limit'], 'span') if fact.get('limit') else '.') + '</p></li>'
     page_why += '</ol></section><section id="context">' + text(why['context_title'], 'h2') + why['context_html']
-    page_why += '</section><section id="causes">' + text(why['causes_title'], 'h2') + text(why['causes'])
+    cause_before, cause_source, cause_after = why['causes_answer']  # one sentence; the link sits on the name of its source
+    page_why += ('</section><section id="causes">' + text(why['causes_title'], 'h2') + '<p>' + text(cause_before, 'span') + ' '
+                 + text(cause_source, 'a', f'href="{esc(guide["sources"]["rents"]["url"])}"') + text(cause_after, 'span') + '</p>')
+    page_why += text(why['causes'])
     page_why += '<ul id="answer">' + ''.join(text(a, 'li') for a in why['answer']) + '</ul></section>'
     page_why += '<span id="rent-to-own-or-rent"></span><span id="organisation"></span>'  # sections moved to costs-and-funding.html and project-development.html#governance
     page_why += '<section class="closing-band" id="next">'
@@ -1276,9 +1276,12 @@ def build_guide(root, page, tr, esc, language_controls):
     stub_targets = {item['id']: ('rent-to-own.html' if item['id'] in HOUSEHOLD_FAQ else 'costs-and-funding.html')
                     for item in guide['questions']}
     stub_targets.update({'thanks-zeal-lets': 'costs-and-funding.html', 'euler': 'costs-and-funding.html'})
-    (root / 'faq.html').write_text(redirect_stub(
+    faq_stub = redirect_stub(
         'IMOBX | Perguntas sobre o modelo', 'Perguntas sobre o modelo', 'rent-to-own.html#questions',
-        'Open the current version', per_question=stub_targets))
+        'Open the current version', per_question=stub_targets)
+    # Like the other old addresses: it asks search engines to leave the old address out and names the official one.
+    faq_stub = faq_stub.replace('</title>', '</title><meta name="robots" content="noindex"><link rel="canonical" href="https://imobx.org/rent-to-own.html">', 1)
+    (root / 'faq.html').write_text(faq_stub)
 
     # Owner, 12 Nov (decision 49): one name per page. The old addresses forward to the new ones and keep the #section,
     # so links in the PDFs, the deck, chats and bookmarks still land in the right place.
