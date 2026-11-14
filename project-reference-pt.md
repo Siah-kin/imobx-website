@@ -6,9 +6,9 @@
 
 | Pessoa ou grupo | Papel no plano | Situação |
 | --- | --- | --- |
-| Rafael Britto | Cofundador; construtor no Rio de Janeiro. Obra, orçamento e contatos locais. | Funções ainda não definidas por escrito. |
+| Rafael | Cofundador; construtor no Rio de Janeiro. Obra, orçamento e contatos locais. | Funções ainda não definidas por escrito. |
 | John | Cofundador; comunicação, documentação e coordenação das ferramentas digitais. | Ajuda a preparar o projeto. Não pode gastar nem assinar pela IMOBX. |
-| IMOBX | Organização do projeto, contratos e acompanhamento das contas. | A forma jurídica e os representantes legais estão em definição. |
+| IMOBX | Organização do projeto, contratos e acompanhamento das contas. | Será uma cooperativa habitacional, ainda não registrada. Os representantes legais estão em definição. |
 | OLYMPUS | Construtora proposta, ligada a Rafael; nenhum contrato assinado. | Só é contratada depois de combinar o serviço, comparar preços e ter a aprovação de alguém independente da construtora. |
 | Moradores | Condições de moradia e participação nos assuntos comuns. | Regras e representantes a combinar com os moradores. |
 | Parceiro comunitário ou beneficente | Acesso a imóvel, famílias ou financiadores, se a parceria for acordada. | Em conversa; nada acordado. |

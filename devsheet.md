@@ -13,11 +13,11 @@
 
 ### 1. Houses with a path to ownership
 
-IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. Under the plan, a family rents a home under an agreement explaining how it becomes the owner. The organization arranges access to property, contracts construction and manages repairs and accounts. The first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
+IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. IMOBX will be a housing cooperative. It is not registered yet. Under the plan, a family rents a home under an agreement explaining how it becomes the owner. The organization arranges access to property, contracts construction and manages repairs and accounts. The first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
 
-**What exists today.** Rafael’s September 2026 cost sum for one flat and for five flats and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
+**What exists today.** The September 2026 cost estimate by Rafael, co-founder and civil engineer, for one flat and for five flats and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
 
-**What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, the terms for using each property, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
+**What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. The cooperative’s registration, the terms for using each property, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
 ### How the operation fits together
 
@@ -115,7 +115,7 @@ Trading is usually busiest around a launch and much quieter afterwards, so the h
 
 Funds put into the trading pool stay there. The accounts distinguish funding available for bills, amounts reserved for families and repairs, and other commitments.
 
-Campaign and grant funding will pay for agreed work before families start paying rent. First, IMOBX needs its legal form, documents showing the right to use the property, a budget for the site and a legally allowed way to run the campaign. Forecast rent is not funding already received. Payments to any investors depend on the chosen agreement and the funds actually available. See the [funding questions](costs-and-funding.html#faq-funding).
+Campaign and grant funding will pay for agreed work before families start paying rent. First, the cooperative needs to be registered, and IMOBX needs documents showing the right to use the property, a budget for the site and a legally allowed way to run the campaign. Forecast rent is not funding already received. Payments to any investors depend on the chosen agreement and the funds actually available. See the [funding questions](costs-and-funding.html#faq-funding).
 
 ### How paid work is checked
 

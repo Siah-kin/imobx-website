@@ -48,7 +48,7 @@
 | favela | favela |
 
 ## Do not translate
-- **Names:** people, organisations, places, laws and programmes. Examples: Rafael Britto, Caixa, CVM, Banco Central, Lei 13.709, Minha Casa Minha Vida, Fundação João Pinheiro, IBGE, Agência Brasil, Aneel, FipeZap, Ostrom, ICA, The Flock, Arctide, Argus, Tolly, Ethervista, Circle, OECD.
+- **Names:** people, organisations, places, laws and programmes. Examples: Rafael, Caixa, CVM, Banco Central, Lei 13.709, Minha Casa Minha Vida, Fundação João Pinheiro, IBGE, Agência Brasil, Aneel, FipeZap, Ostrom, ICA, The Flock, Arctide, Argus, Tolly, Ethervista, Circle, OECD.
 - **The titles of linked sources:** keep the title as written. Translate only the surrounding words, such as "Source:", months and "via".
 - **Portuguese text inside an English string:** a quoted source title or a legal name stays as it is.
 

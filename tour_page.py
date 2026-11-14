@@ -133,7 +133,7 @@ ROLES = [('resident', T('Uma família procurando moradia', 'A family looking for
          ('funding', T('Parceiro ou financiador', 'A partner or funder', 'Partner of financier'))]
 
 JOHN = T('John, cofundador', 'John, co-founder', 'John, medeoprichter')
-RAFAEL = T('Rafael Britto, cofundador', 'Rafael Britto, co-founder', 'Rafael Britto, medeoprichter')
+RAFAEL = T('Rafael, cofundador', 'Rafael, co-founder', 'Rafael, medeoprichter')
 
 # Owner, 9 Nov: "did you just use your own generator to write the text?" Rebuilt with human-copy and Humanizer from
 # the founders' own words (SOURCE_WORDS_FOUNDERS_2026-10-27.md; ids in the comments). Each chapter opens differently.
@@ -231,9 +231,9 @@ STEPS = [
     ('tour-courtyard', T('Quem decide?', 'Who decides?', 'Wie beslist?'),
      ('svg', 'courtyard', T('À esquerda: um membro, um voto. À direita: o contrato da família, que só muda com a família e a IMOBX de acordo.', 'Left: one member, one vote. Right: the family’s agreement, which changes only when the family and IMOBX agree.', 'Links: één lid, één stem. Rechts: de overeenkomst van het gezin, die alleen verandert als gezin en IMOBX akkoord zijn.')),
      (T('Não dá para chegar à autossuficiência ou a comunidades integradas sem uma boa organização por trás.', 'You cannot reach self-sufficiency or integrated communities without proper organisation backing it.', 'Je bereikt geen zelfvoorziening of hechte gemeenschappen zonder een goede organisatie erachter.'), JOHN),
-     [T('Planejamos fundar a IMOBX como uma cooperativa habitacional: os membros são donos dela e a administram juntos, com um voto cada. Nenhuma votação pode mudar o contrato de moradia de uma família: ele só muda quando a família e a IMOBX concordam.',
-        'We plan to found IMOBX as a housing cooperative: its members own it and run it together, with one vote each. No vote can change a family’s housing agreement: it changes only when the family and IMOBX both agree.',
-        'We willen IMOBX oprichten als wooncoöperatie: de leden bezitten en besturen haar samen, met elk één stem. Geen stemming kan de woonovereenkomst van een gezin veranderen: die verandert alleen als het gezin en IMOBX het allebei eens zijn.')],
+     [T('A IMOBX será uma cooperativa habitacional: os membros são donos dela e a administram juntos, com um voto cada. Nenhuma votação pode mudar o contrato de moradia de uma família: ele só muda quando a família e a IMOBX concordam.',
+        'IMOBX will be a housing cooperative: its members own it and run it together, with one vote each. No vote can change a family’s housing agreement: it changes only when the family and IMOBX both agree.',
+        'IMOBX wordt een wooncoöperatie: de leden bezitten en besturen haar samen, met elk één stem. Geen stemming kan de woonovereenkomst van een gezin veranderen: die verandert alleen als het gezin en IMOBX het allebei eens zijn.')],
      [('governance.html#cooperative', T('Por que uma cooperativa', 'Why a cooperative', 'Waarom een coöperatie'))]),
     # Owner-approved ledger lead (28 Oct)
     ('tour-books', T('Para onde vão os recursos dos vizinhos?', 'Where does the neighbours’ funding go?', 'Waar gaat de financiering van de buren heen?'),

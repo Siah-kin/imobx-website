@@ -6,9 +6,9 @@
 
 | Person or group | Role in the plan | Where it stands |
 | --- | --- | --- |
-| Rafael Britto | Co-founder; a builder in Rio de Janeiro. Construction, budgets and local contacts. | No written duties yet. |
+| Rafael | Co-founder; a builder in Rio de Janeiro. Construction, budgets and local contacts. | No written duties yet. |
 | John | Co-founder; communication, documentation and coordination of digital tools. | Helps prepare the project. Cannot spend IMOBX funding or sign for IMOBX. |
-| IMOBX | Project organisation, agreements and account reporting. | Legal form and legal representatives are being defined. |
+| IMOBX | Project organisation, agreements and account reporting. | It will be a housing cooperative, not registered yet. Legal representatives are being defined. |
 | OLYMPUS | Proposed builder, linked to Rafael; no contract signed. | Hired only after the work is agreed, prices are compared and someone independent of the builder approves. |
 | Residents | Housing terms and participation in shared matters. | Rules and representatives to be agreed with residents. |
 | Community or charitable partner | Access to property, households or funders, if a partnership is agreed. | Under discussion; nothing agreed. |

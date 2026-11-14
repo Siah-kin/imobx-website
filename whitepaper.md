@@ -4,11 +4,11 @@
 
 **Project paper · Version 0.9, 9 November 2026**
 
-IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family rents a home, part of each payment counts towards buying it, and the whole home is transferred to the family once the agreed conditions are met. The plan brings together local building work, written agreements, maintenance and accounts people can check.
+IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family rents a home, part of each payment counts towards buying it, and the whole home is transferred to the family once the agreed conditions are met. The plan brings together local building work, written agreements, maintenance and accounts people can check. IMOBX will be a housing cooperative. It is not registered yet.
 
-**What exists today.** Rafael’s September 2026 cost sum for one flat and for five flats; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
+**What exists today.** The September 2026 cost estimate by Rafael, co-founder and civil engineer, for one flat and for five flats; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
 
-**What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. IMOBX’s legal form, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
+**What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. The cooperative’s registration, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
 Rafael brings his construction experience and knowledge of local conditions. John works on community communication and digital tools.
 
@@ -38,7 +38,7 @@ Under the plan, IMOBX owns each included property or holds a written legal right
 
 A property can reach IMOBX by donation, lease, sale or another agreement, and the property’s agreement says which. A letter saying someone intends to donate is different from a completed transfer. Ownership needs the required property registration.
 
-One structure under consideration is a foreign organization holding Brazilian property. [Receita Federal’s guidance for legal entities based abroad](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/cnpj/solicitacao-de-atos-perante-o-cnpj-por-meio-da-internet/orientacoes-para-pessoa-juridica-domiciliada-no-exterior) confirms that such an organization needs a CNPJ, Brazil’s business tax registration. A CNPJ does not give property ownership or make a bank or exchange accept the organization; these are separate matters. IMOBX has not chosen its legal form and no property is confirmed here, so both still need documents.
+IMOBX will be a housing cooperative. It is not registered yet. No property is confirmed here.
 
 Rafael’s building company is the proposed contractor. Under the plan, a founder who is connected to a builder does not approve that builder’s bill. Someone else checks the price, profit, changes and completed work.
 
@@ -161,7 +161,7 @@ Locked tokens would stay locked for good, as section 5 explains. Any benefit for
 
 Families need no token. They join IMOBX as members, sign their own housing agreement and take part in decisions with one member, one vote. The token would come at a later stage of the project. The plan is that each family owns its **whole house**, and in Brazil the property registry records who owns a house (Civil Code, article 1,245), so the token carries no claim on any house.
 
-The nonprofit idea is there so that funding goes to housing; IMOBX’s legal form is still open. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). A donation given for building houses keeps its agreed purpose.
+The nonprofit idea is there so that funding goes to housing; IMOBX will be a housing cooperative, not registered yet. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). A donation given for building houses keeps its agreed purpose.
 
 The CVM looks at the rights a token actually gives, not at names such as “utility” or “governance”, in its [Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/pareceres-orientacao/pare040.html). That opinion explains how the CVM assesses tokens; it does not approve any IMOBX offer. This paper claims no regulatory approval.
 

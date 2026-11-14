@@ -41,6 +41,8 @@ PAGES = {
                  'Uma vaga remota de apoio à captação de recursos da IMOBX.'),
     'why.html': ('Por que moradia: aluguel, entrada e déficit · IMOBX Rio', 'Why housing: rent, down payments, the shortage · IMOBX Rio',
                  'Por que tantas famílias pagam aluguel e não conseguem comprar: os números e as fontes.'),
+    'privacy.html': ('Privacidade: o que este site coleta · IMOBX Rio', 'Privacy: what this site collects · IMOBX Rio',
+                      'O que este site coleta, o que ele guarda no seu navegador e quem é responsável por ele.'),
     'whitepaper.html': ('Whitepaper: modelo, custos e decisões em aberto · IMOBX Rio', 'Whitepaper: model, costs and open decisions · IMOBX Rio',
                         'A proposta completa, em inglês: modelo de moradia, custos, financiamento, decisões e riscos. Baixe o PDF ou vá direto à seção que procura.'),
     'pitchdeck.html': ('Pitch deck: apresentação para parceiros · IMOBX Rio', 'Pitch deck: presentation for partners · IMOBX Rio',

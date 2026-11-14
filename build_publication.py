@@ -10,6 +10,7 @@ from model_guide import build_guide, redirect_stub, new_faq_location, partner_li
 from archive_gateway import build_gateway, pages_from_pdf
 from contact_page import build_contact
 from about_page import build_about
+from privacy_page import build_privacy
 from tour_page import build_tour
 from seo import add_seo
 import commons_story
@@ -57,7 +58,7 @@ MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Au
 
 
 # The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
-SITE_UPDATED = '2026-11-13'
+SITE_UPDATED = '2026-11-14'
 
 
 def status_bar_text():
@@ -288,7 +289,7 @@ def site_header(lang='pt-BR', current=''):
             '</div>' + action + '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap footer-inner"><div class="footer-identity"><a class="footer-brand" href="index.html" aria-label="IMOBX"><img src="assets/imobx-logo-light.png" width="112" height="112" alt="IMOBX"></a><p class="footer-mission" data-pt="De uma casa a um bairro resiliente" data-en="From a house to a resilient neighbourhood" data-nl="Van een huis naar een veerkrachtige buurt">De uma casa a um bairro resiliente</p></div><nav class="footer-nav" aria-label="IMOBX"><div class="footer-columns"><div class="footer-column"><h2 data-pt="Moradia" data-en="Housing" data-nl="Wonen">Moradia</h2><ul><li><a href="rent-to-own.html" data-pt="Aluguel com compra" data-en="Rent-to-own" data-nl="Huurkoop">Aluguel com compra</a></li><li><a href="costs-and-funding.html" data-pt="Custos e recursos" data-en="Costs and funding" data-nl="Kosten en financiering">Custos e recursos</a></li><li><a href="project-development.html" data-pt="Desenvolvimento do projeto" data-en="Project development" data-nl="Projectontwikkeling">Desenvolvimento do projeto</a></li></ul></div><div class="footer-column"><h2 data-pt="Nossa proposta" data-en="Our approach" data-nl="Onze aanpak">Nossa proposta</h2><ul><li><a href="distributed-ledger.html" data-pt="Registro distribuído" data-en="Distributed ledger" data-nl="Distributed Ledger">Registro distribuído</a></li><li><a href="self-compounding.html" data-pt="Self-compounding" data-en="Self-compounding" data-nl="Self-compounding">Self-compounding</a></li><li><a href="governance.html" data-pt="Governança local" data-en="Local governance" data-nl="Lokaal bestuur">Governança local</a></li></ul></div><div class="footer-column"><h2 data-pt="Mais" data-en="More" data-nl="Meer">Mais</h2><ul><li><a href="about.html" data-pt="Sobre a IMOBX" data-en="About IMOBX" data-nl="Over IMOBX">Sobre a IMOBX</a></li><li><a href="resources.html" data-pt="Recursos" data-en="Resources" data-nl="Bronnen">Recursos</a></li><li><a href="jobs.html" data-pt="Vagas" data-en="Jobs" data-nl="Vacatures">Vagas</a></li><li><a href="contact.html" data-pt="Participar" data-en="Take part" data-nl="Meedoen">Participar</a></li></ul></div></div></nav></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap footer-inner"><div class="footer-identity"><a class="footer-brand" href="index.html" aria-label="IMOBX"><img src="assets/imobx-logo-light.png" width="112" height="112" alt="IMOBX"></a><p class="footer-mission" data-pt="De uma casa a um bairro resiliente" data-en="From a house to a resilient neighbourhood" data-nl="Van een huis naar een veerkrachtige buurt">De uma casa a um bairro resiliente</p></div><nav class="footer-nav" aria-label="IMOBX"><div class="footer-columns"><div class="footer-column"><h2 data-pt="Moradia" data-en="Housing" data-nl="Wonen">Moradia</h2><ul><li><a href="rent-to-own.html" data-pt="Aluguel com compra" data-en="Rent-to-own" data-nl="Huurkoop">Aluguel com compra</a></li><li><a href="costs-and-funding.html" data-pt="Custos e recursos" data-en="Costs and funding" data-nl="Kosten en financiering">Custos e recursos</a></li><li><a href="project-development.html" data-pt="Desenvolvimento do projeto" data-en="Project development" data-nl="Projectontwikkeling">Desenvolvimento do projeto</a></li></ul></div><div class="footer-column"><h2 data-pt="Nossa proposta" data-en="Our approach" data-nl="Onze aanpak">Nossa proposta</h2><ul><li><a href="distributed-ledger.html" data-pt="Registro distribuído" data-en="Distributed ledger" data-nl="Distributed Ledger">Registro distribuído</a></li><li><a href="self-compounding.html" data-pt="Self-compounding" data-en="Self-compounding" data-nl="Self-compounding">Self-compounding</a></li><li><a href="governance.html" data-pt="Governança local" data-en="Local governance" data-nl="Lokaal bestuur">Governança local</a></li></ul></div><div class="footer-column"><h2 data-pt="Mais" data-en="More" data-nl="Meer">Mais</h2><ul><li><a href="about.html" data-pt="Sobre a IMOBX" data-en="About IMOBX" data-nl="Over IMOBX">Sobre a IMOBX</a></li><li><a href="resources.html" data-pt="Recursos" data-en="Resources" data-nl="Bronnen">Recursos</a></li><li><a href="jobs.html" data-pt="Vagas" data-en="Jobs" data-nl="Vacatures">Vagas</a></li><li><a href="contact.html" data-pt="Participar" data-en="Take part" data-nl="Meedoen">Participar</a></li><li><a href="privacy.html" data-pt="Privacidade" data-en="Privacy" data-nl="Privacy">Privacidade</a></li></ul></div></div></nav></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):
@@ -469,6 +470,7 @@ build_guide(ROOT, page, translated, esc, language_controls)
 build_reference(ROOT, page, translated, esc)
 build_contact(ROOT, page, translated, esc, VERSION)
 build_about(ROOT, page, translated, esc)
+build_privacy(ROOT, page, translated, esc)
 build_tour(ROOT, page, VERSION)
 # Resources as one page (owner, 29 Oct): the documents first, then the ideas behind IMOBX, who does what, and the sources.
 _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated('Nesta página', 'On this page', 'p') + '<ol>'

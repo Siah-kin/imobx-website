@@ -923,8 +923,8 @@
       }
     ],
     "registration": [
-      "Uma organização estrangeira que tenha imóveis no Brasil precisa de CNPJ, o cadastro tributário brasileiro. Isso não transfere a propriedade nem garante conta no banco ou corretora. A transferência precisa do registro do imóvel. A forma jurídica da IMOBX ainda precisa ser escolhida e revisada por assessores brasileiros.",
-      "A foreign organization holding Brazilian property needs a CNPJ, Brazil’s tax registration. That does not transfer ownership or guarantee a bank or exchange account. A property transfer needs title registration. IMOBX’s legal form still needs to be chosen and reviewed by Brazilian advisers."
+      "A transferência precisa do registro do imóvel. A IMOBX será uma cooperativa habitacional, ainda não registrada.",
+      "A property transfer needs title registration. IMOBX will be a housing cooperative. It is not registered yet."
     ],
     "network_note": [
       "Uma moeda digital ligada ao dólar muda de valor em reais com o câmbio. Precisamos conferir a entrada e a volta ao banco antes de escolher um serviço.",
@@ -1789,8 +1789,8 @@
       "A neighbourhood for living and cooperating"
     ],
     "vision_intro": [
-      "Rafael Britto, cofundador da IMOBX, imaginou casas de 45 m² em torno de um pátio, com energia solar, pomar, espaço para brincar e salas de estudo.",
-      "Rafael Britto, co-founder of IMOBX, imagined 45 m² houses around a courtyard, with solar power, an orchard, play space and study rooms."
+      "Rafael, cofundador da IMOBX, imaginou casas de 45 m² em torno de um pátio, com energia solar, pomar, espaço para brincar e salas de estudo.",
+      "Rafael, co-founder of IMOBX, imagined 45 m² houses around a courtyard, with solar power, an orchard, play space and study rooms."
     ],
     "vision_caption": [
       "Visão de Rafael · 30 de novembro de 2025. Ilustração conceitual feita com um gerador de imagens.",
@@ -2280,8 +2280,8 @@
   },
   "funding_page": {
     "lead": [
-      "Um apartamento de 45 m² custa cerca de R$180.000, com a sua parte do terreno, a preços de setembro de 2026. Essa é a estimativa do Rafael Britto, nosso cofundador e engenheiro civil, cuja construtora seria a responsável pela obra. Ainda não é um orçamento, e nenhum preço para as famílias foi definido.",
-      "A 45 m² flat costs about R$180,000, including its share of the land, at September 2026 prices. That is the estimate of Rafael Britto, our co-founder and a civil engineer whose company would be the builder. It is not yet a quote, and no family price is set."
+      "Um apartamento de 45 m² custa cerca de R$180.000, com a sua parte do terreno, a preços de setembro de 2026. Essa é a estimativa do Rafael, nosso cofundador e engenheiro civil, cuja construtora seria a responsável pela obra. Ainda não é um orçamento, e nenhum preço para as famílias foi definido.",
+      "A 45 m² flat costs about R$180,000, including its share of the land, at September 2026 prices. That is the estimate of Rafael, our co-founder and a civil engineer whose company would be the builder. It is not yet a quote, and no family price is set."
     ],
     "order_title": [
       "De onde vêm os recursos e o que eles pagam primeiro?",

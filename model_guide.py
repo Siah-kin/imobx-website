@@ -495,7 +495,7 @@ def build_guide(root, page, tr, esc, language_controls):
             ('O custo de um apartamento e de cinco, estimado pelo índice público de custo da construção do Rio (CUB), em setembro de 2026.', 'The cost of one flat and of five, estimated from Rio’s public building-cost index (CUB), September 2026.')]),
         ('Agora', 'Now', [
             ('O prédio de Guadalupe: estamos avaliando um contrato de aluguel com compra, com aluguel menor, para uma família que mora lá.', 'The Guadalupe building: we are considering a rent-to-own agreement with a lower rent for a family that rents there.'),
-            ('O John está procurando um advogado, um contador e um engenheiro, todos independentes da construtora do Rafael. Ele os nomeia, com o acordo dos dois cofundadores. Os três vão conferir os contratos e a obra.', 'John is looking for a lawyer, an accountant and an engineer, all independent of Rafael’s company. He appoints them, with both co-founders agreeing. The three will check the contracts and the building work.'),
+            ('O Rafael está procurando um advogado, um contador e um engenheiro, todos independentes da construtora dele. Ele os nomeia, com o acordo dos dois cofundadores. Os três vão conferir os contratos e a obra.', 'Rafael is looking for a lawyer, an accountant and an engineer, all independent of his company. He appoints them, with both co-founders agreeing. The three will check the contracts and the building work.'),
             ('O Rafael está confirmando qual padrão do índice público de custo da construção (CUB) vale para um prédio pequeno de cinco apartamentos. A resposta define a meta da campanha.', 'Rafael is confirming which standard of the public building-cost index (CUB) fits a small building of five flats. The answer sets the campaign goal.'),
             ('Ele procura um terreno de 200 a 300 m² em Anchieta, Pavuna, Bangu ou Santa Cruz.', 'He is looking for a plot of 200 to 300 m² in Anchieta, Pavuna, Bangu or Santa Cruz.'),
             ('Os fundadores pagam os primeiros custos por conta própria: o parecer do advogado e a avaliação independente do apartamento de Guadalupe.', 'The founders pay the first costs themselves: the lawyer’s opinion and the independent valuation of the Guadalupe flat.'),
@@ -782,7 +782,7 @@ def build_guide(root, page, tr, esc, language_controls):
         return out + ''.join('<tr>' + ''.join(text(cell, 'td') for cell in row) + '</tr>' for row in rows) + '</tbody></table></div>'
     team_rows = [
         [('Projeto, orçamento e obra', 'Design, budgets and building work'),
-         ('Rafael Britto, um dos nossos cofundadores. A construtora dele é a construtora proposta.', 'Rafael Britto, one of our co-founders. His construction company is the proposed builder.'),
+         ('Rafael, um dos nossos cofundadores. A construtora dele é a construtora proposta.', 'Rafael, one of our co-founders. His construction company is the proposed builder.'),
          ('As cobranças da empresa dele são aprovadas por outra pessoa, uma segunda pessoa confere o serviço, e só então a cobrança é paga.', 'Someone other than Rafael approves his company’s invoices, a second person checks the work, and only then is the invoice paid.')],
         [('Comunicação, ferramentas digitais e o grupo', 'Communication, digital tools and the group'),
          ('John, um dos nossos cofundadores.', 'John, one of our co-founders.'),
@@ -800,8 +800,8 @@ def build_guide(root, page, tr, esc, language_controls):
          ('Os cofundadores, a partir da conta bancária da própria cooperativa.', 'The co-founders, from the cooperative’s own bank account.'),
          ('Nunca uma conta pessoal, e duas pessoas em cada pagamento: uma aprova, outra confere.', 'Never a personal account, and two people on every payment: one approves, another checks.')],
         [('Quem confere os contratos, os pagamentos e a obra', 'Who checks the agreements, payments and building work'),
-         ('O John nomeia um advogado independente, um contador e um engenheiro independente, com o acordo dos dois cofundadores.', 'John appoints an independent lawyer, an accountant and an independent engineer, with both co-founders agreeing.'),
-         ('Nenhum deles trabalha para a construtora do Rafael, e o Rafael não escolhe o engenheiro que confere a obra da própria construtora.', 'None of them works for Rafael’s company, and Rafael does not choose the engineer who checks his own company’s building work.')],
+         ('O Rafael nomeia um advogado independente, um contador e um engenheiro independente, com o acordo dos dois cofundadores.', 'Rafael appoints an independent lawyer, an accountant and an independent engineer, with both co-founders agreeing.'),
+         ('Nenhum deles trabalha para a construtora do Rafael, e o Rafael não decide sozinho quem confere a obra da própria construtora.', 'None of them works for Rafael’s company, and Rafael does not decide alone who checks his own company’s building work.')],
         [('Registro da cooperativa, contratos e o plano geral', 'Registering the cooperative, contracts and the overall plan'),
          ('Os cofundadores.', 'The co-founders.'),
          ('Cada passo do registro é publicado aqui e no grupo.', 'Each step of the registration is published here and in the group.')],
@@ -844,8 +844,8 @@ def build_guide(root, page, tr, esc, language_controls):
     gov += '<section id="cooperative">' + text(('Por que uma cooperativa?', 'Why a cooperative?'), 'h2')
     gov += text(('Famílias, proprietários e financiadores precisam confiar numa organização maior que os seus dois cofundadores. Numa cooperativa, cada membro tem voz.',
                  'Families, property owners and funders need to trust an organisation that is bigger than its two co-founders. In a cooperative, each member has a say.'), 'p', 'class="answer"')
-    gov += text(('Por isso, planejamos fundar a IMOBX como uma cooperativa habitacional: uma organização que os seus membros possuem e administram juntos, um membro, um voto, em benefício dos membros e sem objetivo de lucro.',
-                 'So we plan to found IMOBX as a housing cooperative: an organisation its members own and run together, one member, one vote, for the members’ benefit and not for profit.'))
+    gov += text(('Por isso, a IMOBX será uma cooperativa habitacional: uma organização que os seus membros possuem e administram juntos, um membro, um voto, em benefício dos membros e sem objetivo de lucro.',
+                 'So IMOBX will be a housing cooperative: an organisation its members own and run together, one member, one vote, for the members’ benefit and not for profit.'))
     gov += '</section>'
     # Owner, 31 Oct: 'Who decides now?' and 'What are we deciding now?' belong together; they were apart by accident.
     gov += '<section id="deciding">' + text(('O que estamos decidindo agora?', 'What are we deciding now?'), 'h2')
@@ -911,7 +911,7 @@ def build_guide(root, page, tr, esc, language_controls):
               + '</figure></section>')  # caption removed (owner, 29 Oct: it only described the drawing)
     ideas += '<section id="our-story">' + '<svg class="iceberg-water story-water" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0,20 C80,4 160,36 250,20 S420,4 500,20 S670,36 750,20 S920,4 1000,20"/></svg>' + text(('Os fundadores', 'The founders'), 'h2')
     # The iceberg's waterline introduces the founders; their own accounts follow without an editorial preamble.
-    ideas += text(('Rafael Britto, cofundador e engenheiro civil', 'Rafael Britto, co-founder and civil engineer'), 'h3')
+    ideas += text(('Rafael, cofundador e engenheiro civil', 'Rafael, co-founder and civil engineer'), 'h3')
     # Owner, 8 Nov: Rafael's bio follows his own story (Q1, 6 Nov): master's paused after the first year, no sales career.
     # Left out until he agrees: his worries, Dr. Cavalieri's name and the army unit.
     ideas += text(('Minha infância me ensinou cedo o valor de cada centavo e de um teto seguro. Meu pai foi ausente, e minha mãe sustentava a casa trabalhando de 70 a 80 horas por semana para criar três filhos. Aos 7 anos, eu já ia sozinho ao mercado fazer pequenas compras, e tive que aprender números decimais antes da hora só para conferir o troco. Aos 10, fazia bicos para os vizinhos: ia ao mercado, levava as compras até a porta, ganhava um ou dois reais e guardava. Eu sempre guardei.',
@@ -925,8 +925,8 @@ def build_guide(root, page, tr, esc, language_controls):
     ideas += text(('Nunca desisti de um sonho que carrego desde a faculdade: construir boas moradias, de padrão modesto ou acessível, para que as famílias mais pobres possam de novo realizar o sonho da casa própria. A pergunta que não sai da minha cabeça é simples: por que ter a própria caverna não é um direito de todos? A IMOBX é a minha resposta a essa pergunta.',
                    'I never gave up a dream I have carried since university: to build good homes, of modest or affordable standard, so that the poorest families can once again fulfil the dream of owning their own home. The question that won’t leave my mind is simple: why isn’t having one’s own cave a right for everyone? IMOBX is my answer to that question.'))
     ideas += text(('John, cofundador', 'John, co-founder'), 'h3')
-    ideas += text(('Hoje, trabalho com Rafael Britto, que traz experiência em construção no Rio. Compartilhamos uma pergunta: como uma família pode chegar à casa própria enquanto os vizinhos cuidam dos espaços que dividem?',
-                   'Today, I work with Rafael Britto, who brings construction experience in Rio. We share a question: how can a family find a path to owning a home while neighbours care for the places they share?'))
+    ideas += text(('Hoje, trabalho com Rafael, que traz experiência em construção no Rio. Compartilhamos uma pergunta: como uma família pode chegar à casa própria enquanto os vizinhos cuidam dos espaços que dividem?',
+                   'Today, I work with Rafael, who brings construction experience in Rio. We share a question: how can a family find a path to owning a home while neighbours care for the places they share?'))
     ideas += '<span id="shaped"></span>'
     ideas += text(('Cresci numa cidade que parecia uma corrida, como o mais velho de três filhos. A guerra não estava longe da nossa família, e essas cicatrizes me levaram para outra direção: eu não conseguia mais fazer de outro jeito. Saí do ensino tradicional para viajar e descobrir outras formas de viver. Alguns anos depois de eu sair de casa, o casamento dos meus pais acabou. Foi a primeira vez que senti que tinha perdido o meu lar. Ainda sinto falta dessa sensação de estar em casa. É uma busca que continua.',
                    'I grew up in a city that felt like a race, as the oldest of three. The war was not far away in our family, and those scars pushed me in another direction: I could not do otherwise any longer. I left traditional schooling to travel and discover other ways to live. A few years after I left the house, my parents’ marriage collapsed. That was the first time I felt I had lost my home. I still long for that sense of being home. It is an ongoing quest.'))
