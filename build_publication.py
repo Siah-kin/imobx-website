@@ -64,8 +64,8 @@ SITE_UPDATED = '2026-11-14'
 def status_bar_text():
     """Visitor-facing status bar: the project status and the date the site last changed, without a version number."""
     year, month, day = (int(part) for part in SITE_UPDATED.split('-'))
-    pt = f'Em preparação, atualizado em {day:02d}/{month:02d}/{year}'
-    en = f'In preparation, updated {day} {MONTHS_EN[month - 1][:3]} {year}'
+    pt = f'Em preparação, {day:02d}/{month:02d}/{year}. A IMOBX será uma cooperativa habitacional, ainda não registrada.'
+    en = f'In preparation, updated {day} {MONTHS_EN[month - 1][:3]} {year}. IMOBX will be a housing cooperative. It is not registered yet.'
     return pt, en
 
 
@@ -116,9 +116,9 @@ MENU = [
     ]),
     # Owner, 13 Nov (decision 55): About is in the main menu, between the project pages and Resources. It has no section list.
     ('about.html', 'Sobre', 'About', []),
-    ('resources.html', 'Recursos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
+    ('resources.html', 'Documentos', 'Resources', [  # owner, 28 Oct: Documents becomes Resources (the Ideas page joins later)
         # Owner, 29 Oct: one Resources page, documents first, then ideas, people and sources.
-        ('resources.html', 'documents', 'Documentos', 'Documents', 'Project documents'),
+        ('resources.html', 'documents', 'Todos os documentos', 'Documents', 'Project documents'),
         ('resources.html', 'our-story', 'Fundadores', 'Founders', 'The founders'),
         ('commons-research.html', '', 'Pesquisa sobre propriedade compartilhada', 'Research on shared ownership', 'Research on shared ownership'),  # owner, 9 Nov: it belongs under Resources
         ('resources.html', 'sources', 'Fontes', 'Sources', 'Our sources'),
@@ -140,7 +140,7 @@ EXTRA_ANCHORS = [
 HEADING_INTROS = {
     'rent-to-own.html': {
         'Who handles a repair?': ('No plano, cada reparo tem uma pessoa responsável, um limite de gasto e uma segunda conferência, então nada depende de uma só pessoa.',
-                                  'In the plan, every repair has a named person, a spending limit and a second check, so nothing waits on one person.'),
+                                  'In the plan, every repair has a responsible person, a spending limit and a second check, so nothing waits on one person.'),
         'What do residents decide?': ('Os moradores cuidam juntos da vida comum do bairro; o contrato de cada família continua sendo só dela.',
                                       'Residents run the shared life of the neighbourhood together; each family’s own agreement stays its own.'),
     },
@@ -289,7 +289,7 @@ def site_header(lang='pt-BR', current=''):
             '</div>' + action + '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap footer-inner"><div class="footer-identity"><a class="footer-brand" href="index.html" aria-label="IMOBX"><img src="assets/imobx-logo-light.png" width="112" height="112" alt="IMOBX"></a><p class="footer-mission" data-pt="De uma casa a um bairro resiliente" data-en="From a house to a resilient neighbourhood" data-nl="Van een huis naar een veerkrachtige buurt">De uma casa a um bairro resiliente</p></div><nav class="footer-nav" aria-label="IMOBX"><div class="footer-columns"><div class="footer-column"><h2 data-pt="Moradia" data-en="Housing" data-nl="Wonen">Moradia</h2><ul><li><a href="rent-to-own.html" data-pt="Aluguel com compra" data-en="Rent-to-own" data-nl="Huurkoop">Aluguel com compra</a></li><li><a href="costs-and-funding.html" data-pt="Custos e recursos" data-en="Costs and funding" data-nl="Kosten en financiering">Custos e recursos</a></li><li><a href="project-development.html" data-pt="Desenvolvimento do projeto" data-en="Project development" data-nl="Projectontwikkeling">Desenvolvimento do projeto</a></li></ul></div><div class="footer-column"><h2 data-pt="Nossa proposta" data-en="Our approach" data-nl="Onze aanpak">Nossa proposta</h2><ul><li><a href="distributed-ledger.html" data-pt="Registro distribuído" data-en="Distributed ledger" data-nl="Distributed Ledger">Registro distribuído</a></li><li><a href="self-compounding.html" data-pt="Self-compounding" data-en="Self-compounding" data-nl="Self-compounding">Self-compounding</a></li><li><a href="governance.html" data-pt="Governança local" data-en="Local governance" data-nl="Lokaal bestuur">Governança local</a></li></ul></div><div class="footer-column"><h2 data-pt="Mais" data-en="More" data-nl="Meer">Mais</h2><ul><li><a href="about.html" data-pt="Sobre a IMOBX" data-en="About IMOBX" data-nl="Over IMOBX">Sobre a IMOBX</a></li><li><a href="resources.html" data-pt="Recursos" data-en="Resources" data-nl="Bronnen">Recursos</a></li><li><a href="jobs.html" data-pt="Vagas" data-en="Jobs" data-nl="Vacatures">Vagas</a></li><li><a href="contact.html" data-pt="Participar" data-en="Take part" data-nl="Meedoen">Participar</a></li><li><a href="privacy.html" data-pt="Privacidade" data-en="Privacy" data-nl="Privacy">Privacidade</a></li></ul></div></div></nav></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap footer-inner"><div class="footer-identity"><a class="footer-brand" href="index.html" aria-label="IMOBX"><img src="assets/imobx-logo-light.png" width="112" height="112" alt="IMOBX"></a><p class="footer-mission" data-pt="De uma casa a um bairro resiliente" data-en="From a house to a resilient neighbourhood" data-nl="Van een huis naar een veerkrachtige buurt">De uma casa a um bairro resiliente</p></div><nav class="footer-nav" aria-label="IMOBX"><div class="footer-columns"><div class="footer-column"><h2 data-pt="Moradia" data-en="Housing" data-nl="Wonen">Moradia</h2><ul><li><a href="rent-to-own.html" data-pt="Aluguel com compra" data-en="Rent-to-own" data-nl="Huurkoop">Aluguel com compra</a></li><li><a href="costs-and-funding.html" data-pt="Custos e recursos" data-en="Costs and funding" data-nl="Kosten en financiering">Custos e recursos</a></li><li><a href="project-development.html" data-pt="Desenvolvimento do projeto" data-en="Project development" data-nl="Projectontwikkeling">Desenvolvimento do projeto</a></li></ul></div><div class="footer-column"><h2 data-pt="Nossa proposta" data-en="Our approach" data-nl="Onze aanpak">Nossa proposta</h2><ul><li><a href="distributed-ledger.html" data-pt="Registro distribuído" data-en="Distributed ledger" data-nl="Distributed Ledger">Registro distribuído</a></li><li><a href="self-compounding.html" data-pt="Self-compounding" data-en="Self-compounding" data-nl="Self-compounding">Self-compounding</a></li><li><a href="governance.html" data-pt="Governança local" data-en="Local governance" data-nl="Lokaal bestuur">Governança local</a></li></ul></div><div class="footer-column"><h2 data-pt="Mais" data-en="More" data-nl="Meer">Mais</h2><ul><li><a href="about.html" data-pt="Sobre a IMOBX" data-en="About IMOBX" data-nl="Over IMOBX">Sobre a IMOBX</a></li><li><a href="resources.html" data-pt="Documentos" data-en="Resources" data-nl="Bronnen">Documentos</a></li><li><a href="jobs.html" data-pt="Vagas" data-en="Jobs" data-nl="Vacatures">Vagas</a></li><li><a href="contact.html" data-pt="Participar" data-en="Take part" data-nl="Meedoen">Participar</a></li><li><a href="privacy.html" data-pt="Privacidade" data-en="Privacy" data-nl="Privacy">Privacidade</a></li></ul></div></div></nav></div></footer>'
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):
@@ -481,7 +481,7 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
             + '</ol></nav>')
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main class="paper guide-paper band-page resources-page" id="main">' + language_controls
-    + translated('Recursos: documentos e fontes da IMOBX', 'Resources: IMOBX documents and sources', 'h1')
+    + translated('Documentos e fontes da IMOBX', 'Resources: IMOBX documents and sources', 'h1')
     + translated('Leia o plano completo por conta própria: a proposta, a apresentação para parceiros e o guia de construção, com a fonte de cada número do site.',
                  'Read the full plan for yourself: the proposal, the presentation for partners and the building guide, with the source of every figure on this site.', 'p', 'class="guide-lead"') + _res_nav
     + resource_section(standalone=True) + '</section>'
@@ -489,7 +489,7 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
     + re.sub(r'<section id="people">.*?</section>', '<span id="people"></span>', build_reference.fragment, count=1, flags=re.S).replace(translated('Fontes das pesquisas e dos números.', 'Sources for the research and figures.', 'p'), '')  # owner, 29 Oct: 'remove this'
     + resource_section.cite + build_guide.ideas_close
     + partner_line_html('resources.html', lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)) + '</main>',
-    build_guide.ideas_head + '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Recursos'))
+    build_guide.ideas_head + '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Documentos'))
 
 
 (ROOT / 'commons-research.html').write_text(page('IMOBX | Research on shared ownership',

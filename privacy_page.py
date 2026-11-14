@@ -25,8 +25,8 @@ def build_privacy(root, page, tr, esc):
     b += t(('Ler este site não nos dá nenhum dado seu.', 'Reading this site shares nothing with us.'), 'p', 'class="privacy-lead"')
 
     b += '<section id="collect">' + t(('O que este site coleta?', 'What does this site collect?'), 'h2')
-    b += linked(('Nada. Ele não usa cookies, não roda ferramentas de análise e não carrega nada de outros sites enquanto você lê. O GitHub Pages, que hospeda o site, registra sim os endereços IP dos visitantes por segurança, como a',
-                 'Nothing. It sets no cookies, runs no analytics and loads nothing from other websites while you read. Its host, GitHub Pages, does log visitors’ IP addresses for security, as'),
+    b += linked(('Nós mesmos não coletamos nada. O site não usa cookies, não roda ferramentas de análise e não carrega nada de outros sites enquanto você lê. O GitHub Pages, que hospeda o site, registra sim os endereços IP dos visitantes por segurança, como a',
+                 'We collect nothing ourselves. The site sets no cookies, runs no analytics and loads nothing from other websites while you read. Its host, GitHub Pages, does log visitors’ IP addresses for security, as'),
                 ('documentação do GitHub Pages', 'GitHub’s Pages documentation', 'https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages'),
                 ('descreve.', 'describes.'))
     b += '</section>'

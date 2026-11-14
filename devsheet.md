@@ -15,7 +15,7 @@
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. IMOBX will be a housing cooperative. It is not registered yet. Under the plan, a family rents a home under an agreement explaining how it becomes the owner. The organization arranges access to property, contracts construction and manages repairs and accounts. The first project is for families who have been displaced or cannot access ordinary housing finance. Location and payments need to fit each household’s circumstances, including work, school, transport and support networks.
 
-**What exists today.** The September 2026 cost estimate by Rafael, co-founder and civil engineer, for one flat and for five flats and the separate two-loft account; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
+**What exists today.** The September 2026 cost estimate by Rafael, co-founder and civil engineer, for one flat and for five flats and the separate two-loft account; drawings; a drawing of Rafael’s design for the village; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses. Rafael brings his construction experience and local knowledge. John works on communication and digital tools.
 
 **What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. The cooperative’s registration, the terms for using each property, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
@@ -44,7 +44,7 @@ This guide explains how a request leads to completed work, a check that it meets
 
 ### The village proposal
 
-Rafael’s plan brings together 45 m² two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [illustration](properties.html#visao-rafael), made with an image generator, shows the community as planned.
+Rafael’s plan brings together 45 m² two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [drawing](properties.html#visao-rafael) shows the community as Rafael designed it. It is not a listing of houses for rent.
 
 Rafael worked out the cost of a 45 m² flat at September 2026 prices. He started from CUB-RJ, the public building-cost index for Rio de Janeiro, and added 35% for overheads and his company’s margin:
 
@@ -188,22 +188,24 @@ Before the first families move in, the complete process is tested, including pay
 
 ## 7. Development stages
 
-IMOBX’s development plan connects the first houses in Rio with resident participation, transparent accounts and additional funding. Legal preparation, community discussions and digital trials can progress in parallel. Construction dates depend on each project, funding and permissions.
+IMOBX’s development plan has three stages: a local pilot in Rio, more neighbourhoods online and a distributed economy. Each begins once the one before has shown results for the families living in it. Stage 1 is the path to the first flats, in six steps. Each step lists what it needs before it is done. Construction dates depend on each project, funding and permissions.
 
-| Stage | Intended result |
+| Step | Intended result |
 |---|---|
-| Legal structure and property | A responsible organization, documents showing the legal right to use the property and reviewed housing agreements. |
-| Resident participation | Members have a say in shared matters, with defined budgets and review procedures, and need no token to take part. |
-| First houses | Funded construction, safe occupancy and records of household payments and purchase progress. |
-| Payment records people can check | A demonstration of USDC, a digital currency designed to track the US dollar, received and payments approved on Arc, a blockchain network, linked to accounts and evidence. |
-| Funding and account review | Records of where funding comes from, which spending is approved and how promises to families are paid for. |
-| More houses and owner partnerships | Further projects with local teams and possible rent-to-own services for participating owners. |
+| Costs estimated | The cost of one flat and of five, estimated from Rio’s public building-cost index (CUB). It is not yet a quote. |
+| Preparing | An independent lawyer, accountant and engineer chosen, and a plot of 200 to 300 m² found. The founders pay the first costs. |
+| Register the cooperative | A responsible organization, a small test payment checked against the bank statement, and a reserve set aside for the bills and for commitments to families. |
+| Crowdfunding campaign | The platform chosen, the rewards written, the goal set and the campaign open, once the cooperative is registered. |
+| A family signs | A rent-to-own agreement for the family’s flat in the Guadalupe building, signed if the family agrees, and house rules that residents help write. |
+| Build five flats | Construction starts once the full cost is in the bank, an itemised quote is ready and the permits are in place. |
+
+Members have a say in shared matters, with defined budgets and review procedures, and need no token to take part. A demonstration of USDC, a digital currency designed to track the US dollar, received and payments approved on Arc, a blockchain network, would show how payment records can be linked to accounts and evidence.
 
 ### Following an operating project
 
 The monthly report shows receipts and payments, amounts set aside, building costs and delays, repairs, unresolved issues and families’ purchase progress. Every amount received and paid is checked against its records. Affordability and service-response targets need to be agreed locally.
 
-A first expansion review comes after at least three operating months. A second local team should be able to repeat the process, with funding for new work that respects existing commitments. The detailed roadmap explains who does the work, what must be ready and what stops a stage. Named appointments and delivery dates are open.
+A first expansion review comes after at least three operating months. A second local team should be able to repeat the process, with funding for new work that respects existing commitments. The detailed roadmap lists what each step needs before it is done and who decides. Named appointments and delivery dates are open.
 
 ### What the public can follow
 

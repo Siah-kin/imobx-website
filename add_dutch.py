@@ -17,8 +17,8 @@ def add_dutch(root):
     nl = json.loads(table_path.read_text()) if table_path.exists() else {}
     missing = set()
 
-    def lookup(en_escaped):
-        en = html.unescape(en_escaped).strip()
+    def lookup(en_escaped, key=None):
+        en = html.unescape(key if key else en_escaped).strip()
         if not en:
             return en_escaped
         if en not in nl:
@@ -45,8 +45,12 @@ def add_dutch(root):
         if 'data-en=' not in source and 'data-aria-en=' not in source:
             continue
         source = re.sub(r'\sdata-([a-z]+-)?nl="[^"]*"', '', source)  # rebuilds start clean
-        source = re.sub(r'data-((?:aria-|alt-|title-)?)en="([^"]*)"',
-                        lambda m: f'data-{m.group(1)}en="{m.group(2)}" data-{m.group(1)}nl="{lookup(m.group(2))}"', source)
+        # data-nl-key="<key>" (placed right after data-en) takes the Dutch from that key of nl.json instead of the English text,
+        # for the rare word that needs two Dutch forms for one English form. The attribute stays on the element, so a second
+        # pass over built pages gives the same Dutch (the step is idempotent).
+        source = re.sub(r'data-((?:aria-|alt-|title-)?)en="([^"]*)"(?:\s+data-nl-key="([^"]*)")?',
+                        lambda m: (f'data-{m.group(1)}en="{m.group(2)}"' + (f' data-nl-key="{m.group(3)}"' if m.group(3) else '')
+                                   + f' data-{m.group(1)}nl="{lookup(m.group(2), m.group(3))}"'), source)
         block = re.search(r'(<script[^>]*id="contact-route-data"[^>]*>)(.*?)(</script>)', source, re.S)
         if block:
             data = route_pairs(json.loads(block.group(2)))

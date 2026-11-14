@@ -61,7 +61,7 @@ The token's purpose is set by four rules, and they apply to all of the community
 
 **Volume.** The community's work runs on income it has earned, spent under a budget its members agree. Each family's payment first covers what the family has committed to: building, maintenance and a possible exit payment. Wages, new houses and reserves come from what is left. The token's fee adds to that.
 
-**Verify.** Anyone can check where the fees went. Every payment the project makes is open too, with the name of who approved it. Personal details stay private. A record shows that a payment was made. Independent checks and the supporting documents show whether the work was done.
+**Verify.** Anyone can check where the fees went. Every payment the project makes is open too, with the role of whoever approved it. Personal details stay private. A record shows that a payment was made. Independent checks and the supporting documents show whether the work was done.
 
 **Vote.** Housing decisions stay one member, one vote. Holding more tokens adds nothing to anyone's vote on housing, and neither do more posts or more time online. On the token's own rules, the weight of a vote comes mainly from work that other people have confirmed.
 

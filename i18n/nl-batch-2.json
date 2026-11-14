@@ -1,12 +1,5 @@
 [
  {
-  "en": "A shared digital record that shows who approved a payment and when.",
-  "pt": "Um registro digital compartilhado que mostra quem aprovou um pagamento e quando.",
-  "pages": [
-   "blockchain.html"
-  ]
- },
- {
   "en": "Anyone.",
   "pt": "Qualquer pessoa.",
   "pages": [
@@ -52,13 +45,6 @@
  {
   "en": "Data",
   "pt": "Dados",
-  "pages": [
-   "blockchain.html"
-  ]
- },
- {
-  "en": "Each IMOBX payment, and who approved it, would be recorded on Arc, a public blockchain, so anyone can check it. None of this runs yet: the first project will test it.",
-  "pt": "Cada pagamento da IMOBX, e quem o aprovou, ficaria registrado na Arc, uma blockchain pública, para que qualquer pessoa possa conferir. Nada disto funciona ainda: o primeiro projeto vai testar.",
   "pages": [
    "blockchain.html"
   ]
@@ -768,13 +754,6 @@
  {
   "en": "Deck",
   "pt": "Apresentação",
-  "pages": [
-   "reference.html"
-  ]
- },
- {
-  "en": "Each correction needs a date and a named source. A new decision also needs the name of the person who approved it and a link to its basis.",
-  "pt": "Correções e novas decisões precisam indicar data, quem forneceu a informação, quem aprovou a mudança e a evidência correspondente.",
   "pages": [
    "reference.html"
   ]
@@ -1663,13 +1642,6 @@
   ]
  },
  {
-  "en": "USDC on the Arc network is under consideration; it shows who approved each payment.",
-  "pt": "USDC na rede Arc está em estudo; mostra quem aprovou cada pagamento.",
-  "pages": [
-   "transparency.html"
-  ]
- },
- {
   "en": "+9.13%",
   "pt": "+9,13%",
   "pages": [
@@ -1733,8 +1705,8 @@
   ]
  },
  {
-  "en": "Named people with spending limits, checked by someone else and accountable to residents and funders.",
-  "pt": "Pessoas identificadas, com limites de gasto, conferidas por outra pessoa e prestando contas a moradores e financiadores.",
+  "en": "People in defined roles with spending limits, checked by someone else and accountable to residents and funders.",
+  "pt": "Pessoas com função definida, com limites de gasto, conferidas por outra pessoa e prestando contas a moradores e financiadores.",
   "pages": [
    "why.html"
   ]

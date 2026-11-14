@@ -177,21 +177,21 @@
      "conselho de várias assinaturas",
      "várias assinaturas"
     ],
-    "meaning": "O recurso só sai quando mais de uma pessoa, com nome conhecido, aprova o pagamento."
+    "meaning": "O recurso só sai quando mais de uma pessoa aprova o pagamento."
    },
    "en": {
     "forms": [
      "council of several signers",
      "several signers"
     ],
-    "meaning": "Funding moves only when more than one named person approves the payment."
+    "meaning": "Funding moves only when more than one person approves the payment."
    },
    "nl": {
     "forms": [
      "raad van meerdere ondertekenaars",
      "meerdere ondertekenaars"
     ],
-    "meaning": "Financiering gaat pas weg als meer dan één persoon met naam de betaling goedkeurt."
+    "meaning": "Financiering gaat pas weg als meer dan één persoon de betaling goedkeurt."
    }
   },
   {
@@ -201,19 +201,19 @@
     "forms": [
      "prestação de contas"
     ],
-    "meaning": "Cada pagamento que a IMOBX faz: para quê, quanto, quem aprovou e quando. Qualquer pessoa pode conferir. Seus dados pessoais e seus pagamentos continuam privados."
+    "meaning": "Cada pagamento que a IMOBX faz: para quê, quanto, qual função aprovou e quando. Qualquer pessoa pode conferir. Seus dados pessoais e seus pagamentos continuam privados."
    },
    "en": {
     "forms": [
      "accounting"
     ],
-    "meaning": "Every payment IMOBX makes: what it was for, how much, who approved it and when. Anyone can check it. Your personal data and your own payments stay private."
+    "meaning": "Every payment IMOBX makes: what it was for, how much, which role approved it and when. Anyone can check it. Your personal data and your own payments stay private."
    },
    "nl": {
     "forms": [
      "boekhouding"
     ],
-    "meaning": "Elke betaling die IMOBX doet: waarvoor, hoeveel, wie het goedkeurde en wanneer. Iedereen kan het nagaan. Jouw persoonsgegevens en jouw eigen betalingen blijven privé."
+    "meaning": "Elke betaling die IMOBX doet: waarvoor, hoeveel, welke rol het goedkeurde en wanneer. Iedereen kan het nagaan. Jouw persoonsgegevens en jouw eigen betalingen blijven privé."
    }
   },
   {
@@ -380,7 +380,7 @@
     "forms": [
      "toegangslijst"
     ],
-    "meaning": "De lijst van mensen die de diensten en voordelen van de gemeenschap kunnen gebruiken. De token is je sleutel tot die lijst."
+    "meaning": "De lijst van mensen die de diensten en voordelen van de gemeenschap kunnen gebruiken. Het token is je sleutel tot die lijst."
    }
   },
   {

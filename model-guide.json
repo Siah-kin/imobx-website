@@ -1100,8 +1100,8 @@
         "Each time funding is changed into another currency: how much went in, the rate, the fees and how much came out."
       ],
       [
-        "Quem aprovou cada gasto, qual etapa da obra foi conferida e quais diferenças ou falhas ainda precisam de explicação.",
-        "Who approved each expense, which building stage was checked, and which differences or failures still need explaining."
+        "Qual função aprovou cada gasto, qual etapa da obra foi conferida e quais diferenças ou falhas ainda precisam de explicação.",
+        "Which role approved each expense, which building stage was checked, and which differences or failures still need explaining."
       ]
     ],
     "evidence_title": [
@@ -1793,8 +1793,8 @@
       "Rafael, co-founder of IMOBX, imagined 45 m² houses around a courtyard, with solar power, an orchard, play space and study rooms."
     ],
     "vision_caption": [
-      "Visão de Rafael · 30 de novembro de 2025. Ilustração conceitual feita com um gerador de imagens.",
-      "Rafael’s vision · 30 November 2025. Concept illustration made with an image generator."
+      "Visão de Rafael · 30 de novembro de 2025. Desenho do projeto do Rafael para a vila, não um anúncio de casas para alugar.",
+      "Rafael’s vision · 30 November 2025. A drawing of Rafael’s design for the village, not a listing of houses for rent."
     ],
     "vision_decisions": [
       "Os moradores ajudam a decidir o uso dos espaços comuns e as prioridades de manutenção. Essa participação não depende de investir. Uma votação sobre esses assuntos não muda o contrato de uma família, e quem investe recebe somente os direitos escritos no seu acordo.",
@@ -2240,8 +2240,8 @@
           "Who answers for it"
         ],
         [
-          "Pessoas identificadas respondem pelos recursos e pelo trabalho. Cada uma tem um limite de gasto, outra pessoa confere o trabalho, e elas prestam contas a moradores e financiadores.",
-          "Named people answer for the funding and the work. Each has a spending limit, someone else checks their work, and they report to residents and funders."
+          "Pessoas com função definida respondem pelos recursos e pelo trabalho. Cada uma tem um limite de gasto, outra pessoa confere o trabalho, e elas prestam contas a moradores e financiadores.",
+          "People in defined roles answer for the funding and the work. Each has a spending limit, someone else checks their work, and they report to residents and funders."
         ]
       ]
     ],
@@ -2304,8 +2304,8 @@
       "Our plan: every real that comes in is recorded, and funding given for a purpose is spent on that purpose. The rest pays taxes and bills first, then the reserves and what we promised families, then new houses. Investors come last, and only if funding is left and a written agreement allows it."
     ],
     "first_costs": [
-      "Os fundadores pagam os primeiros custos por conta própria: o parecer do advogado e a avaliação independente do apartamento de Guadalupe, onde uma família mora de aluguel hoje, num prédio que a construtora do Rafael construiu. A campanha de financiamento coletivo abre depois que a cooperativa for registrada.",
-      "The founders pay the first costs themselves: the lawyer’s opinion and the independent valuation of the Guadalupe flat, where a family rents today, in a building that Rafael’s company built. The crowdfunding campaign opens once the cooperative is registered."
+      "Os fundadores pagam os primeiros custos por conta própria: o parecer do advogado, o registro da cooperativa, os papéis do imóvel, a elaboração de um orçamento de obra em reais e a avaliação independente do apartamento de Guadalupe. Uma família mora de aluguel nesse apartamento hoje, num prédio que a construtora do Rafael construiu. A campanha de financiamento coletivo abre depois que a cooperativa for registrada.",
+      "The founders pay the first costs themselves: the lawyer’s opinion, the registration of the cooperative, the property papers, the drawing up of a building budget in reais and the independent valuation of the Guadalupe flat. A family rents that flat today, in a building that Rafael’s company built. The crowdfunding campaign opens once the cooperative is registered."
     ]
   },
   "rent_page": {
@@ -2406,8 +2406,8 @@
       "For your family, daily life stays the same: you pay in reais, as you pay rent today, and you can follow every repair request or complaint."
     ],
     "key": [
-      "Quando vizinhos juntam recursos para construir casas, a primeira pergunta é sempre: para onde vão os recursos? A IMOBX quer que a resposta fique aberta a todos. Os pagamentos, e quem os aprovou, poderão ficar num registro distribuído: uma lista digital compartilhada que qualquer morador ou financiador pode conferir. Já está decidido: contas bancárias e contratos assinados vêm primeiro. Quanto do resto irá para o registro distribuído ainda está em aberto.",
-      "When neighbours pool funding for houses, the first question is always: where does the funding go? IMOBX wants the answer open to everyone. Payments, and who approved them, may be kept on a distributed ledger: a shared digital list that any resident or funder can check. Decided: bank accounts and signed agreements come first. How much more goes on the ledger is still open."
+      "Quando vizinhos juntam recursos para construir casas, a primeira pergunta é sempre: para onde vão os recursos? A IMOBX quer que a resposta fique aberta a todos. Os pagamentos, e a função de quem aprovou cada um, poderão ficar num registro distribuído: uma lista digital compartilhada que qualquer morador ou financiador pode conferir. Já está decidido: contas bancárias e contratos assinados vêm primeiro. Quanto do resto irá para o registro distribuído ainda está em aberto.",
+      "When neighbours pool funding for houses, the first question is always: where does the funding go? IMOBX wants the answer open to everyone. Payments, and the role that approved each one, may be kept on a distributed ledger: a shared digital list that any resident or funder can check. Decided: bank accounts and signed agreements come first. How much more goes on the ledger is still open."
     ],
     "toc": [
       [
@@ -2489,8 +2489,8 @@
           "IMOBX’s accounting: public, if it goes on the ledger"
         ],
         [
-          "Para que foi cada pagamento da IMOBX, o valor, quem aprovou e quando, e de qual parte do orçamento saiu.",
-          "What each IMOBX payment was for, how much, who approved it and when, and which budget it came from."
+          "Para que foi cada pagamento da IMOBX, o valor, qual função o aprovou e quando, e de qual parte do orçamento saiu.",
+          "What each IMOBX payment was for, how much, which role approved it and when, and which budget it came from."
         ],
         [
           "Qualquer pessoa.",
@@ -2641,8 +2641,8 @@
           "Management"
         ],
         [
-          "Tarefas, aprovações, limites de gasto e quem ocupa cada função",
-          "Tasks, approvals, spending limits and who holds each role"
+          "Tarefas, aprovações, limites de gasto e a lista de funções",
+          "Tasks, approvals, spending limits and the list of roles"
         ],
         [
           "Compartilhado no bairro",
@@ -2708,8 +2708,8 @@
         "Shared decisions are one member, one vote. Token holders vote only on the token’s own rules, and a family’s housing agreement changes only under the terms that family signed and Brazilian law."
       ],
       [
-        "As contas da obra só são pagas com recursos já garantidos; a negociação sustenta o trabalho em volta das casas.",
-        "Building bills are paid only from funding that is already secured; trading supports the work around the houses."
+        "As contas da obra só são pagas com recursos já assegurados; as taxas do token, se houver, apoiam o trabalho em volta das casas.",
+        "Building bills are paid only from funding that is already secured; any token fees support the work around the houses."
       ]
     ],
     "limits_title": [
@@ -2830,8 +2830,8 @@
     ],
     "never": [
       [
-        "Começamos a construir uma casa só quando o financiamento dela estiver garantido; a negociação sustenta o trabalho em volta dela.",
-        "We start building a house only when its funding is secured; trading supports the work around it."
+        "Começamos a construir uma casa só quando o financiamento dela estiver assegurado; as taxas do token, se houver, apoiam o trabalho em volta dela.",
+        "We start building a house only when its funding is secured; any token fees support the work around it."
       ],
       [
         "Mostramos o avanço com provas e deixamos o preço para o mercado.",
@@ -2881,8 +2881,8 @@
           "Verify."
         ],
         [
-          "Cada pagamento e quem o aprovou ficam no registro distribuído, onde qualquer pessoa pode conferir. Várias pessoas identificadas aprovam cada pagamento, e elas só podem aprovar o que está no orçamento publicado.",
-          "Every payment and who approved it goes on the ledger, where anyone can check it. Several named signers approve each payment, and they can approve only what is in the published budget."
+          "Cada pagamento e a função que o aprovou ficam no registro distribuído, onde qualquer pessoa pode conferir. Várias pessoas, identificadas pela função, aprovam cada pagamento, e elas só podem aprovar o que está no orçamento publicado.",
+          "Every payment and which role approved it goes on the ledger, where anyone can check it. Several signers, named by role, approve each payment, and they can approve only what is in the published budget."
         ]
       ],
       [
@@ -2914,8 +2914,8 @@
         "Holders vote on the token’s rules. In the cooperative: one member, one vote."
       ],
       [
-        "No plano, qualquer pessoa pode conferir cada pagamento e quem o aprovou.",
-        "In the plan, anyone can check each payment and who approved it."
+        "No plano, qualquer pessoa pode conferir cada pagamento e qual função o aprovou.",
+        "In the plan, anyone can check each payment and which role approved it."
       ],
       [
         "Trave seus tokens por um período definido, como promessa de ficar com o projeto.",
@@ -2971,8 +2971,8 @@
           "Backing"
         ],
         [
-          "quem acredita no projeto fica com o token",
-          "people who believe in the project hold the token"
+          "Quem acredita no projeto fica com o token.",
+          "People who believe in the project hold the token."
         ]
       ],
       [
@@ -2981,8 +2981,8 @@
           "Fee"
         ],
         [
-          "cada negociação paga uma taxa para a comunidade",
-          "each trade pays a fee to the community"
+          "Cada negociação do token paga uma taxa para a comunidade.",
+          "Each trade of the token pays a fee to the community."
         ]
       ],
       [
@@ -2991,8 +2991,8 @@
           "Checked work"
         ],
         [
-          "as taxas pagam salários por trabalho conferido e constroem novas casas",
-          "the fees pay wages for checked work and build new houses"
+          "As taxas pagam salários por trabalho conferido.",
+          "The fees pay wages for checked work."
         ]
       ],
       [
@@ -3001,8 +3001,8 @@
           "More houses"
         ],
         [
-          "mais casas trazem mais vizinhos para a comunidade",
-          "more houses bring more neighbours into the community"
+          "As taxas também constroem novas casas.",
+          "The fees also build new houses."
         ]
       ],
       [
@@ -3011,8 +3011,8 @@
           "More backing"
         ],
         [
-          "uma comunidade que cresce atrai mais gente que quer apoiá-la",
-          "a growing community draws more people who want to back it"
+          "Uma comunidade que cresce pode atrair mais gente que quer apoiá-la.",
+          "A growing community can draw more people who want to back it."
         ]
       ]
     ],

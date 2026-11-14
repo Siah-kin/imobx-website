@@ -50,8 +50,8 @@
 /* Ten-chapter tour (owner, 9 Nov): one picture or drawing per chapter, links to the pages. */
 .tour-figure{margin:0 0 18px}
 .tour-figure img,.tour-figure svg{display:block;width:100%;height:auto;max-height:230px;object-fit:cover;border-radius:4px}
-.tour-figure figcaption{font-size:14px;color:#526571;margin-top:6px;max-width:none}
-.tour-dialog-content .tour-figure figcaption{font-size:14px;line-height:1.4}
+.tour-figure figcaption{font-size:15px;color:#526571;margin-top:6px;max-width:none}
+.tour-dialog-content .tour-figure figcaption{font-size:15px;line-height:1.4}
 .tour-roles{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .tour-roles a.tour-role{display:flex;align-items:center;min-height:56px;padding:10px 16px;border:2px solid #276578;border-radius:4px;color:#193d4e;font-weight:700;text-decoration:none;background:#fff;line-height:1.3}
 .tour-roles a.tour-role:hover,.tour-roles a.tour-role:focus-visible,.tour-roles a.tour-role.is-chosen{background:#edf5f7}

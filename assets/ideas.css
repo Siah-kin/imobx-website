@@ -52,3 +52,13 @@
 .resources-page #documents .resource-card:last-child{grid-column:auto}
 .resources-page #media-resources{margin-top:36px}
 @media (max-width:900px){.resources-page #documents>.resource-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Resources, founders: two jump links at the top of the section (44 px tall through the link-line rule) */
+.founder-jump{display:flex;flex-wrap:wrap;gap:0 28px;margin:4px 0 8px}
+#founder-rafael,#founder-john{scroll-margin-top:24px}
+
+/* Resources, the founders' stories (decision 73): pull quotes. A line the story already says, set larger and quiet, between thin teal rules.
+   Not a heading and not in any contents list. The column is the 32em reading measure of the page (512 px). */
+.band-page .pull-quote{margin:40px 0;padding:26px 0;max-width:32rem;border-top:1px solid #4A90A4;border-bottom:1px solid #4A90A4}
+.band-page .pull-quote p{margin:0;max-width:none;font-size:1.5rem;line-height:1.4;font-weight:400;color:#193D4E;text-wrap:balance}
+@media (max-width:600px){.band-page .pull-quote{margin:32px 0;padding:22px 0}.band-page .pull-quote p{font-size:1.4rem}}

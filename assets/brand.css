@@ -287,6 +287,8 @@ figcaption p{margin:0}
 body{line-height:1.5}
 .home-purchase-steps p,.home-village-vision>p{line-height:1.5}
 }
+/* The status bar on the narrowest phones: 14 px keeps it to two lines in Portuguese and Dutch. */
+@media(max-width:480px){.review{font-size:14px}}
 
 /* Phone tables: stack each row, with the column name above every cell, so no column sits off screen. */
 @media(max-width:600px){.guide-paper .guide-table table,.guide-table table{display:block;min-width:0;width:100%}
@@ -345,7 +347,6 @@ main>.partner-line{width:min(1200px,90%);margin-left:auto;margin-right:auto}
   .js-menu .site-nav .site-links{display:none}
   .js-menu .site-nav.menu-open .site-links{display:flex;flex-direction:column;align-items:flex-start;gap:0;grid-column:1 / -1;grid-row:2;padding:8px 0 12px}
   .js-menu .site-nav.menu-open .site-links a{display:block;width:100%;padding:12px 0;border-top:1px solid #D9E3E8;text-align:left}
-  .review{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 }
 
 /* Attention parts on every page (owner, 25 Oct): one orange card and one orange action per page.
@@ -584,7 +585,7 @@ html .option-b :is(a,button):focus-visible{outline:3px solid #fff;outline-offset
 .site-footer .footer-column h2{font:700 16px/1.4 var(--sans);letter-spacing:0;color:#fff;margin:0 0 8px}
 .site-footer .footer-column ul{list-style:none;padding:0;margin:0}
 .site-footer .footer-column a{display:inline-flex;align-items:center;min-height:44px;line-height:1.35;padding:6px 0}
-@media(max-width:800px){.site-footer .footer-inner{grid-template-columns:1fr;gap:32px}.site-footer{padding:32px 0 40px}.site-footer .footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
+@media(max-width:800px){.site-footer .footer-inner{grid-template-columns:1fr;gap:32px}.site-footer{padding:32px 0 40px}.site-footer .footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.site-footer .footer-column:last-child{grid-column:1/-1}.site-footer .footer-column:last-child ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}}
 @media(max-width:400px){.site-footer .footer-columns{gap:24px 16px}}
 
 /* Tablet menu (10 Nov): between 701 and 1000 px the links are folded away, so the Menu button must show here too */
@@ -625,7 +626,11 @@ html .option-b .housing-links .nav-item>a:hover{background:#A84B00;color:#fff}
 main .link-line>a,main section>a[href],main.archive-gateway>a[href],.on-this-page li a,.guide-jump a,.archive-sections li>a,.idea-source a,.card-link a,.iceberg-onward a{display:inline-flex;align-items:center;min-height:44px}
 .archive-downloads{display:flex;flex-wrap:wrap;align-items:center;gap:0 8px}
 .archive-downloads a{display:inline-flex;align-items:center;min-height:44px}
-.source-note a{display:inline;padding-block:5px}
+.source-note a{display:inline-block;min-height:44px;box-sizing:border-box;padding-block:12px;line-height:1.3}
+.source-note .source-item{display:block}
+/* Whitepaper and Pilot and building guide, section lists on a phone: a wrapped title keeps one even line height, and the 44 px link sits beside it or under it */
+@media(min-width:601px){.archive-sections li{display:flex;align-items:center;justify-content:space-between;column-gap:24px;position:relative;max-width:760px}.archive-sections li>span:empty{position:absolute}.archive-sections li>a{flex:none}}
+@media(max-width:600px){.archive-sections li{display:flex;flex-wrap:wrap;align-items:center;column-gap:12px;position:relative}.archive-sections li>span:empty{position:absolute}.archive-sections li strong{flex:1 1 12rem;line-height:1.4;padding-block:6px}}
 .contact-routes .contact-route input{width:24px;height:24px;margin-top:2px}
 .archive-downloads a{min-width:44px;justify-content:center}
 .site-footer .footer-column a{min-width:44px}

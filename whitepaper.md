@@ -6,7 +6,7 @@
 
 IMOBX is preparing a rent-to-own housing project in Rio de Janeiro. A family rents a home, part of each payment counts towards buying it, and the whole home is transferred to the family once the agreed conditions are met. The plan brings together local building work, written agreements, maintenance and accounts people can check. IMOBX will be a housing cooperative. It is not registered yet.
 
-**What exists today.** The September 2026 cost estimate by Rafael, co-founder and civil engineer, for one flat and for five flats; his January 2026 report on a two-loft contract; drawings; a village illustration made with an image generator; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
+**What exists today.** The September 2026 cost estimate by Rafael, co-founder and civil engineer, for one flat and for five flats; his January 2026 report on a two-loft contract; drawings; a drawing of Rafael’s design for the village; and construction photographs supplied by the team. The drawings and photographs are not a listing of available houses.
 
 **What is not decided.** The property. Each home’s exact price and monthly payment, and how much of each payment counts towards buying the home. Repairs, missed payments and leaving. The cooperative’s registration, and Rafael’s and John’s responsibilities, which need written agreements. Funding and what funders receive. The benefits for people who hold the IMOBX token, which are chosen later from what IMOBX can actually supply.
 
@@ -44,7 +44,7 @@ Rafael’s building company is the proposed contractor. Under the plan, a founde
 
 ### Rafael's village vision, 30 November 2025
 
-Rafael’s vision is 45 m² two-level houses facing a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The aim is a path to ownership, lower household costs and places to meet and learn. The [illustration](properties.html#visao-rafael) shows this vision, not a completed village, and it was made with an image generator.
+Rafael’s vision is 45 m² two-level houses facing a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The aim is a path to ownership, lower household costs and places to meet and learn. The [drawing](properties.html#visao-rafael) shows this vision as Rafael designed it. It is not a completed village and not a listing of houses for rent.
 
 Under the plan, residents agree who cares for shared spaces, how study rooms are used and how repairs are paid for. Solar savings depend on real equipment and usage figures, and some electricity charges remain. [ANEEL’s distributed-generation guidance](https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida/) sets out the rules for small solar systems; it gives no figures for these houses.
 
@@ -146,14 +146,14 @@ Whatever a vote decides, including a token vote, only the family and IMOBX toget
 
 After a house is built, the shared work carries on: repairs, checks, records and the next house. The IMOBX token would give the community an income for that work. Holding it is optional. It is planned as a self-compounding community-funding token, a crypto token that people would buy and sell on a public market on the Arc blockchain, and every trade would pay the fee described in section 5.
 
-Self-compounding is the model Ethervista introduced. Many token projects raise funds by selling tokens to early investors before launch, or by creating new tokens to pay for their work. IMOBX holds no presale, and the supply is fixed at 1,000,000 tokens: three quarters would sit locked in the trading pool, and the team would receive none. The community’s income from the token would be the fee alone.
+IMOBX builds on the self-compounding model that Ethervista runs. Many token projects raise funds by selling tokens to early investors before launch, or by creating new tokens to pay for their work. IMOBX holds no presale, and the supply is fixed at 1,000,000 tokens: three quarters would sit locked in the trading pool, and the team would receive none. The community’s income from the token would be the fee alone.
 
 The token’s use comes from four rules, the four V’s:
 
 | Rule | What it means |
 |---|---|
 | Volume | Trading fees would give the community an income of its own. Before launch, we publish who can change the fee and who holds the token’s admin keys, meaning who can change its settings. |
-| Verify | Anyone, with or without a token, could check where each fee went and who approved it, while personal details stay private. In the plan, several named signers approve each payment, and only within the published budget. |
+| Verify | Anyone, with or without a token, could check where each fee went and which role approved it, while personal details stay private. In the plan, several signers, named by role, approve each payment, and only within the published budget. |
 | Vote | On the token’s own rules, a vote’s weight would come mainly from work that others have confirmed, and the size of a holding would count for less. Housing and shared matters stay one member, one vote, and holding tokens adds nothing to a housing vote. |
 | Vow | The commitments no vote can break, starting with each family’s housing agreement. |
 
@@ -197,7 +197,7 @@ Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital 
 
 ## 10. Pilot roadmap and evidence
 
-The [roadmap](project-development.html#stages) follows six stages: legal structure and property, resident participation, first houses, payment records people can check, funding and account review, and further projects. Each stage explains who does the work, what must happen first and which records are needed before it proceeds. Construction dates depend on the chosen project, funding and permissions. Legal preparation, resident discussions and digital trials can progress alongside one another.
+The [roadmap](project-development.html#stages) lays out six steps to the first flats: costs estimated, preparing (independent checkers and a plot), registering the cooperative, the crowdfunding campaign, a family signing its rent-to-own agreement, and building five flats once the funding and permits are in place. Each step lists what it needs before it is done. Together they are stage 1 of three. Stage 2 is more neighbourhoods online and stage 3 a distributed economy, and each stage begins once the one before has shown results for the families living in it. Construction dates depend on the chosen project, funding and permissions.
 
 After families move in, the plan follows at least three months before reviewing expansion. A second local team should be able to repeat the work.
 
@@ -209,7 +209,7 @@ After families move in, the plan follows at least three months before reviewing 
 | Families | Repair requests, unresolved issues, participation and purchase progress. |
 | Continuing the project | Bills covered during low trading and funding for the next houses. |
 
-Service targets depend on the first project’s needs and resident participation. An unresolved property right, funding gap or unsafe building prevents the affected stage from proceeding. Expansion requires evidence that there is enough funding for promises already made. Success is measured by how well each family is housed.
+Service targets depend on the first project’s needs and resident participation. An unresolved property right, funding gap or unsafe building prevents the affected step from proceeding. Expansion requires evidence that there is enough funding for promises already made. Success is measured by how well each family is housed.
 
 ## 11. Partner participation
 

@@ -178,27 +178,27 @@ Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/parecer
 
 Source: [IMOBX: the Self-compounding page](https://imobx.org/self-compounding.html). Sets out the token’s fee, where it goes and the four V’s as the project describes them.
 
-**Presenter notes:** The first house is funded outside the token: once the IMOBX housing cooperative is registered, it will run a crowdfunding campaign in reais and apply for grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. The fee would add to the houses budget over time. Buyers’ payments would go into the trading pool, so none of them would reach IMOBX. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of the 35% would go to new houses; if the token opens with a sale on Arctide’s bonding curve, that part would go to Arctide. Volume: the fees would give the community an income of its own. Verify: anyone could check where each fee went and who approved it. Vote: on the token’s own rules, weight would come mainly from work others have confirmed; members’ decisions stay one member, one vote. Vow: the commitments no vote can break, starting with each family’s housing agreement. Benefits for holders are chosen later from what IMOBX can actually supply. We start building a house only when its funding is secured.
+**Presenter notes:** The first house is funded outside the token: once the IMOBX housing cooperative is registered, it will run a crowdfunding campaign in reais and apply for grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. The fee would add to the houses budget over time. Buyers’ payments would go into the trading pool, so none of them would reach IMOBX. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of the 35% would go to new houses; if the token opens with a sale on Arctide’s bonding curve, that part would go to Arctide. Volume: the fees would give the community an income of its own. Verify: anyone could check where each fee went and which role approved it. Vote: on the token’s own rules, weight would come mainly from work others have confirmed; members’ decisions stay one member, one vote. Vow: the commitments no vote can break, starting with each family’s housing agreement. Benefits for holders are chosen later from what IMOBX can actually supply. We start building a house only when its funding is secured.
 
 
 
-## 10. Each stage needs evidence before it advances
+## 10. Six steps to the first flats, each with what it needs
 
-The roadmap names proposed roles and conditions for proceeding.
-
-
-
-- Property rights, household terms and budgets underpin the first houses.
-
-- Digital payment trials would run alongside them; the token is a separate, later step.
-
-- Expansion follows operating results and funding for existing commitments.
+The path to the first flats is six steps, and it is stage 1 of three.
 
 
 
-Source: [IMOBX project stages](https://imobx.org/project-development.html). Sets out the stages and what must be ready in each. It sets no dates.
+- Costs are estimated. Independent checkers and a plot come next, then the cooperative is registered.
 
-**Presenter notes:** The six stages are legal structure and property; resident participation; first houses; payment records people can check; funding and account review; more houses and owner partnerships. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Olympus is Rafael’s own construction company and the proposed builder. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists responsibilities and reasons to pause each stage.
+- The campaign opens before a family signs, and building starts once the full cost is in the bank.
+
+- Stages 2 and 3 begin once the stage before has shown results. The token is a separate, later step.
+
+
+
+Source: [IMOBX project stages](https://imobx.org/project-development.html). Sets out the six steps and the three stages, and what each needs. It sets no dates.
+
+**Presenter notes:** The path to the first flats has six steps: costs estimated; preparing, with independent checkers and a plot; registering the cooperative; the crowdfunding campaign; a family signing its rent-to-own agreement; and building five flats. They are stage 1 of three, followed by more neighbourhoods online and a distributed economy. Rafael contributes construction and local knowledge; John contributes communication and digital coordination. Olympus is Rafael’s own construction company and the proposed builder. Its appointment would need approval by someone independent of the builder. A community or charitable partner is a possible relationship. Construction dates depend on the chosen project, funding and permissions. A review after at least three operating months is proposed before expanding. The roadmap lists what each step needs before it is done.
 
 
 

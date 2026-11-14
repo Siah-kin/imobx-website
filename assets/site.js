@@ -300,7 +300,7 @@ initImageViewer();
         'governance.html': {
           now: ['Quem decide agora', 'Who decides now', 'Wie nu beslist'],
           deciding: ['Decisões em aberto', 'Open decisions', 'Open besluiten'],
-          'token-rules': ['Decisões sobre o token', 'Token decisions', 'Besluiten over de token'],
+          'token-rules': ['Decisões sobre o token', 'Token decisions', 'Besluiten over het token'],
           residents: ['Decisões dos moradores', 'Residents’ decisions', 'Besluiten van bewoners'],
           recorded: ['Registro das decisões', 'Decision records', 'Vastgelegde besluiten']
         }

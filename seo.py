@@ -27,7 +27,7 @@ PAGES = {
                         'Hoje os fundadores decidem. No plano, quem tem o token vota as regras do token, e os membros decidem um membro, um voto.'),
     'properties.html': ('Lofts e terreno: desenhos e fotos · IMOBX Rio', 'Lofts and site: drawings and photos · IMOBX Rio',
                         'Os dois lofts da construtora do Rafael e a vila que ele imagina para mais adiante. Estudos de projeto, não anúncios de casas.'),
-    'resources.html': ('Recursos: documentos e fontes da IMOBX · IMOBX Rio', 'Resources: IMOBX documents and sources · IMOBX Rio',
+    'resources.html': ('Documentos e fontes da IMOBX · IMOBX Rio', 'Resources: IMOBX documents and sources · IMOBX Rio',
                        'Os documentos do projeto para baixar, as ideias que formaram a IMOBX, quem faz o quê e as fontes de cada fato.'),
     'tour.html': ('Conheça a IMOBX · IMOBX Rio', 'Take a tour of IMOBX · IMOBX Rio',
                   'Um passeio pela IMOBX: a necessidade, o aluguel com compra, quem constrói, para onde vai o financiamento, quem decide, o token e como participar.'),
@@ -39,7 +39,7 @@ PAGES = {
                  'Como o token opcional da IMOBX funciona: cada negociação paga uma taxa que financia a comunidade. As famílias nunca precisam dele.'),
     'jobs.html': ('Vagas: apoio à captação de recursos · IMOBX Rio', 'Jobs: fundraising support · IMOBX Rio',
                  'Uma vaga remota de apoio à captação de recursos da IMOBX.'),
-    'why.html': ('Por que moradia: aluguel, entrada e déficit · IMOBX Rio', 'Why housing: rent, down payments, the shortage · IMOBX Rio',
+    'why.html': ('Por que moradia: aluguel e déficit · IMOBX Rio', 'Why housing: rent and the shortage · IMOBX Rio',
                  'Por que tantas famílias pagam aluguel e não conseguem comprar: os números e as fontes.'),
     'privacy.html': ('Privacidade: o que este site coleta · IMOBX Rio', 'Privacy: what this site collects · IMOBX Rio',
                       'O que este site coleta, o que ele guarda no seu navegador e quem é responsável por ele.'),
@@ -70,7 +70,9 @@ def add_seo(root):
         text = re.sub(r'\s*<meta name="description"[^>]*>', '', text)
         text = re.sub(r'\s*<meta (?:property="og:[^"]*"|name="twitter:[^"]*")[^>]*>', '', text)
         text = re.sub(r'\s*<link rel="canonical"[^>]*>', '', text)
-        tags = (f'<meta name="description" content="{esc(description)}"><link rel="canonical" href="{url}">'
+        text = re.sub(r'\s*<meta name="robots"[^>]*>', '', text)
+        # Until the legal seat exists the site asks search engines not to list it (decision 58, point 4). robots.txt stays open so the tag can be read.
+        tags = (f'<meta name="robots" content="noindex"><meta name="description" content="{esc(description)}"><link rel="canonical" href="{url}">'
                 f'<meta property="og:type" content="website"><meta property="og:site_name" content="IMOBX Rio">'
                 f'<meta property="og:locale" content="pt_BR"><meta property="og:url" content="{url}">'
                 f'<meta property="og:title" content="{esc(title_pt)}"><meta property="og:description" content="{esc(description)}">'

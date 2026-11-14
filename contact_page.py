@@ -55,7 +55,7 @@ def build_contact(root, page, tr, esc, version):
     body += '<p id="enquiry-status" role="status" aria-live="polite"></p></section></section>'
 
     body += ('<figure class="contact-picture"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da vila que imaginamos" data-alt-pt="Ilustração conceitual da vila que imaginamos" data-alt-en="Concept illustration of the village we imagine" data-alt-nl="Conceptillustratie van het dorp dat we ons voorstellen">'
-             '<figcaption>' + t(('Ilustração conceitual da vila que imaginamos para mais adiante, feita com um gerador de imagens.', 'Concept illustration of the village we imagine for a later stage, made with an image generator.'), 'span') + '</figcaption></figure>')
+             '<figcaption>' + t(('Desenho do projeto do Rafael para a vila, não um anúncio de casas para alugar.', 'A drawing of Rafael’s design for the village, not a listing of houses for rent.'), 'span') + '</figcaption></figure>')
     body += '</main>'
     embedded = json.dumps(data, ensure_ascii=False).replace('<', '\\u003c')
     body += '<script id="contact-route-data" type="application/json">' + embedded + '</script>'

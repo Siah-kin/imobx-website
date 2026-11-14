@@ -12,6 +12,6 @@
 .about-founder figcaption{font-weight:700;font-size:16px;color:var(--ink);margin-top:8px}
 .about-picture{margin:28px 0 0}
 .about-picture img{display:block;width:100%;height:auto;max-height:440px;object-fit:cover;border-radius:4px}
-.about-picture figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.about-picture figcaption{font-size:15px;color:var(--muted);margin-top:8px}
 .about-now{border-top:1px solid var(--line);padding-top:32px}
 @media(max-width:760px){.about-founders{grid-template-columns:minmax(0,1fr)}.about-page h2{font-size:26px}.about-page .about-lead{font-size:21px}.about-founder{padding:22px 20px}}
