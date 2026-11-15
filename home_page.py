@@ -164,10 +164,7 @@ opening = (
           'fetchpriority="high"')
     + ''.join(f'<span class="pin" style="left:{x}%;top:{y}%" aria-hidden="true">{i}</span>' for i, (x, y) in enumerate(pins, 1))
     + '</div><ol class="pin-legend">' + ''.join(t('li', *row) for row in legend) + '</ol>'
-    + '<figcaption>' + t('span', 'Desenho do projeto do Rafael para a vila, não um anúncio de casas para alugar.',
-                         'A drawing of Rafael’s design for the village, not a listing of houses for rent.',
-                         'Een tekening van Rafaels ontwerp voor het dorp, geen aanbod van huizen om te huren.')
-    + '</figcaption></figure></div></section>')
+    + '</figure></div></section>')
 
 # ---------------------------------------------------------------- 2. the method
 steps = [

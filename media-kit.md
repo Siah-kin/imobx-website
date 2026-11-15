@@ -43,7 +43,7 @@ A IMOBX está preparando um primeiro projeto de moradia no Rio de Janeiro. As fa
 
 ### Rafael's neighbourhood vision
 
-Rafael describes two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. These features aim to support lower household costs, neighbourly life and learning. The [illustration](properties.html#visao-rafael) shows a plan, not a completed village. The January two-loft contract is a separate case.
+Rafael describes small blocks of flats around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. These features aim to support lower household costs, neighbourly life and learning. The [illustration](properties.html#visao-rafael) shows a plan, not a completed village. The January two-loft contract is a separate case.
 
 ## 5. Project facts and images
 

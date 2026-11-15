@@ -245,8 +245,7 @@
 #stages .route-after{margin-top:44px}
 #terms>p:last-child{margin-top:32px}
 
-/* design review fixes (10 Nov): a tighter top so the path shows on the first screen, a "Done" word beside the colour, one rule between folds, the lofts as a pair */
-.roadmap-page>h1{padding-top:36px}
+/* design review fixes (10 Nov; the title now starts where it does on every page, and the path still shows on the first screen): a "Done" word beside the colour, one rule between folds, the lofts as a pair */
 .roadmap-page>.guide-lead{padding-bottom:16px}
 .band-page>#stages{padding-top:36px}
 .route-path{margin-top:48px}

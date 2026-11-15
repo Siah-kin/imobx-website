@@ -1,7 +1,7 @@
 .contact-page{max-width:1120px}
 .contact-page h1{max-width:26ch;margin-bottom:12px}
 .contact-page .contact-intro{font-size:22px;line-height:1.5;max-width:34ch;margin:0 0 32px}
-.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:24px}
 .contact-card{border:1px solid var(--line);border-radius:6px;background:#fff;padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:190px}
 .contact-card-main{background:#edf5f7;border-color:#cfe2e8}
 .contact-card h2{font-size:24px;line-height:1.2;margin:0}

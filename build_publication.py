@@ -51,23 +51,6 @@ def version_label(item, lang):
     return f"{word} {item['version']}" + (f', {date}' if item['version'] == VERSION else '')
 
 
-MONTHS_PT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto',
-             'setembro', 'outubro', 'novembro', 'dezembro']
-MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
-             'September', 'October', 'November', 'December']
-
-
-# The date the site's pages last changed. The documents keep their own date (REVIEW_DATE).
-SITE_UPDATED = '2026-11-14'
-
-
-def status_bar_text():
-    """Visitor-facing status bar: the project status and the date the site last changed, without a version number."""
-    year, month, day = (int(part) for part in SITE_UPDATED.split('-'))
-    pt = f'Em preparação, {day:02d}/{month:02d}/{year}. A IMOBX será uma cooperativa habitacional, ainda não registrada.'
-    en = f'In preparation, updated {day} {MONTHS_EN[month - 1][:3]} {year}. IMOBX will be a housing cooperative. It is not registered yet.'
-    return pt, en
-
 
 # Main menu (owner, 26-28 Oct 2026, decisions 9-17): nouns name what is there; the one action is "Take part", which leads
 # to the contact page, where the safety note sits before the Telegram group button (owner, 28 Oct).
@@ -112,7 +95,7 @@ MENU = [
         ('governance.html', 'now', 'Quem decide agora', 'Who decides now', 'Who decides now?'),
         ('governance.html', 'deciding', 'O que estamos decidindo', 'What we’re deciding now', 'What are we deciding now?'),
         ('governance.html', 'token-rules', 'Regras dos detentores', 'Rules for holders', 'Who decides about the token?'),  # no 'token' in the menu: it shows on the homepage
-        ('governance.html', 'residents', 'Quando as famílias morarem nas casas', 'Once families live in the houses', 'Who decides once families live in the houses?'),
+        ('governance.html', 'residents', 'Quando as famílias morarem nos apartamentos', 'Once families live in the flats', 'Who decides once families live in the flats?'),
     ]),
     # Owner, 13 Nov (decision 55): About is in the main menu, between the project pages and Resources. It has no section list.
     ('about.html', 'Sobre', 'About', []),
@@ -307,7 +290,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{esc(description)}">
 <title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}{head}</head>
-<body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}"><div class="review" data-pt="{esc(status_bar_text()[0])}" data-en="{esc(status_bar_text()[1])}">{esc(status_bar_text()[0] if lang.startswith('pt') else status_bar_text()[1])}</div>
+<body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}">
 <a href="#main" class="skip" data-pt="Pular para o conteúdo" data-en="Skip to content">{'Pular para o conteúdo' if lang.startswith('pt') else 'Skip to content'}</a>
 {site_header(lang, current)}
 {body}
@@ -342,8 +325,8 @@ RESOURCE_CATALOG = [
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes')]},
     {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': VERSION,
      'shelf_pt': 'Guia para construir os primeiros apartamentos', 'shelf_en': 'Guide to building the first flats',
-     'shelf_description_pt': 'Plantas das casas, como os moradores participam e as etapas de obra que propomos.',
-     'shelf_description_en': 'House plans, how residents take part, and the building stages we propose.',
+     'shelf_description_pt': 'Plantas dos apartamentos, como os moradores participam e as etapas de obra que propomos.',
+     'shelf_description_en': 'Flat plans, how residents take part, and the building stages we propose.',
      'description_pt': 'Planos de moradia, participação dos moradores e etapas de desenvolvimento propostas.',
      'description_en': 'Housing plans, resident participation and proposed development stages.',
      'meta_pt': f'Inglês · rascunho · {DATE_PT}', 'meta_en': f'English · draft · {DATE_EN}',
@@ -449,12 +432,6 @@ for name in ['index.html', 'properties.html', 'jobs.html']:
                            target.read_text(), count=1, flags=re.S)
     if count != 1:
         raise ValueError(f'Expected one main header in {name}.')
-    review_pt, review_en = status_bar_text()
-    source, count = re.subn(r'<div class="review"[^>]*>.*?</div>',
-        lambda _: f'<div class="review" data-pt="{esc(review_pt)}" data-en="{esc(review_en)}">{esc(review_pt)}</div>',
-        source, count=1, flags=re.S)
-    if count != 1:
-        raise ValueError(f'Expected one review date in {name}.')
     source, count = re.subn(r'<footer class="footer(?: site-footer)?">.*?</footer>', lambda _: SITE_FOOTER, source, count=1, flags=re.S)
     if count != 1:
         raise ValueError(f'Expected one footer in {name}.')

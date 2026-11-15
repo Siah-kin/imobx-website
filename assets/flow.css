@@ -247,68 +247,24 @@
 .gov-flow.is-flowing .gv-lock,.gov-flow.is-flowing .gv-shackle{opacity:1;transition:opacity .4s ease 1.9s}
 @media (prefers-reduced-motion:reduce){.js-flow .gov-flow .gov-stage,.js-flow .gov-flow .gv-lock,.js-flow .gov-flow .gv-shackle{opacity:1!important;transform:none!important;transition:none!important}}
 @media (max-width:700px){.gov-stages{grid-template-columns:1fr;gap:32px}.gov-panel .gv-arrow{display:none}.gov-panel{max-width:260px}}
+/* Governance, stacked on a phone: each drawing is cropped to its shapes (6 units of air), so the first circle starts about 32px below the lead and the gaps between stages are equal.
+   The drawings share one viewBox so the titles line up when the stages sit side by side; the crop is only a margin on a phone. 1 unit = --u px. */
+@media (max-width:700px){
+  .gov-panel{--u:calc(min(100vw - 32px,260px)/300)}
+  .gov-panel.gv-p1{margin-top:calc(var(--u)*-63);margin-bottom:calc(var(--u)*-63)}
+  .gov-panel.gv-p2{margin-top:calc(var(--u)*-63);margin-bottom:calc(var(--u)*-20)}
+  .gov-panel.gv-p3{margin-top:calc(var(--u)*-41);margin-bottom:calc(var(--u)*-29)}
+}
 .gov-flow.is-flowing .gv-arrow{opacity:1;transition:opacity .4s ease .5s}
 .gov-panel .gv-label-outer{font-size:14px}
-/* The token's loop (owner, 29 Oct): use → people join → fees → checked work → more services → use.
-   Decision 59 (owner, 14 Nov): a drawing in each stop and, on the Self-compounding page, a table that pairs a street market with IMOBX. */
-.token-loop{margin:18px 0 34px;max-width:520px}
-.token-loop:not(.has-table){max-width:none;display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:24px 62px;align-items:center}
-.token-loop.has-table{max-width:none;margin:24px 0 18px}
-.loop-pair{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+/* The token's loop (owner, 29 Oct; decision 86, 15 Nov): a ring of five drawings. The layout of the section is in bands.css. */
 .loop-svg{display:block;width:100%;height:auto;overflow:visible}
 .loop-track{fill:none;stroke:#DDEAEE;stroke-width:14}
 .loop-arc{fill:none;stroke:#4A90A4;stroke-width:3;stroke-linecap:round}
 .loop-headpath{fill:#4A90A4}
 .loop-node>circle{fill:#fff;stroke:#276578;stroke-width:3}
 .loop-node.loop-start>circle{stroke:#276578;stroke-width:4.5}
-.loop-label{font:700 21px/1 Arial,Helvetica,sans-serif;fill:#193D4E}
-.loop-dot{fill:#193D4E;opacity:0}
-.loop-steps{list-style:none;margin:0;padding:0}
-.loop-steps li{margin:0 0 14px;line-height:1.5}
-.loop-steps strong{display:block;color:#193D4E}
-.loop-steps li.loop-return{color:#526571}
-.js-loop .loop-arc{stroke-dasharray:1;stroke-dashoffset:1;opacity:0}
-.js-loop .loop-node,.js-loop .loop-label{opacity:0}
-.js-loop.is-looping .loop-node,.js-loop.is-looping .loop-label{opacity:1;transition:opacity .4s ease calc(var(--i) * .4s)}
-.js-loop.is-looping .loop-arc{stroke-dashoffset:0;opacity:1;transition:stroke-dashoffset .5s ease calc(var(--i) * .4s + .2s),opacity .1s linear calc(var(--i) * .4s + .2s)}
-.js-loop.is-looping .loop-dot{opacity:1;transition:opacity .3s ease 2.2s}
-.js-loop.is-looping.loop-fade .loop-dot{opacity:0;transition:opacity .6s ease}
-.loop-lead{margin:18px 0 0}
-.loop-reverse{margin:8px 0 0}
-/* the table beside the circle */
-.paper .loop-table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.45;background:none}
-.paper .loop-table th,.paper .loop-table td{background:none;text-align:left;vertical-align:middle;border:0}
-.paper .loop-table tr:nth-child(even){background:none}
-.paper .loop-table thead th{font-size:14px;color:#526571;font-weight:700;padding:0 12px 8px;border-bottom:2px solid #D9E3E8}
-.paper .loop-table tbody tr{border-bottom:1px solid #D9E3E8}
-.paper .loop-table tbody th,.paper .loop-table tbody td{padding:12px 10px}
-.paper .loop-table tbody th{width:190px;white-space:nowrap;color:#193D4E;font-size:16px}
-.paper .loop-table tbody td:last-child{color:#2B4655}
-.loop-rowhead{display:flex;align-items:center;gap:10px}
 .loop-ri{width:40px;height:40px;flex:none}
-.loop-who{display:none}
-@media (max-width:1199px){
-  .token-loop.has-table .loop-svg{display:none}
-  .loop-pair{grid-template-columns:1fr}
-  .paper .loop-table thead{display:none}
-  .paper .loop-table,.paper .loop-table tbody,.paper .loop-table tr,.paper .loop-table th,.paper .loop-table td{display:block}
-  .paper .loop-table tbody tr{padding:14px 0}
-  .paper .loop-table tbody th,.paper .loop-table tbody td{padding:0;width:auto;white-space:normal}
-  .paper .loop-table tbody th{margin-bottom:6px}
-  .paper .loop-table tbody td{padding-left:50px;margin:0 0 4px}
-  .loop-who{display:inline;font-weight:700;color:#526571}
-}
-@media (max-width:999px){
-  .token-loop:not(.has-table){display:block;max-width:520px}
-  .token-loop:not(.has-table) .loop-svg{margin:0 0 20px}
-}
-@media (max-width:600px){
-  .token-loop:not(.has-table) .loop-svg{display:none}
-  .token-loop:not(.has-table) .loop-steps li{position:relative;padding-left:28px}
-  .token-loop:not(.has-table) .loop-steps li::before{content:"";position:absolute;left:0;top:5px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #276578}
-  .token-loop:not(.has-table) .loop-steps li:first-child::before{background:#276578}
-  .token-loop:not(.has-table) .loop-steps li.loop-return::before{display:none}
-}
 /* Decision 33: the four V's as plain lines (Volume, Voting, Verify), each with the More info drop-down */
 .v-lines{margin:14px 0 8px;border-top:1px solid #D9E3E8;max-width:760px}
 .v-line-item{border-bottom:1px solid #D9E3E8;padding:14px 0 6px}

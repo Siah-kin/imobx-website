@@ -58,6 +58,7 @@
 .tour-links{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center}
 .tour-page section{margin-top:48px;max-width:720px}
 .tour-page .tour-figure img,.tour-page .tour-figure svg{max-height:340px}
+.tour-page .tour-figure:not(.tour-drawing){margin:24px 0}
 @media (max-width:480px){.tour-roles{grid-template-columns:1fr}.tour-figure img,.tour-figure svg{max-height:170px}}
 
 /* Review, 9 Nov: links visible on phones, taller dialog, chosen answer visible. */

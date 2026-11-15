@@ -12,8 +12,7 @@
 .band-page{width:min(1248px,calc(90% + 48px));max-width:none;margin:0 auto;padding:0}
 .band-page>*{padding-left:24px;padding-right:24px;box-sizing:border-box}
 .band-page>h1{margin:0;padding-top:56px;max-width:none}
-.band-page>.guide-lead{font-size:18px;line-height:1.55;max-width:none;margin:0;padding-top:16px;padding-bottom:40px;
-  padding-right:calc(24px + max(0px,100% - 48px - 560px))}
+.band-page>.guide-lead{font-size:18px;line-height:1.55}
 .band-page>section>span:empty,.band-page>span:empty{position:absolute;padding:0}
 
 /* Bands and their rhythm */
@@ -84,14 +83,32 @@
 /* Attention parts (owner, 25 Oct: one orange hint per page; skimmers; "on this page"; quiet folds).
    Orange means "look here" or "do this", nothing else: one key card and one action button per page.
    Tones pass contrast: #B85500 behind white button text (4.8:1); #A84B00 text on #FDF1E4 (5.1:1). */
-.band-page>.on-this-page{padding-top:0;padding-bottom:40px;margin:0}
-.on-this-page p{margin:0 0 8px;font-size:15px;font-weight:700;color:#526571}
-.on-this-page ol{list-style:none;margin:0;padding:0;display:grid;gap:6px}  /* owner, 31 Oct: one link per line, not a word cloud */
-.on-this-page li{margin:0;font-size:16px;line-height:1.5}
+.on-this-page p{margin:0 0 4px;font-size:15px;font-weight:700;color:#526571}
+/* owner, 31 Oct: one link per line, not a word cloud. Kept: every link is on its own line, read down, in at most two columns inside the text column */
+.on-this-page ol{list-style:none;margin:0;padding:0;columns:15rem 2;column-gap:32px}
+.on-this-page li{margin:0;font-size:16px;line-height:1.5;break-inside:avoid}
 .band-page>section>p.answer,.band-page .duo p.answer{font-size:18px;line-height:1.5;font-weight:700;color:#193D4E;margin:0 0 20px;max-width:30em}
 .band-page .key-card{max-width:36em;margin:0 0 24px;padding:0;background:none}
-.band-page>.key-card{max-width:none;margin:0 24px 40px;padding:20px 24px;box-sizing:border-box}
-@media (max-width:600px){.band-page>.key-card{margin:0 16px 32px;padding:16px}}
+
+/* Page opening (decision 82, 15 Nov 2026): h1, key card, lead, follow-up line, status line, "On this page".
+   One left edge: the side padding of .band-page>* (24px, 16px on phones), the same as the h1.
+   One text column: 608px wide, which is 560px of text between those paddings. Nothing in the opening is wider.
+   Three spacings: 16px between the lines of the opening, 32px before the contents list, 40px to the first band (32px on phones).
+   Keep this block after the .band-page .key-card rule above: both have the same weight and the later one wins. */
+.band-page>.key-card,
+.band-page>.guide-lead,
+.band-page>p.lead-follow:not(.guide-lead),
+.band-page>.guide-lead+p:not(.lead-follow),
+.band-page>.on-this-page{max-width:608px;margin:16px 0 0;padding:0 24px}
+.band-page>.guide-lead+p:not(.lead-follow){font-size:16px;color:#526571}
+.band-page>.on-this-page{margin-top:32px}
+.band-page>.guide-lead+.money-flow{margin-top:32px}
+.band-page>.on-this-page~section:first-of-type{margin-top:40px}
+@media (max-width:600px){
+  .band-page>.key-card,.band-page>.guide-lead,.band-page>p.lead-follow:not(.guide-lead),
+  .band-page>.guide-lead+p:not(.lead-follow),.band-page>.on-this-page{padding-left:16px;padding-right:16px}
+  .band-page>.on-this-page~section:first-of-type{margin-top:32px}
+}
 /* folds are quiet: their mark is teal, not orange */
 .band-page .disclosure>summary:after{color:#276578}
 
@@ -123,14 +140,14 @@
 @media (max-width:900px){.band-page .layer-list,.open-paths{grid-template-columns:1fr}}
 
 /* The importance ladder (owner, 25 Oct: variable accent by importance, not symmetry everywhere).
-   1 must not miss (one per page) ........ .key-card: pastel orange area, dark orange bold text
+   1 must not miss (one per page) ........ .key-card: the bold lead sentence under the title, dark bold text, no fill (since 27 Oct)
    2 the point of a section (one each) ... p.answer under the question heading; at most one phrase in it
                                            may carry the pastel marker (mark.hint) with a thin bright orange underline
    3 worth stopping for (max two) ........ .window: a framed box for a worked example or a rule that never changes
    4 normal reading ...................... 16px body, paragraphs of 50 words or fewer, lists of 3 to 5
    5 voice and asides .................... p.aside in italics: people's own words, "for example", status notes; short only
    6 on request .......................... details.disclosure: background, method, sources; never money, risk or promises
-   Orange in three strengths: pastel #FDF1E4 for areas (card, marker), dark #A84B00/#B85500 for text and the one
+   Orange in three strengths: pastel #FDF1E4 for the marker, dark #A84B00/#B85500 for text and the one
    button, bright #E07A00 only for thin marks (the marker underline), never for text or areas. */
 .band-page .window{max-width:36em;margin:8px 0 24px;padding:20px 24px;background:#fff;border:1px solid #9DC3CF}
 .band-page>section:nth-of-type(even) .window{background:#F4F9FA}
@@ -163,8 +180,6 @@
 .org-art .og-person{fill:#fff;stroke:#193D4E;stroke-width:2}
 .org-art .og-base{fill:#E8F4F8;stroke:#193D4E;stroke-width:2}
 
-/* a card straight under the title gets the same gap as a lead */
-.band-page>h1+.key-card{margin-top:16px}
 /* Why housing: one picture per column, above its own label */
 .org-list .org-pic{display:block;width:100%;max-width:220px;height:auto;margin:0 0 12px}
 .org-pic .og-area{fill:#F4F9FA;stroke:#4A90A4;stroke-width:2}
@@ -186,6 +201,49 @@
 .band-page+footer{margin-top:0}
 
 /* Costs and funding opening (13 Nov): the estimate, then who pays first, read as one lead */
-.band-page>.guide-lead.lead-first{padding-bottom:6px}
-.band-page>p.lead-follow:not(.guide-lead){font-size:18px;line-height:1.55;padding-top:6px;padding-bottom:36px;padding-right:calc(24px + max(0px,100% - 48px - 560px))}
-@media (max-width:600px){.band-page>p.lead-follow:not(.guide-lead){padding-right:16px}}
+.band-page>p.lead-follow:not(.guide-lead){font-size:18px;line-height:1.55}
+
+/* Token loop (decision 86, 15 Nov 2026; mock approved by the owner): on Self-compounding the lead and the ring side by side from 1200px, the five steps in full
+   sentences below, the two closing paragraphs side by side from 900px. On Distributed ledger the ring stands alone under the lead-in. Later than the rules above on purpose. */
+.loop-open{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;margin:0}
+.loop-lead{grid-area:auto}
+.band-page .loop-lead p.answer{font-size:18px;line-height:1.5;font-weight:700;color:#193D4E;margin:0 0 20px;max-width:30em}
+.band-page .loop-lead p:last-child{margin-bottom:0}
+.loop-ring{display:block}
+.loop-ring .loop-svg{width:100%;max-width:340px;margin:0 auto}
+.band-page>section>.loop-ring{margin:24px 0}
+.band-page>section>.loop-ring .loop-svg{margin:0}
+.band-page>section>div.loop-open>ol.loop-stops{list-style:none;margin:0;padding:0;border-top:2px solid #4A90A4;max-width:none}
+.band-page .loop-stops li{max-width:none;display:grid;grid-template-columns:48px minmax(0,1fr);grid-template-areas:"i h" "i p";gap:0 18px;align-items:start;margin:0;padding:18px 0;border-bottom:1px solid #D9E3E8}
+.loop-stops .loop-ri{grid-area:i;width:48px;height:48px}
+.loop-stops h3{grid-area:h;margin:0 0 4px;padding-top:2px}
+.band-page .loop-stops p{grid-area:p;margin:0;max-width:none}
+.loop-after{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:40px}
+.band-page .loop-after p{margin:0}
+@media (min-width:900px){
+  .loop-after{grid-template-columns:repeat(2,minmax(0,32em));gap:64px}
+}
+@media (min-width:1200px){
+  .loop-open{grid-template-columns:minmax(0,34em) minmax(0,1fr);grid-template-areas:"lead ring" "stops stops";column-gap:64px;row-gap:44px;align-items:center}
+  .loop-lead{grid-area:lead;align-self:start}
+  .loop-ring{grid-area:ring}
+  .loop-ring .loop-svg{max-width:400px}
+  .band-page>section>div.loop-open>ol.loop-stops{grid-area:stops}
+  .band-page .loop-stops li{grid-template-columns:48px minmax(190px,260px) minmax(0,1fr);grid-template-areas:"i h p";gap:0 28px;padding:22px 0}
+  .loop-stops h3{padding-top:12px}
+  .band-page .loop-stops p{padding-top:2px;max-width:44em}
+}
+@media (max-width:600px){
+  .loop-open{gap:28px}
+  .loop-ring .loop-svg{max-width:300px}
+  .band-page .loop-stops li{grid-template-columns:40px minmax(0,1fr);gap:0 14px;padding:18px 0}
+  .loop-stops .loop-ri{width:40px;height:40px}
+  .loop-after{margin-top:32px}
+}
+
+/* Distributed ledger, "What is the IMOBX token for?" (critic, 15 Nov): from 900px the ring sits in the right column beside the text instead of standing alone under it. */
+@media (min-width:900px){
+  .band-page>section.loop-aside{display:grid;grid-template-columns:minmax(0,34em) minmax(0,1fr);column-gap:64px;align-content:start}
+  .band-page>section.loop-aside>*{grid-column:1}
+  .band-page>section.loop-aside>.loop-ring{grid-column:2;grid-row:1 / span 7;align-self:center;margin:0}
+}

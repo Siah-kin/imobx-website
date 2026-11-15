@@ -172,11 +172,11 @@ STEPS = [
      [('project-development.html#homes', T('Onde a primeira família vai morar', 'Where the first family will live', 'Waar het eerste gezin gaat wonen'))]),
     # WHA-05 (John)
     ('tour-rent', T('Dia de aluguel, com um tijolo seu', 'Rent day, with a brick of your own', 'Huurdag, met een eigen steen'),
-     ('svg', 'bricks', T('Um exemplo, sem valores reais: a cada mês, uma parte do pagamento conta para a compra.', 'An example, with no real figures: each month, part of the payment counts towards the house.', 'Een voorbeeld, zonder echte bedragen: elke maand telt een deel van de betaling mee voor het huis.')),
+     ('svg', 'bricks', T('Um exemplo, sem valores reais: a cada mês, uma parte do pagamento conta para a compra.', 'An example, with no real figures: each month, part of the payment counts towards the flat.', 'Een voorbeeld, zonder echte bedragen: elke maand telt een deel van de betaling mee voor het appartement.')),
      (T('O impacto social é o fato de ele poder ser dono do imóvel quanto mais pagar o aluguel.', 'The social impact is the fact that he can own the property the more that he pays rent.', 'De sociale impact is dat hij meer eigenaar van het huis wordt naarmate hij meer huur betaalt.'), JOHN),
-     [T('Você paga todo mês como paga o aluguel hoje, e propomos que seja sem entrada. Parte de cada pagamento conta para comprar a casa. O preço, o pagamento e quanto conta ficam combinados por escrito antes de você se mudar.',
-        'You pay each month as you pay rent today, and we propose no down payment. Part of every payment counts towards buying the house. The price, the payment and how much counts are agreed in writing before you move in.',
-        'Je betaalt elke maand zoals je nu huur betaalt, en we stellen voor dat het zonder aanbetaling gaat. Een deel van elke betaling telt mee voor de aankoop van het huis. De prijs, de betaling en hoeveel meetelt worden schriftelijk afgesproken voordat je erin trekt.')],
+     [T('Você paga todo mês como paga o aluguel hoje, e propomos que seja sem entrada. Parte de cada pagamento conta para comprar o apartamento. O preço, o pagamento e quanto conta ficam combinados por escrito antes de você se mudar.',
+        'You pay each month as you pay rent today, and we propose no down payment. Part of every payment counts towards buying the flat. The price, the payment and how much counts are agreed in writing before you move in.',
+        'Je betaalt elke maand zoals je nu huur betaalt, en we stellen voor dat het zonder aanbetaling gaat. Een deel van elke betaling telt mee voor de aankoop van het appartement. De prijs, de betaling en hoeveel meetelt worden schriftelijk afgesproken voordat je erin trekt.')],
      [('rent-to-own.html', T('Como funciona o aluguel com compra', 'How rent-to-own works', 'Zo werkt huurkoop'))]),
     # Family only. Register Q24 (Rafael): reminder, negotiation; the agreement sets the steps.
     ('tour-late', T('E se um mês ficar difícil?', 'What if a month gets hard?', 'Wat als een maand krap wordt?'), None, None,
@@ -220,34 +220,33 @@ STEPS = [
      [('costs-and-funding.html', T('O que custa um apartamento', 'What a flat costs', 'Wat een appartement kost'))]),
     # VIS-03 (John); the village as Rafael planned it (roadmap)
     ('tour-village', T('A vila que queremos', 'The village we want', 'Het dorp dat we willen'),
-     ('img', 'assets/homepage.jpg', 1024, 765, T('Ilustração conceitual da vila que imaginamos', 'Concept illustration of the village we imagine', 'Conceptillustratie van het dorp dat we ons voorstellen'),
-      T('Desenho do projeto do Rafael para a vila, não um anúncio de casas para alugar.', 'A drawing of Rafael’s design for the village, not a listing of houses for rent.', 'Een tekening van Rafaels ontwerp voor het dorp, geen aanbod van huizen om te huren.')),
+     ('img', 'assets/homepage.jpg', 1024, 765, T('Ilustração conceitual da vila que imaginamos', 'Concept illustration of the village we imagine', 'Conceptillustratie van het dorp dat we ons voorstellen'), None),
      (T('Agora estamos todos fragmentados, mas tenho certeza de que, aos poucos, podemos crescer em comunidades pequenas, mas mais fortes e resilientes.', 'We are now all fragmented, but I am sure that slowly we can grow into small but stronger and resilient communities.', 'We zijn nu allemaal versnipperd, maar ik weet zeker dat we langzaam kunnen uitgroeien tot kleine maar sterkere en veerkrachtige gemeenschappen.'), JOHN),
-     [T('No plano do Rafael, casas de 45 m² ficam em volta de um pátio comum, para os pais verem os filhos brincando, com um pomar, energia solar nos telhados e salas para estudar. É uma etapa posterior; primeiro vêm cinco apartamentos de cada vez.',
-        'In Rafael’s plan, 45 m² houses stand around a shared courtyard, so parents can see their children play, with an orchard, solar panels on the roofs and rooms to study in. It is a later stage; first come five flats at a time.',
-        'In het plan van Rafael staan huizen van 45 m² rond een gedeelde binnenplaats, zodat ouders hun kinderen zien spelen, met een boomgaard, zonnepanelen op de daken en ruimtes om te studeren. Dat is een latere fase; eerst komen telkens vijf appartementen.')],
+     [T('No plano do Rafael, pequenos prédios com apartamentos de 45 m² ficam em volta de um pátio comum, para os pais verem os filhos brincando, com um pomar, energia solar nos telhados e salas para estudar. É uma etapa posterior; primeiro vêm cinco apartamentos de cada vez.',
+        'In Rafael’s plan, small blocks of 45 m² flats stand around a shared courtyard, so parents can see their children play, with an orchard, solar panels on the roofs and rooms to study in. It is a later stage; first come five flats at a time.',
+        'In het plan van Rafael staan kleine gebouwen met appartementen van 45 m² rond een gedeelde binnenplaats, zodat ouders hun kinderen zien spelen, met een boomgaard, zonnepanelen op de daken en ruimtes om te studeren. Dat is een latere fase; eerst komen telkens vijf appartementen.')],
      [('project-development.html#village', T('Veja a vila mais adiante', 'See the later village', 'Bekijk het latere dorp'))]),
     # HOW-13 (John); governance page (cooperative, vote protection)
     ('tour-courtyard', T('Quem decide?', 'Who decides?', 'Wie beslist?'),
      ('svg', 'courtyard', T('À esquerda: um membro, um voto. À direita: o contrato da família, que só muda com a família e a IMOBX de acordo.', 'Left: one member, one vote. Right: the family’s agreement, which changes only when the family and IMOBX agree.', 'Links: één lid, één stem. Rechts: de overeenkomst van het gezin, die alleen verandert als gezin en IMOBX akkoord zijn.')),
      (T('Não dá para chegar à autossuficiência ou a comunidades integradas sem uma boa organização por trás.', 'You cannot reach self-sufficiency or integrated communities without proper organisation backing it.', 'Je bereikt geen zelfvoorziening of hechte gemeenschappen zonder een goede organisatie erachter.'), JOHN),
-     [T('A IMOBX será uma cooperativa habitacional: os membros são donos dela e a administram juntos, com um voto cada. Nenhuma votação pode mudar o contrato de moradia de uma família: ele só muda quando a família e a IMOBX concordam.',
-        'IMOBX will be a housing cooperative: its members own it and run it together, with one vote each. No vote can change a family’s housing agreement: it changes only when the family and IMOBX both agree.',
-        'IMOBX wordt een wooncoöperatie: de leden bezitten en besturen haar samen, met elk één stem. Geen stemming kan de woonovereenkomst van een gezin veranderen: die verandert alleen als het gezin en IMOBX het allebei eens zijn.')],
+     [T('A IMOBX será uma cooperativa habitacional e ainda não está registrada. Os membros vão ser donos dela e vão administrá-la juntos, com um voto cada. Nenhuma votação pode mudar o contrato de moradia de uma família: ele só muda quando a família e a IMOBX concordam.',
+        'IMOBX will be a housing cooperative and is not registered yet. Its members will own it and run it together, with one vote each. No vote can change a family’s housing agreement: it changes only when the family and IMOBX both agree.',
+        'IMOBX wordt een wooncoöperatie en is nog niet ingeschreven. De leden worden eigenaar en besturen haar samen, met elk één stem. Geen stemming kan de woonovereenkomst van een gezin veranderen: die verandert alleen als het gezin en IMOBX het allebei eens zijn.')],
      [('governance.html#cooperative', T('Por que uma cooperativa', 'Why a cooperative', 'Waarom een coöperatie'))]),
     # Owner-approved ledger lead (28 Oct)
     ('tour-books', T('Para onde vão os recursos dos vizinhos?', 'Where does the neighbours’ funding go?', 'Waar gaat de financiering van de buren heen?'),
      ('svg', 'repair', T('1 O pedido · 2 aprovado e conferido · 3 pago e anotado.', '1 The request · 2 approved and checked · 3 paid and written down.', '1 Het verzoek · 2 goedgekeurd en gecontroleerd · 3 betaald en genoteerd.')), None,
-     [T('Quando vizinhos juntam recursos para construir casas, a primeira pergunta é sempre: para onde vai isso? A IMOBX quer que a resposta fique aberta a todos.',
-        'When neighbours pool funding for houses, the first question is always: where does it go? IMOBX wants the answer open to everyone.',
-        'Als buren samen financiering inleggen voor huizen, is de eerste vraag altijd: waar gaat het heen? IMOBX wil dat het antwoord voor iedereen open ligt.'),
+     [T('Quando vizinhos juntam recursos para construir apartamentos, a primeira pergunta é sempre: para onde vai isso? A IMOBX quer que a resposta fique aberta a todos.',
+        'When neighbours pool funding for flats, the first question is always: where does it go? IMOBX wants the answer open to everyone.',
+        'Als buren samen financiering inleggen voor appartementen, is de eerste vraag altijd: waar gaat het heen? IMOBX wil dat het antwoord voor iedereen open ligt.'),
       T('Veja um reparo. No plano, uma pessoa aprova o serviço, outra confere, e só então ele é pago. Contas bancárias e contratos assinados vêm primeiro, e depois o registro distribuído pode ficar aberto para qualquer pessoa ler. Os contratos e os dados pessoais das famílias ficam privados, e cada pagamento mostra a função de quem o aprovou.',
         'Take a repair. In the plan, one person approves the work and another checks it, and only then is it paid. Bank accounts and signed agreements come first, and the ledger may follow, open for anyone to read. Families’ contracts and personal details stay private, and each payment shows the role that approved it.',
         'Neem een reparatie. In het plan keurt één persoon het werk goed en controleert een ander het, en pas dan wordt het betaald. Eerst komen bankrekeningen en getekende overeenkomsten, en daarna kan de distributed ledger voor iedereen leesbaar worden. De contracten en persoonsgegevens van gezinnen blijven privé, en bij elke betaling staat de rol van wie haar goedkeurde.')],
      [('distributed-ledger.html', T('Como o registro distribuído funcionaria', 'How the ledger would work', 'Hoe de distributed ledger zou werken'))]),
     # TOKEN_POSITION (approved lines, 41c)
     ('tour-token', T('Para os curiosos: o token', 'For the curious: the token', 'Voor de nieuwsgierigen: het token'),
-     ('svg', 'token', T('1 Alguém negocia o token · 2 a negociação paga uma taxa · 3 a taxa paga trabalho e novas casas · 4 o projeto cresce com o que ele mesmo gera, e o ciclo recomeça.', '1 Someone trades the token · 2 the trade pays a fee · 3 the fee pays for work and new houses · 4 the project grows from what it earns, and the cycle starts again.', '1 Iemand verhandelt het token · 2 de transactie betaalt een vergoeding · 3 die betaalt werk en nieuwe huizen · 4 het project groeit met wat het zelf verdient, en de cirkel begint opnieuw.')), None,
+     ('svg', 'token', T('1 Alguém negocia o token · 2 a negociação paga uma taxa · 3 a taxa paga trabalho e novos apartamentos · 4 o projeto cresce com o que ele mesmo gera, e o ciclo recomeça.', '1 Someone trades the token · 2 the trade pays a fee · 3 the fee pays for work and new flats · 4 the project grows from what it earns, and the cycle starts again.', '1 Iemand verhandelt het token · 2 de transactie betaalt een vergoeding · 3 die betaalt werk en nieuwe appartementen · 4 het project groeit met wat het zelf verdient, en de cirkel begint opnieuw.')), None,
      [T('Mais adiante, a IMOBX também planeja um token self-compounding de financiamento da comunidade. Ter o token é opcional, e as famílias não precisam dele. Os apartamentos novos são financiados à parte, a começar por uma campanha de financiamento coletivo.',
         'Later on, IMOBX also plans a self-compounding community-funding token. Holding it is optional, and families don’t need it. The new flats are funded separately, starting with a crowdfunding campaign.',
         'Later wil IMOBX ook een self-compounding token uitgeven die de gemeenschap financiert. Een token hebben is vrijwillig, en gezinnen hebben het niet nodig. De nieuwe appartementen worden apart gefinancierd, te beginnen met een crowdfundingcampagne.')],
@@ -306,7 +305,7 @@ def _visual(v):
     if v[0] == 'img':
         _, src, w, h, alt, cap = v
         a = f'alt="{escape(alt[0], quote=True)}" data-alt-pt="{escape(alt[0], quote=True)}" data-alt-en="{escape(alt[1], quote=True)}" data-alt-nl="{escape(alt[2], quote=True)}"'
-        return f'<figure class="tour-figure"><img src="{src}" width="{w}" height="{h}" {a}>' + _text('figcaption', cap) + '</figure>'
+        return f'<figure class="tour-figure"><img src="{src}" width="{w}" height="{h}" {a}>' + (_text('figcaption', cap) if cap else '') + '</figure>'
     out = '<figure class="tour-figure tour-drawing">' + SVGS[v[1]]()
     if v[2]:
         out += _text('figcaption', v[2])

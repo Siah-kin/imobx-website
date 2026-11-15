@@ -15,8 +15,8 @@ IMAGE = LIVE + 'assets/homepage.jpg'
 PAGES = {
     'index.html': ('IMOBX Rio: proposta de aluguel com opção de compra', 'IMOBX Rio: a rent-to-own housing proposal',
                    'Estamos preparando um projeto de moradia com aluguel e compra para famílias no Rio de Janeiro, a ser organizado como cooperativa habitacional. Em preparação: ainda não há apartamentos à venda.'),
-    'rent-to-own.html': ('Como funciona o aluguel com compra da casa · IMOBX Rio', 'How rent-to-own would work · IMOBX Rio',
-                         'No plano, parte de cada pagamento mensal iria para a compra da casa, sem entrada. Veja como seriam o preço, os reparos e a saída.'),
+    'rent-to-own.html': ('Como funciona o aluguel com compra do apartamento · IMOBX Rio', 'How rent-to-own would work · IMOBX Rio',
+                         'No plano, parte de cada pagamento mensal iria para a compra do apartamento, sem entrada. Veja como seriam o preço, os reparos e a saída.'),
     'costs-and-funding.html': ('Custos e recursos: quanto custa um apartamento · IMOBX Rio', 'Costs and funding: what a flat costs · IMOBX Rio',
                           'Os custos de construção, a ordem em que o recurso é gasto e quem pode financiar a primeira etapa.'),
     'project-development.html': ('Desenvolvimento do projeto: onde estamos agora · IMOBX Rio', 'Project development: where we are now · IMOBX Rio',

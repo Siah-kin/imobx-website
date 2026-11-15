@@ -1215,8 +1215,8 @@
       "Manual review: prices, provider rules and balances are not monitored automatically. We will update this page with dated confirmations, tests and reports when available."
     ],
     "reporting_note": [
-      "Cada relatório separa o que está previsto, o que está contratado, o que entrou e o que foi gasto. Dados pessoais, documentos e contratos das famílias ficam privados, no site e em qualquer registro distribuído.",
-      "Each report keeps apart what is planned, what is signed, what came in and what was spent. Families’ personal details, documents and contracts stay private, on the site and on any ledger."
+      "Cada relatório separa o que está previsto, o que está contratado, o que entrou e o que foi gasto. Dados pessoais, documentos, contratos e pagamentos das famílias ficam privados, no site e em qualquer registro distribuído.",
+      "Each report keeps apart what is planned, what is signed, what came in and what was spent. Families’ personal details, documents, contracts and payments stay private, on the site and on any ledger."
     ]
   },
   "community_economy": {
@@ -1689,7 +1689,7 @@
     "hardship": [
       [
         "O contrato vai dizer o que acontece se você atrasar por um tempo, se sair ou se a IMOBX não puder continuar, e o que acontece então com a parte que você já pagou para a compra.",
-        "The agreement will say what happens if you fall behind for a while, if you leave, or if IMOBX cannot carry on, and what happens then to the part you have already paid towards the home."
+        "The agreement will say what happens if you fall behind for a while, if you leave, or if IMOBX cannot carry on, and what happens then to the part you have already paid towards the flat."
       ]
     ],
     "funding_title": [
@@ -1789,12 +1789,12 @@
       "A neighbourhood for living and cooperating"
     ],
     "vision_intro": [
-      "Rafael, cofundador da IMOBX, imaginou casas de 45 m² em torno de um pátio, com energia solar, pomar, espaço para brincar e salas de estudo.",
-      "Rafael, co-founder of IMOBX, imagined 45 m² houses around a courtyard, with solar power, an orchard, play space and study rooms."
+      "Rafael, cofundador da IMOBX, imaginou pequenos prédios com apartamentos de 45 m² em torno de um pátio, com energia solar, pomar, espaço para brincar e salas de estudo.",
+      "Rafael, co-founder of IMOBX, imagined small blocks of 45 m² flats around a courtyard, with solar power, an orchard, play space and study rooms."
     ],
     "vision_caption": [
-      "Visão de Rafael · 30 de novembro de 2025. Desenho do projeto do Rafael para a vila, não um anúncio de casas para alugar.",
-      "Rafael’s vision · 30 November 2025. A drawing of Rafael’s design for the village, not a listing of houses for rent."
+      "Visão de Rafael · 30 de novembro de 2025.",
+      "Rafael’s vision · 30 November 2025."
     ],
     "vision_decisions": [
       "Os moradores ajudam a decidir o uso dos espaços comuns e as prioridades de manutenção. Essa participação não depende de investir. Uma votação sobre esses assuntos não muda o contrato de uma família, e quem investe recebe somente os direitos escritos no seu acordo.",
@@ -1854,8 +1854,8 @@
       ]
     ],
     "transfer": [
-      "Quando a família termina de comprar a casa, o aluguel dessa casa acaba. Por isso, o investidor não pode contar com aluguel a longo prazo: qualquer retorno precisaria de outra fonte, por escrito. No plano, o que a família já pagou pela casa nunca é usado de um jeito que impeça a família de ficar com a casa.",
-      "When a family finishes buying its home, the rent from that house stops. So investors cannot count on rent in the long run: any return would need another source, in writing. In the plan, what a family has paid towards its home is never used in a way that stops the home becoming theirs."
+      "Quando a família termina de comprar o apartamento, o aluguel desse apartamento acaba. Por isso, o investidor não pode contar com aluguel a longo prazo: qualquer retorno precisaria de outra fonte, por escrito. No plano, o que a família já pagou pelo apartamento nunca é usado de um jeito que impeça a família de ficar com ele.",
+      "When a family finishes buying its flat, the rent on that flat stops. So investors cannot count on rent in the long run: any return would need another source, in writing. In the plan, what a family has paid towards its flat is never used in a way that stops the flat becoming theirs."
     ],
     "kinds_title": [
       "Os cinco tipos de recurso",
@@ -1914,8 +1914,8 @@
           "Investors"
         ],
         [
-          "Um orçamento publicado, que separa os recursos das casas dos recursos da operação, da marca e da divulgação",
-          "A published budget that keeps funding for houses apart from running costs, branding and outreach"
+          "Um orçamento publicado, que separa os recursos dos apartamentos dos recursos da operação, da marca e da divulgação",
+          "A published budget that keeps funding for flats apart from running costs, branding and outreach"
         ]
       ],
       [
@@ -1928,8 +1928,8 @@
           "People who buy or sell the token"
         ],
         [
-          "O trabalho de marca e de comunidade da IMOBX, e casas novas. Os primeiros apartamentos são financiados em reais.",
-          "The work on the IMOBX brand and community, and new houses. The first flats are funded in reais."
+          "O trabalho de marca e de comunidade da IMOBX, e apartamentos novos. Os primeiros apartamentos são financiados em reais.",
+          "The work on the IMOBX brand and community, and new flats. The first flats are funded in reais."
         ]
       ],
       [
@@ -1942,8 +1942,8 @@
           "Families"
         ],
         [
-          "As contas e as reservas das casas, depois casas novas. Acaba quando a casa passa para a família.",
-          "The houses’ bills and reserves, then new houses. It stops when the home becomes the family’s."
+          "As contas e as reservas dos apartamentos, depois apartamentos novos. Acaba quando o apartamento passa para a família.",
+          "The flats’ bills and reserves, then new flats. It stops when the flat becomes the family’s."
         ]
       ]
     ]
@@ -2048,8 +2048,8 @@
       "Three stages"
     ],
     "intro": [
-      "Cada etapa começa quando a anterior mostrou resultados para as famílias que moram ali: casas construídas dentro do orçamento e cada pagamento aberto para conferir.",
-      "Each stage begins once the one before has shown results for the families living in it: houses built within budget and every payment open to check."
+      "Cada etapa começa quando a anterior mostrou resultados para as famílias que moram ali: apartamentos construídos dentro do orçamento e cada pagamento feito pela IMOBX aberto para conferir.",
+      "Each stage begins once the one before has shown results for the families living in it: flats built within budget and every payment IMOBX makes open to check."
     ],
     "steps": [
       [
@@ -2150,20 +2150,20 @@
     ],
     "answer": [
       [
-        "Transformar inquilinos em proprietários: parte de cada pagamento mensal vai para a compra da casa.",
-        "Turn renters into owners: part of each monthly payment buys the home."
+        "Transformar inquilinos em proprietários: parte de cada pagamento mensal vai para a compra do apartamento.",
+        "Turn renters into owners: part of each monthly payment buys the flat."
       ],
       [
         "Construir com um orçamento detalhado em reais, com a construtora de Rafael e conferência independente.",
         "Build to an itemised budget in reais, with Rafael’s construction company and independent checks."
       ],
       [
-        "Reduzir as despesas da casa, com energia solar onde o local permitir.",
+        "Reduzir as despesas do apartamento, com energia solar onde o local permitir.",
         "Lower running costs, with solar power where the site allows."
       ],
       [
-        "Reinvestir o que sobra em novas casas, para a próxima família.",
-        "Reinvest what is left in new houses, for the next family."
+        "Reinvestir o que sobra em novos apartamentos, para a próxima família.",
+        "Reinvest what is left in new flats, for the next family."
       ]
     ],
     "loop_title": [
@@ -2193,8 +2193,8 @@
       ]
     ],
     "fleet_title": [
-      "Por que não manter as casas para alugar?",
-      "Why not keep the houses and rent them out?"
+      "Por que não manter os apartamentos para alugar?",
+      "Why not keep the flats and rent them out?"
     ],
     "fleet": [
       "Casas mantidas para aluguel rendem enquanto pertencem ao dono. No aluguel com compra, a renda de uma casa termina quando a família conclui a compra. Por isso os recursos que voltam com as compras precisam pagar novas casas. A cooperativa também precisa de uma base que gere renda duradoura, como espaços e serviços compartilhados.",
@@ -2230,8 +2230,8 @@
           "Shared by all neighbourhoods"
         ],
         [
-          "Projetos de casa, compras, contas e relatórios.",
-          "House designs, purchasing, accounts and reports."
+          "Projetos de apartamento, compras, contas e relatórios.",
+          "Flat designs, purchasing, accounts and reports."
         ]
       ],
       [
@@ -2300,8 +2300,8 @@
       "Who checks each payment?"
     ],
     "key": [
-      "O nosso plano: cada real que entra é registrado, e os recursos doados para um fim são usados nesse fim. O resto paga primeiro impostos e contas, depois as reservas e o que prometemos às famílias, depois casas novas. Investidor vem por último, e só se sobrarem recursos e um contrato escrito permitir.",
-      "Our plan: every real that comes in is recorded, and funding given for a purpose is spent on that purpose. The rest pays taxes and bills first, then the reserves and what we promised families, then new houses. Investors come last, and only if funding is left and a written agreement allows it."
+      "O nosso plano: cada real que entra é registrado, e os recursos doados para um fim são usados nesse fim. O resto paga primeiro impostos e contas, depois as reservas e o que prometemos às famílias, depois apartamentos novos. Investidor vem por último, e só se sobrarem recursos e um contrato escrito permitir.",
+      "Our plan: every real that comes in is recorded, and funding given for a purpose is spent on that purpose. The rest pays taxes and bills first, then the reserves and what we promised families, then new flats. Investors come last, and only if funding is left and a written agreement allows it."
     ],
     "first_costs": [
       "Os fundadores pagam os primeiros custos por conta própria: o parecer do advogado, o registro da cooperativa, os papéis do imóvel, a elaboração de um orçamento de obra em reais e a avaliação independente do apartamento de Guadalupe. Uma família mora de aluguel nesse apartamento hoje, num prédio que a construtora do Rafael construiu. A campanha de financiamento coletivo abre depois que a cooperativa for registrada.",
@@ -2311,11 +2311,11 @@
   "rent_page": {
     "lead": [
       "Propomos que não haja entrada. O preço e o pagamento mensal partem do custo da obra e do que a sua família pode pagar.",
-      "We propose no down payment. The price and the monthly payment come from what the house costs to build and what your family can pay."
+      "We propose no down payment. The price and the monthly payment come from what the flat costs to build and what your family can pay."
     ],
     "record": [
-      "Antes da mudança, você recebe por escrito três números: o preço da casa, o pagamento mensal em reais e quanto de cada pagamento vai para a compra. O preço, o prazo e os reajustes precisam caber no seu orçamento e ainda cobrir os custos.",
-      "Before you move in, you get three numbers in writing: the price of the house, the monthly payment in reais, and how much of each payment goes towards buying it. The price, how many years you pay and any yearly adjustment have to fit your budget and still cover the costs."
+      "Antes da mudança, você recebe por escrito três números: o preço do apartamento, o pagamento mensal em reais e quanto de cada pagamento vai para a compra. O preço, o prazo e os reajustes precisam caber no seu orçamento e ainda cobrir os custos.",
+      "Before you move in, you get three numbers in writing: the price of the flat, the monthly payment in reais, and how much of each payment goes towards buying it. The price, how many years you pay and any yearly adjustment have to fit your budget and still cover the costs."
     ],
     "repair_steps": [
       [
@@ -2384,12 +2384,12 @@
       "What do residents decide?"
     ],
     "key": [
-      "No nosso plano, você aluga a casa e parte de cada pagamento mensal vai para a compra dela. Quando terminar de pagar o combinado, a casa é registrada no seu nome.",
-      "In our plan, you rent the house and part of every monthly payment goes towards buying it. When you have paid what was agreed, the house is registered in your name."
+      "No nosso plano, você aluga um apartamento e parte de cada pagamento mensal vai para a compra dele. Quando terminar de pagar o combinado, o apartamento é registrado no seu nome.",
+      "In our plan, you rent a flat and part of every monthly payment goes towards buying it. When you have paid what was agreed, the flat is registered in your name."
     ],
     "status_line": [
-      "Ainda estamos preparando os primeiros apartamentos.",
-      "We are still preparing the first flats."
+      "Estamos preparando os primeiros apartamentos, e a cooperativa ainda não está registrada.",
+      "We are still preparing the first flats, and the cooperative is not registered yet."
     ],
     "status_link": [
       "Onde estamos agora",
@@ -2406,8 +2406,8 @@
       "For your family, daily life stays the same: you pay in reais, as you pay rent today, and you can follow every repair request or complaint."
     ],
     "key": [
-      "Quando vizinhos juntam recursos para construir casas, a primeira pergunta é sempre: para onde vão os recursos? A IMOBX quer que a resposta fique aberta a todos. Os pagamentos, e a função de quem aprovou cada um, poderão ficar num registro distribuído: uma lista digital compartilhada que qualquer morador ou financiador pode conferir. Já está decidido: contas bancárias e contratos assinados vêm primeiro. Quanto do resto irá para o registro distribuído ainda está em aberto.",
-      "When neighbours pool funding for houses, the first question is always: where does the funding go? IMOBX wants the answer open to everyone. Payments, and the role that approved each one, may be kept on a distributed ledger: a shared digital list that any resident or funder can check. Decided: bank accounts and signed agreements come first. How much more goes on the ledger is still open."
+      "Quando vizinhos juntam recursos para construir apartamentos, a primeira pergunta é sempre: para onde vão os recursos? A IMOBX quer que a resposta fique aberta a todos. Os pagamentos feitos pela IMOBX, e a função de quem aprovou cada um, poderão ficar num registro distribuído: uma lista digital compartilhada que qualquer morador ou financiador pode conferir. Já está decidido: contas bancárias e contratos assinados vêm primeiro. Quanto do resto irá para o registro distribuído ainda está em aberto.",
+      "When neighbours pool funding for flats, the first question is always: where does the funding go? IMOBX wants the answer open to everyone. Payments IMOBX makes, and the role that approved each one, may be kept on a distributed ledger: a shared digital list that any resident or funder can check. Decided: bank accounts and signed agreements come first. How much more goes on the ledger is still open."
     ],
     "toc": [
       [
@@ -2623,16 +2623,16 @@
           "Accounting"
         ],
         [
-          "Recursos que entram e saem, por pagador e finalidade",
-          "Funding in and out, by payer and purpose"
+          "Recursos que entram e saem, por finalidade; os pagamentos da própria IMOBX por destinatário e finalidade",
+          "Funding in and out, by purpose; IMOBX’s own payments by recipient and purpose"
         ],
         [
           "Contas bancárias; os pagamentos da IMOBX também poderão ir para o registro distribuído",
           "Bank accounts; IMOBX’s payments may also go on the ledger"
         ],
         [
-          "Moradores, financiadores e quem confere as contas; os pagamentos da IMOBX, se estiverem no registro distribuído: qualquer pessoa",
-          "Residents, funders and the people who check the accounts; IMOBX’s payments, if they are on the ledger: anyone"
+          "Moradores e financiadores veem só os totais; os pagamentos da própria IMOBX, se estiverem no registro distribuído: qualquer pessoa",
+          "Residents and funders see totals only; IMOBX’s own payments, if they are on the ledger: anyone"
         ]
       ],
       [
@@ -2686,8 +2686,8 @@
         "Bank accounts and signed agreements only."
       ],
       [
-        "Contas bancárias, com cada pagamento também copiado no registro distribuído.",
-        "Bank accounts, with each payment also copied to the ledger."
+        "Contas bancárias, com cada pagamento da IMOBX também copiado no registro distribuído.",
+        "Bank accounts, with each payment IMOBX makes also copied to the ledger."
       ],
       [
         "Pagamentos e aprovações feitos no próprio registro distribuído, cada um com várias assinaturas.",
@@ -2700,16 +2700,16 @@
     ],
     "same": [
       [
-        "O pagamento de cada família vai primeiro para a própria casa: a parte da compra, os reparos e a reserva.",
-        "Each family’s payments go first to its own home: its share of the purchase, repairs and reserves."
+        "O pagamento de cada família vai primeiro para o próprio apartamento: a parte da compra, os reparos e a reserva.",
+        "Each family’s payments go first to its own flat: its share of the purchase, repairs and reserves."
       ],
       [
         "As decisões comuns seguem um membro, um voto. Quem tem o token vota só as regras do próprio token, e o contrato de moradia de uma família muda só pelos termos que a família assinou e pela lei brasileira.",
         "Shared decisions are one member, one vote. Token holders vote only on the token’s own rules, and a family’s housing agreement changes only under the terms that family signed and Brazilian law."
       ],
       [
-        "As contas da obra só são pagas com recursos já assegurados; as taxas do token, se houver, apoiam o trabalho em volta das casas.",
-        "Building bills are paid only from funding that is already secured; any token fees support the work around the houses."
+        "As contas da obra só são pagas com recursos já assegurados; as taxas do token, se houver, apoiam o trabalho em volta dos apartamentos.",
+        "Building bills are paid only from funding that is already secured; any token fees support the work around the flats."
       ]
     ],
     "limits_title": [
@@ -2963,58 +2963,6 @@
     "loop_intro": [
       "Cada negociação no mercado paga uma pequena taxa. As taxas pagam trabalho conferido. Esse trabalho acrescenta serviços que membros e quem tem o token podem usar. O preço do token fica com o mercado.",
       "Each trade on the market pays a small fee. Fees pay for checked work. That work adds services members and token holders can use. The token’s price is left to the market."
-    ],
-    "loop_steps": [
-      [
-        [
-          "Apoio",
-          "Backing"
-        ],
-        [
-          "Quem acredita no projeto fica com o token.",
-          "People who believe in the project hold the token."
-        ]
-      ],
-      [
-        [
-          "Taxa",
-          "Fee"
-        ],
-        [
-          "Cada negociação do token paga uma taxa para a comunidade.",
-          "Each trade of the token pays a fee to the community."
-        ]
-      ],
-      [
-        [
-          "Trabalho conferido",
-          "Checked work"
-        ],
-        [
-          "As taxas pagam salários por trabalho conferido.",
-          "The fees pay wages for checked work."
-        ]
-      ],
-      [
-        [
-          "Mais casas",
-          "More houses"
-        ],
-        [
-          "As taxas também constroem novas casas.",
-          "The fees also build new houses."
-        ]
-      ],
-      [
-        [
-          "Mais apoio",
-          "More backing"
-        ],
-        [
-          "Uma comunidade que cresce pode atrair mais gente que quer apoiá-la.",
-          "A growing community can draw more people who want to back it."
-        ]
-      ]
     ],
     "bridge_more": [
       [

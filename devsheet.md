@@ -44,7 +44,7 @@ This guide explains how a request leads to completed work, a check that it meets
 
 ### The village proposal
 
-Rafael’s plan brings together 45 m² two-level houses around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [drawing](properties.html#visao-rafael) shows the community as Rafael designed it. It is not a listing of houses for rent.
+Rafael’s plan brings together small blocks of 45 m² flats around a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The [drawing](properties.html#visao-rafael) shows the community as Rafael designed it.
 
 Rafael worked out the cost of a 45 m² flat at September 2026 prices. He started from CUB-RJ, the public building-cost index for Rio de Janeiro, and added 35% for overheads and his company’s margin:
 

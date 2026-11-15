@@ -34,7 +34,7 @@ The publication uses readable sans-serif type, simple headings and generous spac
 
 The city photographs show favelas along the hillsides. Circles highlight the favelas in each view.
 
-The village drawing is Rafael’s design for the village, not a listing of houses for rent. The loft drawings show proposed designs, and construction photographs show the site and building work.
+The loft drawings show proposed designs, and construction photographs show the site and building work.
 
 ## Project descriptions
 

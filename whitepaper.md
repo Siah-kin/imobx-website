@@ -44,7 +44,7 @@ Rafael’s building company is the proposed contractor. Under the plan, a founde
 
 ### Rafael's village vision, 30 November 2025
 
-Rafael’s vision is 45 m² two-level houses facing a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The aim is a path to ownership, lower household costs and places to meet and learn. The [drawing](properties.html#visao-rafael) shows this vision as Rafael designed it. It is not a completed village and not a listing of houses for rent.
+Rafael’s vision is small blocks of 45 m² flats facing a shared courtyard, with solar panels, fruit trees, play space and two study rooms. The aim is a path to ownership, lower household costs and places to meet and learn. The [drawing](properties.html#visao-rafael) shows this vision as Rafael designed it. It is not a completed village.
 
 Under the plan, residents agree who cares for shared spaces, how study rooms are used and how repairs are paid for. Solar savings depend on real equipment and usage figures, and some electricity charges remain. [ANEEL’s distributed-generation guidance](https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida/) sets out the rules for small solar systems; it gives no figures for these houses.
 

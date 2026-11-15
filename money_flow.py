@@ -3,15 +3,15 @@ vessel-and-pipe language as the homepage's 'Three ways to house a family'. Shape
 so it switches language with the rest of the site and the release checks can read it."""
 
 STEPS = [
-    (('Fundo para casas', 'Fund for new houses'),
-     ('Recursos para construir. O que sobra de cada pagamento, depois dos custos e das reservas, vai para a próxima casa.', 'Funding for building. What is left of each payment, after costs and reserves, goes into the next house.')),
+    (('Fundo para apartamentos', 'Fund for new flats'),
+     ('Recursos para construir. O que sobra de cada pagamento, depois dos custos e das reservas, vai para o próximo apartamento.', 'Funding for building. What is left of each payment, after costs and reserves, goes into the next flat.')),
     (('Obra', 'Building'),
      ('A construtora do Rafael faz a obra, e o custo do terreno e da construção fica registrado.', 'Rafael’s construction company builds it, and the cost of land and building is written down.')),
     (('A família entra', 'The family moves in'),
      ('O contrato é assinado antes da mudança.', 'The agreement is signed before moving in.')),
     (('O pagamento de cada mês', 'Each month’s payment'),
-     ('Parte compra a casa; outra parte paga manutenção e consertos.', 'Part buys the house; another part pays for upkeep and repairs.')),
-    (('A casa é da família', 'The home is the family’s'),
+     ('Parte compra o apartamento; outra parte paga manutenção e consertos.', 'Part buys the flat; another part pays for upkeep and repairs.')),
+    (('O apartamento é da família', 'The flat is the family’s'),
      ('Quando terminar de pagar o combinado, a escritura fica no seu nome.',
       'When you have paid what was agreed, the deed is in your name.')),
 ]
@@ -80,8 +80,8 @@ CASCADE_STEPS = [
     (('Contas', 'Bills'),
      ('Contas do imóvel, manutenção e administração, como combinado.', 'Property bills, upkeep and running costs, as agreed.')),
     (('Reservas', 'Reserves'),
-     ('Reparos, casas vazias, promessas feitas às famílias e imprevistos.', 'Repairs, empty houses, promises made to families and the unexpected.')),
-    (('Novas casas', 'New houses'),
+     ('Reparos, apartamentos vazios, promessas feitas às famílias e imprevistos.', 'Repairs, empty flats, promises made to families and the unexpected.')),
+    (('Novos apartamentos', 'New flats'),
      ('Só dentro do orçamento combinado.', 'Only within the agreed budget.')),
     (('Investidores, por último', 'Investors, last'),
      ('Só se sobrarem recursos e um acordo escrito válido permitir.', 'Only if funding remains and a valid written agreement allows it.')),
@@ -267,7 +267,7 @@ def _gov_panels(text):
                 f'<rect class="gv-lock" x="{x-5}" y="{y+3}" width="10" height="8"/><path class="gv-shackle" d="M{x-3} {y+3}v-3a3 3 0 0 1 6 0v3"/>')
     arrow = '<path class="gv-arrow" d="M276 135h18m-7-7 7 7-7 7"/>'
     def svg(body, n, with_arrow):
-        return (f'<svg class="gov-panel gv-p{n}" viewBox="0 0 300 270" aria-hidden="true">' + body + (arrow if with_arrow else '') + '</svg>')
+        return (f'<svg class="gov-panel gv-p{n}" viewBox="0 8 300 254" aria-hidden="true">' + body + (arrow if with_arrow else '') + '</svg>')
     p1 = ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131)
     p2 = (ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131)
           + label(GOV_LABELS['campaign'], 150, 232, 'gv-label gv-label-outer'))
