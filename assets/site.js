@@ -75,6 +75,15 @@ function initCarousels() {
     const thumbnails = Array.from(gallery.querySelectorAll('[data-carousel-index]'));
     let current = 0;
     let pending = false;
+    const strip = thumbnails.length ? thumbnails[0].parentElement : null;
+    function keepThumbInView() {
+      const button = thumbnails[current];
+      if (!strip || !button || strip.scrollWidth <= strip.clientWidth) return;
+      const s = strip.getBoundingClientRect();
+      const b = button.getBoundingClientRect();
+      if (b.left < s.left) strip.scrollLeft += b.left - s.left;
+      else if (b.right > s.right) strip.scrollLeft += b.right - s.right;
+    }
     function update(index) {
       current = Math.max(0, Math.min(slides.length - 1, index));
       count.textContent = `${current + 1} / ${slides.length}`;
@@ -83,6 +92,7 @@ function initCarousels() {
       thumbnails.forEach((button, i) => {
         button.setAttribute('aria-pressed', String(i === current));
       });
+      keepThumbInView();
     }
     function go(index) {
       update(index);
@@ -172,6 +182,26 @@ function initImageViewer() {
     if (viewer.open) describe();
   });
 }
+// Costs: on a wide screen the cost drawing stretches over the opening, so the land block under the ground line takes the same share of
+// the building's height as the land does of the cost (R$30,000 of R$150,400). Narrow screens keep the fixed sizes of the stylesheet.
+function initCostDraw() {
+  const figure = document.querySelector('.cost-draw');
+  const band = document.querySelector('.cost-band');
+  const top = figure && figure.querySelector('.cd-top');
+  if (!figure || !band || !top) return;
+  const wide = window.matchMedia('(min-width: 1100px)');
+  function size() {
+    if (!wide.matches) { figure.style.removeProperty('--h3'); band.style.removeProperty('--h3'); return; }
+    const height = Math.round(top.getBoundingClientRect().height * 30 / 150.4);
+    figure.style.setProperty('--h3', height + 'px');
+    band.style.setProperty('--h3', height + 'px');
+  }
+  size();
+  window.addEventListener('resize', size);
+  window.addEventListener('load', size);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(size);
+}
+initCostDraw();
 initCarousels();
 initImageViewer();
 
@@ -233,7 +263,7 @@ initImageViewer();
     if (!event.target.closest('.site-links .nav-item') || event.target.closest('.site-links .sub a')) close();
   });
   // Owner, 28 Oct: on a desktop with a mouse, a list also opens on hover and closes shortly after the pointer leaves.
-  var hoverable = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 701px)');
+  var hoverable = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 1001px)');
   toggles.forEach(function (toggle) {
     var item = toggle.closest('.nav-item'), timer = null;
     var list = document.getElementById(toggle.getAttribute('aria-controls'));
@@ -336,7 +366,7 @@ initImageViewer();
       if (button.getAttribute('aria-expanded') === 'true') close(); else open(button, false);
     });
     button.addEventListener('mouseenter', function () {
-      if (matchMedia('(hover: hover) and (pointer: fine)').matches) { button.dataset.hoverAt = String(Date.now()); open(button, true); }
+      if (matchMedia('(hover: hover) and (pointer: fine) and (min-width: 1001px)').matches) { button.dataset.hoverAt = String(Date.now()); open(button, true); }
     });
     item.addEventListener('mouseenter', function () {
       if (button.getAttribute('aria-expanded') === 'true') clearTimeout(closeTimer);

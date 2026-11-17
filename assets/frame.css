@@ -1,0 +1,371 @@
+/* The frame sheet (16 Nov 2026). Loaded last, on every page. Rows 26, 39, 25 and 37 of the owner's list.
+   Header in the dark teal #193D4E (never white), a ground line under the openings that answer a question, white and pale-teal
+   bands that alternate, the cost drawing and the plan of a flat in the right half of an opening, the dark band of Project
+   development. Arial only; the page colours of the former design stay. */
+
+body{overflow-x:clip}
+
+/* ---------- header: dark teal bar, white type, white focus ring on the dark ground ---------- */
+html .option-b.site-header::before{background:#193D4E}
+html .option-b .wordmark{background:#193D4E}
+html .option-b .housing-links .sub-toggle:not(:hover),html .option-b .housing-links .nav-item>a:not(:hover){background:#193D4E}
+html .option-b .lang,html .option-b .lang button:not([aria-pressed="true"]):not(:hover){background:#193D4E}
+html .option-b .lang button[aria-pressed="true"]{background:#fff;color:#193D4E}
+@media (max-width:1000px){html .option-b .site-nav .menu-toggle{background:#193D4E}}
+html .option-b .site-nav>:not(.site-links) :is(a,button):focus-visible,html .option-b .housing-links>.nav-item>:is(a,button):focus-visible,html .option-b .lang button:focus-visible,html .option-b .option-b-action:focus-visible,html .option-b .wordmark:focus-visible,html .option-b .menu-toggle:focus-visible{outline-color:#fff;box-shadow:none}
+
+/* ---------- the ground line: under the opening of a page that answers a question ---------- */
+.ground-line{position:relative;height:32px;margin:0;padding:0!important;border:0;pointer-events:none;grid-column:1 / -1}
+.ground-line::before{content:"";position:absolute;left:calc(50% - 50vw);width:100vw;top:0;height:32px;background:linear-gradient(#A84B00 0 4px,transparent 4px),repeating-linear-gradient(135deg,#D9E3E8 0 2px,#fff 2px 10px)}
+.ground-line + section{margin-top:0}
+.ground-line{margin-top:40px!important}
+.band-page.has-open-fig>.ground-line{margin-top:0!important}
+@media (max-width:700px){.ground-line{margin-top:32px!important}}
+
+/* ---------- bands that alternate: Home's sections follow the same white and pale rhythm as the other pages ---------- */
+main>.ground-line~section.home-section:nth-of-type(odd),main>.ground-line~section.home-section:nth-of-type(odd)>.wrap{background:#EDF5F7}
+main>.ground-line~section.home-section:nth-of-type(odd){box-shadow:0 0 0 100vmax #EDF5F7;clip-path:inset(0 -100vmax)}
+main>section.home-section{padding-top:64px;padding-bottom:64px}
+
+/* ---------- an opening with a drawing in its right half (Costs, Project development) ---------- */
+.band-page.has-open-fig>*{grid-column:1 / -1}
+.open-fig{margin:24px 0 0;padding-left:24px;padding-right:24px;box-sizing:border-box}
+@media (min-width:1100px){
+  .band-page.has-open-fig{display:grid;grid-template-columns:minmax(0,600px) minmax(0,1fr);column-gap:56px;grid-auto-flow:row}
+  .band-page.has-open-fig.op-5{grid-template-rows:repeat(5,auto) 1fr}
+  .band-page.has-open-fig.op-2{grid-template-rows:repeat(2,auto) 1fr}
+  .band-page.has-open-fig>:is(h1,.guide-lead,.lead-follow,.key-card,.on-this-page){grid-column:1}
+  .band-page.has-open-fig>h1{grid-row:1}
+  .band-page.has-open-fig.op-5>.open-fig{grid-column:2;grid-row:1 / span 6;margin:56px 24px 0 0;align-self:start}
+  .band-page.has-open-fig.op-2>.open-fig{grid-column:2;grid-row:1 / span 3;margin:56px 24px 0 0;align-self:start}
+}
+
+/* ---------- the cost of a flat, drawn: the building above the ground line (opening, right half), the land below it in a dark band ---------- */
+.cost-draw,.cost-band{--lw:130px;--dw:40px;--gap:20px;--h1:110px;--h2:280px;--h3:84px;--hat:10px;color:#193D4E}
+.cost-draw *,.cost-band *{font-style:normal}
+.band-page .open-fig.cost-draw{display:flex;flex-direction:column;gap:16px;border:0;background:none;padding:0 24px;margin:24px 0 0}
+.cd-tag{align-self:flex-end;font-size:16px;font-weight:700;letter-spacing:.1em;line-height:1.3;border:2px solid #193D4E;padding:3px 10px;background:#fff}
+.cd-top,.cd-land{display:grid;grid-template-columns:var(--lw) minmax(0,1fr) var(--dw);column-gap:var(--gap);align-items:start}
+.cd-blocks{display:flex;flex-direction:column}
+.cd-blocks i{display:block}
+.cd-o{height:var(--h1);border:2px solid #193D4E;border-bottom:0;background:repeating-linear-gradient(135deg,#193D4E 0 2px,#fff 2px var(--hat))}
+.cd-c{height:var(--h2);border:2px solid #193D4E;border-bottom:0;background:#fff radial-gradient(#9DC3CF 1.4px,transparent 1.8px) 0 0/var(--hat) var(--hat)}
+.cd-labels{display:flex;flex-direction:column}
+.cd-labels>div{display:flex;flex-direction:column;justify-content:center;gap:2px}
+.cd-labels>div:first-child{height:var(--h1)}
+.cd-labels>div:last-child{height:var(--h2)}
+.cd-labels b,.cd-land b{font-size:22px;line-height:1.2}
+.cd-labels span,.cd-land span{font-size:16px;line-height:1.35;display:block}
+.cd-dim{position:relative;display:block;width:var(--dw);height:calc(var(--h1) + var(--h2));color:#193D4E}
+.cd-dim-land{height:var(--h3);color:#fff}
+.cd-dim .vd{position:absolute;top:0;display:block;width:0;height:100%;border-left:1.5px solid currentColor}
+.cd-dim .vd::before,.cd-dim .vd::after{content:"";position:absolute;left:-8px;width:16px;border-top:1.5px solid currentColor;transform:rotate(-45deg)}
+.cd-dim .vd::before{top:0}
+.cd-dim .vd::after{bottom:0}
+.cd-dim .vd-build{left:10px}
+.cd-dim .vd-total{left:30px}
+.cd-top .vd-total::after{display:none}
+.cd-dim-land .vd-total::before{display:none}
+.band-page .cost-band{position:relative;isolation:isolate;color:#fff;margin:0;padding-left:0;padding-right:0;padding-top:0;padding-bottom:0;grid-column:1 / -1}
+.cost-band::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:calc(50% - 50vw);width:100vw;background:#193D4E;border-top:4px solid #A84B00}
+.cost-band .cd-bottom{padding:4px 24px 64px;display:grid;grid-template-columns:minmax(0,1fr);row-gap:24px}
+.cost-band .cd-land{order:-1;padding-top:0}
+.cd-land>div:nth-child(2){height:var(--h3);display:flex;flex-direction:column;justify-content:center;gap:2px}
+.cd-l{display:block;height:var(--h3);border:2px solid #9DC3CF;border-top:0;background:repeating-linear-gradient(135deg,#4A90A4 0 2px,transparent 2px var(--hat))}
+.band-page .cost-band .cd-totals{list-style:none;margin:0;padding-left:0;padding-right:0;padding-bottom:0}
+.cd-totals li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;margin:0;border-top:1px solid #4A6B7A;font-size:18px;line-height:1.4;color:#fff}
+.cd-totals li:last-child{border-bottom:1px solid #4A6B7A}
+.cd-totals b{font-size:28px;line-height:1.2;color:#fff}
+.cost-band :is(b,span,li){color:#fff}
+@media (min-width:1100px){
+  .band-page.has-open-fig.op-5>.cost-band{grid-row:6}
+  /* Round 7 B: the drawing shares the title's top edge and still ends on the ground line (the dark band): it stretches over the opening, and the two blocks keep the 39,000 : 111,400 proportion */
+  .band-page.has-open-fig.op-5>.open-fig.cost-draw{grid-column:2;grid-row:1 / span 5;margin:56px 0 0;align-self:stretch;padding-left:24px;padding-right:24px}
+  .cost-draw,.cost-band{--lw:170px}
+  .band-page .open-fig.cost-draw .cd-top{flex:1 1 auto;min-height:calc(var(--h1) + var(--h2));align-items:stretch}
+  .cost-draw .cd-top .cd-dim{height:auto}
+  .cost-draw .cd-o{height:auto;flex:39 1 0}
+  .cost-draw .cd-c{height:auto;flex:111.4 1 0}
+  .cost-draw .cd-labels>div:first-child{height:auto;flex:39 1 0}
+  .cost-draw .cd-labels>div:last-child{height:auto;flex:111.4 1 0}
+  .cost-band .cd-bottom{grid-template-columns:minmax(0,600px) minmax(0,1fr);column-gap:56px;align-items:start}
+  .cost-band .cd-land{order:0}
+  .band-page .cost-band .cd-totals{padding-top:36px}
+}
+@media (min-width:701px) and (max-width:1099px){
+  .band-page .open-fig.cost-draw{max-width:648px}
+  .cost-band .cd-bottom{max-width:648px}
+}
+@media (max-width:700px){
+  .cost-draw,.cost-band{--lw:96px;--dw:30px;--gap:12px;--h1:78px;--h2:200px;--h3:64px;--hat:9px}
+  .band-page .open-fig.cost-draw{padding:0 16px;margin:12px 0 0}
+  .cost-band .cd-bottom{padding:0 16px 40px}
+  .cd-labels b,.cd-land b{font-size:20px}
+  .cd-totals li{font-size:17px}.cd-totals b{font-size:22px}
+}
+
+/* ---------- Costs, "What does a flat cost to build?": the two photos, taller, the caption under them ---------- */
+#budgets.cost-grid .cost-photos .lead-figure img{aspect-ratio:3/2}
+@media (min-width:1100px){
+  #budgets.cost-grid{grid-template-columns:minmax(0,600px) minmax(0,1fr);column-gap:56px}
+  #budgets.cost-grid>.cost-photos{align-self:start}
+  #budgets.cost-grid .cost-photos .lead-figure{flex:none;height:400px;min-height:0;margin:0 0 32px}
+  #budgets.cost-grid .cost-photos .photo-credit{font-size:16px}
+}
+@media (min-width:600px) and (max-width:1099px){
+  #budgets.cost-grid{display:block}
+  #budgets.cost-grid .cost-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;max-width:none}
+  #budgets.cost-grid .cost-photos .photo-credit{grid-column:1 / -1}
+  #budgets.cost-grid .cost-photos .lead-figure{margin:0}
+}
+
+/* ---------- Project development: plan of a flat above the building section with its ground line ---------- */
+.tech-draw{background:#fff;border:1px solid #D9E3E8;padding:24px;display:flex;flex-direction:column;gap:20px;max-width:560px}
+.tech-draw svg{display:block;width:100%;height:auto}
+.tech-draw text{font-family:Arial,Helvetica,sans-serif}
+@media (max-width:700px){.tech-draw text{font-size:24px}}
+@media (min-width:1100px){.band-page.has-open-fig>.tech-draw.open-fig{max-width:none;width:calc(100% - 24px);padding:24px}}
+.band-page.has-open-fig>.tech-draw.open-fig{padding:24px}
+@media (max-width:1099px){.band-page.has-open-fig>.tech-draw.open-fig{margin:24px 24px 0;width:auto}}
+
+/* ---------- Project development: the details of each step sit in one dark band under the six-step strip ---------- */
+.step-band{position:relative;isolation:isolate;margin:0;padding-top:72px!important;padding-bottom:88px!important;color:#fff}
+.step-band::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:calc(50% - 50vw);width:100vw;background:#193D4E;border-top:4px solid #A84B00}
+.step-band :is(h2,h3,h4,p,li,span,strong,b){color:#fff}
+.step-band a,.band-page .step-band a{color:#fff;text-decoration-color:#fff}
+.step-band a:hover{color:#fff;text-decoration-thickness:2px}
+.step-band :is(a,button):focus-visible{outline:3px solid #fff;outline-offset:3px}
+.step-band>h2{margin:0 0 24px;font-size:30px}
+.step-band .steps-grid{display:block;margin:0}
+.step-band .route-card{background:transparent;border:0;border-top:1px solid rgba(255,255,255,.35);border-radius:0;padding:24px 0 8px}
+.step-band .route-card:first-child{border-top:0;padding-top:0}
+.step-band .route-card h4{display:block;margin:0 0 12px;font-size:22px;line-height:1.3}
+.step-band .route-card .route-dot{display:none}
+.step-band .route-card li{font-size:18px;line-height:1.55}
+.step-band .route-card .rp-needs{border-top:0;border-left:3px solid #9DC3CF;padding:0 0 0 16px;margin:16px 0 0;font-size:17px;line-height:1.5}
+.step-band .route-card-now{background:transparent}
+.step-band .route-detail{display:block;max-width:640px}
+.step-band .route-detail>.route-card{margin:0}
+.step-band .route-after{margin:32px 0 0;padding:0;font-size:18px}
+@media (min-width:1024px){
+  .step-band .steps-grid{display:grid;grid-template-columns:minmax(0,640px) minmax(0,1fr);column-gap:64px;align-items:start}
+}
+@media (max-width:700px){.step-band{padding-top:56px!important;padding-bottom:56px!important}}
+
+/* ---------- row 25: room between sections and inside cards (owner, 14 to 16 Nov) ----------
+   At least 96 px between sections on a laptop and 56 px on a phone; cards 32 px inside on a laptop, 24 px on a phone.
+   The band pages (Costs, Project development, Why, Rent-to-own, Governance, Self-compounding, Distributed ledger, Resources) and Home
+   are already above that; the pages below were not. */
+.about-page section:not(:first-of-type){margin-top:96px}
+.privacy-page section:not(:first-of-type){margin-top:96px}
+main.paper.jobs-page h2,main.guide-paper.band-page:not(.roadmap-page):not(.transparency-page)>h2{margin-top:96px}
+.contact-page .contact-builder{margin-top:96px}
+main.tour-page>section{margin-top:96px}
+main.tour-page>section:first-of-type{margin-top:48px}
+.resource-card,.idea,.band-page .window,.about-founder,.contact-route,.iceberg-above,.iceberg-below,.growth-stages .route-card,.vx-cell{padding:32px}
+.contact-route{padding:24px 32px}
+@media (max-width:700px){
+  .about-page section:not(:first-of-type),.privacy-page section:not(:first-of-type),main.tour-page>section{margin-top:56px}
+  main.paper.jobs-page h2,main.guide-paper.band-page:not(.roadmap-page):not(.transparency-page)>h2{margin-top:56px}
+  .contact-page .contact-builder{margin-top:56px}
+  .resource-card,.idea,.band-page .window,.about-founder,.iceberg-above,.iceberg-below,.growth-stages .route-card,.vx-cell{padding:24px}
+  .contact-route{padding:20px 24px}
+}
+
+/* ---------- row 31: Home's three captions read as captions, not as links (they open a short source on tap and keep their 44 px target) ---------- */
+.three-ways .numbers-btn{color:#526571;text-decoration:none;font-size:16px;line-height:1.45;text-align:left}
+.three-ways .numbers-btn:focus-visible{outline:3px solid #193D4E;outline-offset:3px}
+
+/* ---------- row 37: bigger headers for skimmers (owner, 16 Nov; next16-SKIMMER-HEADERS-SPEC.md) ----------
+   Section headings (h2) 36 px bold, 28 px on a phone. Headings of lists, cards and overviews 22 px bold, 20 px on a phone.
+   The small headings that were 16 px (iceberg, token notice) are 20 px, 19 px on a phone. Same Arial, same colours. */
+main h2:not(#x){font-size:36px;line-height:1.15;font-weight:700}
+main :is(h3,h4):not(#x),main .side-title:not(#x),main .purpose-list strong:not(#x),main .launch-steps strong:not(#x),main .money-flow-steps strong:not(#x),main .flow-phases strong:not(#x),main .ct-panel h3:not(#x),main .route-title:not(#x){font-size:22px;line-height:1.3;font-weight:700}
+main .iceberg h3:not(#x),main .token-notice h3:not(#x),main .token-notice strong:not(#x),.iceberg-window .iceberg h3:not(#x){font-size:20px;line-height:1.3;font-weight:700}
+@media (max-width:700px){
+  main h2:not(#x){font-size:28px}
+  main :is(h3,h4):not(#x),main .side-title:not(#x),main .purpose-list strong:not(#x),main .launch-steps strong:not(#x),main .money-flow-steps strong:not(#x),main .flow-phases strong:not(#x),main .ct-panel h3:not(#x),main .route-title:not(#x){font-size:20px}
+  main .iceberg h3:not(#x),main .token-notice h3:not(#x),main .token-notice strong:not(#x),.iceberg-window .iceberg h3:not(#x){font-size:19px}
+}
+
+/* ================= fix round 2, group A (independent critic, 16 Nov) ================= */
+/* A1: the footer takes the header's dark teal, with the orange rule on top */
+html .site-footer{background:#193D4E;border-top:4px solid #A84B00;color:#fff}
+/* A2: About, the lofts page, Tour, Privacy, Jobs and Commons research alternate white and pale like the other pages */
+main.band-doc>section[data-pale]{background:#EDF5F7;box-shadow:0 0 0 100vmax #EDF5F7;clip-path:inset(0 -100vmax)}
+main.band-doc:not(.band-page)>section:not(#x){margin-top:0;margin-bottom:0;padding-top:56px;padding-bottom:56px}
+@media (max-width:700px){main.band-doc:not(.band-page)>section:not(#x){padding-top:32px;padding-bottom:32px}}
+main.band-doc>.ground-line + section{margin-top:0}
+main.paper.band-doc.guide-paper.band-page:not(.tour-page){max-width:1200px;width:auto;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px;box-sizing:border-box}
+main.band-doc>section.doc-section{padding-top:56px;padding-bottom:56px;margin:0}
+main.band-doc>section.doc-section>h2{margin-top:0}
+main.band-doc>section.doc-section>p{max-width:36em}
+main.paper.band-doc.guide-paper.band-page:not(.tour-page)>h1{padding-top:56px}
+@media (max-width:700px){main.band-doc>section.doc-section{padding-top:32px;padding-bottom:32px}main.paper.band-doc.guide-paper.band-page:not(.tour-page)>h1{padding-top:32px}}
+@media (max-width:700px){main.paper.band-doc.guide-paper.band-page:not(.tour-page){padding-left:16px;padding-right:16px;margin-left:3.5px;margin-right:3.5px}}
+
+/* ================= fix round 2, group B: nothing under 16 px in page text (critic P2-1, P3-4, P3-8, P3-11) ================= */
+main :is(th,td,.button,a.button,.act,.route-chip,.tg-chip,.route-sum,small,cite,figcaption,.photo-number,.carousel-count,.vx-col,.vx-row,.proto-caption,.about-founder-role,.contact-route-description,.source-note,.pin-legend li,.stage-chip,.resource-meta,.resource-card p,.resource-more a,.resource-row>a,.resource-actions a,.fine,.photo-credit):not(#x){font-size:16px}
+main :is(.resource-card .resource-meta,.sources,.resource-actions a):not(#x){font-size:16px}
+main .resource-row p:not(#x),main .resource-card p:not(#x){font-size:16px}
+main .pin:not(#x){font-size:16px;width:32px;height:32px;line-height:30px}
+main .route-chip:not(#x){padding:3px 10px}
+main .way-art .step-text:not(#x){font-size:16px}
+main .gov-panel .gv-label:not(#x),main .gov-panel .gv-label-outer:not(#x){font-size:18px}
+.iceberg-window :is(small,li,p){font-size:16px}
+@media (max-width:700px){
+  main .gov-panel .gv-label:not(#x),main .gov-panel .gv-label-outer:not(#x){font-size:19px}
+  .tech-draw{padding:8px}
+  .band-page.has-open-fig>.tech-draw.open-fig{margin:24px 16px 0}
+  .tech-draw text{font-size:24px}
+}
+/* tap area of 44 px for the glossary term buttons and the contact radios, no visible change */
+button.term{position:relative;min-height:0}
+button.term:not(.term-near)::after{content:"";position:absolute;left:-6px;right:-6px;top:50%;height:44px;transform:translateY(-50%)}
+.contact-route input[type=radio]{position:relative}
+.contact-route input[type=radio]::after{content:"";position:absolute;left:-10px;top:-10px;width:44px;height:44px}
+.pillar-band small{font-size:16px}.pillar-band strong{font-size:16px}
+html .option-b .pillar-link small{font-size:16px}html .option-b .pillar-link strong{font-size:16px}
+@media (max-width:700px){
+  .tech-draw text{font-size:26px}
+  main .way-art .step-text:not(#x){font-size:18px}
+  html .option-b .lang button,html .option-b .menu-toggle{font-size:16px}
+}
+
+/* ================= fix round 2, group C: spacing and openings (critic P2-2, P2-3, P2-4, P2-5, P3-2, P3-6, P3-12) ================= */
+/* C1 Costs: 72 px between the text column and the ground line; below 1100 px the opening text stands whole before the drawing */
+@media (min-width:1100px){
+  .band-page.has-open-fig.op-5>.on-this-page{margin-bottom:72px}
+}
+@media (min-width:701px) and (max-width:1099px){
+  .band-page.has-open-fig.op-5{display:flex;flex-direction:column}
+  .band-page.has-open-fig.op-5>.open-fig.cost-draw{order:5;max-width:648px;margin-top:48px}
+  .band-page.has-open-fig.op-5>.cost-band{order:6}
+  .band-page.has-open-fig.op-5>#budgets{order:7}
+  .band-page.has-open-fig.op-5>.on-this-page{order:4}
+  .band-page.has-open-fig.op-5>.ground-line,.band-page.has-open-fig.op-5>:not(.cost-band):not(.open-fig):not(h1):not(p):not(nav):not(.key-card){order:8}
+}
+.band-page.has-open-fig.op-5>.cost-band+section{margin-top:0}
+#budgets.cost-grid{margin-top:0!important}
+.band-page.has-open-fig.op-5>.on-this-page~section:first-of-type{margin-top:0}
+/* C2 "On this page" in the opening's right column from 1100 px */
+@media (min-width:1100px){
+  main.band-page.nav-right{display:grid;grid-template-columns:minmax(0,600px) minmax(0,1fr);column-gap:56px;grid-auto-flow:row;align-items:start}
+  main.band-page.nav-right>*{grid-column:1 / -1}
+  main.band-page.nav-right>:is(h1,p.guide-lead,p.lead-follow,.key-card,.lead-first,p.answer){grid-column:1}
+  main.band-page.nav-right>.guide-lead~.guide-lead:not(.lead-follow){grid-column:1}
+  main.band-page.nav-right>.on-this-page{grid-column:2;grid-row:2 / span 4;align-self:start;margin-top:8px;max-width:none;padding-left:0}
+  main.band-page.nav-right>.on-this-page ol{columns:1}
+  main.band-page.nav-right>.on-this-page ol li{margin-bottom:8px}
+}
+/* C3 Home, the founding circle: a full-bleed pale band, no border, text on the 64 px gutter */
+main>.circle-band{width:auto;max-width:none;margin:0;padding:96px 64px;border:0;background:#EDF5F7;box-shadow:0 0 0 100vmax #EDF5F7;clip-path:inset(0 -100vmax);box-sizing:border-box}
+main>.circle-band .home-section,main>.circle-band>section{width:auto;max-width:1152px;margin:0 auto;padding:0;background:none;border:0}
+@media (max-width:700px){main>.circle-band{padding:56px 24px}}
+/* C6 Rent-to-own: the section about not being able to pay starts on the page gutter like the others */
+.resident-page #hardship.soft-panel{padding-left:24px;padding-right:24px;border-left:0}
+/* C7 phone menu: rows 20 px bold; the group labels stay */
+@media (max-width:1000px){
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .nav-item>a,
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .sub-toggle,
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-link strong,
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-link{font-size:20px;font-weight:700}
+}
+
+/* ================= fix round 2, group D: small fixes (critic P3-1, P3-5, P3-8, P3-9, P3-10) ================= */
+/* D2 the 3D lofts picture: contained on a pale ground, with air around it, so the foot never touches the frame */
+.loft-pair img.loft-model,.proto-1 img,.carousel-slide img,.proto-view img{object-fit:contain;object-position:center bottom;background:#EEF4F6}
+.loft-pair img.loft-model{padding:0 0 8px}
+.carousel-slide>a{background:#EEF4F6}
+/* D3 the six steps: headings stand on one line, two lines reserved */
+@media (min-width:701px){.route-map .route-title{min-height:calc(2 * 1.25em)}}
+/* D4 Governance on a phone: each drawing sits in a crop box of its own height, the text follows below it in flow */
+@media (max-width:700px){
+  .gov-crop{--u:calc(min(100vw - 32px,260px)/300);overflow:hidden;width:min(100vw - 32px,260px);margin:0 auto}
+  .gov-crop .gov-panel{max-width:none;width:100%;margin:0}
+  .gov-crop.gv-c1{height:calc(var(--u)*128)}.gov-crop.gv-c1 .gov-panel{margin-top:calc(var(--u)*-63)}
+  .gov-crop.gv-c2{height:calc(var(--u)*171)}.gov-crop.gv-c2 .gov-panel{margin-top:calc(var(--u)*-63)}
+  .gov-crop.gv-c3{height:calc(var(--u)*184)}.gov-crop.gv-c3 .gov-panel{margin-top:calc(var(--u)*-41)}
+  .gov-crop.gv-c4{height:calc(var(--u)*254)}
+  .gov-crop .gov-panel.gv-p1,.gov-crop .gov-panel.gv-p2,.gov-crop .gov-panel.gv-p3,.gov-crop .gov-panel.gv-p4{margin-bottom:0}
+}
+@media (min-width:701px){.gov-crop{display:block}}
+/* D5 the totals in the dark band: the amount never breaks, the label gives way */
+.cd-totals b{white-space:nowrap}
+.cd-totals li>span{flex:1 1 auto;min-width:0}
+@media (max-width:700px){.cd-totals b{font-size:20px}}
+/* D6 page titles: 52 px on a laptop, 34 px on a phone (the Rules board) */
+main.paper>h1,main>h1,#estudo-lofts>h1,.band-page>h1{font-size:52px;line-height:1.1}
+@media (max-width:700px){main.paper>h1,main>h1,#estudo-lofts>h1,.band-page>h1{font-size:34px}}
+/* the last pieces under 16 px (the blanket rule of group B is gone: it also shrank 18 px text to its parent's size) */
+.idea-source,.idea-source a,.on-this-page p,.rp-needs strong,.rp-needs span,.rp-needs a,main figcaption span:not(#x),main figure>figcaption span:not(#x){font-size:16px}
+.carousel-thumbs span{font-size:16px}
+main .cost-draw .cd-labels b:not(#x),main .cost-draw .cd-land b:not(#x){font-size:22px}
+main .cost-band .cd-totals b:not(#x){font-size:28px}
+@media (max-width:700px){main .cost-draw .cd-labels b:not(#x),main .cost-draw .cd-land b:not(#x){font-size:20px}main .cost-band .cd-totals b:not(#x){font-size:20px}}
+.gov-stage span:not(#x){font-size:16px}
+.step-band .route-card .rp-needs :is(strong,span,a):not(#x){font-size:17px}
+.carousel-controls button,.carousel-controls button span{font-size:16px}
+
+/* ================= fix round 3, group A: nothing under 16 px in the header, the sub-bar and the phone cards ================= */
+html .option-b .pillar-panel a{font-size:16px}
+.vx-q,.vx-more,.v-more>summary{font-size:16px}
+.resource-more a,.resource-row>a{font-size:16px}
+/* A: with 16 px links the longest menus (Dutch, Portuguese) need less side padding; the Dutch links (below 1080 px) and the Portuguese links (below 1240 px) take a row of their own under the logo */
+@media (min-width:1001px){html .option-b .housing-links .sub-toggle{padding:0 4px}html .option-b .housing-links{gap:2px}}
+@media (min-width:1001px){html[lang="pt-BR"] .option-b .site-nav .site-links :is(a,button){font-size:16px;letter-spacing:0}}
+@media (min-width:1001px) and (max-width:1079px){
+  html[lang="nl"] .option-b .site-nav .wordmark{grid-column:1;grid-row:1}
+  html[lang="nl"] .option-b .option-b-right{grid-column:3;grid-row:1}
+  html[lang="nl"] .option-b .housing-links{grid-column:1/-1;grid-row:2;justify-content:center}
+  html[lang="nl"] .option-b .pillar-band{grid-row:3}
+  html[lang="nl"] .option-b.site-header::before{height:124px}
+}
+@media (min-width:1001px) and (max-width:1239px){
+  html[lang="pt-BR"] .option-b .site-nav .wordmark{grid-column:1;grid-row:1}
+  html[lang="pt-BR"] .option-b .option-b-right{grid-column:3;grid-row:1}
+  html[lang="pt-BR"] .option-b .housing-links{grid-column:1/-1;grid-row:2;justify-content:center}
+  html[lang="pt-BR"] .option-b .pillar-band{grid-row:3}
+  html[lang="pt-BR"] .option-b.site-header::before{height:124px}
+}
+
+/* ================= fix round 3, group D: the wavy line over a section runs the full width of its band ================= */
+.band-page .story-water,.story-water{max-width:none}
+/* Contact: the cards start 64 px (56 on a phone) under the hatched strip, as the first section does on the other pages */
+.contact-cards>.ground-line{margin-bottom:44px}
+@media (max-width:700px){.contact-cards>.ground-line{margin-bottom:36px}}
+
+/* ================= fix round 3, group E: the lofts page starts 96 px under the hatched strip (56 px on a phone) ================= */
+.ground-line+h2#lofts{margin-top:96px}
+@media (max-width:700px){.ground-line+h2#lofts{margin-top:56px}}
+
+/* ================= fix round 3, group J: the 3D loft model is shown whole on the Tour (contain, on a pale ground) ================= */
+.tour-figure img[src*="property-1"]{object-fit:contain;object-position:center bottom;background:#EEF4F6;border-radius:0}
+
+/* ================= fix round 3, group K: no blank white strip between the last band and the footer ================= */
+main.band-doc,main.band-page,main.paper{margin-bottom:0}
+main+footer.site-footer,main.band-doc+footer,main.band-page+footer,main.paper+footer{margin-top:0}
+main>section#saiba-mais{padding:0;margin:0;min-height:0}
+
+/* ================= fix round 3, group L: Resources, the box that opens the iceberg picture starts on the page's left edge ================= */
+.iceberg-above{margin-left:0;margin-right:0}
+
+/* ================= fix round 4, group E: no white sliver under the pale second bar (the nav's 8 px bottom padding, now 0 where the bar shows) ================= */
+@media(min-width:1001px){html[lang] .option-b .site-nav.site-nav{padding-bottom:0}}
+
+/* ================= fix round 4, group F: the sub-bar labels wrap inside their box instead of running to its edge (type stays 16 px) ================= */
+@media(min-width:1001px){
+  html .option-b .pillar-link>span{min-width:0}
+  html .option-b .pillar-link strong,html .option-b .pillar-link small{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:break-word}
+}
+
+/* ---------- Round 7 D: pop-ups, the menu dropdown and the land label ---------- */
+/* the pop-up's Close button: 16 px type, 44 px tap height */
+.term-pop-close{font-size:16px;min-height:44px;padding:8px 20px}
+/* pop-ups and the dropdown: their 1 px #D9E3E8 line stays, the soft shadow goes; square corners like the rest of the site */
+.term-pop,.numbers-pop,.site-links .sub{box-shadow:none}
+.term-pop,.term-pop-close{border-radius:0}
+/* Costs, the land label under the ground line: it may grow, and keeps a gap below the orange line */
+.cd-land>div:nth-child(2){height:auto;min-height:var(--h3);box-sizing:border-box;padding-block:10px}
+/* Source notes: the link flows with the sentence (it was an inline-block, so a full stop after it could wrap onto a line of its own); its 44 px tap box is vertical padding */
+.source-note a{display:inline;min-height:0;padding-block:13px;line-height:inherit}

@@ -8,7 +8,7 @@ IMOBX is preparing a rent-to-own housing project in Rio de Janeiro, organised as
 
 We call it a self-compounding community-funding token. Every time it changes hands, a fee is paid. The fee pays for the community's work, for new houses and for the token's own pool, so the project grows from what it earns.
 
-The token is optional. Families who rent to own with IMOBX join the housing cooperative as members, and membership is all they need. No token is ever a condition for a family's housing. The token comes at a later stage of the project.
+Families who rent to own with IMOBX join the housing cooperative as members. The token comes at a later stage of the project.
 
 ## What the token is
 
@@ -17,9 +17,7 @@ The IMOBX token is a crypto token. People can buy and sell it, and its price mov
 IMOBX builds on the self-compounding model of Ethervista. Its rules:
 
 - There are 1,000,000 tokens, once and for all. None are created later.
-- There is no presale. Nobody buys tokens from IMOBX before trading opens, and there is no early round for investors.
 - Three quarters of the tokens go into the trading pool, locked there so nobody can take them out. The other quarter is set aside: 5% for partners, 5% for operations, 5% for community rewards, 5% for governance, 3% for brokers and 2% for legal costs.
-- The team receives no tokens.
 
 Most token projects raise funds by selling tokens to early investors or by creating new ones as rewards. IMOBX does neither. Its income is the fee on each trade.
 
@@ -31,13 +29,11 @@ On Arctide, the 14% divides this way:
 
 - 45% pays wages for the people hired to do the community's work.
 - 35% goes to the pool. The pool is the shared reserve through which the token changes hands.
-- 20% goes to people who lock their tokens.
+- The rest, 20%, is still to be decided.
 
-For a trade of US$100, that is US$6.30 for wages, US$4.90 for the pool and US$2.80 for people who lock their tokens, out of a US$14 fee.
+For a trade of US$100, that is US$6.30 for wages, US$4.90 for the pool and US$2.80, the rest, still to be decided, out of a US$14 fee.
 
 When IMOBX puts in the pool's starting funds, it holds three quarters of the pool, and its part of the pool's share goes to new houses. The rest goes to people who add their own funds to the pool.
-
-Before any benefit for people who lock their tokens applies, we will name it and publish its terms.
 
 ## How the token would open
 
@@ -70,8 +66,6 @@ The token's purpose is set by four rules, and they apply to all of the community
 ## What the token does not do
 
 The token gives no share in IMOBX and no claim on any house, plot of land or family payment. The fee figures in this paper describe the design and are not payments anyone is promised.
-
-Families do not need the token to use anything the community offers as members. Services run on membership, and the token is not an entry ticket.
 
 ## Risks
 

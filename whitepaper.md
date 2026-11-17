@@ -101,7 +101,7 @@ Once the IMOBX housing cooperative is registered, it will fund the first house t
 
 The IMOBX token would add to the houses budget over time. Each trade of the token would pay a fee in USDC, a digital dollar: 14% on Arctide, an exchange on the Arc network, plus Arctide’s own 0.25%, and 11% on Argus, a second exchange, which keeps 30% of its fee. Buyers’ payments would go into the token’s trading pool, so this fee would be the community’s only income from the token.
 
-Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work. 35% would go to the trading pool, the shared reserve through which the token changes hands. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading.
+Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work. 35% would go to the trading pool, the shared reserve through which the token changes hands. The rest, 20% of each fee, is still to be decided.
 
 When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, and that part of the pool’s share would go to new houses. If the token opens instead with a sale on Arctide’s bonding curve, where the first buyers’ payments start the pool, that part would go to Arctide, and new houses would receive the share earned by funds IMOBX adds to the pool itself.
 
@@ -144,22 +144,20 @@ Whatever a vote decides, including a token vote, only the family and IMOBX toget
 
 ## 8. What the token is for
 
-After a house is built, the shared work carries on: repairs, checks, records and the next house. The IMOBX token would give the community an income for that work. Holding it is optional. It is planned as a self-compounding community-funding token, a crypto token that people would buy and sell on a public market on the Arc blockchain, and every trade would pay the fee described in section 5.
+After a house is built, the shared work carries on: repairs, checks, records and the next house. The IMOBX token would give the community an income for that work. It is planned as a self-compounding community-funding token, a crypto token that people would buy and sell on a public market on the Arc blockchain, and every trade would pay the fee described in section 5.
 
-IMOBX builds on the self-compounding model that Ethervista runs. Many token projects raise funds by selling tokens to early investors before launch, or by creating new tokens to pay for their work. IMOBX holds no presale, and the supply is fixed at 1,000,000 tokens: three quarters would sit locked in the trading pool, and the team would receive none. The community’s income from the token would be the fee alone.
+IMOBX builds on the self-compounding model that Ethervista runs. Many token projects raise funds by selling tokens to early investors before launch, or by creating new tokens to pay for their work. The supply is fixed at 1,000,000 tokens, and three quarters would sit locked in the trading pool. The community’s income from the token would be the fee alone.
 
 The token’s use comes from four rules, the four V’s:
 
 | Rule | What it means |
 |---|---|
 | Volume | Trading fees would give the community an income of its own. Before launch, we publish who can change the fee and who holds the token’s admin keys, meaning who can change its settings. |
-| Verify | Anyone, with or without a token, could check where each fee went and which role approved it, while personal details stay private. In the plan, several signers, named by role, approve each payment, and only within the published budget. |
+| Verify | Anyone could check where each fee went and which role approved it, while personal details stay private. In the plan, several signers, named by role, approve each payment, and only within the published budget. |
 | Vote | On the token’s own rules, a vote’s weight would come mainly from work that others have confirmed, and the size of a holding would count for less. Housing and shared matters stay one member, one vote, and holding tokens adds nothing to a housing vote. |
 | Vow | The commitments no vote can break, starting with each family’s housing agreement. |
 
-Locked tokens would stay locked for good, as section 5 explains. Any benefit for people who lock their tokens will be named, with its terms, before it applies.
-
-Families need no token. They join IMOBX as members, sign their own housing agreement and take part in decisions with one member, one vote. The token would come at a later stage of the project. The plan is that each family owns its **whole house**, and in Brazil the property registry records who owns a house (Civil Code, article 1,245), so the token carries no claim on any house.
+Families join IMOBX as members, sign their own housing agreement and take part in decisions with one member, one vote. The token would come at a later stage of the project. The plan is that each family owns its **whole house**, and in Brazil the property registry records who owns a house (Civil Code, article 1,245), so the token carries no claim on any house.
 
 The nonprofit idea is there so that funding goes to housing; IMOBX will be a housing cooperative, not registered yet. [Law 13.019](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019compilado.htm), which covers partnerships with the public sector, defines nonprofits as organisations that use their results for their social purpose (article 2(I)(a)). A donation given for building houses keeps its agreed purpose.
 
@@ -169,7 +167,7 @@ Our commitments, which partners and families can hold us to:
 
 - We start building a house only when its funding is secured.
 - The token’s open rules are published, with notice before any change, and pass to the community once they are coded.
-- Families take part as members, with or without a token.
+- Families take part as members.
 
 The token’s rules stay open to change in its first stages, until everybody’s stake of involvement is reflected. People paid to promote the token would disclose the payment and follow the rules of each channel and country they reach. The [Self-compounding page](self-compounding.html) explains the token on the website.
 
@@ -191,7 +189,7 @@ Tasks need a responsible person, deadline and budget. If someone leaves a role, 
 
 Software assistants can organize documents and remind people about unfinished work, and blockchain records can show payment amounts and destinations. The agreed rules still determine who decides or spends. See [daily decisions and tasks](costs-and-funding.html#faq-flock-siah).
 
-Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. The provider is chosen with the first project. Residents do not need crypto wallets. See the [funding path](costs-and-funding.html#settlement) and the [payment-service requirements](costs-and-funding.html#ramp-options).
+Families pay in reais. IMOBX keeps funding for Brazilian bills and uses digital payments only for an agreed purpose. Any conversion needs an accepted provider, a full cost record and a tested route back to the bank. The provider is chosen with the first project. See the [funding path](costs-and-funding.html#settlement) and the [payment-service requirements](costs-and-funding.html#ramp-options).
 
 <div class="pagebreak"></div>
 

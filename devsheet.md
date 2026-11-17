@@ -76,7 +76,7 @@ In January 2026, Rafael’s construction company signed a contract to build two 
 
 Under the plan, a family rents the home and pays the agreed monthly amount in reais. Its agreement states the purchase price and how much of each payment counts towards buying the home. Its purchase record shows how much has counted towards buying the home and how much remains to pay.
 
-The price for the first household and its monthly payment, and how much of each payment counts towards buying the home, are not decided yet. They are agreed in writing with the family before it moves in. Rafael’s construction figures show what building costs; each household’s price is set in its own agreement. The family pays in reais and takes part as a member, with no token or crypto wallet needed. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
+The price for the first household and its monthly payment, and how much of each payment counts towards buying the home, are not decided yet. They are agreed in writing with the family before it moves in. Rafael’s construction figures show what building costs; each household’s price is set in its own agreement. The family pays in reais and takes part as a member. See the [household explanation in Portuguese and English](rent-to-own.html#payments).
 
 Repair charges, missed payments, temporary hardship and leaving each have their own terms. They say what happens to the funding already counted towards buying the home if a family leaves, including any refund and grace period, and they are part of the offer the household assesses before agreeing to move in.
 
@@ -105,9 +105,9 @@ A builder needs to know that a house is paid for before work starts. The first h
 
 ### The token’s trading fee
 
-Over time, the IMOBX token would add to the houses budget. Holding it is optional. It is planned as a self-compounding community-funding token with no presale and a fixed supply of 1,000,000 tokens. Buyers’ payments would go into the token’s trading pool in exchange for tokens, and none of them would reach IMOBX. The community’s income would be the fee on every trade: 14% on Arctide, plus Arctide’s own 0.25%, and 11% on Argus, which keeps 30% of it.
+Over time, the IMOBX token would add to the houses budget. It is planned as a self-compounding community-funding token with a fixed supply of 1,000,000 tokens. Buyers’ payments would go into the token’s trading pool in exchange for tokens, and none of them would reach IMOBX. The community’s income would be the fee on every trade: 14% on Arctide, plus Arctide’s own 0.25%, and 11% on Argus, which keeps 30% of it.
 
-Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. The other 35% would go to the trading pool. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of that 35% would go to new houses. If the token opens instead with a sale on Arctide’s bonding curve, Arctide would receive that part, and new houses would receive the share earned by funds IMOBX adds to the pool itself. The [Self-compounding page](self-compounding.html) explains the token and its four V’s: Volume, Verify, Vote and Vow.
+Each fee would be split three ways. 45% would pay wages for the people hired to do the community’s work. 35% would go to the trading pool. The rest, 20% of each fee, is still to be decided. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of that 35% would go to new houses. If the token opens instead with a sale on Arctide’s bonding curve, Arctide would receive that part, and new houses would receive the share earned by funds IMOBX adds to the pool itself. The [Self-compounding page](self-compounding.html) explains the token and its four V’s: Volume, Verify, Vote and Vow.
 
 Trading is usually busiest around a launch and much quieter afterwards, so the housing budget has to work through long periods of little or no trading income. The accounts will show the fees actually received and how each was used.
 
@@ -138,7 +138,7 @@ A family’s housing agreement, its membership voice, holding the token and any 
 | Staff and resident representatives | Powers, pay, appointment, spending limits, reporting and replacement. |
 | Builders and suppliers | Work, price, payment stages and independent completion checks. |
 | Donors and social funders | Permitted use, reports, delays and cancellation. |
-| Token holders | Who issues the token, any benefit for people who lock their tokens (named, with its terms, before it applies), how votes on the token’s rules are weighted, and the risk of loss. |
+| Token holders | Who issues the token, how votes on the token’s rules are weighted, and the risk of loss. |
 | Possible investors | What investors would receive, where income comes from, costs, risk of loss, voting, sales and leaving. |
 | Neighbours | Local impacts, services, access and a way to raise concerns. |
 | Independent checkers | Authority and access to review property, safety, accounts and agreements. |
@@ -199,7 +199,7 @@ IMOBX’s development plan has three stages: a local pilot in Rio, more neighbou
 | A family signs | A rent-to-own agreement for the family’s flat in the Guadalupe building, signed if the family agrees, and house rules that residents help write. |
 | Build five flats | Construction starts once the full cost is in the bank, an itemised quote is ready and the permits are in place. |
 
-Members have a say in shared matters, with defined budgets and review procedures, and need no token to take part. A demonstration of USDC, a digital currency designed to track the US dollar, received and payments approved on Arc, a blockchain network, would show how payment records can be linked to accounts and evidence.
+Members have a say in shared matters, with defined budgets and review procedures. A demonstration of USDC, a digital currency designed to track the US dollar, received and payments approved on Arc, a blockchain network, would show how payment records can be linked to accounts and evidence.
 
 ### Following an operating project
 
@@ -228,7 +228,7 @@ The first houses come first, and the IMOBX token would come at a later stage. Pu
 | Organization | The IMOBX housing cooperative is registered first; accountable roles and agreements follow. |
 | Families | Eligibility, affordability, individual terms and shared decision rights need local discussion. |
 | Funding | Once the IMOBX housing cooperative is registered, a crowdfunding campaign in reais and grants will fund the first house. The campaign runs before the token launches, and its backers receive ordinary rewards, never tokens. Project updates report grants, campaign results and donated properties as they arrive. |
-| Token | A planned self-compounding community-funding token, optional to hold, with no presale and a fixed supply of 1,000,000 tokens. Its trading fee would pay wages and add to the houses budget over time; the share for people who lock their tokens waits for a lawyer’s reading. Any benefit for people who lock their tokens will be named, with its terms, before it applies. Still open: who issues it. |
+| Token | A planned self-compounding community-funding token, with a fixed supply of 1,000,000 tokens. Its trading fee would pay wages and add to the houses budget over time; the rest of the fee is still to be decided. Still open: who issues it. |
 | Payments | Provider acceptance and the complete payment route remain to be demonstrated. |
 
 ### Evidence for the next project decision

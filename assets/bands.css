@@ -247,3 +247,46 @@
   .band-page>section.loop-aside>*{grid-column:1}
   .band-page>section.loop-aside>.loop-ring{grid-column:2;grid-row:1 / span 7;align-self:center;margin:0}
 }
+
+/* Pictures beside text (15 Nov 2026). Costs and funding: two photos from Olympus beside "What does a flat cost to build?".
+   From 900px the photos share the height of the text column, so no empty band is left under them. */
+#budgets.cost-grid .cost-photos{margin:28px 0}
+.cost-photos .lead-figure{margin:0 0 22px}
+.cost-photos .lead-figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+.cost-photos .photo-credit{margin:0;padding:0;font-size:15px;line-height:1.5;color:#526571}
+@media (min-width:900px){
+  #budgets.cost-grid{display:grid;grid-template-columns:minmax(0,32em) minmax(0,1fr);column-gap:56px;align-items:start}
+  #budgets.cost-grid>*{grid-column:1}
+  #budgets.cost-grid>.cost-photos{grid-column:2;grid-row:1 / span 9;margin:0;align-self:stretch;display:flex;flex-direction:column}
+  #budgets.cost-grid .cost-photos .lead-figure{position:relative;flex:1 1 0;min-height:200px;margin:0 0 22px}
+  #budgets.cost-grid .cost-photos .lead-figure img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
+  #budgets.cost-grid>details,#budgets.cost-grid>.source-note{grid-column:1 / -1}
+}
+/* Rent-to-own: the courtyard beside "What do residents decide?" */
+.decide-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
+.decide-figure{margin:0}
+.decide-figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+@media (min-width:900px){
+  .decide-grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:start}
+}
+
+/* Self-compounding, "What does self-compounding mean?": the short lead centres on the ring beside it. */
+@media (min-width:1200px){
+  .loop-open .loop-lead{align-self:center}
+  .loop-open .loop-ring .loop-svg{max-width:270px}
+}
+
+/* A drawing of the village beside the text of one section (15 Nov 2026, owner: the pages lack colour; no captions). The text keeps its column and the drawing fills the other half at the height of the text. One column on narrow screens. */
+.band-page>section.has-picture{display:grid;grid-template-columns:minmax(0,32em) minmax(0,1fr);column-gap:48px;align-content:start}
+.band-page>section.has-picture>*{grid-column:1}
+.band-page>section.has-picture>.side-picture{grid-column:2;grid-row:1 / span 9;align-self:stretch;margin:0;width:100%;max-width:500px;max-height:420px}
+.band-page>section.has-picture>.side-picture.pic-sm{max-width:440px;max-height:340px}
+.side-picture.pic-sm img{aspect-ratio:16/9}
+@media (max-width:1000px){.side-picture.pic-sm img{aspect-ratio:3/2}}
+.band-page>section.has-picture>.side-picture.pic-below-water{grid-row:2 / span 30;align-self:start;max-height:none;position:sticky;top:24px}
+.band-page>section.has-picture>.story-water{grid-column:1 / -1;grid-row:1}
+.side-picture img{display:block;width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+@media (max-width:1000px){
+  .band-page>section.has-picture{display:block}
+  .band-page>section.has-picture>.side-picture{margin:24px 0;max-width:640px;max-height:none;position:static}
+}

@@ -5,8 +5,8 @@
 .tour-contact label { font-weight: 600; margin-top: .5rem; }
 .tour-contact input, .tour-contact select, .tour-contact textarea { width: 100%; box-sizing: border-box; font: inherit; color: inherit; background: #fff; border: 1px solid #777; border-radius: .3rem; padding: .7rem; }
 .tour-contact textarea { resize: vertical; }
-.tour-contact :is(input, select, textarea, button):focus-visible { outline: 3px solid #235a50; outline-offset: 2px; }
+.tour-contact :is(input, select, textarea, button):focus-visible { outline: 3px solid #276578; outline-offset: 2px; }
 .tour-contact .tour-contact-note { font-size: .9rem; margin: .4rem 0; }
-.tour-contact button { justify-self: start; font: inherit; font-weight: 600; color: #fff; background: #235a50; border: 0; border-radius: .3rem; padding: .75rem 1.2rem; cursor: pointer; }
+.tour-contact button { justify-self: start; font: inherit; font-weight: 600; color: #fff; background: #276578; border: 0; border-radius: 0; padding: .75rem 1.2rem; cursor: pointer; }
 
 .tour-contact [hidden] { display: none; }

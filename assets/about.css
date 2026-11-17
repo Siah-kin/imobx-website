@@ -10,8 +10,15 @@
 .about-founder blockquote{margin:0}
 .about-founder blockquote p{font-size:17px;line-height:1.65;margin:0 0 14px}
 .about-founder figcaption{font-weight:700;font-size:16px;color:var(--ink);margin-top:8px}
+.about-page .about-founder .about-founder-role{margin:6px 0 0;font-size:15px;line-height:1.5;color:var(--muted)}
 .about-picture{margin:28px 0 0}
 .about-picture img{display:block;width:100%;height:auto;max-height:440px;object-fit:cover;border-radius:4px}
 .about-picture figcaption{font-size:15px;color:var(--muted);margin-top:8px}
 .about-now{border-top:1px solid var(--line);padding-top:32px}
 @media(max-width:760px){.about-founders{grid-template-columns:minmax(0,1fr)}.about-page h2{font-size:26px}.about-page .about-lead{font-size:21px}.about-founder{padding:22px 20px}}
+.about-picture{max-width:880px}
+.about-picture img{max-height:none;aspect-ratio:3/2;object-fit:cover}
+
+/* Layout pattern (15 Nov 2026): two quotes of different length keep their own height, so the shorter card has no empty band between quote and name. */
+.about-founders{align-items:start}
+.about-founder{justify-content:flex-start}

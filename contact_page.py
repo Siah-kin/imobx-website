@@ -52,10 +52,11 @@ def build_contact(root, page, tr, esc, version):
     body += t(('Enviar por e-mail', 'Send by email'), 'a', f'class="contact-button contact-button-quiet" id="email-enquiry" href="mailto:{esc(contact["email"])}"')
     body += t(('Abrir o grupo do Telegram', 'Open the Telegram group'), 'a', f'class="contact-button contact-button-telegram" href="{esc(contact["telegram"])}" target="_blank" rel="noopener noreferrer"')
     body += t(('Editar respostas', 'Edit answers'), 'button', 'type="button" class="contact-text-button" id="edit-enquiry"') + '</div>'
-    body += '<p id="enquiry-status" role="status" aria-live="polite"></p></section></section>'
-
-    body += ('<figure class="contact-picture"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da vila que imaginamos" data-alt-pt="Ilustração conceitual da vila que imaginamos" data-alt-en="Concept illustration of the village we imagine" data-alt-nl="Conceptillustratie van het dorp dat we ons voorstellen">'
+    body += '<p id="enquiry-status" role="status" aria-live="polite"></p></section>'
+    body += ('<figure class="contact-picture"><img src="assets/village-block.jpg" width="1600" height="1067" loading="lazy" alt="Desenho de um bloco branco de apartamentos de dois andares, com telhado de telhas, painéis solares, duas varandas e duas portas de entrada, com hortas e árvores frutíferas na frente." data-alt-pt="Desenho de um bloco branco de apartamentos de dois andares, com telhado de telhas, painéis solares, duas varandas e duas portas de entrada, com hortas e árvores frutíferas na frente." data-alt-en="Drawing of a white two-storey block of flats with a tiled roof, solar panels, two balconies and two front doors, with vegetable beds and fruit trees in front." data-alt-nl="Tekening van een wit appartementengebouw van twee verdiepingen met pannendak, zonnepanelen, twee balkons en twee voordeuren, met moestuinbedden en fruitbomen ervoor.">'
              '</figure>')
+    body += '</section>'
+
     body += '</main>'
     embedded = json.dumps(data, ensure_ascii=False).replace('<', '\\u003c')
     body += '<script id="contact-route-data" type="application/json">' + embedded + '</script>'

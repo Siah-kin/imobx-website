@@ -11,9 +11,9 @@ STEPS = [
      ('O contrato é assinado antes da mudança.', 'The agreement is signed before moving in.')),
     (('O pagamento de cada mês', 'Each month’s payment'),
      ('Parte compra o apartamento; outra parte paga manutenção e consertos.', 'Part buys the flat; another part pays for upkeep and repairs.')),
-    (('O apartamento é da família', 'The flat is the family’s'),
-     ('Quando terminar de pagar o combinado, a escritura fica no seu nome.',
-      'When you have paid what was agreed, the deed is in your name.')),
+    (('O apartamento passa para o nome da família', 'The flat goes into the family’s name'),
+     ('As condições combinadas decidem quando.',
+      'The agreed conditions decide when.')),
 ]
 
 SVG = '''<svg class="money-flow-art" viewBox="0 0 1000 240" aria-hidden="true">
@@ -267,7 +267,8 @@ def _gov_panels(text):
                 f'<rect class="gv-lock" x="{x-5}" y="{y+3}" width="10" height="8"/><path class="gv-shackle" d="M{x-3} {y+3}v-3a3 3 0 0 1 6 0v3"/>')
     arrow = '<path class="gv-arrow" d="M276 135h18m-7-7 7 7-7 7"/>'
     def svg(body, n, with_arrow):
-        return (f'<svg class="gov-panel gv-p{n}" viewBox="0 8 300 254" aria-hidden="true">' + body + (arrow if with_arrow else '') + '</svg>')
+        # the wrapper is the crop box on a phone (CSS in assets/frame.css), so no drawing box reaches over the text around it
+        return (f'<div class="gov-crop gv-c{n}"><svg class="gov-panel gv-p{n}" viewBox="0 8 300 254" aria-hidden="true">' + body + (arrow if with_arrow else '') + '</svg></div>')
     p1 = ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131)
     p2 = (ring(150, 135, 58, 'gv-core') + people(150, 154) + label(GOV_LABELS['founders'], 150, 131)
           + label(GOV_LABELS['campaign'], 150, 232, 'gv-label gv-label-outer'))

@@ -5,6 +5,9 @@ Owner, 8 Nov 2026: the site lacked the why; the draft (ABOUT_PAGE_DRAFT_2026-11-
 """
 
 
+from page_frame import term_scripts
+
+
 def build_about(root, page, tr, esc):
     def t(pair, tag='p', attrs=''):
         return tr(*pair, tag, attrs)
@@ -41,37 +44,44 @@ def build_about(root, page, tr, esc):
                  'My childhood taught me early the value of every cent and of a safe roof. My father was absent, and my mother supported the household working 70 to 80 hours a week to raise three children. I never gave up a dream I have carried since university: to build good homes, of modest or affordable standard, so that the poorest families can once again fulfil the dream of owning their own home. Because every Brazilian dreams of that.'))
           + t(('Ninguém gosta de pagar aluguel, de criar raízes num lugar e um dia ter que sair porque a casa não é sua. Quando a vida aperta, a primeira coisa que queremos é entrar na nossa caverna e nos proteger. A pergunta que não sai da minha cabeça é simples: por que ter a própria caverna não é um direito de todos? A IMOBX é a minha resposta a essa pergunta.',
                  'Nobody likes to rent, to put down roots in a place and one day have to leave because the home isn’t theirs. When life gets hard, the first thing we want is to go into our cave and protect ourselves. The question that won’t leave my mind is simple: why isn’t having one’s own cave a right for everyone? IMOBX is my answer to that question.'))
-          + '</blockquote><figcaption>' + t(('Rafael, cofundador e engenheiro civil, Rio de Janeiro', 'Rafael, co-founder and civil engineer, Rio de Janeiro'), 'span') + '</figcaption></figure>')
+          + '</blockquote><figcaption>' + t(('Rafael, cofundador e engenheiro civil, Rio de Janeiro', 'Rafael, co-founder and civil engineer, Rio de Janeiro'), 'span') + '</figcaption>'
+          + '<p class="about-founder-link">' + t(('As obras do Rafael', 'Rafael’s building work'), 'a', 'href="properties.html"') + '</p></figure>')
     b += ('<figure class="about-founder"><blockquote>'
           + t(('Cresci como o mais velho de três filhos. Alguns anos depois de eu sair de casa, o casamento dos meus pais acabou. Foi a primeira vez que senti que tinha perdido o meu lar. Ainda sinto falta dessa sensação de estar em casa. É uma busca que continua.',
                  'I grew up the oldest of three. A few years after I left the house, my parents’ marriage collapsed. That was the first time I felt I had lost my home. I still long for that sense of being home. It is an ongoing quest.'))
           + t(('Desde 2005, procuro formas para que as comunidades compartilhem o que pertence a todos. A proposta da IMOBX leva essa ideia de compartilhar à moradia.',
                  'Since 2005, I have looked for ways for communities to share what they hold in common. The IMOBX proposal brings that idea of sharing to housing.'))
-          + '</blockquote><figcaption>' + t(('John, cofundador', 'John, co-founder'), 'span') + '</figcaption></figure>')
+          + '</blockquote><figcaption>' + t(('John, cofundador, engenheiro de tokens e designer ecológico', 'John, co-founder, token engineer and ecological designer'), 'span') + '</figcaption>'
+          + t(('John passou seis anos em ecovilas pela Europa. Hoje ele constrói o SIAH Protocol, um registro de contribuições que outras pessoas confirmam.', 'John spent six years in eco-villages across Europe. Today he is building SIAH Protocol, a record of contributions that other people confirm.'), 'p', 'class="about-founder-role"') + '</figure>')
     b += '</div><p>' + t(('As histórias completas de Rafael e John', 'Rafael’s and John’s full stories'), 'a', 'href="resources.html#our-story"') + '</p></section>'
 
     b += '<section id="build">' + t(('O que queremos construir?', 'What do we want to build?'), 'h2')
-    b += t(('Queremos bairros de transição social rumo a um futuro resiliente, onde os vizinhos voltam a se conhecer e as crianças brincam onde os pais podem vê-las. Quem mora ali decide junto como o lugar funciona. O nosso lucro real é social. A nossa riqueza é um mundo onde as pessoas são livres, e um bairro sem estresse vale mais do que ficar milionário.',
-            'We want neighbourhoods of social transition towards a resilient future, where neighbours know each other again and children play where their parents can see them. The people who live there decide together how the place is run. Our real profit is social. Our wealth is a world where people are free, and a stress-free neighbourhood is worth more than becoming a millionaire.'))
-    b += ('<figure class="about-picture"><img src="assets/homepage.jpg" width="1024" height="765" loading="lazy" alt="Ilustração conceitual da vila que imaginamos" data-alt-pt="Ilustração conceitual da vila que imaginamos" data-alt-en="Concept illustration of the village we imagine" data-alt-nl="Conceptillustratie van het dorp dat we ons voorstellen">'
+    b += t(('Queremos bairros de transição social rumo a um futuro resiliente, onde os vizinhos voltam a se conhecer e as crianças brincam onde os pais podem vê-las. Quem mora ali decide junto como o lugar funciona.',
+            'We want neighbourhoods of social transition towards a resilient future, where neighbours know each other again and children play where their parents can see them. The people who live there decide together how the place is run.'))
+    b += ('<figure class="about-picture"><img src="assets/village-street.jpg" width="1600" height="1067" loading="lazy" alt="Desenho de um caminho entre dois blocos brancos de apartamentos de dois andares, com varandas e painéis solares, que leva a um espaço verde com árvores frutíferas, um parquinho e hortas." data-alt-pt="Desenho de um caminho entre dois blocos brancos de apartamentos de dois andares, com varandas e painéis solares, que leva a um espaço verde com árvores frutíferas, um parquinho e hortas." data-alt-en="Drawing of a footpath between two white two-storey blocks of flats with balconies and solar panels, leading to a green space with fruit trees, a playground and vegetable beds." data-alt-nl="Tekening van een pad tussen twee witte appartementengebouwen van twee verdiepingen, met balkons en zonnepanelen, dat leidt naar een groene ruimte met fruitbomen, een speeltuin en moestuinen.">'
           '</figure>')
     b += '</section>'
 
     b += '<section id="how">' + t(('Como funcionaria?', 'How would it work?'), 'h2')
+    # 15 Nov 2026 (owner, decision 97): the section says the point and sends the reader to the pages that hold the detail.
     b += linked(('Nosso plano é o', 'Our plan is'),
                 ('aluguel com compra', 'rent-to-own', 'rent-to-own.html'),
-                ('. Uma família se mudaria sem dar entrada, e parte de cada pagamento mensal iria para a compra do apartamento. A Olympus, a construtora do Rafael, construiria a um preço ligado ao índice público de custo da construção do Rio, conferido de forma independente. O que sobrar iria para o próximo apartamento, para a próxima família. Planejamos começar com uma família, muito provavelmente no prédio que a Olympus construiu em Guadalupe, e depois construir cinco apartamentos de cada vez.',
-                 '. A family would move in without a down payment, and part of every monthly payment would go towards buying the flat. Olympus, Rafael’s construction company, would build at a price tied to Rio’s public building-cost index, checked independently. What is left over would go into the next flat, for the next family. We plan to start with one family, most likely in the building Olympus built in Guadalupe, and then build five flats at a time.'))
-    b += linked(('Outros grupos de moradia já administram suas casas juntos, e', 'Housing groups elsewhere already run their houses together, and'),
-                ('aprendemos com eles', 'we learn from them', 'resources.html#studied'),
-                ('. A FUCVAM, federação uruguaia de cooperativas de ajuda mútua fundada em 1970, faz as famílias construírem juntas, enquanto a cooperativa fica com a escritura. O Mietshäuser Syndikat, na Alemanha, une casas de aluguel administradas pelos próprios moradores. Nos Estados Unidos, os fundos comunitários de terra mantêm a terra em comum e dão a cada família os seus direitos num contrato longo e assinado. Pegamos o que funciona e adaptamos ao Rio, onde cada família seria dona do próprio apartamento.',
-                 '. FUCVAM, Uruguay’s federation of mutual-aid cooperatives founded in 1970, has families build together while the cooperative holds the title. The Mietshäuser Syndikat in Germany links rental houses that their residents run. In the United States, community land trusts keep the land shared and give each family its rights in a long, signed lease. We take what works and adapt it to Rio, where each family would own its own flat.'))
+                (': uma família se mudaria sem dar entrada, e parte de cada pagamento mensal iria para a compra do apartamento.',
+                 ': a family would move in without a down payment, and part of every monthly payment would go towards buying the flat.'),
+                ('A Olympus, a construtora do Rafael', 'Olympus, Rafael’s construction company', 'properties.html'),
+                (', construiria a um preço ligado ao índice público de custo da construção do Rio, conferido de forma independente, e',
+                 ', would build at a price tied to Rio’s public building-cost index, checked independently, and'),
+                ('Custos e recursos', 'Costs and funding', 'costs-and-funding.html'),
+                ('mostra as contas.', 'shows the sums.'))
     b += '</section>'
 
     b += '<section id="now" class="about-now">' + t(('Onde estamos agora?', 'Where are we now?'), 'h2')
-    b += t(('A IMOBX está em preparação, e a sua cooperativa ainda vai ser fundada. Estamos avaliando um primeiro contrato de aluguel com compra para uma família em Guadalupe, e procurando um terreno para cinco apartamentos novos. Também precisamos das pessoas que vão fundar a cooperativa com a gente. Se você é uma família procurando moradia, tem um terreno ou uma casa, constrói, financia ou é um vizinho que quer que isso exista, queremos conhecer você.',
-            'IMOBX is in preparation, and its cooperative is still to be founded. We are considering a first rent-to-own agreement for a family in Guadalupe, and looking for a plot for five new flats. We also need the people who will found the cooperative with us. If you are a family looking for a home, someone with land or a house, a builder, a funder or a neighbour who wants this to exist, we would like to meet you.'))
+    b += linked(('A IMOBX está em preparação, e a sua cooperativa ainda vai ser fundada. O caminho até os primeiros apartamentos tem',
+                 'IMOBX is in preparation, and its cooperative is still to be founded. The path to the first flats has'),
+                ('seis passos', 'six steps', 'project-development.html#stages'),
+                (', e o terreno dos cinco apartamentos novos ainda está por escolher. Se você é uma família procurando moradia, tem um terreno ou uma casa, constrói, financia ou é um vizinho que quer que isso exista, queremos conhecer você.',
+                 ', and the plot for the five new flats is still to be chosen. If you are a family looking for a home, someone with land or a house, a builder, a funder or a neighbour who wants this to exist, we would like to meet you.'))
     b += '<p>' + t(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html#apresentacao"') + '</p></section>'
     b += '</main>'
-    (root / 'about.html').write_text(page('IMOBX | About', b, '<link rel="stylesheet" href="assets/about.css">', lang='pt-BR', title_pt='IMOBX | Sobre',
+    (root / 'about.html').write_text(page('IMOBX | About', b, '<link rel="stylesheet" href="assets/about.css">' + term_scripts(root, ('token-engineer',)), lang='pt-BR', title_pt='IMOBX | Sobre',
                                           description='Por que a IMOBX existe, quem a começou e como funcionaria.'))

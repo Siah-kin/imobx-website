@@ -123,8 +123,6 @@
 .route-map::before{content:"";position:absolute;left:8.33%;right:8.33%;top:22px;height:3px;background:#D9E3E8;border-radius:2px}
 .route-stop{position:relative;padding:0 10px;text-align:center;display:flex;flex-direction:column;align-items:center}
 .route-dot{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:3px solid #4A90A4;font-weight:700;font-size:18px;color:#276578;position:relative;z-index:1;flex:none}
-.route-done .route-dot{background:#4A90A4;border-color:#4A90A4;color:#fff}
-.route-now .route-dot{border-color:#B85500;color:#B85500;box-shadow:0 0 0 6px #FDF1E4}
 .route-chip{display:inline-block;margin:12px 0 8px;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;background:#fff;border:1px solid #D9E3E8;color:#526571}
 .route-now .route-chip{background:#FDF1E4;border-color:#F0D2AE;color:#8A3F00}
 .route-done .route-chip{background:#E3EEF2;border-color:#C5DCE4;color:#276578}
@@ -236,7 +234,7 @@
 .building-example{margin-top:52px}
 
 /* later: the village drawing beside the village and token text */
-.later-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:start;margin-top:24px}
+.later-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:24px}
 .later-text h3{margin:0 0 8px;font-size:20px;color:#193D4E}
 .later-text h3:not(:first-child){margin-top:32px}
 .later-text p{margin:0 0 12px}
@@ -279,3 +277,31 @@
 @media(max-width:899px){.later-grid .later-text{order:-1}}
 .growth-stages .route-card-now{align-self:start}
 .growth-stages .route-card p{text-wrap:auto}
+
+/* Project development: the evening view is 3:2 */
+.later-grid .lead-figure img{aspect-ratio:3/2;object-fit:cover}
+
+/* Layout pattern (15 Nov 2026): cards whose text differs a lot in length stand one under the other in one column,
+   so a short card never sits beside a tall one and no card has an empty band inside it. */
+@media (min-width:700px){
+  .route-detail,.growth-stages{grid-template-columns:minmax(0,1fr);max-width:640px;gap:16px}
+}
+.growth-stages .route-card-now{align-self:stretch}
+.growth-stages .rp-needs{margin-top:14px}
+
+/* Project development (15 Nov 2026): the step cards and the stage cards keep their 640 px column; from 1024 px the village at sunset
+   sits in the other half (sticky while the step cards scroll) and the village text sits beside the stage cards. One column below that. */
+.steps-grid>.side-picture{margin:24px 0 0}
+.steps-grid .side-picture img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+@media (min-width:1024px){
+  .steps-grid{display:grid;grid-template-columns:minmax(0,min(640px,58%)) minmax(0,1fr);column-gap:48px;align-items:start}
+  .steps-grid>.side-picture{margin:0;position:sticky;top:96px;grid-column:2;grid-row:1}
+  .steps-grid .side-picture img{aspect-ratio:4/5;max-height:calc(100vh - 140px);min-height:360px}
+  .steps-cards{grid-column:1;grid-row:1}
+  .later-grid{display:grid;grid-template-columns:minmax(0,min(640px,58%)) minmax(0,1fr);column-gap:48px;align-items:start;margin-top:0}
+  .later-grid .later-text{position:sticky;top:96px;max-width:32em;padding:4px 0}
+}
+@media (max-width:1023px){
+  .later-grid{display:block}
+  .later-grid .later-text{margin-top:32px}
+}

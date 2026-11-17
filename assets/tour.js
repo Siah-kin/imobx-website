@@ -46,7 +46,7 @@
   let loading = false;
   const returnKey = '__imobxTourReturnCard';
   const returnRoleKey = '__imobxTourReturnRole';
-  const validRoles = ['resident', 'property', 'professional', 'funding'];
+  const validRoles = ['resident', 'property', 'professional', 'funding', 'visitor'];
 
   function updateScrollHint() {
     if (!dialog || !dialog.open) return;
@@ -100,6 +100,12 @@
       dialog.setAttribute('aria-labelledby', heading.id);
     }
     requestAnimationFrame(updateScrollHint);
+  }
+
+  // Owner, 9 Nov: each visitor gets its own journey. A chapter without data-tour-for is for everyone.
+  // Called when a role is chosen and again when the tour reopens with a saved role (the way back from a link), so the step count stays true.
+  function applyRole() {
+    steps = allSteps.filter(step => !role || !step.dataset.tourFor || step.dataset.tourFor.split(' ').includes(role));
   }
 
   function moveTo(index) {
@@ -160,8 +166,7 @@
         if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
         role = choice.dataset.tourRole;
-        // Owner, 9 Nov: each visitor gets its own journey. A chapter without data-tour-for is for everyone.
-        steps = allSteps.filter(step => !step.dataset.tourFor || step.dataset.tourFor.split(' ').includes(role));
+        applyRole();
         const contactPath = box.querySelector('.tour-contact select');
         if (contactPath) contactPath.value = role;
         moveTo(current + 1);
@@ -198,6 +203,7 @@
         if (sourceSteps.length === 0 || sourceSteps.some(section => !section.querySelector('h2, h3'))) throw new Error('Tour incomplete');
         dialog = makeDialog(sourceSteps, page.querySelector('main > .tour-next'));
       }
+      applyRole();
       current = Math.max(0, Math.min(steps.length - 1, index));
       update();
       if (!dialog.open) dialog.showModal();

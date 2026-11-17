@@ -186,7 +186,7 @@ section.content>p,.section-head p,.money p,.two p{max-width:72ch}
 
 .construction-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px;margin-top:28px}
 .construction-photo-grid figure{margin:0;min-width:0}.construction-photo-grid a{display:block;cursor:zoom-in;background:#f7fafb}
-.construction-photo-grid img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.construction-photo-grid img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center}
 .construction-photo-grid figcaption{display:flex;gap:12px;padding:14px 0;font-size:14px;line-height:1.6;color:var(--muted)}
 .photo-number{font-size:12px;font-variant-numeric:tabular-nums;flex:none;padding-top:2px;color:var(--orange)}
 @media(max-width:600px){.construction-photo-grid{grid-template-columns:1fr;gap:22px}}
@@ -542,11 +542,11 @@ html .option-b .lang{background:#276578;border:1px solid #fff}
 html .option-b .lang button{background:#276578;color:#fff;border:0}
 html .option-b .lang button[aria-pressed="true"]{background:#fff;color:#193d4e}
 html .option-b .lang button:hover:not([aria-pressed="true"]){background:#A84B00;color:#fff}
-html .option-b .pillar-band{background:#fff;gap:10px;padding:4px 0 8px}
-html .option-b .pillar-item{border-color:var(--line)}
-html .option-b .pillar-item.is-current{background:var(--pale);color:var(--ink);border-color:#276578}
+html .option-b .pillar-band{background:#EEF4F6;box-shadow:0 0 0 100vmax #EEF4F6,0 1px 0 100vmax #D9E3E8;clip-path:inset(0 -100vmax -1px);gap:10px;padding:8px 0}
+html .option-b .pillar-item{border-color:#D9E3E8;background:#EEF4F6}
+html .option-b .pillar-item.is-current{background:#DCE8ED;color:var(--ink);border-color:#276578}
 html .option-b .is-current .pillar-link svg{stroke:#A84B00}
-html .option-b .pillar-toggle,html .option-b .is-current .pillar-toggle{border-left-color:var(--line)}
+html .option-b .pillar-toggle,html .option-b .is-current .pillar-toggle{border-left-color:#D9E3E8}
 html .option-b .pillar-link{min-height:48px;padding:4px 10px;gap:8px}
 html .option-b .pillar-link svg{width:18px;height:18px}
 html .option-b .pillar-link strong{font-size:14px;font-weight:600}
@@ -554,7 +554,7 @@ html .option-b .pillar-link small{font-size:13px}
 html .option-b .pillar-panel ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 20px}
 html .option-b .pillar-panel a{white-space:normal}
 html .option-b :is(a,button):focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 4px #193d4e}
-@media(min-width:1001px){html .option-b .housing-links{font-size:clamp(13px,1.1vw,15px);font-weight:600}}
+@media(min-width:1001px){html .option-b .housing-links{font-size:16px;font-weight:600}html .option-b .option-b-action,html .option-b .lang button{font-size:16px}}
 @media(max-width:1000px){
  html .option-b.site-header::before{height:64px}
  html .option-b .site-nav .menu-toggle{background:#276578;color:#fff;border-color:#fff}
@@ -680,3 +680,65 @@ main.wrap>.archive-section:first-child{padding-top:0}
 @media (max-width:600px){main.wrap>.archive-section{padding-top:48px;padding-bottom:48px}}
 /* Resources: the "Read John's full story" control is as wide as the text it opens */
 .band-page>section>details.story-full{max-width:512px}
+
+/* Responsive pictures (15 Nov 2026): the <picture> wrapper adds no box, so the image keeps the layout it had as a bare <img>. */
+picture{display:contents}
+
+/* Menu rows are 44 px tall at least, in the desktop dropdowns and in the phone submenus (critic, 15 Nov: they measured 38 to 40 px) */
+.site-links .sub a{display:flex;align-items:center;min-height:44px;box-sizing:border-box}
+.js-menu .site-nav.menu-open .site-links .sub a{min-height:44px}
+
+/* Spacing trims (15 Nov 2026, no empty band over 48 px): the lofts lead to its first heading, two tables on Costs, the end of a Governance list */
+#estudo-lofts>h1+.guide-lead+h2{margin-top:32px}
+#budgets .budget-table table{margin-bottom:16px}
+.governance-page .settle-list li:last-child{margin-bottom:0}
+
+/* Phone menu as a plain list (16 Nov 2026, owner item 1): light page colour, no dark blocks, no icon boxes. Three groups named as in the footer
+   (Housing, Our approach, More), a thin rule between rows, a plus or minus on rows that open their sections, and Take part as the one filled button at the end.
+   The desktop menu is not touched. */
+.menu-group{display:none}
+@media (max-width:1000px){
+  html.js-menu .option-b .site-nav.menu-open .site-links{display:flex;flex-direction:column;align-items:stretch;padding:0 0 24px;background:#fff}
+  html.js-menu .option-b .site-nav.menu-open .site-links :is(.housing-links,.pillar-band,.pillar-panels){display:contents}
+  html.js-menu .option-b .site-nav.menu-open .site-links .menu-group{display:block;margin:0;padding:20px 0 4px;color:#276578;font:700 16px/1.4 Arial,Helvetica,sans-serif}
+  /* order: Housing (first three rows), Our approach (the three pillars, each followed by its own sections), More (About, Resources), Take part */
+  .site-links .menu-group:nth-of-type(1){order:0}.site-links .menu-group:nth-of-type(2){order:10}.site-links .menu-group:nth-of-type(3){order:20}
+  .housing-links .nav-item:nth-child(1){order:1}.housing-links .nav-item:nth-child(2){order:2}.housing-links .nav-item:nth-child(3){order:3}
+  .housing-links .nav-item:nth-child(4){order:21}.housing-links .nav-item:nth-child(5){order:22}
+  .pillar-band .pillar-item:nth-child(1){order:11}.pillar-panels .pillar-panel:nth-child(1){order:12}
+  .pillar-band .pillar-item:nth-child(2){order:13}.pillar-panels .pillar-panel:nth-child(2){order:14}
+  .pillar-band .pillar-item:nth-child(3){order:15}.pillar-panels .pillar-panel:nth-child(3){order:16}
+  html.js-menu .option-b .site-nav.menu-open .site-links .option-b-mobile-action{order:30;margin-top:24px}
+
+  /* rows */
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .nav-item{display:flex;flex-wrap:wrap;align-items:center;width:100%;border:0;border-top:1px solid #D9E3E8}
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .nav-item>a,
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .sub-toggle{flex:1 1 100%;justify-content:flex-start;min-height:44px;padding:10px 0;border:0;background:none;color:var(--ink);font:400 17px/1.3 Arial,Helvetica,sans-serif;text-align:left;text-decoration:none;transition:none}
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .nav-item>a[aria-current="page"],
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .sub-toggle.is-current{font-weight:700}
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .sub-toggle.is-current>span:first-child{text-decoration:none}
+  html.js-menu .option-b .site-nav.menu-open .site-links .sub-toggle .sub-arrow,
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-toggle span{display:none}
+  html.js-menu .option-b .site-nav.menu-open .site-links :is(.sub-toggle,.pillar-toggle)::after{content:"+";flex:none;width:44px;margin-left:auto;text-align:center;font:400 24px/1 Arial,Helvetica,sans-serif;color:var(--ink)}
+  html.js-menu .option-b .site-nav.menu-open .site-links :is(.sub-toggle,.pillar-toggle)[aria-expanded="true"]::after{content:"\2212"}
+  html.js-menu .option-b .site-nav.menu-open .site-links .housing-links .sub-toggle{justify-content:space-between}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-item{display:flex;align-items:center;border:0;border-top:1px solid #D9E3E8;background:none;color:var(--ink)}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-link{flex:1;min-height:44px;padding:10px 0;gap:0;color:var(--ink);background:none;font-size:17px}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-link svg,
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-link small{display:none}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-link strong{font-size:17px;font-weight:400;line-height:1.3;white-space:normal;overflow:visible;text-overflow:clip}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-item.is-current .pillar-link strong{font-weight:700}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-toggle{width:44px;min-width:44px;min-height:44px;border:0;background:none;color:var(--ink);padding:0;font-size:17px;display:flex;align-items:center;justify-content:center}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-toggle::after{margin:0}
+
+  /* the sections of a row: indented plain links */
+  html.js-menu .option-b .site-nav.menu-open .site-links .sub{position:static;flex-basis:100%;min-width:0;border:0;box-shadow:none;background:none;padding:0 0 8px 16px;animation:none}
+  html.js-menu .option-b .site-nav.menu-open .site-links .sub a,
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-panel a{display:flex;align-items:center;min-height:44px;padding:8px 0;border:0;color:#A84B00;font:400 16px/1.3 Arial,Helvetica,sans-serif;white-space:normal;background:none;text-decoration:none}
+  html.js-menu .option-b .site-nav.menu-open .site-links .sub .sub-overview a{font-weight:700;border:0}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-panel{padding:0 0 8px 16px;border:0;background:none;animation:none}
+  html.js-menu .option-b .site-nav.menu-open .site-links .pillar-panel ul{display:block}
+
+  /* Take part: the one filled button, at the end */
+  html.js-menu .option-b .site-nav.menu-open .option-b-mobile-action .option-b-action{display:inline-flex;align-items:center;justify-content:center;width:auto;min-height:48px;padding:0 28px;background:#A84B00;color:#fff;font:700 17px/1.2 Arial,Helvetica,sans-serif}
+}

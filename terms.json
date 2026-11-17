@@ -402,7 +402,30 @@
     "forms": [
      "Zeal"
     ],
-    "meaning": "Het overzicht van echte hulp bij IMOBX: punten die je verdient als anderen bevestigen dat je hebt geholpen. Zeal verdien je, het blijft van jou en groeit met wat je doet."
+    "meaning": "De vastlegging van echte hulp bij IMOBX: punten die je verdient als anderen bevestigen dat je hebt geholpen. Zeal verdien je, het blijft van jou en groeit met wat je doet."
+   }
+  },
+  {
+   "id": "token-engineer",
+   "status": "draft",
+   "pt": {
+    "forms": [
+     "engenheiro de tokens",
+     "engenheira de tokens"
+    ],
+    "meaning": "Quem desenha como um token digital compartilhado é montado, para que ele funcione e siga as regras."
+   },
+   "en": {
+    "forms": [
+     "token engineer"
+    ],
+    "meaning": "Someone who designs how a shared digital token is set up, so that it works and follows its rules."
+   },
+   "nl": {
+    "forms": [
+     "token-engineer"
+    ],
+    "meaning": "Iemand die ontwerpt hoe een gedeeld digitaal token wordt opgezet, zodat het werkt en zich aan de regels houdt."
    }
   }
  ]

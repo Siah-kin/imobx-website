@@ -287,7 +287,7 @@
 .fee-seg{display:block;height:100%;width:var(--w)}
 .fee-ready .fee-seg,.js-fee .fee-seg{width:0;transition:width 1.1s ease var(--d)}
 .fee-ready .is-flowing .fee-seg,.js-fee.is-flowing .fee-seg{width:var(--w)}
-.seg-wages{background:#1F4E5F}.seg-houses{background:#C8661F}.seg-pool{background:#4A90A4}.seg-lock{background:#9DC3CF}.seg-venue{background:#B9C4C9}
+.seg-wages{background:#1F4E5F}.seg-houses{background:#C8661F}.seg-pool{background:#4A90A4}.seg-rest{background:#9DC3CF}.seg-venue{background:#B9C4C9}
 .fee-table{width:100%;border-collapse:collapse;margin-top:12px}
 .fee-table th,.fee-table td{padding:7px 4px;border-bottom:1px solid #E3EEF2;text-align:left;font-weight:400}
 .fee-table td{text-align:right;white-space:nowrap}

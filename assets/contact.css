@@ -19,6 +19,7 @@
 .contact-route-picker,.route-fields{border:0;padding:0;margin:24px 0}
 .contact-route-picker>legend{font-weight:700;font-size:20px;margin-bottom:16px}
 .contact-routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.contact-routes .contact-route:last-child{grid-column:1/-1}
 .contact-route-picker.is-chosen .contact-route:not(.is-selected){display:none}
 .contact-route-picker.is-chosen .contact-routes{grid-template-columns:minmax(0,1fr);max-width:760px}
 .contact-route{display:flex;gap:14px;border:1px solid var(--line);border-radius:6px;padding:18px 20px;cursor:pointer;align-items:flex-start;background:#fff}
@@ -46,3 +47,19 @@
 .contact-picture figcaption{font-size:15px;color:var(--muted);margin-top:8px}
 @media(max-width:860px){.contact-cards,.contact-routes{grid-template-columns:minmax(0,1fr)}.contact-card{min-height:0}}
 @media(max-width:600px){.contact-page h1{font-size:38px}.contact-page{padding-inline:20px}.contact-page .contact-intro{font-size:20px}.contact-routes{grid-template-columns:1fr}.contact-builder h2{font-size:28px}.contact-card-main .contact-button,.contact-actions .contact-page .contact-button,.contact-page a.contact-button{align-self:stretch;width:100%}}
+.contact-picture{max-width:720px}
+.contact-picture img{max-height:none;aspect-ratio:3/2;object-fit:cover}
+.contact-card{min-height:160px}
+@media(max-width:860px){.contact-card{min-height:0}}
+
+
+/* Take part: from 1024 px the village block stands in its own column beside the six topic cards and the form, and stays in view while they change (15 Nov 2026). */
+@media(min-width:1024px){
+  .contact-builder{display:grid;grid-template-columns:minmax(0,1fr) 340px;column-gap:48px;align-content:start}
+  .contact-builder>*{grid-column:1}
+  .contact-builder>.contact-picture{grid-column:2;grid-row:1 / span 12;align-self:start;position:sticky;top:96px;margin:0;max-width:none}
+  .contact-builder>.contact-picture img{aspect-ratio:3/4;object-fit:cover}
+  .contact-builder .contact-routes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-builder .contact-route-picker.is-chosen .contact-routes{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:1023px){.contact-builder>.contact-picture{margin:40px 0 0}}

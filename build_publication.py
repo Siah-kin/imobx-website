@@ -13,6 +13,9 @@ from about_page import build_about
 from privacy_page import build_privacy
 from tour_page import build_tour
 from seo import add_seo
+from inline_links import add_inline_links
+from page_frame import add_ground_line
+from responsive_images import add_responsive_images
 import commons_story
 from project_reference import build_reference, write_manifest, VERSION, REVIEW_DATE, DATE_PT, DATE_EN, LABEL_EN, LABEL_PT
 from copy_review import require_review
@@ -72,8 +75,9 @@ MENU = [
     ('project-development.html', 'Desenvolvimento do projeto', 'Project development', [
         ('project-development.html', 'stages', 'Onde estamos agora', 'Where we are now', 'From groundwork to the first houses'),
         ('project-development.html', 'homes', 'Onde a primeira família vai morar', 'Where the first family will live', 'Where will the first family live?'),
+        ('properties.html', '', 'Lofts e fotos da obra', 'Lofts and building photos', 'Lofts and building photos'),  # owner, 15 Nov (decision 97): Rafael's building work was in no menu; it sits in page order, after the first family
         ('project-development.html', 'later', 'Depois dos primeiros apartamentos', 'After the first flats', 'What comes after the first flats?'),
-        ('project-development.html', 'terms', 'O que está decidido', 'What is decided', 'What is decided, and what is not yet'),
+        ('project-development.html', 'terms', 'Termos e leis', 'Terms and law', 'Terms and law: what is decided, and what is not yet'),
     ]),
     ('distributed-ledger.html', 'Registro distribuído', 'Distributed ledger', [
         # the rebuilt ledger page (28 Oct) carries its section ids, so these reuse them
@@ -257,14 +261,19 @@ def site_header(lang='pt-BR', current=''):
     here = ' aria-current="page"' if current == 'contact.html' else ''
     action = (f'<a class="nav-action option-b-action" href="contact.html" data-pt="Participar" data-en="Take part"{here}>'
               f'{"Participar" if portuguese else "Take part"}</a>')
+    # Phone menu (owner, 16 Nov): the open menu is a plain list in three groups, named as in the footer. The names are hidden on a
+    # desktop and from screen readers (the destinations carry their own names, and About and Resources come before Our approach in reading order).
+    def group(pt, en):
+        return f'<p class="menu-group" aria-hidden="true" data-pt="{esc(pt)}" data-en="{esc(en)}">{esc(pt if portuguese else en)}</p>'
     return ('<header class="top site-header option-b"><nav class="wrap site-nav" data-site-nav '
             'aria-label="Principal" data-aria-pt="Principal" data-aria-en="Main">'
             '<a class="wordmark" href="index.html" aria-label="IMOBX"><img class="brand-logo" '
             'src="assets/imobx-logo-light.png" width="94" height="94" alt="IMOBX"></a>'
             '<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-links" '
             'data-pt="Menu" data-en="Menu">Menu</button>'
-            '<div class="site-links" id="site-links"><div class="housing-links">' + links + '</div>'
-            '<div class="pillar-band">' + pillars + '</div><div class="pillar-panels">' + panels + '</div><div class="option-b-mobile-action">' + action + '</div></div>'
+            '<div class="site-links" id="site-links">' + group('Moradia', 'Housing') + '<div class="housing-links">' + links + '</div>'
+            + group('Nossa proposta', 'Our approach') + '<div class="pillar-band">' + pillars + '</div><div class="pillar-panels">' + panels + '</div>'
+            + group('Mais', 'More') + '<div class="option-b-mobile-action">' + action + '</div></div>'
             '<div class="option-b-right"><div class="lang" role="group" aria-label="Idioma / Language / Taal">'
             f'<button type="button" data-language="pt" aria-pressed="{str(portuguese).lower()}" aria-label="PT, Português brasileiro" lang="pt-BR">PT</button>'
             f'<button type="button" data-language="en" aria-pressed="{str(not portuguese).lower()}" aria-label="EN, English" lang="en">EN</button>'
@@ -272,7 +281,12 @@ def site_header(lang='pt-BR', current=''):
             '</div>' + action + '</div></nav></header>')
 
 
-SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap footer-inner"><div class="footer-identity"><a class="footer-brand" href="index.html" aria-label="IMOBX"><img src="assets/imobx-logo-light.png" width="112" height="112" alt="IMOBX"></a><p class="footer-mission" data-pt="De uma casa a um bairro resiliente" data-en="From a house to a resilient neighbourhood" data-nl="Van een huis naar een veerkrachtige buurt">De uma casa a um bairro resiliente</p></div><nav class="footer-nav" aria-label="IMOBX"><div class="footer-columns"><div class="footer-column"><h2 data-pt="Moradia" data-en="Housing" data-nl="Wonen">Moradia</h2><ul><li><a href="rent-to-own.html" data-pt="Aluguel com compra" data-en="Rent-to-own" data-nl="Huurkoop">Aluguel com compra</a></li><li><a href="costs-and-funding.html" data-pt="Custos e recursos" data-en="Costs and funding" data-nl="Kosten en financiering">Custos e recursos</a></li><li><a href="project-development.html" data-pt="Desenvolvimento do projeto" data-en="Project development" data-nl="Projectontwikkeling">Desenvolvimento do projeto</a></li></ul></div><div class="footer-column"><h2 data-pt="Nossa proposta" data-en="Our approach" data-nl="Onze aanpak">Nossa proposta</h2><ul><li><a href="distributed-ledger.html" data-pt="Registro distribuído" data-en="Distributed ledger" data-nl="Distributed Ledger">Registro distribuído</a></li><li><a href="self-compounding.html" data-pt="Self-compounding" data-en="Self-compounding" data-nl="Self-compounding">Self-compounding</a></li><li><a href="governance.html" data-pt="Governança local" data-en="Local governance" data-nl="Lokaal bestuur">Governança local</a></li></ul></div><div class="footer-column"><h2 data-pt="Mais" data-en="More" data-nl="Meer">Mais</h2><ul><li><a href="about.html" data-pt="Sobre a IMOBX" data-en="About IMOBX" data-nl="Over IMOBX">Sobre a IMOBX</a></li><li><a href="resources.html" data-pt="Documentos" data-en="Resources" data-nl="Bronnen">Documentos</a></li><li><a href="jobs.html" data-pt="Vagas" data-en="Jobs" data-nl="Vacatures">Vagas</a></li><li><a href="contact.html" data-pt="Participar" data-en="Take part" data-nl="Meedoen">Participar</a></li><li><a href="privacy.html" data-pt="Privacidade" data-en="Privacy" data-nl="Privacy">Privacidade</a></li></ul></div></div></nav></div></footer>'
+SITE_FOOTER = '<footer class="footer site-footer"><div class="wrap footer-inner"><div class="footer-identity"><a class="footer-brand" href="index.html" aria-label="IMOBX"><img src="assets/imobx-logo-light.png" width="112" height="112" alt="IMOBX"></a><p class="footer-mission" data-pt="De um apartamento a um bairro resiliente" data-en="From a flat to a resilient neighbourhood" data-nl="Van een appartement naar een veerkrachtige buurt">De um apartamento a um bairro resiliente</p></div><nav class="footer-nav" aria-label="IMOBX"><div class="footer-columns"><div class="footer-column"><h2 data-pt="Moradia" data-en="Housing" data-nl="Wonen">Moradia</h2><ul><li><a href="rent-to-own.html" data-pt="Aluguel com compra" data-en="Rent-to-own" data-nl="Huurkoop">Aluguel com compra</a></li><li><a href="costs-and-funding.html" data-pt="Custos e recursos" data-en="Costs and funding" data-nl="Kosten en financiering">Custos e recursos</a></li><li><a href="project-development.html" data-pt="Desenvolvimento do projeto" data-en="Project development" data-nl="Projectontwikkeling">Desenvolvimento do projeto</a></li><li><a href="properties.html" data-pt="Lofts e fotos da obra" data-en="Lofts and building photos" data-nl="Lofts en bouwfoto’s">Lofts e fotos da obra</a></li></ul></div><div class="footer-column"><h2 data-pt="Nossa proposta" data-en="Our approach" data-nl="Onze aanpak">Nossa proposta</h2><ul><li><a href="distributed-ledger.html" data-pt="Registro distribuído" data-en="Distributed ledger" data-nl="Distributed Ledger">Registro distribuído</a></li><li><a href="self-compounding.html" data-pt="Self-compounding" data-en="Self-compounding" data-nl="Self-compounding">Self-compounding</a></li><li><a href="governance.html" data-pt="Governança local" data-en="Local governance" data-nl="Lokaal bestuur">Governança local</a></li></ul></div><div class="footer-column"><h2 data-pt="Mais" data-en="More" data-nl="Meer">Mais</h2><ul><li><a href="about.html" data-pt="Sobre a IMOBX" data-en="About IMOBX" data-nl="Over IMOBX">Sobre a IMOBX</a></li><li><a href="resources.html" data-pt="Documentos" data-en="Resources" data-nl="Bronnen">Documentos</a></li><li><a href="jobs.html" data-pt="Vagas" data-en="Jobs" data-nl="Vacatures">Vagas</a></li><li><a href="contact.html" data-pt="Participar" data-en="Take part" data-nl="Meedoen">Participar</a></li><li><a href="privacy.html" data-pt="Privacidade" data-en="Privacy" data-nl="Privacy">Privacidade</a></li></ul></div></div></nav></div></footer>'
+
+
+# The frame sheet (16 Nov 2026): header colour, ground line, section bands, spacing, headings; loaded last on every page.
+import hashlib as _frame_hash
+FRAME_CSS = 'assets/frame.css?v=' + _frame_hash.sha256((Path(__file__).resolve().parent / 'assets' / 'frame.css').read_bytes()).hexdigest()[:10]
 
 
 def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='', description=None):
@@ -289,7 +303,7 @@ def page(title, body, script='', version='0.1', lang='en', title_pt=None, head='
     document = f'''<!doctype html>
 <html lang="{esc(lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{esc(description)}">
-<title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}{head}</head>
+<title>{esc(title_pt if lang.startswith('pt') and title_pt else title)}</title><link rel="icon" href="assets/imobx-logo-light.png" type="image/png"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/brand.css">{script}{head}<link rel="stylesheet" href="{FRAME_CSS}"></head>
 <body data-title-pt="{esc(title_pt or title)}" data-title-en="{esc(title)}">
 <a href="#main" class="skip" data-pt="Pular para o conteúdo" data-en="Skip to content">{'Pular para o conteúdo' if lang.startswith('pt') else 'Skip to content'}</a>
 {site_header(lang, current)}
@@ -394,7 +408,7 @@ def resource_section(standalone=True):
     body = '<section id="documents"><span id="documentos"></span><span id="resources"></span><span id="recursos"></span>'
     body += translated('Documentos do projeto', 'Project documents', 'h2')
     body += translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p')
-    body += translated('Os documentos usam a estimativa do Rafael de setembro de 2026 para os cinco primeiros apartamentos. Ela ainda precisa ser confirmada. A vila de cerca de 36 casas é uma etapa posterior, ainda sem orçamento.', 'The documents use Rafael’s September 2026 estimate for the first five flats. It still needs confirmation. The village of about 36 houses is a later stage with no budget yet.', 'p')
+    body += translated('Os documentos usam a estimativa do Rafael de setembro de 2026 para os cinco primeiros apartamentos. Ela ainda precisa ser confirmada. A vila de cerca de 36 apartamentos é uma etapa posterior, ainda sem orçamento.', 'The documents use Rafael’s September 2026 estimate for the first five flats. It still needs confirmation. The village of about 36 flats is a later stage with no budget yet.', 'p')
     body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h3') for key in document_ids) + '</div><span id="resource-reference"></span><span id="title-reference"></span>'
     # The token's current description lives on the Self-compounding page (TOKEN_POSITION.md, 2 Nov 2026).
     body += ('<p>' + translated('Para o token da IMOBX, a sua taxa e os quatro V, leia a página',
@@ -423,7 +437,7 @@ def resource_section(standalone=True):
 # attention, interest, desire, action: home_b.htmlsrc. home_page.py (26–27 Oct) is kept for history only.
 import hashlib as _hashlib
 _home_css = 'assets/home-b.css?v=' + _hashlib.sha256((ROOT / 'assets' / 'home-b.css').read_bytes()).hexdigest()[:10]
-(ROOT / 'index.html').write_text((ROOT / 'home_b.htmlsrc').read_text().replace('assets/home-b.css', _home_css))
+(ROOT / 'index.html').write_text((ROOT / 'home_b.htmlsrc').read_text().replace('assets/home-b.css', _home_css).replace('href="assets/frame.css"', f'href="{FRAME_CSS}"'))
 
 for name in ['index.html', 'properties.html', 'jobs.html']:
     target = ROOT / name
@@ -439,6 +453,11 @@ for name in ['index.html', 'properties.html', 'jobs.html']:
                            lambda _: partner_line_html(name, lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)),
                            source, count=1, flags=re.S)
     # 25 Oct 2026: the partner links live once, in the footer; pages no longer carry their own partner line.
+    # The frame sheet (header colour, spacing, headings) loads last on these hand-written pages too.
+    if 'assets/frame.css' in source:
+        source = re.sub(r'href="assets/frame\.css[^"]*"', f'href="{FRAME_CSS}"', source)
+    else:
+        source = source.replace('</head>', f'<link rel="stylesheet" href="{FRAME_CSS}"></head>', 1)
     target.write_text(source)
 
 
@@ -532,8 +551,11 @@ for doc, doc_title in GATEWAYS:
 if PREVIEW_ONLY:
     from add_dutch import add_dutch  # the preview gets its Dutch too; a full build adds it again after the exports
     add_menu_anchors(ROOT); add_heading_intros(ROOT); add_link_lines(ROOT)
+    add_inline_links(ROOT)
+    add_ground_line(ROOT)
     add_seo(ROOT)
     add_dutch(ROOT)
+    add_responsive_images(ROOT)
     print('Rendered local HTML for editorial and browser review. Existing exports are unchanged.')
     raise SystemExit(0)
 
@@ -705,8 +727,11 @@ for doc, doc_title in GATEWAYS:
 # Dutch beside Portuguese and English (owner, 26 Oct 2026); the gate fails while any string lacks Dutch.
 from add_dutch import add_dutch
 add_menu_anchors(ROOT); add_heading_intros(ROOT); add_link_lines(ROOT)
+add_inline_links(ROOT)
+add_ground_line(ROOT)
 add_seo(ROOT)
 add_dutch(ROOT)
+add_responsive_images(ROOT)
 write_manifest(ROOT)
 
 

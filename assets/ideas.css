@@ -62,3 +62,19 @@
 .band-page .pull-quote{margin:40px 0;padding:26px 0;max-width:32rem;border-top:1px solid #4A90A4;border-bottom:1px solid #4A90A4}
 .band-page .pull-quote p{margin:0;max-width:none;font-size:1.5rem;line-height:1.4;font-weight:400;color:#193D4E;text-wrap:balance}
 @media (max-width:600px){.band-page .pull-quote{margin:32px 0;padding:22px 0}.band-page .pull-quote p{font-size:1.4rem}}
+
+/* Layout pattern (15 Nov 2026): four documents fill one row from 1100px and two rows of two below it, so no row ends with empty places. */
+@media (min-width:1100px){.resources-page #documents>.resource-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:901px) and (max-width:1099px){.resources-page #documents>.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Resources, the founders: the orchard sits beside Rafael's and John's accounts, sticky from 1024 px (15 Nov 2026). Stacked below that. */
+.founders-stories>p{margin-top:0}
+.founders-stories>details.story-full{max-width:512px;margin-top:16px}
+.founders-stories>.side-picture{margin:28px 0}
+.founders-stories .side-picture img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+@media (min-width:1024px){
+  .founders-stories{display:grid;grid-template-columns:minmax(0,32em) minmax(0,1fr);column-gap:48px;align-content:start}
+  .founders-stories>*{grid-column:1}
+  .founders-stories>.side-picture{grid-column:2;grid-row:1 / span 60;align-self:start;position:sticky;top:96px;margin:0;max-width:500px;width:100%}
+  .founders-stories .side-picture img{aspect-ratio:4/5;max-height:calc(100vh - 140px)}
+}

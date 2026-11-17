@@ -285,6 +285,41 @@
         "Como um trabalho de divulgação é pago",
         "How outreach work is paid"
       ]
+    },
+    {
+      "id": "visitor",
+      "title": [
+        "Quero acompanhar o projeto",
+        "I want to follow the project"
+      ],
+      "description": [
+        "Acompanhe o andamento da IMOBX e conte o que mais interessa a você.",
+        "Keep up with how IMOBX develops and tell us what interests you most."
+      ],
+      "context": [
+        "Conte qual parte do projeto você quer acompanhar.",
+        "Tell us which part of the project you want to keep up with."
+      ],
+      "fields": [
+        {
+          "id": "interest",
+          "label": [
+            "Qual parte do projeto mais interessa a você?",
+            "Which part of the project interests you most?"
+          ],
+          "multiline": true,
+          "required": true,
+          "lead": [
+            "O que mais me interessa:",
+            "What interests me most:"
+          ]
+        }
+      ],
+      "reading_url": "project-development.html#stages",
+      "reading_label": [
+        "Onde estamos e o que vem depois",
+        "Where we are and what comes next"
+      ]
     }
   ]
 }

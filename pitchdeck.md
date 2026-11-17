@@ -138,7 +138,7 @@ Source: [ICA: cooperative identity](https://ica.coop/en/cooperatives/cooperative
 
 Source: [Elinor Ostrom: Nobel lecture](https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/). Is research on how communities manage shared resources. It does not test IMOBX's rules.
 
-**Presenter notes:** The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Whatever a token vote decides, only the family and IMOBX together, under the law, can change a family’s housing agreement. See rent-to-own.html#decisions and governance.html.
+**Presenter notes:** The voting procedure, spending limits and way to question a decision have not been agreed with participants. In the proposed repair process, a resident reports a leak, a maintenance contact obtains a quote, spending follows the agreed limit and another person checks the work. Only the family and IMOBX together, under the law, can change a family’s housing agreement. See rent-to-own.html#decisions and governance.html.
 
 
 
@@ -162,13 +162,13 @@ Agreed roles, spending limits and shared records keep everyday work moving.
 
 ## 9. Each trade of the planned token would pay a fee that funds the community
 
-Holding the token is optional, and families join IMOBX as members. It is a planned self-compounding community-funding token with no presale.
+Families join IMOBX as members. The token is a planned self-compounding community-funding token.
 
 
 
 - Each trade would pay a fee: 14% on Arctide, plus its own 0.25%, and 11% on Argus.
 
-- Each fee would go 45% to wages and 35% to the trading pool; the 20% for people who lock tokens waits for a lawyer’s reading.
+- Each fee would go 45% to wages and 35% to the trading pool; the rest, 20%, is still to be decided.
 
 - Its use comes from four rules: Volume, Verify, Vote and Vow.
 
@@ -178,7 +178,7 @@ Source: [CVM Guidance Opinion 40](https://conteudo.cvm.gov.br/legislacao/parecer
 
 Source: [IMOBX: the Self-compounding page](https://imobx.org/self-compounding.html). Sets out the token’s fee, where it goes and the four V’s as the project describes them.
 
-**Presenter notes:** The first house is funded outside the token: once the IMOBX housing cooperative is registered, it will run a crowdfunding campaign in reais and apply for grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. The fee would add to the houses budget over time. Buyers’ payments would go into the trading pool, so none of them would reach IMOBX. In the founders’ model, 20% of each fee would go to people who lock their tokens for good; that share waits for a lawyer’s reading. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of the 35% would go to new houses; if the token opens with a sale on Arctide’s bonding curve, that part would go to Arctide. Volume: the fees would give the community an income of its own. Verify: anyone could check where each fee went and which role approved it. Vote: on the token’s own rules, weight would come mainly from work others have confirmed; members’ decisions stay one member, one vote. Vow: the commitments no vote can break, starting with each family’s housing agreement. Benefits for holders are chosen later from what IMOBX can actually supply. We start building a house only when its funding is secured.
+**Presenter notes:** The first house is funded outside the token: once the IMOBX housing cooperative is registered, it will run a crowdfunding campaign in reais and apply for grants. The campaign runs before the token launches, its backers receive ordinary rewards and never tokens, and the two are always presented separately. The fee would add to the houses budget over time. Buyers’ payments would go into the trading pool, so none of them would reach IMOBX. The rest, 20% of each fee, is still to be decided. When IMOBX puts in the pool’s starting funds, it would hold three quarters of the pool, so three quarters of the 35% would go to new houses; if the token opens with a sale on Arctide’s bonding curve, that part would go to Arctide. Volume: the fees would give the community an income of its own. Verify: anyone could check where each fee went and which role approved it. Vote: on the token’s own rules, weight would come mainly from work others have confirmed; members’ decisions stay one member, one vote. Vow: the commitments no vote can break, starting with each family’s housing agreement. We start building a house only when its funding is secured.
 
 
 

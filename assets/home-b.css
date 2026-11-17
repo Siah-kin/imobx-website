@@ -169,5 +169,12 @@ html{scrollbar-color:#9DC3CF #F7FAFB}
 @media (max-width:600px){.iceberg{grid-template-columns:72px 1fr;gap:0 14px;padding:12px 16px 18px}.iceberg-peak{width:72px;height:36px}.iceberg-body{width:72px;min-height:90px}}
 .iceberg-intro{margin:8px 22px 0;font-size:16px;line-height:1.5;color:#405866;max-width:46ch}
 .section-intro{max-width:52ch;margin:-4px 0 24px;font-size:18px;line-height:1.55;color:#405866}
+/* Round 7 B: on a wide screen the heading and the intro share one row, so the intro no longer leaves the upper right empty above the three drawings */
+@media (min-width:1000px){
+  #tres-caminhos{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:56px;align-items:start}
+  #tres-caminhos>h2{grid-column:1;margin:0}
+  #tres-caminhos>.section-intro{grid-column:2;max-width:66ch;margin:6px 0 40px}
+  #tres-caminhos>:not(h2):not(.section-intro){grid-column:1 / -1}
+}
 
 .iceberg-more{margin:12px 0 0;font-size:15px}
