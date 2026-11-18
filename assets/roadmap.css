@@ -263,7 +263,8 @@
 .route-detail{align-items:start}
 
 .route-asof{margin:6px 0 30px;font-size:15px;color:#526571;max-width:44rem}
-.route-card .rp-needs{margin:14px 0 0;padding-top:12px;border-top:1px solid #D9E3E8;font-size:15px;line-height:1.5;color:#2B4655}
+.route-card .rp-needs{margin:24px 0 8px;padding:14px 18px;border-top:0;border-left:4px solid #A84B00;background:#F7FAFB;border-radius:0;box-shadow:none;font-size:16px;line-height:1.5;color:#2B4655}
+.route-card .rp-needs strong{color:#A84B00;font-weight:700}
 
 /* Growth stages (owner, 12 Nov): same card as the path, a stage chip instead of a numbered dot, footers aligned */
 .stages-tie{margin:0 0 18px;color:#526571}
@@ -287,7 +288,7 @@
   .route-detail,.growth-stages{grid-template-columns:minmax(0,1fr);max-width:640px;gap:16px}
 }
 .growth-stages .route-card-now{align-self:stretch}
-.growth-stages .rp-needs{margin-top:14px}
+.growth-stages .rp-needs{margin-top:24px}
 
 /* Project development (15 Nov 2026): the step cards and the stage cards keep their 640 px column; from 1024 px the village at sunset
    sits in the other half (sticky while the step cards scroll) and the village text sits beside the stage cards. One column below that. */

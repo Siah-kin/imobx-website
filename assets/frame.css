@@ -142,7 +142,9 @@ main>section.home-section{padding-top:64px;padding-bottom:64px}
 .step-band .route-card h4{display:block;margin:0 0 12px;font-size:22px;line-height:1.3}
 .step-band .route-card .route-dot{display:none}
 .step-band .route-card li{font-size:18px;line-height:1.55}
-.step-band .route-card .rp-needs{border-top:0;border-left:3px solid #9DC3CF;padding:0 0 0 16px;margin:16px 0 0;font-size:17px;line-height:1.5}
+/* 17 Nov 2026 (John: the Needs block was hidden): on the dark band the block is a second layer under the bullets, orange label (5.95:1 on #193D4E), 4 px orange rule, a faint lighter ground; the sentence and links stay white */
+.step-band .route-card .rp-needs{border-top:0;border-left:4px solid #FFA64D;background:rgba(255,255,255,.07);padding:14px 18px;margin:24px 0 8px;font-size:16px;line-height:1.5;border-radius:0;box-shadow:none}
+.step-band .route-card .rp-needs strong{color:#FFA64D;font-weight:700}
 .step-band .route-card-now{background:transparent}
 .step-band .route-detail{display:block;max-width:640px}
 .step-band .route-detail>.route-card{margin:0}
@@ -304,7 +306,7 @@ main .cost-draw .cd-labels b:not(#x),main .cost-draw .cd-land b:not(#x){font-siz
 main .cost-band .cd-totals b:not(#x){font-size:28px}
 @media (max-width:700px){main .cost-draw .cd-labels b:not(#x),main .cost-draw .cd-land b:not(#x){font-size:20px}main .cost-band .cd-totals b:not(#x){font-size:20px}}
 .gov-stage span:not(#x){font-size:16px}
-.step-band .route-card .rp-needs :is(strong,span,a):not(#x){font-size:17px}
+.step-band .route-card .rp-needs :is(strong,span,a):not(#x){font-size:16px}
 .carousel-controls button,.carousel-controls button span{font-size:16px}
 
 /* ================= fix round 3, group A: nothing under 16 px in the header, the sub-bar and the phone cards ================= */
