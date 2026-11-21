@@ -77,7 +77,7 @@ MENU = [
         ('project-development.html', 'homes', 'Onde a primeira família vai morar', 'Where the first family will live', 'Where will the first family live?'),
         ('properties.html', '', 'Lofts e fotos da obra', 'Lofts and building photos', 'Lofts and building photos'),  # owner, 15 Nov (decision 97): Rafael's building work was in no menu; it sits in page order, after the first family
         ('project-development.html', 'later', 'Depois dos primeiros apartamentos', 'After the first flats', 'What comes after the first flats?'),
-        ('project-development.html', 'terms', 'Termos e leis', 'Terms and law', 'Terms and law: what is decided, and what is not yet'),
+        ('project-development.html', 'terms', 'Termos e leis', 'Terms and law', 'What terms and law apply?'),
     ]),
     ('distributed-ledger.html', 'Registro distribuído', 'Distributed ledger', [
         # the rebuilt ledger page (28 Oct) carries its section ids, so these reuse them
@@ -126,16 +126,16 @@ EXTRA_ANCHORS = [
 # open straight into a drawing, table or list: its purpose or stakes, never a description of the picture.
 HEADING_INTROS = {
     'rent-to-own.html': {
-        'Who handles a repair?': ('No plano, cada reparo tem uma pessoa responsável, um limite de gasto e uma segunda conferência, então nada depende de uma só pessoa.',
-                                  'In the plan, every repair has a responsible person, a spending limit and a second check, so nothing waits on one person.'),
-        'What do residents decide?': ('Os moradores cuidam juntos da vida comum do bairro; o contrato de cada família continua sendo só dela.',
-                                      'Residents run the shared life of the neighbourhood together; each family’s own agreement stays its own.'),
+        'Who handles a repair?': ('O plano é que cada reparo tenha uma pessoa responsável, um limite de gasto e uma segunda conferência.',
+                                  'The plan is that every repair has a responsible person, a spending limit and a second check.'),
+        'What do residents decide?': ('Os moradores cuidam juntos da vida comum do bairro. O contrato de cada família é entre ela e a IMOBX.',
+                                      'Residents run the shared life of the neighbourhood together. A family’s own agreement is between that family and IMOBX.'),
     },
     'costs-and-funding.html': {
-        'Who checks each payment?': ('No plano, um pagamento só sai depois que duas pessoas o olharam: uma aprova, outra confere.',
-                                     'In the plan, a payment goes out only after two people have looked at it: one approves it, another checks it.'),
-        'Where does each real (R$) go?': ('Quem financia ou mora num bairro da IMOBX poderá acompanhar isso nos nossos relatórios. Cada um vai mostrar:',
-                                          'Anyone who funds or lives in an IMOBX neighbourhood will be able to follow it in our reports. Each one will show:'),
+        'Who checks each payment?': ('O plano é que cada pagamento siga este caminho, da família até a construtora. Quem aprova e quem confere está explicado em Governança local.',
+                                     'The plan is that every payment follows this route, from the family to the builder. Who approves and who checks is explained under Local governance.'),
+        'Where does each real (R$) go?': ('Queremos que quem financia ou mora num bairro da IMOBX possa acompanhar cada real nos nossos relatórios.',
+                                          'We aim for anyone who funds or lives in an IMOBX neighbourhood to be able to follow every real in our reports.'),
     },
     'distributed-ledger.html': {
         'Who can read my information, and who can read IMOBX’s payments?': ('Seus vizinhos podem acompanhar o seu pedido de reparo. Uma reclamação só é lida por você e por quem a revisa. Se os pagamentos da IMOBX forem para o registro distribuído, qualquer pessoa poderá lê-los.',
@@ -326,15 +326,15 @@ RESOURCE_CATALOG = [
      'shelf_pt': 'A proposta completa (whitepaper)', 'shelf_en': 'The full proposal (whitepaper)',
      'description_pt': 'Modelo de moradia, custos, contratos, fluxo de caixa e decisões em aberto.',
      'description_en': 'Housing model, costs, agreements, cash flow and open decisions.',
-     'meta_pt': f'Inglês · rascunho · {DATE_PT}', 'meta_en': f'English · draft · {DATE_EN}',
+     'meta_pt': f'Inglês, rascunho, {DATE_PT}', 'meta_en': f'English, draft, {DATE_EN}',
      'archive': True, 'links': [('whitepaper.pdf','PDF','PDF'), ('whitepaper.md','Texto editável','Editable text')]},
     {'id': 'pitchdeck', 'pt': 'Pitch deck', 'en': 'Pitch deck', 'version': VERSION,
      'shelf_pt': 'Apresentação para parceiros', 'shelf_en': 'Presentation for partners',
      'shelf_description_pt': 'Proposta de moradia para parceiros e financiadores.', 'shelf_description_en': 'Housing proposal for partners and funders.',
      'description_pt': 'Apresentação para parceiros, com notas para quem apresenta.',
      'description_en': 'Partner presentation with presenter notes.',
-     'meta_pt': f'12 slides com notas para quem apresenta · inglês · rascunho · {DATE_PT}',
-     'meta_en': f'12 slides with speaker notes · English · draft · {DATE_EN}',
+     'meta_pt': f'12 slides com notas para quem apresenta, inglês, rascunho, {DATE_PT}',
+     'meta_en': f'12 slides with speaker notes, English, draft, {DATE_EN}',
      'archive': True, 'links': [('pitchdeck.pdf','PDF','PDF'),
                ('pitchdeck.pptx','PowerPoint','PowerPoint'), ('pitchdeck.md','Texto e notas','Text and notes')]},
     {'id': 'devsheet', 'pt': 'Guia do piloto e da construção', 'en': 'Pilot and building guide', 'version': VERSION,
@@ -343,7 +343,7 @@ RESOURCE_CATALOG = [
      'shelf_description_en': 'Flat plans, how residents take part, and the building stages we propose.',
      'description_pt': 'Planos de moradia, participação dos moradores e etapas de desenvolvimento propostas.',
      'description_en': 'Housing plans, resident participation and proposed development stages.',
-     'meta_pt': f'Inglês · rascunho · {DATE_PT}', 'meta_en': f'English · draft · {DATE_EN}',
+     'meta_pt': f'Inglês, rascunho, {DATE_PT}', 'meta_en': f'English, draft, {DATE_EN}',
      'archive': True, 'links': [('devsheet.pdf','PDF','PDF'), ('devsheet.md','Texto editável','Editable text')]},
     {'id': 'token-paper', 'pt': 'Documento do token', 'en': 'Token paper', 'version': VERSION,
      'shelf_pt': 'O token: como funciona e para que serve', 'shelf_en': 'The token: how it works and what it is for',
@@ -351,13 +351,13 @@ RESOURCE_CATALOG = [
      'shelf_description_en': 'The fee on each trade, where it goes, the four rules and the risks.',
      'description_pt': 'Como o token funciona, para que serve e quais são os riscos.',
      'description_en': 'How the token works, what it is for and what the risks are.',
-     'meta_pt': 'Inglês · rascunho · 9 de novembro de 2026', 'meta_en': 'English · draft · 9 November 2026',
+     'meta_pt': 'Inglês, rascunho, 9 de novembro de 2026', 'meta_en': 'English, draft, 9 November 2026',
      'archive': True, 'links': [('token-paper.pdf','PDF','PDF'), ('token-paper.md','Texto editável','Editable text')]},
     {'id': 'transparency', 'pt': 'Financiamento e gastos', 'en': 'Funding and spending', 'version': '0.1',
      'description_pt': 'Fontes de financiamento, despesas previstas e como os participantes poderiam conferir as contas.',
      'description_en': 'Funding sources, planned spending and how participants could check the accounts.',
-     'meta_pt': 'Português e inglês · planos e fontes',
-     'meta_en': 'Portuguese and English · plans and sources',
+     'meta_pt': 'Português e inglês, planos e fontes',
+     'meta_en': 'Portuguese and English, plans and sources',
      'links': [('costs-and-funding.html','Ver a página','View page')]},
 ]
 RESOURCE_CATALOG[-1]['version'] = VERSION
@@ -365,7 +365,7 @@ RESOURCE_CATALOG.insert(0, {
     'id': 'housing', 'pt': 'Aluguel e compra da casa', 'en': 'Renting and buying the home', 'version': VERSION,
     'description_pt': 'Como os pagamentos contariam para a compra, quem cuidaria dos reparos e o que os moradores poderiam decidir.',
     'description_en': 'How payments would count towards purchase, who would handle repairs and what residents could decide.',
-    'meta_pt': 'Português e inglês · modelo proposto', 'meta_en': 'Portuguese and English · housing plan',
+    'meta_pt': 'Português e inglês, modelo proposto', 'meta_en': 'Portuguese and English, housing plan',
     'links': [('rent-to-own.html', 'Ler a explicação', 'Read the explanation')]
 })
 RESOURCE_CATALOG.append({
@@ -373,7 +373,7 @@ RESOURCE_CATALOG.append({
     'en': 'Who is behind IMOBX, and where our figures come from', 'version': VERSION,
     'description_pt': 'Quem faz o quê, de onde vem cada número e em que pé está o projeto.',
     'description_en': 'Who does what, where each figure comes from, and where the project stands.',
-    'meta_pt': f'Português e inglês · {DATE_PT}', 'meta_en': f'Portuguese and English · {DATE_EN}',
+    'meta_pt': f'Português e inglês, {DATE_PT}', 'meta_en': f'Portuguese and English, {DATE_EN}',
     'links': [('reference.html', 'Ler no site', 'Read on this site'),
               ('project-reference-pt.pdf', 'PDF em português', 'Portuguese PDF'),
               ('project-reference-en.pdf', 'PDF em inglês', 'English PDF')]
@@ -408,7 +408,7 @@ def resource_section(standalone=True):
     body = '<section id="documents"><span id="documentos"></span><span id="resources"></span><span id="recursos"></span>'
     body += translated('Documentos do projeto', 'Project documents', 'h2')
     body += translated('Os principais documentos são rascunhos, em inglês.', 'The main documents are drafts, in English.', 'p')
-    body += translated('Os documentos usam a estimativa do Rafael de setembro de 2026 para os cinco primeiros apartamentos. Ela ainda precisa ser confirmada. A vila de cerca de 36 apartamentos é uma etapa posterior, ainda sem orçamento.', 'The documents use Rafael’s September 2026 estimate for the first five flats. It still needs confirmation. The village of about 36 flats is a later stage with no budget yet.', 'p')
+    body += translated('Os documentos usam a estimativa do Rafael de setembro de 2026 para os cinco primeiros apartamentos. Ela ainda precisa ser confirmada.', 'The documents use Rafael’s September 2026 estimate for the first five flats. It still needs confirmation.', 'p')
     body += '<div class="resource-grid">' + ''.join(card(catalog[key], 'h3') for key in document_ids) + '</div><span id="resource-reference"></span><span id="title-reference"></span>'
     # The token's current description lives on the Self-compounding page (TOKEN_POSITION.md, 2 Nov 2026).
     body += ('<p>' + translated('Para o token da IMOBX, a sua taxa e os quatro V, leia a página',
@@ -478,12 +478,12 @@ _res_nav = ('<nav class="on-this-page" aria-label="On this page">' + translated(
 (ROOT / 'resources.html').write_text(page('IMOBX | Resources',
     '<main class="paper guide-paper band-page resources-page" id="main">' + language_controls
     + translated('Documentos e fontes da IMOBX', 'Resources: IMOBX documents and sources', 'h1')
-    + translated('Leia o plano completo por conta própria: a proposta, a apresentação para parceiros e o guia de construção, com a fonte de cada número do site.',
-                 'Read the full plan for yourself: the proposal, the presentation for partners and the building guide, with the source of every figure on this site.', 'p', 'class="guide-lead"') + _res_nav
+    + translated('Leia o plano completo: a proposta, a apresentação para parceiros e o guia de construção, com as fontes dos principais números do site.',
+                 'Read the full plan: the proposal, the presentation for partners and the building guide, with the sources for the main figures on this site.', 'p', 'class="guide-lead"') + _res_nav
     + resource_section(standalone=True) + '</section>'
     + build_guide.ideas_html + commons_story.introduction(translated)
     + re.sub(r'<section id="people">.*?</section>', '<span id="people"></span>', build_reference.fragment, count=1, flags=re.S).replace(translated('Fontes das pesquisas e dos números.', 'Sources for the research and figures.', 'p'), '')  # owner, 29 Oct: 'remove this'
-    + resource_section.cite + build_guide.ideas_close
+    + build_guide.ideas_close
     + partner_line_html('resources.html', lambda pair, tag='p', attrs='': translated(*pair, tag, attrs)) + '</main>',
     build_guide.ideas_head + '<script src="assets/site.js" defer></script>', version=VERSION, lang='pt-BR', title_pt='IMOBX | Documentos'))
 
@@ -511,9 +511,9 @@ def _moved(title, heading, default_hash):
 kit_html = markdown.markdown((ROOT / 'media-kit.md').read_text(), extensions=['tables', 'toc'])
 logo_previews = '''<div class="media-logo-grid"><figure class="media-logo light">
 <img src="assets/imobx-logo-light.png" width="400" height="400" alt="IMOBX logo on a white background">
-<figcaption><a href="assets/imobx-logo-light.png" download>Light logo · PNG</a></figcaption></figure>
+<figcaption><a href="assets/imobx-logo-light.png" download>Light logo, PNG</a></figcaption></figure>
 <figure class="media-logo light"><img src="assets/imobx-logo-light.png" width="400" height="400" alt="Existing IMOBX house symbol and wordmark">
-<figcaption>Original IMOBX identity · white website and document backgrounds</figcaption></figure></div>'''
+<figcaption>Original IMOBX identity, white website and document backgrounds</figcaption></figure></div>'''
 kit_html = kit_html.replace('<h2', logo_previews + '<h2', 1)
 # The brand guide (DESIGN.md) is a section of the media kit; design.html is a redirect stub.
 brand_html = markdown.markdown((ROOT / 'DESIGN.md').read_text(), extensions=['tables', 'toc'])
@@ -522,8 +522,8 @@ brand_html = re.sub(r'<(/?)h1\b', r'<\1h3', brand_html)
 brand_section = ('<section id="brand-guide"><h2>Brand guide</h2>'
                  '<p><a href="DESIGN.md" download>Download design guidelines</a></p>' + brand_html + '</section>')
 (ROOT / 'media-kit.html').write_text(page('IMOBX | Media kit',
-    '<main class="paper"><p><a href="media-kit.zip" download>Download media kit ZIP</a> · '
-    '<a href="media-kit.md" download>Editable guide</a> · <a href="brand-colors.json" download>Brand colours (JSON)</a> · '
+    '<main class="paper"><p><a href="media-kit.zip" download>Download media kit ZIP</a>, '
+    '<a href="media-kit.md" download>Editable guide</a>, <a href="brand-colors.json" download>Brand colours (JSON)</a>, '
     '<a href="#brand-guide">Brand guide</a></p>' + kit_html + brand_section + '</main>', version='0.3'))
 # Like the other old addresses: it asks search engines to leave the old address out and names the official one.
 (ROOT / 'design.html').write_text(redirect_stub(

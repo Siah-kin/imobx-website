@@ -24,6 +24,7 @@ LINKS = [
     # Home: one link per topic and section; no token or ledger words are added to the homepage (the gate bans them there)
     ('index.html', 'IMOBX proposes a third way', 'a third way', 'um terceiro caminho', 'een derde manier voor', 'rent-to-own.html'),
     ('index.html', 'residents decide together', 'residents decide together', 'os moradores decidem juntos', 'bewoners beslissen samen', 'governance.html#residents'),
+    ('index.html', 'Asking rents are rising faster than inflation', 'Read the numbers and where they come from', 'Leia os números e de onde eles vêm', 'Lees de cijfers en waar ze vandaan komen', 'why.html'),
     ('index.html', 'Olympus, the construction company of our co-founder', 'Olympus, the construction company of our co-founder Rafael',
      'a Olympus, a construtora do nosso cofundador Rafael', 'Olympus, het bouwbedrijf van onze medeoprichter Rafael', 'properties.html'),
     ('index.html', 'signed a contract to build these two lofts', 'these two lofts', 'estes dois lofts', 'deze twee lofts te bouwen', 'properties.html'),
@@ -35,28 +36,33 @@ LINKS = [
     # Project development
     ('project-development.html', 'Olympus, the construction company of our co-founder', 'Olympus, the construction company of our co-founder Rafael',
      'a Olympus, a construtora do nosso cofundador Rafael', 'Olympus, het bouwbedrijf van onze medeoprichter Rafael', 'properties.html'),
+    ('project-development.html', 'The founders pay the first costs themselves; what they cover', 'Costs and funding', 'Custos e recursos', 'Kosten en financiering', 'costs-and-funding.html#money-sources'),
     # Rent-to-own
-    ('rent-to-own.html', 'We propose no down payment', 'what the flat costs to build', 'custo da obra', 'wat de bouw van het appartement kost', 'costs-and-funding.html#budgets'),
+    ('rent-to-own.html', 'The plan is to start with no down payment', 'what the flat costs to build', 'custo da obra', 'wat de bouw van het appartement kost', 'costs-and-funding.html#budgets'),
+    ('rent-to-own.html', 'This happens when the conditions in the agreement are met', 'Terms and law', 'Termos e leis', 'Voorwaarden en wet', 'project-development.html#terms'),
     ('rent-to-own.html', 'Rafael’s construction company builds it', 'Rafael’s construction company', 'A construtora do Rafael', 'Het bouwbedrijf van Rafael', 'properties.html'),
     # Costs and funding
+    ('costs-and-funding.html', 'Who approves and who checks is explained under', 'Local governance', 'Governança local', 'Lokaal bestuur', 'governance.html#now'),
     ('costs-and-funding.html', 'That is why we chose rent-to-own', 'rent-to-own', 'o aluguel com compra', 'huurkoop', 'rent-to-own.html'),
     ('costs-and-funding.html', 'stay private, on the site and on any ledger', 'any ledger', 'qualquer registro distribuído', 'elke distributed ledger', 'distributed-ledger.html'),
     # Distributed ledger
+    ('distributed-ledger.html', 'follows the steps set out on', 'the steps set out on Rent-to-own', 'os passos do aluguel com compra', 'de stappen die bij Huurkoop staan', 'rent-to-own.html#repairs'),
     ('distributed-ledger.html', 'Token holders vote only on the token’s own rules', 'Token holders vote only on the token’s own rules',
      'Quem tem o token vota só as regras do próprio token', 'Tokenhouders stemmen alleen over de regels van het token zelf', 'governance.html#token-rules'),
     # Self-compounding
     ('self-compounding.html', 'The token comes at a later stage', 'a later stage', 'numa etapa posterior', 'een latere fase', 'project-development.html#later'),
+    ('self-compounding.html', 'checks each stage before it is paid', 'Local governance', 'Governança local', 'Lokaal bestuur', 'governance.html#now'),
+    ('self-compounding.html', 'building waits for its funding', 'Project development', 'Desenvolvimento do projeto', 'Projectontwikkeling', 'project-development.html#stages'),
     ('self-compounding.html', 'A rent-to-own flat stops paying', 'rent-to-own flat', 'apartamento em aluguel com compra', 'huurkoopappartement', 'rent-to-own.html'),
-    ('self-compounding.html', 'Each family’s agreement comes first', 'Terms and law', 'Termos e leis', 'Voorwaarden en wet', 'project-development.html#terms'),
+    ('self-compounding.html', 'family’s agreement comes first', 'Terms and law', 'Termos e leis', 'Voorwaarden en wet', 'project-development.html#terms'),
     # Governance
     ('governance.html', 'How much goes on the ledger: none of it', 'the ledger', 'o registro distribuído', 'de distributed ledger komt', 'distributed-ledger.html#open'),
     ('governance.html', 'Once the first flats exist', 'the first flats', 'os primeiros apartamentos', 'de eerste appartementen', 'project-development.html#stages'),
     # Why
     ('why.html', 'itemised budget in reais', 'an itemised budget in reais', 'um orçamento detalhado em reais', 'een gespecificeerde begroting in reais', 'costs-and-funding.html#budgets'),
-    ('why.html', 'with Rafael’s construction company', 'with Rafael’s construction company', 'com a construtora de Rafael', 'met het bouwbedrijf van Rafael', 'properties.html'),
+    ('why.html', 'with Rafael’s construction company', 'with Rafael’s construction company', 'com a construtora do Rafael', 'met het bouwbedrijf van Rafael', 'properties.html'),
     # Tour
-    ('tour.html', 'A family rents a flat in the Guadalupe building', 'Olympus, Rafael’s company', 'a Olympus, a construtora do Rafael', 'Olympus, het bouwbedrijf van Rafael', 'properties.html'),
-    ('tour.html', 'We are considering a rent-to-own agreement', 'rent-to-own agreement', 'contrato de aluguel com compra', 'huurkoopovereenkomst', 'rent-to-own.html'),
+    ('tour.html', 'A family already rents a flat in the Guadalupe building', 'Olympus, Rafael’s company', 'a Olympus, a construtora do Rafael', 'Olympus, het bouwbedrijf van Rafael', 'properties.html'),
     ('tour.html', 'Rafael is a civil engineer with his own construction company', 'Olympus', 'a Olympus', 'Olympus', 'properties.html'),
     # Resources
     ('resources.html', 'The documents use Rafael', 'Rafael’s September 2026 estimate', 'estimativa do Rafael de setembro de 2026', 'Rafaels schatting van september 2026', 'costs-and-funding.html'),
@@ -68,7 +74,7 @@ LINKS = [
     ('commons-research.html', 'IMOBX’s plan is for each family eventually to own its flat', 'each family eventually to own its flat',
      'cada família se torne dona do seu apartamento', 'elk gezin uiteindelijk eigenaar wordt van zijn appartement', 'rent-to-own.html'),
     # Jobs
-    ('jobs.html', 'preparing a rent-to-own', 'rent-to-own housing pilot', 'projeto piloto de aluguel com compra', 'huurkooppilot', 'rent-to-own.html'),
+    ('jobs.html', 'IMOBX will help families in Rio de Janeiro', 'rent a flat and slowly buy it', 'alugar um apartamento e a comprá-lo aos poucos', 'een appartement te huren en het geleidelijk te kopen', 'rent-to-own.html'),
 ]
 
 APPLIED = []

@@ -14,15 +14,15 @@ IMAGE = LIVE + 'assets/homepage.jpg'
 # file: (title PT, title EN, description PT)
 PAGES = {
     'index.html': ('IMOBX Rio: proposta de aluguel com opção de compra', 'IMOBX Rio: a rent-to-own housing proposal',
-                   'Estamos preparando um projeto de moradia com aluguel e compra para famílias no Rio de Janeiro, a ser organizado como cooperativa habitacional. Em preparação: ainda não há apartamentos à venda.'),
+                   'A IMOBX vai ajudar famílias do Rio de Janeiro a alugar um apartamento e a comprá-lo aos poucos, por meio de uma cooperativa habitacional administrada pelos próprios moradores.'),
     'rent-to-own.html': ('Como funciona o aluguel com compra do apartamento · IMOBX Rio', 'How rent-to-own would work · IMOBX Rio',
                          'No plano, parte de cada pagamento mensal iria para a compra do apartamento, sem entrada. Veja como seriam o preço, os reparos e a saída.'),
     'costs-and-funding.html': ('Custos e recursos: quanto custa um apartamento · IMOBX Rio', 'Costs and funding: what a flat costs · IMOBX Rio',
                           'Os custos de construção, a ordem em que o recurso é gasto e quem pode financiar a primeira etapa.'),
     'project-development.html': ('Desenvolvimento do projeto: onde estamos agora · IMOBX Rio', 'Project development: where we are now · IMOBX Rio',
-                     'Os seis passos até os primeiros apartamentos, as três etapas de crescimento e o que ainda não está decidido.'),
+                     'Os seis passos até os primeiros apartamentos e as três etapas de crescimento.'),
     'distributed-ledger.html': ('Registro distribuído: para onde vão os recursos · IMOBX Rio', 'Distributed ledger: where the funding goes · IMOBX Rio',
-                        'Contas bancárias e contratos assinados vêm primeiro. Pagamentos e aprovações poderão também ser registrados para quem financia conferir. Em preparação.'),
+                        'Contas bancárias e contratos assinados vêm primeiro. Pagamentos e aprovações poderão também ser registrados para quem financia conferir.'),
     'governance.html': ('Governança local: quem decide, e quando? · IMOBX Rio', 'Local governance: who decides, and when? · IMOBX Rio',
                         'Hoje os fundadores decidem. No plano, quem tem o token vota as regras do token, e os membros decidem um membro, um voto.'),
     'properties.html': ('Lofts e fotos da obra: o trabalho da Olympus · IMOBX Rio', 'Lofts and building photos: the work of Olympus · IMOBX Rio',

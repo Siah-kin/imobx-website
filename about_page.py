@@ -53,7 +53,7 @@ def build_about(root, page, tr, esc):
                  'Since 2005, I have looked for ways for communities to share what they hold in common. The IMOBX proposal brings that idea of sharing to housing.'))
           + '</blockquote><figcaption>' + t(('John, cofundador, engenheiro de tokens e designer ecológico', 'John, co-founder, token engineer and ecological designer'), 'span') + '</figcaption>'
           + t(('John passou seis anos em ecovilas pela Europa. Hoje ele constrói o SIAH Protocol, um registro de contribuições que outras pessoas confirmam.', 'John spent six years in eco-villages across Europe. Today he is building SIAH Protocol, a record of contributions that other people confirm.'), 'p', 'class="about-founder-role"') + '</figure>')
-    b += '</div><p>' + t(('As histórias completas de Rafael e John', 'Rafael’s and John’s full stories'), 'a', 'href="resources.html#our-story"') + '</p></section>'
+    b += '</div><p>' + t(('As histórias completas do Rafael e do John', 'Rafael’s and John’s full stories'), 'a', 'href="resources.html#our-story"') + '</p></section>'
 
     b += '<section id="build">' + t(('O que queremos construir?', 'What do we want to build?'), 'h2')
     b += t(('Queremos bairros de transição social rumo a um futuro resiliente, onde os vizinhos voltam a se conhecer e as crianças brincam onde os pais podem vê-las. Quem mora ali decide junto como o lugar funciona.',
@@ -66,11 +66,11 @@ def build_about(root, page, tr, esc):
     # 15 Nov 2026 (owner, decision 97): the section says the point and sends the reader to the pages that hold the detail.
     b += linked(('Nosso plano é o', 'Our plan is'),
                 ('aluguel com compra', 'rent-to-own', 'rent-to-own.html'),
-                (': uma família se mudaria sem dar entrada, e parte de cada pagamento mensal iria para a compra do apartamento.',
-                 ': a family would move in without a down payment, and part of every monthly payment would go towards buying the flat.'),
+                (': uma família se muda sem dar entrada, e parte de cada pagamento mensal vai para a compra do apartamento.',
+                 ': a family moves in without a down payment, and part of every monthly payment goes towards buying the flat.'),
                 ('A Olympus, a construtora do Rafael', 'Olympus, Rafael’s construction company', 'properties.html'),
-                (', construiria a um preço ligado ao índice público de custo da construção do Rio, conferido de forma independente, e',
-                 ', would build at a price tied to Rio’s public building-cost index, checked independently, and'),
+                (', é a construtora prevista, a um preço ligado ao índice público de custo da construção do Rio e conferido de forma independente.',
+                 ', is the planned builder, at a price tied to Rio’s public building-cost index and checked independently.'),
                 ('Custos e recursos', 'Costs and funding', 'costs-and-funding.html'),
                 ('mostra as contas.', 'shows the sums.'))
     b += '</section>'
@@ -79,8 +79,8 @@ def build_about(root, page, tr, esc):
     b += linked(('A IMOBX está em preparação, e a sua cooperativa ainda vai ser fundada. O caminho até os primeiros apartamentos tem',
                  'IMOBX is in preparation, and its cooperative is still to be founded. The path to the first flats has'),
                 ('seis passos', 'six steps', 'project-development.html#stages'),
-                (', e o terreno dos cinco apartamentos novos ainda está por escolher. Se você é uma família procurando moradia, tem um terreno ou uma casa, constrói, financia ou é um vizinho que quer que isso exista, queremos conhecer você.',
-                 ', and the plot for the five new flats is still to be chosen. If you are a family looking for a home, someone with land or a house, a builder, a funder or a neighbour who wants this to exist, we would like to meet you.'))
+                (', e o terreno dos cinco apartamentos novos ainda está por escolher. Se você quer ajudar a fazer isso existir, queremos conhecer você.',
+                 ', and the plot for the five new flats is still to be chosen. If you want to help this exist, we would like to meet you.'))
     b += '<p>' + t(('Apresente-se', 'Introduce yourself'), 'a', 'class="button act" href="contact.html#apresentacao"') + '</p></section>'
     b += '</main>'
     (root / 'about.html').write_text(page('IMOBX | About', b, '<link rel="stylesheet" href="assets/about.css">' + term_scripts(root, ('token-engineer',)), lang='pt-BR', title_pt='IMOBX | Sobre',

@@ -12,8 +12,8 @@ STEPS = [
     (('O pagamento de cada mês', 'Each month’s payment'),
      ('Parte compra o apartamento; outra parte paga manutenção e consertos.', 'Part buys the flat; another part pays for upkeep and repairs.')),
     (('O apartamento passa para o nome da família', 'The flat goes into the family’s name'),
-     ('As condições combinadas decidem quando.',
-      'The agreed conditions decide when.')),
+     ('Isso acontece quando as condições do contrato forem cumpridas, como explicam os Termos e leis.',
+      'This happens when the conditions in the agreement are met, as Terms and law explains.')),
 ]
 
 SVG = '''<svg class="money-flow-art" viewBox="0 0 1000 240" aria-hidden="true">
@@ -121,7 +121,7 @@ def cascade_html(text):
 # ---------- Funding page: how a payment travels, drawn as one pipe with check points ----------
 ROUTE_STEPS = [
     (('A família paga em reais', 'The family pays in reais'),
-     ('Por Pix ou transferência. Nenhuma família precisa de criptomoedas.', 'By Pix or bank transfer. No family needs crypto.')),
+     ('Por Pix ou transferência.', 'By Pix or bank transfer.')),
     (('A conta da IMOBX', 'IMOBX’s bank account'),
      ('Impostos, manutenção e reservas saem primeiro.', 'Taxes, upkeep and reserves come off first.')),
     # 'An accepted provider converts' and 'A shared digital record' moved to the Distributed ledger page (sweep 28 Oct, review B).

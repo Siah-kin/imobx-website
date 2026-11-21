@@ -29,8 +29,8 @@ def build_gateway(root, page, tr, esc, item, name, title, sections=None):
     body += text((item['pt'], item['en']), 'h1')
     body += text((item['description_pt'], item['description_en']))
     body += text(('Os documentos usam a estimativa do Rafael de setembro de 2026 para os cinco primeiros apartamentos. Ela ainda precisa ser confirmada. A vila de cerca de 36 apartamentos é uma etapa posterior, ainda sem orçamento.', 'The documents use Rafael’s September 2026 estimate for the first five flats. It still needs confirmation. The village of about 36 flats is a later stage with no budget yet.'))
-    body += text((LABEL_PT + ' · documento em inglês', LABEL_EN + ' · English document'), 'p', 'class="resource-meta"')
-    body += '<p class="archive-downloads">' + ' · '.join(
+    body += text((LABEL_PT + ', documento em inglês', LABEL_EN + ', English document'), 'p', 'class="resource-meta"')
+    body += '<p class="archive-downloads">' + ', '.join(
         text((pt, en), 'a', f'href="{esc(target)}" download') for target, pt, en in item['links'] if not target.endswith('.html')) + '</p>'
     listed = sections or SECTIONS[name]
     own_numbers = any(s['heading'][:1].isdigit() for s in listed)  # whitepaper and pilot guide: "1. Who the pilot is for"

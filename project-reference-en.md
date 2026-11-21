@@ -48,11 +48,11 @@ Arc’s own description of its network and payment tools.
 
 [Fundação João Pinheiro: 2024 housing deficit](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
-About 5.77 million households are in the 2024 housing deficit by the FJP measure, which also counts families paying too much of their income in rent.
+Its housing-deficit measure also counts families paying too much of their income in rent.
 
 [FipeZAP index, via Diário do Comércio](https://diariodocomercio.com.br/economia/aluguel-sobe-dobro-inflacao-2026/)
 
-In the 12 months to September 2026, asking rents for new rentals rose 9.13% across the 36 cities the FipeZAP index tracks, and 14.80% in Rio. Inflation over the same 12 months was 4.58% (IPCA). The index follows asking prices in listings of ready flats, so rises in existing contracts are left out.
+The index follows asking prices in listings of ready flats, so rises in existing contracts are left out.
 
 [IBGE, 2022 Census, via Agência Pública](https://apublica.org/2023/06/censo-2022-brasil-tem-11-milhoes-de-casas-e-apartamentos-vagos/)
 

@@ -48,11 +48,11 @@ A descrição da própria Arc sobre a rede e as ferramentas de pagamento.
 
 [Fundação João Pinheiro: déficit habitacional de 2024](https://fjp.mg.gov.br/deficit-habitacional-recua-34-no-brasil-e-soma-5-773-983-domicilios/)
 
-Cerca de 5,77 milhões de domicílios estão no déficit habitacional de 2024 pelo critério da FJP, que também conta famílias que gastam parte excessiva da renda com aluguel.
+A medida de déficit habitacional da FJP também conta famílias que gastam parte excessiva da renda com aluguel.
 
 [Índice FipeZAP, via Diário do Comércio](https://diariodocomercio.com.br/economia/aluguel-sobe-dobro-inflacao-2026/)
 
-Nos 12 meses até setembro de 2026, os preços pedidos para novos aluguéis subiram 9,13% nas 36 cidades que o índice FipeZAP acompanha, e 14,80% no Rio. A inflação nos mesmos 12 meses foi de 4,58% (IPCA). O índice acompanha preços anunciados em imóveis prontos, então os aumentos em contratos já existentes ficam de fora.
+O índice acompanha preços anunciados em imóveis prontos, então os aumentos em contratos já existentes ficam de fora.
 
 [IBGE, Censo 2022, via Agência Pública](https://apublica.org/2023/06/censo-2022-brasil-tem-11-milhoes-de-casas-e-apartamentos-vagos/)
 

@@ -81,10 +81,10 @@ def build_reference(root, page, tr, esc):
     body += '</ol>' + spans(i for i in retired if i.startswith('source-'))
     body += '</section><section id="versions">' + text(data['versions_title'], 'h2')
     body += text((LABEL_PT, LABEL_EN), 'p', 'class="resource-meta"')
-    body += '<p><a href="project-reference-pt.pdf" download>Português · PDF</a> · '
-    body += '<a href="project-reference-pt.md" download>Português · Markdown</a> · '
-    body += '<a href="project-reference-en.pdf" download>English · PDF</a> · '
-    body += '<a href="project-reference-en.md" download>English · Markdown</a></p></section></main>'  # citing and file versions are on Documents
+    body += '<p><a href="project-reference-pt.pdf" download>Português, PDF</a><br>'
+    body += '<a href="project-reference-pt.md" download>Português, Markdown</a><br>'
+    body += '<a href="project-reference-en.pdf" download>English, PDF</a><br>'
+    body += '<a href="project-reference-en.md" download>English, Markdown</a></p></section></main>'  # citing and file versions are on Documents
     build_reference.fragment = body[sections_start:].removesuffix('</main>')
     (root / 'reference.html').write_text(page('IMOBX | Project reference', body, version=VERSION,
                                             lang='pt-BR', title_pt='IMOBX | Referência do projeto'))
